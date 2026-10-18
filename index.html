@@ -154,8 +154,14 @@
   .estrellas button.on{color:var(--oro)}
   .estrellas.fija{color:var(--oro); letter-spacing:1px}
   .marcas{display:flex; gap:8px; flex-wrap:wrap}
-  .parecidos{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
-  .parecidos a{font:14px system-ui,sans-serif}
+  .parecidos{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; margin-top:8px}
+  .parecido{display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); text-decoration:none}
+  .parecido:hover, .parecido:focus-visible{border-color:var(--oro)}
+  .parecido .mini{width:44px; height:66px; border-radius:4px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
+  .parecido .mini.oracion{background-color:var(--c-oracion)} .parecido .mini.novela{background-color:var(--c-novela)}
+  .parecido .tt{font-weight:700; font-size:15px; line-height:1.25}
+  .parecido .au{font:12px system-ui,sans-serif; color:var(--muted); margin-top:2px}
+  .parecido .de{font:13px/1.35 system-ui,sans-serif; color:var(--muted); margin-top:6px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
   .seccion-ficha{border-top:1px solid var(--line); margin-top:14px; padding-top:12px}
 
   .oracion-txt p{margin:0 0 12px}
@@ -517,6 +523,13 @@
       <span class="circ" aria-hidden="true">${[1,2,3,4,5,6].map(n => `<i class="${n <= d.valor ? "on" : ""}"></i>`).join("")}</span>
       <span class="n" aria-hidden="true">${d.valor}/6</span><span class="txt" aria-hidden="true">${esc(txt)}</span></span>`;
   }
+  // Tarjeta de un libro parecido: portada, título, autor y de qué trata (primera oración del resumen).
+  function parecido(p){
+    const r = (p.resumen && (p.resumen[lang] || p.resumen.es)) || "";
+    const de = (r.match(/^.+?\.(?=\s|$)/) || [r])[0];
+    return `<a class="parecido" href="#libro/${esc(p.id)}"><span class="mini ${esc(p.categoria)}"${p.imagen ? ` style="background-image:url('${esc(p.imagen.src)}')"` : ""}></span>
+      <span><span class="tt" style="display:block">${esc(p.titulo)}</span><span class="au" style="display:block">${esc(p.autor)} · ${esc(categoria(p.categoria))}</span>${de ? `<span class="de">${esc(de)}</span>` : ""}</span></a>`;
+  }
   function fila(l){
     const fm = [...new Set(formatos(l))].map(etqFormato);
     return `<div class="fila" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="mini ${esc(l.categoria)}"${l.imagen ? ` style="background-image:url('${esc(l.imagen.src)}')"` : ""}></span>
@@ -591,7 +604,7 @@
           <span>${esc(t("x.literaria"))}</span><span>${estrellasFijas(nota.literaria)} · ${estrellasMias(id,"literaria")}</span>
           <span>${esc(t("x.teologica"))}</span><span>${estrellasFijas(nota.teologica)} · ${estrellasMias(id,"teologica")}</span>
           <span>${esc(t("l.moral"))}</span><span>${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</span></div></div>
-      <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(p => `<a href="#libro/${esc(p.id)}">${esc(p.titulo)}</a>`).join(" · ")}</div></div>
+      <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>
       ${l.fuente ? `<p class="meta" style="margin-top:14px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta" style="margin-top:6px">${esc(t("x.portada"))}: <a href="${esc(l.imagen.url)}" target="_blank" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(t("x.dominioPublico"))})</p>` : ""}
     </div></div>`;

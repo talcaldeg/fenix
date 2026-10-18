@@ -445,7 +445,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
-      imagen: { src: "img/portadas/escriva-cartas-1.jpg", credito: { es: "Rembrandt, «El apóstol Pablo»", en: "Rembrandt, «The Apostle Paul»" }, url: "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_WGA19120.jpg" },
+      imagen: { src: "img/portadas/escriva-cartas-1.jpg", credito: { es: "Johannes Vermeer, «Mujer de azul leyendo una carta», c. 1663", en: "Johannes Vermeer, «Woman in Blue Reading a Letter», c. 1663" }, url: "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Woman_in_Blue_Reading_a_Letter_-_WGA24657.jpg" },
       resumen: {
         es: "Las cuatro primeras «Cartas» largas del fundador a los miembros del Opus Dei, con cuya edición pública se comenzó en septiembre de 2020. Tratan de la vida ordinaria como camino de santidad, la humildad, la misión del cristiano en la vida social y la caridad al transmitir la fe.",
         en: "The founder's first four long «Letters» to the members of Opus Dei, whose public edition began in September 2020. They deal with ordinary life as a path to holiness, humility, the Christian's mission in social life and charity in passing on the faith."
@@ -467,7 +467,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
-      imagen: { src: "img/portadas/escriva-cartas-2.jpg", credito: { es: "Valentin de Boulogne, «San Pablo escribiendo sus epístolas»", en: "Valentin de Boulogne, «Saint Paul Writing His Epistles»" }, url: "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_BF.1991.4_-_Museum_of_Fine_Arts.jpg" },
+      imagen: { src: "img/portadas/escriva-cartas-2.jpg", credito: { es: "Johannes Vermeer, «Muchacha leyendo una carta junto a la ventana», c. 1657-1659", en: "Johannes Vermeer, «Girl Reading a Letter at an Open Window», c. 1657-1659" }, url: "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Girl_Reading_a_Letter_by_an_Open_Window_-_Google_Art_Project.jpg" },
       resumen: {
         es: "Cuatro cartas (n.º 5 a 8), fechadas entre 1939 y 1943 y muy reelaboradas en los años sesenta. Tratan de la misión de los laicos en la educación, el carisma del Opus Dei y su misión evangelizadora, la formación cristiana de la juventud y el espíritu de servicio a la Iglesia. Publicadas en 2022.",
         en: "Four letters (nos. 5 to 8), dated between 1939 and 1943 and extensively reworked in the 1960s. They deal with the mission of lay people in education, the charism of Opus Dei and its evangelising mission, the Christian formation of young people and the spirit of service to the Church. Published in 2022."
@@ -489,7 +489,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
-      imagen: { src: "img/portadas/escriva-carta-29.jpg", credito: { es: "Caravaggio, «San Jerónimo escribiendo», 1605-1606", en: "Caravaggio, «Saint Jerome Writing», 1605-1606" }, url: "https://commons.wikimedia.org/wiki/File:Saint_Jerome_Writing-Caravaggio_(1605-6).jpg" },
+      imagen: { src: "img/portadas/escriva-carta-29.jpg", credito: { es: "Gabriël Metsu, «Mujer leyendo una carta», c. 1665", en: "Gabriël Metsu, «Woman Reading a Letter», c. 1665" }, url: "https://commons.wikimedia.org/wiki/File:Woman_Reading_a_Letter_by_Gabri%C3%ABl_Metsu.jpg" },
       resumen: {
         es: "Carta larga, fechada el 9 de enero de 1959, sobre la obra de San Gabriel: el apostolado con personas que, en general, siguen el camino del matrimonio. Pertenece al género de las «Cartas» del fundador sobre el carisma y la historia del Opus Dei, en tono familiar. Su edición crítica apareció en «Studia et Documenta» 17 (2023).",
         en: "A long letter, dated 9 January 1959, on the work of Saint Gabriel: the apostolate with people who are, in general, called to marriage. It belongs to the founder's «Letters» on the charism and history of Opus Dei, written in a familiar tone. Its critical edition appeared in «Studia et Documenta» 17 (2023)."
@@ -675,8 +675,8 @@ window.FENIX = {
     {
       id: "apology-of-socrates",
       titulo: "Apology",
-      autor: "Platón (trad. Benjamin Jowett)",
-      anio: "c. 390 a. C.",
+      autor: "Plato (trans. Benjamin Jowett)",
+      anio: "c. 390 BC",
       idioma: "en",
       categoria: "lectura",
       recomendado: false,
