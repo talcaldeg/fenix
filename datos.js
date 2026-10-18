@@ -52,7 +52,8 @@ window.FENIX = {
       citas: [
         "Toda nuestra santidad se reduce a participar, por medio de la gracia, de la filiación divina de Jesucristo, a ser, por la adopción sobrenatural, lo que Cristo es por naturaleza.",
         "«El cristiano es un nuevo Cristo». Esta es la definición del cristiano que ha dado, si no en los mismos términos, al menos en una expresión equivalente, la tradición entera.",
-        "Cristo es verdaderamente la vida del alma, porque es la fuente y el dispensador de esa vida."
+        "Cristo es verdaderamente la vida del alma, porque es la fuente y el dispensador de esa vida.",
+        "La oración enciende y mantiene en el alma una como hoguera, en la cual el fuego del amor está, si no siempre en acción, al menos siempre latente."
       ],
       archivos: { epub: "libros/marmion-jesucristo-vida-del-alma.epub", pdf: "libros/marmion-jesucristo-vida-del-alma.pdf" },
       fuente: { texto: "Edición de la Fundación Gratis Date, autorizada por el abad de Maredsous", url: "https://www.gratisdate.org/" },
@@ -75,7 +76,9 @@ window.FENIX = {
       imagen: { src: "img/portadas/one-with-jesus.jpg", credito: { es: "Francisco Ribalta, «Cristo abrazando a san Bernardo», c. 1625", en: "Francisco Ribalta, «Christ Embracing Saint Bernard», c. 1625" }, url: "https://commons.wikimedia.org/wiki/File:Francisco_Ribalta_001.jpg" },
       citas: [
         "Powerfully seconding the action of God, it will not be long before they become other Christs.",
-        "May I, fully identified with You, become like another humanity to You."
+        "May I, fully identified with You, become like another humanity to You.",
+        "My whole spiritual life may then be summed up in dying to self, through love of Jesus, so that he may live and love in me.",
+        "My son, give me your heart, that in you and through you, in a life of union I may love, or rather we may love the Father ardently."
       ],
       archivos: {},
       comprar: [
@@ -99,7 +102,12 @@ window.FENIX = {
       },
       porque: {"es":"Para quien cree en Dios pero lo siente lejano, o piensa que Jesús ya no actúa hoy como en el Evangelio. Es un relato sencillo, de primera mano, que se lee en una tarde y anima a rezar con más confianza. También sirve a quien acompaña a un enfermo: trae oraciones por la curación física e interior, sin prometer que toda oración la obtenga.","en":"For anyone who believes in God but feels Him distant, or thinks Jesus no longer acts today as He did in the Gospel. It is a simple, first-hand account that can be read in an afternoon and encourages more trusting prayer. It also helps those who care for the sick: it includes prayers for physical and inner healing, without promising that every prayer will obtain it."},
       imagen: { src: "img/portadas/tardif-jesus-esta-vivo.jpg", credito: { es: "Carl Bloch, «Curación del ciego», 1871", en: "Carl Bloch, «Healing of the Blind Man», 1871" }, url: "https://commons.wikimedia.org/wiki/File:Healing_of_the_Blind_Man_by_Jesus_Christ.jpg" },
-      citas: [],
+      citas: [
+        "Es imposible dejar de hablar de lo que se ha visto y oído.",
+        "Es un grito que se levanta dando esperanza a todos aquellos que se atreven a creer que el Jesús que murió en la cruz ha resucitado y está vivo.",
+        "Pero mi confianza estaba en Jesús, que es el mismo, ayer, hoy y siempre.",
+        "Siempre que le pedimos perdón al Señor, sea lo que sea, Él nos perdona. Él jamás se escandaliza de nuestros pecados."
+      ],
       archivos: {},
       comprar: [
         { texto: "Buscalibre (ISBN 9788428511247)", url: "https://www.buscalibre.cl/libros/search?q=9788428511247" },
@@ -124,8 +132,11 @@ window.FENIX = {
       porque: {"es":"Para quien busca un libro de cabecera que no se agote: sus frases cortas caben en cinco minutos y dan para pensar todo el día. Sirve en épocas de cansancio o de dispersión, porque devuelve la atención a lo esencial sin discursos largos. Se abre en cualquier página y siempre dice algo.","en":"For anyone looking for a bedside book that never runs dry: its short sentences fit into five minutes and give enough to think about all day. It helps in seasons of tiredness or distraction, because it brings attention back to the essential without long speeches. It can be opened at any page and always has something to say."},
       imagen: { src: "img/portadas/imitacion-de-cristo.jpg", credito: { es: "El Greco, «Cristo con la cruz», c. 1590", en: "El Greco, «Christ Carrying the Cross», c. 1590" }, url: "https://commons.wikimedia.org/wiki/File:El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg" },
       citas: [
-        "Por cierto las palabras subidas no hacen santo ni justo, mas la virtuosa vida hace al hombre amable a Dios.",
-        "Ciertamente el día del juicio no nos preguntarán qué leímos, mas qué hicimos; ni cuan bien hablamos, mas cuán honestamente vivimos."
+        "Vanidad de vanidades y todo vanidad, sino amar y servir a sólo Dios.",
+        "Ciertamente el día del juicio no nos preguntarán qué leímos, mas qué hicimos; ni cuan bien hablamos, mas cuán honestamente vivimos.",
+        "Porque el hombre propone, mas Dios dispone; y no es en mano del hombre su camino.",
+        "Estar sin Jesús es grave infierno. Estar con Jesús es dulce paraíso.",
+        "Ponte primero a ti en paz, y después podrás apaciguar a los otros."
       ],
       archivos: { epub: "libros/kempis-imitacion-de-cristo-granada.epub", pdf: "libros/kempis-imitacion-de-cristo-granada.pdf" },
       fuente: { texto: "Transcripción de 2009 de la edición de 1817, en Internet Archive (dominio público); sin las notas al pie del transcriptor, con nota y portada de Proyecto Fénix", url: "https://archive.org/details/imitacion-de-cristo-de-fray-luis-de-granada" },
@@ -142,8 +153,11 @@ window.FENIX = {
             en: "The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Short, direct sentences, to be read slowly and returned to for a lifetime."
           },
           citas: [
-            "At the Day of Judgment it will be demanded of us, not what we have read, but what we have done; not how well we have spoken, but how holily we have lived.",
-            "For man proposeth, but God disposeth."
+            "Of a surety, at the Day of Judgment it will be demanded of us, not what we have read, but what we have done; not how well we have spoken, but how holily we have lived.",
+            "For man proposeth, but God disposeth; and the way of a man is not in himself.",
+            "Vanity of vanities, all is vanity, save to love God, and Him only to serve.",
+            "To be without Jesus is the nethermost hell, and to be with Jesus is sweet paradise.",
+            "First keep thyself in peace, and then shalt thou be able to be a peacemaker towards others."
           ],
           archivos: { epub: "libros/kempis-imitation-of-christ.epub", pdf: "libros/kempis-imitation-of-christ.pdf" },
           fuente: { texto: "Project Gutenberg, libro n.º 1653 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1653" },
@@ -192,7 +206,9 @@ window.FENIX = {
       imagen: { src: "img/portadas/confesiones-es.jpg", credito: { es: "Ary Scheffer, «San Agustín y santa Mónica», 1854", en: "Ary Scheffer, «Saints Augustine and Monica», 1854" }, url: "https://commons.wikimedia.org/wiki/File:Saint_Augustine_and_Saint_Monica.jpg" },
       citas: [
         "Nos hiciste para Ti, y nuestro corazón está inquieto hasta que descanse en Ti.",
-        "¡Tarde Te amé, Hermosura tan antigua y tan nueva, tarde Te amé!",
+        "¡Tarde Te amé, Hermosura tan antigua y tan nueva, tarde Te amé! Y he aquí que Tú estabas dentro y yo fuera, y allí Te buscaba.",
+        "Mi peso es mi amor; por él soy llevado adondequiera que soy llevado.",
+        "Dame castidad y continencia, pero todavía no.",
         "Toma y lee, toma y lee."
       ],
       archivos: { epub: "libros/agustin-confesiones.epub", pdf: "libros/agustin-confesiones.pdf" },
@@ -211,7 +227,10 @@ window.FENIX = {
           imagen: { src: "img/portadas/confesiones.jpg", credito: { es: "Sandro Botticelli, «San Agustín en su estudio», c. 1480", en: "Sandro Botticelli, «Saint Augustine in His Study», c. 1480" }, url: "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_St_Augustine_-_WGA02709.jpg" },
           citas: [
             "Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
-            "Too late loved I Thee, O Thou Beauty of ancient days, yet ever new! too late I loved Thee!"
+            "Too late loved I Thee, O Thou Beauty of ancient days, yet ever new! too late I loved Thee! And behold, Thou wert within, and I abroad, and there I searched for Thee.",
+            "My weight, is my love; thereby am I borne, whithersoever I am borne.",
+            "Give me chastity and continency, only not yet.",
+            "Take up and read; Take up and read."
           ],
           archivos: { epub: "libros/agustin-confessions.epub", pdf: "libros/agustin-confessions.pdf" },
           fuente: { texto: "Project Gutenberg, libro n.º 3296 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/3296" },
@@ -236,8 +255,9 @@ window.FENIX = {
       imagen: { src: "img/portadas/historia-de-un-alma.jpg", credito: { es: "Henri Fantin-Latour, «Rosas y lirios», 1888", en: "Henri Fantin-Latour, «Roses and Lilies», 1888" }, url: "https://commons.wikimedia.org/wiki/File:Henri_Fantin-Latour_-_Roses_and_Lilies_MET_DT9200.jpg" },
       citas: [
         "Él no llama a los que son dignos, sino a los que Le place.",
-        "El ascensor que debe elevarme hasta el cielo ¡son Tus brazos, oh Jesús!",
-        "En el corazón de la Iglesia, mi Madre, ¡yo seré el amor!",
+        "El ascensor que debe elevarme hasta el cielo ¡son Tus brazos, oh Jesús! Para eso no necesito crecer; al contrario, es preciso que siga siendo pequeña, que lo sea cada vez más.",
+        "¡Mi vocación es el amor! Sí, he hallado mi lugar en el seno de la Iglesia, y ese lugar, oh Dios mío, Tú me lo has dado: en el corazón de la Iglesia, mi Madre, ¡yo seré el amor!",
+        "Para mí, la oración es un impulso del corazón, es una simple mirada lanzada hacia el cielo, es un grito de gratitud y de amor tanto en la prueba como en el seno de la alegría.",
         "Quiero pasar mi cielo haciendo el bien sobre la tierra."
       ],
       archivos: { epub: "libros/teresa-historia-de-un-alma.epub", pdf: "libros/teresa-historia-de-un-alma.pdf" },
@@ -258,11 +278,14 @@ window.FENIX = {
         es: "Conversaciones y cartas de un hermano carmelita que trabajó años en la cocina de su convento. Su enseñanza es sencilla: vivir en la presencia de Dios en medio del trabajo diario, ofreciendo por amor las cosas pequeñas. Muy cercano a la santificación del trabajo ordinario.",
         en: "Conversations and letters of a Carmelite brother who worked for years in his monastery's kitchen. His teaching is simple: live in God's presence in the midst of daily work, offering little things out of love. Very close to the sanctification of ordinary work."
       },
-      porque: {"es":"Para quien trabaja todo el día y siente que no le queda tiempo para rezar. El hermano Lorenzo no propone más horas de oración sino otra manera de estar en lo que ya se hace: lavar, cocinar, atender. Son pocas páginas, y se pueden aplicar desde mañana mismo en la rutina.","en":"For anyone who works all day and feels there is no time left to pray. Brother Lawrence does not propose more hours of prayer but another way of being in what one already does: washing, cooking, serving. It runs to few pages, and it can be put into practice tomorrow in the ordinary routine."},
+      porque: {"es":"Para quien trabaja todo el día y siente que no le queda tiempo para rezar. El hermano Lorenzo no propone más horas de oración sino otra manera de estar en lo que ya se hace: lavar, cocinar, atender. Son pocas páginas, y se pueden aplicar desde mañana mismo en la rutina.","en":"For anyone who works all day and feels there is no time left to pray. Brother Lawrence does not propose more hours of prayer but another way of being in what one already does: washing, cooking, serving. The book is only a few pages long, and its advice can be put into practice tomorrow, in the ordinary routine."},
       imagen: { src: "img/portadas/presencia-de-dios.jpg", credito: { es: "Diego Velázquez, «Cristo en casa de Marta y María» (detalle), c. 1618", en: "Diego Velázquez, «Christ in the House of Martha and Mary» (detail), c. 1618" }, url: "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_-_Christ_in_the_House_of_Mary_and_Martha_(detail)_-_WGA24361.jpg" },
       citas: [
-        "The time of business does not with me differ from the time of prayer.",
-        "We ought not weary of doing little things for the love of God, who regards not the greatness of the work, but the love with which it is performed."
+        "The time of business does not with me differ from the time of prayer. In the noise and clutter of my kitchen, while several persons are at the same time calling for different things, I possess God in as great tranquillity as if I were upon my knees at the Blessed Supper.",
+        "We ought not weary of doing little things for the love of God, who regards not the greatness of the work, but the love with which it is performed.",
+        "We need only to recognize God intimately present with us and address ourselves to Him every moment.",
+        "It is an habitual, silent, and private conversation of the soul with God.",
+        "He was pleased when he could take up a straw from the ground for the love of God, seeking Him only, and nothing else, not even His gifts."
       ],
       archivos: { epub: "libros/lorenzo-practice-of-the-presence-of-god.epub", pdf: "libros/lorenzo-practice-of-the-presence-of-god.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 5657 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/5657" },
@@ -285,7 +308,10 @@ window.FENIX = {
       imagen: { src: "img/portadas/ortodoxia.jpg", credito: { es: "Rafael, «La disputa del Santísimo Sacramento» (detalle), 1509-1510", en: "Raphael, «The Disputation of the Holy Sacrament» (detail), 1509-1510" }, url: "https://commons.wikimedia.org/wiki/File:%22Disputation_of_the_Holy_Sacrament%22_by_Raphael,_Raphael_Rooms,_Vatican_Museum_(48466326127).jpg" },
       citas: [
         "Angels can fly because they can take themselves lightly.",
-        "Tradition means giving votes to the most obscure of all classes, our ancestors. It is the democracy of the dead."
+        "Tradition means giving votes to the most obscure of all classes, our ancestors. It is the democracy of the dead.",
+        "The madman is not the man who has lost his reason. The madman is the man who has lost everything except his reason.",
+        "The test of all happiness is gratitude; and I felt grateful, though I hardly knew to whom.",
+        "Joy, which was the small publicity of the pagan, is the gigantic secret of the Christian."
       ],
       archivos: { epub: "libros/chesterton-orthodoxy.epub", pdf: "libros/chesterton-orthodoxy.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 130 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/130" },
@@ -307,8 +333,10 @@ window.FENIX = {
       porque: {"es":"Sirve a quien quiere sentir cómo era ser cristiano en tiempos de persecución sin abrir un tratado. La historia de amor de Vinicio y Ligia arrastra al lector, y de paso deja ver el contraste entre una Roma brillante y vacía y una comunidad pequeña que vivía de otra cosa.","en":"This one suits readers who want to feel what it was to be a Christian under persecution without opening a treatise. The love story of Vinicius and Lygia carries you along, and on the way it sets a glittering, hollow Rome beside a small community that lived on something else."},
       imagen: { src: "img/portadas/quo-vadis.jpg", credito: { es: "Annibale Carracci, «Domine, quo vadis?», 1601-1602", en: "Annibale Carracci, «Domine, quo vadis?», 1601-1602" }, url: "https://commons.wikimedia.org/wiki/File:Domine,_quo_vadis.jpg" },
       citas: [
-        "“Quo vadis, Domine?”",
-        "“If thou desert my people, I am going to Rome to be crucified a second time.”"
+        "Quo vadis, Domine?",
+        "If thou desert my people, I am going to Rome to be crucified a second time.",
+        "In two hundred or three hundred years the whole world will accept it. People will forget Jupiter, and there will be no God except Christ, and no other temples but Christian.",
+        "If ye have reared so many beautiful temples and statues to evil, revengeful, adulterous, and faithless divinities, what would ye not do in honor of one God of truth and mercy?"
       ],
       archivos: { epub: "libros/sienkiewicz-quo-vadis.epub", pdf: "libros/sienkiewicz-quo-vadis.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 2853 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/2853" },
@@ -331,7 +359,13 @@ window.FENIX = {
         es: "999 puntos breves de meditación, repartidos en 46 capítulos, escritos en un tono directo, como de conversación personal con el lector. Apareció en 1934 en Cuenca con el título «Consideraciones espirituales» y tomó su nombre definitivo en la edición de Valencia de 1939. Lleva más de cinco millones de ejemplares en más de cincuenta idiomas.",
         en: "999 short points for meditation, in 46 chapters, written in a direct tone, like a personal conversation with the reader. It first appeared in Cuenca in 1934 as «Consideraciones espirituales» and took its final title in the Valencia edition of 1939. More than five million copies have been printed, in over fifty languages."
       },
-      citas: ["La oración del cristiano nunca es monólogo."],
+      citas: [
+        "Que tu vida no sea una vida estéril. Sé útil. Deja poso. Ilumina, con la luminaria de tu fe y de tu amor.",
+        "La oración del cristiano nunca es monólogo.",
+        "¿Quieres de verdad ser santo? Cumple el pequeño deber de cada momento: haz lo que debes y está en lo que haces.",
+        "Todo lo que se hace por Amor adquiere hermosura y se engrandece.",
+        "Dios mío, te amo, pero... ¡enséñame a amar!"
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/camino/" },
@@ -356,7 +390,13 @@ window.FENIX = {
         es: "1000 puntos de meditación en 32 capítulos, en la línea de «Camino», con especial atención a las virtudes humanas. Se dirige a la persona entera, «cuerpo y alma, naturaleza y gracia». Primera edición póstuma, de 1986.",
         en: "1000 points for meditation in 32 chapters, in the vein of «The Way», with special attention to the human virtues. It speaks to the whole person, «body and soul, nature and grace». First published posthumously in 1986."
       },
-      citas: ["Cuanto más generoso seas, por Dios, serás más feliz."],
+      citas: [
+        "Cuanto más generoso seas, por Dios, serás más feliz.",
+        "La alegría es una consecuencia de la entrega.",
+        "Ante Dios, ninguna ocupación es por sí misma grande ni pequeña. Todo adquiere el valor del Amor con que se realiza.",
+        "El heroísmo del trabajo está en «acabar» cada tarea.",
+        "Los que nos hemos dedicado a Dios, nada hemos perdido."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/surco/" },
@@ -381,7 +421,13 @@ window.FENIX = {
         es: "1055 puntos de meditación en 13 capítulos, muchos de ellos autobiográficos aunque escritos en tercera persona. Recorre el camino del cristiano hacia la identificación con Cristo. Primera edición de 1987.",
         en: "1055 points for meditation in 13 chapters, many of them autobiographical though written in the third person. It follows the Christian's path towards identification with Christ. First published in 1987."
       },
-      citas: ["Ojalá pueda decirse que la característica que define tu vida es «amar la Voluntad de Dios»."],
+      citas: [
+        "Ojalá pueda decirse que la característica que define tu vida es «amar la Voluntad de Dios».",
+        "Hazme santo, mi Dios, aunque sea a palos.",
+        "Si has cometido un error, pequeño o grande, ¡vuelve corriendo a Dios!",
+        "Si eres fiel, podrás llamarte vencedor. En tu vida, aunque pierdas algunos combates, no conocerás derrotas.",
+        "La vida espiritual es un continuo comenzar y recomenzar."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/forja/" },
@@ -406,7 +452,13 @@ window.FENIX = {
         es: "18 homilías pronunciadas en fiestas del año litúrgico. El hilo es la filiación divina, junto con la llamada universal a la santidad, la santificación del trabajo ordinario, la contemplación en medio del mundo y la unidad de vida. Fueron predicadas de viva voz a personas muy diversas, no escritas como tratado. Primera edición de 1973.",
         en: "18 homilies preached on feasts of the liturgical year. The common thread is divine filiation, together with the universal call to holiness, the sanctification of ordinary work, contemplation in the middle of the world and unity of life. They were spoken to very varied listeners, not written as a treatise. First published in 1973."
       },
-      citas: ["Trabajar así es oración. Estudiar así es oración. Investigar así es oración."],
+      citas: [
+        "Trabajar así es oración. Estudiar así es oración. Investigar así es oración. No salimos nunca de lo mismo: todo es oración, todo puede y debe llevarnos a Dios, alimentar ese trato continuo con Él, de la mañana a la noche.",
+        "Todo trabajo honrado puede ser oración; y todo trabajo, que es oración, es apostolado.",
+        "Hemos de amar el mundo, el trabajo, las realidades humanas. Porque el mundo es bueno.",
+        "Dios ha querido que seamos cooperadores suyos, ha querido correr el riesgo de nuestra libertad.",
+        "Tratad a José y encontraréis a Jesús."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/es-cristo-que-pasa/" },
@@ -431,7 +483,13 @@ window.FENIX = {
         es: "18 homilías que toman las virtudes cristianas como hilo de un «coloquio filial con Dios». Publicado en 1977, es la primera obra póstuma del autor.",
         en: "18 homilies that take the Christian virtues as the thread of a «filial conversation with God». Published in 1977, it was the author's first posthumous work."
       },
-      citas: ["Estas crisis mundiales son crisis de santos."],
+      citas: [
+        "Estas crisis mundiales son crisis de santos.",
+        "El santo no nace: se forja en el continuo juego de la gracia divina y de la correspondencia humana.",
+        "La libertad y la entrega no se contradicen; se sostienen mutuamente.",
+        "Nadie puede elegir por nosotros: he aquí el grado supremo de dignidad en los hombres: que por sí mismos, y no por otros, se dirijan hacia el bien.",
+        "La vida interior consiste en comenzar y recomenzar cada día."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/amigos-de-dios/" },
@@ -456,7 +514,11 @@ window.FENIX = {
         es: "Reúne las homilías «Lealtad a la Iglesia», «El fin sobrenatural de la Iglesia» y «Sacerdote para la eternidad», con presentación de Jesús Urteaga y dos escritos del beato Álvaro del Portillo.",
         en: "It gathers the homilies «Loyalty to the Church», «The Supernatural Aim of the Church» and «A Priest Forever», with a presentation by Jesús Urteaga and two writings by Blessed Álvaro del Portillo."
       },
-      citas: ["Nuestra Madre es Santa, porque ha nacido pura y continuará sin mácula por la eternidad."],
+      citas: [
+        "No concibo que se viva un cariño verdadero a la propia madre, y que se hable de esa madre con despego.",
+        "Nuestra Madre es Santa, porque ha nacido pura y continuará sin mácula por la eternidad.",
+        "¡Qué luminosa es nuestra fe! Todos somos en Cristo, porque Él es la cabeza del cuerpo de la Iglesia."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/amar-a-la-iglesia/" },
@@ -481,7 +543,11 @@ window.FENIX = {
         es: "25 textos de su predicación a miembros del Opus Dei en Roma entre 1954 y 1975, publicados para el público general en 2017. Temas frecuentes: la identificación con Cristo, la filiación divina, el amor a Dios y a la Iglesia, la oración, la humildad y la caridad fraterna. Su fin es ayudar a hacer oración personal.",
         en: "25 texts from his preaching to members of Opus Dei in Rome between 1954 and 1975, published for a general readership in 2017. Recurring themes: identification with Christ, divine filiation, love for God and the Church, prayer, humility and fraternal charity. It is meant to help the reader pray."
       },
-      citas: ["¡Qué alegría tan grande sentirse metidos en Dios! ¡Endiosados!"],
+      citas: [
+        "La oración, hijos, es el fundamento de toda labor sobrenatural.",
+        "Para ser santo, hijo, hay que rezar: no tengo otra receta para alcanzar la santidad.",
+        "Ante todo, enseguida, la charla con tu Padre Dios, buscando al Señor en el centro de tu alma."
+      ],
       archivos: {},
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
@@ -497,13 +563,18 @@ window.FENIX = {
       idioma: "es",
       categoria: "oracion",
       recomendado: false,
-      porque: {"es":"Para quien reza el rosario por costumbre y le cuesta no distraerse, o para quien quiere empezar a rezarlo. Las consideraciones breves dan una escena para tener a la vista en cada misterio, y con eso la mente tiene dónde apoyarse. Basta un minuto: se puede leer una antes de cada decena.","en":"For anyone who prays the rosary out of habit and struggles with distraction, or who wants to start praying it. The short considerations give a scene to keep in view at each mystery, and the mind has something to lean on. A minute is enough: one can be read before each decade."},
+      porque: {"es":"Para quien reza el rosario y se distrae, o quiere empezar a rezarlo. Cada misterio trae una escena breve de la vida de Jesús y de María, y con eso tu mente tiene dónde apoyarse. Si piensas que siempre es lo mismo, el prólogo responde que así hablan los que se aman. Puedes leer una consideración antes de cada decena.","en":"For anyone who prays the rosary and gets distracted, or wants to start praying it. Each mystery brings a short scene from the life of Jesus and Mary, and your mind has something to lean on. If you think it is always the same thing, the preface answers that this is how people who love each other talk. You can read one consideration before each decade."},
       imagen: { src: "img/portadas/escriva-santo-rosario.jpg", credito: { es: "Caravaggio, «Virgen del Rosario», c. 1607", en: "Caravaggio, «Madonna of the Rosary», c. 1607" }, url: "https://commons.wikimedia.org/wiki/File:Madonna_of_the_Rosary-Caravaggio_(1607).jpg" },
       resumen: {
         es: "Consideraciones breves sobre los misterios gozosos, dolorosos y gloriosos, y un comentario a la letanía lauretana; desde 2003 incluye un apéndice con los misterios luminosos. Lo escribió de un tirón en 1931, en la acción de gracias después de la Misa, y se publicó en 1934.",
         en: "Short considerations on the joyful, sorrowful and glorious mysteries, and a commentary on the Litany of Loreto; since 2003 it includes an appendix with the luminous mysteries. He wrote it at one sitting in 1931, during his thanksgiving after Mass, and it was published in 1934."
       },
-      citas: ["No olvides, amigo mío, que somos niños."],
+      citas: [
+        "Amigo mío: si tienes deseos de ser grande, hazte pequeño.",
+        "Ser pequeño exige creer como creen los niños, amar como aman los niños, abandonarse como se abandonan los niños..., rezar como rezan los niños.",
+        "¿Siempre lo mismo? ¿Y no se dicen siempre lo mismo los que se aman?",
+        "El principio del camino, que tiene por final la completa locura por Jesús, es un confiado amor hacia María Santísima."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/santo-rosario/" },
@@ -528,7 +599,12 @@ window.FENIX = {
         es: "Comentarios breves a las catorce estaciones, nacidos de su oración personal. Cada estación trae un relato y unos puntos de meditación numerados. Primera edición de 1981.",
         en: "Short commentaries on the fourteen stations, born of his personal prayer. Each station has a narrative and numbered points for meditation. First published in 1981."
       },
-      citas: ["Dios es mi Padre, aunque me envíe sufrimiento."],
+      citas: [
+        "Dios es mi Padre, aunque me envíe sufrimiento. Me ama con ternura, aun hiriéndome.",
+        "Es verdaderamente suave y amable la Cruz de Jesús. Ahí no cuentan las penas; solo la alegría de saberse corredentores con Él.",
+        "Amor con amor se paga. Pero la certeza del cariño la da el sacrificio.",
+        "Mi yugo es la libertad, mi yugo es el amor, mi yugo es la unidad, mi yugo es la vida, mi yugo es la eficacia."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/via-crucis/" },
@@ -547,13 +623,18 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
-      porque: {"es":"Para el lector que quiere conocer el espíritu del Opus Dei de primera mano, en palabras del fundador a sus hijos, y no a través de resúmenes. Son textos largos y pausados, que piden una lectura atenta. Sirven a quien busca entender cómo se puede aspirar a la santidad estando en el trabajo, la familia y la sociedad.","en":"For the reader who wants to know the spirit of Opus Dei first-hand, in the founder's own words to his children, and not through summaries. They are long, unhurried texts that call for attentive reading. They suit anyone seeking to understand how one can aim at holiness while in the midst of work, family and society."},
+      porque: {"es":"Para quien quiere conocer el espíritu del Opus Dei en palabras del fundador y no por resúmenes. Las cuatro cartas hablan de la santidad en la vida corriente, el trabajo, la oración en medio del mundo, la libertad y la amistad. Son textos largos y pausados: conviene leer de a una carta, partiendo por la introducción, que cuenta cómo se escribieron y cómo se recibieron.","en":"For anyone who wants to know the spirit of Opus Dei in the founder's own words rather than through summaries. The four letters speak of holiness in ordinary life, work, prayer in the midst of the world, freedom and friendship. They are long, unhurried texts: it is best to read one letter at a time, starting with the introduction, which tells how they were written and received."},
       imagen: { src: "img/portadas/escriva-cartas-1.jpg", credito: { es: "Johannes Vermeer, «Mujer de azul leyendo una carta», c. 1663", en: "Johannes Vermeer, «Woman in Blue Reading a Letter», c. 1663" }, url: "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Woman_in_Blue_Reading_a_Letter_-_WGA24657.jpg" },
       resumen: {
         es: "Las cuatro primeras «Cartas» largas del fundador a los miembros del Opus Dei, con cuya edición pública se comenzó en septiembre de 2020. Tratan de la vida ordinaria como camino de santidad, la humildad, la misión del cristiano en la vida social y la caridad al transmitir la fe.",
         en: "The founder's first four long «Letters» to the members of Opus Dei, whose public edition began in September 2020. They deal with ordinary life as a path to holiness, humility, the Christian's mission in social life and charity in passing on the faith."
       },
-      citas: ["Hijos míos, lo extraordinario nuestro es lo ordinario: lo ordinario hecho con perfección."],
+      citas: [
+        "Hijos míos, lo extraordinario nuestro es lo ordinario: lo ordinario hecho con perfección.",
+        "La santidad no es cosa para privilegiados: que a todos nos llama el Señor, que de todos espera Amor: de todos, estén donde estén; de todos, cualquiera que sea su estado, su profesión o su oficio.",
+        "Todos los caminos de la tierra pueden ser ocasión de un encuentro con Cristo.",
+        "No te turbe conocerte como eres: así, de barro. No te preocupe."
+      ],
       archivos: {},
       // opusdei.org publica cada carta por separado en EPUB y PDF (edición de Luis Cano, © Scriptor y Fundación Studium).
       externos: [
@@ -579,13 +660,18 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
-      porque: {"es":"Para quien ya leyó las primeras cartas y quiere seguir, o para padres, profesores y educadores que se preguntan qué papel tiene la fe en la formación de los jóvenes. Son escritos extensos, de lectura pausada, mejor tomados de a una carta. Aclaran cómo entendía el fundador el servicio a la Iglesia.","en":"For anyone who has read the first letters and wants to continue, or for parents, teachers and educators who ask what role faith has in forming young people. They are extensive writings, best read slowly and one letter at a time. They clarify how the founder understood service to the Church."},
+      porque: {"es":"Para quien ya leyó las primeras cartas y quiere seguir, y para padres, profesores y educadores que se preguntan qué papel tiene la fe en la formación de los jóvenes. El tono es el de un padre que conversa y no escribe un tratado, así que vuelve sobre los mismos temas: educación, libertad, juventud y servicio a la Iglesia. Mejor leer una carta por vez.","en":"For anyone who has read the first letters and wants to continue, and for parents, teachers and educators who ask what role faith has in forming young people. The tone is that of a father in conversation, not of a treatise, so he returns to the same themes: education, freedom, youth and service to the Church. It is best to read one letter at a time."},
       imagen: { src: "img/portadas/escriva-cartas-2.jpg", credito: { es: "Johannes Vermeer, «Muchacha leyendo una carta junto a la ventana», c. 1657-1659", en: "Johannes Vermeer, «Girl Reading a Letter at an Open Window», c. 1657-1659" }, url: "https://commons.wikimedia.org/wiki/File:Johannes_Vermeer_-_Girl_Reading_a_Letter_by_an_Open_Window_-_Google_Art_Project.jpg" },
       resumen: {
         es: "Cuatro cartas (n.º 5 a 8), fechadas entre 1939 y 1943 y muy reelaboradas en los años sesenta. Tratan de la misión de los laicos en la educación, el carisma del Opus Dei y su misión evangelizadora, la formación cristiana de la juventud y el espíritu de servicio a la Iglesia. Publicadas en 2022.",
         en: "Four letters (nos. 5 to 8), dated between 1939 and 1943 and extensively reworked in the 1960s. They deal with the mission of lay people in education, the charism of Opus Dei and its evangelising mission, the Christian formation of young people and the spirit of service to the Church. Published in 2022."
       },
-      citas: ["Solo cuando los hombres se acostumbren a decir y a oír la verdad, habrá comprensión y concordia."],
+      citas: [
+        "Solo cuando los hombres se acostumbren a decir y a oír la verdad, habrá comprensión y concordia.",
+        "El cristiano, que se sabe libre, pierde gustoso la libertad por amor a Jesucristo, para ser servidor de sus hermanos los hombres.",
+        "La verdad no puede ser artículo de lujo.",
+        "Nadie puede frenar una impaciencia santa, divina, por servir a la Iglesia y a las almas."
+      ],
       archivos: {},
       // opusdei.org publica cada carta por separado en EPUB y PDF (edición de Luis Cano, © Scriptor y Fundación Studium).
       externos: [
@@ -617,7 +703,12 @@ window.FENIX = {
         es: "Carta larga, fechada el 9 de enero de 1959, sobre la obra de San Gabriel: el apostolado con personas que, en general, siguen el camino del matrimonio. Pertenece al género de las «Cartas» del fundador sobre el carisma y la historia del Opus Dei, en tono familiar. Su edición crítica apareció en «Studia et Documenta» 17 (2023).",
         en: "A long letter, dated 9 January 1959, on the work of Saint Gabriel: the apostolate with people who are, in general, called to marriage. It belongs to the founder's «Letters» on the charism and history of Opus Dei, written in a familiar tone. Its critical edition appeared in «Studia et Documenta» 17 (2023)."
       },
-      citas: ["En la vida espiritual no hay nada que inventar."],
+      citas: [
+        "En la vida espiritual no hay nada que inventar; solo cabe luchar por identificarse con Cristo.",
+        "Pobre concepto tiene del matrimonio, que es un ideal y una vocación, el que piensa que la alegría se acaba cuando empiezan las dificultades y contratiempos que la vida lleva consigo.",
+        "Que os queráis, que os tengáis siempre el amor ilusionado que os tuvisteis cuando erais novios.",
+        "El trigo no se siembra a sacos, sino grano a grano."
+      ],
       archivos: {},
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/carta-29/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
@@ -633,13 +724,18 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
-      porque: {"es":"Para quien quiere oír al fundador respondiendo preguntas directas de periodistas, sin el tono de la predicación. Las entrevistas tocan temas que siguen vigentes, como la libertad, el trabajo y el papel de la mujer, y son una buena puerta de entrada a su pensamiento. Se lee en tardes sueltas, entrevista por entrevista.","en":"For anyone who wants to hear the founder answering journalists' direct questions, without the tone of preaching. The interviews touch on subjects that remain current, such as freedom, work and the role of women, and are a good doorway into his thinking. They can be read on odd afternoons, interview by interview."},
+      porque: {"es":"Para quien quiere oír al fundador respondiendo preguntas directas de periodistas, sin el tono de la predicación. Las entrevistas tocan temas que siguen vigentes, como la libertad, el trabajo y el papel de la mujer, y el libro cierra con la homilía «Amar al mundo apasionadamente», que condensa su mensaje. Es una buena puerta de entrada a su pensamiento y se lee entrevista por entrevista.","en":"For anyone who wants to hear the founder answering journalists' direct questions, without the tone of preaching. The interviews touch on subjects that remain current, such as freedom, work and the role of women, and the book closes with the homily \"Passionately Loving the World,\" which condenses his message. It is a good doorway into his thinking and can be read one interview at a time."},
       imagen: { src: "img/portadas/escriva-conversaciones.jpg", credito: { es: "Alberto Durero, «Jesús entre los doctores», 1506", en: "Albrecht Dürer, «Jesus among the Doctors», 1506" }, url: "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Jesus_among_the_Doctors_-_Google_Art_Project.jpg" },
       resumen: {
         es: "Siete entrevistas de 1966 a 1968 (Le Figaro, The New York Times, Time, L'Osservatore della Domenica, Telva, Gaceta Universitaria y Palabra) sobre la Iglesia y el Concilio, las libertades personales, la universidad, la mujer en la sociedad y el Opus Dei. Cierra con la homilía «Amar al mundo apasionadamente», del 8 de octubre de 1967.",
         en: "Seven interviews from 1966 to 1968 (Le Figaro, The New York Times, Time, L'Osservatore della Domenica, Telva, Gaceta Universitaria and Palabra) on the Church and the Council, personal freedoms, the university, women in society and Opus Dei. It ends with the homily «Passionately Loving the World», of 8 October 1967."
       },
-      citas: ["El mundo no es malo, porque ha salido de las manos de Dios."],
+      citas: [
+        "Hijos míos, allí donde están vuestros hermanos los hombres, allí donde están vuestras aspiraciones, vuestro trabajo, vuestros amores, allí está el sitio de vuestro encuentro cotidiano con Cristo.",
+        "El mundo no es malo, porque ha salido de las manos de Dios, porque es criatura suya, porque Yaveh lo miró y vio que era bueno. Somos los hombres los que lo hacemos malo y feo, con nuestros pecados y nuestras infidelidades.",
+        "Hay un algo santo, divino, escondido en las situaciones más comunes, que toca a cada uno de vosotros descubrir.",
+        "No hay otro camino, hijos míos: o sabemos encontrar en nuestra vida ordinaria al Señor, o no lo encontraremos nunca."
+      ],
       archivos: {},
       externos: [
         { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/conversaciones/" },
@@ -664,7 +760,11 @@ window.FENIX = {
         es: "Estudio teológico-jurídico, hecho sobre fuentes originales, de la jurisdicción cuasi episcopal que tuvo la abadesa del monasterio de Las Huelgas, en Burgos. Doce capítulos y dos apéndices: la serie cronológica de las abadesas y las reales cédulas de Felipe V. Primera edición de 1944.",
         en: "A theological and juridical study, based on original sources, of the quasi-episcopal jurisdiction held by the abbess of the monastery of Las Huelgas in Burgos. Twelve chapters and two appendices: the chronological list of abbesses and the royal decrees of Philip V. First published in 1944."
       },
-      citas: ["Aquí te presento, amable lector, a la famosa Abadesa de Las Huelgas."],
+      citas: [
+        "Aquí te presento, amable lector, a la famosa Abadesa de Las Huelgas.",
+        "Pero no te asustes, porque desde ahora te adelanto que, si te decides a recorrer el camino, podrás también permitirte algún esparcimiento a cuenta de las anécdotas que sembré a lo largo de este relato, para tu recreo y tu descanso.",
+        "Pero si tomas en cuenta la grandeza varias veces secular del Monasterio que las cobija, alzarás conmigo el corazón a Dios y pedirás al Señor de la mies que envíe más almas a esta ilustre Casa."
+      ],
       archivos: {},
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
@@ -686,7 +786,12 @@ window.FENIX = {
         es: "Volumen preparado por la Universidad de Navarra con motivo de la beatificación de su fundador. Reúne sus discursos académicos, la homilía del campus de octubre de 1967 y otras intervenciones públicas sobre la universidad; cierra con los discursos del acto académico del 26 de junio de 1992. Prólogo del beato Álvaro del Portillo.",
         en: "A volume prepared by the University of Navarra on the occasion of its founder's beatification. It gathers his academic speeches, the campus homily of October 1967 and other public statements on the university, and closes with the speeches of the academic ceremony of 26 June 1992. Foreword by Blessed Álvaro del Portillo."
       },
-      citas: ["Siete lustros han pasado ya desde que abandoné las aulas de la Universidad de Zaragoza y las tierras de Aragón en que nací."],
+      citas: [
+        "La Universidad tiene como su más alta misión el servicio a los hombres, el ser fermento de la sociedad en que vive.",
+        "Amamos y respetamos la libertad, y creemos en su valor educativo y pedagógico. Estamos convencidos de que en un clima así se forman almas con libertad interior, y se forjan hombres capaces de vivir responsablemente la doctrina de Cristo.",
+        "La Universidad sabe que la necesaria objetividad científica rechaza justamente toda neutralidad ideológica, toda ambigüedad, todo conformismo, toda cobardía: el amor a la verdad compromete la vida y el trabajo entero del científico.",
+        "La Universidad no vive de espaldas a ninguna incertidumbre, a ninguna inquietud, a ninguna necesidad de los hombres."
+      ],
       archivos: {},
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
@@ -710,7 +815,12 @@ window.FENIX = {
       },
       porque: {"es":"Para quien busca un hilo común entre su oración, su trabajo y sus afectos, y se pregunta cómo formarse como persona entera. Cada artículo se puede leer por separado, según el tema que hoy importe: la esperanza, la libertad interior o la lucha espiritual. Sirve también para grupos de lectura y conversación.","en":"For anyone looking for a common thread between their prayer, their work and their affections, and who asks how to be formed as a whole person. Each article can be read on its own, according to the theme that matters today: hope, interior freedom or spiritual struggle. It also suits reading and discussion groups."},
       imagen: { src: "img/portadas/para-mi-vivir-es-cristo.jpg", credito: { es: "Caravaggio, «La conversión de san Pablo», c. 1600-1601", en: "Caravaggio, «The Conversion of Saint Paul», c. 1600-1601" }, url: "https://commons.wikimedia.org/wiki/File:Conversion_on_the_Way_to_Damascus-Caravaggio_(c.1600-1).jpg" },
-      citas: ["Ser cristiano es vivir en Cristo, vivir nuestra vida con Él, vivir su vida en la nuestra."],
+      citas: [
+        "Ser cristiano es vivir en Cristo, vivir nuestra vida con Él, vivir su vida en la nuestra.",
+        "Descubrir el Amor que Dios nos tiene es el motivo más grande que podemos hallar para amar.",
+        "El descubrimiento del Amor de Dios es el motor más potente para nuestra vida cristiana.",
+        "No forma el hacer, sino el querer: no solo importa lo que hago, sino también lo que quiero cuando lo hago."
+      ],
       archivos: {},
       externos: [
         { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/para-mi-vivir-es-cristo.epub" },
@@ -735,8 +845,11 @@ window.FENIX = {
       porque: {"es":"Para quien quiere aprender a rezar o rezar mejor y no sabe cómo empezar, o se desanima cuando la oración parece vacía. Cada capítulo toma una dificultad o un aspecto concreto, de modo que se puede leer por orden o buscar el que hoy hace falta. Resulta útil también para acompañar a otros en su oración.","en":"For anyone who wants to learn to pray, or to pray better, and does not know how to begin, or gets discouraged when prayer seems empty. Each chapter takes up a concrete difficulty or aspect, so it can be read in order or one can look for the chapter needed today. It is also useful for accompanying others in their prayer."},
       imagen: { src: "img/portadas/conocerle-y-conocerte.jpg", credito: { es: "Jean-François Millet, «El Ángelus», 1857-1859", en: "Jean-François Millet, «The Angelus», 1857-1859" }, url: "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg" },
       citas: [
-        "La oración cultiva una relación con Dios Padre, con Dios Hijo y con Dios Espíritu Santo, y nos identifica así con Cristo.",
-        "Saberme hijo de Dios es fundamental para entrar en oración."
+        "A Dios le interesa todo lo nuestro, por trivial o insignificante que parezca.",
+        "Nuestro empeño por vivir a su lado es siempre menor que el suyo por tenernos cerca.",
+        "Así como hacen los niños en brazos de su madre, podemos descansar en él, entregarle nuestro aturdimiento, refugiarnos en su corazón para alcanzar la paz.",
+        "En la vida de la gracia, lo decisivo no es lo que hacemos sino lo que obra el Señor.",
+        "Por la fe sabemos que el Señor está siempre al otro lado de la línea."
       ],
       archivos: {},
       externos: [
@@ -763,7 +876,10 @@ window.FENIX = {
       imagen: { src: "img/portadas/a-la-luz-del-evangelio.jpg", credito: { es: "Rembrandt, «Los peregrinos de Emaús», 1648", en: "Rembrandt, «The Supper at Emmaus», 1648" }, url: "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Supper_at_Emmaus.jpg" },
       citas: [
         "La vida cristiana no nos lleva a identificarnos con una idea, sino con una persona: con Jesucristo.",
-        "El camino de nuestra entrada en la intimidad del Padre, del Hijo y del Espíritu Santo, es seguir a Cristo, pero de tal modo que no solo le imitemos, sino que lleguemos a identificarnos con él."
+        "El camino de nuestra entrada en la intimidad del Padre, del Hijo y del Espíritu Santo, es seguir a Cristo, pero de tal modo que no solo le imitemos, sino que lleguemos a identificarnos con él.",
+        "No puede haber en esta vida una alegría más completa que la del hijo de Dios, porque ningún bien puede compararse a la infinita riqueza de ser familiares de Dios, hijos de Dios; nada de este mundo debería robarle su alegría.",
+        "Cuando la propia debilidad, los propios errores y las limitaciones se hagan particularmente presentes, la humildad nos exige considerar, a la vez, nuestra grandeza: nuestra filiación divina, nuestra permanente condición de hijos de Dios.",
+        "Estaremos contentos, pase lo que pase, en la medida de nuestra fe en el amor que Dios nos tiene."
       ],
       archivos: {},
       externos: [
@@ -788,7 +904,13 @@ window.FENIX = {
       },
       porque: {"es":"Para quien quiere leer los Evangelios con una traducción cuidada y con notas que aclaran lo que el texto no explica solo: costumbres, lugares, palabras difíciles. Sirve tanto a quien los abre por primera vez como a quien los reza a diario. Los mapas y los comentarios ayudan a no perderse en el relato.","en":"For anyone who wants to read the Gospels in a careful translation with notes that clarify what the text does not explain by itself: customs, places, difficult words. It suits both those opening them for the first time and those who pray with them daily. The maps and commentaries help the reader keep their bearings in the narrative."},
       imagen: { src: "img/portadas/santos-evangelios-navarra.jpg", credito: { es: "Jacob Jordaens, «Los cuatro evangelistas», c. 1625-1630", en: "Jacob Jordaens, «The Four Evangelists», c. 1625-1630" }, url: "https://commons.wikimedia.org/wiki/File:Four_Evangelists_Jordaens_Louvre_Inv1404.jpg" },
-      citas: [],
+      citas: [
+        "Tanto amó Dios al mundo que le entregó a su Hijo Unigénito, para que todo el que cree en él no perezca, sino que tenga vida eterna. (Jn 3, 16)",
+        "Venid a mí todos los fatigados y agobiados, y yo os aliviaré. Llevad mi yugo sobre vosotros y aprended de mí que soy manso y humilde de corazón, y encontraréis descanso para vuestras almas. (Mt 11, 28-29)",
+        "Yo soy la vid, vosotros los sarmientos. El que permanece en mí y yo en él, ése da mucho fruto, porque sin mí no podéis hacer nada. (Jn 15, 5)",
+        "Nadie tiene amor más grande que el de dar uno la vida por sus amigos. (Jn 15, 13)",
+        "Buscad primero el Reino de Dios y su justicia, y todas estas cosas se os añadirán. (Mt 6, 33)"
+      ],
       archivos: {},
       externos: [
         { formato: "ebook", texto: "Google Play Libros, gratis (edición latinoamericana)", url: "https://play.google.com/store/books/details?id=K8c3DwAAQBAJ" },
@@ -838,7 +960,10 @@ window.FENIX = {
       porque: {"es":"Para quien alguna vez se preguntó si vale la pena vivir según la propia conciencia cuando todos presionan en contra. Es corta y se lee en una tarde, pero deja una pregunta que sigue trabajando después: qué examinas tú de tu propia vida. La ortografía de 1871 se vuelve familiar en pocas páginas.","en":"For anyone who has wondered whether it is worth living by one's own conscience when everyone pushes the other way. It is short and can be read in an afternoon, yet it leaves a question that keeps working afterwards: what do you examine in your own life? The older Spanish spelling of this translation stops being an obstacle within a few pages."},
       imagen: { src: "img/portadas/apologia-de-socrates.jpg", credito: { es: "Jacques-Louis David, «La muerte de Sócrates», 1787", en: "Jacques-Louis David, «The Death of Socrates», 1787" }, url: "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg" },
       citas: [
-        "El mayor bien del hombre es hablar de la virtud todos los dias de su vida y conversar sobre todas las demás cosas que han sido objeto de mis discursos, ya sea examinándome á mí mismo, ya examinando á los demás, porque una vida sin exámen no es vida.",
+        "El mayor bien del hombre es hablar de la virtud todos los dias de su vida y conversar sobre todas las demás cosas que han sido objeto de mis discursos, ya sea examinándome a mí mismo, ya examinando a los demás, porque una vida sin examen no es vida.",
+        "En efecto, ni Anito, ni Melito pueden causarme mal alguno, porque el mal no puede nada contra el hombre de bien.",
+        "¡Ah! ¿No es una ignorancia vergonzante creer conocer una cosa que no se conoce?",
+        "Lo que sé de cierto es que cometer injusticias y desobedecer al que es mejor y está por cima de nosotros, sea Dios, sea hombre, es lo más criminal y lo más vergonzoso.",
         "Pero ya es tiempo de que nos retiremos de aquí, yo para morir, vosotros para vivir. ¿Entre vosotros y yo, quién lleva la mejor parte? Esto es lo que nadie sabe, excepto Dios."
       ],
       archivos: { epub: "libros/platon-apologia-de-socrates.epub", pdf: "libros/platon-apologia-de-socrates.pdf" },
@@ -858,7 +983,9 @@ window.FENIX = {
           },
           citas: [
             "The unexamined life is not worth living.",
-            "The hour of departure has arrived, and we go our ways—I to die, and you to live. Which is better God only knows."
+            "He knows nothing, and thinks that he knows; I neither know nor think that I know.",
+            "No evil can happen to a good man, either in life or after death.",
+            "I to die, and you to live. Which is better God only knows."
           ],
           archivos: { epub: "libros/platon-apology.epub", pdf: "libros/platon-apology.pdf" },
           fuente: { texto: "Project Gutenberg, libro n.º 1656 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1656" },
@@ -883,6 +1010,7 @@ window.FENIX = {
       },
       citas: [
         "Porque las flores son inútiles para la aspereza de la guerra, por eso es que son ahora más necesarias que nunca.",
+        "El derramamiento de sangre, el hambre, la pobreza y las enfermedades son lo suficientemente duros como para quebrarnos a todos. No podemos permitir que nuestro ánimo adquiera esa dureza también, o terminaremos odiándonos unos a otros.",
         "Si yo he de ser un héroe como dices, lo serás tú también, lo seré por ti."
       ],
       archivos: {},
@@ -909,7 +1037,8 @@ window.FENIX = {
       },
       citas: [
         "Mis pasos seguirán tus pasos. Iré donde vayas y volveré donde vuelvas.",
-        "No puedo garantizar que no habrá represalias, pero sí que contarán con mi escudo, y con el de mis hombres.",
+        "Como caballero, abrazaría un alto ideal. Sería brazo de la justicia, servidor del emperador y de los reyes. Y del Creador: ejemplo para el pueblo, protector del débil…",
+        "Partiré a la aventura, como mi antepasado sir Alfred, y me ganaré un nombre y un honor sirviendo al imperio con mi lanza y mi espada. Cuando me haya hecho un nombre con el que honrar mi sangre, y honraros también a vos, que me armasteis caballero, entonces tendré un blasón que mostrar orgulloso. No antes.",
         "No manches ahora tus manos con sangre… aún estás a tiempo."
       ],
       archivos: {},
@@ -931,7 +1060,12 @@ window.FENIX = {
       resumen: {"es": "Tragedia de Eurípides que lleva a escena a Hipólito, un joven cazador que consagra su devoción a Artemisa y rehúye el amor. La diosa Afrodita, ofendida por ese desdén, hace nacer en su madrastra Fedra una pasión que ella trata de ocultar. Un secreto confiado a la nodriza pone en marcha una cadena de acusaciones y de ruegos a los dioses que recae sobre toda la casa de Teseo. La obra reflexiona sobre el pudor, los celos de los dioses y los límites de la voluntad humana frente al destino. Se ofrece en la versión directa del griego de Eduardo de Mier."},
       porque: {"es":"Sirve a quien quiere entender cómo una pasión que se calla termina destruyendo a los inocentes. Se lee en una sentada y deja ver, con una claridad que pocas obras igualan, el daño de la soberbia, del secreto y de la palabra dicha a destiempo.","en":"A good read for anyone who wants to see how a passion kept hidden ends up wrecking the innocent. It fits in a single sitting and shows, with rare clarity, what pride, secrecy and a word spoken at the wrong moment can do to people who deserved better."},
       imagen: {"src": "img/portadas/euripides-hipolito.jpg", "credito": {"es": "Pierre-Narcisse Guérin, «Fedra e Hipólito», 1802", "en": "Pierre-Narcisse Guérin, «Phaedra and Hippolytus», 1802"}, "url": "https://commons.wikimedia.org/wiki/File:Ph%C3%A8dre_et_Hippolyte,_par_Pierre-Narcisse_Gu%C3%A9rin.jpg"},
-      citas: ["Solo entre los mortales disfruto de este privilegio; a tu lado estoy siempre, contigo hablo, y escuchas mi voz, aunque no vea tu rostro. Como he empezado, así acabaré mi vida."],
+      citas: [
+        "La lengua juró; el alma no ha jurado.",
+        "Preciso es, por tanto, confesar que, aun conociendo lo bueno, no lo seguimos, unos por pereza y otros porque posponemos la virtud al deleite.",
+        "Cuando el Amor domina a los hombres, ni es buena su fama, ni tampoco merecen alabanza; al contrario, cuando Afrodita se acerca a nosotros con modestia, no hay diosa tan grata.",
+        "Solo entre los mortales disfruto de este privilegio; a tu lado estoy siempre, contigo hablo, y escuchas mi voz, aunque no vea tu rostro. Como he empezado, así acabaré mi vida."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo I (incluye Hipólito)", "url": "https://www.gutenberg.org/ebooks/73500.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo I (incluye Hipólito)", "url": "https://www.gutenberg.org/ebooks/73500"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 73500: Obras dramáticas de Eurípides, tomo I, versión directa del griego de Eduardo de Mier y Barbery (Madrid, 1909) (dominio público)", "url": "https://www.gutenberg.org/ebooks/73500"},
@@ -949,7 +1083,12 @@ window.FENIX = {
       resumen: {"es": "Tragedia de Eurípides ambientada en Ftía, años después de la caída de Troya. Andrómaca, viuda de Héctor, vive como esclava y concubina de Neoptólemo, y por haberle dado un hijo es blanco de los celos de Hermíone, la esposa legítima. Con su hijo en peligro, busca amparo en el santuario de Tetis mientras Hermíone y su padre, Menelao, preparan su ruina. La pieza muestra la fragilidad de los vencidos, el poder de los celos y la fuerza de los lazos familiares. Se ofrece en la versión directa del griego de Eduardo de Mier."},
       porque: {"es":"Le conviene al lector que quiere ver cómo se vive la dignidad cuando todo se ha perdido. Andrómaca enseña a resistir sin odio ni bajeza, y el contraste con los celos y la crueldad de los poderosos deja una lección que sigue vigente en cualquier casa o corte.","en":"Worth reading if you want to see how dignity is lived when everything has been lost. Andromache shows how to endure without hatred or meanness, and the contrast with the jealousy and cruelty of the powerful leaves a lesson that holds in any household or court."},
       imagen: {"src": "img/portadas/euripides-andromaca.jpg", "credito": {"es": "Pierre-Narcisse Guérin, «Andrómaca y Pirro», 1810", "en": "Pierre-Narcisse Guérin, «Andromache and Pyrrhus», 1810"}, "url": "https://commons.wikimedia.org/wiki/File:Gu%C3%A9rin_Andromaque_et_Pyrrhus_1810.jpg"},
-      citas: ["yo soy Andrómaca, feliz sin duda en los pasados días, y ahora la mujer más desventurada que hay y habrá jamás"],
+      citas: [
+        "Ningún mortal puede llamarse feliz hasta su día postrimero y su descenso en los infiernos.",
+        "Para todos los hombres, los hijos son tan amados como el vivir.",
+        "Los verdaderamente amigos no tienen nada propio: son comunes sus bienes.",
+        "¡Oh fama, fama!, a miles de mortales que nada eran concediste gloriosa vida. Felices juzgo a los que disfrutan de renombre merecido."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo III (incluye Andrómaca)", "url": "https://www.gutenberg.org/ebooks/75775.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo III (incluye Andrómaca)", "url": "https://www.gutenberg.org/ebooks/75775"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 75775: Obras dramáticas de Eurípides, tomo III, versión directa del griego de Eduardo de Mier y Barbery (Madrid, 1910) (dominio público)", "url": "https://www.gutenberg.org/ebooks/75775"},
@@ -967,7 +1106,13 @@ window.FENIX = {
       resumen: {"es": "Tragedia de Eurípides sobre un joven criado en el templo de Apolo, en Delfos, sin saber quién es su padre. Creúsa, reina de Atenas, y su esposo Juto llegan a consultar al oráculo porque no tienen hijos. De ese encuentro nacen un malentendido, una trama de sospechas y un reconocimiento que cambia el destino de los tres. La obra trata del origen, la herencia y la relación entre los hombres y los dioses. Se ofrece en la versión directa del griego de Eduardo de Mier."},
       porque: {"es":"Una tragedia que termina bien y que, justamente por eso, sorprende. Sirve a quien se pregunta de dónde viene y a quién pertenece, y a quien duda de la bondad de los dioses: la obra pone esas preguntas en boca de personajes muy humanos, sin respuestas fáciles.","en":"A tragedy that ends well and surprises precisely for that reason. It suits readers who wonder where they come from and to whom they belong, or who doubt the goodness of the gods: the play puts those questions in very human mouths and offers no easy answers."},
       imagen: {"src": "img/portadas/euripides-ion.jpg", "credito": {"es": "John Collier, «Sacerdotisa de Delfos», 1891", "en": "John Collier, «Priestess of Delphi», 1891"}, "url": "https://commons.wikimedia.org/wiki/File:Priestess_of_Delphi_by_John_Collier_(1891).jpg"},
-      citas: ["Febo es el padre que me engendró; yo lo alabaré por haberme criado, y este templo, en donde habita y me dispensa sus dones, hará para mí las veces de padre."],
+      citas: [
+        "Febo es el padre que me engendró; yo lo alabaré por haberme criado, y este templo, en donde habita y me dispensa sus dones, hará para mí las veces de padre.",
+        "Solo el nombre de esclavo es deshonroso, que en todo lo demás, ningún siervo, siendo bueno, vale menos que los hombres libres.",
+        "Prefiero un amigo sencillo y bueno a otro más sagaz si es malo.",
+        "Más quisiera vivir contento como simple ciudadano, que ser el primero y gozar en compañía de malos amigos, mientras odio a los buenos temiendo que me asesinen.",
+        "Nunca desconfíe el desdichado si honra a los dioses. Al fin, los buenos obtienen justa recompensa, que los malos nunca serán felices."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo III (incluye Ion)", "url": "https://www.gutenberg.org/ebooks/75775.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo III (incluye Ion)", "url": "https://www.gutenberg.org/ebooks/75775"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 75775: Obras dramáticas de Eurípides, tomo III, versión directa del griego de Eduardo de Mier y Barbery (Madrid, 1910) (dominio público)", "url": "https://www.gutenberg.org/ebooks/75775"},
@@ -983,9 +1128,15 @@ window.FENIX = {
       categoria: "ensayo",
       recomendado: false,
       resumen: {"es": "Breve escrito en el que Jenofonte explica por qué Sócrates, ante el tribunal que lo juzgó en Atenas, habló con serena altivez y no buscó la clemencia de los jueces. El autor reúne lo que le contaron quienes estuvieron presentes para defender la memoria de su maestro. Sócrates aparece tranquilo ante la posibilidad de morir, convencido de que su vida estuvo bien empleada. La edición incluye la introducción y las notas del traductor, Antonio González Garbín."},
-      porque: {"es":"Sirve de contrapunto a la versión de Platón: el mismo juicio visto por otro discípulo, con menos filosofía y más retrato de un hombre sereno ante la muerte. Es para quien quiere comparar testimonios y ver cómo cada amigo recuerda a su maestro. Es muy breve y se termina en una sola sesión.","en":"A useful counterpoint to Plato's version: the same trial seen by another disciple, with less philosophy and more of a portrait of a man calm in the face of death. It suits readers who like to compare witnesses and see how each friend remembers a teacher. It is very short and can be finished in one sitting."},
+      porque: {"es":"Es el mismo juicio que cuenta Platón, visto por otro discípulo: más práctico y anecdótico, con un Sócrates convencido de que obrar con honestidad vale más que salvar la vida. Es breve y sirve a quien quiere comparar testimonios o ver cómo se enfrenta una condena injusta con serenidad. Va bien después de la versión de Platón.","en":"It is the same trial Plato describes, seen by another disciple: more practical and anecdotal, with a Socrates convinced that acting honestly matters more than saving his own life. It is short, and it suits anyone who wants to compare witnesses or see how a man faces an unjust sentence with calm. It reads well after Plato's version."},
       imagen: {"src": "img/portadas/jenofonte-apologia-de-socrates.jpg", "credito": {"es": "Jacques-Louis David, «La muerte de Sócrates», 1787", "en": "Jacques-Louis David, «The Death of Socrates», 1787"}, "url": "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg"},
-      citas: ["Trasmitir a la posteridad la conducta del célebre Sócrates cuando fué citado ante el Jurado"],
+      citas: [
+        "¿Por ventura querríais mejor verme morir con justicia que con inocencia?",
+        "Mi conciencia me dice, y es mi más dulce satisfacción, que he vivido de una manera justa y religiosa.",
+        "Yo no me creo por eso menos digno de estimación, pues muero inocente. No es el oprobio para mí, sino para los que me condenan.",
+        "Preferiré morir antes que mendigar servilmente que se me otorgue la prolongación de una vida cien veces peor que la muerte.",
+        "Estoy seguro que el tiempo pasado y los siglos venideros atestiguarán que no he hecho mal a nadie, que a nadie he pervertido, sino que he sido benéfico con mis discípulos, enseñándoles de buen grado lo bueno que he podido."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_Apolog%C3%ADa_de_S%C3%B3crates"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La_Apolog%C3%ADa_de_S%C3%B3crates"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La_Apolog%C3%ADa_de_S%C3%B3crates"}],
       fuente: {"texto": "Edición de Madrid, 1889 (Imprenta de Iniesta, Biblioteca Andaluza), traducción de Antonio González Garbín, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_Apolog%C3%ADa_de_S%C3%B3crates"},
@@ -1003,7 +1154,13 @@ window.FENIX = {
       resumen: {"es": "Poema de Dante en tres partes (Infierno, Purgatorio y Paraíso) que relata un viaje por el más allá. El poeta se encuentra perdido en una selva oscura y recorre, con Virgilio y luego con Beatriz como guías, los reinos del castigo, de la purificación y de la gloria. En el camino conversa con personajes de la historia antigua y de la Florencia de su tiempo. Reúne teología, política, amor y poesía en una de las grandes obras de la literatura europea. Esta edición ofrece la traducción en prosa de Manuel Aranda y Sanjuán, con una introducción de Francesco De Sanctis."},
       porque: {"es":"Para quien siente que va a mitad de camino y no sabe bien hacia dónde. Dante convierte esa perplejidad en un viaje con guías, y la prosa de esta traducción permite seguir la historia sin la dificultad del verso. Conviene leerlo de a pocos cantos, con calma, y volver a él en distintas etapas de la vida.","en":"For anyone who feels halfway through life and unsure where the road leads. Dante turns that bewilderment into a journey with guides, and the prose of this translation lets you follow the story without the difficulty of verse. It is best read a few cantos at a time, unhurriedly, and taken up again at different stages of life."},
       imagen: {"src": "img/portadas/dante-la-divina-comedia.jpg", "credito": {"es": "Domenico di Michelino, «Dante y la Divina Comedia», 1465", "en": "Domenico di Michelino, «Dante and the Divine Comedy», 1465"}, "url": "https://commons.wikimedia.org/wiki/File:Domenico_di_Michelino_Dante_Duomo_Florence_duomofirenze.it.jpg"},
-      citas: ["A la mitad del viaje de nuestra vida me encontré en una selva obscura, por haberme apartado del camino recto."],
+      citas: [
+        "A la mitad del viaje de nuestra vida me encontré en una selva obscura, por haberme apartado del camino recto.",
+        "¡Oh vosotros los que entráis, abandonad toda esperanza!",
+        "No hay mayor dolor que acordarse del tiempo feliz en la miseria",
+        "Pensad en vuestro origen; vosotros no habéis nacido para vivir como brutos, sino para alcanzar la virtud y la ciencia.",
+        "Pero ya eran movidos mi deseo y mi voluntad, como rueda cuyas partes giran todas igualmente, por el Amor que mueve el Sol y las demás estrellas."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/57303.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/57303"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 57303: edición de la Universidad Nacional de México, 1921 (dominio público)", "url": "https://www.gutenberg.org/ebooks/57303"},
@@ -1019,9 +1176,13 @@ window.FENIX = {
       categoria: "poesia",
       recomendado: false,
       resumen: {"es": "Poema alegórico de Juan de Mena, escrito en el siglo XV y dedicado al rey Juan II de Castilla. En trescientas coplas, el poeta es llevado ante la rueda de la Fortuna y contempla el destino de personajes de la historia y de la Castilla de su tiempo. El recorrido ofrece una reflexión sobre el poder, la suerte y las virtudes y vicios de los hombres. Es una de las obras mayores de la poesía castellana del siglo XV."},
-      porque: {"es":"Para el lector curioso de la poesía castellana anterior al Siglo de Oro, que quiere ver cómo un poeta pensaba el poder y la suerte. No es una lectura rápida: pide paciencia con la lengua antigua. A cambio, enseña a mirar con algo de distancia los vaivenes de la fortuna, propios y ajenos.","en":"For readers curious about Castilian poetry before the Golden Age, who want to see how a poet thought about power and luck. It is not a quick read and asks for patience with the old language. In return, it teaches you to look with some distance at the ups and downs of fortune, your own and other people's."},
+      porque: {"es":"Para quien quiere conocer la poesía castellana anterior al Siglo de Oro y no le asusta un desafío. Es un recorrido por la casa de la Fortuna, con los círculos de los planetas y figuras del pasado y del presente que sirven de ejemplo o de advertencia, escrito para aconsejar a un rey y a sus caballeros. Pide paciencia con una lengua llena de latinismos; ayuda una edición con notas y leerlo copla por copla, atento a cómo la suerte reparte sus golpes entre grandes y pequeños.","en":"For readers who want to know Castilian poetry before the Golden Age and do not mind a challenge. It is a tour through the house of Fortune, with the circles of the planets and figures from past and present who serve as examples or warnings, written to advise a king and his knights. It asks for patience with a language full of Latinisms; an annotated edition helps, and so does reading it stanza by stanza, watching how luck hands out its blows to great and small alike."},
       imagen: {"src": "img/portadas/juan-de-mena-laberinto-de-fortuna.jpg", "credito": {"es": "Edward Burne-Jones, «La rueda de la Fortuna»", "en": "Edward Burne-Jones, «The Wheel of Fortune»"}, "url": "https://commons.wikimedia.org/wiki/File:Edward_Burne-Jones_-_The_Wheel_of_Fortune.jpg"},
-      citas: ["Tus casos falaçes, Fortuna, cantamos, estados de gentes que giras e trocas, tus grandes discordias, tus firmezas pocas"],
+      citas: [
+        "Tus casos falaçes, Fortuna, cantamos, / estados de gentes que giras e trocas, / tus grandes discordias, tus firmezas pocas, / y los que en tu rueda quexosos fallamos",
+        "¡O vida segura la mansa pobreza, / dádiva santa desagradesçida! / Rica se llama, non pobre, la vida / del que se contenta bevir sin riqueza;",
+        "e como los rayos las torres mayores / fieren enante que no en las baxuras, / así dan los fados sus desaventuras / más a los grandes que a los menores."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Laberinto_de_fortuna"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Laberinto_de_fortuna"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Laberinto_de_fortuna"}],
       fuente: {"texto": "Texto transcrito en es.wikisource.org, marcado como dominio público (la página no identifica la edición, sin notas ni estudio modernos)", "url": "https://es.wikisource.org/wiki/Laberinto_de_fortuna"},
@@ -1039,7 +1200,11 @@ window.FENIX = {
       resumen: {"es": "Poema caballeresco de Ariosto que continúa la historia de Orlando enamorado, en tiempos de las guerras de Carlomagno contra los moros. Mezcla duelos, magia, viajes fantásticos y amores, entre ellos el de Orlando por la bella Angélica, que acaba por hacerle perder la razón. Con humor y fantasía, el poeta enlaza decenas de episodios en un mismo gran tapiz. La traducción de Manuel Aranda y Sanjuán, en prosa y anotada, se publicó en Barcelona en dos tomos."},
       porque: {"es":"Para quien busca una lectura de pura aventura y buen humor, sin pretensión de lección. Sirve de entrada a la épica caballeresca, porque la prosa de esta traducción corre sin trabas y se puede leer por episodios sueltos. Deja ver, de paso, cómo la pasión puede nublar hasta al más sensato.","en":"For readers who want pure adventure and good humour, with no lesson attached. It is a friendly way into chivalric epic, since the prose of this translation flows easily and can be read in separate episodes. It also shows, almost in passing, how passion can cloud the judgement of even the most sensible man."},
       imagen: {"src": "img/portadas/ariosto-orlando-furioso.jpg", "credito": {"es": "Gustave Doré, ilustración para «Orlando furioso», 1879", "en": "Gustave Doré, illustration for “Orlando Furioso”, 1879"}, "url": "https://commons.wikimedia.org/wiki/File:Orlando_Furioso_hippogriff_battle.png"},
-      citas: ["Con respecto á Orlando, referiré cosas que jamás se han dicho en prosa ni en verso; manifestaré cómo se convirtió en un loco furioso aquel hombre tenido siempre como modelo de cordura"],
+      citas: [
+        "Canto la galantería, las damas, los caballeros, las armas, los amores y las arriesgadas empresas del tiempo en que los moros atravesaron el mar de África",
+        "¡Oh extraordinaria bondad de los caballeros antiguos! Ambos eran rivales, de diferentes creencias",
+        "A unos se la había hecho perder el amor; a otros el deseo de honores; a otros el afán de atesorar riquezas, que les obligaba a cruzar la vasta extensión de los mares"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo I", "url": "https://www.gutenberg.org/ebooks/46201.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo I", "url": "https://www.gutenberg.org/ebooks/46201"}, {"formato": "epub", "texto": "Project Gutenberg, tomo II", "url": "https://www.gutenberg.org/ebooks/49063.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo II", "url": "https://www.gutenberg.org/ebooks/49063"}],
       fuente: {"texto": "Project Gutenberg, libros n.º 46201 y 49063: Barcelona, Empresa Editorial La Ilustración, colección «Los grandes poemas» (el tomo II lleva fecha de 1872) (dominio público)", "url": "https://www.gutenberg.org/ebooks/46201"},
@@ -1057,7 +1222,12 @@ window.FENIX = {
       resumen: {"es": "Relato autobiográfico que Teresa de Jesús escribió por encargo de sus confesores. Cuenta su infancia, su entrada en el Carmelo, sus años de enfermedad y los altibajos de su vida de oración, y describe con sencillez los grados de la oración mental. También recuerda el nacimiento de su primer convento reformado y el trato con quienes la acompañaron. Está escrito en un castellano llano y directo, lleno de comparaciones tomadas de la vida diaria. Se ofrece en la edición de Espasa-Calpe de 1927."},
       porque: {"es":"Para quien reza poco porque no sabe qué decirle a Dios: Teresa enseña a tratarlo como a un amigo, sin fórmulas. Cuenta sus propias caídas y sus años de aridez sin disimular, lo que consuela a quien se cree el único que tropieza. Se lee de a un capítulo y deja ganas de volver a la oración.","en":"For anyone who prays little because they do not know what to say to God: Teresa teaches how to treat Him as a friend, without formulas. She tells of her own failings and her years of dryness without hiding them, which consoles anyone who thinks they are the only one who stumbles. It reads a chapter at a time and leaves a wish to return to prayer."},
       imagen: {"src": "img/portadas/teresa-de-jesus-libro-de-la-vida.jpg", "credito": {"es": "Fray Juan de la Miseria, «Retrato de Santa Teresa de Jesús», 1576", "en": "Fray Juan de la Miseria, «Portrait of Saint Teresa of Ávila», 1576"}, "url": "https://commons.wikimedia.org/wiki/File:Teresa_de_Jes%C3%BAs_(cropped).jpg"},
-      citas: ["El tener padres virtuosos y temerosos de Dios me bastára, si yo no fuera tan ruin, con lo que el Señor me favorecia, para ser buena."],
+      citas: [
+        "No es otra cosa oración mental, a mi parecer, sino tratar de amistad, estando muchas veces tratando a solas con quien sabemos nos ama.",
+        "No está el amor de Dios en tener lágrimas, ni estos gustos y ternura, que por la mayor parte los deseamos y consolámonos con ellos, sino en servir con justicia y fortaleza de ánimo y humildad.",
+        "Padecer quiero, Señor, pues vos padecistes; cúmplase en mí de todas maneras vuestra voluntad.",
+        "Fiad en su bondad, que nunca faltó a sus amigos."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Su_vida_(Santa_Teresa_de_Jes%C3%BAs)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Su_vida_%28Santa_Teresa_de_Jes%C3%BAs%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Su_vida_%28Santa_Teresa_de_Jes%C3%BAs%29"}],
       fuente: {"texto": "Edición de Madrid, 1927 (Espasa-Calpe, Colección Universal), transcrita en es.wikisource.org con ortografía de la época (transcripción pendiente de revisar) (dominio público)", "url": "https://es.wikisource.org/wiki/Su_vida_(Santa_Teresa_de_Jes%C3%BAs)"},
@@ -1075,7 +1245,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de Cervantes en cuatro jornadas, inspirada en los años en que estuvo cautivo en Argel. Muestra la vida de los cristianos esclavos, con sus penas, su fe y sus amores, junto a personajes alegóricos como la Ocasión y la Necesidad. Entre los personajes figura un soldado llamado Saavedra, que recuerda al propio autor. Es una de las primeras obras teatrales de Cervantes. Se ofrece en la edición de Calpe de 1922, con notas."},
       porque: {"es":"Es la ocasión de leer a Cervantes antes de la fama, hablando de lo que vivió en carne propia. Ayuda a quien conoce solo el Quijote a ver de dónde sale su mirada compasiva, y recuerda lo que significaron la fe y la esperanza para un hombre encerrado.","en":"A chance to read Cervantes before his fame, writing about what he lived through himself. It helps anyone who knows only his famous novel see where his compassionate eye comes from, and it recalls what faith and hope meant to a man held in captivity."},
       imagen: {"src": "img/portadas/cervantes-el-trato-de-argel.jpg", "credito": {"es": "Georg Braun y Franz Hogenberg, «Vista de Argel», c. 1575", "en": "Georg Braun and Franz Hogenberg, “View of Algiers”, c. 1575"}, "url": "https://commons.wikimedia.org/wiki/File:Braun_Hogenberg_Algiers.tif"},
-      citas: ["¡Oh purgatorio en la vida, infierno puesto en el mundo, mal que no tiene segundo, estrecho do no hay salida!"],
+      citas: [
+        "¡Oh purgatorio en la vida, infierno puesto en el mundo, mal que no tiene segundo, estrecho do no hay salida!",
+        "Yo moriré, por lo que al alma toca, antes que hacer lo que mi ama quiere; firme he de estar cual bien fundada roca que en torno el viento, el mar combate y hiere. Que sea mi vida mucha, o que sea poca, importa poco; sólo el que bien muere puede decir que tiene larga vida, y el que mal, una muerte sin medida.",
+        "A la triste fortuna alegre cara debe mostrar el pecho generoso: que a cualquier mal buen ánimo repara."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_trato_de_Argel_(1922)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_trato_de_Argel_%281922%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_trato_de_Argel_%281922%29"}],
       fuente: {"texto": "Edición de Madrid, 1922 (Calpe, Colección Universal, «Comedias»), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_trato_de_Argel_(1922)"},
@@ -1091,9 +1265,14 @@ window.FENIX = {
       categoria: "lectura",
       recomendado: false,
       resumen: {"es": "Obra en prosa, dividida en tres libros, que comenta los nombres con que la Sagrada Escritura designa a Cristo: Pimpollo, Faces de Dios, Camino, Pastor, Monte, Rey de Dios, Esposo, Hijo de Dios, Cordero, Jesús, entre otros. Está escrita como una conversación entre tres amigos que pasan unos días en una huerta junto al Tormes. Fray Luis de León une textos bíblicos, tradición y reflexión propia en un castellano muy cuidado. Es una de las grandes obras de la prosa del siglo XVI y de la lectura espiritual en español."},
-      porque: {"es":"Para quien disfruta de la buena prosa y quiere conocer mejor a Cristo desde las palabras mismas de la Escritura. Cada nombre abre una meditación pausada, y el diálogo entre los amigos hace amena la lectura. Pide tiempo y atención, pero recompensa a quien lo lee de a poco, un nombre por vez.","en":"For anyone who enjoys fine prose and wants to know Christ better through the very words of Scripture. Each name opens a slow meditation, and the dialogue between the friends makes the reading pleasant. It asks for time and attention, but rewards whoever reads it little by little, one name at a time."},
+      porque: {"es":"Para quien disfruta de la buena prosa y quiere conocer mejor a Cristo desde la Escritura. En la tradición bíblica el nombre dice quién es la persona, y cada nombre de Cristo (Pastor, Camino, Príncipe de paz, Cordero) abre una meditación. Tres amigos conversan en una huerta junto al Tormes, con mucha Biblia y algo de humor. Pide atención: te rinde más leyendo un nombre por vez.","en":"For anyone who enjoys fine prose and wants to know Christ better through Scripture. In the biblical tradition a name says who the person is, and each name of Christ (Shepherd, Way, Prince of Peace, Lamb) opens a meditation. Three friends talk in an orchard by the Tormes, with plenty of Scripture and some humor. It asks for attention: you get more from it reading one name at a time."},
       imagen: {"src": "img/portadas/fray-luis-de-leon-de-los-nombres-de-cristo.jpg", "credito": {"es": "Francisco Pacheco, «Retrato de Fray Luis de León», c. 1599", "en": "Francisco Pacheco, “Portrait of Fray Luis de León”, c. 1599"}, "url": "https://commons.wikimedia.org/wiki/File:Retrato_de_Fray_Luis_de_Le%C3%B3n.jpg"},
-      citas: ["Llámase también Camino Cristo en la Sagrada Escritura."],
+      citas: [
+        "Aquel amor es verdaderamente grande y de subidos quilates, que vence grandes dificultades. Aquél ama de veras que rompe por todo, que ningún estorbo le puede hacer que no ame.",
+        "Cristo es el camino del cielo, porque, si no es poniendo las pisadas en él y siguiendo su huella, ninguno va al cielo.",
+        "Entre las propiedades del buen Pastor, pone Cristo en el Evangelio que llama por su nombre a cada una de sus ovejas; que es decir que conoce lo particular de cada una de ellas, y la rige y llama al bien en la forma particular que más le conviene, no a todas por una forma, sino a cada cual por la suya.",
+        "Porque si la paz es carecer de mal que aflige y de deseo que atormenta, y gozar de reposado sosiego, solo Él hace exentas las almas del temer, y las enriquece por tal manera, que no les queda cosa que poder desear."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/De_los_nombres_de_Cristo"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=De_los_nombres_de_Cristo"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=De_los_nombres_de_Cristo"}],
       fuente: {"texto": "Texto en tres tomos transcrito en es.wikisource.org con ortografía modernizada; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/De_los_nombres_de_Cristo"},
@@ -1111,7 +1290,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de enredos de Lope de Vega ambientada en el bullicio de las ferias de Madrid, con sus buhoneros, caballeros y damas en torno a las tiendas de la calle. Entre compras, galanteos y rondas de noche se cruzan los pretendientes de Violante y las intrigas de su amiga Eufrasia, mientras un ladrón y un alguacil añaden movimiento a la escena. La obra retrata con humor y colorido la vida urbana de la corte, con su habla popular y sus tipos callejeros."},
       porque: {"es":"Una comedia ligera para quien quiere conocer el Madrid vivo del Siglo de Oro, con su ruido, sus tiendas y sus galanteos. No pide nada al lector, solo ganas de reírse un rato del amor y del ingenio con que se enredan los personajes.","en":"A light comedy for anyone who wants to meet the lively Madrid of the Golden Age, with its noise, its shops and its courtships. It asks nothing of the reader except a willingness to smile for a while at love and at the wit of its tangled characters."},
       imagen: {"src": "img/portadas/lope-de-vega-las-ferias-de-madrid.jpg", "credito": {"es": "Juan de la Corte, «La Plaza Mayor de Madrid», siglo XVII", "en": "Juan de la Corte, “The Plaza Mayor of Madrid”, 17th century"}, "url": "https://commons.wikimedia.org/wiki/File:Corte-plaza_mayor.jpg"},
-      citas: ["¿Que en esa acera pusiste tu aparato y tienda, Pierres?"],
+      citas: [
+        "¡Callad, hombre sin razón; / que no hay puerta al corazón. / Todo está de guardas lleno! / Dadme que la mujer quiera, / que el guardarla es imposible.",
+        "Tanto me quema el amor / como me hiela el temor.",
+        "Sabed que es la fragua el dar / donde se apura el amor."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Las_ferias_de_Madrid"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Las_ferias_de_Madrid"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Las_ferias_de_Madrid"}],
       fuente: {"texto": "Texto transcrito en es.wikisource.org con ortografía modernizada; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/Las_ferias_de_Madrid"},
@@ -1129,7 +1312,11 @@ window.FENIX = {
       resumen: {"es": "Obra del jesuita José de Acosta, que vivió años en el Perú, sobre la naturaleza y los pueblos del Nuevo Mundo. Los primeros libros tratan del cielo, el clima, los metales, las plantas y los animales de las Indias, y los demás de la historia, los ritos, el gobierno y las guerras de los indios. Acosta busca explicar las causas de lo que allá parece extraño, y por eso mezcla observación, filosofía natural y relato histórico. Se ofrece en dos tomos, en la reimpresión fiel de la primera edición castellana (Sevilla, 1590)."},
       porque: {"es":"Para quien se interesa por cómo se miró América por primera vez y por cómo un hombre de su tiempo intentaba explicar lo desconocido con razones. Sirve al lector de historia, a quien conoce o quiere conocer el Perú, y a quien disfruta de la curiosidad bien conducida. Se puede leer por libros sueltos, según el tema.","en":"For readers interested in how the Americas were first looked at, and in how a man of his time tried to explain the unknown with reasons. It suits lovers of history, anyone who knows or wants to know Peru, and those who enjoy well-guided curiosity. It can be read book by book, following whichever subject draws you."},
       imagen: {"src": "img/portadas/acosta-historia-natural-y-moral-de-las-indias.jpg", "credito": {"es": "Diego Gutiérrez, «Americae sive quartae orbis partis nova et exactissima descriptio», 1562", "en": "Diego Gutiérrez, «Americae sive quartae orbis partis nova et exactissima descriptio», 1562"}, "url": "https://commons.wikimedia.org/wiki/File:1562_Americ%C3%A6_Guti%C3%A9rrez.JPG"},
-      citas: ["Así que aunque el mundo nuevo ya no es nuevo, sino viejo, segun hay mucho dicho, y escrito de él, todavía me parece que en alguna manera se podrá tener esta Historia por nueva, por ser juntamente Historia, y en parte Filosofía, y por ser no solo de las obras de naturaleza, sino tambien de las del libre albedrío, que son los hechos y costumbres de hombres."],
+      citas: [
+        "Así que aunque el mundo nuevo ya no es nuevo, sino viejo, según hay mucho dicho, y escrito de él, todavía me parece que en alguna manera se podrá tener esta Historia por nueva",
+        "No se ha de ofender nadie, ni tener en menos los Santos Doctores de la Iglesia, si en algún punto de Filosofía y ciencias naturales sienten diferentemente de lo que está más recibido y aprobado por buena Filosofía; pues todo su estudio fue conocer, y servir y predicar al Criador, y en esto tuvieron grande excelencia.",
+        "Harto más ciertamente son de reprehender los sabios de este siglo, y Filósofos vanos, que conociendo y alcanzando el ser y orden de estas criaturas, el curso y movimiento de los Cielos, no llegaron los desventurados a conocer al Criador y Hacedor de todo esto"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo I", "url": "https://www.gutenberg.org/ebooks/70219.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo I", "url": "https://www.gutenberg.org/ebooks/70219"}, {"formato": "epub", "texto": "Project Gutenberg, tomo II", "url": "https://www.gutenberg.org/ebooks/50430.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo II", "url": "https://www.gutenberg.org/ebooks/50430"}],
       fuente: {"texto": "Project Gutenberg, libros n.º 70219 y 50430: reimpresión fiel de la edición de Sevilla, 1590 (Madrid: Ramón Anglés, 1894) (dominio público)", "url": "https://www.gutenberg.org/ebooks/70219"},
@@ -1147,7 +1334,12 @@ window.FENIX = {
       resumen: {"es": "Poema épico de Alonso de Ercilla que narra la guerra de los españoles contra los araucanos en Chile, en la que el propio autor participó como soldado. En treinta y siete cantos reunidos en tres partes describe el país de Arauco, sus costumbres y las campañas de ambos bandos, con una notable admiración por el valor de los araucanos. Es la primera gran obra épica sobre América y un texto fundacional de la literatura chilena. Incluye el privilegio real y el prólogo de la edición antigua."},
       porque: {"es":"Para quien es de Chile o se interesa por su historia y quiere leer cómo se contó por primera vez la tierra de Arauco, y por alguien que estuvo allí. Ayuda a entender de dónde viene parte de nuestra tradición literaria. Los cantos se leen por tandas, y la admiración del autor por el adversario sorprende todavía.","en":"For readers from Chile, or interested in its history, who want to see how the land of Arauco was first told, and by someone who was there. It helps explain where part of Chile's literary tradition comes from. The cantos can be read in batches, and the author's admiration for his adversary is still surprising."},
       imagen: {"src": "img/portadas/ercilla-la-araucana.jpg", "credito": {"es": "El Greco (atribuido), «Retrato de Alonso de Ercilla y Zúñiga», década de 1570", "en": "El Greco (attributed), “Portrait of Alonso de Ercilla y Zúñiga”, 1570s"}, "url": "https://commons.wikimedia.org/wiki/File:El_Greco_-_Poet_Ercilla_y_Zuniga_-_WGA10505.jpg"},
-      citas: ["No las damas, amor, no gentilezas de caballeros canto enamorados, ni las muestras, regalos y ternezas de amorosos afectos y cuidados"],
+      citas: [
+        "No las damas, amor, no gentilezas / de caballeros canto enamorados, / ni las muestras, regalos y ternezas / de amorosos afectos y cuidados",
+        "Chile, fértil provincia y señalada / en la región antártica famosa, / de remotas naciones respetada / por fuerte, principal y poderosa; / la gente que produce es tan granada, / tan soberbia, gallarda y belicosa, / que no ha sido por rey jamás regida / ni a estranjero dominio sometida.",
+        "¿Qué furor es el vuestro, ¡oh araucanos!, / que a perdición os lleva sin sentillo? / ¿Contra vuestras entrañas tenéis manos, / y no contra el tirano en resistillo?",
+        "sin pasarles jamás por la memoria / que en siete pies de tierra al fin habían / de venir a caber sus hinchazones, / su gloria vana y vanas pretensiones."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_araucana"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La_araucana"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La_araucana"}],
       fuente: {"texto": "Texto de las tres partes transcrito en es.wikisource.org, con los preliminares de la edición antigua (dominio público)", "url": "https://es.wikisource.org/wiki/La_araucana"},
@@ -1165,7 +1357,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de enredo ambientada en Éfeso, donde un mercader de Siracusa es detenido y obligado a contar su historia. Años atrás un naufragio separó a sus dos hijos gemelos, cada uno acompañado de un criado también gemelo, y ahora los cuatro coinciden en la misma ciudad. Las confusiones de identidad se multiplican entre esposas, amigos, deudores y criados, con golpes, malentendidos y escenas de gran enredo. La obra juega con el parecido, la familia perdida y el reencuentro."},
       porque: {"es":"Una de las obras más cortas de Shakespeare y una de las más fáciles de leer, buena para empezar con él. Su mérito es la maquinaria del enredo, que se sigue con una sonrisa, y bajo la risa late una pregunta seria: qué nos hace ser quienes somos.","en":"One of Shakespeare's shortest plays and among the easiest to read, a good place to start with him. Its pleasure lies in the machinery of the mix-ups, which you follow with a smile, and beneath the laughter runs a serious question: what makes us who we are."},
       imagen: {"src": "img/portadas/shakespeare-la-comedia-de-las-equivocaciones.jpg", "credito": {"es": "Henry J. Richter y Job Bauer, «The Two Dromios», 1883-1884", "en": "Henry J. Richter and Job Bauer, «The Two Dromios», 1883-1884"}, "url": "https://commons.wikimedia.org/wiki/File:(Comedy_of_errors)_The_two_dromios._Dromio_of_Ephesus._Methinks_you_are_my_glass_and_not_my_brother_-_Isee_by_you,_I_am_a_sweet-faced_youth._Comedy_of_Errors._Act_V_scene_1_-_estampe_-_Richter_pinxt_;_J._Bauer_Scupt_-_btv1b8437089t.jpg"},
-      citas: ["Continuad, Solino; procurad mi pérdida; y con la sentencia de muerte, terminad mis desgracias y mi vida."],
+      citas: [
+        "Estoy en el mundo como una gota de agua que busca en el Océano otra gota; y no pudiendo encontrar allí su compañera, se pierde ella propia errante e inapercibida. Así yo, desgraciado, para encontrar una madre y un hermano, me pierdo a mí propio buscándolos.",
+        "Hemos entrado en el mundo como dos hermanos: entremos aquí mano en mano y no uno delante del otro.",
+        "te sería tan fácil dejar caer una gota de agua en el Océano y recogerla en seguida sin mezcla, sin adición, ni disminución alguna, como separarte de mí sin arrastrarme contigo también."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, volumen 4 (incluye Comedia de equivocaciones)", "url": "https://www.gutenberg.org/ebooks/59686.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, volumen 4 (incluye Comedia de equivocaciones)", "url": "https://www.gutenberg.org/ebooks/59686"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 59686: Dramas de Guillermo Shakspeare, vol. 4, traducción de José Arnaldo Márquez (Barcelona, 1883) (dominio público)", "url": "https://www.gutenberg.org/ebooks/59686"},
@@ -1183,7 +1379,12 @@ window.FENIX = {
       resumen: {"es": "Tragedia ambientada en Verona, donde las familias Montesco y Capuleto mantienen un odio antiguo que ensangrienta las calles. Romeo, hijo de los primeros, conoce en una fiesta a Julieta, hija de los segundos, y ambos se enamoran y se casan en secreto con ayuda de fray Lorenzo. Las riñas entre las casas, un destierro y una serie de planes que salen mal van cerrando el camino a los jóvenes. La obra trata del amor, la violencia de los bandos y el precio de la precipitación."},
       porque: {"es":"Se cree conocida de oídas y, al leerla, resulta más dura y más humana de lo que se recuerda. Sirve a los jóvenes y a quienes ya no lo son: muestra cuánto cuestan la prisa, el rencor heredado y las decisiones tomadas sin consejo.","en":"Most people think they know it from hearsay, and reading it turns out to be harsher and more human than remembered. It serves the young and those who no longer are: it shows what haste, inherited grudges and decisions taken without counsel can cost."},
       imagen: {"src": "img/portadas/shakespeare-romeo-y-julieta.jpg", "credito": {"es": "Frank Bernard Dicksee, «Romeo y Julieta», 1884", "en": "Frank Bernard Dicksee, «Romeo and Juliet», 1884"}, "url": "https://commons.wikimedia.org/wiki/File:Frank_Bernard_Dicksee_-_Romeo_and_Juliet,_1884.jpg"},
-      citas: ["¡Romeo, Romeo! ¿Por qué eres tú Romeo? ¿Por qué no reniegas del nombre de tu padre y de tu madre? Y si no tienes valor para tanto, ámame, y no me tendré por Capuleto."],
+      citas: [
+        "¡Romeo, Romeo! ¿Por qué eres tú Romeo? ¿Por qué no reniegas del nombre de tu padre y de tu madre? Y si no tienes valor para tanto, ámame, y no me tendré por Capuleto.",
+        "¿Y qué quiere decir Montesco? No es pie ni mano ni brazo, ni semblante ni pedazo alguno de la naturaleza humana. ¿Por qué no tomas otro nombre? La rosa no dejaría de ser rosa, y de esparcir su aroma, aunque se llamase de otro modo.",
+        "Triste es la ausencia y tan dulce la despedida, que no sé cómo arrancarme de los hierros de esta ventana.",
+        "Nada violento es duradero: ni el placer ni la pena: ellos mismos se consumen como el fuego y la pólvora al usarse. La excesiva dulcedumbre de la miel empalaga al labio. Ama, pues, con templanza."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, volumen 1 (incluye Romeo y Julieta)", "url": "https://www.gutenberg.org/ebooks/53207.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, volumen 1 (incluye Romeo y Julieta)", "url": "https://www.gutenberg.org/ebooks/53207"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 53207: Dramas de Guillermo Shakspeare, vol. 1, traducción de Marcelino Menéndez y Pelayo (Barcelona, 1881) (dominio público)", "url": "https://www.gutenberg.org/ebooks/53207"},
@@ -1201,7 +1402,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de Lope de Vega basada en la historia del moro Abindarráez y la bella Jarifa, hija del alcaide de Cartama. Abindarráez, apresado en la frontera por el capitán cristiano Rodrigo de Narváez, obtiene permiso para visitar a su amada con la promesa de volver a su prisión. La obra recoge la cortesía entre enemigos, la palabra dada y el amor que supera la guerra. Se conoce también con el título «El remedio en la desdicha»."},
       porque: {"es":"Una buena lectura para quien busca un ideal de nobleza que no sea ingenuo. Presenta a enemigos que se respetan y a un hombre que cumple su palabra aunque le cueste caro, algo que hoy se agradece encontrar en una página, y más en una tan ágil.","en":"A good read for anyone seeking an ideal of nobility that is not naive. It presents enemies who respect one another and a man who keeps his word even at great cost, something one is glad to find on a page today, especially one this lively."},
       imagen: {"src": "img/portadas/lope-el-remedio-en-su-desdicha.jpg", "credito": {"es": "Ignacio Merino, «El último abencerraje», h. 1870", "en": "Ignacio Merino, «The Last Abencerraje», c. 1870"}, "url": "https://commons.wikimedia.org/wiki/File:El_%C3%BAltimo_abencerraje.jpg"},
-      citas: ["Verdes y hermosas plantas, que el sol con rayos de oro y ojos tristes ha visto veces tantas, cuantas ha que de un alma el cuerpo fuistes"],
+      citas: [
+        "Ámala, sirve y regala, / con celos no la des pena; / que no hay mujer que sea buena / si ve que piensan que es mala.",
+        "Moro, la libertad que yo te he dado me obliga a tu defensa; y sabe el cielo que te he dado tres cosas en un día, que es de ellas cada cual la más preciosa: la libertad, la honra, y hoy la vida.",
+        "Rendido estoy a tu nobleza, y veo que mi ignorancia fue mi propio engaño, aunque si amor a todos da disculpa, ¿por qué no la tendrán mi amor y celos?"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El%20remedio%20en%20su%20desdicha"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20remedio%20en%20su%20desdicha"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20remedio%20en%20su%20desdicha"}],
       fuente: {"texto": "Transcripción de es.wikisource (dominio público)", "url": "https://es.wikisource.org/wiki/El_remedio_en_su_desdicha"},
@@ -1219,7 +1424,13 @@ window.FENIX = {
       resumen: {"es": "Drama histórico en dos partes sobre el reinado de Enrique IV de Inglaterra, amenazado por la rebelión de los Percy. Su hijo, el príncipe Hal, vive entre tabernas con el caballero Falstaff y sus compañeros, hasta que debe asumir sus responsabilidades frente al reino. La primera parte culmina en la batalla de Shrewsbury y la segunda, en los años finales del rey enfermo. Mezcla escenas de corte y de guerra con el humor de Falstaff, uno de los personajes más recordados del teatro inglés."},
       porque: {"es":"Para quien quiere ver cómo se hace un hombre responsable. El príncipe Hal pasa de la taberna al deber, y Falstaff, con todo su encanto, le sirve de espejo de lo que no conviene ser. Es teatro histórico, pero lo que cuenta es el crecimiento de una persona.","en":"For anyone who wants to watch a responsible man being made. The young prince passes from the tavern to duty, and Falstaff, with all his charm, serves as a mirror of what is better not to become. It is historical drama, but what it really tells is a person growing up."},
       imagen: {"src": "img/portadas/shakespeare-enrique-iv.jpg", "credito": {"es": "Eduard von Grützner, «Falstaff», 1906", "en": "Eduard von Grützner, «Falstaff», 1906"}, "url": "https://commons.wikimedia.org/wiki/File:Eduard_von_Gr%C3%BCtzner_-_Falstaff_(1906).jpg"},
-      citas: ["Estremecidos, pálidos aun de inquietud, permitamos respirar un instante a la paz aterrada"],
+      citas: [
+        "¡Inquieta vive la cabeza que lleva una corona!",
+        "Sueño, dulce sueño, suave nodriza de la naturaleza, ¿qué espanto te he causado, que no quieres ya cerrar mis párpados y empapar mis sentidos en el olvido?",
+        "Quiero imitar al sol, que permite a las nubes ínfimas o impuras, que oculten al mundo su belleza, hasta que le plazca volver a su brillo soberano, reapareciendo al disipar las brumas sombrías y los vapores que parecían ahogarle, para ser más admirado.",
+        "Si todo el año fuera fiesta, el placer sería tan fastidioso como el trabajo; pero viniendo aquellas rara vez, son más deseadas y se esperan como un acontecimiento.",
+        "¿Puede el honor reponerme una pierna? No. ¿O un brazo? No. ¿O suprimir el dolor de una herida? No. ¿El honor no es diestro en cirugía? No. ¿Qué es el honor? Un soplo."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Enrique%20IV%20%28Can%C3%A9%20tr.%29"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Enrique%20IV%20%28Can%C3%A9%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Enrique%20IV%20%28Can%C3%A9%20tr.%29"}],
       fuente: {"texto": "Traducción de Miguel Cané (Buenos Aires: La Cultura Argentina, 1918), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Enrique_IV_(Cané_tr.)"},
@@ -1237,7 +1448,12 @@ window.FENIX = {
       resumen: {"es": "Antonio, rico mercader veneciano, pide un préstamo al usurero Shylock para ayudar a su amigo Bassanio a cortejar a la heredera Porcia, y firma un pagaré con una condena singular si no paga a tiempo. Mientras sus naves tardan en volver, la hija de Shylock huye de su casa y Porcia debe resolver con ingenio una prueba dejada por su padre. La obra une comedia amorosa, juicio y reflexión sobre la deuda, la misericordia y el trato entre cristianos y judíos. Su escena del tribunal es de las más célebres de Shakespeare."},
       porque: {"es":"Una comedia incómoda que merece leerse con atención y sin prejuicios. Obliga a pensar en la justicia, la misericordia y el trato a quien es distinto, y deja al lector discutiendo consigo mismo, que es justamente lo que se espera de un clásico.","en":"An uncomfortable comedy that deserves careful reading without prejudice. It forces thought about justice, mercy and the treatment of those who are different, and leaves the reader arguing with himself, which is exactly what one hopes for from a classic."},
       imagen: {"src": "img/portadas/shakespeare-el-mercader-de-venecia.jpg", "credito": {"es": "Maurycy Gottlieb, «Shylock y Jessica», 1876", "en": "Maurycy Gottlieb, «Shylock and Jessica», 1876"}, "url": "https://commons.wikimedia.org/wiki/File:Maurycy_Gottlieb_-_Shylock_e_jessica.jpg"},
-      citas: ["¿Y el judío no tiene ojos, no tiene manos ni órganos ni alma, ni sentidos ni pasiones?"],
+      citas: [
+        "La clemencia no quiere fuerza: es como la plácida lluvia del cielo que cae sobre un campo y le fecunda: dos veces bendita porque consuela al que la da y al que la recibe.",
+        "Hebreo, ya que pides no más que justicia, piensa que si sólo justicia hubiera, no se salvaría ninguno de nosotros. Todos los días, en la oración, pedimos clemencia, pero la misma oración nos enseña a perdonar como deseamos que nos perdonen.",
+        "¿Y el judío no tiene ojos, no tiene manos ni órganos ni alma, ni sentidos ni pasiones? ¿No se alimenta de los mismos manjares, no recibe las mismas heridas, no padece las mismas enfermedades y se cura con iguales medicinas, no tiene calor en verano y frío en invierno, lo mismo que el cristiano?",
+        "No es oro todo lo que reluce: así dice el refrán antiguo; tú verás si con razón. ¡A cuántos ha engañado en la vida una vana exterioridad!"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, volumen 1 (incluye El mercader de Venecia)", "url": "https://www.gutenberg.org/ebooks/53207.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, volumen 1 (incluye El mercader de Venecia)", "url": "https://www.gutenberg.org/ebooks/53207"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 53207: Dramas de Guillermo Shakspeare, vol. 1, traducción de Marcelino Menéndez y Pelayo (Barcelona, 1881) (dominio público)", "url": "https://www.gutenberg.org/ebooks/53207"},
@@ -1255,7 +1471,11 @@ window.FENIX = {
       resumen: {"es": "Comedia sobre sir John Falstaff, caballero pobre y presumido que decide cortejar a dos vecinas acomodadas de Windsor para sacarles dinero. Las señoras Ford y Page se enteran de la treta y se unen para burlarlo con una serie de trampas. Entretanto, el señor Ford, celoso, se disfraza para vigilar a su esposa, y los pretendientes de la joven Ana Page buscan su mano. Es una comedia de costumbres de una villa inglesa, de ritmo vivo y mucho humor."},
       porque: {"es":"Es la comedia más doméstica de Shakespeare y la más sencilla de disfrutar. Sirve para reírse de la vanidad y de los celos, propios y ajenos, y para comprobar que el ingenio de dos mujeres puede más que la presunción de un caballero muy seguro de sí.","en":"The most down-to-earth of Shakespeare's comedies and the easiest to enjoy. It is good for laughing at vanity and jealousy, our own and other people's, and for seeing that the wit of two women outweighs the conceit of a knight very sure of himself."},
       imagen: {"src": "img/portadas/shakespeare-las-alegres-comadres-de-windsor.jpg", "credito": {"es": "John S. Clifton, «Buck Washing on Datchet Mead», 1849", "en": "John S. Clifton, «Buck Washing on Datchet Mead», 1849"}, "url": "https://commons.wikimedia.org/wiki/File:John_S._Clifton_-_Buck_Washing_on_Datchet_Mead_from_%27The_Merry_Wives_of_Windsor,%27_III,_v_-_Google_Art_Project.jpg"},
-      citas: ["No tratéis de disuadirme, sir Hugh. Llevaré este asunto á la alta corte de justicia para lo criminal. Así valiera sir Juan Falstaff veinte como él, no ofenderá á Roberto Pocofondo, escudero."],
+      citas: [
+        "Haré del mundo una ostra y la abriré con mi espada.",
+        "No hay pecado en burlarse de tales libertinos y de su corrupción.",
+        "Principio a comprender que me han hecho hacer el papel de asno."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, volumen 4 (incluye Las alegres comadres de Windsor)", "url": "https://www.gutenberg.org/ebooks/59686.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, volumen 4 (incluye Las alegres comadres de Windsor)", "url": "https://www.gutenberg.org/ebooks/59686"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 59686: Dramas de Guillermo Shakspeare, vol. 4, traducción de José Arnaldo Márquez (Barcelona, 1883) (dominio público)", "url": "https://www.gutenberg.org/ebooks/59686"},
@@ -1273,7 +1493,12 @@ window.FENIX = {
       resumen: {"es": "Comedia pastoril en la que un duque desterrado vive con sus fieles en el bosque de Arden, mientras su hermano usurpador gobierna la corte. Rosalinda, hija del duque, huye también al bosque con su prima Celia y disfrazada de joven, y allí encuentra a Orlando, que la ama sin reconocerla. Entre enredos amorosos, bufones y reflexiones sobre la vida, la obra contrapone la corte y la naturaleza. De ella procede el célebre pasaje en que el mundo se compara con un escenario."},
       porque: {"es":"Una obra para leer con calma cuando se necesita aire. El bosque de Arden ofrece un descanso de la ambición y del bullicio, y entre bromas deja ideas sobre el amor, la vida sencilla y el papel que cada uno representa ante los demás.","en":"A play to read slowly when you need some air. The forest it describes offers a rest from ambition and bustle, and between the jokes it leaves ideas about love, simple living and the part each of us plays before others."},
       imagen: {"src": "img/portadas/shakespeare-como-gusteis.jpg", "credito": {"es": "James Archer, «Rosalind and Celia»", "en": "James Archer, «Rosalind and Celia»"}, "url": "https://commons.wikimedia.org/wiki/File:Rosalind_and_Celia_James_Archer_(1823%E2%80%931904)_Royal_Scottish_Academy_of_Art_%26_Architecture.jpg"},
-      citas: ["Todo el mundo es un escenario, y todos, hombres y mujeres, son meros actores. Todos tienen sus entradas y salidas, y cada hombre en su vida representa muchos papeles, siendo los actos siete edades."],
+      citas: [
+        "Todo el mundo es un escenario, y todos, hombres y mujeres, son meros actores. Todos tienen sus entradas y salidas, y cada hombre en su vida representa muchos papeles, siendo los actos siete edades.",
+        "Dulces son los frutos de la adversidad que, semejante al feo y venenoso sapo, lleva en la cabeza una preciosa joya.",
+        "Esta nuestra vida retirada del bullicio público, descubre idiomas en los árboles, libros en los arroyos, sermones en las piedras, y el bien en todas las cosas.",
+        "El necio se cree discreto y el discreto se tiene a sí propio en concepto de necio."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, volumen 4 (incluye Como gustéis)", "url": "https://www.gutenberg.org/ebooks/59686.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, volumen 4 (incluye Como gustéis)", "url": "https://www.gutenberg.org/ebooks/59686"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 59686: Dramas de Guillermo Shakspeare, vol. 4, traducción de José Arnaldo Márquez (Barcelona, 1883) (dominio público)", "url": "https://www.gutenberg.org/ebooks/59686"},
@@ -1291,7 +1516,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de enredo madrileña del dramaturgo novohispano Juan Ruiz de Alarcón. Don Mendo, galán presumido y murmurador, corteja a la viuda doña Ana y a su prima doña Lucrecia, y habla mal de ambas. Sus palabras son oídas por quienes no debían, y las damas, los criados y sus rivales se las devuelven en una cadena de equívocos. La obra trata de la maledicencia y de la lealtad entre amigos, y se tiene por una de las mejores comedias del Siglo de Oro."},
       porque: {"es":"Sirve a quien quiere conocer a un dramaturgo menos nombrado que Lope o Calderón, pero de gran finura. Tiene una moraleja que no ha envejecido: el que habla mal de los demás termina pagándolo, y se lee con la sonrisa de quien ya vio algo parecido.","en":"Useful for anyone who wants to meet a playwright less often named than his famous contemporaries, yet very fine. Its moral has not aged: whoever speaks ill of others ends up paying for it, and it reads with the smile of someone who has seen the like before."},
       imagen: {"src": "img/portadas/ruiz-de-alarcon-las-paredes-oyen.jpg", "credito": {"es": "Juan de la Corte, «Fiesta real en la Plaza Mayor de Madrid», siglo XVII", "en": "Juan de la Corte, «Royal Festival in the Plaza Mayor of Madrid», 17th century"}, "url": "https://commons.wikimedia.org/wiki/File:Corte-plaza_mayor.jpg"},
-      citas: ["Tiéneme desesperado, Beltrán, la desigualdad, si no de mi calidad, de mis partes, y mi estado."],
+      citas: [
+        "¿Hablas tú tan mal de mí sin que contigo te enojes, y enójaste con quien pudo contarme tus sinrazones? Quien te daña es la verdad de las culpas que te ponen; si pecaste, y yo lo supe, ¿qué importa saber de dónde?",
+        "Pienso que es exceptuado murmurar del que murmura; dicen que el que hurta al ladrón gana perdones.",
+        "Y pues las sé, bien te puedes despedir de mis favores, y a toda ley hablar bien, porque las paredes oyen."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/77445.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/77445"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 77445: edición de Editora Internacional, Buenos Aires, 1924, con ortografía modernizada por el transcriptor (dominio público)", "url": "https://www.gutenberg.org/ebooks/77445"},
@@ -1309,7 +1538,12 @@ window.FENIX = {
       resumen: {"es": "Tragedia del príncipe de Dinamarca, a quien el espectro de su padre revela que fue asesinado por su propio hermano, hoy rey y esposo de la reina viuda. Hamlet duda entre vengar el crimen y asegurarse de la verdad, finge locura y prepara una representación teatral para poner a prueba al rey. Alrededor suyo se mueven Ofelia, Polonio, Laertes y los cortesanos, entre espionajes y traiciones. La obra es un clásico sobre la duda, la culpa, la muerte y el deber. Se ofrece en la traducción de Leandro Fernández de Moratín."},
       porque: {"es":"Es el libro para quien duda: de lo que debe hacer, de lo que es verdad, de lo que vale su propia vida. Leerlo en edad adulta cambia la lectura de juventud, y su monólogo más conocido cobra otro peso cuando uno lo encuentra por fin en su lugar.","en":"The book for anyone who doubts: about what he should do, what is true, what his own life is worth. Reading it as an adult changes the reading of youth, and its best-known soliloquy gains new weight when you finally meet it in its place."},
       imagen: {"src": "img/portadas/shakespeare-hamlet.jpg", "credito": {"es": "Eugène Delacroix, «Hamlet y Horacio en el cementerio», 1839", "en": "Eugène Delacroix, «Hamlet and Horatio in the Graveyard», 1839"}, "url": "https://commons.wikimedia.org/wiki/File:Hamlet_et_Horatio_au_cimeti%C3%A8re_-_Eug%C3%A8ne_Delacroix_-_Mus%C3%A9e_du_Louvre_Peintures_RF_1942.jpg"},
-      citas: ["Existir o no existir, ésta es la cuestión. ¿Cuál es más digna acción del ánimo: sufrir los tiros penetrantes de la fortuna injusta, ú oponer los brazos a este torrente de calamidades, y darles fin con atrevida resistencia?"],
+      citas: [
+        "Existir o no existir, ésta es la cuestión. ¿Cuál es más digna acción del ánimo: sufrir los tiros penetrantes de la fortuna injusta, u oponer los brazos a este torrente de calamidades, y darles fin con atrevida resistencia?",
+        "Ello es, Horacio, que en el cielo y en la tierra hay más de lo que puede soñar tu filosofía.",
+        "Hasta en la muerte de un pajarillo interviene una providencia irresistible. Si mi hora es llegada, no hay que esperarla; si no ha de venir ya, señal que es hora; y si ahora no fuese, habrá de ser después: todo consiste en hallarse prevenido para cuando venga.",
+        "¡Ay, pobre Yorick...! Yo le conocí, Horacio... Era un hombre sumamente gracioso, de la más fecunda imaginación."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/56454.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/56454"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 56454: Hamlet, traducción de L. Fernández de Moratín (Casa Editorial Maucci) (dominio público)", "url": "https://www.gutenberg.org/ebooks/56454"},
@@ -1327,7 +1561,12 @@ window.FENIX = {
       resumen: {"es": "Tragedia de Shakespeare en cinco actos. Macbeth, un valiente general escocés, recibe de unas brujas una profecía que despierta en él y en su esposa una ambición sin freno. A partir de ahí, la obra sigue cómo la sed de poder lo arrastra a la culpa, la desconfianza y el miedo. Se ofrece en la traducción de Marcelino Menéndez y Pelayo, publicada en Barcelona en 1881."},
       porque: {"es":"Una advertencia tan breve como eficaz sobre lo que la ambición hace al que la consiente. Se lee de un tirón, con ritmo de novela negra, y deja una pregunta incómoda: cuántas pequeñas concesiones bastan para que un hombre honrado ya no se reconozca.","en":"A warning as brief as it is effective about what ambition does to the man who indulges it. It reads in one go, with the pace of a thriller, and leaves an uncomfortable question: how many small concessions does it take before an honest man no longer recognizes himself."},
       imagen: {"src": "img/portadas/shakespeare-macbeth.jpg", "credito": {"es": "Henry Fuseli, «Macbeth, Banquo y las brujas», c. 1793-1794", "en": "Henry Fuseli, “Macbeth, Banquo and the Witches”, c. 1793-1794"}, "url": "https://commons.wikimedia.org/wiki/File:Henry_Fuseli_(1741-1825)_-_Macbeth,_Banquo_and_the_Witches_(from_William_Shakespeare's_'Macbeth',_Act_I,_Scene_iii)_-_486261_-_National_Trust.jpg"},
-      citas: ["¿Qué es la vida sino una sombra, un histrion que pasa por el teatro, y á quien se olvida despues, ó la vana y ruidosa fábula de un necio?"],
+      citas: [
+        "Esa engañosa palabra mañana, mañana, mañana nos va llevando por días al sepulcro, y la falaz lumbre del ayer ilumina al necio hasta que cae en la fosa. ¡Apágate ya, luz de mi vida! ¿Qué es la vida sino una sombra, un histrión que pasa por el teatro, y a quien se olvida después, o la vana y ruidosa fábula de un necio?",
+        "La ambición me impele a escalar la cima, ¿pero rodaré por la pendiente opuesta?",
+        "¡Horror contra naturaleza! ¡La ambición se devora a sí misma!",
+        "No bastaría todo el Océano para lavar la sangre de mis dedos. Ellos bastarían para enrojecerle y mancharle."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Macbeth_(Men%C3%A9ndez_y_Pelayo_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Macbeth_%28Men%C3%A9ndez_y_Pelayo_tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Macbeth_%28Men%C3%A9ndez_y_Pelayo_tr.%29"}],
       fuente: {"texto": "Traducción de Marcelino Menéndez y Pelayo (Dramas de Guillermo Shakespeare, Barcelona, 1881), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Macbeth_(Men%C3%A9ndez_y_Pelayo_tr.)"},
@@ -1345,7 +1584,12 @@ window.FENIX = {
       resumen: {"es": "Tragedia de Shakespeare en cinco actos. Otelo, general moro al servicio de Venecia, se casa en secreto con Desdémona y parte a defender Chipre de los turcos. Allí su alférez Yago, resentido con él, urde con paciencia un plan para sembrarle la sospecha y los celos. La obra muestra cómo la calumnia bien dirigida puede destruir la confianza y la felicidad de una pareja. Se ofrece en la traducción de Marcelino Menéndez y Pelayo, publicada en Barcelona en 1881."},
       porque: {"es":"Muestra con precisión cómo una sospecha bien sembrada puede más que el amor y la razón. Le sirve a todo el que alguna vez dio crédito a un rumor, y enseña a desconfiar de la voz que dice aconsejar con honradez mientras empuja hacia el daño.","en":"It shows precisely how a well-planted suspicion can outweigh love and reason. It serves anyone who ever gave credit to a rumor, and teaches distrust of the voice that claims to advise honestly while pushing toward harm."},
       imagen: {"src": "img/portadas/shakespeare-otelo.jpg", "credito": {"es": "Théodore Chassériau, «Otelo y Desdémona en Venecia», 1850", "en": "Théodore Chassériau, “Othello and Desdemona in Venice”, 1850"}, "url": "https://commons.wikimedia.org/wiki/File:Othello_et_Desd%C3%A9mone_%C3%A0_Venise_-_Th%C3%A9odore_Chass%C3%A9riau_-_Mus%C3%A9e_du_Louvre_Peintures_RF_3897.jpg"},
-      citas: ["¿Revelaros mi pensamiento? ¿Y si mi pensamiento fuera torpe, vil y menguado?"],
+      citas: [
+        "Señor, temed mucho a los celos, pálido monstruo, burlador del alma que le da abrigo. Feliz el engañado que descubre el engaño y consigue aborrecer a la engañadora, pero ¡ay del infeliz que aún la ama, y duda, y vive entre amor y recelo!",
+        "La buena reputación, así en hombre como en mujer, es el tesoro más preciado. Poco roba quien roba mi dinero: antes fue algo, después nada: antes mío, ahora suyo, y puede ser de otros cincuenta. Pero quien me roba la fama, no se enriquece, y a mí me deja pobre.",
+        "La voluntad es el hortelano de la vida, y puede criar en ella ortigas y cardos, o hisopos y tomillo: una sola yerba o muchas: enriquecer la tierra o empobrecerla: tenerla de barbecho o abonarla. Para eso es la prudencia, el seso y el libre albedrío.",
+        "La sombra más vana, la más ligera sospecha son para un celoso irrecusables pruebas."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Otelo_(Men%C3%A9ndez_y_Pelayo_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Otelo_%28Men%C3%A9ndez_y_Pelayo_tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Otelo_%28Men%C3%A9ndez_y_Pelayo_tr.%29"}],
       fuente: {"texto": "Traducción de Marcelino Menéndez y Pelayo (Dramas de Guillermo Shakespeare, Barcelona, 1881), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Otelo_(Men%C3%A9ndez_y_Pelayo_tr.)"},
@@ -1363,7 +1607,13 @@ window.FENIX = {
       resumen: {"es": "Novela de Cervantes en dos partes sobre un hidalgo manchego que, de tanto leer libros de caballerías, decide hacerse caballero andante. Acompañado de su escudero Sancho Panza, recorre los caminos de España en busca de aventuras que su imaginación transforma en hazañas. Entre la risa y la ternura, el libro confronta los ideales con la realidad y retrata la sociedad de su tiempo. Es una de las obras fundacionales de la novela moderna."},
       porque: {"es":"Es un libro que se lee distinto a los veinte, a los cuarenta y a los setenta: primero hace reír, después empieza a doler un poco ver cuánto cuesta sostener un ideal. Vale la pena hoy porque enseña a mirar con ternura a quien se equivoca por creer demasiado, y a reírse de uno mismo.","en":"This is a book that reads differently at twenty, at forty and at seventy: first it makes you laugh, then it starts to hurt a little to see what it costs to hold on to an ideal. It is worth reading today because it teaches you to look tenderly at someone who errs by believing too much, and to laugh at yourself."},
       imagen: {"src": "img/portadas/cervantes-don-quijote.jpg", "credito": {"es": "Gustave Doré, «La aventura de los molinos de viento», 1863", "en": "Gustave Doré, “Adventure with the Windmills”, 1863"}, "url": "https://commons.wikimedia.org/wiki/File:Adventure_with_the_Windmills.jpg"},
-      citas: ["En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor."],
+      citas: [
+        "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.",
+        "La libertad, Sancho, es uno de los más preciosos dones que a los hombres dieron los cielos; con ella no pueden igualarse los tesoros que encierra la tierra ni el mar encubre; por la libertad, así como por la honra, se puede y debe aventurar la vida.",
+        "La verdad adelgaza y no quiebra, y siempre anda sobre la mentira como el aceite sobre el agua.",
+        "Yo sé quién soy; y sé que puedo ser no sólo los que he dicho, sino todos los Doce Pares de Francia, y aun todos los Nueve de la Fama.",
+        "No hay fortuna en el mundo, ni las cosas que en él suceden, buenas o malas que sean, vienen acaso, sino por particular providencia de los cielos, y de aquí viene lo que suele decirse: que cada uno es artífice de su ventura."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/2000.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/2000"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 2000 (dominio público)", "url": "https://www.gutenberg.org/ebooks/2000"},
@@ -1381,7 +1631,13 @@ window.FENIX = {
       resumen: {"es": "Poema didáctico en verso en el que Lope de Vega explica, ante una academia madrileña, cómo escribir comedias para el público de su tiempo. Defiende la mezcla de lo trágico y lo cómico, la división en tres actos y la variedad de metros según la situación. Con humor y desenfado, discute además las reglas de los antiguos y justifica por qué el teatro nuevo busca agradar al espectador. Es un texto clave para entender el teatro español del Siglo de Oro."},
       porque: {"es":"Para quien escribe, dirige o simplemente va al teatro, y quiere saber qué busca el público y por qué. Es breve y está escrito con gracia, así que se lee de una sentada. Muestra a un autor que defiende su oficio con franqueza y sin solemnidad, y ayuda a ver mejor las comedias del Siglo de Oro.","en":"For anyone who writes, directs or simply goes to the theatre and wants to know what audiences look for and why. It is short and written with charm, so it can be read in one sitting. It shows an author defending his craft frankly and without solemnity, and it helps you see Golden Age plays more clearly."},
       imagen: {"src": "img/portadas/lope-de-vega-arte-nuevo-de-hacer-comedias.jpg", "credito": {"es": "Francisco Pacheco, «Retrato de Lope de Vega», siglo XVII", "en": "Francisco Pacheco, “Portrait of Lope de Vega”, 17th century"}, "url": "https://commons.wikimedia.org/wiki/File:Francisco_pacheco-lope_de_vega.jpg"},
-      citas: ["porque como las paga el vulgo, es justo / hablarle en necio para darle gusto."],
+      citas: [
+        "Y cuando he de escribir una comedia, / encierro los preceptos con seis llaves, / saco a Terencio y Plauto de mi estudio / para que no me den voces, que suele / dar gritos la verdad en libros mudos",
+        "porque como las paga el vulgo, es justo / hablarle en necio para darle gusto.",
+        "Ya tiene la comedia verdadera su fin propuesto como todo género de poema o poesis, y este ha sido imitar las acciones de los hombres, y pintar de aquel siglo las costumbres.",
+        "Buen ejemplo nos da naturaleza, / que por tal variedad tiene belleza.",
+        "Los casos de la honra son mejores, / porque mueven con fuerza a toda gente, / con ellos las acciones virtuosas, / que la virtud es dondequiera amada"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_arte_nuevo_de_hacer_comedias"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_arte_nuevo_de_hacer_comedias"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_arte_nuevo_de_hacer_comedias"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_arte_nuevo_de_hacer_comedias"},
@@ -1399,7 +1655,12 @@ window.FENIX = {
       resumen: {"es": "Comedia en tres actos de Lope de Vega. En plena boda del labrador Peribáñez con Casilda, un percance durante los festejos lleva al comendador de Ocaña a fijarse en la novia. El poderoso señor intenta ganarse a la joven y apartar al marido con los medios que su rango le da. La obra enfrenta el honor de un hombre del pueblo con los abusos de la nobleza, hasta un desenlace que llega ante el propio rey."},
       porque: {"es":"Para quien se pregunta qué es la dignidad de un hombre sencillo frente a un poderoso. Lope hace hablar al labrador con una altura que sorprende, y el lector sale con la idea, nada pasada de moda, de que el honor no depende del apellido.","en":"For anyone who wonders what the dignity of a plain man amounts to before a powerful one. The author lets the farmer speak with a stature that surprises, and the reader leaves with the idea, not at all outdated, that honor does not depend on a surname."},
       imagen: {"src": "img/portadas/lope-de-vega-peribanez.jpg", "credito": {"es": "Francisco de Goya, «La boda», 1791-1792", "en": "Francisco de Goya, “The Wedding”, 1791-1792"}, "url": "https://commons.wikimedia.org/wiki/File:Goya_-_La_boda,_1791_-_1792,_P000799.jpg"},
-      citas: ["Con razón todos te llaman / don Enrique el Justiciero."],
+      citas: [
+        "Amar y honrar su marido / es letra de este abecé, / siendo buena por la B, / que es todo el bien que te pido.",
+        "¡Cosa extraña! ¡Que un labrador tan humilde / estime tanto su fama!",
+        "Bien decís; no me acordaba / que las partes se han de oír, / y más cuando son tan flacas.",
+        "Con razón todos te llaman / don Enrique el Justiciero."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Perib%C3%A1%C3%B1ez_y_el_comendador_de_Oca%C3%B1a"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Perib%C3%A1%C3%B1ez_y_el_comendador_de_Oca%C3%B1a"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Perib%C3%A1%C3%B1ez_y_el_comendador_de_Oca%C3%B1a"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Perib%C3%A1%C3%B1ez_y_el_comendador_de_Oca%C3%B1a"},
@@ -1417,7 +1678,11 @@ window.FENIX = {
       resumen: {"es": "Comedia en tres actos de Lope de Vega ambientada en el ducado de Cleves. La joven duquesa Elena debe decidir sobre su matrimonio con el rey de Frisia, que sus nobles consideran lo más conveniente para el Estado, mientras las ambiciones y las envidias de la corte complican el asunto. En paralelo, unos villanos y criados aportan la parte cómica con sus propios enredos. Está escrita en verso, con el ritmo ágil del teatro del Siglo de Oro."},
       porque: {"es":"Una obra poco frecuentada que ofrece la ocasión de ver a Lope fuera de sus títulos más famosos. Sirve al lector curioso del teatro áureo y a quien se interesa por cómo se mezclan, desde entonces, el cálculo político y los sentimientos en una decisión de matrimonio.","en":"A little-visited play that offers a chance to see the author outside his most famous titles. It suits the reader curious about Golden Age theater and anyone interested in how political calculation and feeling were already mixed in a decision about marriage."},
       imagen: {"src": "img/portadas/lope-de-vega-la-discordia-en-los-casados.jpg", "credito": {"es": "William Hogarth, «Matrimonio a la moda, 2: El tête à tête», c. 1743", "en": "William Hogarth, “Marriage A-la-Mode, 2: The Tête à Tête”, c. 1743"}, "url": "https://commons.wikimedia.org/wiki/File:Marriage_A-la-Mode_2,_The_T%C3%AAte_%C3%A0_T%C3%AAte_-_William_Hogarth.jpg"},
-      citas: ["porque acabe con aplauso, / en la cama o en la mesa, / la discordia en los casados."],
+      citas: [
+        "Lo que gana me fatiga, / desháceme lo que pierdo, / porque es mi definición / pesarme del bien ajeno.",
+        "Mal conoces el furor / que amor ofendido alcanza; / quédese atrás el honor, / porque no hay mayor venganza / que por ofensas de amor.",
+        "Mayormente que el honor / pocas firmezas ofrece, / porque es un vidrio traidor / que con quebrarse agradece / querer limpiarle mejor."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_discordia_en_los_casados"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La_discordia_en_los_casados"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La_discordia_en_los_casados"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_discordia_en_los_casados"},
@@ -1435,7 +1700,13 @@ window.FENIX = {
       resumen: {"es": "Colección de novelas cortas de Cervantes, entre ellas La gitanilla, Rinconete y Cortadillo, El licenciado Vidriera y El coloquio de los perros. Reúne historias de amor, de picaresca, de engaño y de ingenio, ambientadas en la España y la Italia de su tiempo. En el prólogo el autor explica que las llamó «ejemplares» porque de cada una puede sacarse algún provecho. Esta edición incluye además la dedicatoria y el prólogo."},
       porque: {"es":"Para quien quiere entrar a Cervantes sin comprometerse con mil páginas. Son relatos breves que se leen de a uno, con picardía, enredos y lengua muy viva, y se pueden elegir según el ánimo del día. Cada uno deja algo en qué pensar, tal como promete su prólogo.","en":"For readers who want to approach Cervantes without committing to a thousand pages. These are short stories to be read one at a time, full of mischief, tangled plots and lively language, and you can pick one to suit the mood of the day. Each leaves something to think about, just as the prologue promises."},
       imagen: {"src": "img/portadas/cervantes-novelas-ejemplares.jpg", "credito": {"es": "Atribuido a Juan de Jáuregui, «Retrato de Miguel de Cervantes», c. 1600", "en": "Attributed to Juan de Jáuregui, “Portrait of Miguel de Cervantes”, c. 1600"}, "url": "https://commons.wikimedia.org/wiki/File:Cervantes_J%C3%A1uregui.jpg"},
-      citas: ["Héles dado el nombre de Ejemplares, y si bien lo miras, no hay ninguna de quien no se pueda sacar un ejemplo provechoso"],
+      citas: [
+        "Héles dado el nombre de Ejemplares, y si bien lo miras, no hay ninguna de quien no se pueda sacar un ejemplo provechoso.",
+        "Mi intento ha sido poner en la plaza de nuestra república una mesa de trucos, donde cada uno pueda llegar a entretenerse sin daño de barras: digo, sin daño del alma ni del cuerpo, porque los ejercicios honestos y agradables antes aprovechan que dañan.",
+        "Yo soy el primero que he novelado en lengua castellana.",
+        "Duerme; que todo el tiempo que durmieres, serás igual al que envidias.",
+        "Muchas veces suele llover sus misericordias en el tiempo que están más secas las esperanzas."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/61202.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/61202"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 61202 (Colección de Autores Españoles, tomo XXV; dominio público)", "url": "https://www.gutenberg.org/ebooks/61202"},
@@ -1453,7 +1724,12 @@ window.FENIX = {
       resumen: {"es": "Comedia en tres actos de Lope de Vega sobre dos hermanas muy distintas: Nise, culta y presumida, y Finea, tenida por simple. Su padre ofrece una dote a cada una, y el amor y el interés mueven a los pretendientes. A medida que avanza la historia, el amor despierta en Finea una inteligencia que nadie había notado. Es una de las comedias más celebradas de Lope por su humor y por su retrato de la educación y de la discreción."},
       porque: {"es":"Una comedia para sonreír, con un fondo que anima: el amor puede despertar en una persona capacidades que nadie, ni ella misma, sospechaba. Resulta útil para quien se siente subestimado y para quien tiende a juzgar a los demás por su fama de torpes.","en":"A comedy for smiling, with an encouraging core: love can awaken in a person abilities that nobody, herself included, suspected. It helps those who feel underestimated and those who tend to judge others by their reputation for being slow."},
       imagen: {"src": "img/portadas/lope-de-vega-la-dama-boba.jpg", "credito": {"es": "Bartolomé Esteban Murillo, «Dos mujeres en una ventana», siglo XVII", "en": "Bartolomé Esteban Murillo, “Two Women at a Window”, 17th century"}, "url": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Perez_Murillo_014FXD.jpg"},
-      citas: ["que aquí, para los discretos, / da fin La comedia boba."],
+      citas: [
+        "Amor, señores, ha sido / aquel ingenio profundo, / que llaman alma del mundo, / y es el dotor que ha tenido / la cátedra de las ciencias; / porque solo con amor / aprende el hombre mejor / sus divinas diferencias.",
+        "Amor con fuerza süave / dio al hombre el saber sentir, / dio leyes para vivir / político, honesto y grave. / Amor repúblicas hizo; / que la concordia nació / de amor, con que a ser volvió / lo que la guerra deshizo.",
+        "Ya no es menester hacellos / para saber murmurallos; / que se atreve a censurallos / quien no se atreve a entendellos.",
+        "Que aquí, para los discretos, / da fin La comedia boba."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_dama_boba"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La_dama_boba"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La_dama_boba"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_dama_boba"},
@@ -1471,7 +1747,13 @@ window.FENIX = {
       resumen: {"es": "Poema alegórico en ocho capítulos en el que Cervantes emprende un viaje imaginario hacia el monte Parnaso para defender la causa de los buenos poetas. En el camino pasa revista, con ironía y afecto, a los poetas de su época y a sus propios méritos y desengaños. El volumen de esta edición incluye también la tragedia La Numancia y la comedia El trato de Argel. Es un retrato personal del mundo literario del Siglo de Oro."},
       porque: {"es":"Para quien ya conoce el Quijote y quiere oír a Cervantes hablar de sí mismo, de sus colegas y de sus desengaños, con ironía y sin amargura. Sirve a quien gusta de la vida literaria de otra época. El tomo trae además dos piezas de teatro, que amplían la mirada sobre su obra.","en":"For readers who already know Don Quixote and want to hear Cervantes speak about himself, his colleagues and his disappointments, with irony and without bitterness. It suits anyone who enjoys the literary life of another age. The volume also includes two plays, which widen the view of his work."},
       imagen: {"src": "img/portadas/cervantes-viaje-al-parnaso.jpg", "credito": {"es": "Rafael Sanzio, «El Parnaso», 1511", "en": "Raphael, “The Parnassus”, 1511"}, "url": "https://commons.wikimedia.org/wiki/File:Raphael_-_The_Parnassus.jpg"},
-      citas: ["Yo que siempre trabajo y me desvelo / Por parecer que tengo de poeta / La gracia, que no quiso darme el cielo"],
+      citas: [
+        "Yo, que siempre trabajo y me desvelo / por parecer que tengo de poeta / la gracia que no quiso darme el cielo",
+        "Yo corté con mi ingenio aquel vestido / con que al mundo la hermosa Galatea / salió para librarse del olvido.",
+        "Yo he dado en Don Quijote pasatiempo / al pecho melancólico y mohíno / en cualquiera sazón, en todo tiempo.",
+        "Yo he abierto en mis Novelas un camino / por do la lengua castellana puede / mostrar con propiedad un desatino.",
+        "Nunca voló la pluma humilde mía / por la región satírica, bajeza / que a infames premios y desgracias guía."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16110.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16110"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 16110 (edición de Antonio de Sancha, Madrid, 1784; dominio público)", "url": "https://www.gutenberg.org/ebooks/16110"},
@@ -1489,7 +1771,12 @@ window.FENIX = {
       resumen: {"es": "Comedia en tres actos de Lope de Vega ambientada en Nápoles. La condesa Diana, enamorada de su secretario Teodoro, no se atreve a confesarlo por su rango, y tampoco quiere verlo con otra. Entre celos, cartas y enredos de criados, la historia juega con el orgullo, el deseo y las convenciones sociales. El título alude al refrán del perro que ni come ni deja comer."},
       porque: {"es":"Se lee con gusto y con cierto reconocimiento, porque retrata la persona que ni quiere ni deja querer por orgullo. Es una comedia de diálogo vivo, buena para quien teme leer clásicos: todo es cercano, y el que sabe reírse de sí mismo aprende más.","en":"It reads with pleasure and a touch of recognition, because it portrays the person who neither wants nor allows wanting, out of pride. It is a comedy of lively dialogue, good for anyone wary of the classics: everything is close at hand, and whoever can laugh at himself learns more."},
       imagen: {"src": "img/portadas/lope-de-vega-el-perro-del-hortelano.jpg", "credito": {"es": "Francisco de Goya, «El perro» (Pinturas negras), 1820-1823", "en": "Francisco de Goya, “The Dog” (Black Paintings), 1820-1823"}, "url": "https://commons.wikimedia.org/wiki/File:Goya_Dog.jpg"},
-      citas: ["No dudes, naturalmente / es del hortelano el perro: / ni come ni comer deja, / ni está fuera ni está dentro."],
+      citas: [
+        "No dudes, naturalmente / es del hortelano el perro: / ni come ni comer deja, / ni está fuera ni está dentro.",
+        "Es el amor común naturaleza; / mas yo tengo mi honor por más tesoro, / que los respetos de quien soy adoro, / y aun el pensarlo tengo por bajeza.",
+        "porque quisiera yo que, por lo menos, / Teodoro fuera más, para igualarme, / o yo, para igualarle, fuera menos.",
+        "Ni me dejo forzar ni me defiendo; / darme quiero a entender sin decir nada: / entiéndame quien puede; yo me entiendo."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_perro_del_hortelano"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_perro_del_hortelano"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_perro_del_hortelano"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_perro_del_hortelano"},
@@ -1507,7 +1794,11 @@ window.FENIX = {
       resumen: {"es": "Comedia mitológica de Lope de Vega, precedida de una loa, sobre la expedición de los argonautas al reino de Colcos. Jasón y sus compañeros, entre ellos Teseo, buscan el vellocino de oro, y en la aventura conocen a la hechicera Medea. La obra mezcla personajes de la mitología, entre ellos el dios Marte, con la música y la vistosidad de una fiesta cortesana. Muestra cómo el teatro del Siglo de Oro recogió los mitos clásicos."},
       porque: {"es":"Una puerta al mundo mitológico tal como lo veía el teatro del Siglo de Oro, con ánimo de espectáculo. Sirve a quien conoce la historia de los argonautas y quiere verla pasar por la mirada de un español del siglo XVII, más pendiente de la fiesta que de la erudición.","en":"A doorway into the mythological world as the Golden Age stage saw it, with an eye to spectacle. It suits readers who know the story of the Argonauts and want to see it through the eyes of a seventeenth-century Spaniard, more attentive to pageantry than to scholarship."},
       imagen: {"src": "img/portadas/lope-de-vega-el-vellocino-de-oro.jpg", "credito": {"es": "John William Waterhouse, «Jasón y Medea», 1907", "en": "John William Waterhouse, “Jason and Medea”, 1907"}, "url": "https://commons.wikimedia.org/wiki/File:Jason_and_Medea_-_John_William_Waterhouse.jpg"},
-      citas: ["Hagan las velas, Teseo, / para que con dulce fin / a Grecia nos lleve el viento."],
+      citas: [
+        "No hay sirena en mar, ni en fuente / ninfa, que no tenga amor. / No hay pez en el mar profundo / que no tenga sentimiento: / amor es un elemento / en que se conserva el mundo.",
+        "Contra quien ayuda Dios, / cánsase la envidia necia; / que cuando hubiera fortuna, / Dios gobernará su rueda.",
+        "en los reinos reinan / todos los reyes, / en las almas solo / quien los merece"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_vellocino_de_oro"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_vellocino_de_oro"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_vellocino_de_oro"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_vellocino_de_oro"},
@@ -1523,9 +1814,14 @@ window.FENIX = {
       categoria: "teatro",
       recomendado: false,
       resumen: {"es": "Comedia en tres actos de Tirso de Molina sobre Jacobo de Gratis, el Caballero de Gracia, figura de la corte de Felipe II en Madrid. Reacio al matrimonio que su cuñado le propone, se entrega a la caridad y a proyectos piadosos que lo enfrentan con autoridades y con quienes miran con recelo su celo. Con humor, la obra mezcla la vida de la corte, sus enredos y su devoción. Hacia el final promete una segunda parte para seguir contando sus hechos."},
-      porque: {"es":"Una comedia rara en el teatro de su época: el héroe no es un galán, sino un hombre que se entrega a los demás. Sirve a quien busca una mirada amable y con humor sobre la santidad en medio de la ciudad, sin sermón y con personajes de carne y hueso.","en":"An unusual comedy for the theater of its day: the hero is not a suitor but a man who gives himself to others. It suits anyone looking for a kind, humorous view of holiness in the middle of the city, without a sermon and with characters of flesh and blood."},
+      porque: {"es":"Una comedia distinta para su época: el protagonista no conquista a nadie, sino que se entrega a los pobres y a la oración, y por eso choca con quienes lo rodean. Se basa en la vida real de Jacobo de Gratis, que llegó a sacerdote; Tirso se toma licencias históricas, pero acierta en el humor y en los versos. Léela si buscas una mirada amable y sin sermones sobre la santidad en medio de la ciudad.","en":"A comedy unlike most of its time: the hero wins no one over, but gives himself to the poor and to prayer, and that sets him at odds with those around him. It is based on the real Jacobo de Gratis, who became a priest; Tirso takes historical liberties, but his humour and verse are excellent. Read it if you want a kind, sermon-free look at holiness lived in the middle of the city."},
       imagen: {"src": "img/portadas/tirso-de-molina-el-caballero-de-gracia.jpg", "credito": {"es": "El Greco, «El caballero de la mano en el pecho», c. 1580", "en": "El Greco, “The Nobleman with his Hand on his Chest”, c. 1580"}, "url": "https://commons.wikimedia.org/wiki/File:The_Nobleman_with_his_hand_on_his_chest,_by_El_Greco_(Museo_del_Prado,_Madrid).jpg"},
-      citas: ["Es tanto / lo que de este caballero / hay que decir, que lo guardo / para la segunda parte"],
+      citas: [
+        "Puesto que de más estima es la virtud que la sangre.",
+        "Poco precia, mi Conrado, el oro quien no conoce el hierro y el acero. Quien nunca empobreció no ama el tesoro.",
+        "Si de estos extremos dos quieres hallar el remedio, la virtud consiste en medio.",
+        "Pues aunque se suba al cielo Amor, porque todo es alas, cuando son de oro las alas cualquiera le alcanza el vuelo."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_caballero_de_gracia"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_caballero_de_gracia"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_caballero_de_gracia"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_caballero_de_gracia"},
@@ -1543,7 +1839,12 @@ window.FENIX = {
       resumen: {"es": "Comedia en tres actos de Lope de Vega. Don Juan de Padilla ama a doña Beatriz, hija del anciano don Álvaro de Rojas, que lo recibe en su casa con ira y desconfianza. El rey don Alfonso interviene en el asunto, y entre el pleito que se entabla y el desafío que se anuncia, el galán tendrá que defender su honra y su amor. Los criados acompañan y comentan la acción con su gracia."},
       porque: {"es":"Para el lector que disfruta de la comedia de honor con espadas, cartas y un padre testarudo. Se lee rápido, con la gracia de los criados, y muestra cómo el amor y el orgullo de familia chocan en una mesa donde ninguno quiere ceder primero.","en":"For the reader who enjoys a comedy of honor with swords, letters and a stubborn father. It reads quickly, with the charm of the servants, and shows how love and family pride collide at a table where nobody wants to give way first."},
       imagen: {"src": "img/portadas/lope-de-vega-amor-pleito-y-desafio.jpg", "credito": {"es": "Jean-Léon Gérôme, «El duelo tras la mascarada», 1857-1859", "en": "Jean-Léon Gérôme, “The Duel After the Masquerade”, 1857-1859"}, "url": "https://commons.wikimedia.org/wiki/File:Jean-L%C3%A9on_G%C3%A9r%C3%B4me_-_The_Duel_After_the_Masquerade_-_Walters_3751.jpg"},
-      citas: ["Aquí, senado, se acaban / Amor, pleito y desafío, / si perdonáis nuestras faltas."],
+      citas: [
+        "Nunca los reyes largos prólogos emplean en lo que mandan y es justo.",
+        "Mas ¡qué locuras el amor concierta! / ¡Qué de doncellas con mentiras casa! / ¡Qué de tormentas son después espumas! / ¡Qué de ansias, hielos, y palabras, plumas!",
+        "Mal hayan los celos, / bien hayan las paces.",
+        "Aquí, senado, se acaban / Amor, pleito y desafío, / si perdonáis nuestras faltas."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Amor,_pleito_y_desaf%C3%ADo"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Amor%2C_pleito_y_desaf%C3%ADo"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Amor%2C_pleito_y_desaf%C3%ADo"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Amor,_pleito_y_desaf%C3%ADo"},
@@ -1561,7 +1862,13 @@ window.FENIX = {
       resumen: {"es": "Comedia en tres jornadas, considerada la primera de Calderón de la Barca que se conoce, y basada en una leyenda inglesa sobre un rey y una dama a la que desea. Estela vive retirada en el campo, lejos de las miradas de la corte, hasta que el rey la ve durante una cacería. Su hermano Enrico y el resto de la familia deben proteger el honor frente al poder del monarca. El título resume los tres impulsos que se enfrentan a lo largo de la obra."},
       porque: {"es":"Sirve para ver a Calderón en sus comienzos, antes de las obras que lo hicieron famoso, con los temas que lo acompañarían toda la vida. Es una lectura útil para quien quiere seguir el trabajo de un autor y entender cuánto pesaban el honor y la lealtad al rey.","en":"It lets you see the author at his beginnings, before the plays that made him famous, with the themes that would stay with him all his life. A useful read for anyone who wants to follow a writer's development and understand how heavily honor and loyalty to the king weighed."},
       imagen: {"src": "img/portadas/calderon-amor-honor-y-poder.jpg", "credito": {"es": "Pedro de Villafranca, «Retrato de Pedro Calderón de la Barca», 1676", "en": "Pedro de Villafranca, “Portrait of Pedro Calderón de la Barca”, 1676"}, "url": "https://commons.wikimedia.org/wiki/File:Villafranca-Retrato_de_Pedro_Calder%C3%B3n_de_la_Barca-BNE.jpg"},
-      citas: ["porque a tus plantas puesto, / poder, amor y honor den fin con esto."],
+      citas: [
+        "¿Para cuándo es la lealtad / sino cuando es menester / saberse un hombre vencer?",
+        "Ojos, lengua, deteneos, / basta la ocasión, deseos, / que hay lealtad donde hay nobleza.",
+        "La esperanza en el amor / es un dorado veneno, / puñal de hermosuras lleno, / que hiere y mata en rigor.",
+        "Esta es la industria contra la fuerza / y el honor contra el poder.",
+        "porque a tus plantas puesto, / poder, amor y honor den fin con esto."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Amor,_honor_y_poder"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Amor%2C_honor_y_poder"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Amor%2C_honor_y_poder"}],
       fuente: {"texto": "Edición de 1744 transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Amor,_honor_y_poder"},
@@ -1579,7 +1886,12 @@ window.FENIX = {
       resumen: {"es": "Comedia de capa y espada en tres actos de Lope de Vega. Don Juan, un galán de lengua ingeniosa, sigue por la calle a Celia, una dama que se oculta bajo el manto, e intenta ganarla con sus argumentos. De ahí nace una cadena de equívocos entre galanes, damas y criados, con los sentimientos reales siempre un paso detrás de lo que se dice. El gracioso Martín aporta el contrapunto cómico."},
       porque: {"es":"Una comedia de ingenio para quien disfruta del juego de palabras. Entre disfraces y malentendidos plantea algo muy actual: lo que decimos para seducir rara vez coincide con lo que sentimos, y las verdades en amor, como dice el título, duelen a quien las oye.","en":"A comedy of wit for anyone who enjoys wordplay. Among disguises and misunderstandings it raises something very current: what we say to charm rarely matches what we feel, and truths spoken in love, as the title hints, sting the one who hears them."},
       imagen: {"src": "img/portadas/lope-de-vega-ay-verdades-que-en-amor.jpg", "credito": {"es": "Diego Velázquez, «La dama del abanico», c. 1635-1640", "en": "Diego Velázquez, “The Lady with a Fan”, c. 1635-1640"}, "url": "https://commons.wikimedia.org/wiki/File:La_dama_del_abanico,_por_Diego_Vel%C3%A1zquez.jpg"},
-      citas: ["De Las verdades de amor / aquí acaba la comedia."],
+      citas: [
+        "Martín, cuando celos hablan / muy lindas verdades dicen, / que es vino que no las calla.",
+        "Es condición del Amor / pesarle de ver alegre / lo que ama, que querría / que siempre triste estuviese.",
+        "Temo el tenerle afición, / que una larga sinrazón / el mayor amor enfría.",
+        "No soy la Celia que fui, / sino la Celia que ves."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Ay,_verdades,_que_en_amor"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Ay%2C_verdades%2C_que_en_amor"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Ay%2C_verdades%2C_que_en_amor"}],
       fuente: {"texto": "Transcripción de es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Ay,_verdades,_que_en_amor"},
@@ -1597,7 +1909,11 @@ window.FENIX = {
       resumen: {"es": "Drama histórico sobre el infante don Fernando de Portugal, que tras el fracaso de la expedición a Tánger cae prisionero del rey de Fez. Los moros le ofrecen la libertad a cambio de entregar la plaza de Ceuta, y el infante rechaza el trato aun a costa de su propia vida. Entre la corte mora, la lealtad de sus compañeros y la figura de Fénix, la obra pone a prueba qué significa mantenerse constante en la fe y en el deber."},
       porque: {"es":"Para quien quiere ver la fortaleza llevada hasta el final, sin gestos de héroe de cartón. Don Fernando sufre y no cede, y el lector queda pensando qué cosas valen más que la libertad propia, y qué se puede sostener cuando ya no queda nada que perder.","en":"For anyone who wants to see fortitude carried to the end, without cardboard heroics. The prince suffers and does not yield, and the reader is left thinking about what is worth more than one's own freedom, and what can be sustained when there is nothing left to lose."},
       imagen: {"src": "img/portadas/calderon-el-principe-constante.jpg", "credito": {"es": "Wenceslaus Hollar, «Tánger visto desde el este», siglo XVII", "en": "Wenceslaus Hollar, “Tangier from the East”, 17th century"}, "url": "https://commons.wikimedia.org/wiki/File:Wenceslas_Hollar_-_Tangier_from_the_E._(State_2).jpg"},
-      citas: ["¿Qué? Morir como buenos, / con ánimos constantes."],
+      citas: [
+        "Estas, que fueron pompas y alegría / despertando el albor de la mañana, / a la tarde serán lástima vana / durmiendo en brazos de la noche fría.",
+        "A florecer las rosas madrugaron / y para envejecerse florecieron: / cuna y sepulcro en un botón hallaron. / Tales los hombres sus fortunas vieron: / en un día nacieron y espiraron, / que pasados los siglos horas fueron.",
+        "que en un ánimo constante / siempre se halla igual semblante / para el bien y el mal."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_pr%C3%ADncipe_constante"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_pr%C3%ADncipe_constante"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_pr%C3%ADncipe_constante"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_pr%C3%ADncipe_constante"},
@@ -1615,7 +1931,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de capa y espada ambientada en Madrid. Doña Ángela, una joven viuda a quien sus hermanos mantienen recluida, descubre que una puerta disimulada comunica su cuarto con el de don Manuel, huésped de la casa, y se vale de ella para entrar y salir sin ser vista. Don Manuel y su criado Cosme, a quienes empiezan a aparecer y desaparecer objetos y cartas, creen que los visita un duende. La obra enreda equívocos, celos y ocultamientos con mucho humor."},
       porque: {"es":"Una comedia redonda, entretenida de principio a fin, para quien quiere conocer a Calderón en versión ligera. La ingeniosa Ángela muestra cómo se defiende la libertad dentro de una casa que la encierra, y el humor de Cosme alivia hasta al lector cansado.","en":"A well-rounded comedy, entertaining from start to finish, for anyone who wants to meet the author in a lighter vein. Its clever heroine shows how freedom is defended inside a house that confines her, and the servant's humor eases even a tired reader."},
       imagen: {"src": "img/portadas/calderon-la-dama-duende.jpg", "credito": {"es": "Diego Velázquez, «Dama con abanico», h. 1640", "en": "Diego Velázquez, “Lady with a Fan”, c. 1640"}, "url": "https://commons.wikimedia.org/wiki/File:Dama_con_abanico,_by_Diego_Velázquez.jpg"},
-      citas: ["no creas que hay en el mundo, / ni duendes ni familiares."],
+      citas: [
+        "¡Qué gran músico es el miedo!",
+        "Las grandes dificultades hasta saberse lo son, que sabido, todo es fácil.",
+        "Bien como el sol cuando esparce bellos rayos, que una flor se marchita y otra nace."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_dama_duende"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La_dama_duende"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La_dama_duende"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/La_dama_duende"},
@@ -1633,7 +1953,12 @@ window.FENIX = {
       resumen: {"es": "Comedia que dio origen a la leyenda de don Juan Tenorio, el joven noble que se vale de engaños, disfraces y falsas promesas para seducir a mujeres de toda condición, desde una duquesa napolitana hasta una pescadora y una novia en vísperas de boda. Lo acompañan su criado Catalinón, que lo reprueba sin atreverse a dejarlo, y el rey, los padres y los novios burlados. La obra plantea qué ocurre con quien confía en que siempre habrá tiempo para arrepentirse."},
       porque: {"es":"Es el origen de un mito, y leerlo de primera mano da una sorpresa: el seductor no es un romántico, sino un hombre que juega con la palabra dada y cree que siempre habrá tiempo. Sirve para pensar en la responsabilidad que viene con lo que se promete.","en":"This is the origin of a myth, and reading it first-hand brings a surprise: the seducer is no romantic but a man who plays with his given word and believes there will always be time. It is good for thinking about the responsibility that comes with what we promise."},
       imagen: {"src": "img/portadas/tirso-el-burlador-de-sevilla.jpg", "credito": {"es": "Fray Antonio Manuel de Hartalejo, retrato de Tirso de Molina, siglo XVIII", "en": "Fray Antonio Manuel de Hartalejo, portrait of Tirso de Molina, 18th century"}, "url": "https://commons.wikimedia.org/wiki/File:Tirso_de_molina.jpg"},
-      citas: ["¡Qué largo me lo fiáis!"],
+      citas: [
+        "¡Qué largo me lo fiáis!",
+        "Advierte, mi bien, que hay Dios y que hay muerte.",
+        "Los que fingís y engañáis las mujeres de esa suerte, lo pagaréis en la muerte.",
+        "Ésta es justicia de Dios: quien tal hace, que tal pague."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_burlador_de_Sevilla"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_burlador_de_Sevilla"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_burlador_de_Sevilla"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_burlador_de_Sevilla"},
@@ -1651,7 +1976,11 @@ window.FENIX = {
       resumen: {"es": "Tragedia ambientada en la corte de Ferrara. El duque, tras una vida disipada, se casa con la joven Casandra, y esta y el conde Federico, hijo natural del duque, comienzan a sentir una inclinación que ninguno de los dos debería permitirse. Lope, ya al final de su carrera, construye una obra de honor, culpa y razón de Estado, en la que el duque debe decidir cómo actuar cuando descubre lo que ocurre en su casa."},
       porque: {"es":"Para el lector que busca algo más hondo que una comedia de enredos, y que acepta una historia dura. Lope, ya maduro, pone ante nosotros lo que ocurre cuando el deber público pasa por encima de los afectos, y deja la pregunta sobre dónde acaba la justicia.","en":"For the reader who looks for something deeper than a comedy of intrigue and is ready for a hard story. The author, by then mature, sets before us what happens when public duty overrides affection, and leaves the question of where justice ends."},
       imagen: {"src": "img/portadas/lope-el-castigo-sin-venganza.jpg", "credito": {"es": "Battista Dossi, «Retrato de Alfonso I de Este, duque de Ferrara», h. 1534-1536", "en": "Battista Dossi, “Portrait of Alfonso I d’Este, Duke of Ferrara”, c. 1534-1536"}, "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_Alfonso_I_d'Este,_Duke_of_Ferrara_(1476%E2%80%931534),_by_Battista_Dossi.jpg"},
-      citas: ["Que aunque parece defensa / de la honra el desagravio, / no deja de ser agravio / cuando se sabe la ofensa.","¿Qué quieres, Amor? ¿No ves / que Dios a los hijos manda / honrar los padres, y el conde / su mandamiento quebranta?"],
+      citas: [
+        "Que aunque parece defensa / de la honra el desagravio, / no deja de ser agravio / cuando se sabe la ofensa.",
+        "Señor, no uséis del poder, que amor es gusto y no ha de forzarse.",
+        "¿Qué quieres, amor? ¿No ves que Dios a los hijos manda honrar los padres, y el Conde su mandamiento quebranta?"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_castigo_sin_venganza"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_castigo_sin_venganza"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_castigo_sin_venganza"}, {"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/78160.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/78160"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_castigo_sin_venganza"},
@@ -1669,7 +1998,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de capa y espada situada en Madrid, donde dos damas, Marcela y Laura, y sus galanes Lisardo y don Félix se ven envueltos en un laberinto de embozos, billetes, celos y equívocos. El título alude a una casa con dos entradas, que facilita los encuentros secretos y complica la vigilancia del honor. Con criados graciosos y un enredo que se tensa acto tras acto, es una de las comedias más celebradas del género."},
       porque: {"es":"Una comedia de ritmo, buena para quien quiere entrar al teatro áureo por su lado más festivo. Se disfruta como un juego de relojería, y deja ver cómo era la vida de las damas y los galanes de una ciudad donde cada puerta, cada billete y cada manto escondían algo.","en":"A comedy with rhythm, good for anyone who wants to enter Golden Age theater through its most festive door. It is enjoyed like clockwork, and it shows what life was like for the ladies and gentlemen of a city where every door, note and veil hid something."},
       imagen: {"src": "img/portadas/calderon-casa-con-dos-puertas.jpg", "credito": {"es": "Pedro Teixeira Albernaz, «Topographia de la Villa de Madrid» (detalle), 1656", "en": "Pedro Teixeira Albernaz, “Topographia de la Villa de Madrid” (detail), 1656"}, "url": "https://commons.wikimedia.org/wiki/File:Teixeira_-_Topographia_de_la_Villa_de_Madrid_1656.jpg"},
-      citas: ["¡Ay, cuánto nos sirve una / casa que dos puertas tiene!"],
+      citas: [
+        "Si una casa con dos puertas / mala es de guardar, repara / que peor de guardar será / con dos puertas una sala.",
+        "pues no soy de los amigos / yo, con quien solo se hablan / las cosas; que precio más / las obras que las palabras.",
+        "Que donde hay celos se acaba / todo, porque no hay honor / ni amistad que tanto valga."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Casa_con_dos_puertas,_mala_es_de_guardar"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Casa_con_dos_puertas%2C_mala_es_de_guardar"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Casa_con_dos_puertas%2C_mala_es_de_guardar"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/Casa_con_dos_puertas,_mala_es_de_guardar"},
@@ -1687,7 +2020,11 @@ window.FENIX = {
       resumen: {"es": "Poema épico burlesco en siete silvas que cuenta, con el tono grave de la épica clásica, los amores y rivalidades de un grupo de gatos. El valiente Marramaquiz pretende a la gata Zapaquilda, que también es cortejada por el rival Micifuf, y la disputa se resuelve entre serenatas, tejados y batallas. Lope parodia la épica italiana y la literatura caballeresca con humor, erudición y mucha gracia."},
       porque: {"es":"Para quien quiere sonreír con la literatura sin que nadie lo apure. Lope toma la solemnidad de la épica y la pone al servicio de unos gatos enamorados, y el contraste hace reír. Es breve, ideal para un descanso entre lecturas más serias o para acercar a un lector joven al verso clásico.","en":"For anyone who wants to smile over a book with no pressure. Lope takes the solemnity of epic and puts it at the service of lovesick cats, and the contrast is funny. It is short, ideal as a break between more serious reading or as a way to introduce a young reader to classical verse."},
       imagen: {"src": "img/portadas/lope-la-gatomaquia.jpg", "credito": {"es": "Francisco de Goya, «Riña de gatos», 1786-1787", "en": "Francisco de Goya, “Cats Fighting”, 1786-1787"}, "url": "https://commons.wikimedia.org/wiki/File:Riña_de_gatos.jpg"},
-      citas: ["Bien merecéis un gato de doblones,"],
+      citas: [
+        "que no hay para olvidar amor remedio / como otro nuevo amor, o tierra en medio.",
+        "¡Oh celos!, si entre gatos, / de burlas y de veras, / formáis tales quimeras, / ¿qué haréis entre los hombres / de hidalgo proceder y honrados nombres?",
+        "¡Bien haya quien desprecia / esta fábula necia / de honores, pretensiones y lugares, / por estudios o acciones militares!"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_Gatomaquia"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La_Gatomaquia"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La_Gatomaquia"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/La_Gatomaquia"},
@@ -1705,7 +2042,11 @@ window.FENIX = {
       resumen: {"es": "Drama de honor ambientado en la Sevilla del rey don Pedro. Don Gutierre, casado con doña Mencía, empieza a sospechar de ella cuando hay indicios de que el infante don Enrique frecuenta su casa, y esa duda lo lleva a tomar decisiones graves, mientras el rey observa y actúa. Calderón examina el código del honor y sus costos, y muestra cómo la sospecha y la reputación pueden más que la verdad."},
       porque: {"es":"Una obra dura que no pide aplauso para su protagonista, sino reflexión. Sirve para entender cómo una sospecha sin pruebas, unida a la presión social, puede conducir a un hombre a un acto terrible, y por qué esa lógica del qué dirán sigue a la vista.","en":"A harsh play that asks for reflection rather than applause for its protagonist. It helps one understand how an unproven suspicion, joined to social pressure, can lead a man to a terrible act, and why that logic of what others will say is still around us."},
       imagen: {"src": "img/portadas/calderon-el-medico-de-su-honra.jpg", "credito": {"es": "Germán Hernández Amores, «Pedro I de Castilla», 1849", "en": "Germán Hernández Amores, “Peter I of Castile”, 1849"}, "url": "https://commons.wikimedia.org/wiki/File:Pedro_I_de_Castilla_(Museo_del_Prado).jpg"},
-      citas: ["Pues médico me llamo de mi honra, / yo cubriré con tierra mi deshonra."],
+      citas: [
+        "Pues no hay virtud sin experiencia. Perfeto está el oro en el crisol, el imán en el acero, el diamante en el diamante, los metales en el fuego; y así mi honor en sí mismo se acrisola, cuando llego a vencerme.",
+        "El honor es reservado lugar, donde el alma asiste; yo no soy rey de las almas.",
+        "Médico de mi honra me llamo, pues procuro mi deshonra curar."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_m%C3%A9dico_de_su_honra"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_m%C3%A9dico_de_su_honra"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_m%C3%A9dico_de_su_honra"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_m%C3%A9dico_de_su_honra"},
@@ -1723,7 +2064,11 @@ window.FENIX = {
       resumen: {"es": "Auto sacramental alegórico en que el Autor, que representa a Dios, convoca a los personajes del mundo para representar una comedia en el gran teatro de la vida. El Rey, la Discreción, la Hermosura, el Rico, el Labrador y el Pobre reciben sus papeles y los interpretan según su libertad, bajo la mirada del Mundo y la Ley de Gracia. La obra reflexiona sobre la fugacidad de la vida y el valor de obrar bien, y se acompaña de una loa."},
       porque: {"es":"Un texto corto para quien quiere pensar el sentido de su papel en la vida. Plantea con sencillez que cada uno recibe su parte y responde por cómo la representa, no por si le tocó ser rey o labrador, y esa idea consuela y exige a la vez.","en":"A short text for anyone who wants to think about the meaning of his part in life. It states simply that each person receives a role and answers for how he plays it, not for whether he was cast as king or farmer, and that idea both consoles and demands."},
       imagen: {"src": "img/portadas/calderon-el-gran-teatro-del-mundo.jpg", "credito": {"es": "Peter Paul Rubens, «Victoria de la Eucaristía sobre el paganismo» (boceto), siglo XVII", "en": "Peter Paul Rubens, “Victory of the Eucharist over Paganism” (modello), 17th century"}, "url": "https://commons.wikimedia.org/wiki/File:Victory_of_the_Eucharist_over_Paganism_-_modello.jpg"},
-      citas: ["Obrar bien, que Dios es Dios."],
+      citas: [
+        "Obrar bien, que Dios es Dios.",
+        "Con cualquier papel se gana, que toda la vida humana representaciones es. Y la comedia acabada ha de cenar a mi lado el que haya representado, sin haber errado en nada, su parte más acertada; allí igualaré a los dos.",
+        "Solo no vestiré al pobre porque es papel de desnudo, porque ninguno después se queje de que no tuvo para hacer bien su papel todo el adorno que pudo, pues el que bien no le hiciere será por defecto suyo, no mío."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_Gran_Teatro_del_Mundo"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_Gran_Teatro_del_Mundo"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_Gran_Teatro_del_Mundo"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_Gran_Teatro_del_Mundo"},
@@ -1741,7 +2086,13 @@ window.FENIX = {
       resumen: {"es": "Segismundo, príncipe de Polonia, ha vivido encerrado en una torre desde su nacimiento porque su padre, el rey Basilio, leyó en los astros que sería un tirano. Cuando el rey decide ponerlo a prueba, el joven pasa de la prisión a palacio y de allí a una nueva incertidumbre sobre lo real y lo soñado. Entre la intriga de Rosaura, Astolfo y Estrella, Calderón reflexiona sobre el destino, la libertad y el obrar bien."},
       porque: {"es":"Es la obra para quien alguna vez dudó de si lo que vive es real, o si merece la pena obrar bien aunque todo pase. Segismundo aprende a actuar con juicio ante lo incierto, y esa respuesta, dada hace siglos, sigue sirviendo a quien se siente perdido.","en":"The play for anyone who has ever doubted whether what he lives is real, or whether it is worth doing right when everything passes. The prince learns to act with judgment in the face of uncertainty, and that answer, given centuries ago, still serves those who feel lost."},
       imagen: {"src": "img/portadas/calderon-la-vida-es-sueno.jpg", "credito": {"es": "Francisco de Ettenhard y Abarca, retrato de Pedro Calderón de la Barca, 1684", "en": "Francisco de Ettenhard y Abarca, portrait of Pedro Calderón de la Barca, 1684"}, "url": "https://commons.wikimedia.org/wiki/File:Ettenhard-Retrato_de_Pedro_Calderón_de_la_Barca.jpg"},
-      citas: ["¿Qué es la vida? Un frenesí: / ¿Qué es la vida? Una ilusion, / Una sombra, una ficcion, / Y el mayor bien es pequeño; / Que toda la vida es sueño, / Y los sueños sueños son."],
+      citas: [
+        "¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión, / una sombra, una ficción, / y el mayor bien es pequeño; / que toda la vida es sueño, / y los sueños sueños son.",
+        "Pues el delito mayor / del hombre es haber nacido.",
+        "Mas sea verdad o sueño, / obrar bien es lo que importa; / si fuere verdad, por serlo; / si no, por ganar amigos / para cuando despertemos.",
+        "Que estoy soñando, y que quiero / obrar bien, pues no se pierde / el hacer bien, aun en sueños.",
+        "Sueña el rey que es rey, y vive / con este engaño mandando, / disponiendo y gobernando; / y este aplauso, que recibe / prestado, en el viento escribe; / y en cenizas le convierte / la muerte (¡desdicha fuerte!)"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo 1 de Teatro selecto", "url": "https://www.gutenberg.org/ebooks/54436.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo 1 de Teatro selecto", "url": "https://www.gutenberg.org/ebooks/54436"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 54436 (Teatro selecto, tomo 1, con estudio crítico de Menéndez y Pelayo; dominio público)", "url": "https://www.gutenberg.org/ebooks/54436"},
@@ -1759,7 +2110,12 @@ window.FENIX = {
       resumen: {"es": "Drama religioso ambientado en Antioquía. Cipriano, estudioso de la filosofía y de las ciencias ocultas, se enamora de Justina, una joven cristiana, y recurre al Demonio para vencer su resistencia. Mientras los rivales Floro y Lelio y los criados Moscón y Clarín aportan el contrapunto cómico, la obra confronta la ambición del saber, el poder del mal y la fuerza de una voluntad que no cede."},
       porque: {"es":"Sirve a quien quiere ver el drama de la ambición intelectual separada de la humildad. Cipriano busca saberlo todo y se topa con algo que su ciencia no explica, y la obra deja ver cómo un hombre puede ser cambiado por lo que no logra dominar.","en":"Suited to anyone who wants to see the drama of intellectual ambition cut off from humility. The scholar wants to know everything and runs into something his learning cannot explain, and the play shows how a man can be changed by what he fails to master."},
       imagen: {"src": "img/portadas/calderon-el-magico-prodigioso.jpg", "credito": {"es": "Menologio de Basilio II, «San Cipriano y santa Justina», h. 1000", "en": "Menologion of Basil II, “Saints Cyprian and Justina”, c. 1000"}, "url": "https://commons.wikimedia.org/wiki/File:Cyprian_and_Justina_(Menologion_of_Basil_II).jpg"},
-      citas: ["Pensar que hay un Dios, / suma bondad, suma gracia, / todo vista, todo manos, / infalible, que no engaña"],
+      citas: [
+        "Pensar que hay un Dios, / suma bondad, suma gracia, / todo vista, todo manos, / infalible, que no engaña, / superior, que no compite, / Dios a quien ninguno iguala, / un principio sin principio,",
+        "Lo que ofrecí está en mi mano, / pero lo que tú me ofreces / no está en la tuya, pues hallo / que sobre el libre albedrío / ni hay conjuros ni hay encantos.",
+        "Desconfiarme es en vano, / aunque pensé; que aunque es llano / que el pensar es empezar, / no está en mi mano el pensar, / y está el obrar en mi mano.",
+        "No fuera libre albedrío / si se dejara forzar."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_m%C3%A1gico_prodigioso"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_m%C3%A1gico_prodigioso"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_m%C3%A1gico_prodigioso"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_m%C3%A1gico_prodigioso"},
@@ -1777,7 +2133,11 @@ window.FENIX = {
       resumen: {"es": "Comedia de enredo en la que don Alonso y don Juan cortejan a las hijas de don Pedro Enríquez, doña Leonor y doña Beatriz, una de ellas aficionada a la erudición y desdeñosa con los galanes. Entre ardides, fingimientos y celos, y con la ayuda del gracioso Moscatel y de la criada Inés, los jóvenes descubren que el amor no admite juegos. La obra es una sátira amable de la afectación y la pedantería."},
       porque: {"es":"Una comedia para sonreír con las vanidades del saber. Muestra a quien presume de despreciar el amor tropezando con él, y es una lectura grata para quien guarda cierta sospecha hacia el que todo lo explica y poco se deja conmover.","en":"A comedy for smiling at the vanities of learning. It shows the person who boasts of scorning love stumbling right into it, and makes pleasant reading for anyone with some suspicion of the one who explains everything and lets himself be moved by little."},
       imagen: {"src": "img/portadas/calderon-no-hay-burlas-con-el-amor.jpg", "credito": {"es": "Peter Paul Rubens, «El jardín del amor», h. 1633", "en": "Peter Paul Rubens, “The Garden of Love”, c. 1633"}, "url": "https://commons.wikimedia.org/wiki/File:El_Jardín_del_Amor_(Rubens).jpg"},
-      citas: ["si no hay burlas con el mar, / no hay burlas con el amor."],
+      citas: [
+        "Mar es amor en rigor; / luego en placer y en pesar, / si no hay burlas con el mar, / no hay burlas con el amor.",
+        "¿qué acción, qué pasión, qué afecto, / decid, si no es amor, es / el que al hombre da valor, / el que le hace liberal, / cuerdo y galán?",
+        "como eres (en el abismo / de amor jugando a dos manos, / potente rey de romanos) / mal vencedor de ti mismo"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/No_hay_burlas_con_el_amor"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=No_hay_burlas_con_el_amor"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=No_hay_burlas_con_el_amor"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/No_hay_burlas_con_el_amor"},
@@ -1795,7 +2155,12 @@ window.FENIX = {
       resumen: {"es": "Drama ambientado en tiempos de Felipe II. Pedro Crespo, un labrador rico y respetado, es elegido alcalde de Zalamea mientras una compañía de soldados se aloja en el pueblo, y una ofensa a su familia lo enfrenta con el capitán don Álvaro y con la autoridad militar de don Lope de Figueroa. La obra opone el honor de un hombre del pueblo al fuero de los soldados y se pregunta hasta dónde llega la justicia de quien la ejerce."},
       porque: {"es":"Para quien se pregunta qué hacer cuando la autoridad abusa. Pedro Crespo habla con firmeza y sin gritar, y su defensa de la dignidad de la gente común, hecha hace casi cuatrocientos años, sigue leyéndose con un nudo en la garganta.","en":"For anyone who asks what to do when authority abuses its power. The farmer speaks with firmness and without shouting, and his defense of the dignity of ordinary people, made nearly four hundred years ago, can still be read with a lump in the throat."},
       imagen: {"src": "img/portadas/calderon-el-alcalde-de-zalamea.jpg", "credito": {"es": "Diego Velázquez, «La rendición de Breda», 1634-1635", "en": "Diego Velázquez, “The Surrender of Breda”, 1634-1635"}, "url": "https://commons.wikimedia.org/wiki/File:Velázquez_-_de_Breda_o_Las_Lanzas_(Museo_del_Prado,_1634-35)FXD.jpg"},
-      citas: ["Al Rey la hacienda y la vida / se ha de dar; pero el honor / es patrimonio del alma, / y el alma sólo es de Dios."],
+      citas: [
+        "Al Rey la hacienda y la vida se ha de dar; pero el honor es patrimonio del alma, y el alma sólo es de Dios.",
+        "¡Cuántos, teniendo en el mundo algún defecto consigo, le han borrado por humildes; y cuántos, que no han tenido defecto, se le han hallado, por estar ellos mal vistos!",
+        "Sé cortés sobre manera; sé liberal y partido, que el sombrero y el dinero son los que hacen los amigos.",
+        "No hables mal de las mujeres; la más humilde, te digo, que es digna de estimación; porque al fin de ellas nacimos."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_alcalde_de_Zalamea"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_alcalde_de_Zalamea"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_alcalde_de_Zalamea"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_alcalde_de_Zalamea"},
@@ -1813,7 +2178,12 @@ window.FENIX = {
       resumen: {"es": "Tragicomedia sobre el amor de don Alonso, caballero de Olmedo, por doña Inés, a quien conoce en la feria de Medina del Campo. Con la ayuda del criado Tello y de la alcahueta Fabia, don Alonso avanza en su pretensión, mientras el rival don Rodrigo lo observa con envidia y el rey don Juan II preside las fiestas. Lope parte de una antigua copla popular para construir una historia de amor, presagios y honor."},
       porque: {"es":"Una de las historias de amor más delicadas del teatro español, que cambia de tono hacia el final. Sirve a quien quiere sentir cómo una obra alegre se vuelve grave de a poco, con presagios que, vistos al releer, estaban desde el comienzo.","en":"One of the most delicate love stories of Spanish theater, which changes tone toward the end. It serves anyone who wants to feel how a cheerful play slowly turns grave, with omens that, seen on a second reading, were there from the beginning."},
       imagen: {"src": "img/portadas/lope-el-caballero-de-olmedo.jpg", "credito": {"es": "Francisco Prats y Velasco, «El rey Juan II de Castilla», 1848", "en": "Francisco Prats y Velasco, “King John II of Castile”, 1848"}, "url": "https://commons.wikimedia.org/wiki/File:El_rey_Juan_II_de_Castilla_(Museo_del_Prado).jpg"},
-      citas: ["Que de noche le mataron / al caballero, / la gala de Medina, / la flor de Olmedo."],
+      citas: [
+        "Que de noche le mataron / al caballero, / la gala de Medina, / la flor de Olmedo.",
+        "Amor, no te llame amor / el que no te corresponde, / pues que no hay materia adonde / no imprima forma el favor.",
+        "Las penas anticipadas / dicen que matan dos veces, / y a mí sola Inés me mata, / no como pena, que es gloria.",
+        "¡Ay, riguroso estado, / ausencia mi enemiga, / que dividiendo el alma / puedes dejar la vida! / ¡Cuán bien por tus efetos / te llaman muerte viva, / pues das vida al deseo / y matas a la vista!"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_caballero_de_Olmedo"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El_caballero_de_Olmedo"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El_caballero_de_Olmedo"}],
       fuente: {"texto": "Transcripción de es.wikisource.org; la página no identifica la edición (dominio público)", "url": "https://es.wikisource.org/wiki/El_caballero_de_Olmedo"},
@@ -1831,7 +2201,12 @@ window.FENIX = {
       resumen: {"es": "Novela satírica en forma de viaje: el estudiante don Cleofás Pérez Zambullo, que huye de la justicia por los tejados de Madrid, libera de una redoma al Diablo Cojuelo, y este, en agradecimiento, levanta los techos de la ciudad para mostrarle lo que ocurre dentro de las casas. Entre alguaciles, damas, poetas, médicos y enamorados, la obra retrata con ingenio los vicios y costumbres de la corte, y se divide en «trancos» en lugar de capítulos."},
       porque: {"es":"Para el lector con sentido del humor, que disfruta de la sátira ágil y de ver a la gente tal cual es cuando cree que nadie la mira. Es breve, vertiginoso y muy ingenioso en el lenguaje, y deja la sospecha, siempre actual, de que los vicios de la corte cambian poco de siglo en siglo.","en":"For readers with a sense of humour who enjoy quick satire and the sight of people as they really are when they think no one is watching. It is short, dizzying and wonderfully witty in its language, and it leaves the ever-current suspicion that the vices of the powerful change little from one century to the next."},
       imagen: {"src": "img/portadas/velez-de-guevara-el-diablo-cojuelo.jpg", "credito": {"es": "Tony Johannot, ilustración para «Le Diable boiteux», 1840", "en": "Tony Johannot, illustration for “Le Diable boiteux”, 1840"}, "url": "https://commons.wikimedia.org/wiki/File:Le_Diable_boiteux_par_Le_(...)Lesage_Alain-René_btv1b86002074.jpg"},
-      citas: ["no lo reparto en capítulos, sino en trancos"],
+      citas: [
+        "Y como es El Diablo Cojuelo, no lo reparto en capítulos, sino en trancos.",
+        "Y levantando a los techos de los edificios, por arte diabólica, lo hojaldrado, se descubrió la carne del pastelón de Madrid",
+        "En el mundo todos somos locos, los unos de los otros.",
+        "Treguas que dan los cuidados a la vida, siendo común el silencio a las fieras y a los hombres; medida que a todos hace iguales."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/12457.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/12457"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 12457 (edición de Clásicos Castellanos de 1922, con prólogo y notas de Francisco Rodríguez Marín; dominio público)", "url": "https://www.gutenberg.org/ebooks/12457"},
@@ -1849,7 +2224,12 @@ window.FENIX = {
       resumen: {"es": "Lemuel Gulliver, cirujano de barco, relata cuatro viajes por tierras imaginarias: Liliput, donde todos son diminutos; Brobdingnag, un país de gigantes; la isla voladora de Laputa y sus vecinos; y la tierra de los houyhnhnms, caballos dotados de razón. Bajo la forma de un diario de viajero, Swift retrata con ironía las costumbres, la política y los vicios de la Europa de su tiempo. La edición de Wikisource reproduce la traducción de Spartal en la impresión de La Nación de 1914."},
       porque: {"es":"Se lee como aventura a cualquier edad, pero con los años se vuelve más afilado: Swift hace ver, desde la mirada de un viajero, lo pequeñas que pueden ser nuestras disputas y lo ridículo del orgullo. Sirve a quien quiere reírse de los poderosos y también un poco de sí mismo.","en":"It reads as an adventure at any age, but with the years it grows sharper: through a traveller's eyes, Swift shows how small our quarrels can be and how ridiculous pride looks. It suits anyone who wants to laugh at the powerful and, a little, at themselves."},
       imagen: {"src": "img/portadas/swift-los-viajes-de-gulliver.jpg", "credito": {"es": "James Gillray, «El rey de Brobdingnag y Gulliver», 1803", "en": "James Gillray, «The King of Brobdingnag and Gulliver», 1803"}, "url": "https://commons.wikimedia.org/wiki/File:The_King_of_Brobdingnag_and_Gulliver.%E2%80%93Vide._Swift%27s_Gulliver_Voyage_to_Brobdingnag.jpg"},
-      citas: ["Mi padre, cuya hacienda en la provincia de Nottinghan era moderada, tenía cinco hijos: yo era el tercero."],
+      citas: [
+        "Finalmente me propuso esta extraña paradoja, esto es, que si alguno pudiese conseguir la producción de dos espigas de trigo o dos tallos de hierba en el mismo recinto de tierra donde antes se hubiese criado una sola, merecería más bien la estimación del género humano y haría un servicio más esencial a su país que no toda la casta de nuestros sublimes políticos.",
+        "La ingratitud es allí un delito enorme, así como nos enseña la historia que en otros tiempos lo era entre algunas naciones virtuosas. Aquel, dicen ellos, que paga con malas obras a su mismo bienhechor, es preciso que sea un enemigo capital de todos los demás hombres.",
+        "El uso de la palabra nos ha sido concedido para comunicarnos unos a otros nuestros pensamientos, y para instruirnos de lo que ignoramos.",
+        "El mayor número de vuestros compatriotas forman una raza de insectos, la más perniciosa que jamás permitió la Naturaleza que se arrastrasen sobre la superficie de la tierra."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Viajes_de_Gulliver"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Viajes%20de%20Gulliver"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Viajes%20de%20Gulliver"}],
       fuente: {"texto": "Viajes de Gulliver, traducción de Ramón Máximo Spartal, Imprenta de La Nación, Buenos Aires, 1914, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Viajes_de_Gulliver"},
@@ -1867,7 +2247,12 @@ window.FENIX = {
       resumen: {"es": "Breve panfleto satírico en el que un supuesto economista propone, con fría seriedad, una solución al hambre y la miseria de las familias pobres de Irlanda. Swift adopta la voz de un razonador sin entrañas para denunciar, por contraste, la indiferencia de los poderosos y de los propietarios ante la pobreza del país. Es una de las piezas de ironía más célebres de la literatura inglesa y debe leerse como una crítica social y no como una propuesta en serio."},
       porque: {"es":"Para quien se indigna ante la pobreza y desconfía de quienes la explican con cifras frías. Son pocas páginas, y la ironía golpea más fuerte justamente porque el narrador no pestañea. Es un buen ejercicio para aprender a leer una sátira y a notar cuándo un razonamiento impecable parte de una premisa inhumana.","en":"For anyone who is angered by poverty and wary of those who explain it with cold figures. It runs only a few pages, and the irony hits harder precisely because the narrator never blinks. It is good practice in how to read satire and in noticing when flawless reasoning rests on an inhuman premise."},
       imagen: {"src": "img/portadas/swift-una-modesta-proposicion.jpg", "credito": {"es": "Charles Jervas, «Retrato de Jonathan Swift», c. 1718", "en": "Charles Jervas, «Portrait of Jonathan Swift», c. 1718"}, "url": "https://commons.wikimedia.org/wiki/File:Jervas-JonathanSwift.jpg"},
-      citas: ["No tengo niños por los que pudiera planear ganar un sólo centavo; el menor de ellos contando con nueve años de edad, y mi esposa habiendo ya superado la edad de concebir."],
+      citas: [
+        "Es objeto de melancolía para aquellos, que caminan por esta gran ciudad, o viajan por el campo, cuando ven las calles, los caminos y los portales llenos de pordioseras del sexo femenino, seguidas por tres, cuatro o seis niños, todos ellos cubiertos de harapos y molestando a cada pasajero al pedirle una limosna.",
+        "Me ha asegurado un sabio americano, que he conocido en Londres, que un niño saludable y bien alimentado es, al año de edad, un alimento de lo más delicioso y nutritivo, ya sea estofado, rostizado, horneado o hervido.",
+        "Profeso, en la sinceridad de mi corazón, que no tengo el más mínimo interés personal en promover este necesario trabajo, no teniendo otro motivo que el bien público de mi país, al promover nuestro comercio, dando sustento a los infantes, aliviando a los pobres y proporcionando algún placer a los ricos.",
+        "No tengo niños por los que pudiera planear ganar un sólo centavo; el menor de ellos contando con nueve años de edad, y mi esposa habiendo ya superado la edad de concebir."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Una_modesta_proposición"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Una%20modesta%20proposici%C3%B3n"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Una%20modesta%20proposici%C3%B3n"}],
       fuente: {"texto": "Traducción libre publicada en es.wikisource.org (licencia libre CC BY-SA); obra de 1729 en dominio público", "url": "https://es.wikisource.org/wiki/Una_modesta_proposici%C3%B3n"},
@@ -1885,7 +2270,13 @@ window.FENIX = {
       resumen: {"es": "Sátira literaria en prosa en la que Apolo y las Musas, perturbados por el alboroto de los malos poetas y críticos, se ven obligados a poner orden en el Parnaso. Moratín, joven todavía, se burla de los autores presuntuosos, los eruditos de mala fe y la pedantería que ahogaba la literatura de su época. El tono es ligero y burlón, con numerosas alusiones a escritores y polémicas de la España del siglo XVIII."},
       porque: {"es":"Para quien disfruta de la sátira literaria y quiere ver cómo un autor todavía muy joven se ríe de la pedantería. Sirve a estudiantes y aficionados al siglo XVIII español. Es ligera y breve, y recuerda algo que sigue vigente: la tentación de aparentar saber más de lo que se sabe.","en":"For readers who enjoy literary satire and want to see how a still very young author laughs at pedantry. It suits students and enthusiasts of eighteenth-century Spain. It is light and short, and it recalls something that has not gone out of date: the temptation to appear to know more than one does."},
       imagen: {"src": "img/portadas/moratin-la-derrota-de-los-pedantes.jpg", "credito": {"es": "Nicolas Poussin, «Apolo y las Musas (el Parnaso)», c. 1631-1633", "en": "Nicolas Poussin, «Apollo and the Muses (Parnassus)», c. 1631-1633"}, "url": "https://commons.wikimedia.org/wiki/File:Nicolas_Poussin_-_Apollo_and_the_Muses_(Parnassus)_-_WGA18307.jpg"},
-      citas: ["Esta obra no necesita prólogo: por eso no le tiene. Necesitaba notas; pero el autor no ha querido ponérselas."],
+      citas: [
+        "Esta obra no necesita prólogo: por eso no le tiene. Necesitaba notas; pero el autor no ha querido ponérselas.",
+        "Para ser buenos ciudadanos no es menester ser malos poetas.",
+        "A todo crítico se le llamará envidioso, a toda prueba calumnia, a toda censura libelo, y a todo raciocinio personalidad.",
+        "La falsa sabiduría, más funesta mil veces que la total ignorancia.",
+        "La verdad, por más que se presente desaliñada y adusta, la verdad es el lenguaje de un buen ciudadano, y el que no la lleva en la boca como la concibe en el entendimiento, es indigno de vivir entre los hombres."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_derrota_de_los_pedantes_(1830)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La%20derrota%20de%20los%20pedantes%20%281830%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La%20derrota%20de%20los%20pedantes%20%281830%29"}],
       fuente: {"texto": "Obras de Leandro Fernández de Moratín, tomo IV, Madrid, Aguado, 1830, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_derrota_de_los_pedantes_(1830)"},
@@ -1903,7 +2294,11 @@ window.FENIX = {
       resumen: {"es": "Comedia en tres actos que transcurre en una posada de Alcalá de Henares, donde doña Irene lleva a su hija Francisca para casarla con don Diego, un caballero maduro y acomodado. La joven, obediente, calla un afecto que tiene por otro, y una noche de equívocos y confidencias hace salir la verdad. Moratín defiende que los padres no deben imponer a las hijas un matrimonio sin su libre consentimiento. Es una de las comedias más representadas del teatro español del siglo XIX."},
       porque: {"es":"Una comedia que se lee en una tarde y que trata un asunto de hoy: lo que cuesta a los hijos callar, y lo que pierden los padres que deciden por ellos. Sirve a padres, hijos y a quien tenga que dar una respuesta que otros esperan escuchar de otra manera.","en":"A comedy that reads in an afternoon and deals with a matter of today: what it costs children to stay silent, and what parents lose when they decide for them. It serves parents, children, and anyone who has to give an answer others expect to hear differently."},
       imagen: {"src": "img/portadas/moratin-el-si-de-las-ninas.jpg", "credito": {"es": "Francisco de Goya, «Retrato de Leandro Fernández de Moratín», 1824", "en": "Francisco de Goya, «Portrait of Leandro Fernández de Moratín», 1824"}, "url": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_y_Lucientes_-_Portrait_of_the_Poet_Morat%C3%ADn_-_WGA10097.jpg"},
-      citas: ["Estas son las seguridades que dan los padres y los tutores, y esto lo que se debe fiar en el sí de las niñas."],
+      citas: [
+        "Esto resulta del abuso de la autoridad, de la opresión que la juventud padece: estas son las seguridades que dan los padres y los tutores, y esto lo que se debe fiar en el sí de las niñas.",
+        "Esto es lo que se llama criar bien a una niña; enseñarla a que desmienta y oculte las pasiones más inocentes con una pérfida disimulación. Las juzgan honestas luego que las ven instruidas en el arte de callar y mentir.",
+        "Todo se las permite, menos la sinceridad. Con tal que no digan lo que sienten, con tal que finjan aborrecer lo que más desean, con tal que se presten a pronunciar, cuando se lo manden, un sí perjuro, sacrílego, origen de tantos escándalos, ya están bien criadas."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/50027.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/50027"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 50027 (edición de Barcelona, Librería Mayol, 1875; dominio público)", "url": "https://www.gutenberg.org/ebooks/50027"},
@@ -1921,7 +2316,11 @@ window.FENIX = {
       resumen: {"es": "Cuento clásico de la literatura estadounidense, presentado como un manuscrito hallado entre los papeles del historiador Diedrich Knickerbocker. Rip Van Winkle, un aldeano holandés de las montañas Catskill, bonachón y poco amigo del trabajo, huye un día de las quejas de su mujer y se interna en el monte. Allí conoce a unos hombres extraños y se queda dormido. Al despertar descubre que el mundo ha cambiado más de lo que imagina."},
       porque: {"es":"Un cuento corto y amable, para una tarde tranquila, sobre alguien que se pierde de su propio tiempo. Le sirve especialmente a quien siente que los años pasan sin que los note, y deja una pregunta serena sobre qué permanece y qué cambia cuando uno se distrae del mundo.","en":"A short, friendly tale for a quiet afternoon, about a man who loses track of his own time. It is especially good for anyone who feels the years slipping by unnoticed, and it leaves a calm question about what stays and what changes when we stop paying attention to the world."},
       imagen: {"src": "img/portadas/irving-rip-van-winkle.jpg", "credito": {"es": "John Quidor, «El regreso de Rip Van Winkle», 1849", "en": "John Quidor, «The Return of Rip Van Winkle», 1849"}, "url": "https://commons.wikimedia.org/wiki/File:John_Quidor,_The_Return_of_Rip_Van_Winkle,_1849,_NGA_1104.jpg"},
-      citas: ["EL CUENTO siguiente se encontró entre los papeles del difunto Díedrich Kníckerbocker, un viejo caballero de Nueva York, muy curioso respecto de la historia holandesa de la provincia y de las costumbres de los descendientes de sus primitivos colonos."],
+      citas: [
+        "Rip Van Winkle era, sin embargo, uno de aquellos felices mortales de disposición fácil y bobalicona que toman el mundo descuidadamente, comen con la misma indiferencia pan blanco o pan moreno a condición de evitarse la menor molestia, y preferirían morirse de hambre con un penique a trabajar por una libra.",
+        "En realidad, Rip no era político: las transiciones de estados e imperios hacíanle muy poca mella; pero existía cierta clase de despotismo bajo el cual había gemido largo tiempo: el gobierno de las faldas.",
+        "Yo no soy yo mismo, soy alguna otra persona; no estoy allá, no; ése es alguien que se ha metido dentro de mi piel."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Rip_Van_Winkle_(traducci%C3%B3n_de_Carmen_Torres_Calder%C3%B3n_Pinillos)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Rip%20Van%20Winkle%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Rip%20Van%20Winkle%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29"}],
       fuente: {"texto": "Traducción de Carmen Torres Calderón Pinillos en Cuentos clásicos del norte, segunda serie (1920), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Rip_Van_Winkle_(traducción_de_Carmen_Torres_Calderón_Pinillos)"},
@@ -1939,7 +2338,12 @@ window.FENIX = {
       resumen: {"es": "En la aldea holandesa de Sleepy Hollow, a orillas del Hudson, el maestro Ichabod Crane, supersticioso y goloso, pretende la mano de la rica Katrina Van Tassel, y debe medirse con el rudo Brom Bones. Las veladas de la aldea se llenan de cuentos de aparecidos, en especial el del jinete sin cabeza que cabalga por el camino. Irving mezcla humor, costumbrismo y el gusto por lo misterioso en uno de los relatos más conocidos de la literatura norteamericana. Se edita aquí en la traducción de Carmen de Pinillos, de 1920."},
       porque: {"es":"Para leer en una noche de invierno, con una lámpara y sin apuro: mezcla el miedo suave del cuento de fogata con una sonrisa ante la vanidad del maestro. Sirve a quien busca un clásico breve y ameno, que recuerda cómo se contaban las historias en la aldea antes de las pantallas.","en":"Best read on a winter night, under a lamp and without hurry: it blends the gentle fear of a fireside tale with a smile at the schoolmaster's vanity. It suits anyone looking for a brief, enjoyable classic that recalls how stories were told in the village before screens."},
       imagen: {"src": "img/portadas/irving-la-leyenda-de-sleepy-hollow.jpg", "credito": {"es": "John Quidor, «El jinete sin cabeza persiguiendo a Ichabod Crane», 1858", "en": "John Quidor, «The Headless Horseman Pursuing Ichabod Crane», 1858"}, "url": "https://commons.wikimedia.org/wiki/File:John_Quidor_-_The_Headless_Horseman_Pursuing_Ichabod_Crane_-_Google_Art_Project.jpg"},
-      citas: ["Es tierra bonancible de extrañas fantasías, De ensueños que se ciernen sobre ojos entornados,"],
+      citas: [
+        "Si alguna vez anhelara yo un pacífico retiro donde huir del mundo y de sus distracciones y soñar en tranquila quietud todo el resto de una agitada existencia, nada respondería mejor a tal propósito que este escondido vallecito.",
+        "Por más despierta que haya sido una persona antes de penetrar en la región de los sueños, es seguro que se apropiará en poco tiempo la influencia encantada del ambiente, volviéndose fantástica, fingiendo quimeras y viendo aparecidos.",
+        "Son como aquellas fajas de agua tranquila que bordean algún tumultuoso arroyo, donde permanecen quietamente al ancla burbujas y pajas meciéndose con suavidad en su improvisado puerto sin ser molestadas por el flujo de la corriente.",
+        "Todas las historias de duendes y espectros que había oído al crepúsculo, acudían ahora en tropel a su memoria."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_leyenda_del_Valle_Encantado_(traducción_de_Carmen_Torres_Calderón_Pinillos)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La%20leyenda%20del%20Valle%20Encantado%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La%20leyenda%20del%20Valle%20Encantado%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29"}],
       fuente: {"texto": "Cuentos clásicos del norte (Segunda serie), traducción de Carmen de Pinillos, 1920, transcrito en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_leyenda_del_Valle_Encantado_(traducci%C3%B3n_de_Carmen_Torres_Calder%C3%B3n_Pinillos)"},
@@ -1957,7 +2361,12 @@ window.FENIX = {
       resumen: {"es": "Estudio histórico sobre el nacimiento y el desarrollo del teatro en España, desde los primeros ensayos en lengua romance hasta las vísperas de Lope de Vega. Moratín reúne un discurso histórico, un catálogo crítico de piezas dramáticas anteriores a Lope y una selección de obras de autores como Juan del Encina, Lope de Rueda y Juan de Timoneda. Es un texto de referencia para quien quiera conocer cómo se formó la escena que dio lugar al Siglo de Oro."},
       porque: {"es":"Para quien se interesa por el teatro y quiere saber de dónde viene el del Siglo de Oro. Reúne historia, catálogo y textos, de modo que sirve tanto de lectura como de obra de consulta. Conviene a estudiantes de literatura y a aficionados que quieren entender cómo se forma una tradición teatral antes de su época de oro.","en":"For anyone interested in the theatre who wants to know where the drama of the Golden Age came from. It combines history, catalogue and texts, so it works both as reading and as a reference book. It suits literature students and enthusiasts who want to understand how a theatrical tradition forms before its golden age."},
       imagen: {"src": "img/portadas/moratin-origenes-teatro-espanol.jpg", "credito": {"es": "Francisco de Goya, «Retrato del poeta Moratín», 1824", "en": "Francisco Goya, «Portrait of the Poet Moratín», 1824"}, "url": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_-_Portrait_of_the_Poet_Morat%C3%ADn_-_Google_Art_Project.jpg"},
-      citas: ["Este idioma conservado en las obras estimables de los sabios que florecieron en aquella edad, fue corrompiéndose con mucha rapidez en boca del pueblo"],
+      citas: [
+        "Un sevillano, hombre del pueblo, sin maestros, sin estudios, aplicado a ganar la vida en un ejercicio mecánico, hizo en la escena española una innovación plausible, y abrió a los autores dramáticos un nuevo camino que no acertaron a seguir.",
+        "Pero si es admirable la fecundidad de su fantasía, que nunca supo sujetar a los preceptos del arte, no es menos de maravillar que improvisando siempre, muchas veces acertó.",
+        "El teatro español que, como ya se ha dicho, empezó en el templo, sujetaba a la ficción escénica los misterios de la Religión.",
+        "Este idioma conservado en las obras estimables de los sabios que florecieron en aquella edad, fue corrompiéndose con mucha rapidez en boca del pueblo"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Orígenes_del_teatro_español"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Or%C3%ADgenes%20del%20teatro%20espa%C3%B1ol"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Or%C3%ADgenes%20del%20teatro%20espa%C3%B1ol"}],
       fuente: {"texto": "Obras de D. Leandro Fernández de Moratín dadas a luz por la Real Academia de la Historia (Madrid, Aguado, 1830), transcripción de es.wikisource (dominio público)", "url": "https://es.wikisource.org/wiki/Or%C3%ADgenes_del_teatro_espa%C3%B1ol"},
@@ -1973,9 +2382,14 @@ window.FENIX = {
       categoria: "novela",
       recomendado: false,
       resumen: {"es": "Durante una estadía en Granada, un viajero norteamericano se instala en las salas del antiguo palacio nazarí y recoge las leyendas, las historias de moros y cristianos y las costumbres de quienes viven entre sus muros. El libro mezcla la crónica de viaje, el retrato de personajes locales y los relatos fantásticos ligados a cada torre y a cada patio. Es una puerta de entrada clásica a la imagen romántica de la España andaluza."},
-      porque: {"es":"Para quien viajará a Granada, o quiere conocerla desde lejos. Irving mira con curiosidad cariñosa un lugar y a su gente, y enseña a ver unas ruinas como un sitio habitado de memoria. Es un libro de lectura pausada, en pequeñas dosis, ideal para antes de dormir.","en":"For anyone about to visit Granada, or who wants to know it from afar. Irving looks with affectionate curiosity at a place and its people, and teaches the reader to see ruins as a place still inhabited by memory. A book for slow reading in small doses, ideal before sleep."},
+      porque: {"es":"Para quien viajará a Granada o quiere conocerla desde lejos. Irving mira con cariño un palacio y a la gente que vive entre sus muros, y las leyendas moriscas que recoge resultan más entretenidas que la crónica del viaje. Esta edición de 1833 es una selección breve, buena para leer en dosis pequeñas, por ejemplo antes de dormir.","en":"For anyone travelling to Granada, or who wants to know it from afar. Irving looks fondly at a palace and the people living within its walls, and the Moorish legends he gathers are more entertaining than the travel account. This 1833 edition is a short selection, good to read in small doses, for example before bed."},
       imagen: {"src": "img/portadas/irving-cuentos-de-la-alhambra.jpg", "credito": {"es": "Gustave Vanaise, «Patio de la Alhambra, Granada», 1887", "en": "Gustave Vanaise, «Courtyard of the Alhambra, Granada», 1887"}, "url": "https://commons.wikimedia.org/wiki/File:Gustave_Vanaise_-_Court_of_the_Lions,_Granada.jpg"},
-      citas: ["No es posible imaginarse cosa mas pintoresca que el encuentro de una recua de mulas en el tránsito de aquellos montes."],
+      citas: [
+        "Salido apenas de la infancia, recorrí en las riberas del Hudson una antigua historia de las guerras de Granada, y esta ciudad se hizo el objeto de mis dulces delirios.",
+        "¿Me hallo efectivamente, decía, en el palacio de Boabdil? ¿Es aquella Granada tan célebre en los fastos de la caballería, la que distingo desde este elevado balcón? Sí, no es ilusión: recorro a mi placer estos salones orientales, oigo el murmullo de las fuentes, respiro la fragancia de las rosas.",
+        "Las tazas de alabastro derraman de continuo una lluvia de líquidos diamantes, y los doce leones arrojan por las narices torrentes de agua cristalina lo mismo que en los días de Boabdil.",
+        "Es fama común que el encanto conservará toda su virtud hasta el momento en que la mano se baje de tal modo que llegue a tocar la llave, en cuyo acto se hundirá la Alhambra, y quedarán de manifiesto los tesoros de los reyes moros."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/52262.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/52262"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 52262 (edición de Valencia, 1833; dominio público)", "url": "https://www.gutenberg.org/ebooks/52262"},
@@ -1993,7 +2407,11 @@ window.FENIX = {
       resumen: {"es": "En la Hungría de una creencia antigua sobre el paso de las almas a otros cuerpos, dos familias nobles, los Berlifitzing y los Metzengerstein, arrastran una enemistad hereditaria. Cuando el joven barón Federico hereda el castillo, su carácter licencioso y vengativo lo lleva a una serie de actos violentos. Un misterioso caballo de tapiz que parece cobrar vida marca desde entonces su suerte. Es el primer cuento publicado de Poe, de ambiente gótico y de corte sobrenatural."},
       porque: {"es":"Para quien quiere conocer los comienzos de Poe y asomarse a su mundo en pocas páginas. Es una lectura de ambiente, de esas que se disfrutan de noche, y muestra cómo el rencor heredado pesa sobre quien lo recibe y termina marcando su destino.","en":"For readers who want to see where Poe began and glimpse his world in a few pages. It is a book of atmosphere, the kind best enjoyed at night, and it shows how an inherited grudge weighs on whoever receives it and ends up shaping his fate."},
       imagen: {"src": "img/portadas/poe-metzengerstein.jpg", "credito": {"es": "Harry Clarke, «Metzengerstein», 1923", "en": "Harry Clarke, «Metzengerstein», 1923"}, "url": "https://commons.wikimedia.org/wiki/File:Harry_Clarke_Metzengerstein.jpg"},
-      citas: ["El horror y la fatalidad se han reconocido en todos los siglos, y por consecuencia, ¿á qué asignar una fecha á la historia que voy á réferir?"],
+      citas: [
+        "El horror y la fatalidad se han reconocido en todos los siglos, y por consecuencia, ¿a qué asignar una fecha a la historia que voy a réferir?",
+        "Federico apenas tenía diez y ocho años, que si en una ciudad no son mucha edad, en soledad, y soledad tan magnífica como la de aquel antiguo señorío, el péndulo vibra con más profunda y más significativa solemnidad.",
+        "Cuánto más intenso es el interés que escita en los sentimientos de la muchedumbre la contemplación de una agonía humana, que la que pueden producir los más espantosos espectáculos de la materia inanimada."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Metzengerstein_(1860)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Metzengerstein%20%281860%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Metzengerstein%20%281860%29"}],
       fuente: {"texto": "«Historias estraordinarias», Madrid: Imprenta de Las Novedades, 1860, transcritas en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Metzengerstein_(1860)"},
@@ -2011,7 +2429,12 @@ window.FENIX = {
       resumen: {"es": "En una casa sombría de Saumur vive Eugenia, hija de un tonelero enriquecido cuya avaricia gobierna a toda la familia. La llegada de un primo arruinado, venido de París, despierta en ella su primer amor y la lleva a desafiar la autoridad de su padre. La novela retrata con detalle el poder del dinero en la provincia francesa y el costo humano de la codicia. Forma parte de «La comedia humana»."},
       porque: {"es":"Para quien quiere entender cómo el apego al dinero va empobreciendo a una casa entera, aunque no falte nada en la despensa. Es una novela de ritmo sereno y sirve en particular al lector joven, que ve en Eugenia a alguien que aprende, poco a poco, a decidir por sí misma.","en":"For anyone who wants to understand how attachment to money slowly impoverishes a whole household, even when the pantry is full. It is a novel of calm pace, and it suits younger readers especially, who will watch Eugénie learn, little by little, to decide for herself."},
       imagen: {"src": "img/portadas/balzac-eugenia-grandet.jpg", "credito": {"es": "Daniel Hernández, «Eugenia Grandet», siglo XIX", "en": "Daniel Hernández, «Eugénie Grandet», 19th century"}, "url": "https://commons.wikimedia.org/wiki/File:BalzacEugenieGrandet01.jpg"},
-      citas: ["En algunos pueblecitos de provincias se encuentran casas cuya vista inspira una melancolía igual a la que provocan los claustros más sombríos, las landas más desiertas o las ruinas más tristes."],
+      citas: [
+        "Los avaros no creen en otra vida, y el presente es el todo para ellos.",
+        "El amor es nuestra segunda transformación.",
+        "El amor de aquella joven fue el amor solitario, el amor verdadero que persiste, que anima todos los pensamientos y que se convierte, por decirlo así, en la substancia de la vida.",
+        "El dinero tenía que comunicar su frialdad a aquella vida celestial y hacer sentir desconfianza por los sentimientos a una mujer que era todo sentimiento."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Eugenia_Grandet"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Eugenia%20Grandet"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Eugenia%20Grandet"}],
       fuente: {"texto": "Edición de Barcelona, 1902, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Eugenia_Grandet"},
@@ -2029,7 +2452,11 @@ window.FENIX = {
       resumen: {"es": "En San Petersburgo, el oficial Hermann observa cada noche las mesas de juego sin atreverse a apostar. Al oír que una anciana condesa conoce el secreto de tres cartas ganadoras, decide acercarse a ella por medio de su joven protegida. La obsesión por el dinero lo empuja a cruzar límites cada vez más peligrosos. Es un relato breve y tenso, considerado una joya de la prosa rusa."},
       porque: {"es":"Para quien tiene poco tiempo y quiere una lectura que no suelte: en pocas páginas muestra cómo una idea fija va tomando a un hombre. Sirve de introducción amable a la prosa rusa y deja una advertencia discreta sobre la ambición que no sabe detenerse.","en":"For readers short on time who want something that will not let go: in a few pages it shows how a fixed idea gradually takes hold of a man. It is a friendly introduction to Russian prose and leaves a quiet warning about ambition that does not know when to stop."},
       imagen: {"src": "img/portadas/pushkin-la-dama-de-pique.jpg", "credito": {"es": "Nikolái Tyrsa, «Ilustración para La dama de pique», 1936", "en": "Nikolay Tyrsa, «Illustration for The Queen of Spades», 1936"}, "url": "https://commons.wikimedia.org/wiki/File:%D0%A2%D1%8B%D1%80%D1%81%D0%B0_%D0%9F%D0%B8%D0%BA%D0%BE%D0%B2%D0%B0%D1%8F_%D0%B4%D0%B0%D0%BC%D0%B0_1936.jpg"},
-      citas: ["No puedo comprender, prosiguió Tomski, por qué no juega mi abuela."],
+      citas: [
+        "Así como en la naturaleza física no pueden dos cuerpos ocupar el mismo lugar al mismo tiempo, en la naturaleza moral tan poco puede haber dos ideas fijas. El tres, el siete y el as expulsaron muy pronto de la imaginación de Hermann la tétrica figura de la condesa.",
+        "Siendo en el fondo amigo del juego, no tocaba jamás una carta, porque calculaba que su fortuna no le permitía (según decía él) sacrificar lo indispensable a la esperanza de conseguir lo superfluo",
+        "Cálculo, moderación y laboriosidad, estas son mis tres cartas; ellas triplicarán, multiplicarán mi capital y me darán la tranquilidad y la independencia."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_dama_de_%22pique%22"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La%20dama%20de%20%22pique%22"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La%20dama%20de%20%22pique%22"}],
       fuente: {"texto": "«Páginas eslavas», traducción directa del ruso de Julián Juderías, 1912, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_dama_de_%22pique%22"},
@@ -2047,7 +2474,11 @@ window.FENIX = {
       resumen: {"es": "En la Sevilla del siglo XVIII, un caballero de origen misterioso ama a la hija de un marqués que se opone a la unión. Un accidente en el peor momento desencadena una cadena de desgracias que persigue a los protagonistas por España e Italia. El drama en cinco jornadas, en prosa y verso, rompió con las reglas del teatro neoclásico y abrió el romanticismo español. Su tema central es el destino que parece cerrarse sobre un hombre pese a sus esfuerzos."},
       porque: {"es":"Para quien quiere conocer el Romanticismo español en su forma más intensa. Es un drama de pasiones y destino que se lee con rapidez, y plantea una pregunta que cada generación se repite: cuánto de lo que nos pasa depende de nosotros y cuánto del azar.","en":"For anyone who wants to meet Spanish Romanticism at its most intense. It is a drama of passion and fate that reads quickly, and it raises a question every generation asks again: how much of what happens to us depends on us, and how much on chance."},
       imagen: {"src": "img/portadas/duque-de-rivas-don-alvaro.jpg", "credito": {"es": "Gabriel Maureta Aracil (sobre Federico de Madrazo), «Ángel de Saavedra, duque de Rivas», hacia 1881", "en": "Gabriel Maureta Aracil (after Federico de Madrazo), «Ángel de Saavedra, Duke of Rivas», c. 1881"}, "url": "https://commons.wikimedia.org/wiki/File:%C3%81ngel_de_Saavedra,_duque_de_Rivas_(Museo_del_Prado).jpg"},
-      citas: ["Parece, sí, que á medida que es más dura y más amarga, más extiende, más alarga el destino nuestra vida."],
+      citas: [
+        "Parece, sí, que a medida / que es más dura y más amarga, / más extiende, más alarga / el destino nuestra vida.",
+        "¡Qué carga tan insufrible / es el ambiente vital, / para el mezquino mortal / que nace en signo terrible! / ¡Qué eternidad tan horrible / la breve vida!",
+        "Caridad, hermano, caridad, que son hijos de Dios."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/59492.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/59492"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 59492 (Madrid, Imprenta de José M. Ducazcal, 1879; dominio público)", "url": "https://www.gutenberg.org/ebooks/59492"},
@@ -2065,7 +2496,12 @@ window.FENIX = {
       resumen: {"es": "Oliver Twist nace en un asilo de beneficencia inglés y crece entre el hambre y el maltrato. Tras huir a Londres, cae en manos de una banda de ladrones que dirige un viejo astuto y lo convierte en su aprendiz. Entre la miseria de los barrios bajos y la bondad de unos pocos desconocidos, el niño busca su lugar y su origen. Es una de las grandes novelas de denuncia social del siglo XIX; esta edición es una traducción libre de 1857 hecha a partir del francés."},
       porque: {"es":"Para quien cree que Dickens es solo nostalgia victoriana: aquí hay hambre, frío y niños desamparados, contados con humor y compasión. Recuerda que la caridad de verdad mira a la persona, y por ser una traducción antigua, agrada también a quien disfruta la lengua de otra época.","en":"For anyone who thinks Dickens is only Victorian nostalgia: here there is hunger, cold and abandoned children, told with humour and compassion. It reminds us that real charity looks at the person, and since this is an old translation, it also pleases readers who enjoy the language of another era."},
       imagen: {"src": "img/portadas/dickens-los-ladrones-de-londres.jpg", "credito": {"es": "George Cruikshank, «Fagin en la celda de los condenados», 1838", "en": "George Cruikshank, «Fagin in the Condemned Cell», 1838"}, "url": "https://commons.wikimedia.org/wiki/File:The_Writings_of_Charles_Dickens_v4_p432_(engraving).jpg"},
-      citas: ["ENTRE los establecimientos públicos de cierta ciudad de Inglaterra, que por muchas razones tendré la prudencia de no designar, ni tampoco prestaré nombre alguno imaginario; hay uno comun á cuasi todas las ciudades grandes ó pequeñas que aquella tiene por gloria poseer: una Casa de Caridad."],
+      citas: [
+        "Quisiera más si os place, caballero.",
+        "Si hubiera más personas cual vos, habría menos cual yo; esto es muy cierto.",
+        "No rehuséis escucharme y dejaos volver al sendero del honor y de la virtud.",
+        "Nunca es tarde para el arrepentimiento."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/62201.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/62201"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 62201 (Barcelona, Imprenta de Joaquín Bosch, 1857; dominio público)", "url": "https://www.gutenberg.org/ebooks/62201"},
@@ -2083,7 +2519,12 @@ window.FENIX = {
       resumen: {"es": "En la Lombardía del siglo XVII, dos jóvenes humildes, Renzo y Lucía, están a punto de casarse cuando un señor local, Don Rodrigo, lo impide por capricho y por poder. Separados, deben huir y recorrer un país devastado por la guerra, el hambre y la peste. La novela histórica sigue sus peripecias y las de quienes los ayudan o los persiguen, y es la obra fundacional de la narrativa italiana moderna."},
       porque: {"es":"Para el lector paciente que busca una gran novela de fondo. Acompaña a dos personas corrientes frente a injusticias enormes, la guerra y la peste, y por eso consuela a quien se siente pequeño ante quienes mandan. Se disfruta mejor sin apuro, a lo largo de varias semanas.","en":"For the patient reader looking for a great novel with real depth. It keeps company with two ordinary people facing enormous injustice, war and plague, and so it consoles anyone who feels small before those in power. It is best enjoyed unhurried, over several weeks."},
       imagen: {"src": "img/portadas/manzoni-los-novios.jpg", "credito": {"es": "Francesco Hayez, «Retrato de Alessandro Manzoni», 1841", "en": "Francesco Hayez, «Portrait of Alessandro Manzoni», 1841"}, "url": "https://commons.wikimedia.org/wiki/File:Hayez_-_Portrait_of_Alessandro_Manzoni,_1841,_963.jpg"},
-      citas: ["Aquel ramal del lago de Como que, torciendo hácia el Sur entre dos cordilleras de montes, forma varios golfos y ensenadas, segun ellos se apartan ó se acercan, toma casi de repente curso y figura de rio, estrechándose entre un promontorio al lado derecho y una espaciosa ribera al izquierdo."],
+      citas: [
+        "Aquel ramal del lago de Como que, torciendo hácia el Sur entre dos cordilleras de montes, forma varios golfos y ensenadas, segun ellos se apartan o se acercan, toma casi de repente curso y figura de rio, estrechándose entre un promontorio al lado derecho y una espaciosa ribera al izquierdo.",
+        "Todos tuvieron ánimo, porque el ánimo era necesario, y porque tuvieron confianza.",
+        "Si en tantos años de oficio pastoral habéis amado a vuestra grey, no debía faltaros el ánimo, porque el amor es intrépido.",
+        "Se ve en suma que había buen sentido; pero que se mantenía oculto por temor del sentido común."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Los_novios"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Los%20novios"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Los%20novios"}],
       fuente: {"texto": "«Los novios. Historia milanesa del siglo XVI», edición de 1880, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Los_novios"},
@@ -2101,7 +2542,12 @@ window.FENIX = {
       resumen: {"es": "En la víspera de Navidad, el viejo Scrooge, avaro y hostil, recibe la visita del espectro de su antiguo socio Marley. Esa noche tres espíritus, el de las Navidades pasadas, presentes y futuras, lo llevan a revisar su vida y las consecuencias de su dureza. La historia, dividida en cinco estrofas, es una de las más queridas de la literatura navideña y habla de la generosidad y la segunda oportunidad."},
       porque: {"es":"Para releer cada diciembre, o para leerlo por primera vez sin las versiones de cine en la cabeza. Es corto, se lee en un par de tardes y recuerda con cariño que nadie está demasiado endurecido para cambiar, ni es demasiado tarde para empezar a dar.","en":"To reread every December, or to read for the first time without the film versions in your head. It is short, it takes a couple of evenings, and it reminds us warmly that no one is too hardened to change, and that it is never too late to start giving."},
       imagen: {"src": "img/portadas/dickens-el-cantico-de-navidad.jpg", "credito": {"es": "John Leech, «El fantasma de Marley», 1843", "en": "John Leech, «Marley's Ghost», 1843"}, "url": "https://commons.wikimedia.org/wiki/File:Marley%27s_Ghost-John_Leech,_1843_(DYK_crop).jpg"},
-      citas: ["Para empezar: Marley había muerto. Sobre ello no había ni la menor sombra de duda."],
+      citas: [
+        "Para empezar: Marley había muerto. Sobre ello no había ni la menor sombra de duda.",
+        "La humanidad era mi negocio: el bien general era mi negocio: la caridad, la misericordia, la benevolencia eran mis negocios. Las operaciones del comercio no constituían más que una gota de agua en el vasto mar de mis negocios.",
+        "Celebraré la Navidad en el fondo de mi corazón, y me esforzaré en conservar su culto todo el año.",
+        "¡Que Dios bendiga a cada uno de nosotros!"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_c%C3%A1ntico_de_Navidad"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20c%C3%A1ntico%20de%20Navidad"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20c%C3%A1ntico%20de%20Navidad"}],
       fuente: {"texto": "Edición de Madrid, Biblioteca Universal, 1883, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_c%C3%A1ntico_de_Navidad"},
@@ -2119,7 +2565,11 @@ window.FENIX = {
       resumen: {"es": "Un narrador visita a su amigo William Legrand, que vive retirado en una isla de Carolina del Sur con su criado Júpiter y ha sido picado, según dice, por un escarabajo de aspecto singular. Lo que parece una manía se convierte en una expedición para seguir las pistas de un viejo pergamino cifrado. El relato combina aventura, misterio y el descifrado de un criptograma, y es uno de los más leídos de Poe."},
       porque: {"es":"Para quien disfruta de los enigmas: es una aventura con tesoro y clave secreta, donde el lector puede intentar adelantarse al narrador. Sirve como puerta de entrada a Poe para quienes no buscan terror, y es un buen libro para compartir con un lector joven.","en":"For anyone who enjoys puzzles: an adventure with a treasure and a secret code, where the reader can try to get ahead of the narrator. It works as a way into Poe for those who do not want horror, and it is a good book to share with a young reader."},
       imagen: {"src": "img/portadas/poe-el-escarabajo-de-oro.jpg", "credito": {"es": "John Byam Shaw, «El escarabajo de oro», hacia 1909", "en": "John Byam Shaw, «The Gold-Bug», c. 1909"}, "url": "https://commons.wikimedia.org/wiki/File:Poe_gold-bug_byam_shaw.JPG"},
-      citas: ["Hace algunos años ne uni intimamente con un tal William Legrand."],
+      citas: [
+        "Las circunstancias y cierta inclinación me han hecho tomar interés por esta clase de enigmas, y es dudoso realmente que el ingenio humano pudiese crear un enigma de este género del cual el humano ingenio no llegase a una conclusión clara por una aplicación suficiente.",
+        "El espíritu se esfuerza en establecer un orden, una relación de causa con efecto, y encontrándose impotente para resolverlo, sufre una especie de parálisis momentánea.",
+        "La solución no es ciertamente tan difícil como uno se imaginaría al primer golpe de vista."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_escarabajo_de_oro_(Cano_y_Cueto_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20escarabajo%20de%20oro%20%28Cano%20y%20Cueto%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20escarabajo%20de%20oro%20%28Cano%20y%20Cueto%20tr.%29"}],
       fuente: {"texto": "«Historias estraordinarias», Sevilla: Eduardo Perié, 1871, traducción de Manuel Cano y Cueto, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_escarabajo_de_oro_(Cano_y_Cueto_tr.)"},
@@ -2137,7 +2587,12 @@ window.FENIX = {
       resumen: {"es": "Un hombre condenado a muerte cuenta, la víspera de su ejecución, cómo un carácter antes dulce se fue degradando por la bebida. Su afecto por los animales, y en especial por un gato negro llamado Plutón, se transforma en crueldad. A partir de un primer acto de violencia, la culpa y la obsesión lo arrastran a hechos cada vez más graves. Es un clásico del cuento de terror psicológico."},
       porque: {"es":"Para quien quiere ver el terror desde adentro: lo inquietante no está en un fantasma, sino en lo que el hábito del mal hace con una persona común. Es una lectura corta e incómoda, útil para pensar en cómo se empieza a ceder y cuánto cuesta volver atrás.","en":"For readers who want to see horror from the inside: what unsettles here is not a ghost but what the habit of wrongdoing does to an ordinary person. It is a short, uncomfortable read, useful for thinking about how one begins to give way and how hard it is to turn back."},
       imagen: {"src": "img/portadas/poe-el-gato-negro.jpg", "credito": {"es": "John Byam Shaw, «El gato negro», hacia 1909", "en": "John Byam Shaw, «The Black Cat», c. 1909"}, "url": "https://commons.wikimedia.org/wiki/File:Poe_black_cat_byam_shaw.JPG"},
-      citas: ["Relativamente á la más estraña y sin embargo más familiar historia, que voy á estender por escrito, no aguardo ni solicito el crédito."],
+      citas: [
+        "¿No tenemos una perpetua inclinación, no obstante la excelencia de nuestro juicio, a violar lo que es Ley, simplemente porque comprendemos que es Ley?",
+        "Con todo, tan seguro como existe mi alma, yo creo que la perversidad es uno de los primitivos impulsos del corazón humano",
+        "Es ese deseo ardiente, insondable del alma de atormentarse a sí misma, de violentar su propia naturaleza, de hacer el mal por amor al mal",
+        "En mi infancia había sido conocido por la docilidad y humanidad de mi carácter."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_gato_negro_(Cano_y_Cueto_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20gato%20negro%20%28Cano%20y%20Cueto%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20gato%20negro%20%28Cano%20y%20Cueto%20tr.%29"}],
       fuente: {"texto": "«Historias estraordinarias», Sevilla: Eduardo Perié, 1871, traducción de Manuel Cano y Cueto, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_gato_negro_(Cano_y_Cueto_tr.)"},
@@ -2155,7 +2610,12 @@ window.FENIX = {
       resumen: {"es": "Novela histórica del Romanticismo español, ambientada en el Bierzo a comienzos del siglo XIV. Narra el amor de Álvaro Yáñez, señor de Bembibre, y Beatriz, hija del señor de Arganza, un amor que choca con las ambiciones de las casas nobles. Al fondo corre el destino de los caballeros templarios, a los que Álvaro está ligado. Es famosa por sus descripciones del paisaje leonés."},
       porque: {"es":"Para el lector que aprecia el paisaje y el amor contrariado, a ritmo romántico de otro siglo. Sirve a quien quiere conocer una novela histórica española menos transitada, y acompaña bien a quien lee descansado, con vistas largas y sentimientos intensos.","en":"For readers who value landscape and thwarted love, told at the unhurried pace of another century. It suits anyone who wants to discover a less-travelled Spanish historical novel, and it is good company for relaxed reading, with long views and strong feelings."},
       imagen: {"src": "img/portadas/gil-y-carrasco-el-senor-de-bembibre.jpg", "credito": {"es": "Retrato de Enrique Gil y Carrasco, autor desconocido, siglo XIX", "en": "Portrait of Enrique Gil y Carrasco, unknown artist, 19th century"}, "url": "https://commons.wikimedia.org/wiki/File:Gil_y_Carrasco.jpg"},
-      citas: ["En una tarde de Mayo de uno de los primeros años del siglo XIV, volvían de la feria de San Marcos de Cacabelos, tres al parecer criados de alguno de los grandes señores que entonces se repartían el dominio del Bierzo."],
+      citas: [
+        "Mirad que la esperanza es una virtud divina.",
+        "El conocimiento recíproco de los caracteres y la consonancia de los sentimientos, son fiadores más seguros de la paz y dicha doméstica que la razón de estado y los cálculos de la conveniencia.",
+        "Así estuvieron algunos instantes, como dos puros y cristalinos ríos que mezclan sus aguas.",
+        "El que no es agradecido no es bien nacido."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/49413.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/49413"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 49413 (dominio público); edición de Gil-Blas, Madrid, 1920", "url": "https://www.gutenberg.org/ebooks/49413"},
@@ -2173,7 +2633,12 @@ window.FENIX = {
       resumen: {"es": "En la Sevilla de Carlos V, don Juan Tenorio y don Luis Mejía apuestan sobre cuál de los dos ha cometido más delitos y seducido a más mujeres. Don Juan se propone además conquistar a doña Inés, novicia de un convento. La segunda parte, cinco años después, lo enfrenta con las consecuencias de su vida. El drama religioso-fantástico en verso se representa en España cada año alrededor del día de Todos los Santos."},
       porque: {"es":"Una obra de lectura amena, popular en España y en América, que se entiende mejor leída que oída de pasada. Su segunda parte la hace distinta: habla del arrepentimiento y de la posibilidad de cambiar, algo que le sirve a quien siente que ya es tarde.","en":"An enjoyable read, popular in Spain and Latin America, better understood when read than heard in passing. Its second part sets it apart: it speaks of repentance and the chance to change, something that helps anyone who feels it is already too late."},
       imagen: {"src": "img/portadas/zorrilla-don-juan-tenorio.jpg", "credito": {"es": "José Clemente Orozco, «Don Juan Tenorio», antes de 1950", "en": "José Clemente Orozco, «Don Juan Tenorio», before 1950"}, "url": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Clemente_Orozco,_Don_Juan_Tenorio.jpg"},
-      citas: ["Pero, ¡mal rayo me parta si en concluyendo la carta no pagan caros sus gritos!"],
+      citas: [
+        "Llamé al cielo y no me oyó, / y pues sus puertas me cierra, / de mis pasos en la tierra / responda el cielo, y no yo.",
+        "¡Ah! ¿No es cierto, ángel de amor, / que en esta apartada orilla / más pura la luna brilla / y se respira mejor?",
+        "Yo a las cabañas bajé, / yo a los palacios subí, / yo los claustros escalé, / y en todas partes dejé / memoria amarga de mí.",
+        "Suéltala, que si es verdad / que un punto de contrición / da a un alma la salvación / de toda una eternidad, / yo, Santo Dios, creo en Ti: / si es mi maldad inaudita, / tu piedad es infinita... / ¡Señor, ten piedad de mí!"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Don_Juan_Tenorio_(1844)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Don%20Juan%20Tenorio%20%281844%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Don%20Juan%20Tenorio%20%281844%29"}],
       fuente: {"texto": "Edición de Madrid, Imprenta de Repullés, 1844, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Don_Juan_Tenorio_(1844)"},
@@ -2191,7 +2656,12 @@ window.FENIX = {
       resumen: {"es": "Cuento de detectives de Poe, el tercero con el aficionado parisino C. Auguste Dupin. El prefecto de policía acude a Dupin porque una carta comprometedora ha sido sustraída de las habitaciones reales y, pese a registros minuciosos, no aparece. Dupin aborda el caso por un camino distinto al de la policía, y el relato es un clásico del enigma resuelto por el razonamiento."},
       porque: {"es":"Para quien disfruta de la lógica antes que de la violencia: el caso se resuelve pensando y mirando lo evidente que otros pasan por alto. Es muy corto, ideal para conocer la novela policial en sus orígenes, y deja una lección sobre ponerse en el lugar del otro.","en":"For anyone who prefers logic to violence: the case is solved by thinking and by noticing the obvious thing others overlook. It is very short, ideal for meeting detective fiction at its origins, and it leaves a lesson about putting yourself in the other person's place."},
       imagen: {"src": "img/portadas/poe-la-carta-robada.jpg", "credito": {"es": "Ilustración para «The Purloined Letter», 1902, autor desconocido", "en": "Illustration for «The Purloined Letter», 1902, unknown artist"}, "url": "https://commons.wikimedia.org/wiki/File:Purloined_Letter_illustration,_1902.jpg"},
-      citas: ["Al anochecer de una noche del otoño de 18... me hallaba en Paris, gozando de la doble fruición de la meditación y del tabaco contenido en una pipa de espuma de mar, en compañía de mi amigo C. Augusto Dupin, en un pequeño cuarto detrás de su biblioteca."],
+      citas: [
+        "Cuando deseo saber cuán sabio o cuán estúpido, o cuán bueno o cuán malo es alguno, o cuáles son sus pensamientos en un instante dado, acomodo la expresión de mi rostro, tan cuidadosamente como me es posible, de acuerdo con la expresión del rostro de él, y entonces trato de ver qué pensamientos o sentimientos nacen en mi alma, que igualen o correspondan a la expresión.",
+        "Quizá es precisamente la simplicidad lo que desconcierta a Vd.",
+        "Así es que perpetuamente yerra por ser demasiado profundo, o demasiado superficial en los asuntos que se le confían, y muchos niños de escuela son mejores razonadores que él.",
+        "Es ese monstrum horrendum del hombre de genio sin principios."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_carta_robada_(Olivera_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La%20carta%20robada%20%28Olivera%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La%20carta%20robada%20%28Olivera%20tr.%29"}],
       fuente: {"texto": "Novelas y cuentos de Edgar Poe, traducción de Carlos Olivera, París, Garnier Hermanos, 1884, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_carta_robada_(Olivera_tr.)"},
@@ -2209,7 +2679,11 @@ window.FENIX = {
       resumen: {"es": "Cuento breve de Poe narrado por Montresor, quien jura vengarse de las ofensas de Fortunato. Aprovecha el tiempo de carnaval para llevar a su rival, aficionado al vino, hasta las catacumbas de su familia con el pretexto de catar un barril de amontillado. El relato avanza con ironía y tensión creciente hacia una venganza cuidadosamente planeada."},
       porque: {"es":"Para quien quiere leer un cuento redondo de tan breve: en pocas páginas, un narrador calmado y un plan frío bastan para helar. Sirve para ver cuánto puede esconder una voz educada, y para estudiar cómo se construye la tensión sin gastar una palabra de más.","en":"For readers who want a story that is round and complete in very few pages: a calm narrator and a cold plan are enough to chill the blood. It shows how much a polite voice can hide, and how tension is built without wasting a single word."},
       imagen: {"src": "img/portadas/poe-el-barril-de-amontillado.jpg", "credito": {"es": "Harry Clarke, «The Cask of Amontillado», 1919", "en": "Harry Clarke, «The Cask of Amontillado», 1919"}, "url": "https://commons.wikimedia.org/wiki/File:CaskofAmontillado-Clarke.jpg"},
-      citas: ["Soporté cuanto pude las injusticias de Fortunato; pero cuando estas llegaron hasta el insulto, juré vengarme."],
+      citas: [
+        "Soporté cuanto pude las injusticias de Fortunato; pero cuando estas llegaron hasta el insulto, juré vengarme.",
+        "Debía no solo castigar, sino castigar impunemente. Una injuria no se venga cuando el castigo alcanza al desfacedor, ni se venga cuando el vengador no tiene necesidad de hacerse conocer del que ha cometido la injuria.",
+        "Continué, según costumbre, sonriéndole siempre, y él no comprendía que mi sonrisa era la fórmula del pensamiento que yo de su inmolación abrigaba."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_barril_de_amontillado_(Cano_y_Cueto_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20barril%20de%20amontillado%20%28Cano%20y%20Cueto%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20barril%20de%20amontillado%20%28Cano%20y%20Cueto%20tr.%29"}],
       fuente: {"texto": "Historias extraordinarias, traducción de Manuel Cano y Cueto, Sevilla, Eduardo Perié, 1871, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_barril_de_amontillado_(Cano_y_Cueto_tr.)"},
@@ -2227,7 +2701,11 @@ window.FENIX = {
       resumen: {"es": "Novela de costumbres andaluzas de Fernán Caballero, seudónimo de Cecilia Böhl de Faber. Comienza con la llegada a España, en 1836, de un joven médico alemán, que conoce en Villamar a María, hija de un pescador, apodada la Gaviota. La historia sigue sus vidas entre el pueblo y las clases altas de Sevilla y Madrid, con retratos de tipos y costumbres de la época."},
       porque: {"es":"Para quien gusta de la vida de costumbres y de los retratos de gente de pueblo y de salón. Sirve a quienes quieren conocer una voz femenina de la literatura española del siglo XIX, y a quien desea ver cómo cambia una persona cuando cambia de ambiente.","en":"For readers who like novels of manners and portraits of village folk and drawing-room society. It suits those who want to know a woman's voice in nineteenth-century Spanish literature, and anyone curious about how a person changes when her surroundings change."},
       imagen: {"src": "img/portadas/fernan-caballero-la-gaviota.jpg", "credito": {"es": "Estanislao Espejo, «Fernán Caballero», 1877 (copia del retrato de Federico de Madrazo, 1858)", "en": "Estanislao Espejo, «Fernán Caballero», 1877 (copy of the portrait by Federico de Madrazo, 1858)"}, "url": "https://commons.wikimedia.org/wiki/File:Fernán-Caballero-Cecilia-Bohl.jpg"},
-      citas: ["En noviembre del año de 1836, el paquebote de vapor Royal Sovereign se alejaba de las costas nebulosas de Falmouth, azotando las olas con sus brazos, y desplegando sus velas pardas y húmedas en la neblina, aún más parda y más húmeda que ellas."],
+      citas: [
+        "Mi ciencia, mi buena voluntad, mi juventud y mi confianza en Dios.",
+        "las ruinas de un fuerte, obra humana que a nada resiste, a quien servían de base las rocas, obra de Dios, que resiste a todo.",
+        "Se engañan mucho los que creen que la modestia y la humildad se ocultan siempre bajo la librea de la pobreza. No: los remiendos y las casuchas abrigan a veces más orgullo que los palacios."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/23600.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/23600"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 23600 (dominio público)", "url": "https://www.gutenberg.org/ebooks/23600"},
@@ -2245,7 +2723,12 @@ window.FENIX = {
       resumen: {"es": "Novela de costumbres contemporáneas de Fernán Caballero. Se abre con una tempestad en alta mar, en cuyo barco agoniza una mujer. La protagonista, apodada Lágrimas, es una joven de los trópicos, modesta y humilde, y la historia vuelve a Villamar, el pueblo que ya conocían los lectores de La gaviota. Allí su sencillez contrasta con los tipos de la sociedad lugareña, que la autora retrata con su mirada de costumbrista. Lleva un prólogo de Antonio Cavanilles."},
       porque: {"es":"Para quien ya conoce «La gaviota» y quiere volver a Villamar, o busca una novela de costumbres con una protagonista sencilla frente a un entorno que la mira desde arriba. Es una lectura tranquila, de pueblo, que valora la humildad sin predicar.","en":"For anyone who already knows «La gaviota» and wants to return to Villamar, or who looks for a novel of manners with a simple heroine facing surroundings that look down on her. A quiet, small-town read that values humility without preaching."},
       imagen: {"src": "img/portadas/fernan-caballero-lagrimas.jpg", "credito": {"es": "Ivan Aivazovsky, «Tempest by Sounion», 1856", "en": "Ivan Aivazovsky, «Tempest by Sounion», 1856"}, "url": "https://commons.wikimedia.org/wiki/File:Ivan_Aivazovsky_-_Tempest_by_Sounion.jpg"},
-      citas: ["«¡Dios! ¡Ten piedad de nosotros!». Tal era el grito que con débil y exhausta voz repetía una infeliz mujer, que yacía moribunda en el ahogado camarote de una fragata, que en el golfo de las Yeguas corría una horrorosa tempestad."],
+      citas: [
+        "La compasión inactiva es un cuerpo sin alma. Es un deber gastar todas nuestras facultades en ver el modo de proporcionar alivio a los que padecen aunque no lo logremos.",
+        "Que la bondad es el suave óleo que debe ungir todos los ejes sobre los que giran nuestras acciones y relaciones con todo el mundo, y hasta con los animales, pobres seres desvalidos que tiraniza el hombre.",
+        "Su alma era como el cristal, la empañaba un soplo, la traspasaba un rayo de sol, un choque la hubiese quebrado: almas de ángeles que tienen su mayor mérito en ignorar lo que valen; que no lloran sobre él, sino sobre el dolor, que es herencia común.",
+        "Débese ejercer, no por mayor y en teorías; pero al pormenor y en práctica. Débese emplear, no como arma contra los ricos, sino como auxilio para los pobres."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/L%C3%A1grimas_(Fern%C3%A1n_Caballero)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=L%C3%A1grimas%20%28Fern%C3%A1n%20Caballero%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=L%C3%A1grimas%20%28Fern%C3%A1n%20Caballero%29"}],
       fuente: {"texto": "Edición de Madrid, Establecimiento Tipográfico de Mellado, 1862, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/L%C3%A1grimas_(Fern%C3%A1n_Caballero)"},
@@ -2263,7 +2746,11 @@ window.FENIX = {
       resumen: {"es": "Novela ambientada en la colonia puritana de Boston, en el siglo XVII. Hester Prynne es condenada por la comunidad a llevar bordada en el pecho una letra «A» escarlata, mientras guarda silencio sobre el padre de su hija. Alrededor de ella se mueven un joven ministro de la iglesia y un anciano médico recién llegado, y la obra explora la culpa, el secreto y el juicio de los demás. Se considera una de las grandes novelas norteamericanas del siglo XIX."},
       porque: {"es":"Para quien ha sentido el peso de ser juzgado por los demás, o de guardar un secreto. Hawthorne muestra qué hace la mirada de la comunidad, y qué hace el silencio, en quienes cargan una culpa. Es una lectura lenta que se queda en la memoria y da para conversar después.","en":"For anyone who has felt the weight of being judged by others, or of keeping a secret. Hawthorne shows what a community's gaze does, and what silence does, to those who carry guilt. A slow read that stays in the memory and gives you plenty to talk about afterwards."},
       imagen: {"src": "img/portadas/hawthorne-la-letra-escarlata.jpg", "credito": {"es": "Hugues Merle, «The Scarlet Letter» (encargado en 1859)", "en": "Hugues Merle, «The Scarlet Letter» (commissioned in 1859)"}, "url": "https://commons.wikimedia.org/wiki/File:Hugues_Merle_-_The_Scarlet_Letter_-_Walters_37172.jpg"},
-      citas: ["Una multitud de hombres barbudos, vestidos con trajes obscuros y sombreros de copa alta, casi puntiaguda, de color gris, mezclados con mujeres unas con caperuzas y otras con la cabeza descubierta, se hallaba congregada frente á un edificio de madera cuya pesada puerta de roble estaba tachonada con puntas de hierro."],
+      citas: [
+        "¡Sé sincero! ¡Sé sincero! ¡Sé sincero! Muestra al mundo, sin ambajes, si no lo peor de tu naturaleza, por lo menos algún rasgo del que se pueda inferir lo peor.",
+        "Es asunto digno de investigarse saber hasta qué punto el odio y el amor vienen a ser en realidad la misma cosa. Cada uno de estos sentimientos, en su más completo desarrollo, presupone un profundo e íntimo conocimiento del corazón humano.",
+        "Había hablado la pura verdad, transformándola sin embargo en la falsedad más completa. Y no obstante esto, por instinto, por educación, por principios, amaba la verdad y aborrecía la mentira como pocos hombres."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/36990.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/36990"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 36990 (dominio público); versión castellana de Francisco Sellén, Nueva York, D. Appleton, 3.ª ed. 1903 (copyright 1894)", "url": "https://www.gutenberg.org/ebooks/36990"},
@@ -2281,7 +2768,11 @@ window.FENIX = {
       resumen: {"es": "Silas Marner, un tejedor de pueblo acusado injustamente de un robo, debe abandonar su comunidad y se instala en la aldea de Raveloe, donde vive aislado y dedicado a su telar y a guardar su oro. Dos sucesos inesperados rompen su soledad: el robo de su tesoro y la aparición de una niña huérfana en su casa. La novela retrata la vida rural inglesa y el modo en que el afecto devuelve a un hombre a la comunidad."},
       porque: {"es":"Para quien ha perdido la confianza en la gente y se ha encerrado en su rutina. Es una historia sobria y cálida sobre cómo un cariño inesperado reabre la puerta a una persona endurecida. Se lee sin prisa y se recomienda tanto a jóvenes como a mayores.","en":"For anyone who has lost trust in people and shut themselves into routine. It is a sober, warm story about how unexpected affection reopens the door for a hardened person. It reads without hurry and can be recommended to young and old alike."},
       imagen: {"src": "img/portadas/george-eliot-silas-marner.jpg", "credito": {"es": "Hugh Thomson, ilustración para «Silas Marner»", "en": "Hugh Thomson, illustration for «Silas Marner»"}, "url": "https://commons.wikimedia.org/wiki/File:Silas_marner_0025.jpg"},
-      citas: ["Nadie sabía dónde vivían aquellos hombres errantes, ni de quién descendían; y, ¿cómo podría decirse quiénes eran, a menos de conocer a alguien que supiera quiénes eran su padre y su madre?"],
+      citas: [
+        "Antes su corazón era como un cofrecillo cerrado con llave y que contenía un tesoro; pero ahora el cofrecillo estaba vacío, y la cerradura rota.",
+        "Sólo hubiese podido decir que la niña le había venido en lugar de su dinero: que su oro se había vuelto una criatura.",
+        "Se encariñaba con aquella tierna criatura que le había sido mandada desde las tinieblas adonde se había marchado su oro."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/24823.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/24823"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 24823 (dominio público); edición de la Biblioteca de La Nación, Buenos Aires, 1919", "url": "https://www.gutenberg.org/ebooks/24823"},
@@ -2299,7 +2790,12 @@ window.FENIX = {
       resumen: {"es": "Fernán Caballero guía al lector por el Real Alcázar de Sevilla y lo describe de sala en sala: los patios, el salón de Embajadores, las galerías con sus artesonados y mosaicos, y los jardines con sus rincones. Mezcla la descripción con la memoria de los reyes y las épocas que habitaron el palacio, y no oculta su cariño por el lugar. Es un texto breve del siglo XIX, a medio camino entre la crónica de viaje y la evocación literaria de una ciudad. Sirve de recorrido por un monumento y de muestra de la prosa de la autora de «La Gaviota»."},
       porque: {"es":"Para quien viaja a Sevilla, o sueña con hacerlo, y prefiere llegar con una guía escrita con cariño y no con datos secos. Es corta y se lee en una tarde. También sirve para conocer la prosa de Fernán Caballero lejos de la novela, en un tono más personal.","en":"For anyone travelling to Seville, or dreaming of it, who would rather arrive with a guide written with affection than with dry facts. It is short and can be read in an afternoon. It is also a chance to meet the prose of Fernán Caballero away from the novel, in a more personal tone."},
       imagen: {"src": "img/portadas/fernan-caballero-el-alcazar-de-sevilla.jpg", "credito": {"es": "Photoglob Co., «Patio de las Doncellas, Alcázar de Sevilla», c. 1890", "en": "Photoglob Co., «Court of the Maidens, Alcázar of Seville», c. 1890"}, "url": "https://commons.wikimedia.org/wiki/File%3ASevilla._Alc%C3%A1zar._Patio_de_las_Doncellas_LCCN2017660794.jpg"},
-      citas: ["Difícil y aun ardua tarea es la que nos proponemos al intentar describir el Alcázar de Sevilla, porque no hay cosa más indescriptible."],
+      citas: [
+        "¡Lo pasado es tan poético! ¡Lo porvenir lo es tan poco! Hay más mérito en amar lo que fue, que en amar lo que será.",
+        "Para evitar, Soberano Señor, que si encuentro agradable la salsa, vaya a antojárseme la perdiz.",
+        "Se alza de trecho en trecho una de sus torres, como un roble entre las zarzas que lo oprimen, para respirar en ancha atmósfera y no ahogarse mezquinamente.",
+        "Hay otra cosa en estos jardines, que sin ser cosa artística ni regia, sin recuerdo histórico y sin ayuda del tiempo ni del hombre, encanta, y admira, y es un ruiseñor que no busca recuerdos ni bellezas, sino verde hojarasca"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_Alc%C3%A1zar_de_Sevilla"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20Alc%C3%A1zar%20de%20Sevilla"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20Alc%C3%A1zar%20de%20Sevilla"}],
       fuente: {"texto": "Transcripción de es.wikisource (dominio público)", "url": "https://es.wikisource.org/wiki/El_Alc%C3%A1zar_de_Sevilla"},
@@ -2317,7 +2813,12 @@ window.FENIX = {
       resumen: {"es": "Alexei, un joven preceptor ruso, acompaña a la familia de un general arruinado a Ruletenburg, una ciudad balneario alemana. Allí todos esperan la herencia de una anciana pariente, mientras Alexei vive pendiente de Paulina, y la ruleta pasa de entretención a obsesión. Dostoyevski escribió la novela con prisa, en 1866, presionado por sus propias deudas. Esta edición es la traducción de Alfonso Nadal, publicada en Madrid en 1928."},
       porque: {"es":"Para quien quiere entender la obsesión desde dentro, sin sermón: Dostoyevski retrata cómo una afición se vuelve cadena y cómo uno se miente a sí mismo. Es una entrada más breve y ágil que sus novelas grandes, útil para quien teme empezar por Rusia.","en":"For readers who want to understand obsession from the inside, without a sermon: Dostoevsky shows how a pastime turns into a chain and how a person lies to himself. It is a shorter, quicker way in than his big novels, useful for anyone nervous about starting with Russia."},
       imagen: {"src": "img/portadas/dostoyevski-el-jugador.jpg", "credito": {"es": "Edvard Munch, «En la mesa de ruleta en Monte Carlo», 1892", "en": "Edvard Munch, «At the Roulette Table in Monte Carlo», 1892"}, "url": "https://commons.wikimedia.org/wiki/File%3AEdvard_Munch_-_At_the_Roulette_Table_in_Monte_Carlo_-_MM.M.00050_-_Munch_Museum.jpg"},
-      citas: ["Los nuestros llevaban ya tres días en Ruletenburg. Yo creía que me estarían aguardando como al Mesías; pero me equivocaba."],
+      citas: [
+        "¿Qué soy ahora? Un cero. ¿Qué puedo ser mañana? ¡Mañana puedo resucitar de entre los muertos, comenzar una vida nueva! Puedo descubrir al hombre que hay en mí todavía en tanto que no esté hundido del todo.",
+        "Paso días enteros junto al tapete verde observando el juego, sueño con él, me siento embrutecido y me veo cubierto de lodo, como si hubiera caído en una charca.",
+        "No sólo ha renunciado usted a la vida, a los intereses personales y sociales, a los deberes de hombre y de ciudadano, a sus amigos... ha renunciado también a sus recuerdos, todo a causa del juego.",
+        "Quizás estas sensaciones múltiples, lejos de saciar el alma, no hacen más que irritarla y hacer que exija sensaciones nuevas, cada vez más intensas hasta el agotamiento total."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El_jugador"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20jugador"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20jugador"}],
       fuente: {"texto": "Edición de Madrid, 1928 (Góngora), traducción de Alfonso Nadal, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_jugador"},
@@ -2335,7 +2836,13 @@ window.FENIX = {
       resumen: {"es": "En 1870 el coronel Lucio V. Mansilla salió de la frontera de Córdoba hacia las tolderías de los indios ranqueles para tratar un acuerdo de paz. Cuenta el viaje en cartas a su amigo Santiago, con humor, digresiones y una mirada atenta a las costumbres, el idioma y la hospitalidad de los indígenas. Entre parlamentos, fiestas y noches de campamento, retrata al cacique Mariano Rosas y a los hombres que lo rodean. Es una crónica clásica de la frontera argentina del siglo XIX, en dos tomos."},
       porque: {"es":"Para quien quiere conocer la frontera del siglo XIX desde un testigo que conversa, bromea y observa con curiosidad. La forma de cartas hace la lectura amena, y el libro ayuda a comprender un encuentro entre dos mundos con sus matices. Es largo, pero se puede avanzar por episodios.","en":"For readers who want to know the nineteenth-century frontier through a witness who chats, jokes and observes with curiosity. The letter form makes for pleasant reading, and the book helps one grasp an encounter between two worlds in all its nuance. It is long, but it can be read episode by episode."},
       imagen: {"src": "img/portadas/mansilla-excursion-a-los-indios-ranqueles.jpg", "credito": {"es": "Johann Moritz Rugendas, «El regreso de la cautiva», 1838", "en": "Johann Moritz Rugendas, «The Return of the Captive Woman», 1838"}, "url": "https://commons.wikimedia.org/wiki/File%3AEl_Regreso_de_la_Cautiva_-Buenos_Aires,_seg%C3%BAn_Rugendas.tif"},
-      citas: ["Lo más sencillo, lo más simple, lo más inocente es lo mejor; nada de picantes, nada de trufas."],
+      citas: [
+        "Es indudable que la civilización tiene sus ventajas sobre la barbarie; pero no tantas como aseguran los que se dicen civilizados.",
+        "La civilización consiste, si yo me hago una idea exacta de ella, en varias cosas. En usar cuellos de papel, que son los más económicos, botas de charol y guantes de cabritilla. En que haya muchos médicos y muchos enfermos, muchos abogados y muchos pleitos, muchos soldados y muchas guerras, muchos ricos y muchos pobres.",
+        "Ni el amor, ni el odio, ni el dolor, ni la alegría, absorben por completo la existencia de ningún mortal. Sólo Dios es imperecedero.",
+        "La amistad no se mide, se prueba.",
+        "Digan lo que quieran, si la felicidad existe, si la podemos concretar y definir, ella está en los extremos."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo I", "url": "https://www.gutenberg.org/ebooks/63600.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo I", "url": "https://www.gutenberg.org/ebooks/63600"}, {"formato": "epub", "texto": "Project Gutenberg, tomo II", "url": "https://www.gutenberg.org/ebooks/63767.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo II", "url": "https://www.gutenberg.org/ebooks/63767"}],
       fuente: {"texto": "Project Gutenberg, libros n.º 63600 y 63767 (edición de Buenos Aires, 1909; dominio público)", "url": "https://www.gutenberg.org/ebooks/63600"},
@@ -2353,7 +2860,13 @@ window.FENIX = {
       resumen: {"es": "Poema narrativo en dos partes, «El gaucho Martín Fierro» (1872) y «La vuelta de Martín Fierro» (1879), sobre la vida de un paisano de la pampa argentina. Martín Fierro, un hombre trabajador, es llevado a la fuerza a servir en la frontera, pierde su hogar y su vida cambia para siempre; lo cuenta cantando al compás de la guitarra. La segunda parte recoge su regreso, sus encuentros y los consejos que deja a sus hijos. Es el poema nacional argentino y un testimonio de las penurias y la cultura del gaucho."},
       porque: {"es":"Para quien quiere conocer una de las voces fundacionales de la poesía de América y entender el alma del paisano de la pampa. Los versos, hechos para cantarse, se leen mejor en voz alta y se recuerdan solos. Los consejos de la segunda parte siguen hablando de la familia y de la amistad.","en":"For readers who want to know one of the founding voices of Latin American poetry and to understand the soul of the countryman of the pampa. The verses, made to be sung, are best read aloud and stay in the memory on their own. The advice in the second part still speaks about family and friendship."},
       imagen: {"src": "img/portadas/hernandez-martin-fierro.jpg", "credito": {"es": "Juan León Pallière, «Idilio criollo», c. 1861", "en": "Juan León Pallière, «Creole Idyll», c. 1861"}, "url": "https://commons.wikimedia.org/wiki/File%3AIdilio_criollo_-_Juan_Le%C3%B3n_Palli%C3%A8re.jpg"},
-      citas: ["Aquí me pongo a cantar / Al compás de la vigüela", "Los hermanos sean unidos / porque ésa es la ley primera"],
+      citas: [
+        "Aquí me pongo a cantar / Al compás de la vigüela, / Que el hombre que lo desvela / Una pena extraordinaria / Como la ave solitaria / Con el cantar se consuela.",
+        "Los hermanos sean unidos / porque ésa es la ley primera / tengan unión verdadera / en cualquier tiempo que sea, / porque, si entre ellos pelean, / los devoran los de ajuera.",
+        "Muchas cosas pierde el hombre / que a veces las vuelve a hallar; / pero les debo enseñar, / y es gúeno que lo recuerden: / si la vergüenza se pierde, / jamás se vuelve a encontrar.",
+        "Ave de pico encorvado / le tiene al robo afición; / pero el hombre de razón / no roba jamás un cobre, / pues no es vergüenza ser pobre / y es vergüenza ser ladrón.",
+        "El primer cuidao del hombre / es defender el pellejo. / Lleváte de mi consejo, / fijáte bien en lo que hablo: / el diablo sabe por diablo, / pero más sabe por viejo."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg, El gaucho Martín Fierro", "url": "https://www.gutenberg.org/ebooks/14765.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, El gaucho Martín Fierro", "url": "https://www.gutenberg.org/ebooks/14765"}, {"formato": "epub", "texto": "Project Gutenberg, La vuelta de Martín Fierro", "url": "https://www.gutenberg.org/ebooks/15066.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, La vuelta de Martín Fierro", "url": "https://www.gutenberg.org/ebooks/15066"}],
       fuente: {"texto": "Project Gutenberg, libros n.º 14765 y 15066 (dominio público)", "url": "https://www.gutenberg.org/ebooks/14765"},
@@ -2371,7 +2884,11 @@ window.FENIX = {
       resumen: {"es": "Tercer Episodio nacional. En marzo de 1808 Gabriel Araceli trabaja como cajista en la imprenta del «Diario de Madrid» y vive de cerca los sucesos que cambian el país: el motín de Aranjuez contra Godoy y la entrada de los franceses en Madrid. El relato llega hasta el levantamiento popular del 2 de mayo, con figuras como Daoiz, y mezcla la historia con los amores y las preocupaciones del narrador. Galdós cuenta en primera persona cómo un pueblo comienza una guerra."},
       porque: {"es":"Para quien quiere aprender historia de España con el tono de un testigo: Galdós cuenta los días de 1808 con el pulso de un muchacho común, no de un general. Sirve a quien empieza los Episodios nacionales y quiere ver cómo una gran guerra nace desde la calle.","en":"For readers who want to learn Spanish history in the voice of an eyewitness: Galdós tells the days of 1808 through the pulse of an ordinary young man, not a general. It suits anyone starting the Episodios nacionales who wants to see how a great war begins in the street."},
       imagen: {"src": "img/portadas/perez-galdos-el-19-de-marzo-y-el-2-de-mayo.jpg", "credito": {"es": "Francisco de Goya, «El 2 de mayo de 1808 en Madrid (La carga de los mamelucos)», 1814", "en": "Francisco de Goya, «The Second of May 1808 (The Charge of the Mamelukes)», 1814"}, "url": "https://commons.wikimedia.org/wiki/File%3AEl_dos_de_mayo_de_1808_en_Madrid.jpg"},
-      citas: ["Mi vida al principio era tan triste y tan uniforme como aquel oficio, que en sus rudimentos esclaviza la inteligencia sin entretenerla"],
+      citas: [
+        "Pasan años y más años: las revoluciones se suceden, hechas en comandita por los grandes hombres y por el vulgo, sin que todo lo demás que existe en medio de estas dos extremidades se tome el trabajo de hacer sentir su existencia.",
+        "El hombre es así. Gusta mucho de las caídas, y el día en que un poderoso de la tierra viene al suelo siempre es un día feliz.",
+        "Mi vida al principio era tan triste y tan uniforme como aquel oficio, que en sus rudimentos esclaviza la inteligencia sin entretenerla"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67189.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67189"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 67189 (edición de 1907; dominio público)", "url": "https://www.gutenberg.org/ebooks/67189"},
@@ -2389,7 +2906,12 @@ window.FENIX = {
       resumen: {"es": "Segundo de los Episodios nacionales. En 1807 Gabriel Araceli vive en Madrid como criado de una actriz del teatro del Príncipe y desde allí asiste a la vida de la capital y a las intrigas de la Corte. El favorito Godoy, el príncipe Fernando y la conspiración de El Escorial forman el telón de fondo de una historia en que también hay amores y enredos personales. Galdós retrata la España de vísperas de la invasión francesa a través de los ojos de un joven que tiene que abrirse paso."},
       porque: {"es":"Sirve a quien quiere entender cómo se llegó a la crisis de 1808 sin abrir un manual de historia. Mirar la Corte desde el piso de un criado enseña que el poder también se ve desde abajo, y Galdós lo cuenta con ritmo de folletín, ameno de leer.","en":"A good pick if you want to understand how Spain slid into the crisis of 1808 without opening a history textbook. Watching the Court from a servant's point of view shows that power looks different from below, and Galdós tells it at the pace of a serial novel, easy and entertaining to read."},
       imagen: {"src": "img/portadas/perez-galdos-la-corte-de-carlos-iv.jpg", "credito": {"es": "Francisco de Goya, «La familia de Carlos IV», 1800-1801", "en": "Francisco de Goya, «The Family of Charles IV», 1800-1801"}, "url": "https://commons.wikimedia.org/wiki/File%3ALa_familia_de_Carlos_IV.jpg"},
-      citas: ["Sin oficio ni beneficio, sin parientes ni habientes, vagaba por Madrid un servidor de ustedes, maldiciendo la hora menguada en que dejó su ciudad natal por esta inhospitalaria Corte"],
+      citas: [
+        "Pues tú pensando en ser hombre ilustre y poderoso, sin ser noble, ni rico, ni sabio, eres como una tortuga que se empeñara en subir volando al pico más alto de Guadarrama.",
+        "Si esa personita le sube a usted, será como si un águila o buitre cogiera por su concha a la tortuga para llevársela por los aires. Sí, te levantará; pero cuando estés arriba, el pájaro no va a estarse toda la vida con tanto peso en las alas, te dirá: «Ahora, niño mío, mantente solo.»",
+        "La verdad es que había mucha hipocresía entonces: porque las cosas no se hicieran en público, no dejaban de hacerse, y siendo menos libres las costumbres, no por eso eran mejores.",
+        "En cuanto a mí, siempre me han hecho gracia estos tipos de la vanidad humana, que son sin disputa los que más divierten y los que más enseñan."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67155.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67155"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 67155 (edición de Madrid, 1886; dominio público)", "url": "https://www.gutenberg.org/ebooks/67155"},
@@ -2407,7 +2929,11 @@ window.FENIX = {
       resumen: {"es": "Primer libro de los Episodios nacionales. Gabriel Araceli, un muchacho del barrio gaditano de la Viña, cuenta cómo en 1805 se vio metido en el combate naval de Trafalgar, entre la escuadra franco-española y la de Nelson. A su lado van marinos veteranos, entre ellos el viejo Marcial, cuyas discusiones y recuerdos muestran cómo se vivía la guerra desde abajo. Galdós mezcla la historia de España con la vida de la gente común y abre así la serie con que retrató el siglo XIX."},
       porque: {"es":"Es la puerta de entrada más cómoda a los Episodios nacionales: corto, vivo y contado por un muchacho que no entiende del todo lo que presencia. Ayuda a ver la guerra sin héroes de bronce, con la mirada de la gente común que la sufre.","en":"The easiest way into the Episodios nacionales: short, lively and told by a boy who does not fully grasp what he is witnessing. It helps you see war without bronze heroes, through the eyes of the ordinary people who live through it."},
       imagen: {"src": "img/portadas/perez-galdos-trafalgar.jpg", "credito": {"es": "J. M. W. Turner, «La batalla de Trafalgar, 21 de octubre de 1805», 1822-1824", "en": "J. M. W. Turner, «The Battle of Trafalgar, 21 October 1805», 1822-1824"}, "url": "https://commons.wikimedia.org/wiki/File%3ATurner_-_The_Battle_of_Trafalgar,_21_October_1805,_1822%E2%80%931824,_BHC0565.jpg"},
-      citas: ["Yo nací en Cádiz, y en el famoso barrio de la Viña, que no es hoy, ni menos era entonces, academia de buenas costumbres."],
+      citas: [
+        "Por primera vez entonces percibí con completa claridad la idea de la patria, y mi corazón respondió a ella con espontáneos sentimientos, nuevos hasta aquel momento en mi alma.",
+        "Pensé que también ellos tendrían su patria querida, que ésta les habría confiado la defensa de su honor; me pareció que en aquella tierra, para mí misteriosa, que se llamaba Inglaterra, habían de existir, como en España, muchas gentes honradas",
+        "Cercano al sepulcro, y considerándome el más inútil de los hombres, ¡aún haces brotar lágrimas de mis ojos, amor santo de la patria!"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16961.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16961"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 16961 (dominio público)", "url": "https://www.gutenberg.org/ebooks/16961"},
@@ -2425,7 +2951,12 @@ window.FENIX = {
       resumen: {"es": "En 1872, Phileas Fogg, un caballero inglés de hábitos exactos, apuesta con sus compañeros del Reform Club que puede dar la vuelta al mundo en ochenta días. Parte esa misma noche con su criado Picaporte, y el viaje por tren, barco, elefante y trineo se llena de contratiempos, además de un detective que lo sigue creyéndolo un ladrón. La novela es una carrera contra el calendario por la India, Asia y Estados Unidos, y todo depende de la puntualidad. Esta edición es la traducción de Vicente Guimerá, publicada en Madrid en 1885."},
       porque: {"es":"Para quien busca una lectura que se avance sola, de esas que se devoran en un fin de semana. Verne convierte una apuesta en una carrera contra el reloj y, de paso, regala un buen rato de buen humor, ideal para lectores jóvenes o para volver a la aventura de la infancia.","en":"For anyone looking for a book that practically reads itself, the kind you finish in a weekend. Verne turns a bet into a race against the clock and, along the way, offers a good dose of humor. It suits young readers as much as adults who miss the adventures of childhood."},
       imagen: {"src": "img/portadas/verne-la-vuelta-al-mundo-en-80-dias.jpg", "credito": {"es": "Alphonse de Neuville y Léon Benett, ilustración de «La vuelta al mundo en ochenta días», 1872", "en": "Alphonse de Neuville and Léon Benett, illustration for «Around the World in Eighty Days», 1872"}, "url": "https://commons.wikimedia.org/wiki/File%3A'Around_the_World_in_Eighty_Days'_by_Neuville_and_Benett_06.jpg"},
-      citas: ["Picaporte oyó por primera vez el ruido de la puerta que se cerraba; era su nuevo amo que salía"],
+      citas: [
+        "Pero, ¿qué había ganado con esa excursión? ¿Qué había traído de su viaje? Nada, se dirá. Nada, enhorabuena, a no ser una linda mujer, que, por inverosímil que parezca, le hizo el más feliz de los hombres. Y en verdad, ¿no se daría por menos que eso la vuelta al mundo?",
+        "No existe lo imprevisto.",
+        "Un mínimo bien empleado basta para todo.",
+        "Sabía que en la vida hay que dedicar mucho al rozamiento, y como el rozamiento entorpece, no se rozaba con nadie."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_vuelta_al_mundo_en_ochenta_d%C3%ADas"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La%20vuelta%20al%20mundo%20en%20ochenta%20d%C3%ADas"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La%20vuelta%20al%20mundo%20en%20ochenta%20d%C3%ADas"}],
       fuente: {"texto": "Edición de Madrid, 1885 (Sáenz de Jubera), traducción de Vicente Guimerá, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_vuelta_al_mundo_en_ochenta_d%C3%ADas"},
@@ -2443,7 +2974,11 @@ window.FENIX = {
       resumen: {"es": "Noveno de los Episodios nacionales, dedicado a la guerra de guerrillas contra Napoleón. Galdós deja un momento las grandes batallas y las luchas políticas para contar el levantamiento del pueblo en los campos, con partidas que nacen en la tierra y se organizan sin ayuda del Estado. El centro del relato es Juan Martín Díez, el Empecinado, jefe guerrillero popular, y la campaña de 1811 en torno a Guadalajara y Valencia. Es una mirada a esa guerra irregular que sostuvo la resistencia española."},
       porque: {"es":"Muestra que una nación puede resistir desde la base, sin generales ni decretos. Sirve a quien quiere pensar qué mueve a un hombre del campo a levantarse contra un ejército poderoso, y a quien disfruta de un Galdós más rural y menos cortesano.","en":"It shows that a nation can resist from the ground up, without generals or decrees. It suits anyone who wonders what moves a countryman to rise against a powerful army, and readers who enjoy a Galdós who is more rural and less courtly."},
       imagen: {"src": "img/portadas/perez-galdos-juan-martin-el-empecinado.jpg", "credito": {"es": "Francisco de Goya, «Juan Martín Díez, el Empecinado», c. 1814-1815", "en": "Francisco de Goya, «Juan Martín Díez, the Empecinado», c. 1814-1815"}, "url": "https://commons.wikimedia.org/wiki/File%3AJuan_Mart%C3%ADn_D%C3%ADez,_el_Empecinado_by_Goya.jpg"},
-      citas: ["Hablaremos ahora de las guerrillas, que son la verdadera guerra nacional; del levantamiento del pueblo en los campos"],
+      citas: [
+        "Hablaremos ahora de las guerrillas, que son la verdadera guerra nacional; del levantamiento del pueblo en los campos; de aquellos ejércitos espontáneos, nacidos en la tierra como la yerba nativa, cuya misteriosa simiente no arrojaron las manos del hombre.",
+        "Los guerrilleros constituyen nuestra esencia nacional. Ellos son nuestro cuerpo y nuestra alma; son el espíritu, el genio, la Historia de España; ellos son todo, grandeza y miseria, un conjunto informe de cualidades contrarias, la dignidad dispuesta al heroísmo, la crueldad inclinada al pillaje.",
+        "Hay algo más: hay ambición de gloria, de llevar a cabo grandes proezas, de asombrar al mundo con el poder de un solo hombre; hay un ansia horrorosa de que ningún nacido valga más que yo, ni pueda más que yo."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67705.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67705"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 67705 (edición de 1908; dominio público)", "url": "https://www.gutenberg.org/ebooks/67705"},
@@ -2461,7 +2996,11 @@ window.FENIX = {
       resumen: {"es": "Quinto de los Episodios nacionales. A fines de 1808 Napoleón se instala en Chamartín, a las puertas de Madrid, y la ciudad se prepara para resistir o rendirse. Gabriel Araceli sigue allí los pasos de personajes madrileños, entre ellos el conde de Rumblar, y retrata la vida de una capital dividida entre la defensa y el miedo. Galdós combina las escenas históricas, como las jornadas de Somosierra y el cerco de la capital, con las historias personales de sus protagonistas."},
       porque: {"es":"Muy útil para sentir cómo se vive una ciudad que espera al invasor: el miedo, las dudas y las ganas de resistir conviven en las mismas calles. Quien ya leyó los primeros Episodios encontrará aquí un Madrid más tenso y más humano.","en":"Very useful for feeling what it is like to live in a city waiting for the invader: fear, doubt and the will to resist share the same streets. Readers who have already enjoyed the first Episodios will find here a tenser and more human Madrid."},
       imagen: {"src": "img/portadas/perez-galdos-napoleon-en-chamartin.jpg", "credito": {"es": "Antoine-Jean Gros, «Capitulación de Madrid, 4 de diciembre de 1808», 1810", "en": "Antoine-Jean Gros, «Capitulation of Madrid, 4 December 1808», 1810"}, "url": "https://commons.wikimedia.org/wiki/File%3AAntoine-Jean_Gros_-_Capitulation_de_Madrid,_le_4_d%C3%A9cembre_1808.jpg"},
-      citas: ["Levantábase tarde, y después de dar cuerda a sus relojes, se ponía a disposición del peluquero, quien en poco más de hora y media le arreglaba la cabeza por fuera, que por dentro solo Dios pudiera hacerlo."],
+      citas: [
+        "Levantábase tarde, y después de dar cuerda a sus relojes, se ponía a disposición del peluquero, quien en poco más de hora y media le arreglaba la cabeza por fuera, que por dentro solo Dios pudiera hacerlo.",
+        "Parece, en verdad, mentira que Moratín y Rabadán, que Comella y Meléndez hayan vivido en un mismo siglo. Pero España es así.",
+        "¿Tú sabes lo que significa cumplir uno con su deber? ¿Tú sabes lo que significa el honor? Y si sabes todo esto, ¿ignoras lo que es la honra de la patria, que vale más que la propia honra?"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67360.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67360"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 67360 (edición de 1907; dominio público)", "url": "https://www.gutenberg.org/ebooks/67360"},
@@ -2479,7 +3018,12 @@ window.FENIX = {
       resumen: {"es": "Décimo episodio de la primera serie de los Episodios nacionales, narrado por Gabriel Araceli. En 1812 las tropas de Wellington avanzan por Castilla contra el ejército francés hasta chocar con él junto a Salamanca. Mientras tanto Gabriel sigue la pista de Santorcaz y de Inés, las personas que marcan su destino personal. La novela une la crónica de una batalla decisiva de la guerra de la Independencia con la historia íntima de su narrador."},
       porque: {"es":"Para el lector que ya se encariñó con Gabriel Araceli y quiere ver cómo cierra su camino: la batalla importa, pero lo que se queda es el destino de un hombre. Cierra la primera serie con pulso y deja ganas de seguir con Galdós.","en":"For the reader who has grown fond of Gabriel Araceli and wants to see where his path leads: the battle matters, but what stays with you is one man's fate. It closes the first series with energy and leaves you wanting more of Galdós."},
       imagen: {"src": "img/portadas/galdos-batalla-arapiles.jpg", "credito": {"es": "Francisco de Goya, «El duque de Wellington», c. 1812-1814", "en": "Francisco Goya, «The Duke of Wellington», c. 1812-1814"}, "url": "https://commons.wikimedia.org/wiki/File:Goya_-_Duke_of_Wellington_-_NG6322.jpg"},
-      citas: ["Las siguientes cartas, supliendo ventajosamente mi narración, me permitirán descansar un poco"],
+      citas: [
+        "La desesperación no es la principal fuente del valor",
+        "Tornando a cargar con aquella constancia imperturbable que, si no es el heroísmo mismo, es lo que más se le parece",
+        "Ellos suspenden el ánimo, despiertan la sensibilidad, avivan el valor, infunden entusiasmo por las grandes acciones, engrandecen la gloria y achican el peligro en todos los momentos de la vida.",
+        "Retrocede la Historia, cansada de hacer tonterías, y con pueril entusiasmo hojea las páginas de su propio diario, y luego busca la espada en el cajón de los olvidados y sublimes juguetes"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67817.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/67817"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 67817 (dominio público). Edición de Madrid, Perlado, Páez y Compañía, 1907", "url": "https://www.gutenberg.org/ebooks/67817"},
@@ -2497,7 +3041,12 @@ window.FENIX = {
       resumen: {"es": "Episodio nacional de la segunda serie. En marzo de 1813, cuando el rey José Bonaparte y su corte se preparan para dejar Madrid, el traslado de su equipaje cruza la vida de varios madrileños y de Salvador Monsalud, el protagonista de la serie. Galdós retrata el ocaso del dominio francés y la incertidumbre de una ciudad que no sabe qué vendrá después. La historia mezcla intriga, humor y afectos con el telón de fondo de la guerra de la Independencia."},
       porque: {"es":"Interesa a quien busca ver la historia desde su lado menos épico: el fin de un régimen visto en maletas, carros y vecinos desconcertados. Es una buena lectura para quien quiere entender cómo se vive un cambio de época sin saber aún qué viene.","en":"It appeals to those who like history from its least epic side: the end of a regime seen through luggage, carts and bewildered neighbors. A good read if you want to grasp what it feels like to live through a change of era without knowing what comes next."},
       imagen: {"src": "img/portadas/galdos-equipaje-rey-jose.jpg", "credito": {"es": "Robert Lefèvre, «José Bonaparte, rey de España», retrato", "en": "Robert Lefèvre, «Joseph Bonaparte, King of Spain», portrait"}, "url": "https://commons.wikimedia.org/wiki/File:Joseph_Bonaparte,_King_of_Spain,_by_Robert_Lefevre_-_Apsley_House_-_London,_UK_-_DSC06657.jpg"},
-      citas: ["Su Majestad se ha convencido de que no engordará en España, y por ese camino adelante no parará hasta Francia"],
+      citas: [
+        "¿Por qué hemos de ver la Historia en los bárbaros fusilazos de algunos millares de hombres que se mueven como máquinas a impulsos de una ambición superior, y no hemos de verla en las ideas y en los sentimientos de ese joven oscuro?",
+        "¡Si en la Historia no hubiera más que batallas; si sus únicos actores fueran las personas célebres, cuán pequeña sería! Está en el vivir lento y casi siempre doloroso de la sociedad, en lo que hacen todos y en lo que hace cada uno.",
+        "En ella nada es indigno de la narración, así como en la naturaleza no es menos digno de estudio el olvidado insecto que la inconmensurable arquitectura de los mundos.",
+        "Está escrito que en ciertos casos, tal vez siempre, el rostro de una mujer tenga mayores dimensiones y ocupe dentro del universo más grande espacio que las inmensidades materiales y morales de la patria."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/69578.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/69578"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 69578 (dominio público). Edición de Madrid, Sucesores de Hernando, 1908", "url": "https://www.gutenberg.org/ebooks/69578"},
@@ -2515,7 +3064,12 @@ window.FENIX = {
       resumen: {"es": "Episodio nacional de la segunda serie, contado en primera persona por Juan Bragas de Pipaón, un funcionario que sirvió a José Bonaparte y que, tras la restauración de Fernando VII, busca hacerse un lugar en la corte. Pipaón relata con ironía sus trabajos, sus astucias y su ascenso entre las covachuelas y el Consejo de Castilla. A través de su voz, Galdós retrata las intrigas, los favores y las ambiciones de un Madrid que vuelve al absolutismo."},
       porque: {"es":"Un retrato irónico del oportunista que sabe sobrevivir a todos los gobiernos. Se disfruta por su humor seco y sirve para reconocer, hoy como entonces, las artes de quien medra cerca del poder. Buena lectura para quien guste de la sátira bien servida.","en":"An ironic portrait of the opportunist who knows how to survive every government. It is enjoyed for its dry humor and helps you recognize, today as then, the arts of those who climb near power. A fine read for anyone who likes satire well served."},
       imagen: {"src": "img/portadas/galdos-memorias-cortesano-1815.jpg", "credito": {"es": "Francisco de Goya, «Fernando VII con manto real», 1814-1815", "en": "Francisco Goya, «Ferdinand VII in his robes of state», 1814-1815"}, "url": "https://commons.wikimedia.org/wiki/File:Francisco_Goya_-_Portrait_of_Ferdinand_VII_of_Spain_in_his_robes_of_state_(1815)_-_Prado.jpg"},
-      citas: ["Abran los oídos, y escuchen, y entiendan cómo un varón listo y honrado podía medrar y sublimarse por la sola virtud de sus merecimientos"],
+      citas: [
+        "Así es el absolutismo, hijo mío: sus palabras podrán ser bonitas, rosadas, luminosas y movibles; pero sus ideas son fijas, inmutables, pesadas. No mires lo de fuera, sino lo de dentro. Estudia el corazón de los hombres y no atiendas a lo que articulan los labios, que siempre han de pagar tributo a las conveniencias, a la moda, a las preocupaciones.",
+        "No insultaba jamás a los vencidos, sin duda por la consideración de que pudieran ser vencedores.",
+        "Casi siempre engaña la apariencia en los hombres de estado.",
+        "Cuanto puede denigrar a los hombres la bajeza, la adulación, la falsedad, la doblez, la vil codicia, la envidia, la crueldad, todo lo acumuló aquel sexenio en su nefanda empolladura, que ni siquiera supo hacer el mal con talento."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/70868.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/70868"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 70868 (dominio público). Séptima edición, Madrid, Obras de Pérez Galdós, 1903", "url": "https://www.gutenberg.org/ebooks/70868"},
@@ -2533,7 +3087,12 @@ window.FENIX = {
       resumen: {"es": "Cuento ambientado en la Edad Media sobre Julián, hijo de unos señores que viven en un castillo entre bosques. Apasionado por la caza desde joven, recibe un día un anuncio que le cambia la vida, y el relato sigue sus esfuerzos por escapar de ese destino y su largo camino de penitencia. Flaubert lo escribió inspirado en una antigua vidriera de la catedral de Ruan, con un estilo de crónica sobria y luminosa."},
       porque: {"es":"Para quien quiere probar a Flaubert en pocas páginas y en tono de leyenda antigua. Es un relato breve que invita a pensar en lo que ocurre cuando se huye de un destino, y se lee de una sentada con mucha atención a su imaginería medieval.","en":"For anyone who wants to try Flaubert in just a few pages and in the tone of an ancient legend. A short tale that invites you to think about what happens when someone runs from a destiny, and it can be read in one sitting, with attention to its medieval imagery."},
       imagen: {"src": "img/portadas/flaubert-leyenda-san-julian.jpg", "credito": {"es": "Atribuido a Franciabigio, «San Julián el Hospitalario encuentra a su esposa tras haber matado a sus padres», c. 1515", "en": "Attributed to Franciabigio, «Saint Julian the Hospitaller Meeting his Wife after Killing his Parents», c. 1515"}, "url": "https://commons.wikimedia.org/wiki/File:Attributed_to_Franciabigio,_Saint_Julian_the_Hospitaller_Meeting_his_Wife_after_Killing_his_Parents.jpg"},
-      citas: ["El padre y la madre de Julián habitaban en un castillo en medio de los bosques, sobre la pendiente de una colina."],
+      citas: [
+        "El padre y la madre de Julián habitaban en un castillo en medio de los bosques, sobre la pendiente de una colina.",
+        "¡Maldito! ¡Maldito! ¡Maldito! ¡Corazón de fiera! ¡Un día asesinarás a tu padre y a tu madre!",
+        "El techo se desvaneció, el firmamento se desplegó, y Julián subió hacia los espacios azules cara a cara con Nuestro Señor Jesucristo, que le llevaba al Cielo.",
+        "Y ésta es la historia de San Julián el Hospitalario, poco más o menos, tal como puede verse en un vitral de iglesia de mi país."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/La_leyenda_de_San_Julián_el_Hospitalario"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=La%20leyenda%20de%20San%20Juli%C3%A1n%20el%20Hospitalario"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=La%20leyenda%20de%20San%20Juli%C3%A1n%20el%20Hospitalario"}],
       fuente: {"texto": "Tres cuentos (Madrid, Tipográfica Renovación, 1919), traducción de Luis Bello, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/La_leyenda_de_San_Juli%C3%A1n_el_Hospitalario"},
@@ -2549,9 +3108,13 @@ window.FENIX = {
       categoria: "novela",
       recomendado: false,
       resumen: {"es": "Cuento sobre Felicidad, la criada de la señora Aubain en Pont-l'Évêque, una mujer humilde que sirve durante medio siglo con una fidelidad silenciosa. Su vida, hecha de trabajo, de afectos que se le escapan y de una fe sencilla, transcurre en la Normandía del siglo XIX. Flaubert retrata con sobriedad y ternura a un personaje sin historia aparente, y el relato se cuenta entre sus mejores páginas."},
-      porque: {"es":"Pocas páginas bastan para ver que la grandeza de una vida no depende de lo que el mundo aplaude. Sirve a quien se siente en un trabajo humilde o en un afecto que nadie nota, y a quien quiere aprender cómo se escribe con sobriedad y ternura.","en":"A few pages are enough to see that the greatness of a life does not depend on what the world applauds. It speaks to anyone who feels their work is humble or their affection unnoticed, and to anyone who wants to learn how to write with restraint and tenderness."},
+      porque: {"es":"Es un relato breve sobre una criada de provincia que casi nadie nota y que ama sin pedir nada: a los niños de la casa, a su sobrino, a un loro. Sirve a quien siente que su trabajo o su cariño pasan inadvertidos, y a quien quiere ver cómo se escribe con sobriedad. Se lee en una tarde; el final merece ir despacio.","en":"A short story about a provincial servant whom almost nobody notices and who loves without asking for anything: the children of the house, her nephew, a parrot. It speaks to anyone who feels their work or their affection goes unseen, and to anyone who wants to see how restraint is written. You can finish it in an afternoon; the ending deserves to be read slowly."},
       imagen: {"src": "img/portadas/flaubert-un-corazon-sencillo.jpg", "credito": {"es": "Eugène Boudin, «Honfleur, el puerto», c. 1858-1862", "en": "Eugène Boudin, «Honfleur, the Port», c. 1858-1862"}, "url": "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Boudin._Honfleur._Der_Hafen.jpg"},
-      citas: ["Durante medio siglo, las vecinas acomodadas de Pont-l'Evêque envidiaron a la señora Aubain por su criada Felicidad."],
+      citas: [
+        "Durante medio siglo, las vecinas acomodadas de Pont-l'Evêque envidiaron a la señora Aubain por su criada Felicidad.",
+        "Simientes, mieses, lagares, todas estas cosas domésticas de que habla el Evangelio las tenía ella en su vida; Dios, al pasar, las había santificado, y así quiso con más ternura a los corderos por amor al Cordero, y a las palomas por causa del Espíritu Santo.",
+        "Los latidos de su corazón iban retardándose uno a uno, cada vez más vagos, más dulces, como se agota una fuente, como desaparece un eco; y al exhalar el último suspiro creyó ella ver en los cielos, entreabiertos, un papagayo gigantesco volando sobre su cabeza."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Un_corazón_sencillo"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Un%20coraz%C3%B3n%20sencillo"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Un%20coraz%C3%B3n%20sencillo"}],
       fuente: {"texto": "Tres cuentos (Madrid, Tipográfica Renovación, 1919), traducción de Luis Bello, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Un_coraz%C3%B3n_sencillo"},
@@ -2569,7 +3132,11 @@ window.FENIX = {
       resumen: {"es": "Un viajero se extravía en una región minera del norte de España y conoce a Nela, una muchacha pobre y poco agraciada que sirve de guía a Pablo, un joven ciego de nacimiento. Entre ambos crece un cariño sostenido por la imaginación del muchacho, hasta que llega el médico Teodoro Golfín con la promesa de devolverle la vista. La novela contrapone la belleza, la ciencia y la compasión en una historia de infancia y desencuentros."},
       porque: {"es":"Una de las novelas más queridas de Galdós y una buena puerta para quien aún no lo ha leído. Hace pensar en lo que vemos y en lo que preferimos no ver, y en cómo el cariño puede sostenerse sobre una imagen que luego se pone a prueba.","en":"One of Galdós's best-loved novels and a good entry point for those who have not read him yet. It makes you think about what we see and what we prefer not to see, and about how affection can rest on an image that is later put to the test."},
       imagen: {"src": "img/portadas/galdos-marianela.jpg", "credito": {"es": "John Everett Millais, «La niña ciega», 1854-1856", "en": "John Everett Millais, «The Blind Girl», 1854-1856"}, "url": "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_The_Blind_Girl,_1854-56.jpg"},
-      citas: ["Se puso el sol. Tras el breve crepúsculo vino tranquila y oscura la noche, en cuyo negro seno murieron poco a poco los últimos rumores de la tierra soñolienta"],
+      citas: [
+        "Una palabra cariñosa, un halago, un trato delicado y amante que hicieran olvidar al pequeño su pequeñez, al miserable su miseria, son heroísmos de más precio que el bodrio sobrante de una mala comida.",
+        "Hablaba el autor de la belleza, y decía que era el resplandor de la bondad y de la verdad, con otros muchos conceptos ingeniosos y tan bien traídos y pensados, que daba gusto oírlos.",
+        "He podido comprender que la parte más maravillosa del universo es esa que me está vedada."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/17340.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/17340"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 17340 (dominio público). Texto de la edición de Madrid, 1878", "url": "https://www.gutenberg.org/ebooks/17340"},
@@ -2587,7 +3154,12 @@ window.FENIX = {
       resumen: {"es": "Vigésimo episodio de la segunda serie. Comienza en octubre de 1832, con la caída del ministro Calomarde y un país dividido por la sucesión de Fernando VII, y sigue a don Benigno Cordero y a Salvador Monsalud mientras la tensión política desemboca en las primeras partidas carlistas. Galdós mezcla las vidas de sus personajes con los sucesos de la corte y de las provincias. El título anticipa, con ironía, el clima de violencia que se avecina."},
       porque: {"es":"Para quien quiere entender cómo una familia política termina en guerra civil: aquí se ve nacer el conflicto carlista desde la casa y la conversación, antes de los cañones. Resulta aleccionador sobre cómo se rompe un país por pasos pequeños.","en":"For anyone who wants to understand how a political quarrel ends in civil war: here the Carlist conflict is born in homes and conversations, before the cannons. It is instructive about how a country breaks apart through small steps."},
       imagen: {"src": "img/portadas/galdos-faccioso-mas-frailes-menos.jpg", "credito": {"es": "Isidore Magués, «Zumalacárregui», litografía, 1837", "en": "Isidore Magués, «Zumalacárregui», lithograph, 1837"}, "url": "https://commons.wikimedia.org/wiki/File:Zumalac%C3%A1rregui-Magues.jpg"},
-      citas: ["fue un día que la historia no puede clasificar entre los desgraciados ni tampoco entre los felices"],
+      citas: [
+        "El alma, el alma, señor mío, es la que está enferma, y al alma se ha de aplicar la medicina. ¿Cuál es esta? Pues es un confortamiento dulce que se consigue mezclando la confianza con la paz y la indulgencia con la piedad.",
+        "Renuncia a toda idea de violencia y asesinato. Pensando en un castigo imposible, te envenenas el alma. Renuncia también a la agitación de la política y no conspires, no seas instrumento de ambiciones de príncipes. Retírate a nuestro pueblo, busca en la paz la reparación que necesitas y cúrate con la medicina del olvido.",
+        "Parece imposible que basten algunos años para que los ángeles se conviertan en demonios, y los hombres en fieras...",
+        "En casa donde no existen ni los vínculos ni los afectos que constituyen la familia, donde la paz deja su puesto a la discordia y los vicios ocupan el lugar de la economía y la sobriedad, no pueden de modo alguno afincar las prosperidades."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/17443.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/17443"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 17443 (dominio público). Texto de la edición de Madrid, 1884", "url": "https://www.gutenberg.org/ebooks/17443"},
@@ -2603,9 +3175,14 @@ window.FENIX = {
       categoria: "novela",
       recomendado: false,
       resumen: {"es": "Novela en primera persona en la que Pedro Sánchez recuerda su vida desde la infancia en un pueblo de la Montaña, en una casa hidalga venida a menos, hasta su aventura en Madrid. Allí intenta abrirse camino entre la política y la vida de la capital, entre ambiciones, amistades y desengaños. Pereda combina el retrato de costumbres de su tierra con la sátira de la sociedad madrileña de su tiempo."},
-      porque: {"es":"Sirve a quien disfruta de las novelas de formación y de un paisaje montañés bien dibujado. Pereda contrasta la aldea con la capital, y esa comparación sigue siendo útil para quien ha dejado su pueblo en busca de un futuro y ha vuelto a mirar atrás.","en":"It suits readers who enjoy coming-of-age novels and a well-drawn mountain landscape. Pereda sets the village against the capital, and that contrast still speaks to anyone who has left their hometown looking for a future and later looked back."},
+      porque: {"es":"Para quien disfruta una novela de formación contada en primera persona, con humor y buen ojo para el retrato. Pedro deja su aldea de la Montaña y en Madrid se topa con políticos de dos caras, ambiciones y amistades interesadas; Pereda lo cuenta sin amargura y con gracia. Léela si te interesa la política del siglo XIX, o si alguna vez dejaste tu pueblo para buscar futuro y después miraste atrás.","en":"For readers who enjoy a first-person coming-of-age novel with humour and a sharp eye for character. Pedro leaves his village in the mountains of Cantabria and in Madrid runs into two-faced politicians, ambition and self-interested friendships; Pereda tells it without bitterness and with wit. Read it if you are curious about nineteenth-century politics, or if you ever left your hometown to look for a future and later looked back."},
       imagen: {"src": "img/portadas/pereda-pedro-sanchez.jpg", "credito": {"es": "Ramón Cilla, caricatura de José María de Pereda, Madrid Cómico, 1883", "en": "Ramón Cilla, caricature of José María de Pereda, Madrid Cómico, 1883"}, "url": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_Mar%C3%ADa_de_Pereda,_de_Cilla,_Madrid_C%C3%B3mico,_01-04-1883_(cropped).jpg"},
-      citas: ["Entonces no era mi pueblo la mitad de lo que es hoy."],
+      citas: [
+        "El que hace una pillada política, es un pillo como todos los pillos; quien no es honrado en su vida pública, tampoco puede serlo en su vida privada. ¡Ni que fuera la honra prenda de dos caras, o mueble de varios usos!",
+        "Los hombres consecuentes y los escritores concienzudos son los primeros que se mueren de hambre en los tiempos que se usan.",
+        "El que no se consuela es porque no quiere.",
+        "El hombre, por sí, es tonto a cierta edad de la vida, sean cuales fueren los elementos que le rodeen; o lo que es lo mismo, que los resabios peculiares a la naturaleza humana, pueden corregirse con la educación, pero no desarraigarse."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/74981.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/74981"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 74981 (dominio público). Obras completas, tomo XIII, Madrid, 1904", "url": "https://www.gutenberg.org/ebooks/74981"},
@@ -2623,7 +3200,11 @@ window.FENIX = {
       resumen: {"es": "Jim Hawkins, hijo del dueño de una posada de la costa inglesa, narra cómo la llegada de un viejo marino lo arrastra a una expedición en busca de un tesoro enterrado en una isla lejana. A bordo del barco lo acompañan el caballero Trelawney, el doctor Livesey y una tripulación en la que no todos son de fiar, entre ellos el cocinero John Silver. Es la novela de aventuras marinas por excelencia, con mapas, piratas y lealtades que cambian de bando."},
       porque: {"es":"Un libro para leer a cualquier edad, y ojalá en voz alta a los más chicos. Stevenson logra que el miedo, la lealtad y la codicia se vean claros desde los ojos de un niño, y lo hace con una prosa tan ágil que se olvida que es un clásico.","en":"A book for any age, ideally read aloud to the little ones. Stevenson makes fear, loyalty and greed clear through a boy's eyes, and does it with prose so quick that you forget you are reading a classic."},
       imagen: {"src": "img/portadas/stevenson-isla-del-tesoro.jpg", "credito": {"es": "N. C. Wyeth, «Captain Bill Bones», 1911", "en": "N. C. Wyeth, «Captain Bill Bones», 1911"}, "url": "https://commons.wikimedia.org/wiki/File:N._C._Wyeth_-_Treasure_Island_-_Captain_Bill_Bones.jpg"},
-      citas: ["Imposible me ha sido rehusarme á las repetidas instancias que el Caballero Trelawney, el Doctor Livesey y otros muchos señores me han hecho para que escribiese la historia circunstanciada y completa de la Isla del Tesoro."],
+      citas: [
+        "Son quince los que quieren el cofre de aquel muerto, / Son quince ¡yo-ho-hó! son quince ¡viva el rom! / El diablo y la bebida hicieron todo el resto, / El diablo ¡yo-ho-hó! el diablo ¡viva el rom!",
+        "Los muertos no muerden, Jim; esa es mi opinión, esa es mi fe, y así sea...",
+        "Oigo el sordo mugido de la mar estrellándose en sus escarpadas costas, hasta que me despierto sudoroso sobre mi lecho tan luego como la pesadilla me hace oír la voz aguda y penetrante de Capitán Flint, gritando desesperadamente: «¡Piezas de a ocho! ¡Piezas de a ocho! ¡Piezas de a ocho!»"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/45438.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/45438"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 45438 (dominio público). Traducción de Manuel Caballero, 1901", "url": "https://www.gutenberg.org/ebooks/45438"},
@@ -2639,9 +3220,13 @@ window.FENIX = {
       categoria: "novela",
       recomendado: false,
       resumen: {"es": "Colección de trece relatos breves de la escritora madrileña Julia de Asensi, entre ellos «La Noche-Buena», «Sor María», «Cosme y Damián» y «El aeronauta». Son historias de ambiente cotidiano y sentimental, con niños pobres, amores contrariados y vocaciones religiosas, escritas en un tono sencillo y con intención moral. Cada relato se lee por separado."},
-      porque: {"es":"Interesa a quien quiere conocer la narrativa que se leía en los hogares españoles del siglo XIX, escrita por una mujer y en tono sencillo. Los relatos son breves, cómodos para leer de a uno por noche o para compartir en familia.","en":"Of interest to anyone who wants to know the fiction read in Spanish homes in the nineteenth century, written by a woman in a plain tone. The tales are short, convenient to read one per night or to share with the family."},
+      porque: {"es":"Son relatos breves de una escritora española del siglo XIX, con la moraleja a la vista: cumplir lo prometido, obedecer a los padres, entregarse sin esperar nada. Se leen de a uno por noche o en familia. No esperes sutileza; sí finales bien puestos, que dan qué conversar.","en":"These are short tales by a nineteenth-century Spanish woman writer, with the moral in plain sight: keep what you promise, obey your parents, give of yourself without expecting anything back. Read one a night, or share them with the family. Do not expect subtlety; do expect well-placed endings that give you something to talk about."},
       imagen: {"src": "img/portadas/asensi-novelas-cortas.jpg", "credito": {"es": "Antonio Muñoz Degrain (copia), «Coro de religiosas», 1874", "en": "After Antonio Muñoz Degrain, «Coro de religiosas» (Choir of Nuns), 1874"}, "url": "https://commons.wikimedia.org/wiki/File:Coro_de_religiosas_(Museo_del_Prado).jpg"},
-      citas: ["Ambos habían nacido el mismo día en un pueblo de los más pobres de la Coruña."],
+      citas: [
+        "Es que hay muchas maneras de volar; vuela el insecto, que se detiene en lo más inmundo, y el águila, que se eleva a la mayor altura.",
+        "Creo que mi alma vale más que mi cuerpo, puesto que ella me quiso, mientras las demás mujeres que me vieron me desdeñaron.",
+        "La vocación no sirve para nada sin la bendición de los padres y la ayuda de la Providencia."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Novelas_cortas_(Asensi)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Novelas_cortas_%28Asensi%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Novelas_cortas_%28Asensi%29"}],
       fuente: {"texto": "Transcripción de es.wikisource (dominio público); edición de 1889", "url": "https://es.wikisource.org/wiki/Novelas_cortas_(Asensi)"},
@@ -2659,7 +3244,11 @@ window.FENIX = {
       resumen: {"es": "Rodolfo Raséndil, un caballero inglés de ánimo holgado, viaja a Ruritania para presenciar la coronación de un pariente lejano, el rey, a quien se parece de modo asombroso. Cuando el monarca cae víctima de una conjura de su hermanastro, Rodolfo se ve obligado a ocupar su lugar ante la corte. La novela mezcla intriga palaciega, duelos y una lealtad puesta a prueba, y dio origen a todo un género de aventuras en reinos imaginarios."},
       porque: {"es":"Para quien busca aventura con capa y espada, pero con humor y buen ritmo. Hace preguntarse qué hace falta para ser digno de un cargo, y se lee con la rapidez de una película de época. Ideal para un fin de semana largo.","en":"For anyone seeking cloak-and-dagger adventure with humor and a good pace. It makes you ask what it takes to be worthy of an office, and it reads as quickly as a period film. Ideal for a long weekend."},
       imagen: {"src": "img/portadas/hope-el-prisionero-de-zenda.jpg", "credito": {"es": "Charles Dana Gibson, «El castillo de Zenda», frontispicio de The Prisoner of Zenda, 1921", "en": "Charles Dana Gibson, «The Castle of Zenda», frontispiece of The Prisoner of Zenda, 1921"}, "url": "https://commons.wikimedia.org/wiki/File:The_Prisoner_of_Zenda_(1921)_frontispiece.jpg"},
-      citas: ["Pero en mi familia no necesitamos hacer otra cosa."],
+      citas: [
+        "Es usted más Elsberg que todos ellos. Pero yo he comido el pan del Rey y mi deber es servirle.",
+        "Más noble y grande, por ese acto, ha llevado el cumplimiento de su deber para con su país y su regia estirpe hasta el punto de contraer matrimonio con el Rey, conquistando para este el amor de sus súbditos, asegurando la paz y concordia del país a costa de su propio sacrificio.",
+        "Doy gracias a Dios por haberme concedido amar a la mujer más noble que existe, a la vez que la más hermosa, y por haber impedido que mi amor llegase a ser un día obstáculo insuperable para el cumplimiento de la altísima misión de Flavia."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/24801.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/24801"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 24801: edición de la Biblioteca de «La Nación», Buenos Aires, 1909, traducción anónima (dominio público)", "url": "https://www.gutenberg.org/ebooks/24801"},
@@ -2677,7 +3266,11 @@ window.FENIX = {
       resumen: {"es": "Tercer episodio de la tercera serie de los Episodios nacionales. Don Fernando Calpena y don Pedro Hillo pasan sus días de prisión política en pleno conflicto carlista, mientras la novela sigue las intrigas de la corte y los campamentos entre el País Vasco y el palacio de La Granja. Galdós entrelaza las peripecias del joven Calpena con los sucesos de 1836 en un retrato vivo de la guerra civil y de la política del momento."},
       porque: {"es":"Es un buen episodio para el lector que ya conoce a Calpena y quiere ver cómo la guerra se cruza con las intrigas de palacio. Muestra que la política de una época se decide tanto en los campamentos como en los salones.","en":"A good episode for the reader who already knows Calpena and wants to see how war intersects with palace intrigue. It shows that the politics of an age is decided as much in army camps as in drawing rooms."},
       imagen: {"src": "img/portadas/galdos-de-onate-a-la-granja.jpg", "credito": {"es": "Francisco de Paula Van Halen, «Batalla de la primera guerra carlista», antes de 1887", "en": "Francisco de Paula Van Halen, «Battle of the First Carlist War», before 1887"}, "url": "https://commons.wikimedia.org/wiki/File:Bataille_de_la_premi%C3%A8re_guerre_carliste_1833-1840.jpg"},
-      citas: ["Debemos dar crédito a los cronistas que consignan el extremado aburrimiento de los reos políticos, don Fernando Calpena y don Pedro Hillo, en sus primeros días de cárcel."],
+      citas: [
+        "Mejor era dejarle solo con su conciencia, en la cual la verdad iba labrando el hondo surco.",
+        "Es la política un terreno movedizo y desigual, y andando por ella, ya se pone el pie en firme, ya se hunde en ciénagas malsanas.",
+        "Tal idea fue la verdadera medicina de su grave turbación, y acariciándola y fomentándola en su alma, llegó a soportar resignado la sombría tristeza de la clausura."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/76264.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/76264"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 76264: edición de Madrid, Librería de los Sucesores de Hernando, 1907 (dominio público)", "url": "https://www.gutenberg.org/ebooks/76264"},
@@ -2695,7 +3288,12 @@ window.FENIX = {
       resumen: {"es": "Quinto episodio de la tercera serie de los Episodios nacionales. La acción parte de la villa aragonesa de Fuentes de Ebro y acompaña a Fernando Calpena por los campos de la guerra carlista, donde Cabrera y sus partidas dominan el Maestrazgo. Galdós combina la crónica de las operaciones militares con los enredos sentimentales y familiares de su joven protagonista."},
       porque: {"es":"Sirve a quien quiere sentir la guerra carlista en el terreno, con sus pueblos y sus caminos, sin perder el hilo de los personajes. Mezcla crónica y novela con equilibrio y deja ver lo que cuesta, a la gente común, una guerra interminable.","en":"It suits those who want to feel the Carlist war on the ground, with its villages and roads, without losing the thread of the characters. It blends chronicle and novel with balance and shows what an endless war costs ordinary people."},
       imagen: {"src": "img/portadas/galdos-la-campana-del-maestrazgo.jpg", "credito": {"es": "W. E. Kilburn, retrato de Ramón Cabrera, 1850", "en": "W. E. Kilburn, portrait of Ramón Cabrera, 1850"}, "url": "https://commons.wikimedia.org/wiki/File:Ram%C3%B3n_Cabrera.jpg"},
-      citas: ["no por la fertilidad de su término, regado por el Canal Imperial; no por las estameñas que fabrican sus tejedores, ni por las excelentes lechugas que crían sus huertas"],
+      citas: [
+        "Dentro del fuero del amor no he cometido vilezas; pero sepan que ese fuero es puro artificio inventado para nuestro uso por los galanteadores, y que no vale ante la ordenanza del decálogo.",
+        "Ni por cuantos bienes hay en el mundo, ni por la vida, que es el primero de los bienes, mancillaría yo con una traición el nombre que llevo.",
+        "La guerra no es más que el arte de la oportunidad.",
+        "El amor viene siempre de Dios."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/78775.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/78775"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 78775: edición de Madrid, Perlado, Páez y Compañía, 1906 (dominio público)", "url": "https://www.gutenberg.org/ebooks/78775"},
@@ -2713,7 +3311,11 @@ window.FENIX = {
       resumen: {"es": "Sexto episodio de la tercera serie de los Episodios nacionales. La novela se abre y avanza en buena parte mediante cartas entre familias de provincia, que dan noticia de planes matrimoniales y de las vicisitudes de la guerra carlista. Galdós retrata así, con tono íntimo, la vida doméstica y los afectos de una época de inestabilidad política."},
       porque: {"es":"Una lectura distinta dentro de los Episodios: la historia llega por cartas, con voces de familias corrientes. Gusta a quien disfruta del género epistolar y quiere ver la guerra desde la sala de estar, en un tono íntimo y casi doméstico.","en":"A different kind of read within the Episodios: history arrives through letters, in the voices of ordinary families. It pleases those who enjoy the epistolary form and want to see the war from the living room, in an intimate, almost domestic tone."},
       imagen: {"src": "img/portadas/galdos-la-estafeta-romantica.jpg", "credito": {"es": "Gerard ter Borch, «Mujer leyendo una carta», c. 1660-1662", "en": "Gerard ter Borch, «Woman Reading a Letter», c. 1660-1662"}, "url": "https://commons.wikimedia.org/wiki/File:Gerard_ter_Borch_(II)_-_Woman_Reading_a_Letter_-_WGA22139.jpg"},
-      citas: ["Las niñas están que da gozo verlas, sanas y alegres, como si nada hubiera pasado"],
+      citas: [
+        "Ya vemos que es romántico el que se mata porque le deja la novia, o se le casa. El mundo está perdido, y España acabará de volverse loca si Dios no ataja estas guerras, que también me van pareciendo a mí algo románticas.",
+        "Llegaste al fin, pero llegaste tarde, cosa también vulgarísima y de clavo pasado, pues desde que el mundo es mundo, la humanidad incurre en esa fatalidad vulgarísima de llegar tarde...",
+        "Échate a la espalda el amor propio, y búscate algo en que pensar que no sea esto, que no te faltará algún quebradero de cabeza por otro lado. Distráete aunque sea con disgustos nuevos, y el tiempo, con nuevos afanes, de los viejos te curará."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/78963.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/78963"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 78963: edición de Madrid, Librería de los Sucesores de Hernando, 1924 (dominio público)", "url": "https://www.gutenberg.org/ebooks/78963"},
@@ -2729,9 +3331,13 @@ window.FENIX = {
       categoria: "novela",
       recomendado: false,
       resumen: {"es": "Cuarto episodio de la tercera serie de los Episodios nacionales. Ambientada en 1836, durante el sitio de Bilbao, la novela sigue a Fernando Calpena en medio de la guerra carlista y de las conspiraciones de la corte. Galdós narra el avance del general Espartero hacia Luchana y el socorro de la villa, sin dejar de lado los amores y las intrigas de sus personajes."},
-      porque: {"es":"Para quien quiere ver cómo un sitio se vive dentro de una ciudad: el hambre, la espera y la esperanza de un socorro. Sirve a quien prefiere la historia contada con personas concretas, y puede leerse con provecho sin haber leído los episodios anteriores.","en":"For anyone who wants to see how a siege is lived inside a city: the hunger, the waiting and the hope of relief. It suits readers who prefer history told through specific people, and it can be read with profit without the earlier episodes."},
+      porque: {"es":"Es el cuarto libro de la tercera serie de los Episodios nacionales: un joven cruza media España para buscar a una mujer y termina en Bilbao, sitiada por los carlistas en 1836. Sirve a quien prefiere aprender historia a través de personas concretas, con el hambre y la espera de un socorro de fondo. Se lee como novela de aventuras; solo ten presente la imagen algo estereotipada que Galdós da de las mujeres devotas.","en":"This is the fourth book of the third series of the Episodios nacionales: a young man crosses half of Spain to find a woman and ends up in Bilbao, besieged by the Carlists in 1836. It suits anyone who prefers to learn history through specific people, with hunger and the wait for relief in the background. It reads like an adventure novel; just keep in mind the somewhat stereotyped way Galdós draws devout women."},
       imagen: {"src": "img/portadas/galdos-luchana.jpg", "credito": {"es": "Anónimo, «Ataque al puente de Luchana», 1845", "en": "Anonymous, «Attack on the Luchana Bridge», 1845"}, "url": "https://commons.wikimedia.org/wiki/File:Ataque_al_Puente_de_Luchana.jpg"},
-      citas: ["Naturalmente, hice todo lo contrario de lo que nuestro sabio Mentor con notoria prudencia me aconsejaba"],
+      citas: [
+        "Quiero que venga al bien, a la paz, a mi cariño, con espontaneidad y efusión; no atraído por maestros o empujado por rodrigones. El sistema de la vigilancia, del espionaje, de la previsión, me dio un resultado desastroso: ha sido la derrota del régimen absoluto. He de probar ahora el régimen contrario: la libertad.",
+        "Reconozcamos que el soldado español es la virtud misma, pues por un cuarto diario consagra a la patria su existencia, por un cuarto se somete a los rigores de la disciplina, por un cuarto nos custodia y nos defiende hasta dejarse matar. No creo que en ningún país exista abnegación más barata.",
+        "Naturalmente, hice todo lo contrario de lo que nuestro sabio Mentor con notoria prudencia me aconsejaba"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/76572.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/76572"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 76572: edición de Madrid, Perlado, Páez y Compañía, 1906 (dominio público)", "url": "https://www.gutenberg.org/ebooks/76572"},
@@ -2749,7 +3355,12 @@ window.FENIX = {
       resumen: {"es": "Sherlock Holmes y el doctor Watson investigan la muerte de sir Charles Baskerville, ocurrida en los páramos de Devonshire. Según una antigua leyenda familiar, un enorme perro fantasma persigue a los herederos de la casa. Cuando llega el nuevo heredero, sir Henry, Holmes debe separar lo sobrenatural de lo real. La novela mezcla el relato policial con el de terror, con un estilo sencillo y directo."},
       porque: {"es":"Es el caso de Holmes que mejor se lee en una noche de invierno, con luz baja. Entretiene y, de paso, ejercita la mente: invita a separar el miedo de los hechos. Buena puerta para quien nunca ha leído novela policial clásica.","en":"The Holmes case best read on a winter night, with low light. It entertains and exercises the mind at once: it invites you to separate fear from facts. A good door for anyone who has never read classic detective fiction."},
       imagen: {"src": "img/portadas/doyle-el-sabueso-de-los-baskerville.jpg", "credito": {"es": "Sidney Paget, «El perro negro como el carbón», ilustración de 1902", "en": "Sidney Paget, «The coal-black Hound», 1902"}, "url": "https://commons.wikimedia.org/wiki/File:Houn-53_-_The_coal-black_Hound_(Hound_of_Baskervilles).jpg"},
-      citas: ["Pienso, también, que lo más probable es que sea un médico rural que hace á pie muchas de sus visitas."],
+      citas: [
+        "Puede ser que usted no sea un astro con luz propia, pero lo cierto es que es buen conductor de la luz. Hay quienes, sin estar dotados de genio precisamente, tienen, sin embargo, notables facultades para estimularlo.",
+        "El mundo está lleno de cosas que saltan a la vista, y que nadie, ni por casualidad, observa nunca.",
+        "Hasta ahora he limitado mis investigaciones a este mundo. En una esfera muy modesta he combatido al mal; pero tomar por mi cuenta nada menos que el Espíritu del Mal en esencia, esto sería, quizá, una empresa demasiado ambiciosa.",
+        "El sabueso primitivo era suficientemente material para destrozarle la garganta a un hombre, y, sin embargo, también era diabólico."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El%20sabueso%20de%20los%20Baskerville%20%28Costa%20%C3%81lvarez%20tr.%29"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20sabueso%20de%20los%20Baskerville%20%28Costa%20%C3%81lvarez%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20sabueso%20de%20los%20Baskerville%20%28Costa%20%C3%81lvarez%20tr.%29"}],
       fuente: {"texto": "Traducción de Arturo Costa Álvarez, Buenos Aires, Biblioteca de La Nación, 1909, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_sabueso_de_los_Baskerville_(Costa_%C3%81lvarez_tr.)"},
@@ -2765,9 +3376,14 @@ window.FENIX = {
       categoria: "poesia",
       recomendado: false,
       resumen: {"es": "Colección de poemas de madurez del poeta nicaragüense, en la que su estilo modernista se une a una reflexión sobre el paso del tiempo, la muerte, la fe y la incertidumbre ante el futuro. Incluye poemas como «Salutación del optimista», «A Roosevelt» y «Lo fatal». El libro expresa también su mirada sobre América y su identidad cultural. El lenguaje es refinado, musical y lleno de símbolos y referencias que van de lo clásico a lo contemporáneo."},
-      porque: {"es":"Para quien se acerca al modernismo y quiere empezar por un libro de madurez del poeta. Son poemas de un hombre que mira atrás con lucidez y se pregunta por la fe, el tiempo y la muerte. Se leen de a uno, en voz alta, y la música del verso gana con cada relectura.","en":"For readers approaching modernismo who want to begin with a book from the poet's maturity. These are poems by a man who looks back with lucidity and asks himself about faith, time and death. They are best read one at a time, aloud, and the music of the verse gains with each rereading."},
+      porque: {"es":"Para quien se acerca al modernismo por un libro de madurez: Darío mira atrás con lucidez, se pregunta por la fe, el tiempo y la muerte, y también toma posición ante el mundo de su época, como en «A Roosevelt», un reclamo por la identidad de los pueblos hispanoamericanos. «Lo fatal» dice en pocos versos el dolor de existir. Se lee de a uno, en voz alta, y la música del verso gana con cada relectura.","en":"For readers approaching modernismo through a book from the poet's maturity: Darío looks back with lucidity, questions faith, time and death, and also takes a stand on the world of his day, as in \"A Roosevelt\", a plea for the identity of the Spanish-American peoples. \"Lo fatal\" says the pain of existing in a few lines. Read one poem at a time, aloud; the music of the verse grows with each rereading."},
       imagen: {"src": "img/portadas/dario-cantos-de-vida-y-esperanza.jpg", "credito": {"es": "Retrato de Rubén Darío, autor desconocido", "en": "Portrait of Rubén Darío, unknown author"}, "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_Rub%C3%A9n_Dar%C3%ADo.jpg"},
-      citas: ["Yo soy aquel que ayer no más decía / el verso azul y la canción profana, / en cuya noche un ruiseñor había / que era alondra de luz por la mañana."],
+      citas: [
+        "Yo soy aquel que ayer no más decía / el verso azul y la canción profana, / en cuya noche un ruiseñor había / que era alondra de luz por la mañana.",
+        "Dichoso el árbol que es apenas sensitivo, / y más la piedra dura porque esa ya no siente, / pues no hay dolor más grande que el dolor de ser vivo, / ni mayor pesadumbre que la vida consciente.",
+        "¡Juventud, divino tesoro, / ya te vas para no volver! / Cuando quiero llorar, no lloro... / Y a veces lloro sin querer...",
+        "Y, pues contáis con todo, falta una cosa: ¡Dios!"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/50341.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/50341"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 50341 (dominio público)", "url": "https://www.gutenberg.org/ebooks/50341"},
@@ -2785,7 +3401,12 @@ window.FENIX = {
       resumen: {"es": "Novela de Emilia Pardo Bazán que sigue la vida de un pintor, Silvio Lago, entregado a conseguir el dominio absoluto de su arte. Su talento lo lleva de Galicia a la fama en Madrid y luego a París, y en su camino se cruzan mujeres muy distintas. La narración es la historia de un ideal siempre lejano, la quimera del título. Con ella la autora deja atrás el naturalismo y se acerca a una novela más espiritual."},
       porque: {"es":"Para quien se ha entregado a un ideal, artístico o no, y ha sentido que se aleja a cada paso. Pardo Bazán retrata con lucidez el precio de la ambición y deja una pregunta incómoda sobre qué se persigue en realidad cuando se persigue la perfección.","en":"For anyone who has given themselves to an ideal, artistic or not, and felt it recede with every step. Pardo Bazán portrays the price of ambition with lucidity and leaves an uncomfortable question about what we are really chasing when we chase perfection."},
       imagen: {"src": "img/portadas/pardo-bazan-la-quimera.jpg", "credito": {"es": "Joaquín Sorolla, «Autorretrato», 1900", "en": "Joaquín Sorolla, «Self-portrait», 1900"}, "url": "https://commons.wikimedia.org/wiki/File:(Sorolla_Museum)_-_Joaqu%C3%ADn_Sorolla_Self_portrait_1900.jpg"},
-      citas: ["Había prescindido en mis novelas de todo prefacio, advertencia, aclaración ó prólogo, entregándolas mondas y lirondas al lector"],
+      citas: [
+        "Una de las cosas más innobles de la pintura moderna es querer pintar todos los artistas con una misma luz. La luz va dentro de nosotros.",
+        "Acuérdese de que la belleza no es sino lo profundo y refinado del sentimiento.",
+        "Si bajo la ficción novelesca palpita algún problema superior a los efímeros eventos que tejen el relato; si un instante el soplo divino nos cruza la sien, ¿por qué ocultarlo? ¿No es esto tan verdad como las funciones del organismo?",
+        "La vida no es joya de gran valer, aunque a veces encanta."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/49756.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/49756"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 49756 (dominio público)", "url": "https://www.gutenberg.org/ebooks/49756"},
@@ -2803,7 +3424,12 @@ window.FENIX = {
       resumen: {"es": "Segunda parte de «Los tigres de la Malasia», ambientada en los mares de la Sonda. Yáñez y los últimos tigres de Mompracem, amenazados por sus enemigos, se lanzan a una expedición nocturna y a la persecución del misterioso rey del mar. Entre combates, traiciones y travesías por islas y costas de Borneo, aparecen los secretos de sir Moreland y el hijo de Suyodhana. Es una novela de aventuras marítimas de ritmo rápido, propia del autor de Sandokán."},
       porque: {"es":"Para el lector que busca puro movimiento: abordajes, selvas y travesías sin pausa, al estilo de las novelas de aventuras de antes. Se disfruta mejor leyendo primero la primera parte, y es buena lectura para adolescentes con ganas de acción.","en":"For the reader who wants pure motion: boardings, jungles and voyages without pause, in the style of the adventure novels of old. It is best enjoyed after reading the first part, and it makes good reading for teenagers who crave action."},
       imagen: {"src": "img/portadas/salgari-el-rey-del-mar.jpg", "credito": {"es": "Alberto della Valle, ilustración de «Il Re del Mare», 1913", "en": "Alberto della Valle, illustration for «Il Re del Mare», 1913"}, "url": "https://commons.wikimedia.org/wiki/File:Salgari,_Il_Re_del_Mare,_illustrazione_(p.17),_1913_-_MuFant.jpg"},
-      citas: ["No, los últimos tigres de Mompracem no habían sido vencidos todavía; pero estaban amenazados de serlo en un breve plazo"],
+      citas: [
+        "No, los últimos tigres de Mompracem no habían sido vencidos todavía; pero estaban amenazados de serlo en un breve plazo.",
+        "Quizá se haya aplacado su ánima. Que me perdone, pero yo, hombre civilizado, no puedo ser el vengador de los thugs de la India. ¡Señor Yáñez, Tigre de Malasia, están ustedes en libertad, juntamente con todos sus hombres! Yo solo los he vencido, y, por lo tanto, yo solo tengo el derecho de condenarlos o de absolverlos, y los absuelvo.",
+        "Caballero, nos llaman piratas, pero sabemos ser generosos; mucho más generosos que otros. Si yo hubiese caído en manos del rajá, a estas horas ya me hubiese fusilado; en cambio, yo, señor, le concedo a usted la vida.",
+        "¡Abrid paso al valor desgraciado! ¡Que lleven al comandante a mi camarote!"
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El%20rey%20del%20mar"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20rey%20del%20mar"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20rey%20del%20mar"}],
       fuente: {"texto": "Traducción de Rafael Balsa de la Vega, publicada antes de 1918, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_rey_del_mar"},
@@ -2821,7 +3447,11 @@ window.FENIX = {
       resumen: {"es": "Novela psicológica en la que un hombre meditativo se plantea, una noche de invierno en Madrid, el problema de la calidad de la vida. La reflexión lo lleva a una obsesión con la muerte, donde la realidad se mezcla con la fantasía. La obra explora el deseo, la lucha interior y los dilemas de su protagonista, y es considerada un clásico de la narrativa española."},
       porque: {"es":"Sirve a quien, en una noche de insomnio, se ha preguntado por el sentido de su vida. La novela entra en esa inquietud sin respuestas fáciles y deja pensando en cómo la mente puede volverse contra uno mismo. Lectura densa, pero breve y honda.","en":"It suits anyone who, on a sleepless night, has wondered about the meaning of their life. The novel enters that unease without easy answers and leaves you thinking about how the mind can turn against itself. Dense reading, but short and deep."},
       imagen: {"src": "img/portadas/pardo-bazan-la-sirena-negra.jpg", "credito": {"es": "Arnold Böcklin, «La isla de los muertos» (segunda versión), 1880", "en": "Arnold Böcklin, «Isle of the Dead» (second version), 1880"}, "url": "https://commons.wikimedia.org/wiki/File:Arnold_B%C3%B6cklin_-_Die_Toteninsel_II_(Metropolitan_Museum_of_Art).jpg"},
-      citas: ["Ningún problema, para el que vive, revestirá mayor interés que este de la calidad de la vida."],
+      citas: [
+        "Ningún problema, para el que vive, revestirá mayor interés que este de la calidad de la vida.",
+        "Majadero: lo que te impresiona, ni es la materia, ni es el alma. Es la forma, la forma engañosa, algo lineal y superficial, que sobrevive a la vida.",
+        "La convicción de que la vida es excelente, que nacer es un don, y que hay fuera de nosotros y por encima de nosotros una ley que hemos de acatar y un criterio definido que se nos impone."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/51450.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/51450"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 51450 (dominio público)", "url": "https://www.gutenberg.org/ebooks/51450"},
@@ -2839,7 +3469,11 @@ window.FENIX = {
       resumen: {"es": "Novela romántica ambientada en un castillo a orillas del Marne. María Teresa es la hija de un acomodado industrial del vidrio artístico, y Juan, un huérfano leal que llegó a ser la mano derecha de la casa. Juan se considera indigno de ella y calla su amor, mientras ella duda entre un hombre de mundo y otro honrado y trabajador. Es una historia de amores limpios, con ritmo pausado, escrita con delicadeza."},
       porque: {"es":"Para quien gusta de las historias de amor contenidas, donde lo que no se dice pesa más que lo que se dice. Es una lectura tranquila que trata del orgullo, de la humildad y de lo que significa valer, más allá del dinero y la posición.","en":"For anyone who likes restrained love stories, where what is left unsaid weighs more than what is said. A quiet read about pride, humility and what it means to have worth, beyond money and position."},
       imagen: {"src": "img/portadas/lecomte-du-nouy-incertidumbre.jpg", "credito": {"es": "Albert Dubois-Pillet, «Las orillas del Marne al amanecer»", "en": "Albert Dubois-Pillet, «The Banks on the Marne at Dawn»"}, "url": "https://commons.wikimedia.org/wiki/File:Albert_Dubois-Pillet_The_Banks_on_the_Marne_at_Dawn.jpg"},
-      citas: ["En una admirable noche del mes de junio reina extraordinaria animación en el viejo castillo de Creteil."],
+      citas: [
+        "Porque era dichosa y nada atrofía tanto el corazón como la felicidad. Solo la desgracia desarrolla la sensibilidad.",
+        "¿No juzga usted que sería odioso que la vida de trabajo sobrellevada por mi padre no sirviera sino a mantener en el lujo y en los placeres a dos personas jóvenes y fuertes, mientras él debería continuar su dura labor, y condenarse a una existencia mediocre o incómoda? Seguramente, usted piensa como yo: seríamos despreciables si aceptásemos tal situación.",
+        "Por un fenómeno singular, le impresionaba menos su desinterés que su pasión silenciosa semejante a un culto. Todos los flirts le habían preparado poco para apreciar aquel noble y grande amor que se expresaba con tanta abnegación."
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/26845.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/26845"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 26845 (dominio público); edición de Buenos Aires, Biblioteca de La Nación, 1909", "url": "https://www.gutenberg.org/ebooks/26845"},
@@ -2857,7 +3491,11 @@ window.FENIX = {
       resumen: {"es": "Novela romántica flamenca ambientada en una aldea y su castillo. Elena, una niña criada por la viuda de Bruinsteen, sufre el maltrato de su madrastra mientras un secreto antiguo pesa sobre la familia. Catalina, una campesina fiel, y el joven Federico intentan sacar a la luz la verdad. Es una historia de intrigas, afectos y perdón, escrita con el tono sentimental del siglo XIX."},
       porque: {"es":"Es una novela sencilla y de buen corazón, apropiada para quien quiere una lectura limpia y de ritmo pausado. Muestra cómo la fidelidad de la gente humilde puede ayudar a sacar la verdad a flote, y se presta bien para leer en familia.","en":"A simple, warm-hearted novel, fitting for those who want a clean read at an unhurried pace. It shows how the loyalty of humble people can help bring the truth to light, and it lends itself well to reading with the family."},
       imagen: {"src": "img/portadas/conscience-la-nina-robada.jpg", "credito": {"es": "Jean-François Portaels, «Retrato de Hendrik Conscience», h. 1870", "en": "Jean-François Portaels, «Portrait of Hendrik Conscience», c. 1870"}, "url": "https://commons.wikimedia.org/wiki/File:Hendrik_Conscience.jpg"},
-      citas: ["La mañana era hermosa; el cielo estaba claro y profundo como un mar azul; el sol desprendía del follaje de las encinas un perfume penetrante que dilataba los pulmones y daba bienestar al corazón."],
+      citas: [
+        "Por la felicidad de mi hija sería capaz de afrontar mil muertes crueles, pero me falta valor para esta abdicación de mi conciencia, para este suicidio moral.",
+        "Si he vacilado al acercarse esta prueba suprema, era por amor a ti, era por defender el corazón que sigue amándote más allá de la tumba, hasta la apariencia de una mancha.",
+        "¡Es mi madre por el alma, por el corazón! ¡Ah, Federico, qué felices deben ser los hijos que tengan una madre así!"
+      ],
       archivos: {},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/22975.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/22975"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 22975 (dominio público); edición de la Biblioteca de La Nación, Buenos Aires, 1919", "url": "https://www.gutenberg.org/ebooks/22975"},
@@ -2875,7 +3513,13 @@ window.FENIX = {
       resumen: {"es": "Clásico de la literatura gauchesca argentina, narrado por Fabio Cáceres, un muchacho que vive en un pueblo de la pampa. Un día conoce a Don Segundo Sombra, un resero de austera dignidad, y se va con él a recorrer el campo. Lo sigue como ahijado, aprende los oficios y las costumbres del paisano criollo y descubre el valor de la libertad y del trabajo. La novela retrata con nostalgia el paisaje y la vida de la pampa."},
       porque: {"es":"Para quien quiere entender qué es crecer al lado de un maestro: más que lecciones, un ejemplo de sobriedad y de libertad bien llevada. Sus páginas respiran campo y oficio, y interesan a cualquier lector que valore la dignidad de lo austero.","en":"For anyone who wants to understand what it means to grow up beside a master: less lessons than an example of sobriety and freedom well carried. Its pages breathe countryside and craft, and will interest any reader who values the dignity of austerity."},
       imagen: {"src": "img/portadas/guiraldes-don-segundo-sombra.jpg", "credito": {"es": "Prilidiano Pueyrredón, «Un alto en el campo», 1861", "en": "Prilidiano Pueyrredón, «Un alto en el campo», 1861"}, "url": "https://commons.wikimedia.org/wiki/File:Prilidiano_Pueyrredón_-_Un_alto_en_el_campo,_1861.jpg"},
-      citas: ["En las afueras del pueblo, a unas diez cuadras de la plaza céntrica, el puente viejo tiende su arco sobre el río, uniendo las quintas al campo tranquilo."],
+      citas: [
+        "Tenían alma de reseros, que es tener alma de horizonte.",
+        "Ansina es el destino del hombre. Naides empezaría el camino si le mostraran lo que lo espera.",
+        "Galopar es reducir lejanía. Llegar no es, para un resero, más que un pretexto de partir.",
+        "Pero por sobre todo y contra todo, don Segundo quería su libertad.",
+        "Me fui, como quien se desangra."
+      ],
       archivos: {},
       externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Don_Segundo_Sombra"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Don%20Segundo%20Sombra"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Don%20Segundo%20Sombra"}],
       fuente: {"texto": "Edición de Establecimiento Gráfico de Olivieri y Domínguez, Buenos Aires, 1927, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Don_Segundo_Sombra"},
