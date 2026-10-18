@@ -1,0 +1,572 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Proyecto Fénix</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%236b1d24%22/%3E%3Cpath%20d%3D%22M32%2010c3%206%209%209%209%2017%200%203-1%205-2%207%204-2%208-6%209-11%204%208%202%2018-5%2024-3%203-7%204-11%204s-8-1-11-4c-7-6-9-16-5-24%201%205%205%209%209%2011-1-2-2-4-2-7%200-8%206-11%209-17z%22%20fill%3D%22%23e8b04a%22/%3E%3Cpath%20d%3D%22M32%2030c2%203%205%205%205%209a5%205%200%200%201-10%200c0-4%203-6%205-9z%22%20fill%3D%22%23fff4d6%22/%3E%3Cpath%20d%3D%22M29%2052h6v4h-6z%22%20fill%3D%22%23e8b04a%22/%3E%3C/svg%3E">
+<meta name="description" content="Biblioteca católica gratuita: lectura espiritual, oración y novelas para descargar en EPUB y PDF, con reseñas y citas.">
+<meta name="color-scheme" content="light dark">
+<style>
+  :root{
+    color-scheme: light dark;
+    --bg:#faf6ef; --bg2:#f3ebdd; --card:#fffdf8; --line:#e4d8c4; --ink:#2a1f1a; --muted:#6e5d50;
+    --vino:#6b1d24; --oro:#a8731f; --acento:#6b1d24; --acento-ink:#fff8ec; --chip:#efe4d2;
+    --ok:#2f6b3a; --sombra:0 6px 24px rgba(60,30,10,.10);
+    --c-lectura:#6b1d24; --c-oracion:#2c4a6e; --c-novela:#3f5a2e;
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#16110f; --bg2:#1d1714; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c;
+      --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e;
+      --ok:#7cc48a; --sombra:0 6px 24px rgba(0,0,0,.35);
+      --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#16110f; --bg2:#1d1714; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c;
+    --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e;
+    --ok:#7cc48a; --sombra:0 6px 24px rgba(0,0,0,.35);
+    --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+  a{color:var(--vino)}
+  button,input,select,textarea{font:inherit; color:inherit}
+  .wrap{max-width:1080px; margin:0 auto; padding:0 16px}
+  .sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+
+  header.top{position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg) 90%,transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
+  .barra{display:flex; align-items:center; gap:12px; min-height:58px}
+  .marca{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; font-size:19px; white-space:nowrap}
+  .marca img{width:30px; height:30px}
+  nav.menu{display:flex; gap:2px; flex-wrap:wrap; margin-left:auto}
+  nav.menu a{font-family:system-ui,sans-serif; font-size:14px; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a.on, nav.menu a:hover{color:var(--ink); background:var(--chip)}
+  .ajustes{display:flex; gap:6px}
+  .pildora{border:1px solid var(--line); background:var(--card); border-radius:999px; padding:4px 10px; font:600 13px system-ui,sans-serif; cursor:pointer}
+  #btnMenu{display:none}
+  @media (max-width:860px){
+    #btnMenu{display:inline-block}
+    nav.menu{display:none; position:absolute; left:0; right:0; top:58px; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column}
+    nav.menu.abierto{display:flex}
+    .barra{flex-wrap:wrap}
+    .ajustes{margin-left:auto}
+  }
+
+  section.vista{display:none; padding:28px 0 56px}
+  section.vista.on{display:block}
+  h1{font-size:clamp(28px,5vw,44px); line-height:1.15; margin:0 0 12px}
+  h2{font-size:clamp(22px,3.4vw,28px); margin:0 0 14px}
+  h3{margin:0 0 6px; font-size:18px}
+  .lede{color:var(--muted); font-size:clamp(16px,2.2vw,19px); max-width:680px}
+  .eyebrow{font:700 12px system-ui,sans-serif; letter-spacing:1.6px; text-transform:uppercase; color:var(--oro); margin:0 0 8px}
+
+  .hero{background:linear-gradient(180deg,var(--bg2),var(--bg)); border-bottom:1px solid var(--line); padding:44px 0 34px}
+  .hero .acciones{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; font:600 14px system-ui,sans-serif; border:1px solid var(--line); background:var(--card); color:var(--ink); text-decoration:none; cursor:pointer}
+  .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
+  .btn:disabled{opacity:.55; cursor:not-allowed}
+
+  .teologia{display:grid; grid-template-columns:1.3fr 1fr; gap:22px; margin-top:28px}
+  @media (max-width:820px){.teologia{grid-template-columns:1fr}}
+  .caja{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; box-shadow:var(--sombra)}
+  blockquote{margin:0 0 14px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic}
+  blockquote cite{display:block; font:normal 13px system-ui,sans-serif; color:var(--muted); margin-top:4px}
+  .precision{font:14px/1.55 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:12px 14px; margin-top:12px}
+
+  .grilla{display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:18px}
+  @media (max-width:600px){.grilla{grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px} .portada .t{font-size:15px}}
+  .libro{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; transition:transform .15s, box-shadow .15s}
+  .libro:hover{transform:translateY(-2px); box-shadow:var(--sombra)}
+  .portada{aspect-ratio:2/3; color:#fff8ec; padding:16px 14px; display:flex; flex-direction:column; justify-content:space-between; position:relative; background:var(--c-lectura)}
+  .portada.oracion{background:var(--c-oracion)} .portada.novela{background:var(--c-novela)}
+  .portada::after{content:""; position:absolute; inset:8px; border:1px solid rgba(255,240,210,.45); border-radius:6px; pointer-events:none}
+  .portada .t{font-size:18px; line-height:1.2; font-weight:700}
+  .portada .a{font:13px system-ui,sans-serif; opacity:.9}
+  .portada .f{font-size:26px; opacity:.85; align-self:center}
+  .libro .pie{padding:10px 12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font:12px system-ui,sans-serif; color:var(--muted)}
+  .etq{background:var(--chip); border-radius:999px; padding:2px 8px}
+  .etq.leido{color:var(--ok)}
+  .fav{margin-left:auto; color:var(--oro); font-size:16px}
+
+  .filtros{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 20px; font:14px system-ui,sans-serif}
+  .filtros input[type=search], .filtros select{padding:8px 10px; border:1px solid var(--line); border-radius:9px; background:var(--card)}
+  .filtros input[type=search]{flex:1 1 220px}
+  .filtros label{display:flex; align-items:center; gap:6px; cursor:pointer}
+  .vacio{color:var(--muted); font:15px system-ui,sans-serif; padding:24px 0}
+
+  dialog{border:1px solid var(--line); border-radius:16px; padding:0; max-width:760px; width:calc(100% - 32px); background:var(--card); color:var(--ink); box-shadow:var(--sombra)}
+  dialog::backdrop{background:rgba(20,10,5,.55)}
+  .ficha{display:grid; grid-template-columns:180px 1fr; gap:22px; padding:22px}
+  @media (max-width:600px){.ficha{grid-template-columns:1fr} .ficha .portada{max-width:160px}}
+  .ficha .portada{border-radius:10px}
+  .cerrar{position:absolute; right:12px; top:10px; border:0; background:transparent; font-size:24px; cursor:pointer; color:var(--muted)}
+  .meta{font:14px system-ui,sans-serif; color:var(--muted); margin:0 0 12px}
+  .descargas{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0}
+  .puntos{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font:14px system-ui,sans-serif; align-items:center; margin:12px 0}
+  .estrellas button{border:0; background:none; padding:0 1px; cursor:pointer; font-size:18px; color:var(--line)}
+  .estrellas button.on{color:var(--oro)}
+  .estrellas.fija{color:var(--oro); letter-spacing:1px}
+  .marcas{display:flex; gap:8px; flex-wrap:wrap}
+  .parecidos{display:flex; gap:10px; flex-wrap:wrap; margin-top:6px}
+  .parecidos a{font:14px system-ui,sans-serif}
+  .seccion-ficha{border-top:1px solid var(--line); margin-top:14px; padding-top:12px}
+
+  .oracion-txt p{margin:0 0 12px}
+  .oracion-txt{max-width:720px}
+  .idiomas-oracion{display:flex; gap:6px; margin:8px 0 14px}
+
+  form.formulario{display:grid; gap:12px; max-width:620px; font:15px system-ui,sans-serif}
+  form.formulario label{display:grid; gap:4px; font-weight:600; font-size:14px}
+  form.formulario input, form.formulario select, form.formulario textarea{padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--card); font-weight:400}
+  form.formulario textarea{min-height:120px; resize:vertical}
+  .oculto{position:absolute; left:-9999px}
+  .estado{font:14px system-ui,sans-serif; min-height:20px}
+  .estado.ok{color:var(--ok)} .estado.err{color:var(--vino)}
+  .dos-col{display:grid; grid-template-columns:1fr 1fr; gap:22px}
+  @media (max-width:820px){.dos-col{grid-template-columns:1fr}}
+
+  footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:13px system-ui,sans-serif}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap barra">
+    <a class="marca" href="#inicio"><img src="img/favicon.svg" alt="">Proyecto Fénix</a>
+    <nav class="menu" id="menu">
+      <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
+      <a href="#biblioteca" data-i18n="nav.biblioteca">Biblioteca</a>
+      <a href="#oraciones" data-i18n="nav.oraciones">Oraciones</a>
+      <a href="#salvar" data-i18n="nav.salvar">Salvar un libro</a>
+      <a href="#error" data-i18n="nav.error">¿Un error?</a>
+      <a href="#dona" data-i18n="nav.dona">Dona</a>
+      <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+    </nav>
+    <div class="ajustes">
+      <button class="pildora" id="btnIdioma" title="Idioma / Language">EN</button>
+      <button class="pildora" id="btnTema" title="Tema claro u oscuro">◐</button>
+      <button class="pildora" id="btnMenu" aria-label="Menú">☰</button>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- INICIO -->
+  <section class="vista" id="v-inicio">
+    <div class="hero">
+      <div class="wrap">
+        <p class="eyebrow" data-i18n="hero.eyebrow">Biblioteca católica gratuita</p>
+        <h1 data-i18n="hero.titulo">Libros que vuelven a la vida</h1>
+        <p class="lede" data-i18n="hero.lede">Lectura espiritual, oración y novelas para descargar en EPUB y PDF, en español e inglés. Cada libro trae un resumen, citas escogidas y otros parecidos. Si no se puede descargar libremente, le decimos dónde comprarlo.</p>
+        <div class="acciones">
+          <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
+          <a class="btn" href="#otra-humanidad" data-i18n="hero.otra">¿Qué es «otra humanidad»?</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <div style="margin-top:30px">
+        <p class="eyebrow" data-i18n="rec.eyebrow">Recomendados</p>
+        <h2 data-i18n="rec.titulo">Para empezar</h2>
+        <div class="grilla" id="recomendados"></div>
+      </div>
+
+      <div id="otra-humanidad" style="margin-top:40px">
+        <p class="eyebrow" data-i18n="oh.eyebrow">La idea que nos mueve</p>
+        <h2 data-i18n="oh.titulo">Ser para Cristo «como otra humanidad»</h2>
+        <div class="teologia">
+          <div class="caja">
+            <p data-i18n="oh.p1">El Hijo de Dios se hizo hombre una sola vez, en el seno de la Virgen María. Pero quiere seguir amando al Padre y a los hombres en la tierra a través de los que le pertenecen por la gracia. A esto apunta una expresión de santa Isabel de la Trinidad, que en 1904 pidió al Espíritu Santo ser para Cristo «una humanidad de añadidura» en la que Él renueve todo su misterio.</p>
+            <p data-i18n="oh.p2">El jesuita Paul de Jaegher la hizo oración al final de «One with Jesus»: que el alma, plenamente identificada con Jesús, llegue a ser para Él «como otra humanidad». Prestarle los ojos, los labios, la mente y el corazón para que Él siga mirando, hablando, pensando y amando hoy.</p>
+            <div class="precision" data-i18n="oh.precision">Una precisión: no se trata de una nueva encarnación ni de que la persona deje de ser ella misma. Es la vida de la gracia, que nos une a Cristo como miembros de su Cuerpo. La expresión pertenece a la teología espiritual; su fundamento sí es doctrina de la Iglesia (Catecismo, nn. 521 y 1997).</div>
+            <div class="acciones" style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
+              <a class="btn prim" href="#oraciones" data-i18n="oh.rezar">Rezar la oración</a>
+              <a class="btn" href="#libro/one-with-jesus" data-i18n="oh.libro">Ver «One with Jesus»</a>
+            </div>
+          </div>
+          <div>
+            <blockquote>«Vivo yo, mas no yo, sino Cristo vive en mí».<cite>San Pablo, Gálatas 2,20</cite></blockquote>
+            <blockquote>«Estamos llamados a no ser más que una sola cosa con Él; nos hace comulgar, en cuanto miembros de su Cuerpo, en lo que Él vivió en su carne por nosotros y como modelo nuestro».<cite>Catecismo de la Iglesia Católica, n. 521</cite></blockquote>
+            <blockquote>«La gracia es una participación en la vida de Dios».<cite>Catecismo de la Iglesia Católica, n. 1997</cite></blockquote>
+            <blockquote>«May I, fully identified with You, become like another humanity to You».<cite>Paul de Jaegher, S.J., One with Jesus</cite></blockquote>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BIBLIOTECA -->
+  <section class="vista" id="v-biblioteca">
+    <div class="wrap">
+      <h2 data-i18n="bib.titulo">Biblioteca</h2>
+      <div class="filtros">
+        <input type="search" id="fBuscar" placeholder="Buscar título o autor" data-i18n-ph="bib.buscar">
+        <select id="fCategoria">
+          <option value="" data-i18n="bib.todas">Todas las categorías</option>
+          <option value="lectura" data-i18n="cat.lectura">Lectura espiritual</option>
+          <option value="oracion" data-i18n="cat.oracion">Oración</option>
+          <option value="novela" data-i18n="cat.novela">Novelas</option>
+        </select>
+        <select id="fIdioma">
+          <option value="" data-i18n="bib.idiomas">Todos los idiomas</option>
+          <option value="es" data-i18n="idioma.es">Español</option>
+          <option value="en" data-i18n="idioma.en">Inglés</option>
+        </select>
+        <select id="fFormato">
+          <option value="" data-i18n="bib.formatos">Cualquier formato</option>
+          <option value="epub">EPUB</option>
+          <option value="pdf">PDF</option>
+          <option value="comprar" data-i18n="bib.soloComprar">Solo para comprar</option>
+        </select>
+        <label><input type="checkbox" id="fNoLeidos"> <span data-i18n="bib.noLeidos">No leídos</span></label>
+        <label><input type="checkbox" id="fFavoritos"> <span data-i18n="bib.favoritos">Favoritos</span></label>
+      </div>
+      <div class="grilla" id="catalogo"></div>
+      <p class="vacio" id="sinResultados" hidden data-i18n="bib.vacio">No hay libros con esos filtros.</p>
+      <p class="meta" style="margin-top:18px" data-i18n="bib.nota">Leídos, favoritos y su puntuación se guardan solo en este navegador.</p>
+    </div>
+  </section>
+
+  <!-- ORACIONES -->
+  <section class="vista" id="v-oraciones">
+    <div class="wrap">
+      <h2 data-i18n="or.titulo">Oraciones</h2>
+      <div id="listaOraciones"></div>
+    </div>
+  </section>
+
+  <!-- SALVAR UN LIBRO -->
+  <section class="vista" id="v-salvar">
+    <div class="wrap dos-col">
+      <div>
+        <h2 data-i18n="sal.titulo">¿Qué libro quiere salvar?</h2>
+        <p class="lede" data-i18n="sal.lede">Fénix existe para que los buenos libros no se pierdan. Cuéntenos cuál le gustaría ver aquí: lo buscamos, revisamos sus derechos y, si se puede, lo publicamos.</p>
+      </div>
+      <form class="formulario" data-asunto="Fénix - libro para salvar">
+        <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off">
+        <label><span data-i18n="f.tituloLibro">Título del libro</span><input name="titulo" required></label>
+        <label><span data-i18n="f.autor">Autor</span><input name="autor"></label>
+        <label><span data-i18n="f.idioma">Idioma</span>
+          <select name="idioma"><option data-i18n="idioma.es">Español</option><option data-i18n="idioma.en">Inglés</option><option data-i18n="idioma.otro">Otro</option></select></label>
+        <label><span data-i18n="f.porque">¿Por qué vale la pena salvarlo?</span><textarea name="motivo"></textarea></label>
+        <label><span data-i18n="f.correoOpc">Su correo (opcional, para avisarle)</span><input type="email" name="email"></label>
+        <button class="btn prim" type="submit" data-i18n="f.enviar">Enviar</button>
+        <div class="estado" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- ERROR -->
+  <section class="vista" id="v-error">
+    <div class="wrap dos-col">
+      <div>
+        <h2 data-i18n="err.titulo">¿Encontró algún error?</h2>
+        <p class="lede" data-i18n="err.lede">Una errata, un capítulo que falta, un archivo que no abre o una cita mal puesta. Gracias por avisar: así el libro queda mejor para el próximo lector.</p>
+      </div>
+      <form class="formulario" data-asunto="Fénix - error reportado">
+        <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off">
+        <label><span data-i18n="f.libro">Libro</span><select name="libro" id="selLibroError"></select></label>
+        <label><span data-i18n="f.tipo">Tipo de error</span>
+          <select name="tipo">
+            <option data-i18n="f.t1">Errata u ortografía</option>
+            <option data-i18n="f.t2">Archivo que no abre o no descarga</option>
+            <option data-i18n="f.t3">Texto que falta o está desordenado</option>
+            <option data-i18n="f.t4">Error en la reseña o en una cita</option>
+            <option data-i18n="f.t5">Error doctrinal</option>
+            <option data-i18n="f.t6">Otro</option>
+          </select></label>
+        <label><span data-i18n="f.donde">¿Dónde? (capítulo, página o frase)</span><input name="ubicacion"></label>
+        <label><span data-i18n="f.descripcion">Descripción</span><textarea name="descripcion" required></textarea></label>
+        <label><span data-i18n="f.correoOpc">Su correo (opcional, para avisarle)</span><input type="email" name="email"></label>
+        <button class="btn prim" type="submit" data-i18n="f.enviar">Enviar</button>
+        <div class="estado" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- DONA -->
+  <section class="vista" id="v-dona">
+    <div class="wrap" style="max-width:720px">
+      <h2 data-i18n="don.titulo">Dona aquí</h2>
+      <p class="lede" data-i18n="don.lede">Fénix es gratuito y sin publicidad. Su aporte ayuda a digitalizar, corregir y traducir libros que de otro modo se perderían.</p>
+      <div class="caja" style="margin-top:16px">
+        <a class="btn prim" id="btnDonar" href="#" target="_blank" rel="noopener" data-i18n="don.boton">Donar</a>
+        <p class="meta" id="donarPendiente" style="margin-top:12px" data-i18n="don.pendiente">Los medios de donación están en preparación. Mientras tanto, la mejor ayuda es rezar por este proyecto y compartirlo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACTO -->
+  <section class="vista" id="v-contacto">
+    <div class="wrap dos-col">
+      <div>
+        <h2 data-i18n="con.titulo">Contacto</h2>
+        <p class="lede" data-i18n="con.lede">Preguntas, sugerencias o ganas de ayudar a corregir y traducir. Le respondemos por correo.</p>
+      </div>
+      <form class="formulario" data-asunto="Fénix - contacto">
+        <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off">
+        <label><span data-i18n="f.nombre">Nombre</span><input name="nombre" required></label>
+        <label><span data-i18n="f.correo">Correo</span><input type="email" name="email" required></label>
+        <label><span data-i18n="f.mensaje">Mensaje</span><textarea name="mensaje" required></textarea></label>
+        <button class="btn prim" type="submit" data-i18n="f.enviar">Enviar</button>
+        <div class="estado" role="status"></div>
+      </form>
+    </div>
+  </section>
+</main>
+
+<dialog id="dlgLibro"><div style="position:relative"><button class="cerrar" id="cerrarFicha" aria-label="Cerrar">×</button><div id="fichaCuerpo"></div></div></dialog>
+
+<footer>
+  <div class="wrap" data-i18n="pie">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden comprar.</div>
+</footer>
+
+<script src="datos.js"></script>
+<script>
+(function(){
+  "use strict";
+  const D = window.FENIX;
+  const $ = (s, r=document) => r.querySelector(s);
+  const $$ = (s, r=document) => Array.from(r.querySelectorAll(s));
+
+  // ---------- almacenamiento local (puede fallar en modo privado) ----------
+  const almacen = {
+    leer(k, def){ try{ const v = localStorage.getItem("fenix:"+k); return v ? JSON.parse(v) : def; }catch(e){ return def; } },
+    guardar(k, v){ try{ localStorage.setItem("fenix:"+k, JSON.stringify(v)); }catch(e){} }
+  };
+  let leidos = almacen.leer("leidos", {});
+  let favoritos = almacen.leer("favoritos", {});
+  let misNotas = almacen.leer("notas", {});
+  let lang = almacen.leer("idioma", (navigator.language||"es").startsWith("en") ? "en" : "es");
+
+  // ---------- textos de la interfaz ----------
+  const T = {
+    en: {
+      "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Found an error?","nav.dona":"Donate","nav.contacto":"Contact",
+      "hero.eyebrow":"Free Catholic library","hero.titulo":"Books that rise again",
+      "hero.lede":"Spiritual reading, prayer and novels to download in EPUB and PDF, in Spanish and English. Each book comes with a summary, chosen quotes and similar titles. If it cannot be downloaded freely, we tell you where to buy it.",
+      "hero.ver":"Browse the library","hero.otra":"What is «another humanity»?",
+      "rec.eyebrow":"Recommended","rec.titulo":"Where to begin",
+      "oh.eyebrow":"The idea behind us","oh.titulo":"Being for Christ «like another humanity»",
+      "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
+      "oh.p2":"The Jesuit Paul de Jaegher turned it into a prayer at the end of «One with Jesus»: that the soul, fully identified with Jesus, may become for Him «like another humanity». Lending Him our eyes, lips, mind and heart so that He may still look, speak, think and love today.",
+      "oh.precision":"A clarification: this is not a new incarnation, nor does the person cease to be himself. It is the life of grace, which unites us to Christ as members of His Body. The expression belongs to spiritual theology; its foundation is the Church's doctrine (Catechism, nos. 521 and 1997).",
+      "oh.rezar":"Pray the prayer","oh.libro":"See «One with Jesus»",
+      "bib.titulo":"Library","bib.buscar":"Search title or author","bib.todas":"All categories","bib.idiomas":"All languages","bib.formatos":"Any format","bib.soloComprar":"Purchase only",
+      "bib.noLeidos":"Not read","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.nota":"Read marks, favourites and your ratings are stored only in this browser.",
+      "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
+      "or.titulo":"Prayers",
+      "sal.titulo":"Which book would you like to save?","sal.lede":"Fénix exists so that good books are not lost. Tell us which one you would like to see here: we will look for it, check its rights and, if possible, publish it.",
+      "err.titulo":"Did you find an error?","err.lede":"A typo, a missing chapter, a file that will not open or a misplaced quote. Thank you for letting us know: the book will be better for the next reader.",
+      "don.titulo":"Donate here","don.lede":"Fénix is free and ad-free. Your gift helps us digitise, proofread and translate books that would otherwise be lost.","don.boton":"Donate",
+      "don.pendiente":"Donation options are being set up. Meanwhile, the best help is to pray for this project and share it.",
+      "con.titulo":"Contact","con.lede":"Questions, suggestions or a wish to help proofread and translate. We will reply by email.",
+      "f.tituloLibro":"Book title","f.autor":"Author","f.idioma":"Language","f.porque":"Why is it worth saving?","f.correoOpc":"Your email (optional, so we can let you know)",
+      "f.enviar":"Send","f.libro":"Book","f.tipo":"Type of error","f.t1":"Typo or spelling","f.t2":"File will not open or download","f.t3":"Missing or jumbled text","f.t4":"Error in the review or a quote","f.t5":"Doctrinal error","f.t6":"Other",
+      "f.donde":"Where? (chapter, page or sentence)","f.descripcion":"Description","f.nombre":"Name","f.correo":"Email","f.mensaje":"Message",
+      "pie":"Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be bought.",
+      "x.leer":"Download","x.comprar":"Buy","x.leido":"Read","x.marcarLeido":"Mark as read","x.quitarLeido":"Mark as not read","x.fav":"Favourite","x.marcarFav":"Add to favourites","x.quitarFav":"Remove from favourites",
+      "x.resumen":"Summary","x.citas":"Quotes","x.parecidos":"Similar books","x.puntuacion":"Rating","x.fenix":"Fénix","x.suya":"Yours","x.literaria":"Literary quality","x.teologica":"Theological quality",
+      "x.porCalificar":"not yet rated","x.fuente":"Source","x.enviando":"Sending…","x.enviado":"Thank you! We received your message.","x.fallo":"It could not be sent. Please try again in a moment.","x.verIn":"See in"
+    },
+    es: {
+      "x.leer":"Descargar","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
+      "x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos","x.puntuacion":"Puntuación","x.fenix":"Fénix","x.suya":"Suya","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
+      "x.porCalificar":"por calificar","x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en"
+    }
+  };
+  const originales = {};
+  $$("[data-i18n]").forEach(el => originales[el.dataset.i18n] = el.textContent);
+  $$("[data-i18n-ph]").forEach(el => originales[el.dataset.i18nPh] = el.placeholder);
+  const t = k => (T[lang] && T[lang][k]) || T.es[k] || originales[k] || k;
+
+  function aplicarIdioma(){
+    document.documentElement.lang = lang;
+    $$("[data-i18n]").forEach(el => el.textContent = lang === "es" ? originales[el.dataset.i18n] : t(el.dataset.i18n));
+    $$("[data-i18n-ph]").forEach(el => el.placeholder = lang === "es" ? originales[el.dataset.i18nPh] : t(el.dataset.i18nPh));
+    $("#btnIdioma").textContent = lang === "es" ? "EN" : "ES";
+    pintarTodo();
+  }
+
+  // ---------- tema ----------
+  const raiz = document.documentElement;
+  const temaGuardado = almacen.leer("tema", null);
+  if (temaGuardado) raiz.dataset.theme = temaGuardado;
+  $("#btnTema").addEventListener("click", () => {
+    const oscuroAhora = raiz.dataset.theme ? raiz.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+    raiz.dataset.theme = oscuroAhora ? "light" : "dark";
+    almacen.guardar("tema", raiz.dataset.theme);
+  });
+  $("#btnIdioma").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; almacen.guardar("idioma", lang); aplicarIdioma(); });
+  $("#btnMenu").addEventListener("click", () => $("#menu").classList.toggle("abierto"));
+
+  // ---------- utilidades ----------
+  const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+  const porId = id => D.libros.find(l => l.id === id);
+  const categoria = c => t("cat." + c);
+  const descargable = l => Object.keys(l.archivos||{}).length > 0 || (l.externos||[]).length > 0;
+  const formatos = l => [...Object.keys(l.archivos||{}), ...(l.externos||[]).map(e => e.formato)];
+
+  function portada(l){
+    return `<div class="portada ${esc(l.categoria)}"><div class="t">${esc(l.titulo)}</div><div class="f">✠</div><div class="a">${esc(l.autor)}</div></div>`;
+  }
+  function tarjeta(l){
+    const fm = [...new Set(formatos(l))].map(f => f.toUpperCase());
+    return `<article class="libro" data-id="${esc(l.id)}" tabindex="0">${portada(l)}
+      <div class="pie"><span class="etq">${esc(categoria(l.categoria))}</span><span class="etq">${l.idioma.toUpperCase()}</span>
+      ${fm.length ? `<span class="etq">${fm.join(" · ")}</span>` : `<span class="etq">${esc(t("x.comprar"))}</span>`}
+      ${leidos[l.id] ? `<span class="etq leido">✓ ${esc(t("x.leido"))}</span>` : ""}
+      ${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></article>`;
+  }
+
+  // ---------- catálogo ----------
+  function filtrar(){
+    const q = $("#fBuscar").value.trim().toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+    const c = $("#fCategoria").value, i = $("#fIdioma").value, f = $("#fFormato").value;
+    const nl = $("#fNoLeidos").checked, fv = $("#fFavoritos").checked;
+    return D.libros.filter(l => {
+      const texto = (l.titulo + " " + l.autor).toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+      if (q && !texto.includes(q)) return false;
+      if (c && l.categoria !== c) return false;
+      if (i && l.idioma !== i) return false;
+      if (f === "comprar" && descargable(l)) return false;
+      if (f && f !== "comprar" && !formatos(l).includes(f)) return false;
+      if (nl && leidos[l.id]) return false;
+      if (fv && !favoritos[l.id]) return false;
+      return true;
+    });
+  }
+  function pintarCatalogo(){
+    const lista = filtrar();
+    $("#catalogo").innerHTML = lista.map(tarjeta).join("");
+    $("#sinResultados").hidden = lista.length > 0;
+  }
+  function pintarRecomendados(){
+    $("#recomendados").innerHTML = D.libros.filter(l => l.recomendado).map(tarjeta).join("");
+  }
+  ["#fBuscar","#fCategoria","#fIdioma","#fFormato","#fNoLeidos","#fFavoritos"].forEach(s => $(s).addEventListener("input", pintarCatalogo));
+  document.addEventListener("click", e => { const a = e.target.closest(".libro"); if (a) location.hash = "libro/" + a.dataset.id; });
+  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro"); if (a && e.key === "Enter") location.hash = "libro/" + a.dataset.id; });
+
+  // ---------- ficha del libro ----------
+  const estrellasFijas = n => n ? `<span class="estrellas fija">${"★".repeat(n)}${"☆".repeat(5-n)}</span>` : `<span class="meta" style="margin:0">${esc(t("x.porCalificar"))}</span>`;
+  function estrellasMias(id, eje){
+    const v = (misNotas[id]||{})[eje] || 0;
+    return `<span class="estrellas" data-id="${esc(id)}" data-eje="${eje}">${[1,2,3,4,5].map(n => `<button type="button" data-n="${n}" class="${n<=v?"on":""}" aria-label="${n}">★</button>`).join("")}</span>`;
+  }
+  function abrirFicha(id){
+    const l = porId(id); if (!l) return;
+    const desc = [
+      ...Object.entries(l.archivos||{}).map(([f, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${f.toUpperCase()}</a>`),
+      ...(l.externos||[]).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${esc(t("x.leer"))} ${e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
+      ...(l.comprar||[]).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
+    ].join("");
+    const nota = l.nota || {};
+    $("#fichaCuerpo").innerHTML = `<div class="ficha">${portada(l)}<div>
+      <h3 style="font-size:22px">${esc(l.titulo)}</h3>
+      <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))} · ${esc(t("idioma." + l.idioma))}</p>
+      <div class="descargas">${desc}</div>
+      <div class="marcas">
+        <button class="btn" id="btnLeido">${leidos[id] ? "✓ " + esc(t("x.quitarLeido")) : esc(t("x.marcarLeido"))}</button>
+        <button class="btn" id="btnFav">${favoritos[id] ? "★ " + esc(t("x.quitarFav")) : "☆ " + esc(t("x.marcarFav"))}</button>
+      </div>
+      <div class="seccion-ficha"><strong>${esc(t("x.resumen"))}</strong><p style="margin:6px 0 0">${esc(l.resumen[lang] || l.resumen.es)}</p></div>
+      <div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div style="margin-top:8px">${(l.citas||[]).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</div></div>
+      <div class="seccion-ficha"><strong>${esc(t("x.puntuacion"))}</strong>
+        <div class="puntos"><span></span><span class="meta" style="margin:0">${esc(t("x.fenix"))} / ${esc(t("x.suya"))}</span>
+          <span>${esc(t("x.literaria"))}</span><span>${estrellasFijas(nota.literaria)} · ${estrellasMias(id,"literaria")}</span>
+          <span>${esc(t("x.teologica"))}</span><span>${estrellasFijas(nota.teologica)} · ${estrellasMias(id,"teologica")}</span></div></div>
+      <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(Boolean).map(p => `<a href="#libro/${esc(p.id)}">${esc(p.titulo)}</a>`).join(" · ")}</div></div>
+      ${l.fuente ? `<p class="meta" style="margin-top:14px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
+    </div></div>`;
+    $("#btnLeido").onclick = () => { leidos[id] ? delete leidos[id] : leidos[id] = true; almacen.guardar("leidos", leidos); abrirFicha(id); pintarTodo(); };
+    $("#btnFav").onclick = () => { favoritos[id] ? delete favoritos[id] : favoritos[id] = true; almacen.guardar("favoritos", favoritos); abrirFicha(id); pintarTodo(); };
+    $$("#fichaCuerpo .estrellas:not(.fija) button").forEach(b => b.onclick = () => {
+      const s = b.parentElement, n = +b.dataset.n;
+      misNotas[s.dataset.id] = misNotas[s.dataset.id] || {};
+      misNotas[s.dataset.id][s.dataset.eje] = misNotas[s.dataset.id][s.dataset.eje] === n ? 0 : n;
+      almacen.guardar("notas", misNotas); abrirFicha(id);
+    });
+    const dlg = $("#dlgLibro");
+    if (!dlg.open) dlg.showModal();
+  }
+  $("#cerrarFicha").onclick = () => $("#dlgLibro").close();
+  $("#dlgLibro").addEventListener("click", e => { if (e.target.id === "dlgLibro") e.target.close(); });
+  $("#dlgLibro").addEventListener("close", () => { if (location.hash.startsWith("#libro/")) history.replaceState(null, "", "#" + (ultimaVista || "biblioteca")); });
+
+  // ---------- oraciones ----------
+  const idiomaOracion = {};
+  function pintarOraciones(){
+    $("#listaOraciones").innerHTML = D.oraciones.map(o => {
+      const disponibles = ["es","en"].filter(k => (o[k]||[]).length);
+      const elegido = idiomaOracion[o.id] || (disponibles.includes(lang) ? lang : disponibles[0]);
+      return `<article class="caja" style="margin-bottom:22px" id="oracion-${esc(o.id)}">
+        <h3 style="font-size:21px">${esc(o.titulo[lang] || o.titulo.es)}</h3>
+        <p class="meta">${esc(o.autor)}</p>
+        ${disponibles.length > 1 ? `<div class="idiomas-oracion">${disponibles.map(k => `<button class="pildora" data-or="${esc(o.id)}" data-lang="${k}" style="${k===elegido?"background:var(--acento);color:var(--acento-ink)":""}">${esc(t("idioma." + k))}</button>`).join("")}</div>` : ""}
+        <div class="oracion-txt">${o[elegido].map(p => `<p>${esc(p)}</p>`).join("")}</div>
+        <p class="meta">${esc(o.nota[lang] || o.nota.es)}</p></article>`;
+    }).join("");
+    $$("#listaOraciones [data-or]").forEach(b => b.onclick = () => { idiomaOracion[b.dataset.or] = b.dataset.lang; pintarOraciones(); });
+  }
+
+  // ---------- formularios ----------
+  function llenarSelectLibros(){
+    $("#selLibroError").innerHTML = D.libros.map(l => `<option>${esc(l.titulo)} - ${esc(l.autor)}</option>`).join("");
+  }
+  $$("form.formulario").forEach(f => f.addEventListener("submit", async e => {
+    e.preventDefault();
+    const estado = $(".estado", f), boton = $("button[type=submit]", f);
+    if (f._honey.value) return;
+    const datos = Object.fromEntries(new FormData(f));
+    delete datos._honey;
+    datos._subject = f.dataset.asunto;
+    datos._template = "table";
+    datos._captcha = "false";
+    datos.idioma_pagina = lang;
+    estado.className = "estado"; estado.textContent = t("x.enviando"); boton.disabled = true;
+    try{
+      const r = await fetch(D.contacto.formularios, { method:"POST", headers:{ "Content-Type":"application/json", "Accept":"application/json" }, body: JSON.stringify(datos) });
+      const j = await r.json().catch(() => ({}));
+      if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || r.status);
+      estado.className = "estado ok"; estado.textContent = t("x.enviado"); f.reset();
+    }catch(err){
+      estado.className = "estado err"; estado.textContent = t("x.fallo");
+    }finally{ boton.disabled = false; }
+  }));
+
+  // ---------- donar ----------
+  if (D.contacto.donar){ $("#btnDonar").href = D.contacto.donar; $("#donarPendiente").hidden = true; }
+  else { $("#btnDonar").setAttribute("aria-disabled", "true"); $("#btnDonar").style.pointerEvents = "none"; $("#btnDonar").style.opacity = ".5"; }
+
+  // ---------- rutas ----------
+  const VISTAS = ["inicio","biblioteca","oraciones","salvar","error","dona","contacto"];
+  let ultimaVista = "inicio";
+  function ruta(){
+    const h = location.hash.replace(/^#/, "");
+    if (h.startsWith("libro/")){
+      if (!$(".vista.on")) mostrar("biblioteca");
+      abrirFicha(h.slice(6)); return;
+    }
+    if ($("#dlgLibro").open) $("#dlgLibro").close();
+    if (h === "otra-humanidad"){ mostrar("inicio"); setTimeout(() => $("#otra-humanidad").scrollIntoView(), 0); return; }
+    mostrar(VISTAS.includes(h) ? h : "inicio");
+    window.scrollTo(0, 0);
+  }
+  function mostrar(v){
+    ultimaVista = v;
+    $$(".vista").forEach(s => s.classList.toggle("on", s.id === "v-" + v));
+    $$("nav.menu a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + v));
+    $("#menu").classList.remove("abierto");
+  }
+  window.addEventListener("hashchange", ruta);
+
+  function pintarTodo(){ pintarRecomendados(); pintarCatalogo(); pintarOraciones(); llenarSelectLibros(); }
+  aplicarIdioma();
+  ruta();
+})();
+</script>
+</body>
+</html>
