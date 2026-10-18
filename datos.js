@@ -153,6 +153,30 @@ window.FENIX = {
       }
     },
     {
+      id: "preparacion-para-la-muerte",
+      titulo: "Preparación para la muerte",
+      autor: "San Alfonso María de Ligorio (trad. Joaquín Roca y Cornet)",
+      anio: "1758",
+      idioma: "es",
+      categoria: "lectura",
+      resumen: {
+        es: "Treinta y seis meditaciones de san Alfonso María de Ligorio, Doctor de la Iglesia, sobre las verdades eternas: la muerte, el juicio, el infierno y el paraíso, el valor del tiempo y de la gracia, la malicia del pecado y la misericordia de Dios. Cada consideración tiene tres puntos para meditar y termina en «afectos y súplicas», oraciones con que el lector responde a lo meditado. Las últimas tratan los medios para perseverar: la oración, la confianza en la Virgen, el amor de Dios, la comunión y la conformidad con Su voluntad. Traducción de Joaquín Roca y Cornet, en la edición de París de 1867.",
+        en: "Thirty-six meditations by Saint Alphonsus Liguori, Doctor of the Church, on the eternal truths: death, judgment, hell and heaven, the value of time and of grace, the malice of sin and the mercy of God. Each consideration has three points for meditation and ends in «affections and prayers», with which the reader answers what was meditated. The last ones deal with the means of perseverance: prayer, trust in the Virgin, the love of God, communion and conformity to His will. Spanish translation by Joaquín Roca y Cornet, in the Paris edition of 1867."
+      },
+      porque: {"es":"Para quien quiere tomarse en serio la propia muerte sin quedarse en el miedo: san Alfonso pinta con crudeza lo que pasa, pero cada página desemboca en la oración y en la confianza en la misericordia de Dios. Sirve para la meditación diaria, una consideración por día, y es un clásico para el retiro y la Cuaresma. Quien lo lee aprende a mirar el tiempo, el pecado y la gracia con la medida de la eternidad.","en":"For anyone who wants to take their own death seriously without being stuck in fear: Saint Alphonsus paints it starkly, but every page flows into prayer and trust in God's mercy. It suits daily meditation, one consideration a day, and is a classic for retreats and Lent. Its reader learns to weigh time, sin and grace by the measure of eternity."},
+      imagen: { src: "img/portadas/preparacion-para-la-muerte.jpg", credito: { es: "Juan de Valdés Leal, «In ictu oculi», 1672", en: "Juan de Valdés Leal, «In ictu oculi», 1672" }, url: "https://commons.wikimedia.org/wiki/File:Valdes_Leal_-_In_Ictu_Oculi.jpg" },
+      citas: [
+        "Considera que tierra eres, y que en tierra te has de convertir.",
+        "Nada hay más precioso que el tiempo, pero de nada se hace menos caso: es lo que más se desprecia en este mundo.",
+        "Concluyamos, pues, que quien ruega se salva, y el que no ruega se condena."
+      ],
+      archivos: { epub: "libros/ligorio-preparacion-para-la-muerte.epub", pdf: "libros/ligorio-preparacion-para-la-muerte.pdf" },
+      fuente: { texto: "Edición de París, Garnier Hermanos, 1867, traducción de Joaquín Roca y Cornet, escaneada en Internet Archive (dominio público); edición digital y portada de Proyecto Fénix", url: "https://archive.org/details/PREPARACINPARALAMUERTEOConsideracionesSobreLasVerdadesEternasTilesALosFielesPara" },
+      editorial: { es: "Edición digital de Proyecto Fénix sobre la impresión de París de 1867: texto cotejado en dos escaneos, ortografía actualizada sin cambiar palabras, notas del autor al pie y portada nueva.", en: "Proyecto Fénix digital edition of the 1867 Paris printing: text collated from two scans, modernized spelling without changing any words, the author's footnotes and a new cover." },
+      delibris: null,
+      parecidos: ["imitacion-de-cristo", "marmion-vida-del-alma", "escriva-camino"]
+    },
+    {
       id: "confesiones",
       titulo: "Confesiones",
       autor: "San Agustín de Hipona",

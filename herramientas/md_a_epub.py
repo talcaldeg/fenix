@@ -5,6 +5,7 @@
 
 - Lee, en orden de nombre, los .md de la carpeta (menos nota.md). Cada `## ` abre un capítulo; el
   texto de un archivo sin encabezado sigue el capítulo anterior (tramos de un mismo capítulo).
+  `### ` es un subtítulo dentro del capítulo.
 - nota.md (si existe) va como «Nota de esta edición», después del índice.
 - Notas `[^n]` (o `[^ed1]`, del editor) con su `[^n]: texto` al final del tramo: se renumeran por
   capítulo y van al pie
@@ -109,6 +110,10 @@ def leer(carpeta: Path):
                 caps.append(Capitulo(""))
             c = caps[-1]
             c.notas.update(defs)
+            if b.startswith("### "):  # subtítulo dentro del capítulo (Preparación para la muerte: «Punto I»)
+                c.html.append(f"<h3>{enlinea(b[4:].strip())}</h3>")
+                recien_titulo = False
+                continue
             if re.fullmatch(r"\d+\.\d+\.\d+", b.strip()):
                 _, cap, _ = b.strip().split(".")
                 if cap != c.cap_actual:
