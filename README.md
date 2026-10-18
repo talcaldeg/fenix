@@ -63,8 +63,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   miniaturas y fondos. La portada oficial (URL externa) se deja como está. El crédito va en
   `imagen` de la ficha. Las obras de Project Gutenberg se alojan en `libros/` con esa portada
   (el texto y la licencia de Gutenberg quedan intactos).
-- Leídos, favoritos y la puntuación de cada visitante quedan en su navegador (`localStorage`).
-  Fénix no publica puntuación propia: solo la del visitante y la valoración moral de Delibris.
+- Leídos y favoritos de cada visitante quedan en su navegador (`localStorage`).
+  No hay puntuación de estrellas, ni de Fénix ni del visitante: solo la valoración moral de Delibris.
+- Cada ficha lleva al menos tres `citas` reales y verificadas: las más célebres, las más
+  profundas o las que enseñan algo. «Por qué leerlo» (`porque`) toma ideas de la reseña de
+  Delibris, en palabras propias.
 - Valoración moral: `delibris` de cada ficha, leída en la página del libro en delibris.org
   (`valor` 1 a 6, 6 = «Sin inconvenientes», y `genero` Literatura o Pensamiento, que fija el
   texto del nivel en `ESCALA_DELIBRIS` de `index.html`). `null` si el libro no está en Delibris.
