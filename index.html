@@ -1336,6 +1336,7 @@
           <option value="poesia" data-i18n="cat.poesia">Poesía</option>
           <option value="ensayo" data-i18n="cat.ensayo">Ensayo e historia</option>
         </select>
+        <button type="button" class="pildora" id="cLimpiar" data-i18n="bib.limpiar">Limpiar filtros</button>
       </div>
       <p class="meta" id="cCuenta"></p>
       <div class="citas" id="listaCitas" role="list"></div>
@@ -1987,6 +1988,7 @@
     $("#cVacio").hidden = cs.length > 0;
   }
   ["#cBuscar","#cCategoria"].forEach(s => $(s).addEventListener("input", pintarCitas));
+  $("#cLimpiar").addEventListener("click", () => { $("#cBuscar").value = $("#cCategoria").value = ""; pintarCitas(); });
 
   // ---------- editorial ----------
   function pintarEditorial(){
