@@ -12,6 +12,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `libros/`: solo obras que se pueden difundir libremente (dominio público o con permiso). Lo
   demás va como `externos` (descarga legal en otro sitio) o `comprar`.
 - `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`.
+- `herramientas/portadas.py`: cada libro lleva un cuadro de dominio público (Wikimedia Commons)
+  relacionado con su tema. Lo recorta a `img/portadas/<id>.jpg` para el sitio y, con `--epub`,
+  arma la portada con título y autor dentro del EPUB; después se regenera el PDF. El crédito
+  va en `imagen` de la ficha. Las obras de Project Gutenberg se alojan en `libros/` con esa
+  portada (el texto y la licencia de Gutenberg quedan intactos).
 - Leídos, favoritos y la puntuación de cada visitante quedan en su navegador (`localStorage`).
   La puntuación «Fénix» se completa en `nota` de cada ficha.
 - Valoración moral: `delibris` de cada ficha, leída en la página del libro en delibris.org

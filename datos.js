@@ -6,6 +6,8 @@
 // - delibris: valoración moral de delibris.org, de 1 a 6 (6 = «Sin inconvenientes»); el texto de
 //   cada nivel según el género (Literatura o Pensamiento) está en index.html. null = no está en Delibris.
 // - citas: textuales, cotejadas con el texto del libro.
+// - imagen: portada en img/portadas/<id>.jpg (cuadro de dominio público), con su crédito y enlace;
+//   se arma con herramientas/portadas.py, que también la pone dentro del EPUB.
 
 window.FENIX = {
   actualizado: "17-oct-2026", // poner la fecha al cambiar el catálogo
@@ -29,6 +31,7 @@ window.FENIX = {
         es: "Las conferencias del abad de Maredsous sobre el centro de la vida cristiana: Dios nos llama a ser sus hijos en Cristo. La primera parte expone el plan divino (Cristo modelo, redentor y fuente de toda gracia; la Iglesia, su Cuerpo; el Espíritu Santo). La segunda muestra cómo esa vida nace en el bautismo, se apoya en la fe y crece por la muerte al pecado, la Eucaristía, la oración, la caridad y la devoción a la Virgen. Una de las grandes síntesis de teología espiritual del siglo XX.",
         en: "The conferences of the abbot of Maredsous on the heart of Christian life: God calls us to be His children in Christ. Part one sets out the divine plan (Christ as model, redeemer and source of all grace; the Church, His Body; the Holy Spirit). Part two shows how this life is born in baptism, rests on faith and grows through death to sin, the Eucharist, prayer, charity and devotion to Our Lady. One of the great syntheses of spiritual theology of the 20th century."
       },
+      imagen: { src: "img/portadas/marmion-vida-del-alma.jpg", credito: { es: "Cristo Pantocrátor, icono del monasterio de Santa Catalina del Sinaí, siglo VI", en: "Christ Pantocrator, icon from Saint Catherine's Monastery, Sinai, 6th century" }, url: "https://commons.wikimedia.org/wiki/File:CHRIST_PANTOCRATOR-SINAI(6th_Century).jpg" },
       citas: [
         "Toda nuestra santidad se reduce a participar, por medio de la gracia, de la filiación divina de Jesucristo, a ser, por la adopción sobrenatural, lo que Cristo es por naturaleza.",
         "«El cristiano es un nuevo Cristo». Esta es la definición del cristiano que ha dado, si no en los mismos términos, al menos en una expresión equivalente, la tradición entera.",
@@ -52,6 +55,7 @@ window.FENIX = {
         es: "Un libro breve y luminoso sobre la «vida de identificación» con Cristo: dejar que Jesús, presente en el alma por la gracia, viva y ame en nosotros. El autor insiste en que esta unión se apoya en la presencia real de Dios en el alma en gracia, no en una simple amistad o imitación exterior, y la recorre desde los comienzos hasta su plenitud. Termina con la oración para unirse a Jesús que está en la sección de oraciones.",
         en: "A short, luminous book on the «life of identification» with Christ: letting Jesus, present in the soul by grace, live and love in us. The author insists that this union rests on God's real indwelling in the soul in grace, not on mere friendship or outward imitation, and follows it from its beginnings to its fullness. It closes with the prayer to unite oneself to Jesus found in the prayers section."
       },
+      imagen: { src: "img/portadas/one-with-jesus.jpg", credito: { es: "Francisco Ribalta, «Cristo abrazando a san Bernardo», c. 1625", en: "Francisco Ribalta, «Christ Embracing Saint Bernard», c. 1625" }, url: "https://commons.wikimedia.org/wiki/File:Francisco_Ribalta_001.jpg" },
       citas: [
         "Powerfully seconding the action of God, it will not be long before they become other Christs.",
         "May I, fully identified with You, become like another humanity to You."
@@ -78,12 +82,13 @@ window.FENIX = {
         es: "El clásico de la devoción moderna, en cuatro libros: consejos para la vida espiritual, la vida interior, el consuelo interior en diálogo con Cristo y el Santísimo Sacramento. Frases cortas, directas, para leer de a poco y volver a ellas toda la vida.",
         en: "The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Short, direct sentences, to be read slowly and returned to for a lifetime."
       },
+      imagen: { src: "img/portadas/imitacion-de-cristo.jpg", credito: { es: "El Greco, «Cristo con la cruz», c. 1590", en: "El Greco, «Christ Carrying the Cross», c. 1590" }, url: "https://commons.wikimedia.org/wiki/File:El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg" },
       citas: [
         "At the Day of Judgment it will be demanded of us, not what we have read, but what we have done; not how well we have spoken, but how holily we have lived.",
         "For man proposeth, but God disposeth."
       ],
-      archivos: {},
-      externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/1653" }],
+      archivos: { epub: "libros/kempis-imitation-of-christ.epub", pdf: "libros/kempis-imitation-of-christ.pdf" },
+      fuente: { texto: "Project Gutenberg, libro n.º 1653 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1653" },
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
       parecidos: ["confesiones", "marmion-vida-del-alma", "presencia-de-dios"]
@@ -100,12 +105,13 @@ window.FENIX = {
         es: "La historia de una conversión contada como oración: Agustín repasa ante Dios su infancia, su juventud desordenada, su búsqueda intelectual y el encuentro con la gracia en Milán, y termina meditando sobre la memoria, el tiempo y la creación. Traducción inglesa de E. B. Pusey.",
         en: "The story of a conversion told as a prayer: Augustine reviews before God his childhood, his disordered youth, his intellectual search and his encounter with grace in Milan, and ends by meditating on memory, time and creation. English translation by E. B. Pusey."
       },
+      imagen: { src: "img/portadas/confesiones.jpg", credito: { es: "Sandro Botticelli, «San Agustín en su estudio», c. 1480", en: "Sandro Botticelli, «Saint Augustine in His Study», c. 1480" }, url: "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_St_Augustine_-_WGA02709.jpg" },
       citas: [
         "Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
         "Too late loved I Thee, O Thou Beauty of ancient days, yet ever new! too late I loved Thee!"
       ],
-      archivos: {},
-      externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/3296" }],
+      archivos: { epub: "libros/agustin-confessions.epub", pdf: "libros/agustin-confessions.pdf" },
+      fuente: { texto: "Project Gutenberg, libro n.º 3296 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/3296" },
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/confesiones" },
       parecidos: ["imitacion-de-cristo", "ortodoxia", "presencia-de-dios"]
@@ -122,12 +128,13 @@ window.FENIX = {
         es: "Conversaciones y cartas de un hermano carmelita que trabajó años en la cocina de su convento. Su enseñanza es sencilla: vivir en la presencia de Dios en medio del trabajo diario, ofreciendo por amor las cosas pequeñas. Muy cercano a la santificación del trabajo ordinario.",
         en: "Conversations and letters of a Carmelite brother who worked for years in his monastery's kitchen. His teaching is simple: live in God's presence in the midst of daily work, offering little things out of love. Very close to the sanctification of ordinary work."
       },
+      imagen: { src: "img/portadas/presencia-de-dios.jpg", credito: { es: "Diego Velázquez, «Cristo en casa de Marta y María» (detalle), c. 1618", en: "Diego Velázquez, «Christ in the House of Martha and Mary» (detail), c. 1618" }, url: "https://commons.wikimedia.org/wiki/File:Diego_Vel%C3%A1zquez_-_Christ_in_the_House_of_Mary_and_Martha_(detail)_-_WGA24361.jpg" },
       citas: [
         "The time of business does not with me differ from the time of prayer.",
         "We ought not weary of doing little things for the love of God, who regards not the greatness of the work, but the love with which it is performed."
       ],
-      archivos: {},
-      externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/5657" }],
+      archivos: { epub: "libros/lorenzo-practice-of-the-presence-of-god.epub", pdf: "libros/lorenzo-practice-of-the-presence-of-god.pdf" },
+      fuente: { texto: "Project Gutenberg, libro n.º 5657 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/5657" },
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/la-practica-de-la-presencia-de-dios" },
       parecidos: ["one-with-jesus", "imitacion-de-cristo", "marmion-vida-del-alma"]
@@ -144,12 +151,13 @@ window.FENIX = {
         es: "La «autobiografía intelectual» de Chesterton: cómo, buscando por su cuenta una filosofía que explicara el mundo, descubrió que ya existía y se llamaba cristianismo. Paradojas, humor y una defensa alegre de la fe frente al escepticismo moderno.",
         en: "Chesterton's «intellectual autobiography»: how, while looking on his own for a philosophy that explained the world, he found it already existed and was called Christianity. Paradox, humour and a joyful defence of the faith against modern scepticism."
       },
+      imagen: { src: "img/portadas/ortodoxia.jpg", credito: { es: "Rafael, «La disputa del Santísimo Sacramento» (detalle), 1509-1510", en: "Raphael, «The Disputation of the Holy Sacrament» (detail), 1509-1510" }, url: "https://commons.wikimedia.org/wiki/File:%22Disputation_of_the_Holy_Sacrament%22_by_Raphael,_Raphael_Rooms,_Vatican_Museum_(48466326127).jpg" },
       citas: [
         "Angels can fly because they can take themselves lightly.",
         "Tradition means giving votes to the most obscure of all classes, our ancestors. It is the democracy of the dead."
       ],
-      archivos: {},
-      externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/130" }],
+      archivos: { epub: "libros/chesterton-orthodoxy.epub", pdf: "libros/chesterton-orthodoxy.pdf" },
+      fuente: { texto: "Project Gutenberg, libro n.º 130 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/130" },
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/ortodoxia" },
       parecidos: ["confesiones", "quo-vadis", "imitacion-de-cristo"]
@@ -166,12 +174,13 @@ window.FENIX = {
         es: "Roma bajo Nerón: el patricio Vinicio se enamora de Ligia, una joven cristiana, y a través de ella conoce a la comunidad perseguida, a san Pedro y a san Pablo. Novela histórica de gran aliento, de un autor que recibió el Nobel de Literatura en 1905. Traducción inglesa de Jeremiah Curtin.",
         en: "Rome under Nero: the patrician Vinicius falls in love with Lygia, a young Christian, and through her comes to know the persecuted community, Saint Peter and Saint Paul. A sweeping historical novel by an author who received the Nobel Prize in Literature in 1905. English translation by Jeremiah Curtin."
       },
+      imagen: { src: "img/portadas/quo-vadis.jpg", credito: { es: "Annibale Carracci, «Domine, quo vadis?», 1601-1602", en: "Annibale Carracci, «Domine, quo vadis?», 1601-1602" }, url: "https://commons.wikimedia.org/wiki/File:Domine,_quo_vadis.jpg" },
       citas: [
         "“Quo vadis, Domine?”",
         "“If thou desert my people, I am going to Rome to be crucified a second time.”"
       ],
-      archivos: {},
-      externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/2853" }],
+      archivos: { epub: "libros/sienkiewicz-quo-vadis.epub", pdf: "libros/sienkiewicz-quo-vadis.pdf" },
+      fuente: { texto: "Project Gutenberg, libro n.º 2853 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/2853" },
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/quo-vadis" },
       parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo"]
