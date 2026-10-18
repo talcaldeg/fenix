@@ -1280,7 +1280,7 @@
       <div class="lista" id="tLista" role="list" hidden></div>
       <p class="vacio" id="tVacio" hidden></p>
       <div style="margin-top:14px"><button class="btn" type="button" id="tMas" hidden data-i18n="todos.mas">Ver más resultados</button></div>
-      <p class="leyenda-moral"><span data-i18n="todos.fuentes">Catálogo de</span> <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a><span data-i18n="todos.fuentes2"> (Internet Archive). Valoración moral de</span> <a href="https://www.delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="todos.fuentes3"> (sitio de reseñas; no es un juicio oficial de la Iglesia), que reseña unos 80 mil libros; los demás aparecen sin valoración. Los derechos de autor se estiman por el año de muerte del autor y no reemplazan una revisión caso a caso.</span></p>
+      <p class="leyenda-moral"><span data-i18n="todos.fuentes">Catálogo de</span> <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a><span data-i18n="todos.fuentes2"> (Internet Archive). Valoración moral de</span> <a href="https://www.delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="todos.fuentes3"> (sitio de reseñas; no es un juicio oficial de la Iglesia), que reseña unos 80 mil libros; los demás aparecen sin valoración. Los derechos de autor se estiman por el año de muerte del autor y no reemplazan una revisión caso a caso.</span> <span id="tIndice"></span></p>
     </div>
   </section>
 
@@ -1433,7 +1433,7 @@
       "todos.eyebrow":"World catalogue","todos.titulo":"All books in English","todos.lede":"Search for any book published in English. Its page shows the Delibris moral rating, whether it is under copyright and, if it is in Fénix, the button to download it; if it is not, you can ask us to look for it.",
       "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":" (a review site; not an official judgement of the Church), which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
       "todos.cuenta":"{n} books found","todos.cuenta1":"1 book found","todos.vacio":"No books found. Try a single word from the title or the author's surname.","todos.error":"The catalogue did not respond. Please try again in a moment.","todos.buscando":"Searching…","todos.edicion":"Edition",
-      "todos.enFenix":"In Fénix","todos.derechos":"Copyright","todos.calculando":"Checking…","todos.verOL":"See in Open Library","todos.verFicha":"See its page in Fénix","todos.buscarDelibris":"Search in delibris.org","todos.noEncontrada":"Not found in Delibris",
+      "todos.enFenix":"In Fénix","todos.derechos":"Copyright","todos.calculando":"Checking…","todos.verOL":"See in Open Library","todos.verFicha":"See its page in Fénix","todos.buscarDelibris":"Search in delibris.org","todos.noEncontrada":"Not found in Delibris","todos.indice":"Our Delibris index: {n} books, as of {f}.",
       "todos.solicitar":"Request this book","todos.solicitarNota":"It is not in Fénix yet. Ask for it: we will look for it, check its rights and, if possible, publish it or tell you where to read it.","todos.solicitarEnviar":"Send request",
       "der.libre":"In Chile: {a} died in {m}, more than 70 years ago. If this is a translation or an annotated edition, the translator or editor may hold their own rights, and the term differs elsewhere (80 years in Spain for authors who died before 1987; up to 100 in Mexico).",
       "der.protegido":"{a} died in {m}; in Chile the work becomes free on 1 January {l}.","der.vivo":"There is no record of the author's death ({a}, born in {b}).",
@@ -1487,7 +1487,7 @@
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en",
       "todos.cuenta":"{n} libros encontrados","todos.cuenta1":"1 libro encontrado","todos.vacio":"No encontramos libros. Pruebe con una sola palabra del título o con el apellido del autor.","todos.error":"El catálogo no respondió. Inténtelo de nuevo en un momento.","todos.buscando":"Buscando…","todos.edicion":"Edición",
-      "todos.enFenix":"En Fénix","todos.derechos":"Derechos de autor","todos.calculando":"Revisando…","todos.verOL":"Ver en Open Library","todos.verFicha":"Ver su ficha en Fénix","todos.buscarDelibris":"Buscar en delibris.org","todos.noEncontrada":"No la encontramos en Delibris",
+      "todos.enFenix":"En Fénix","todos.derechos":"Derechos de autor","todos.calculando":"Revisando…","todos.verOL":"Ver en Open Library","todos.verFicha":"Ver su ficha en Fénix","todos.buscarDelibris":"Buscar en delibris.org","todos.noEncontrada":"No la encontramos en Delibris","todos.indice":"Nuestro índice de Delibris: {n} libros, al {f}.",
       "todos.solicitar":"Solicitar este libro","todos.solicitarNota":"Todavía no está en Fénix. Pídalo: lo buscamos, revisamos sus derechos y, si se puede, lo publicamos o le decimos dónde leerlo.","todos.solicitarEnviar":"Enviar solicitud",
       "der.libre":"En Chile: {a} murió en {m}, hace más de 70 años. Si es una traducción o una edición anotada, el traductor o el editor pueden tener derechos propios, y en otros países el plazo cambia (en España, 80 años para autores muertos antes de 1987; en México, hasta 100).",
       "der.protegido":"{a} murió en {m}; en Chile la obra queda libre el 1 de enero de {l}.","der.vivo":"No hay registro de la muerte del autor ({a}, nacido en {b}).",
@@ -1726,7 +1726,10 @@
   }
   // _meta.json trae las claves que existen, para no pedir trozos que no hay.
   let metaDelibris = null;
-  const claves = () => metaDelibris || (metaDelibris = fetch("delibris/_meta.json").then(r => r.json()).then(m => new Set(m.claves)).catch(() => new Set()));
+  const claves = () => metaDelibris || (metaDelibris = fetch("delibris/_meta.json").then(r => r.json()).then(m => {
+    // Cuántos libros trae el índice y a qué fecha, a la vista en la leyenda.
+    $("#tIndice").textContent = t("todos.indice").replace("{n}", m.libros.toLocaleString(lang === "es" ? "es-CL" : "en-GB")).replace("{f}", m.fecha.split("-").reverse().join("-"));
+    return new Set(m.claves); }).catch(() => new Set()));
   const trozoDelibris = async k => (await claves()).has(k) ? (trozos[k] || (trozos[k] = fetch(`delibris/${k}.json`).then(r => r.ok ? r.json() : []).catch(() => []))) : [];
   async function valoracionDelibris(o){
     const f = libroFenix(o);
