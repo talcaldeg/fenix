@@ -152,7 +152,7 @@ window.FENIX = {
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/130" }],
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/ortodoxia" },
-      parecidos: ["confesiones", "senor-del-mundo", "quo-vadis"]
+      parecidos: ["confesiones", "quo-vadis", "imitacion-de-cristo"]
     },
     {
       id: "quo-vadis",
@@ -174,28 +174,7 @@ window.FENIX = {
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/2853" }],
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/quo-vadis" },
-      parecidos: ["senor-del-mundo", "confesiones", "ortodoxia"]
-    },
-    {
-      id: "senor-del-mundo",
-      titulo: "Lord of the World",
-      autor: "Robert Hugh Benson",
-      anio: "1907",
-      idioma: "en",
-      categoria: "novela",
-      recomendado: false,
-      resumen: {
-        es: "Una novela de anticipación escrita por un sacerdote converso: un mundo unificado bajo un humanitarismo sin Dios se rinde ante un líder carismático, mientras la Iglesia, reducida y perseguida, resiste en torno al Papa. Lectura recomendada en más de una ocasión por el papa Francisco.",
-        en: "A dystopian novel written by a convert priest: a world unified under a godless humanitarianism surrenders to a charismatic leader, while the Church, small and persecuted, holds fast around the Pope. A book Pope Francis recommended more than once."
-      },
-      citas: [
-        "I, John, Vicar of Christ, Servant of Servants, and sinner among sinners, bid you be of good courage in the Name of God."
-      ],
-      archivos: {},
-      externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/14021" }],
-      nota: { literaria: null, teologica: null },
-      delibris: { valor: 5, genero: "Literatura", url: "https://delibris.org/es/senor-del-mundo" },
-      parecidos: ["quo-vadis", "ortodoxia", "confesiones"]
+      parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo"]
     }
   ],
 
