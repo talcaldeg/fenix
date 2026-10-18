@@ -688,7 +688,33 @@ window.FENIX = {
       ],
       fuente: { texto: "Publicado por el autor en su sitio, en «El repertorio del juglar» (obra protegida por derechos de autor; se enlaza, no se aloja)", url: "https://www.benjaminfranzani.com/p/el-repertorio-del-juglar-historias.html" },
       delibris: null,
-      parecidos: ["quo-vadis", "apologia-de-socrates"]
+      parecidos: ["edward-caballero-verde", "quo-vadis", "apologia-de-socrates"]
+    },
+    {
+      id: "edward-caballero-verde",
+      titulo: "Edward o el Caballero Verde",
+      autor: "Benjamín Franzani",
+      anio: "2021",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      imagen: { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh6uv20fuvZ_ECZdcn_kXNoMRc1siQxV0iVkcwaD-eZMSgrPsLCKbPe0ukf0zBKfJfQOdr0A4xkViYgstjkx6gZJWWXJn4LtZQJ8HLu6lsZajDnJpHCmBxyCD_TTY6JoHlVbqM_1jyD4ESSkPJPuh6hMUARkm7ufW2K4POxUMYFrTfPKilCeecpwvVX7lFi/s800/nueva%20Portada%20Edward.png", credito: { es: "portada oficial de la novela", en: "official cover of the novel" }, url: "https://www.benjaminfranzani.com/p/el-repertorio-del-juglar-historias.html", aviso: { es: "enlazada desde el sitio del autor", en: "linked from the author's website" } },
+      resumen: {
+        es: "Sir Edward de Uterra, armado caballero a los quince años tras velar sus armas en oración, se niega a llevar blasón hasta ganarse un nombre con sus hechos. Parte con su amigo Ulf, escudero y juglar, a las provincias del sur del Imperio de Dáladon, abandonadas a bandoleros y piratas, para servir al corregidor de Urbia contra el bandolero Alcico. Allí conoce a Clara, una joven criada entre piratas que vive para vengarse del regente que vendió a su familia. Novela de caballería y fantasía en 27 capítulos, sobre el honor, la amistad, la protección del débil y la misericordia frente a la venganza; la historia queda abierta para una continuación.",
+        en: "Sir Edward of Uterra, knighted at fifteen after keeping vigil over his arms in prayer, refuses to bear a coat of arms until he has earned a name by his deeds. With his friend Ulf, squire and minstrel, he rides to the southern provinces of the Empire of Dáladon, abandoned to brigands and pirates, to serve the magistrate of Urbia against the outlaw Alcico. There he meets Clara, a young woman raised among pirates who lives to avenge herself on the regent who sold her family. A chivalric fantasy novel in 27 chapters about honour, friendship, protecting the weak and mercy over revenge; the story is left open for a sequel."
+      },
+      citas: [
+        "Mis pasos seguirán tus pasos. Iré donde vayas y volveré donde vuelvas.",
+        "No puedo garantizar que no habrá represalias, pero sí que contarán con mi escudo, y con el de mis hombres.",
+        "No manches ahora tus manos con sangre… aún estás a tiempo."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "benjaminfranzani.com", url: "https://www.benjaminfranzani.com/p/el-repertorio-del-juglar-historias.html" }
+      ],
+      fuente: { texto: "Publicado por el autor en su sitio, en «El repertorio del juglar»; spin-off de la saga «Crónicas de una Espada» (obra protegida por derechos de autor; se enlaza, no se aloja)", url: "https://www.benjaminfranzani.com/p/el-repertorio-del-juglar-historias.html" },
+      delibris: null,
+      parecidos: ["orencio-y-eloisa", "quo-vadis"]
     }
   ],
 
