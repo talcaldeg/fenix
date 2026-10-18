@@ -6,6 +6,7 @@
 // - citas: textuales, cotejadas con el texto del libro.
 
 window.FENIX = {
+  actualizado: "17-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
