@@ -11,7 +11,8 @@
   del capítulo. Párrafo en cursiva justo después del título: sumario del capítulo.
 - Marcadores `libro.capítulo.párrafo` en su propia línea (Confesiones): el cambio de capítulo
   pone su número romano como subtítulo; el marcador no se imprime.
-- Después: herramientas/portadas.py <id> ... --epub para la portada y herramientas/epub_a_pdf.py.
+- Después: herramientas/portadas.py <id> ... --epub para la portada, herramientas/exlibris.py y
+  herramientas/epub_a_pdf.py.
 """
 import argparse
 import html

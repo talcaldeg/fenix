@@ -40,7 +40,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
-  luego `portadas.py ... --epub` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
+  luego `portadas.py ... --epub`, `exlibris.py` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
+- `herramientas/exlibris.py libros/<archivo>.epub`: todo libro de `libros/` lleva como segunda
+  página, después de la portada, el exlibris de Fénix (un timbre estampado sobre papel,
+  `img/exlibris-es.jpg` o `-en.jpg` según `dc:language`). Es idempotente; después se rehace el PDF.
 - `herramientas/portadas.py`: cada libro lleva un cuadro de dominio público (Wikimedia Commons)
   relacionado con su tema. Lo recorta a `img/portadas/<id>.jpg` para el sitio y, con `--epub`,
   arma la portada con título y autor dentro del EPUB; después se regenera el PDF. El crédito
