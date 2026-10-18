@@ -196,6 +196,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: true,
+      imagen: { src: "img/portadas/escriva-camino.jpg", credito: { es: "Fritz von Uhde, «Camino de Emaús», c. 1896", en: "Fritz von Uhde, «The Road to Emmaus», c. 1896" }, url: "https://commons.wikimedia.org/wiki/File:Der_Gang_nach_Emmaus,_1896..jpg" },
       resumen: {
         es: "999 puntos breves de meditación, repartidos en 46 capítulos, escritos en un tono directo, como de conversación personal con el lector. Apareció en 1934 en Cuenca con el título «Consideraciones espirituales» y tomó su nombre definitivo en la edición de Valencia de 1939. Lleva más de cinco millones de ejemplares en más de cincuenta idiomas.",
         en: "999 short points for meditation, in 46 chapters, written in a direct tone, like a personal conversation with the reader. It first appeared in Cuenca in 1934 as «Consideraciones espirituales» and took its final title in the Valencia edition of 1939. More than five million copies have been printed, in over fifty languages."
@@ -531,6 +532,12 @@ window.FENIX = {
       parecidos: ["escriva-conversaciones", "escriva-abadesa-de-las-huelgas", "ortodoxia"]
     }
   ],
+
+  // Plan de vida: libros recomendados para el rato de oración y para la lectura espiritual (ids de `libros`).
+  plan: {
+    oracion: ["escriva-camino", "imitacion-de-cristo", "one-with-jesus", "escriva-surco", "escriva-forja", "presencia-de-dios"],
+    lectura: ["confesiones", "marmion-vida-del-alma", "escriva-es-cristo-que-pasa", "escriva-amigos-de-dios", "ortodoxia"]
+  },
 
   oraciones: [
     {

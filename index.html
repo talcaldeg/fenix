@@ -170,6 +170,7 @@
     <nav class="menu" id="menu">
       <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
       <a href="#biblioteca" data-i18n="nav.biblioteca">Biblioteca</a>
+      <a href="#plan" data-i18n="nav.plan">Plan de vida</a>
       <a href="#oraciones" data-i18n="nav.oraciones">Oraciones</a>
       <a href="#salvar" data-i18n="nav.salvar">Salvar un libro</a>
       <a href="#error" data-i18n="nav.error">¿Un error?</a>
@@ -261,6 +262,22 @@
       <p class="vacio" id="sinResultados" hidden data-i18n="bib.vacio">No hay libros con esos filtros.</p>
       <p class="leyenda-moral"><span data-i18n="bib.leyendaMoral">Valoración moral tomada de</span> <a href="https://delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="bib.leyendaMoral2"> (sitio católico de reseñas; no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes» y, cuantos menos círculos, más cautela pide la lectura. El nivel de cada libro se explica en su ficha.</span></p>
       <p class="meta" style="margin-top:18px" data-i18n="bib.nota">Leídos, favoritos y su puntuación se guardan solo en este navegador.</p>
+    </div>
+  </section>
+
+  <!-- PLAN DE VIDA -->
+  <section class="vista" id="v-plan">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="plan.eyebrow">Para tratar a Dios cada día</p>
+      <h2 data-i18n="plan.titulo">Plan de vida</h2>
+      <p class="lede" data-i18n="plan.lede">Un plan de vida son unos pocos momentos fijos para tratar a Dios cada día: un rato de oración personal, unos minutos de lectura espiritual y otras prácticas de piedad. Estos libros ayudan en los dos primeros.</p>
+      <blockquote style="margin:16px 0 26px"><span data-i18n="plan.cita">«En dos palabras: conocerle y conocerte: “¡tratarse!”»</span><cite data-i18n="plan.citaRef">San Josemaría, Camino, 91</cite></blockquote>
+      <h3 data-i18n="plan.oracion">Para la oración</h3>
+      <p class="meta" data-i18n="plan.oracionNota">Para el rato de oración personal: leer un punto o un párrafo despacio y conversar con Dios sobre lo leído.</p>
+      <div class="lista" id="planOracion" role="list" style="margin:12px 0 30px"></div>
+      <h3 data-i18n="plan.lectura">Para la lectura espiritual</h3>
+      <p class="meta" data-i18n="plan.lecturaNota">Para leer unos minutos cada día, con orden, de principio a fin.</p>
+      <div class="lista" id="planLectura" role="list" style="margin-top:12px"></div>
     </div>
   </section>
 
@@ -394,7 +411,12 @@
       "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":" (a Catholic review site; not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks» and the fewer the circles, the more caution the reading calls for. Each book's level is explained on its page.",
       "l.libro":"Book","l.datos":"Category · language · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","x.portada":"Cover","x.dominioPublico":"public domain, Wikimedia Commons","bib.nota":"Read marks, favourites and your ratings are stored only in this browser.",
       "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
-      "or.titulo":"Prayers",
+      "or.titulo":"Prayers","nav.plan":"Plan of life",
+      "plan.eyebrow":"To be with God every day","plan.titulo":"Plan of life",
+      "plan.lede":"A plan of life is a few fixed moments to be with God each day: a time of personal prayer, a few minutes of spiritual reading and other practices of piety. These books help with the first two.",
+      "plan.cita":"«In two words: to know Him and to know yourself: “to be on intimate terms!”»","plan.citaRef":"Saint Josemaría, The Way, 91 (our translation)",
+      "plan.oracion":"For prayer","plan.oracionNota":"For your time of personal prayer: read a point or a paragraph slowly and talk with God about it.",
+      "plan.lectura":"For spiritual reading","plan.lecturaNota":"To read for a few minutes each day, in order, from beginning to end.",
       "sal.titulo":"Which book would you like to save?","sal.lede":"Fénix exists so that good books are not lost. Tell us which one you would like to see here: we will look for it, check its rights and, if possible, publish it.",
       "err.titulo":"Did you find an error?","err.lede":"A typo, a missing chapter, a file that will not open or a misplaced quote. Thank you for letting us know: the book will be better for the next reader.",
       "don.titulo":"Donate here","don.lede":"Fénix is free and ad-free. Your gift helps us digitise, proofread and translate books that would otherwise be lost.","don.boton":"Donate",
@@ -591,6 +613,15 @@
     $$("#listaOraciones [data-or]").forEach(b => b.onclick = () => { idiomaOracion[b.dataset.or] = b.dataset.lang; pintarOraciones(); });
   }
 
+  // ---------- plan de vida ----------
+  function pintarPlan(){
+    const plan = D.plan || {};
+    [["#planOracion", plan.oracion], ["#planLectura", plan.lectura]].forEach(([sel, ids]) => {
+      const lista = (ids || []).map(porId).filter(Boolean);
+      $(sel).innerHTML = lista.length ? cabecera() + lista.map(fila).join("") : "";
+    });
+  }
+
   // ---------- formularios ----------
   function llenarSelectLibros(){
     $("#selLibroError").innerHTML = D.libros.map(l => `<option>${esc(l.titulo)} - ${esc(l.autor)}</option>`).join("");
@@ -621,7 +652,7 @@
   else { $("#btnDonar").setAttribute("aria-disabled", "true"); $("#btnDonar").style.pointerEvents = "none"; $("#btnDonar").style.opacity = ".5"; }
 
   // ---------- rutas ----------
-  const VISTAS = ["inicio","biblioteca","oraciones","salvar","error","dona","contacto"];
+  const VISTAS = ["inicio","biblioteca","plan","oraciones","salvar","error","dona","contacto"];
   let ultimaVista = "inicio";
   function ruta(){
     const h = location.hash.replace(/^#/, "");
@@ -643,7 +674,7 @@
   window.addEventListener("hashchange", ruta);
 
   $("#fechaCatalogo").textContent = D.actualizado || "";
-  function pintarTodo(){ pintarRecomendados(); pintarCatalogo(); pintarOraciones(); llenarSelectLibros(); }
+  function pintarTodo(){ pintarRecomendados(); pintarCatalogo(); pintarPlan(); pintarOraciones(); llenarSelectLibros(); }
   aplicarIdioma();
   ruta();
 })();
