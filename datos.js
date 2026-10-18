@@ -30,6 +30,9 @@ window.FENIX = {
     // Enlace de donación (Mercado Pago, PayPal, etc.). Vacío = la sección muestra "en preparación".
     donar: ""
   },
+  // Sello «Recomendados por Fénix»: van primero en la portada y en el catálogo, en este orden.
+  // Cada sitio muestra solo los de su idioma (One with Jesus no tiene versión en español).
+  recomendadosFenix: ["one-with-jesus", "imitacion-de-cristo", "historia-de-un-alma", "confesiones"],
 
   libros: [
     {

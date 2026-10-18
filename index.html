@@ -1111,6 +1111,18 @@
   .ed p{margin:6px 0 10px; font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
   [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
   .etq.ed-fenix{color:var(--oro); font-weight:600}
+  /* EPUB primero: su etiqueta resalta y lo que no lo tiene queda atenuado y plegado al final del catálogo. */
+  .etq.epub{background:var(--acento); color:var(--acento-ink); font-weight:700; letter-spacing:.03em}
+  .etq.sello{background:transparent; border:1.5px solid var(--oro); color:var(--oro); font-weight:700; padding:1px 8px; font-size:12.5px; white-space:nowrap}
+  .libro.fenix{border:2px solid var(--oro)}
+  .libro.sin-epub, .fila.sin-epub{opacity:.62}
+  .libro.sin-epub .portada, .fila.sin-epub .mini{filter:grayscale(.75)}
+  .libro.sin-epub:hover, .fila.sin-epub:hover, .fila.sin-epub:focus-visible{opacity:1}
+  .sin-epub-grupo{border-top:1px solid var(--line)}
+  .sin-epub-grupo > summary{cursor:pointer; padding:12px 16px; font:600 14px system-ui,sans-serif; color:var(--muted); background:var(--bg2)}
+  .sin-epub-grupo > summary:hover{color:var(--ink)}
+  .sin-epub-grupo .fila:first-of-type{border-top:1px solid var(--line)}
+  .ficha .sello{display:inline-block; margin:0 0 8px}
   .etq.der-libre{color:var(--ok); font-weight:600} .etq.der-protegido, .etq.der-probable{color:var(--vino); font-weight:600}
   .fila .moral-obra{min-width:0}
   .ayuda{font:14px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 12px; margin:0 0 12px}
@@ -1213,8 +1225,15 @@
         <div class="accesos" id="accesos"></div>
       </div>
 
+      <div style="margin-top:40px" id="bloqueSello">
+        <p class="eyebrow" data-i18n="sello.eyebrow">Sello Fénix</p>
+        <div class="titulo-fila"><h2 data-i18n="sello.titulo">Recomendados por Fénix</h2></div>
+        <p class="meta" style="margin:0 0 14px" data-i18n="sello.texto">Los libros que más queremos que leas. Llevan este sello en todo el catálogo.</p>
+        <div class="grilla" id="selloFenix"></div>
+      </div>
+
       <div style="margin-top:40px">
-        <p class="eyebrow" data-i18n="rec.eyebrow">Recomendados</p>
+        <p class="eyebrow" data-i18n="rec.eyebrow">Sugerencias</p>
         <div class="titulo-fila"><h2 data-i18n="rec.titulo">Para empezar</h2><a href="#biblioteca" data-i18n="rec.todos">Ver todo el catálogo →</a></div>
         <div class="grilla" id="recomendados"></div>
       </div>
@@ -1501,7 +1520,8 @@
       "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
-      "rec.eyebrow":"Recommended","rec.titulo":"Where to begin","rec.todos":"See the whole catalogue →",
+      "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
+      "rec.eyebrow":"Suggestions","rec.titulo":"Where to begin","rec.todos":"See the whole catalogue →",
       "oh.eyebrow":"The idea behind us","oh.titulo":"Being for Christ «like another humanity»",
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
       "oh.p2":"The Jesuit Paul de Jaegher turned it into a prayer at the end of «One with Jesus»: that the soul, fully identified with Jesus, may become for Him «like another humanity». Lending Him our eyes, lips, mind and heart so that He may still look, speak, think and love today.",
@@ -1536,8 +1556,9 @@
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
       "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
+      "x.sello":"Recomendado por Fénix","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
       "x.edFenix":"Edición Fénix","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
-      "x.ayuda":"¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
+      "x.ayuda":"¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos tu mensaje.","x.fallo":"No se pudo enviar. Inténtalo de nuevo en un momento.","x.verIn":"Ver en",
@@ -1598,6 +1619,21 @@
   const descargable = l => Object.keys(archivosEn(l)).length > 0 || externosEn(l).length > 0;
   const formatos = l => [...Object.keys(archivosEn(l)), ...externosEn(l).map(e => e.formato)];
   const etqFormato = f => f === "web" ? t("x.web") : f.toUpperCase();
+  // EPUB manda: su etiqueta va aparte y resaltada; el orden pone primero el sello Fénix
+  // (recomendadosFenix en datos.js, en su orden), después lo que tiene EPUB y al final el resto.
+  const tieneEpub = l => formatos(l).includes("epub");
+  const posSello = l => (D.recomendadosFenix || []).indexOf(l.id);
+  const esFenix = l => posSello(l) >= 0;
+  const prioridad = l => esFenix(l) ? posSello(l) - 1000 : tieneEpub(l) ? 0 : 1;
+  const ordenar = xs => xs.map((l, i) => [l, i]).sort((a, b) => prioridad(a[0]) - prioridad(b[0]) || a[1] - b[1]).map(x => x[0]);
+  const claseLibro = l => (esFenix(l) ? " fenix" : "") + (!tieneEpub(l) && !esFenix(l) ? " sin-epub" : "");
+  function etqsFormato(l){
+    const fm = [...new Set(formatos(l))];
+    if (!fm.length) return `<span class="etq">${esc(t("x.comprar"))}</span>`;
+    const otros = fm.filter(f => f !== "epub").map(etqFormato);
+    return (fm.includes("epub") ? `<span class="etq epub">EPUB</span>` : "") + (otros.length ? `<span class="etq">${otros.join(" · ")}</span>` : "");
+  }
+  const sello = l => esFenix(l) ? `<span class="etq sello">✦ ${esc(t("x.sello"))}</span>` : "";
   // Página estática del libro; la versión en otro idioma tiene la suya en libro/<id>/<idioma>/ (gen_estaticos.js).
   const rutaLibro = l => { const o = D.libros.find(x => x.id === l.id); return "libro/" + l.id + "/" + (o && o.idioma !== lang && (o.versiones || {})[lang] ? lang + "/" : ""); };
   // Citas en el idioma de la página: las de un libro en otro idioma no se muestran.
@@ -1611,10 +1647,8 @@
     return `<div class="portada ${esc(l.categoria)}"><div class="t">${esc(l.titulo)}</div><div class="f">✠</div><div class="a">${esc(l.autor)}</div></div>`;
   }
   function tarjeta(l){
-    const fm = [...new Set(formatos(l))].map(etqFormato);
-    return `<article class="libro" data-id="${esc(l.id)}" tabindex="0">${portada(l)}
-      <div class="pie"><span class="etq">${esc(categoria(l.categoria))}</span>
-      ${fm.length ? `<span class="etq">${fm.join(" · ")}</span>` : `<span class="etq">${esc(t("x.comprar"))}</span>`}
+    return `<article class="libro${claseLibro(l)}" data-id="${esc(l.id)}" tabindex="0">${portada(l)}
+      <div class="pie">${sello(l)}${etqsFormato(l)}<span class="etq">${esc(categoria(l.categoria))}</span>
       ${l.editorial ? `<span class="etq ed-fenix">${esc(t("x.edFenix"))}</span>` : ""}
       ${leidos[l.id] ? `<span class="etq leido">✓ ${esc(t("x.leido"))}</span>` : ""}
       ${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></article>`;
@@ -1649,11 +1683,9 @@
       <span><span class="tt" style="display:block">${esc(p.titulo)}</span><span class="au" style="display:block">${esc(p.autor)} · ${esc(categoria(p.categoria))}</span>${de ? `<span class="de">${esc(de)}</span>` : ""}</span></a>`;
   }
   function fila(l){
-    const fm = [...new Set(formatos(l))].map(etqFormato);
-    return `<div class="fila" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="mini ${esc(l.categoria)}"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
+    return `<div class="fila${claseLibro(l)}" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="mini ${esc(l.categoria)}"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
       <div class="libro-c"><div class="tt"><a href="libro/${esc(l.id)}/">${esc(l.titulo)}</a></div><div class="au">${esc(l.autor)} · ${esc(l.anio)}</div></div>
-      <div class="etqs"><span class="etq">${esc(categoria(l.categoria))}</span>
-        ${fm.length ? `<span class="etq">${fm.join(" · ")}</span>` : `<span class="etq">${esc(t("x.comprar"))}</span>`}
+      <div class="etqs">${sello(l)}${etqsFormato(l)}<span class="etq">${esc(categoria(l.categoria))}</span>
         ${l.editorial ? `<span class="etq ed-fenix">${esc(t("x.edFenix"))}</span>` : ""}</div>
       ${moral(l)}
       <div class="marcas-f">${leidos[l.id] ? `<span class="leido" title="${esc(t("x.leido"))}">✓</span>` : ""}${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}<span class="ir" aria-hidden="true">›</span></div></div>`;
@@ -1677,13 +1709,20 @@
     });
   }
   function pintarCatalogo(){
-    const lista = filtrar();
-    $("#catalogo").innerHTML = lista.length ? cabecera() + lista.map(fila).join("") : "";
+    const lista = ordenar(filtrar());
+    // Lo que no tiene EPUB queda plegado al final; se abre solo si se busca, se filtra por otro formato o no hay nada con EPUB.
+    const con = lista.filter(l => tieneEpub(l) || esFenix(l)), sin = lista.filter(l => !tieneEpub(l) && !esFenix(l));
+    const abierto = !con.length || $("#fBuscar").value.trim() || ["pdf", "web", "comprar"].includes($("#fFormato").value);
+    $("#catalogo").innerHTML = !lista.length ? "" : (con.length ? cabecera() + con.map(fila).join("") : "")
+      + (sin.length ? `<details class="sin-epub-grupo"${abierto ? " open" : ""}><summary>${esc(t("x.sinEpub").replace("{n}", sin.length))}</summary>${con.length ? "" : cabecera()}${sin.map(fila).join("")}</details>` : "");
     $("#catalogo").hidden = !lista.length;
     $("#sinResultados").hidden = lista.length > 0;
   }
   function pintarRecomendados(){
-    $("#recomendados").innerHTML = libros().filter(l => l.recomendado).map(tarjeta).join("");
+    const selloF = (D.recomendadosFenix || []).map(porId).filter(l => l && visible(l));
+    $("#selloFenix").innerHTML = selloF.map(tarjeta).join("");
+    $("#bloqueSello").hidden = !selloF.length;
+    $("#recomendados").innerHTML = ordenar(libros().filter(l => l.recomendado && !esFenix(l))).map(tarjeta).join("");
   }
   // Portada: cifras del hero y un acceso por categoría (con el cuadro de un libro de esa categoría) más el plan de vida.
   function pintarInicio(){
@@ -1732,10 +1771,11 @@
     id = l.id; // un id viejo (alias) abre la ficha nueva
     const desc = [
       ...Object.entries(archivosEn(l)).map(([f, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${f.toUpperCase()}</a>`),
-      ...externosEn(l).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
+      ...[...externosEn(l)].sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
       ...comprarEn(l).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
     ].join("");
     $("#fichaCuerpo").innerHTML = `<div class="ficha">${portada(l)}<div>
+      ${sello(l)}
       <h3 style="font-size:22px">${esc(l.titulo)}</h3>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</p>
       <div class="descargas">${desc}</div>
