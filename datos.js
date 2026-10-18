@@ -159,6 +159,7 @@ window.FENIX = {
         "Toma y lee, toma y lee."
       ],
       archivos: { epub: "libros/agustin-confesiones.epub", pdf: "libros/agustin-confesiones.pdf" },
+      editorial: { es: "Traducción nueva de Proyecto Fénix desde el latín, de los trece libros, cotejada con la traducción inglesa de Pusey y revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición y portada nueva.", en: "A new Proyecto Fénix translation from the Latin of all thirteen books, checked against Pusey's English translation and reviewed in its doctrinal passages against the Catechism; prepared with the help of artificial intelligence, with an edition note and a new cover." },
       fuente: { texto: "Traducción de Proyecto Fénix desde el latín (edición de J. J. O'Donnell en The Latin Library), cotejada con la traducción inglesa de E. B. Pusey; licencia CC BY-NC-SA 4.0", url: "https://www.thelatinlibrary.com/augustine.html" },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/confesiones" },
       parecidos: ["historia-de-un-alma", "imitacion-de-cristo-granada", "marmion-vida-del-alma"]
@@ -183,6 +184,7 @@ window.FENIX = {
         "Quiero pasar mi cielo haciendo el bien sobre la tierra."
       ],
       archivos: { epub: "libros/teresa-historia-de-un-alma.epub", pdf: "libros/teresa-historia-de-un-alma.pdf" },
+      editorial: { es: "Traducción nueva de Proyecto Fénix desde el francés de la edición de 1912, con sus notas, revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición y portada nueva.", en: "A new Proyecto Fénix translation from the French of the 1912 edition, with its notes, reviewed in its doctrinal passages against the Catechism; prepared with the help of artificial intelligence, with an edition note and a new cover." },
       fuente: { texto: "Traducción de Proyecto Fénix desde el francés de la edición de 1912 del Carmelo de Lisieux (Project Gutenberg, libro n.º 36708); licencia CC BY-NC-SA 4.0", url: "https://www.gutenberg.org/ebooks/36708" },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://www.delibris.org/es/historia-de-un-alma-0" },
       parecidos: ["confesiones-es", "marmion-vida-del-alma", "imitacion-de-cristo-granada"]
