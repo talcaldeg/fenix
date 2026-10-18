@@ -89,12 +89,14 @@ def publicar(tema, mensaje):
         if not mensaje:
             sys.exit("Hay cambios sin commitear: pasar -m \"mensaje\".")
         git("add", "-A", cwd=ruta)
-        git("commit", "-q", "-m", mensaje + "\n\nCo-Authored-By: Claude <noreply@anthropic.com>", cwd=ruta)
+        if git("diff", "--cached", "--quiet", cwd=ruta, check=False).returncode != 0:
+            git("commit", "-q", "-m", mensaje + "\n\nCo-Authored-By: Claude <noreply@anthropic.com>", cwd=ruta)
     for intento in range(3):
         integrar(ruta)
         generar(ruta)
-        if git("status", "--porcelain", cwd=ruta).stdout.strip():
-            git("add", "-A", cwd=ruta)
+        # El generador escribe LF y la copia tiene CRLF: puede "cambiar" sin cambiar el contenido en git.
+        git("add", "-A", cwd=ruta)
+        if git("diff", "--cached", "--quiet", cwd=ruta, check=False).returncode != 0:
             git("commit", "-q", "-m", "Regenera las páginas estáticas", cwd=ruta)
         if git("rev-list", "--count", "origin/main..HEAD", cwd=ruta).stdout.strip() == "0":
             print("Nada nuevo que publicar.")
