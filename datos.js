@@ -248,6 +248,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "oracion",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-surco.jpg", credito: { es: "Jean-François Millet, «El sembrador», 1850", en: "Jean-François Millet, «The Sower», 1850" }, url: "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_The_Sower_-_Google_Art_Project.jpg" },
       resumen: {
         es: "1000 puntos de meditación en 32 capítulos, en la línea de «Camino», con especial atención a las virtudes humanas. Se dirige a la persona entera, «cuerpo y alma, naturaleza y gracia». Primera edición póstuma, de 1986.",
         en: "1000 points for meditation in 32 chapters, in the vein of «The Way», with special attention to the human virtues. It speaks to the whole person, «body and soul, nature and grace». First published posthumously in 1986."
@@ -272,6 +273,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "oracion",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-forja.jpg", credito: { es: "Joseph Wright of Derby, «Una herrería», 1772", en: "Joseph Wright of Derby, «An Iron Forge», 1772" }, url: "https://commons.wikimedia.org/wiki/File:Joseph_Wright_of_Derby_(1734-1797)_-_An_Iron_Forge_-_T06670_-_Tate.jpg" },
       resumen: {
         es: "1055 puntos de meditación en 13 capítulos, muchos de ellos autobiográficos aunque escritos en tercera persona. Recorre el camino del cristiano hacia la identificación con Cristo. Primera edición de 1987.",
         en: "1055 points for meditation in 13 chapters, many of them autobiographical though written in the third person. It follows the Christian's path towards identification with Christ. First published in 1987."
@@ -296,6 +298,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-es-cristo-que-pasa.jpg", credito: { es: "Duccio di Buoninsegna, «La vocación de Pedro y Andrés», 1308-1311", en: "Duccio di Buoninsegna, «The Calling of the Apostles Peter and Andrew», 1308-1311" }, url: "https://commons.wikimedia.org/wiki/File:Duccio_di_Buoninsegna,_The_Calling_of_the_Apostles_Peter_and_Andrew,_1308-1311,_NGA_282.jpg" },
       resumen: {
         es: "18 homilías pronunciadas en fiestas del año litúrgico. El hilo es la filiación divina, junto con la llamada universal a la santidad, la santificación del trabajo ordinario, la contemplación en medio del mundo y la unidad de vida. Fueron predicadas de viva voz a personas muy diversas, no escritas como tratado. Primera edición de 1973.",
         en: "18 homilies preached on feasts of the liturgical year. The common thread is divine filiation, together with the universal call to holiness, the sanctification of ordinary work, contemplation in the middle of the world and unity of life. They were spoken to very varied listeners, not written as a treatise. First published in 1973."
@@ -320,6 +323,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-amigos-de-dios.jpg", credito: { es: "Johannes Vermeer, «Cristo en casa de Marta y María», c. 1655", en: "Johannes Vermeer, «Christ in the House of Martha and Mary», c. 1655" }, url: "https://commons.wikimedia.org/wiki/File:Johannes_(Jan)_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg" },
       resumen: {
         es: "18 homilías que toman las virtudes cristianas como hilo de un «coloquio filial con Dios». Publicado en 1977, es la primera obra póstuma del autor.",
         en: "18 homilies that take the Christian virtues as the thread of a «filial conversation with God». Published in 1977, it was the author's first posthumous work."
@@ -344,6 +348,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-amar-a-la-iglesia.jpg", credito: { es: "Giovanni Paolo Panini, «Interior de San Pedro de Roma», c. 1754", en: "Giovanni Paolo Panini, «Interior of Saint Peter's, Rome», c. 1754" }, url: "https://commons.wikimedia.org/wiki/File:Giovanni_Paolo_Panini,_Interior_of_Saint_Peter%27s,_Rome,_c._1754,_NGA_50884.jpg" },
       resumen: {
         es: "Reúne las homilías «Lealtad a la Iglesia», «El fin sobrenatural de la Iglesia» y «Sacerdote para la eternidad», con presentación de Jesús Urteaga y dos escritos del beato Álvaro del Portillo.",
         en: "It gathers the homilies «Loyalty to the Church», «The Supernatural Aim of the Church» and «A Priest Forever», with a presentation by Jesús Urteaga and two writings by Blessed Álvaro del Portillo."
@@ -368,6 +373,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "oracion",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-en-dialogo-con-el-senor.jpg", credito: { es: "Henry Ossawa Tanner, «Nicodemo visita a Jesús», 1899", en: "Henry Ossawa Tanner, «Nicodemus Visiting Jesus», 1899" }, url: "https://commons.wikimedia.org/wiki/File:Nicodemus_Visiting_Jesus,_by_Henry_Ossawa_Tanner.jpg" },
       resumen: {
         es: "25 textos de su predicación a miembros del Opus Dei en Roma entre 1954 y 1975, publicados para el público general en 2017. Temas frecuentes: la identificación con Cristo, la filiación divina, el amor a Dios y a la Iglesia, la oración, la humildad y la caridad fraterna. Su fin es ayudar a hacer oración personal.",
         en: "25 texts from his preaching to members of Opus Dei in Rome between 1954 and 1975, published for a general readership in 2017. Recurring themes: identification with Christ, divine filiation, love for God and the Church, prayer, humility and fraternal charity. It is meant to help the reader pray."
@@ -389,6 +395,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "oracion",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-santo-rosario.jpg", credito: { es: "Caravaggio, «Virgen del Rosario», c. 1607", en: "Caravaggio, «Madonna of the Rosary», c. 1607" }, url: "https://commons.wikimedia.org/wiki/File:Madonna_of_the_Rosary-Caravaggio_(1607).jpg" },
       resumen: {
         es: "Consideraciones breves sobre los misterios gozosos, dolorosos y gloriosos, y un comentario a la letanía lauretana; desde 2003 incluye un apéndice con los misterios luminosos. Lo escribió de un tirón en 1931, en la acción de gracias después de la Misa, y se publicó en 1934.",
         en: "Short considerations on the joyful, sorrowful and glorious mysteries, and a commentary on the Litany of Loreto; since 2003 it includes an appendix with the luminous mysteries. He wrote it at one sitting in 1931, during his thanksgiving after Mass, and it was published in 1934."
@@ -413,6 +420,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "oracion",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-via-crucis.jpg", credito: { es: "Rafael, «Caída en el camino del Calvario», 1517", en: "Raphael, «Christ Falls on the Way to Calvary», 1517" }, url: "https://commons.wikimedia.org/wiki/File:Raffaello_Sanzio_-_Christ_Falls_on_the_Way_to_Calvary_-_WGA18828.jpg" },
       resumen: {
         es: "Comentarios breves a las catorce estaciones, nacidos de su oración personal. Cada estación trae un relato y unos puntos de meditación numerados. Primera edición de 1981.",
         en: "Short commentaries on the fourteen stations, born of his personal prayer. Each station has a narrative and numbered points for meditation. First published in 1981."
@@ -437,6 +445,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-cartas-1.jpg", credito: { es: "Rembrandt, «El apóstol Pablo»", en: "Rembrandt, «The Apostle Paul»" }, url: "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Apostle_Paul_-_WGA19120.jpg" },
       resumen: {
         es: "Las cuatro primeras «Cartas» largas del fundador a los miembros del Opus Dei, con cuya edición pública se comenzó en septiembre de 2020. Tratan de la vida ordinaria como camino de santidad, la humildad, la misión del cristiano en la vida social y la caridad al transmitir la fe.",
         en: "The founder's first four long «Letters» to the members of Opus Dei, whose public edition began in September 2020. They deal with ordinary life as a path to holiness, humility, the Christian's mission in social life and charity in passing on the faith."
@@ -458,6 +467,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-cartas-2.jpg", credito: { es: "Valentin de Boulogne, «San Pablo escribiendo sus epístolas»", en: "Valentin de Boulogne, «Saint Paul Writing His Epistles»" }, url: "https://commons.wikimedia.org/wiki/File:Valentin_de_Boulogne_-_Saint_Paul_Writing_His_Epistles_-_BF.1991.4_-_Museum_of_Fine_Arts.jpg" },
       resumen: {
         es: "Cuatro cartas (n.º 5 a 8), fechadas entre 1939 y 1943 y muy reelaboradas en los años sesenta. Tratan de la misión de los laicos en la educación, el carisma del Opus Dei y su misión evangelizadora, la formación cristiana de la juventud y el espíritu de servicio a la Iglesia. Publicadas en 2022.",
         en: "Four letters (nos. 5 to 8), dated between 1939 and 1943 and extensively reworked in the 1960s. They deal with the mission of lay people in education, the charism of Opus Dei and its evangelising mission, the Christian formation of young people and the spirit of service to the Church. Published in 2022."
@@ -479,6 +489,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-carta-29.jpg", credito: { es: "Caravaggio, «San Jerónimo escribiendo», 1605-1606", en: "Caravaggio, «Saint Jerome Writing», 1605-1606" }, url: "https://commons.wikimedia.org/wiki/File:Saint_Jerome_Writing-Caravaggio_(1605-6).jpg" },
       resumen: {
         es: "Carta larga, fechada el 9 de enero de 1959, sobre la obra de San Gabriel: el apostolado con personas que, en general, siguen el camino del matrimonio. Pertenece al género de las «Cartas» del fundador sobre el carisma y la historia del Opus Dei, en tono familiar. Su edición crítica apareció en «Studia et Documenta» 17 (2023).",
         en: "A long letter, dated 9 January 1959, on the work of Saint Gabriel: the apostolate with people who are, in general, called to marriage. It belongs to the founder's «Letters» on the charism and history of Opus Dei, written in a familiar tone. Its critical edition appeared in «Studia et Documenta» 17 (2023)."
@@ -500,6 +511,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-conversaciones.jpg", credito: { es: "Alberto Durero, «Jesús entre los doctores», 1506", en: "Albrecht Dürer, «Jesus among the Doctors», 1506" }, url: "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_-_Jesus_among_the_Doctors_-_Google_Art_Project.jpg" },
       resumen: {
         es: "Siete entrevistas de 1966 a 1968 (Le Figaro, The New York Times, Time, L'Osservatore della Domenica, Telva, Gaceta Universitaria y Palabra) sobre la Iglesia y el Concilio, las libertades personales, la universidad, la mujer en la sociedad y el Opus Dei. Cierra con la homilía «Amar al mundo apasionadamente», del 8 de octubre de 1967.",
         en: "Seven interviews from 1966 to 1968 (Le Figaro, The New York Times, Time, L'Osservatore della Domenica, Telva, Gaceta Universitaria and Palabra) on the Church and the Council, personal freedoms, the university, women in society and Opus Dei. It ends with the homily «Passionately Loving the World», of 8 October 1967."
@@ -524,6 +536,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-abadesa-de-las-huelgas.jpg", credito: { es: "Alfonso VIII y Leonor, fundadores de Las Huelgas, miniatura medieval", en: "Alfonso VIII and Eleanor, founders of Las Huelgas, medieval miniature" }, url: "https://commons.wikimedia.org/wiki/File:Alfonso_VIII_de_Castilla_y_Leonor.jpg" },
       resumen: {
         es: "Estudio teológico-jurídico, hecho sobre fuentes originales, de la jurisdicción cuasi episcopal que tuvo la abadesa del monasterio de Las Huelgas, en Burgos. Doce capítulos y dos apéndices: la serie cronológica de las abadesas y las reales cédulas de Felipe V. Primera edición de 1944.",
         en: "A theological and juridical study, based on original sources, of the quasi-episcopal jurisdiction held by the abbess of the monastery of Las Huelgas in Burgos. Twelve chapters and two appendices: the chronological list of abbesses and the royal decrees of Philip V. First published in 1944."
@@ -545,6 +558,7 @@ window.FENIX = {
       idioma: "es",
       categoria: "lectura",
       recomendado: false,
+      imagen: { src: "img/portadas/escriva-discursos-universidad.jpg", credito: { es: "Laurentius de Voltolina, «Una clase en la Universidad de Bolonia», siglo XIV", en: "Laurentius de Voltolina, «A Lecture at the University of Bologna», 14th century" }, url: "https://commons.wikimedia.org/wiki/File:Laurentius_de_Voltolina_001.jpg" },
       resumen: {
         es: "Volumen preparado por la Universidad de Navarra con motivo de la beatificación de su fundador. Reúne sus discursos académicos, la homilía del campus de octubre de 1967 y otras intervenciones públicas sobre la universidad; cierra con los discursos del acto académico del 26 de junio de 1992. Prólogo del beato Álvaro del Portillo.",
         en: "A volume prepared by the University of Navarra on the occasion of its founder's beatification. It gathers his academic speeches, the campus homily of October 1967 and other public statements on the university, and closes with the speeches of the academic ceremony of 26 June 1992. Foreword by Blessed Álvaro del Portillo."

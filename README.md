@@ -6,7 +6,13 @@ Cristo «como otra humanidad» (santa Isabel de la Trinidad; Paul de Jaegher, *O
 
 Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 
-- `index.html`: el sitio entero (vistas por `#hash`, modo claro y oscuro, ES/EN).
+- `index.html`: el sitio entero (vistas por `#hash`, modo claro y oscuro, ES/EN). Cada idioma
+  muestra solo lo suyo: en español no aparece ningún libro, enlace ni oración en inglés, y al
+  revés. Un enlace en otro idioma que el libro lleva `idioma` en `externos`.
+- Plan de vida (`plan` de `datos.js`): «Para la oración» solo con fichas de categoría `oracion`
+  y «Para la lectura espiritual» solo con `lectura`, para que la sección y la etiqueta coincidan.
+- Todo libro lleva `imagen`. escriva.org no publica portadas, así que las obras de san Josemaría
+  llevan un cuadro de dominio público como las demás.
 - `datos.js`: catálogo y oraciones. Un libro nuevo es una ficha más; sus campos están
   comentados arriba del archivo.
 - `libros/`: solo obras que se pueden difundir libremente (dominio público o con permiso). Lo
