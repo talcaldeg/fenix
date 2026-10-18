@@ -67,6 +67,13 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   guarda cada página en `herramientas/.cache_delibris/` (fuera de git) y sigue donde quedó. Para
   sumar las reseñas nuevas: `--refrescar 3`. La clave del trozo se calcula igual en
   `claveDelibris` de `index.html`.
+- Citas (`#citas`): todas las `citas` de las fichas en el idioma de la página (las de un libro
+  en otro idioma no se muestran), con buscador y categoría; cada una lleva a la ficha de su libro.
+  La portada muestra una «Cita del día» que cambia a medianoche y recorre todas antes de repetir.
+  No hay que tocar nada para sumarlas: basta con las `citas` de `datos.js`.
+- Ficha del libro: «Compartir» abre el menú del sistema en el celular y en el computador copia el
+  enlace a la página estática del libro (`libro/<id>/` o `libro/<id>/<idioma>/`, con vista previa);
+  «Solicitar una corrección» abre el formulario de errores con ese libro ya elegido.
 - Formularios (salvar un libro, error, contacto): FormSubmit, destino en
   `FENIX.contacto.formularios`. El enlace de donación va en `FENIX.contacto.donar`.
 

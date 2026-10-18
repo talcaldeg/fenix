@@ -1113,6 +1113,21 @@
   .dos-col{display:grid; grid-template-columns:1fr 1fr; gap:22px}
   @media (max-width:820px){.dos-col{grid-template-columns:1fr}}
 
+  /* Cita del día (inicio) y sección Citas: cada cita lleva a la ficha de su libro. */
+  .cita-dia{display:block; margin-top:34px; padding:22px 24px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:14px; background:var(--card); color:inherit; text-decoration:none}
+  .cita-dia:hover, .cita-dia:focus-visible{border-color:var(--oro)}
+  .cita-dia .txt{margin:6px 0 10px; font-size:clamp(19px,2.6vw,24px); line-height:1.45; font-style:italic}
+  .cita-dia .de{font:14px system-ui,sans-serif; color:var(--muted)}
+  .cita-dia .ir{font:600 14px system-ui,sans-serif; color:var(--acento); white-space:nowrap}
+  .citas{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
+  @media (max-width:760px){.citas{grid-template-columns:1fr}}
+  .cita{display:flex; gap:14px; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--card); color:inherit; text-decoration:none}
+  .cita:hover, .cita:focus-visible{border-color:var(--oro)}
+  .cita .mini{flex:0 0 auto; width:44px; height:66px; border-radius:4px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
+  .cita .mini.oracion{background-color:var(--c-oracion)} .cita .mini.novela{background-color:var(--c-novela)}
+  .cita blockquote{margin:0; border:0; padding:0}
+  .ficha .aviso{font:13px system-ui,sans-serif; color:var(--ok); align-self:center}
+
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
 </style>
 </head>
@@ -1127,6 +1142,7 @@
       <a href="#editorial" data-i18n="nav.editorial" id="navEditorial">Editorial</a>
       <a href="#plan" data-i18n="nav.plan">Plan de vida</a>
       <a href="#oraciones" data-i18n="nav.oraciones">Oraciones</a>
+      <a href="#citas" data-i18n="nav.citas">Citas</a>
       <details class="mas" id="menuMas">
         <summary data-i18n="nav.colaborar">Colaborar</summary>
         <div class="sub">
@@ -1169,6 +1185,8 @@
       <a class="credito" href="https://commons.wikimedia.org/wiki/File:Matthias_Gr%C3%BCnewald_-_Resurrection.jpg" target="_blank" rel="noopener" data-i18n="hero.credito">Matthias Grünewald, «La Resurrección», retablo de Isenheim, 1512-1516</a>
     </div>
     <div class="wrap">
+      <a class="cita-dia" id="citaDia" hidden></a>
+
       <div style="margin-top:34px">
         <p class="eyebrow" data-i18n="acc.eyebrow">Explorar</p>
         <div class="accesos" id="accesos"></div>
@@ -1301,6 +1319,30 @@
     </div>
   </section>
 
+  <!-- CITAS: las `citas` de cada ficha de datos.js, en el idioma de la página -->
+  <section class="vista" id="v-citas">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="cit.eyebrow">De los libros de la biblioteca</p>
+      <h2 data-i18n="cit.titulo">Citas</h2>
+      <p class="lede" data-i18n="cit.lede">Frases escogidas de cada libro, copiadas tal cual del texto. Toque una para ver su libro.</p>
+      <div class="filtros" style="margin-top:18px">
+        <input type="search" id="cBuscar" placeholder="Buscar una palabra, un título o un autor" data-i18n-ph="cit.buscar">
+        <select id="cCategoria">
+          <option value="" data-i18n="bib.todas">Todas las categorías</option>
+          <option value="lectura" data-i18n="cat.lectura">Lectura espiritual</option>
+          <option value="oracion" data-i18n="cat.oracion">Oración</option>
+          <option value="novela" data-i18n="cat.novela">Novelas</option>
+          <option value="teatro" data-i18n="cat.teatro">Teatro</option>
+          <option value="poesia" data-i18n="cat.poesia">Poesía</option>
+          <option value="ensayo" data-i18n="cat.ensayo">Ensayo e historia</option>
+        </select>
+      </div>
+      <p class="meta" id="cCuenta"></p>
+      <div class="citas" id="listaCitas" role="list"></div>
+      <p class="vacio" id="cVacio" hidden data-i18n="cit.vacio">No hay citas con esa búsqueda.</p>
+    </div>
+  </section>
+
   <!-- SALVAR UN LIBRO -->
   <section class="vista" id="v-salvar">
     <div class="wrap dos-col">
@@ -1413,7 +1455,10 @@
   // ---------- textos de la interfaz ----------
   const T = {
     en: {
-      "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions","nav.todos":"All books",
+      "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions","nav.todos":"All books","nav.citas":"Quotes",
+      "cit.eyebrow":"From the books in the library","cit.titulo":"Quotes","cit.lede":"Passages chosen from each book, copied exactly from the text. Tap one to see its book.","cit.buscar":"Search a word, a title or an author","cit.vacio":"No quotes match that search.",
+      "cit.cuenta":"{n} quotes","cit.cuenta1":"1 quote","cit.dia":"Quote of the day","cit.verLibro":"See the book →",
+      "x.compartir":"Share","x.copiado":"Link copied. Paste it wherever you like.","x.copiaEnlace":"Copy this link:","x.corregir":"Request a correction",
       "todos.eyebrow":"World catalogue","todos.titulo":"All books in English","todos.lede":"Search for any book published in English. Its page shows the Delibris moral rating, whether it is under copyright and, if it is in Fénix, the button to download it; if it is not, you can ask us to look for it.",
       "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":" (a review site; not an official judgement of the Church), which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
       "todos.cuenta":"{n} books found","todos.cuenta1":"1 book found","todos.cuentaAprox":"About {n} books","todos.masEd1":"and 1 more edition","todos.masEd":"and {n} more editions","todos.vacio":"No books found. Try a single word from the title or the author's surname.","todos.error":"The catalogue did not respond. Please try again in a moment.","todos.buscando":"Searching…","todos.edicion":"Edition",
@@ -1465,6 +1510,8 @@
     es: {
       "x.leer":"Descargar","x.enLinea":"Leer en línea","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos","x.puntuacion":"Puntuación","x.suya":"Su puntuación (solo la ve usted)",
+      "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
+      "x.compartir":"Compartir","x.copiado":"Enlace copiado. Péguelo donde quiera.","x.copiaEnlace":"Copie este enlace:","x.corregir":"Solicitar una corrección",
       "x.edFenix":"Edición Fénix","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
       "x.ayuda":"¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
@@ -1527,6 +1574,10 @@
   const descargable = l => Object.keys(archivosEn(l)).length > 0 || externosEn(l).length > 0;
   const formatos = l => [...Object.keys(archivosEn(l)), ...externosEn(l).map(e => e.formato)];
   const etqFormato = f => f === "web" ? t("x.web") : f.toUpperCase();
+  // Página estática del libro; la versión en otro idioma tiene la suya en libro/<id>/<idioma>/ (gen_estaticos.js).
+  const rutaLibro = l => { const o = D.libros.find(x => x.id === l.id); return "libro/" + l.id + "/" + (o && o.idioma !== lang && (o.versiones || {})[lang] ? lang + "/" : ""); };
+  // Citas en el idioma de la página: las de un libro en otro idioma no se muestran.
+  const citas = () => libros().filter(l => l.idioma === lang).flatMap(l => (l.citas || []).map(c => ({ c, l })));
 
   function portada(l){
     if (l.imagen) return `<div class="portada img ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"><div class="t">${esc(l.titulo)}</div><div class="a">${esc(l.autor)}</div></div>`;
@@ -1665,6 +1716,9 @@
       <div class="marcas">
         <button class="btn" id="btnLeido">${leidos[id] ? "✓ " + esc(t("x.quitarLeido")) : esc(t("x.marcarLeido"))}</button>
         <button class="btn" id="btnFav">${favoritos[id] ? "★ " + esc(t("x.quitarFav")) : "☆ " + esc(t("x.marcarFav"))}</button>
+        <button class="btn" id="btnCompartir">↗ ${esc(t("x.compartir"))}</button>
+        <button class="btn" id="btnCorregir">✎ ${esc(t("x.corregir"))}</button>
+        <span class="aviso" id="avisoFicha" role="status"></span>
       </div>
       <div class="seccion-ficha"><strong>${esc(t("x.resumen"))}</strong><p style="margin:6px 0 0">${esc(l.resumen[lang] || l.resumen.es)}</p></div>
       ${l.editorial ? `<div class="seccion-ficha"><strong>${esc(t("x.edFenix"))}</strong><p style="margin:6px 0 0">${esc(l.editorial[lang] || l.editorial.es)}</p></div>` : ""}
@@ -1675,12 +1729,26 @@
           ${["lectura","oracion"].includes(l.categoria) ? `<span>${esc(t("x.teologica"))}</span><span>${estrellasMias(id,"teologica")}</span>` : ""}
           <span>${esc(t("l.moral"))}</span><span>${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</span></div></div>
       <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>
-      <p class="meta" style="margin-top:14px"><a href="libro/${esc(l.id)}/">${esc(t("x.paginaLibro"))}</a></p>
+      <p class="meta" style="margin-top:14px"><a href="${esc(rutaLibro(l))}">${esc(t("x.paginaLibro"))}</a></p>
       ${l.fuente ? `<p class="meta" style="margin-top:6px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta" style="margin-top:6px">${esc(t("x.portada"))}: <a href="${esc(l.imagen.url)}" target="_blank" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : t("x.dominioPublico"))})</p>` : ""}
     </div></div>`;
     $("#btnLeido").onclick = () => { leidos[id] ? delete leidos[id] : leidos[id] = true; almacen.guardar("leidos", leidos); abrirFicha(id); pintarTodo(); };
     $("#btnFav").onclick = () => { favoritos[id] ? delete favoritos[id] : favoritos[id] = true; almacen.guardar("favoritos", favoritos); abrirFicha(id); pintarTodo(); };
+    // Compartir: el menú del sistema en el celular; en el computador, copia el enlace de la página
+    // estática del libro (que trae la vista previa para WhatsApp y redes).
+    $("#btnCompartir").onclick = async () => {
+      const url = new URL(rutaLibro(l), location.href).href;
+      if (navigator.share){ try{ await navigator.share({ title: l.titulo, text: `${l.titulo} - ${l.autor}`, url }); }catch(e){} return; }
+      try{ await navigator.clipboard.writeText(url); $("#avisoFicha").textContent = t("x.copiado"); }
+      catch(e){ prompt(t("x.copiaEnlace"), url); }
+    };
+    // Solicitar una corrección: abre el formulario de errores con este libro ya elegido.
+    $("#btnCorregir").onclick = () => {
+      $("#selLibroError").value = `${l.titulo} - ${l.autor}`;
+      location.hash = "error";
+      setTimeout(() => $('#v-error textarea[name="descripcion"]').focus(), 0);
+    };
     $$("#fichaCuerpo .estrellas:not(.fija) button").forEach(b => b.onclick = () => {
       const s = b.parentElement, n = +b.dataset.n;
       misNotas[s.dataset.id] = misNotas[s.dataset.id] || {};
@@ -1895,6 +1963,31 @@
     $$("#listaOraciones [data-or]").forEach(b => b.onclick = () => { idiomaOracion[b.dataset.or] = b.dataset.lang; pintarOraciones(); });
   }
 
+  // ---------- citas ----------
+  // Cita del día: cambia a medianoche (hora del visitante) y recorre todas antes de repetir; el paso
+  // primo con el total evita que dos días seguidos salgan citas del mismo libro.
+  function pintarCitaDia(){
+    const cs = citas(), el = $("#citaDia");
+    el.hidden = !cs.length; if (!cs.length) return;
+    const hoy = new Date(), dia = Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 864e5);
+    const mcd = (a, b) => b ? mcd(b, a % b) : a;
+    const paso = [37, 41, 43, 47, 53, 59, 61, 67].find(p => mcd(p, cs.length) === 1) || 1;
+    const { c, l } = cs[(dia * paso) % cs.length];
+    el.href = "#libro/" + l.id;
+    el.innerHTML = `<p class="eyebrow" style="margin:0">${esc(t("cit.dia"))}</p><p class="txt">${esc(c)}</p>
+      <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline"><span class="de">${esc(l.autor)}, <i>${esc(l.titulo)}</i></span><span class="ir">${esc(t("cit.verLibro"))}</span></div>`;
+  }
+  function pintarCitas(){
+    const sin = s => s.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+    const q = sin($("#cBuscar").value.trim()), cat = $("#cCategoria").value;
+    const cs = citas().filter(({ c, l }) => (!cat || l.categoria === cat) && (!q || sin(c + " " + l.titulo + " " + l.autor).includes(q)));
+    $("#cCuenta").textContent = cs.length === 1 ? t("cit.cuenta1") : t("cit.cuenta").replace("{n}", cs.length);
+    $("#listaCitas").innerHTML = cs.map(({ c, l }) => `<a class="cita" role="listitem" href="#libro/${esc(l.id)}"><span class="mini ${esc(l.categoria)}" aria-hidden="true"${l.imagen ? ` style="background-image:url('${esc(l.imagen.src)}')"` : ""}></span>
+      <blockquote>${esc(c)}<cite>${esc(l.autor)}, ${esc(l.titulo)}</cite></blockquote></a>`).join("");
+    $("#cVacio").hidden = cs.length > 0;
+  }
+  ["#cBuscar","#cCategoria"].forEach(s => $(s).addEventListener("input", pintarCitas));
+
   // ---------- editorial ----------
   function pintarEditorial(){
     const ls = libros().filter(l => l.editorial);
@@ -1946,7 +2039,7 @@
   else $("#btnDonar").hidden = true; // un botón que no hace nada confunde: sin enlace, solo el aviso
 
   // ---------- rutas ----------
-  const VISTAS = ["inicio","biblioteca","todos","editorial","plan","oraciones","salvar","error","dona","contacto"];
+  const VISTAS = ["inicio","biblioteca","todos","editorial","plan","oraciones","citas","salvar","error","dona","contacto"];
   let ultimaVista = "inicio";
   function ruta(){
     const h = location.hash.replace(/^#/, "");
@@ -1976,7 +2069,7 @@
   $("#fechaCatalogo").textContent = D.actualizado || "";
   // Al cambiar de idioma, los resultados del catálogo mundial eran del otro idioma: se rehace la búsqueda.
   function pintarTodos(){ if (busqueda.q && busqueda.idioma !== lang){ $("#tBuscar").value = busqueda.q; buscarObras(false); } }
-  function pintarTodo(){ pintarInicio(); pintarTodos(); pintarRecomendados(); pintarCatalogo(); pintarEditorial(); pintarPlan(); pintarOraciones(); llenarSelectLibros(); }
+  function pintarTodo(){ pintarInicio(); pintarTodos(); pintarRecomendados(); pintarCatalogo(); pintarEditorial(); pintarPlan(); pintarOraciones(); pintarCitaDia(); pintarCitas(); llenarSelectLibros(); }
   aplicarIdioma();
   ruta();
 })();
