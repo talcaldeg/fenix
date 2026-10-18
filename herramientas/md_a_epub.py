@@ -6,7 +6,8 @@
 - Lee, en orden de nombre, los .md de la carpeta (menos nota.md). Cada `## ` abre un capítulo; el
   texto de un archivo sin encabezado sigue el capítulo anterior (tramos de un mismo capítulo).
 - nota.md (si existe) va como «Nota de esta edición», después del índice.
-- Notas `[^n]` con su `[^n]: texto` al final del tramo: se renumeran por capítulo y van al pie
+- Notas `[^n]` (o `[^ed1]`, del editor) con su `[^n]: texto` al final del tramo: se renumeran por
+  capítulo y van al pie
   del capítulo. Párrafo en cursiva justo después del título: sumario del capítulo.
 - Marcadores `libro.capítulo.párrafo` en su propia línea (Confesiones): el cambio de capítulo
   pone su número romano como subtítulo; el marcador no se imprime.
@@ -92,9 +93,9 @@ def leer(carpeta: Path):
             continue
         txt = md.read_text(encoding="utf-8")
         defs = {}
-        for m in re.finditer(r"(?ms)^\[\^(\d+)\]:\s*(.*?)(?=^\[\^\d+\]:|\Z)", txt):
+        for m in re.finditer(r"(?ms)^\[\^(\w+)\]:\s*(.*?)(?=^\[\^\w+\]:|\Z)", txt):
             defs[m.group(1)] = " ".join(m.group(2).split())
-        txt = re.sub(r"(?ms)^\[\^\d+\]:.*", "", txt, count=1) if defs else txt
+        txt = re.sub(r"(?ms)^\[\^\w+\]:.*", "", txt, count=1) if defs else txt
         recien_titulo = False
         for b in bloques(txt):
             if b.startswith("## "):
@@ -126,7 +127,7 @@ def leer(carpeta: Path):
                 return f'<a class="ref" epub:type="noteref" href="#n{k}" id="r{k}"><sup>{k}</sup></a>'
             lineas = b.split("\n")
             cuerpo = "<br/>".join(enlinea(l.strip()) for l in lineas)
-            cuerpo = re.sub(r"\[\^(\d+)\]", llamada, cuerpo)
+            cuerpo = re.sub(r"\[\^(\w+)\]", llamada, cuerpo)
             if recien_titulo and re.fullmatch(r"\*[^*].*\*", b.strip()):
                 c.html.append(f'<p class="subtitulo">{enlinea(b.strip()[1:-1])}</p>')
             elif len(lineas) > 1:
