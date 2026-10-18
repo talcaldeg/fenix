@@ -1093,7 +1093,6 @@
   @media (max-width:600px){.ficha{grid-template-columns:1fr} .ficha .portada{max-width:160px}}
   .ficha .portada{border-radius:10px}
   .cerrar{position:absolute; right:8px; top:6px; width:44px; height:44px; border:0; border-radius:50%; background:var(--chip); font-size:26px; line-height:1; cursor:pointer; color:var(--ink); z-index:1}
-  [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
   .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 12px}
   .descargas{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0}
   .puntos{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font:14px system-ui,sans-serif; align-items:center; margin:12px 0}
@@ -1112,6 +1111,7 @@
   .ed{display:grid; grid-template-columns:72px minmax(0,1fr); gap:16px; align-items:start; margin-bottom:14px; cursor:pointer}
   .ed .mini{width:72px; height:108px; border-radius:6px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
   .ed p{margin:6px 0 10px; font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
+  [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
   .etq.ed-fenix{color:var(--oro); font-weight:600}
   .etq.der-libre{color:var(--ok); font-weight:600} .etq.der-protegido, .etq.der-probable{color:var(--vino); font-weight:600}
   .fila .moral-obra{min-width:0}
@@ -1757,8 +1757,6 @@
     if (vivos.length) return { tipo: "protegido", etq: "der.etqProtegido", txt: t("der.vivo").replace("{a}", nombre(vivos[0])).replace("{b}", anioDe(vivos[0].birth_date)) };
     if (autores.length && muertes.length === autores.length){
       const m = Math.max(...muertes), a = autores.find(x => anioDe(x.death_date) === m);
-  // Sin coincidencia en el índice no se afirma que Delibris no lo reseñe: puede estar con otro título.
-  const moralObra = d => d ? moral({ delibris: d }) : `<span class="moral"><span class="circ" aria-hidden="true">${"<i></i>".repeat(6)}</span><span class="txt">${esc(t("todos.noEncontrada"))}</span></span>`;
       if (m + 70 < hoy) return { tipo: "libre", etq: "der.etqLibre", txt: t("der.libre").replace("{a}", nombre(a)).replace("{m}", m) };
       return { tipo: "protegido", etq: "der.etqProtegido", txt: t("der.protegido").replace("{a}", nombre(a)).replace("{m}", m).replace("{l}", m + 71) };
     }
@@ -1766,6 +1764,8 @@
     return { tipo: "sinDatos", etq: "der.etqSinDatos", txt: t("der.sinDatos") };
   }
 
+  // Sin coincidencia en el índice no se afirma que Delibris no lo reseñe: puede estar con otro título.
+  const moralObra = d => d ? moral({ delibris: d }) : `<span class="moral"><span class="circ" aria-hidden="true">${"<i></i>".repeat(6)}</span><span class="txt">${esc(t("todos.noEncontrada"))}</span></span>`;
   const tapa = o => o.portada ? ` style="background-image:url('https://covers.openlibrary.org/b/id/${encodeURIComponent(o.portada)}-M.jpg')"` : "";
   function filaObra(o){
     const f = libroFenix(o);
@@ -1813,7 +1813,6 @@
     if (!o){
       // Enlace directo a una obra: se pide a Open Library solo esa.
       $("#fichaCuerpo").innerHTML = `<p class="vacio" style="padding:22px">${esc(t("todos.buscando"))}</p>`;
-    await Promise.race([autoresOL(o), new Promise(r => setTimeout(r, 2500))]);
       if (!dlg.open) dlg.showModal();
       try{
         const j = await fetch(`${OL}/search.json?q=${encodeURIComponent(`key:/works/${id} language:${codigoOL()}`)}&fields=${CAMPOS}`).then(r => r.json());
@@ -1821,6 +1820,7 @@
         o = obras[id] = datosObra(j.docs[0]);
       }catch(err){ $("#fichaCuerpo").innerHTML = `<p class="vacio" style="padding:22px">${esc(t("todos.error"))}</p>`; return; }
     }
+    await Promise.race([autoresOL(o), new Promise(r => setTimeout(r, 2500))]);
     const f = libroFenix(o);
     const archivos = f ? Object.entries(archivosEn(f)) : [];
     const externos = f ? externosEn(f) : [];
