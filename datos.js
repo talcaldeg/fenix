@@ -1,6 +1,7 @@
 // Catálogo de Proyecto Fénix. Para agregar un libro, copie una ficha y complete sus campos.
 // - archivos: rutas en libros/ (solo obras que se pueden difundir libremente).
-// - externos: descarga legal en otro sitio (Project Gutenberg, etc.); formato "web" = lectura en línea
+// - externos: descarga legal en otro sitio (Project Gutenberg, etc.); formato "web" = lectura en línea;
+//   idioma del enlace si difiere del libro (el sitio en español no muestra nada en inglés y viceversa)
 //   (así van las obras protegidas de san Josemaría, que la Fundación Studium publica en escriva.org).
 // - comprar: si no hay descarga libre.
 // - nota: puntuación del equipo de 1 a 5 (null = por calificar).
@@ -194,7 +195,7 @@ window.FENIX = {
       autor: "San Josemaría Escrivá",
       anio: "1934",
       idioma: "es",
-      categoria: "lectura",
+      categoria: "oracion",
       recomendado: true,
       imagen: { src: "img/portadas/escriva-camino.jpg", credito: { es: "Fritz von Uhde, «Camino de Emaús», c. 1896", en: "Fritz von Uhde, «The Road to Emmaus», c. 1896" }, url: "https://commons.wikimedia.org/wiki/File:Der_Gang_nach_Emmaus,_1896..jpg" },
       resumen: {
@@ -204,8 +205,8 @@ window.FENIX = {
       citas: ["La oración del cristiano nunca es monólogo."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/camino/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/camino/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/camino/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/camino/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/camino/" },
@@ -219,7 +220,7 @@ window.FENIX = {
       autor: "San Josemaría Escrivá",
       anio: "1986",
       idioma: "es",
-      categoria: "lectura",
+      categoria: "oracion",
       recomendado: false,
       resumen: {
         es: "1000 puntos de meditación en 32 capítulos, en la línea de «Camino», con especial atención a las virtudes humanas. Se dirige a la persona entera, «cuerpo y alma, naturaleza y gracia». Primera edición póstuma, de 1986.",
@@ -228,8 +229,8 @@ window.FENIX = {
       citas: ["Cuanto más generoso seas, por Dios, serás más feliz."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/surco/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/surco/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/surco/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/surco/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/surco/" },
@@ -243,7 +244,7 @@ window.FENIX = {
       autor: "San Josemaría Escrivá",
       anio: "1987",
       idioma: "es",
-      categoria: "lectura",
+      categoria: "oracion",
       recomendado: false,
       resumen: {
         es: "1055 puntos de meditación en 13 capítulos, muchos de ellos autobiográficos aunque escritos en tercera persona. Recorre el camino del cristiano hacia la identificación con Cristo. Primera edición de 1987.",
@@ -252,8 +253,8 @@ window.FENIX = {
       citas: ["Ojalá pueda decirse que la característica que define tu vida es «amar la Voluntad de Dios»."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/forja/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/forja/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/forja/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/forja/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/forja/" },
@@ -276,8 +277,8 @@ window.FENIX = {
       citas: ["Trabajar así es oración. Estudiar así es oración. Investigar así es oración."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/es-cristo-que-pasa/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/es-cristo-que-pasa/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/es-cristo-que-pasa/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/es-cristo-que-pasa/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/es-cristo-que-pasa/" },
@@ -300,8 +301,8 @@ window.FENIX = {
       citas: ["Estas crisis mundiales son crisis de santos."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/amigos-de-dios/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/amigos-de-dios/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/amigos-de-dios/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/amigos-de-dios/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/amigos-de-dios/" },
@@ -324,8 +325,8 @@ window.FENIX = {
       citas: ["Nuestra Madre es Santa, porque ha nacido pura y continuará sin mácula por la eternidad."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/amar-a-la-iglesia/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/amar-a-la-iglesia/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/amar-a-la-iglesia/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/amar-a-la-iglesia/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/amar-a-la-iglesia/" },
@@ -347,7 +348,7 @@ window.FENIX = {
       },
       citas: ["¡Qué alegría tan grande sentirse metidos en Dios! ¡Endiosados!"],
       archivos: {},
-      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" }],
+      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" },
       nota: { literaria: null, teologica: null },
@@ -369,8 +370,8 @@ window.FENIX = {
       citas: ["No olvides, amigo mío, que somos niños."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/santo-rosario/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/santo-rosario/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/santo-rosario/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/santo-rosario/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/santo-rosario/" },
@@ -393,8 +394,8 @@ window.FENIX = {
       citas: ["Dios es mi Padre, aunque me envíe sufrimiento."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/via-crucis/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/via-crucis/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/via-crucis/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/via-crucis/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/via-crucis/" },
@@ -416,7 +417,7 @@ window.FENIX = {
       },
       citas: ["Hijos míos, lo extraordinario nuestro es lo ordinario: lo ordinario hecho con perfección."],
       archivos: {},
-      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/cartas-1/" }],
+      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/cartas-1/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-1/" },
       nota: { literaria: null, teologica: null },
@@ -437,7 +438,7 @@ window.FENIX = {
       },
       citas: ["Solo cuando los hombres se acostumbren a decir y a oír la verdad, habrá comprensión y concordia."],
       archivos: {},
-      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/cartas-2/" }],
+      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/cartas-2/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-2/" },
       nota: { literaria: null, teologica: null },
@@ -458,7 +459,7 @@ window.FENIX = {
       },
       citas: ["En la vida espiritual no hay nada que inventar."],
       archivos: {},
-      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/carta-29/" }],
+      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/carta-29/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/carta-29/" },
       nota: { literaria: null, teologica: null },
@@ -480,8 +481,8 @@ window.FENIX = {
       citas: ["El mundo no es malo, porque ha salido de las manos de Dios."],
       archivos: {},
       externos: [
-        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/conversaciones/" },
-        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/conversaciones/" }
+        { formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/conversaciones/" },
+        { formato: "web", idioma: "en", texto: "escriva.org", url: "https://escriva.org/en/conversaciones/" }
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/conversaciones/" },
@@ -503,7 +504,7 @@ window.FENIX = {
       },
       citas: ["Aquí te presento, amable lector, a la famosa Abadesa de Las Huelgas."],
       archivos: {},
-      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" }],
+      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" },
       nota: { literaria: null, teologica: null },
@@ -524,7 +525,7 @@ window.FENIX = {
       },
       citas: ["Siete lustros han pasado ya desde que abandoné las aulas de la Universidad de Zaragoza y las tierras de Aragón en que nací."],
       archivos: {},
-      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" }],
+      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" },
       nota: { literaria: null, teologica: null },
@@ -586,10 +587,11 @@ window.FENIX = {
     }
   ],
 
-  // Plan de vida: libros recomendados para el rato de oración y para la lectura espiritual (ids de `libros`).
+  // Plan de vida: libros para el rato de oración (categoria "oracion") y para la lectura espiritual
+  // (categoria "lectura"), ids de `libros`. Cada sitio muestra solo los de su idioma.
   plan: {
-    oracion: ["escriva-camino", "imitacion-de-cristo", "one-with-jesus", "escriva-surco", "escriva-forja", "presencia-de-dios"],
-    lectura: ["confesiones", "marmion-vida-del-alma", "escriva-es-cristo-que-pasa", "escriva-amigos-de-dios", "ortodoxia"]
+    oracion: ["escriva-camino", "escriva-surco", "escriva-forja", "conocerle-y-conocerte", "presencia-de-dios"],
+    lectura: ["marmion-vida-del-alma", "escriva-es-cristo-que-pasa", "escriva-amigos-de-dios", "imitacion-de-cristo", "one-with-jesus", "confesiones", "ortodoxia"]
   },
 
   oraciones: [

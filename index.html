@@ -235,7 +235,7 @@
             <blockquote>«Vivo yo, mas no yo, sino Cristo vive en mí».<cite>San Pablo, Gálatas 2,20</cite></blockquote>
             <blockquote>«Estamos llamados a no ser más que una sola cosa con Él; nos hace comulgar, en cuanto miembros de su Cuerpo, en lo que Él vivió en su carne por nosotros y como modelo nuestro».<cite>Catecismo de la Iglesia Católica, n. 521</cite></blockquote>
             <blockquote>«La gracia es una participación en la vida de Dios».<cite>Catecismo de la Iglesia Católica, n. 1997</cite></blockquote>
-            <blockquote>«May I, fully identified with You, become like another humanity to You».<cite>Paul de Jaegher, S.J., One with Jesus</cite></blockquote>
+            <blockquote><span data-i18n="oh.citaDJ">«Que yo, plenamente identificado contigo, llegue a ser para ti como otra humanidad».</span><cite data-i18n="oh.citaDJRef">Paul de Jaegher, S.J., One with Jesus (traducción de Proyecto Fénix)</cite></blockquote>
           </div>
         </div>
       </div>
@@ -253,11 +253,6 @@
           <option value="lectura" data-i18n="cat.lectura">Lectura espiritual</option>
           <option value="oracion" data-i18n="cat.oracion">Oración</option>
           <option value="novela" data-i18n="cat.novela">Novelas</option>
-        </select>
-        <select id="fIdioma">
-          <option value="" data-i18n="bib.idiomas">Todos los idiomas</option>
-          <option value="es" data-i18n="idioma.es">Español</option>
-          <option value="en" data-i18n="idioma.en">Inglés</option>
         </select>
         <select id="fFormato">
           <option value="" data-i18n="bib.formatos">Cualquier formato</option>
@@ -418,10 +413,10 @@
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
       "oh.p2":"The Jesuit Paul de Jaegher turned it into a prayer at the end of «One with Jesus»: that the soul, fully identified with Jesus, may become for Him «like another humanity». Lending Him our eyes, lips, mind and heart so that He may still look, speak, think and love today.",
       "oh.precision":"A clarification: this is not a new incarnation, nor does the person cease to be himself. It is the life of grace, which unites us to Christ as members of His Body. The expression belongs to spiritual theology; its foundation is the Church's doctrine (Catechism, nos. 521 and 1997).",
-      "oh.rezar":"Pray the prayer","oh.libro":"See «One with Jesus»",
+      "oh.rezar":"Pray the prayer","oh.libro":"See «One with Jesus»","oh.citaDJ":"«May I, fully identified with You, become like another humanity to You».","oh.citaDJRef":"Paul de Jaegher, S.J., One with Jesus",
       "bib.titulo":"Library","bib.buscar":"Search title or author","bib.todas":"All categories","bib.idiomas":"All languages","bib.formatos":"Any format","bib.soloComprar":"Purchase only","bib.enLinea":"Read online",
       "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":" (a Catholic review site; not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks» and the fewer the circles, the more caution the reading calls for. Each book's level is explained on its page.",
-      "l.libro":"Book","l.datos":"Category · language · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","x.portada":"Cover","x.dominioPublico":"public domain, Wikimedia Commons","bib.nota":"Read marks, favourites and your ratings are stored only in this browser.",
+      "l.libro":"Book","l.datos":"Category · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","x.portada":"Cover","x.dominioPublico":"public domain, Wikimedia Commons","bib.nota":"Read marks, favourites and your ratings are stored only in this browser.",
       "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
       "or.titulo":"Prayers","nav.plan":"Plan of life",
       "plan.eyebrow":"To be with God every day","plan.titulo":"Plan of life",
@@ -445,7 +440,7 @@
     es: {
       "x.leer":"Descargar","x.enLinea":"Leer en línea","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos","x.puntuacion":"Puntuación","x.fenix":"Fénix","x.suya":"Suya","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
-      "l.libro":"Libro","l.datos":"Categoría · idioma · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
+      "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.porCalificar":"por calificar","x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en"
     }
   };
@@ -478,8 +473,15 @@
   const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   const porId = id => D.libros.find(l => l.id === id);
   const categoria = c => t("cat." + c);
-  const descargable = l => Object.keys(l.archivos||{}).length > 0 || (l.externos||[]).length > 0;
-  const formatos = l => [...Object.keys(l.archivos||{}), ...(l.externos||[]).map(e => e.formato)];
+  // Cada sitio (ES o EN) muestra solo lo de su idioma: archivos y enlaces van en el idioma del libro
+  // salvo que el enlace diga otro; un libro sin nada en el idioma de la página no aparece.
+  const archivosEn = l => l.idioma === lang ? (l.archivos||{}) : {};
+  const externosEn = l => (l.externos||[]).filter(e => (e.idioma || l.idioma) === lang);
+  const comprarEn = l => l.idioma === lang ? (l.comprar||[]) : [];
+  const visible = l => l.idioma === lang || externosEn(l).length > 0;
+  const libros = () => D.libros.filter(visible);
+  const descargable = l => Object.keys(archivosEn(l)).length > 0 || externosEn(l).length > 0;
+  const formatos = l => [...Object.keys(archivosEn(l)), ...externosEn(l).map(e => e.formato)];
   const etqFormato = f => f === "web" ? t("x.web") : f.toUpperCase();
 
   function portada(l){
@@ -489,7 +491,7 @@
   function tarjeta(l){
     const fm = [...new Set(formatos(l))].map(etqFormato);
     return `<article class="libro" data-id="${esc(l.id)}" tabindex="0">${portada(l)}
-      <div class="pie"><span class="etq">${esc(categoria(l.categoria))}</span><span class="etq">${l.idioma.toUpperCase()}</span>
+      <div class="pie"><span class="etq">${esc(categoria(l.categoria))}</span>
       ${fm.length ? `<span class="etq">${fm.join(" · ")}</span>` : `<span class="etq">${esc(t("x.comprar"))}</span>`}
       ${leidos[l.id] ? `<span class="etq leido">✓ ${esc(t("x.leido"))}</span>` : ""}
       ${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></article>`;
@@ -519,7 +521,7 @@
     const fm = [...new Set(formatos(l))].map(etqFormato);
     return `<div class="fila" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="mini ${esc(l.categoria)}"${l.imagen ? ` style="background-image:url('${esc(l.imagen.src)}')"` : ""}></span>
       <div class="libro-c"><div class="tt">${esc(l.titulo)}</div><div class="au">${esc(l.autor)} · ${esc(l.anio)}</div></div>
-      <div class="etqs"><span class="etq">${esc(categoria(l.categoria))}</span><span class="etq">${l.idioma.toUpperCase()}</span>
+      <div class="etqs"><span class="etq">${esc(categoria(l.categoria))}</span>
         ${fm.length ? `<span class="etq">${fm.join(" · ")}</span>` : `<span class="etq">${esc(t("x.comprar"))}</span>`}</div>
       ${moral(l)}
       <div class="marcas-f">${leidos[l.id] ? `<span class="leido" title="${esc(t("x.leido"))}">✓</span>` : ""}${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></div>`;
@@ -529,13 +531,12 @@
   // ---------- catálogo ----------
   function filtrar(){
     const q = $("#fBuscar").value.trim().toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
-    const c = $("#fCategoria").value, i = $("#fIdioma").value, f = $("#fFormato").value;
+    const c = $("#fCategoria").value, f = $("#fFormato").value;
     const nl = $("#fNoLeidos").checked, fv = $("#fFavoritos").checked;
-    return D.libros.filter(l => {
+    return libros().filter(l => {
       const texto = (l.titulo + " " + l.autor).toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
       if (q && !texto.includes(q)) return false;
       if (c && l.categoria !== c) return false;
-      if (i && l.idioma !== i) return false;
       if (f === "comprar" && descargable(l)) return false;
       if (f && f !== "comprar" && !formatos(l).includes(f)) return false;
       if (nl && leidos[l.id]) return false;
@@ -550,11 +551,11 @@
     $("#sinResultados").hidden = lista.length > 0;
   }
   function pintarRecomendados(){
-    $("#recomendados").innerHTML = D.libros.filter(l => l.recomendado).map(tarjeta).join("");
+    $("#recomendados").innerHTML = libros().filter(l => l.recomendado).map(tarjeta).join("");
   }
-  ["#fBuscar","#fCategoria","#fIdioma","#fFormato","#fNoLeidos","#fFavoritos"].forEach(s => $(s).addEventListener("input", pintarCatalogo));
+  ["#fBuscar","#fCategoria","#fFormato","#fNoLeidos","#fFavoritos"].forEach(s => $(s).addEventListener("input", pintarCatalogo));
   $("#fLimpiar").addEventListener("click", () => {
-    ["#fBuscar","#fCategoria","#fIdioma","#fFormato"].forEach(s => $(s).value = "");
+    ["#fBuscar","#fCategoria","#fFormato"].forEach(s => $(s).value = "");
     $("#fNoLeidos").checked = $("#fFavoritos").checked = false;
     pintarCatalogo();
   });
@@ -570,14 +571,14 @@
   function abrirFicha(id){
     const l = porId(id); if (!l) return;
     const desc = [
-      ...Object.entries(l.archivos||{}).map(([f, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${f.toUpperCase()}</a>`),
-      ...(l.externos||[]).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
-      ...(l.comprar||[]).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
+      ...Object.entries(archivosEn(l)).map(([f, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${f.toUpperCase()}</a>`),
+      ...externosEn(l).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
+      ...comprarEn(l).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
     ].join("");
     const nota = l.nota || {};
     $("#fichaCuerpo").innerHTML = `<div class="ficha">${portada(l)}<div>
       <h3 style="font-size:22px">${esc(l.titulo)}</h3>
-      <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))} · ${esc(t("idioma." + l.idioma))}</p>
+      <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</p>
       <div class="descargas">${desc}</div>
       <div class="marcas">
         <button class="btn" id="btnLeido">${leidos[id] ? "✓ " + esc(t("x.quitarLeido")) : esc(t("x.marcarLeido"))}</button>
@@ -590,7 +591,7 @@
           <span>${esc(t("x.literaria"))}</span><span>${estrellasFijas(nota.literaria)} · ${estrellasMias(id,"literaria")}</span>
           <span>${esc(t("x.teologica"))}</span><span>${estrellasFijas(nota.teologica)} · ${estrellasMias(id,"teologica")}</span>
           <span>${esc(t("l.moral"))}</span><span>${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</span></div></div>
-      <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(Boolean).map(p => `<a href="#libro/${esc(p.id)}">${esc(p.titulo)}</a>`).join(" · ")}</div></div>
+      <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(p => `<a href="#libro/${esc(p.id)}">${esc(p.titulo)}</a>`).join(" · ")}</div></div>
       ${l.fuente ? `<p class="meta" style="margin-top:14px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta" style="margin-top:6px">${esc(t("x.portada"))}: <a href="${esc(l.imagen.url)}" target="_blank" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(t("x.dominioPublico"))})</p>` : ""}
     </div></div>`;
@@ -613,8 +614,9 @@
   const idiomaOracion = {};
   function pintarOraciones(){
     $("#listaOraciones").innerHTML = D.oraciones.map(o => {
-      const disponibles = ["es","en"].filter(k => (o[k]||[]).length);
-      const elegido = idiomaOracion[o.id] || (disponibles.includes(lang) ? lang : disponibles[0]);
+      const disponibles = [lang].filter(k => (o[k]||[]).length);
+      if (!disponibles.length) return "";
+      const elegido = lang;
       return `<article class="caja" style="margin-bottom:22px" id="oracion-${esc(o.id)}">
         <h3 style="font-size:21px">${esc(o.titulo[lang] || o.titulo.es)}</h3>
         <p class="meta">${esc(o.autor)}</p>
@@ -629,14 +631,14 @@
   function pintarPlan(){
     const plan = D.plan || {};
     [["#planOracion", plan.oracion], ["#planLectura", plan.lectura]].forEach(([sel, ids]) => {
-      const lista = (ids || []).map(porId).filter(Boolean);
+      const lista = (ids || []).map(porId).filter(l => l && visible(l));
       $(sel).innerHTML = lista.length ? cabecera() + lista.map(fila).join("") : "";
     });
   }
 
   // ---------- formularios ----------
   function llenarSelectLibros(){
-    $("#selLibroError").innerHTML = D.libros.map(l => `<option>${esc(l.titulo)} - ${esc(l.autor)}</option>`).join("");
+    $("#selLibroError").innerHTML = libros().map(l => `<option>${esc(l.titulo)} - ${esc(l.autor)}</option>`).join("");
   }
   $$("form.formulario").forEach(f => f.addEventListener("submit", async e => {
     e.preventDefault();
