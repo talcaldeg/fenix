@@ -144,5 +144,19 @@
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>
+<!-- MEDICION:inicio - GoatCounter: cuenta visitas y clics de descarga sin cookies ni datos personales. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
+<script>
+window.goatcounter = {path: function(p){ return p + location.hash; }};
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest("a.btn[href]");
+  if (!a || !window.goatcounter.count) return;
+  var externo = a.host && a.host !== location.host;
+  if (!a.hasAttribute("download") && !externo) return;
+  var libro = (location.hash.match(/libro\/([^/?&]+)/) || location.pathname.match(/libro\/([^/]+)/) || [0, "sin-libro"])[1];
+  goatcounter.count({path: "clic/" + libro + "/" + a.textContent.trim().replace(/\s+/g, " "), title: a.href, event: true});
+});
+</script>
+<script data-goatcounter="https://proyectofenix.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<!-- MEDICION:fin -->
 </body>
 </html>
