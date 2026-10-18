@@ -45,10 +45,15 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   página, después de la portada, el exlibris de Fénix (un timbre estampado sobre papel,
   `img/exlibris-es.jpg` o `-en.jpg` según `dc:language`). Es idempotente; después se rehace el PDF.
 - `herramientas/portadas.py`: cada libro lleva un cuadro de dominio público (Wikimedia Commons)
-  relacionado con su tema. Lo recorta a `img/portadas/<id>.jpg` para el sitio y, con `--epub`,
-  arma la portada con título y autor dentro del EPUB; después se regenera el PDF. El crédito
-  va en `imagen` de la ficha. Las obras de Project Gutenberg se alojan en `libros/` con esa
-  portada (el texto y la licencia de Gutenberg quedan intactos).
+  relacionado con su tema, guardado sin marco en `img/cuadros/<nombre>.jpg` (2:3, de ahí se
+  regenera todo). Sobre él arma la portada con el marco Fénix (`herramientas/marco.py`): códice
+  para Lectura espiritual y Oración, enredadera para lo demás. La deja en
+  `img/portadas/<nombre>.jpg` y, con `--epub`, dentro del EPUB, y rehace el PDF. `--todos`
+  regenera el catálogo entero. Una versión en otro idioma lleva su propia `imagen` (el título
+  va impreso). El sitio muestra la portada con marco en tarjetas y ficha, y el cuadro solo en
+  miniaturas y fondos. La portada oficial (URL externa) se deja como está. El crédito va en
+  `imagen` de la ficha. Las obras de Project Gutenberg se alojan en `libros/` con esa portada
+  (el texto y la licencia de Gutenberg quedan intactos).
 - Leídos, favoritos y la puntuación de cada visitante quedan en su navegador (`localStorage`).
   Fénix no publica puntuación propia: solo la del visitante y la valoración moral de Delibris.
 - Valoración moral: `delibris` de cada ficha, leída en la página del libro en delibris.org

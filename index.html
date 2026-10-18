@@ -1583,6 +1583,8 @@
   // Citas en el idioma de la página: las de un libro en otro idioma no se muestran.
   const citas = () => libros().filter(l => l.idioma === lang).flatMap(l => (l.citas || []).map(c => ({ c, l })));
 
+  // Miniaturas y fondos: el cuadro sin marco (img/cuadros/), que a ese tamaño se lee mejor que la portada entera.
+  const cuadro = src => src.replace("img/portadas/", "img/cuadros/");
   function portada(l){
     if (l.imagen && !/^https?:/.test(l.imagen.src)) return `<div class="portada marco ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.autor)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"></div>`;
     if (l.imagen) return `<div class="portada img ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"><div class="t">${esc(l.titulo)}</div><div class="a">${esc(l.autor)}</div></div>`;

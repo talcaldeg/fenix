@@ -69,30 +69,55 @@ def partir_texto(titulo, autor):
     return titulo, sub, autor
 
 
-def lineas_equilibradas(texto, tam, ancho, max_lineas, estilo="bd", espaciado=0.0):
-    """Menos líneas posibles y, entre ellas, la de línea más larga más corta. None si no cabe."""
+# Una línea no termina en estas palabras (queda colgando «DE», «EL», «OF»...).
+FUNCIONALES = {"A", "AL", "CON", "DE", "DEL", "EL", "EN", "LA", "LAS", "LOS", "O", "Y", "UN", "UNA", "POR", "SIN",
+               "SU", "QUE", "THE", "OF", "AND", "IN", "TO", "AN"}
+
+
+def _fea(ls):
+    """Cuán feo es un corte (0 = limpio): 1 por línea que termina en palabra funcional (0,3 si toda
+    la línea lo es, como «DE LOS») y 1 por línea de una sola palabra corta."""
+    def funcional(p):
+        return p.strip(",;:").upper() in FUNCIONALES
+    pena = sum((0.3 if all(map(funcional, l.split())) else 1) for l in ls[:-1] if funcional(l.split()[-1]))
+    return pena + sum(1 for l in ls if len(ls) > 1 and len(l) <= 3)
+
+
+def lineas_equilibradas(texto, tam, ancho, max_lineas, estilo="bd", espaciado=0.0, aceptar_feo=True):
+    """Menos líneas posibles sin cortes feos y, entre ellas, la de línea más larga más corta.
+    Si todo corte posible es feo, el mejor feo con menos líneas (o None si no se acepta feo).
+    None si no cabe."""
     p = texto.split()
+    feo = None
     for n in range(1, min(max_lineas, len(p)) + 1):
         mejor = None
         for cortes in combinations(range(1, len(p)), n - 1):
             b = (0,) + cortes + (len(p),)
             ls = [" ".join(p[b[i]:b[i + 1]]) for i in range(n)]
             m = max(_ancho(s, tam, estilo, espaciado) for s in ls)
-            if m <= ancho and (mejor is None or m < mejor[0]):
+            if m > ancho:
+                continue
+            pena = _fea(ls)
+            if pena:
+                if feo is None or (feo[0] == n and (pena, m) < feo[1]):
+                    feo = (n, (pena, m), ls)
+            elif mejor is None or m < mejor[0]:
                 mejor = (m, ls)
         if mejor:
             return mejor[1]
-    return None
+    return feo[2] if feo and aceptar_feo else None
 
 
 def bloque(texto, tam, ancho, max_lineas, alto_max, estilo="bd", espaciado=0.0, interlinea=1.1, minimo=0.45):
-    """Achica la letra hasta que el texto quepa en ancho, líneas y alto. Devuelve (lineas, tam)."""
-    t = tam
-    while t >= tam * minimo:
-        ls = lineas_equilibradas(texto, t, ancho, max_lineas, estilo, espaciado)
-        if ls and len(ls) * t * interlinea <= alto_max:
-            return ls, t
-        t *= 0.95
+    """Achica la letra hasta que el texto quepa en ancho, líneas y alto. Devuelve (lineas, tam).
+    Primero busca, achicando hasta un 75 %, un corte sin palabras colgando; si no hay, acepta el feo."""
+    for aceptar_feo, piso in ((False, 0.75), (True, minimo)):
+        t = tam
+        while t >= tam * piso:
+            ls = lineas_equilibradas(texto, t, ancho, max_lineas, estilo, espaciado, aceptar_feo)
+            if ls and len(ls) * t * interlinea <= alto_max:
+                return ls, t
+            t *= 0.95
     return [texto], t
 
 
