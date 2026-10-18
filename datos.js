@@ -3,6 +3,8 @@
 // - externos: descarga legal en otro sitio (Project Gutenberg, etc.).
 // - comprar: si no hay descarga libre.
 // - nota: puntuación del equipo de 1 a 5 (null = por calificar).
+// - delibris: valoración moral de delibris.org, de 1 a 6 (6 = «Sin inconvenientes»); el texto de
+//   cada nivel según el género (Literatura o Pensamiento) está en index.html. null = no está en Delibris.
 // - citas: textuales, cotejadas con el texto del libro.
 
 window.FENIX = {
@@ -35,6 +37,7 @@ window.FENIX = {
       archivos: { epub: "libros/marmion-jesucristo-vida-del-alma.epub", pdf: "libros/marmion-jesucristo-vida-del-alma.pdf" },
       fuente: { texto: "Edición de la Fundación Gratis Date, autorizada por el abad de Maredsous", url: "https://www.gratisdate.org/" },
       nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/jesucristo-vida-del-alma-christ-life-soul" },
       parecidos: ["one-with-jesus", "imitacion-de-cristo", "presencia-de-dios"]
     },
     {
@@ -60,6 +63,7 @@ window.FENIX = {
       ],
       fuente: { texto: "Original francés de 1929; traducción inglesa de 1946", url: "https://openlibrary.org/books/OL19427278M" },
       nota: { literaria: null, teologica: null },
+      delibris: null,
       parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo", "presencia-de-dios"]
     },
     {
@@ -81,6 +85,7 @@ window.FENIX = {
       archivos: {},
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/1653" }],
       nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
       parecidos: ["confesiones", "marmion-vida-del-alma", "presencia-de-dios"]
     },
     {
@@ -102,6 +107,7 @@ window.FENIX = {
       archivos: {},
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/3296" }],
       nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/confesiones" },
       parecidos: ["imitacion-de-cristo", "ortodoxia", "presencia-de-dios"]
     },
     {
@@ -123,6 +129,7 @@ window.FENIX = {
       archivos: {},
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/5657" }],
       nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/la-practica-de-la-presencia-de-dios" },
       parecidos: ["one-with-jesus", "imitacion-de-cristo", "marmion-vida-del-alma"]
     },
     {
@@ -144,6 +151,7 @@ window.FENIX = {
       archivos: {},
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/130" }],
       nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/ortodoxia" },
       parecidos: ["confesiones", "senor-del-mundo", "quo-vadis"]
     },
     {
@@ -165,6 +173,7 @@ window.FENIX = {
       archivos: {},
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/2853" }],
       nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/quo-vadis" },
       parecidos: ["senor-del-mundo", "confesiones", "ortodoxia"]
     },
     {
@@ -185,6 +194,7 @@ window.FENIX = {
       archivos: {},
       externos: [{ formato: "epub", texto: "Project Gutenberg", url: "https://www.gutenberg.org/ebooks/14021" }],
       nota: { literaria: null, teologica: null },
+      delibris: { valor: 5, genero: "Literatura", url: "https://delibris.org/es/senor-del-mundo" },
       parecidos: ["quo-vadis", "ortodoxia", "confesiones"]
     }
   ],

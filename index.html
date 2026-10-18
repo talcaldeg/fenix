@@ -91,6 +91,34 @@
   .etq.leido{color:var(--ok)}
   .fav{margin-left:auto; color:var(--oro); font-size:16px}
 
+  .lista{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden}
+  .fila{display:grid; grid-template-columns:6px minmax(0,2.4fr) minmax(0,1.4fr) minmax(0,1.8fr) 44px; gap:16px; align-items:center; padding:12px 16px 12px 0; border-top:1px solid var(--line); cursor:pointer}
+  .fila:first-child{border-top:0}
+  .fila.cab{cursor:default; padding-top:10px; padding-bottom:10px; background:var(--bg2); font:600 12px system-ui,sans-serif; color:var(--muted); text-transform:uppercase; letter-spacing:.04em}
+  .fila:not(.cab):hover, .fila:focus-visible{background:var(--bg2); outline:none}
+  .fila .lomo{align-self:stretch; background:var(--c-lectura); border-radius:0 3px 3px 0}
+  .fila .lomo.oracion{background:var(--c-oracion)} .fila .lomo.novela{background:var(--c-novela)}
+  .fila .tt{font-weight:700; font-size:16px; line-height:1.25}
+  .fila .au{font:13px system-ui,sans-serif; color:var(--muted); margin-top:2px}
+  .fila .etqs{display:flex; gap:6px; flex-wrap:wrap; font:12px system-ui,sans-serif; color:var(--muted)}
+  .fila .marcas-f{display:flex; gap:6px; justify-content:flex-end; font:13px system-ui,sans-serif}
+  .fila .marcas-f .leido{color:var(--ok)} .fila .marcas-f .fav{margin:0}
+  .moral{display:flex; align-items:center; gap:8px; font:13px system-ui,sans-serif; color:var(--muted); min-width:0}
+  .moral .n{font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums}
+  .moral .txt{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .circ{display:inline-flex; gap:3px; flex:none}
+  .circ i{width:10px; height:10px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
+  .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
+  .leyenda-moral{font:13px/1.5 system-ui,sans-serif; color:var(--muted); margin-top:10px}
+  @media (max-width:700px){
+    .fila{grid-template-columns:6px minmax(0,1fr) auto; gap:4px 12px; padding:12px 14px 12px 0}
+    .fila.cab{display:none}
+    .fila .libro-c{grid-column:2; grid-row:1} .fila .marcas-f{grid-column:3; grid-row:1}
+    .fila .etqs{grid-column:2 / 4; grid-row:2} .fila .moral{grid-column:2 / 4; grid-row:3}
+    .fila .lomo{grid-row:1 / 4}
+    .moral .txt{white-space:normal}
+  }
+
   .filtros{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 20px; font:14px system-ui,sans-serif}
   .filtros input[type=search], .filtros select{padding:8px 10px; border:1px solid var(--line); border-radius:9px; background:var(--card)}
   .filtros input[type=search]{flex:1 1 220px}
@@ -224,8 +252,9 @@
         <label><input type="checkbox" id="fFavoritos"> <span data-i18n="bib.favoritos">Favoritos</span></label>
         <button type="button" class="pildora" id="fLimpiar" data-i18n="bib.limpiar">Limpiar filtros</button>
       </div>
-      <div class="grilla" id="catalogo"></div>
+      <div class="lista" id="catalogo" role="list"></div>
       <p class="vacio" id="sinResultados" hidden data-i18n="bib.vacio">No hay libros con esos filtros.</p>
+      <p class="leyenda-moral"><span data-i18n="bib.leyendaMoral">Valoración moral tomada de</span> <a href="https://delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="bib.leyendaMoral2">: de 1 a 6 círculos; 6 es «Sin inconvenientes» y cada círculo menos indica más reparos. El detalle de cada nivel está en la ficha del libro.</span></p>
       <p class="meta" style="margin-top:18px" data-i18n="bib.nota">Leídos, favoritos y su puntuación se guardan solo en este navegador.</p>
     </div>
   </section>
@@ -357,7 +386,8 @@
       "oh.precision":"A clarification: this is not a new incarnation, nor does the person cease to be himself. It is the life of grace, which unites us to Christ as members of His Body. The expression belongs to spiritual theology; its foundation is the Church's doctrine (Catechism, nos. 521 and 1997).",
       "oh.rezar":"Pray the prayer","oh.libro":"See «One with Jesus»",
       "bib.titulo":"Library","bib.buscar":"Search title or author","bib.todas":"All categories","bib.idiomas":"All languages","bib.formatos":"Any format","bib.soloComprar":"Purchase only",
-      "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.nota":"Read marks, favourites and your ratings are stored only in this browser.",
+      "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":": from 1 to 6 circles; 6 means «No drawbacks» and each circle less means more reservations. Each level is explained in the book's page.",
+      "l.libro":"Book","l.datos":"Category · language · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","bib.nota":"Read marks, favourites and your ratings are stored only in this browser.",
       "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
       "or.titulo":"Prayers",
       "sal.titulo":"Which book would you like to save?","sal.lede":"Fénix exists so that good books are not lost. Tell us which one you would like to see here: we will look for it, check its rights and, if possible, publish it.",
@@ -376,6 +406,7 @@
     es: {
       "x.leer":"Descargar","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos","x.puntuacion":"Puntuación","x.fenix":"Fénix","x.suya":"Suya","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
+      "l.libro":"Libro","l.datos":"Categoría · idioma · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de",
       "x.porCalificar":"por calificar","x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en"
     }
   };
@@ -423,6 +454,37 @@
       ${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></article>`;
   }
 
+  // Valoración moral de delibris.org: textos literales de su leyenda (6 = mejor), por género.
+  const ESCALA_DELIBRIS = {
+    Literatura: {
+      es: ["Por sus contenidos explícitos, la obra contraría la fe o la moral de la Iglesia Católica o el cristianismo en general", "Abundan los pasajes escabrosos o un fondo ideológico contrario o extraño a los valores cristianos", "Presenta pasajes escabrosos o un fondo ideológico general que puede confundir a personas con una escasa formación cristiana", "Presenta pasajes de cierta entidad contrarios a la fe o la moral", "Algunos inconvenientes morales", "Sin inconvenientes"],
+      en: ["Because of its explicit content, the work goes against the faith or morals of the Catholic Church or Christianity in general", "Lurid passages or an ideological background contrary or foreign to Christian values abound", "Contains lurid passages or a general ideological background that may confuse people with little Christian formation", "Contains passages of some weight contrary to faith or morals", "Some moral drawbacks", "No drawbacks"]
+    },
+    Pensamiento: {
+      es: ["La obra es incompatible con la doctrina católica", "El planteamiento general o sus tesis centrales son ambiguos o se oponen a las enseñanzas de la Iglesia", "Presenta errores doctrinales de cierta entidad", "Lectores con formación específica en el tema", "Requiere conocimientos generales en la materia", "Sin inconvenientes"],
+      en: ["The work is incompatible with Catholic doctrine", "Its general approach or central theses are ambiguous or contrary to Church teaching", "Contains doctrinal errors of some weight", "For readers with specific training in the subject", "Requires general knowledge of the subject", "No drawbacks"]
+    }
+  };
+  const textoDelibris = d => { const e = ESCALA_DELIBRIS[d.genero] || ESCALA_DELIBRIS.Literatura; return (e[lang] || e.es)[d.valor - 1]; };
+  function moral(l){
+    const d = l.delibris;
+    if (!d) return `<span class="moral"><span class="circ" aria-hidden="true">${"<i></i>".repeat(6)}</span><span class="txt">${esc(t("x.sinDelibris"))}</span></span>`;
+    const txt = textoDelibris(d);
+    return `<span class="moral" role="img" title="${esc(txt)}" aria-label="${esc(t("x.moral"))}: ${d.valor} ${esc(t("x.de"))} 6, ${esc(txt)}">
+      <span class="circ" aria-hidden="true">${[1,2,3,4,5,6].map(n => `<i class="${n <= d.valor ? "on" : ""}"></i>`).join("")}</span>
+      <span class="n" aria-hidden="true">${d.valor}/6</span><span class="txt" aria-hidden="true">${esc(txt)}</span></span>`;
+  }
+  function fila(l){
+    const fm = [...new Set(formatos(l))].map(f => f.toUpperCase());
+    return `<div class="fila" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="lomo ${esc(l.categoria)}"></span>
+      <div class="libro-c"><div class="tt">${esc(l.titulo)}</div><div class="au">${esc(l.autor)} · ${esc(l.anio)}</div></div>
+      <div class="etqs"><span class="etq">${esc(categoria(l.categoria))}</span><span class="etq">${l.idioma.toUpperCase()}</span>
+        ${fm.length ? `<span class="etq">${fm.join(" · ")}</span>` : `<span class="etq">${esc(t("x.comprar"))}</span>`}</div>
+      ${moral(l)}
+      <div class="marcas-f">${leidos[l.id] ? `<span class="leido" title="${esc(t("x.leido"))}">✓</span>` : ""}${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></div>`;
+  }
+  const cabecera = () => `<div class="fila cab" aria-hidden="true"><span></span><span>${esc(t("l.libro"))}</span><span>${esc(t("l.datos"))}</span><span>${esc(t("l.moral"))}</span><span></span></div>`;
+
   // ---------- catálogo ----------
   function filtrar(){
     const q = $("#fBuscar").value.trim().toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
@@ -442,7 +504,8 @@
   }
   function pintarCatalogo(){
     const lista = filtrar();
-    $("#catalogo").innerHTML = lista.map(tarjeta).join("");
+    $("#catalogo").innerHTML = lista.length ? cabecera() + lista.map(fila).join("") : "";
+    $("#catalogo").hidden = !lista.length;
     $("#sinResultados").hidden = lista.length > 0;
   }
   function pintarRecomendados(){
@@ -454,8 +517,8 @@
     $("#fNoLeidos").checked = $("#fFavoritos").checked = false;
     pintarCatalogo();
   });
-  document.addEventListener("click", e => { const a = e.target.closest(".libro"); if (a) location.hash = "libro/" + a.dataset.id; });
-  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro"); if (a && e.key === "Enter") location.hash = "libro/" + a.dataset.id; });
+  document.addEventListener("click", e => { const a = e.target.closest(".libro, .fila[data-id]"); if (a) location.hash = "libro/" + a.dataset.id; });
+  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro, .fila[data-id]"); if (a && e.key === "Enter") location.hash = "libro/" + a.dataset.id; });
 
   // ---------- ficha del libro ----------
   const estrellasFijas = n => n ? `<span class="estrellas fija">${"★".repeat(n)}${"☆".repeat(5-n)}</span>` : `<span class="meta" style="margin:0">${esc(t("x.porCalificar"))}</span>`;
@@ -484,7 +547,8 @@
       <div class="seccion-ficha"><strong>${esc(t("x.puntuacion"))}</strong>
         <div class="puntos"><span></span><span class="meta" style="margin:0">${esc(t("x.fenix"))} / ${esc(t("x.suya"))}</span>
           <span>${esc(t("x.literaria"))}</span><span>${estrellasFijas(nota.literaria)} · ${estrellasMias(id,"literaria")}</span>
-          <span>${esc(t("x.teologica"))}</span><span>${estrellasFijas(nota.teologica)} · ${estrellasMias(id,"teologica")}</span></div></div>
+          <span>${esc(t("x.teologica"))}</span><span>${estrellasFijas(nota.teologica)} · ${estrellasMias(id,"teologica")}</span>
+          <span>${esc(t("l.moral"))}</span><span>${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</span></div></div>
       <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(Boolean).map(p => `<a href="#libro/${esc(p.id)}">${esc(p.titulo)}</a>`).join(" · ")}</div></div>
       ${l.fuente ? `<p class="meta" style="margin-top:14px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
     </div></div>`;
