@@ -45,6 +45,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
   luego `portadas.py ... --epub`, `exlibris.py` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
+- `herramientas/logo.py`: el logo (un libro abierto cuyas páginas se levantan como las alas del
+  fénix) en una sola fuente. Lo usan `img/favicon.svg`, el ícono embebido de `index.html` y de
+  `libro/`, la viñeta y el sello de `marco.py` y el timbre de `exlibris.py`. Si cambia el dibujo:
+  `python herramientas/logo.py`, reemplazar el data URI en las páginas, `exlibris.py` y
+  `portadas.py --todos --epub`.
 - `herramientas/exlibris.py libros/<archivo>.epub`: todo libro de `libros/` lleva como segunda
   página, después de la portada, el exlibris de Fénix (un timbre estampado sobre papel,
   `img/exlibris-es.jpg` o `-en.jpg` según `dc:language`). Es idempotente; después se rehace el PDF.

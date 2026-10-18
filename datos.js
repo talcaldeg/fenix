@@ -84,6 +84,29 @@ window.FENIX = {
       parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo", "presencia-de-dios"]
     },
     {
+      id: "tardif-jesus-esta-vivo",
+      titulo: "Jesús está vivo",
+      autor: "P. Emiliano Tardif, M.S.C., y José H. Prado Flores",
+      anio: "1984",
+      idioma: "es",
+      categoria: "lectura",
+      resumen: {
+        es: "El testimonio del padre Emiliano Tardif, misionero del Sagrado Corazón en República Dominicana. En 1973 una tuberculosis lo obligó a volver a Canadá y, según cuenta, sanó de forma inesperada después de que un grupo de la Renovación Carismática rezara por él. El libro, escrito con José H. Prado Flores, narra cómo nació de ahí su ministerio de predicación y oración por los enfermos, primero en Nagua y Pimentel, y explica la curación física, la interior y la del espíritu, que pasa por la reconciliación, junto con lo que la sostiene después: los sacramentos, la oración, la Palabra de Dios, la comunidad y el servicio.",
+        en: "The testimony of Fr. Emiliano Tardif, a Missionary of the Sacred Heart in the Dominican Republic. In 1973 tuberculosis forced him back to Canada and, by his own account, he was unexpectedly healed after a Charismatic Renewal prayer group prayed over him. The book, written with José H. Prado Flores, tells how his ministry of preaching and praying for the sick grew from there, first in Nagua and Pimentel, and explains physical healing, inner healing and the healing of the spirit through reconciliation, together with what sustains it afterwards: the sacraments, prayer, the Word of God, community and service."
+      },
+      porque: {"es":"Para quien cree en Dios pero lo siente lejano, o piensa que Jesús ya no actúa hoy como en el Evangelio. Es un relato sencillo, de primera mano, que se lee en una tarde y anima a rezar con más confianza. También sirve a quien acompaña a un enfermo: trae oraciones por la curación física e interior, sin prometer que toda oración la obtenga.","en":"For anyone who believes in God but feels Him distant, or thinks Jesus no longer acts today as He did in the Gospel. It is a simple, first-hand account that can be read in an afternoon and encourages more trusting prayer. It also helps those who care for the sick: it includes prayers for physical and inner healing, without promising that every prayer will obtain it."},
+      imagen: { src: "img/portadas/tardif-jesus-esta-vivo.jpg", credito: { es: "Carl Bloch, «Curación del ciego», 1871", en: "Carl Bloch, «Healing of the Blind Man», 1871" }, url: "https://commons.wikimedia.org/wiki/File:Healing_of_the_Blind_Man_by_Jesus_Christ.jpg" },
+      citas: [],
+      archivos: {},
+      comprar: [
+        { texto: "Buscalibre (ISBN 9788428511247)", url: "https://www.buscalibre.cl/libros/search?q=9788428511247" },
+        { texto: "Amazon (ISBN 9788428511247)", url: "https://www.amazon.com/s?k=9788428511247" }
+      ],
+      fuente: { texto: "Imprimatur del arzobispo de Santo Domingo, 1984; edición de San Pablo (obra protegida por derechos de autor)", url: "https://openlibrary.org/works/OL34833242W" },
+      delibris: null,
+      parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo", "one-with-jesus"]
+    },
+    {
       id: "imitacion-de-cristo",
       titulo: "Imitación de Cristo o menosprecio del mundo",
       autor: "Tomás de Kempis (trad. fray Luis de Granada)",
