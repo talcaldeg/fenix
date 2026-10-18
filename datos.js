@@ -141,6 +141,53 @@ window.FENIX = {
       parecidos: ["imitacion-de-cristo", "ortodoxia", "presencia-de-dios"]
     },
     {
+      id: "confesiones-es",
+      titulo: "Confesiones",
+      autor: "San Agustín de Hipona",
+      anio: "c. 400",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "La historia de una conversión contada como oración: Agustín repasa ante Dios su infancia, su juventud desordenada, su búsqueda entre los maniqueos y los platónicos y el encuentro con la gracia en Milán, hasta su bautismo y la muerte de su madre, santa Mónica. Los últimos libros meditan sobre la memoria, el tiempo y la creación. Traducción nueva de Proyecto Fénix, hecha desde el latín.",
+        en: "The story of a conversion told as a prayer: Augustine reviews before God his childhood, his disordered youth, his search among the Manichaeans and the Platonists and his encounter with grace in Milan, up to his baptism and the death of his mother, Saint Monica. The last books meditate on memory, time and creation. A new translation by Proyecto Fénix, made from the Latin."
+      },
+      imagen: { src: "img/portadas/confesiones-es.jpg", credito: { es: "Ary Scheffer, «San Agustín y santa Mónica», 1854", en: "Ary Scheffer, «Saints Augustine and Monica», 1854" }, url: "https://commons.wikimedia.org/wiki/File:Saint_Augustine_and_Saint_Monica.jpg" },
+      citas: [
+        "Nos hiciste para Ti, y nuestro corazón está inquieto hasta que descanse en Ti.",
+        "¡Tarde Te amé, Hermosura tan antigua y tan nueva, tarde Te amé!",
+        "Toma y lee, toma y lee."
+      ],
+      archivos: { epub: "libros/agustin-confesiones.epub", pdf: "libros/agustin-confesiones.pdf" },
+      fuente: { texto: "Traducción de Proyecto Fénix desde el latín (edición de J. J. O'Donnell en The Latin Library), cotejada con la traducción inglesa de E. B. Pusey; licencia CC BY-NC-SA 4.0", url: "https://www.thelatinlibrary.com/augustine.html" },
+      delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/confesiones" },
+      parecidos: ["historia-de-un-alma", "imitacion-de-cristo-granada", "marmion-vida-del-alma"]
+    },
+    {
+      id: "historia-de-un-alma",
+      titulo: "Historia de un alma",
+      autor: "Santa Teresa del Niño Jesús y de la Santa Faz",
+      anio: "1898",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: true,
+      resumen: {
+        es: "La autobiografía de santa Teresa de Lisieux, carmelita y Doctora de la Iglesia, escrita por obediencia a sus prioras. Cuenta su infancia, su entrada al Carmelo a los quince años y el descubrimiento de su «caminito»: la confianza y el abandono de quien se sabe pequeño ante Dios, y el amor puesto en las cosas ordinarias. El último capítulo narra su enfermedad y su muerte, en 1897. Traducción nueva de Proyecto Fénix, hecha desde el francés de la edición de 1912.",
+        en: "The autobiography of Saint Thérèse of Lisieux, Carmelite and Doctor of the Church, written out of obedience to her prioresses. She tells of her childhood, her entry into Carmel at fifteen and her discovery of the «little way»: the trust and self-surrender of one who knows herself small before God, and love placed in ordinary things. The last chapter recounts her illness and death in 1897. A new translation by Proyecto Fénix, made from the French of the 1912 edition."
+      },
+      imagen: { src: "img/portadas/historia-de-un-alma.jpg", credito: { es: "Henri Fantin-Latour, «Rosas y lirios», 1888", en: "Henri Fantin-Latour, «Roses and Lilies», 1888" }, url: "https://commons.wikimedia.org/wiki/File:Henri_Fantin-Latour_-_Roses_and_Lilies_MET_DT9200.jpg" },
+      citas: [
+        "Él no llama a los que son dignos, sino a los que Le place.",
+        "El ascensor que debe elevarme hasta el cielo ¡son Tus brazos, oh Jesús!",
+        "En el corazón de la Iglesia, mi Madre, ¡yo seré el amor!",
+        "Quiero pasar mi cielo haciendo el bien sobre la tierra."
+      ],
+      archivos: { epub: "libros/teresa-historia-de-un-alma.epub", pdf: "libros/teresa-historia-de-un-alma.pdf" },
+      fuente: { texto: "Traducción de Proyecto Fénix desde el francés de la edición de 1912 del Carmelo de Lisieux (Project Gutenberg, libro n.º 36708); licencia CC BY-NC-SA 4.0", url: "https://www.gutenberg.org/ebooks/36708" },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://www.delibris.org/es/historia-de-un-alma-0" },
+      parecidos: ["confesiones-es", "marmion-vida-del-alma", "imitacion-de-cristo-granada"]
+    },
+    {
       id: "presencia-de-dios",
       titulo: "The Practice of the Presence of God",
       autor: "Hermano Lorenzo de la Resurrección, O.C.D.",

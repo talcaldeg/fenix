@@ -29,6 +29,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `libros/`: solo obras que se pueden difundir libremente (dominio público o con permiso). Lo
   demás va como `externos` (descarga legal en otro sitio) o `comprar`.
 - `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`.
+- `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
+  `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
+  `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
+  luego `portadas.py ... --epub` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
 - `herramientas/portadas.py`: cada libro lleva un cuadro de dominio público (Wikimedia Commons)
   relacionado con su tema. Lo recorta a `img/portadas/<id>.jpg` para el sitio y, con `--epub`,
   arma la portada con título y autor dentro del EPUB; después se regenera el PDF. El crédito
