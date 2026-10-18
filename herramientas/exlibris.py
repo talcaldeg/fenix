@@ -21,6 +21,9 @@ import fitz  # PyMuPDF
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import logo  # noqa: E402
+
 RAIZ = Path(__file__).resolve().parent.parent
 FUENTES = Path("C:/Windows/Fonts")
 TINTA = np.array([112, 24, 34], float)  # vino de timbre
@@ -41,10 +44,9 @@ def ruido(rng, w, h, escala):
     return np.asarray(p.resize((w, h), Image.BICUBIC), float) / 255
 
 
-def llama(lado):
-    """La llama del favicon como máscara (tinta = blanco), con la gota interior vacía."""
-    svg = (RAIZ / "img" / "favicon.svg").read_text(encoding="utf-8")
-    svg = re.sub(r"<rect [^>]*/>", "", svg).replace('fill="#e8b04a"', 'fill="#000"').replace('fill="#fff4d6"', 'fill="#fff"')
+def ave(lado):
+    """El logo (herramientas/logo.py) como máscara: tinta = blanco, cortes de las plumas vacíos."""
+    svg = f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">{logo.marca("#000", "#fff")}</svg>'
     pm = fitz.open(stream=svg.encode(), filetype="svg")[0].get_pixmap(matrix=fitz.Matrix(lado / 64, lado / 64), alpha=True)
     im = Image.open(io.BytesIO(pm.tobytes("png"))).convert("RGBA")
     fondo = Image.new("RGBA", im.size, (255, 255, 255, 255))
@@ -82,7 +84,7 @@ def sello():
     for ang in (0, math.pi):
         x, y, s = cx + 352 * math.cos(ang), cy + 352 * math.sin(ang), 14
         d.polygon([(x, y - s), (x + s, y), (x, y + s), (x - s, y)], fill=255)
-    m.paste(255, (cx - 235, cy - 245), llama(470))
+    m.paste(255, (cx - 200, cy - 202), ave(400))
     return m
 
 

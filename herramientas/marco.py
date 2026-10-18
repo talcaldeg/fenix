@@ -23,6 +23,8 @@ from pathlib import Path
 
 from PIL import Image, ImageFont
 
+import logo
+
 CHROME = r"C:\Program Files\Google\Chrome\Application\chrome.exe"
 FUENTES = Path("C:/Windows/Fonts")
 W, H = 1000, 1500
@@ -32,9 +34,6 @@ ORO, CREMA, PERG, RUBRICA = "#c9973a", "#f6efe2", "#f3e9d2", "#9b2c2c"
 COLOR = {"lectura": "#6b1d24", "oracion": "#1f3a5f"}
 VERDE = "#2f4a3a"  # novelas y demás clásicos
 CODICE = {"lectura", "oracion"}
-
-FENIX_AVE = ('<path d="M32 10c3 6 9 9 9 17 0 3-1 5-2 7 4-2 8-6 9-11 4 8 2 18-5 24-3 3-7 4-11 4s-8-1-11-4'
-             'c-7-6-9-16-5-24 1 5 5 9 9 11-1-2-2-4-2-7 0-8 6-11 9-17z"/>')
 
 _FUENTE = {"bd": "GARABD.TTF", "it": "GARAIT.TTF", "rg": "GARA.TTF"}
 
@@ -141,7 +140,7 @@ def sello(cx, cy, r, fondo, tinta):
     s = r * 2 / 64 * 0.62
     return (f'<circle cx="{cx}" cy="{cy}" r="{r}" fill="{fondo}" stroke="{tinta}" stroke-width="3"/>'
             f'<circle cx="{cx}" cy="{cy}" r="{r - 7}" fill="none" stroke="{tinta}" stroke-width="1.2"/>'
-            f'<g transform="translate({cx - 32 * s:.1f},{cy - 33 * s:.1f}) scale({s:.3f})" fill="{tinta}">{FENIX_AVE}</g>')
+            f'<g transform="translate({cx - 32 * s:.1f},{cy - 31.5 * s:.1f}) scale({s:.3f})">{logo.marca(tinta, fondo)}</g>')
 
 
 def onda(y0, amp, periodos, fase=0.0, x0=0, x1=W, pasos=200):
@@ -251,7 +250,7 @@ def codice(cuadro: Path, titulo, autor, categoria):
 <path d="{ventana}" fill="none" stroke="{ORO}" stroke-width="6"/>
 <rect x="140" y="140" width="150" height="150" fill="{col}"/>
 <rect x="149" y="149" width="132" height="132" fill="none" stroke="{ORO}" stroke-width="2.5"/>
-<g transform="translate({215-32*s:.1f},{218-33*s:.1f}) scale({s:.3f})" fill="{ORO}">{FENIX_AVE}</g>
+<g transform="translate({215-32*s:.1f},{215-31.5*s:.1f}) scale({s:.3f})">{logo.marca(ORO, col)}</g>
 {svg_tit}{svg_sub}
 <line x1="140" y1="400" x2="860" y2="400" stroke="{RUBRICA}" stroke-width="2"/>
 {_texto(la, 140, 460, ta, RUBRICA, "start", "it", 1)}
