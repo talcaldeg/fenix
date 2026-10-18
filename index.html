@@ -1028,6 +1028,9 @@
   .portada.img::before{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(22,15,12,.94) 0%, rgba(22,15,12,.6) 34%, rgba(22,15,12,0) 60%); pointer-events:none}
   .portada.img > *{position:relative} .portada.img .f{display:none}
   .portada.img .t{text-shadow:0 1px 3px rgba(0,0,0,.7)}
+  /* Portada con marco Fénix (img/portadas/): título y autor ya van impresos en la imagen. */
+  .portada.marco{background-size:cover; background-position:center; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,.28)}
+  .portada.marco::after{display:none}
   .libro .pie{padding:10px 12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font:14px system-ui,sans-serif; color:var(--muted)}
   .etq{background:var(--chip); border-radius:999px; padding:2px 8px}
   .etq.leido{color:var(--ok)}
@@ -1581,6 +1584,7 @@
   const citas = () => libros().filter(l => l.idioma === lang).flatMap(l => (l.citas || []).map(c => ({ c, l })));
 
   function portada(l){
+    if (l.imagen && !/^https?:/.test(l.imagen.src)) return `<div class="portada marco ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.autor)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"></div>`;
     if (l.imagen) return `<div class="portada img ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"><div class="t">${esc(l.titulo)}</div><div class="a">${esc(l.autor)}</div></div>`;
     return `<div class="portada ${esc(l.categoria)}"><div class="t">${esc(l.titulo)}</div><div class="f">✠</div><div class="a">${esc(l.autor)}</div></div>`;
   }
@@ -1619,12 +1623,12 @@
   function parecido(p){
     const r = (p.resumen && (p.resumen[lang] || p.resumen.es)) || "";
     const de = (r.match(/^.+?\.(?=\s|$)/) || [r])[0];
-    return `<a class="parecido" href="#libro/${esc(p.id)}"><span class="mini ${esc(p.categoria)}" aria-hidden="true"${p.imagen ? ` style="background-image:url('${esc(p.imagen.src)}')"` : ""}></span>
+    return `<a class="parecido" href="#libro/${esc(p.id)}"><span class="mini ${esc(p.categoria)}" aria-hidden="true"${p.imagen ? ` style="background-image:url('${esc(cuadro(p.imagen.src))}')"` : ""}></span>
       <span><span class="tt" style="display:block">${esc(p.titulo)}</span><span class="au" style="display:block">${esc(p.autor)} · ${esc(categoria(p.categoria))}</span>${de ? `<span class="de">${esc(de)}</span>` : ""}</span></a>`;
   }
   function fila(l){
     const fm = [...new Set(formatos(l))].map(etqFormato);
-    return `<div class="fila" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="mini ${esc(l.categoria)}"${l.imagen ? ` style="background-image:url('${esc(l.imagen.src)}')"` : ""}></span>
+    return `<div class="fila" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="mini ${esc(l.categoria)}"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
       <div class="libro-c"><div class="tt"><a href="libro/${esc(l.id)}/">${esc(l.titulo)}</a></div><div class="au">${esc(l.autor)} · ${esc(l.anio)}</div></div>
       <div class="etqs"><span class="etq">${esc(categoria(l.categoria))}</span>
         ${fm.length ? `<span class="etq">${fm.join(" · ")}</span>` : `<span class="etq">${esc(t("x.comprar"))}</span>`}
@@ -1667,7 +1671,7 @@
     $("#cOraciones").textContent = D.oraciones.filter(o => (o[lang]||[]).length).length;
     // Cada acceso con un cuadro distinto: no se repite una imagen ya usada en otro.
     const usadas = new Set();
-    const fondo = l => { if (!l || !l.imagen) return ""; usadas.add(l.imagen.src); return ` style="background-image:url('${esc(l.imagen.src)}')"`; };
+    const fondo = l => { if (!l || !l.imagen) return ""; usadas.add(l.imagen.src); return ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"`; };
     const conImagen = xs => { const libres = xs.filter(l => l.imagen && !usadas.has(l.imagen.src)); return libres.find(l => l.recomendado) || libres[0] || xs[0]; };
     const cats = ["lectura","oracion","novela","teatro","poesia","ensayo"].map(c => {
       const xs = ls.filter(l => l.categoria === c);
@@ -1983,7 +1987,7 @@
     const q = sin($("#cBuscar").value.trim()), cat = $("#cCategoria").value;
     const cs = citas().filter(({ c, l }) => (!cat || l.categoria === cat) && (!q || sin(c + " " + l.titulo + " " + l.autor).includes(q)));
     $("#cCuenta").textContent = cs.length === 1 ? t("cit.cuenta1") : t("cit.cuenta").replace("{n}", cs.length);
-    $("#listaCitas").innerHTML = cs.map(({ c, l }) => `<a class="cita" role="listitem" href="#libro/${esc(l.id)}"><span class="mini ${esc(l.categoria)}" aria-hidden="true"${l.imagen ? ` style="background-image:url('${esc(l.imagen.src)}')"` : ""}></span>
+    $("#listaCitas").innerHTML = cs.map(({ c, l }) => `<a class="cita" role="listitem" href="#libro/${esc(l.id)}"><span class="mini ${esc(l.categoria)}" aria-hidden="true"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
       <blockquote>${esc(c)}<cite>${esc(l.autor)}, ${esc(l.titulo)}</cite></blockquote></a>`).join("");
     $("#cVacio").hidden = cs.length > 0;
   }
@@ -1995,7 +1999,7 @@
     const ls = libros().filter(l => l.editorial);
     $("#navEditorial").hidden = !ls.length;
     $("#listaEditorial").innerHTML = ls.map(l => `<article class="caja ed" data-id="${esc(l.id)}" tabindex="0">
-      <span class="mini ${esc(l.categoria)}" aria-hidden="true"${l.imagen ? ` style="background-image:url('${esc(l.imagen.src)}')"` : ""}></span>
+      <span class="mini ${esc(l.categoria)}" aria-hidden="true"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
       <div><h3><a href="libro/${esc(l.id)}/" style="color:inherit; text-decoration:none">${esc(l.titulo)}</a></h3>
         <div class="meta" style="margin:0">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</div>
         <p><strong>${esc(t("x.queHicimos"))}:</strong> ${esc(l.editorial[lang] || l.editorial.es)}</p>
