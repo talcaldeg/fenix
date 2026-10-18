@@ -9,6 +9,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `index.html`: el sitio entero (vistas por `#hash`, modo claro y oscuro, ES/EN). Cada idioma
   muestra solo lo suyo: en español no aparece ningún libro, enlace ni oración en inglés, y al
   revés. Un enlace en otro idioma que el libro lleva `idioma` en `externos`.
+- **Regla fija del menú: máximo 6 entradas de primer nivel, contando Colaborar.** Una sección
+  nueva entra en una vista que ya existe o en el submenú, nunca como entrada suelta. Inicio no
+  va en el menú (lo lleva la marca) y Oraciones es un bloque de Plan de vida (`#oraciones` abre
+  esa vista y baja hasta él). `gen_estaticos.js` no genera nada si el menú pasa de 6.
 - Plan de vida (`plan` de `datos.js`): «Para la oración» solo con fichas de categoría `oracion`
   y «Para la lectura espiritual» solo con `lectura`, para que la sección y la etiqueta coincidan.
 - Todo libro lleva `imagen`. escriva.org no publica portadas, así que las obras de san Josemaría

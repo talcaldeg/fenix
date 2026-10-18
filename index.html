@@ -936,6 +936,7 @@
   .wrap{max-width:1080px; margin:0 auto; padding:0 16px}
   .sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 
+  #oraciones{scroll-margin-top:84px}  /* que la barra fija no tape el título al bajar */
   header.top{position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg) 90%,transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; gap:12px; min-height:58px}
   .marca{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; font-size:19px; white-space:nowrap}
@@ -1156,13 +1157,13 @@
 <header class="top">
   <div class="wrap barra">
     <a class="marca" href="#inicio"><img src="img/favicon.svg" alt="">Proyecto Fénix</a>
+    <!-- Regla fija del menú: máximo 6 entradas de primer nivel, contando Colaborar.
+         Lo nuevo entra en una vista que ya existe o en el submenú; gen_estaticos.js lo exige. -->
     <nav class="menu" id="menu">
-      <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
       <a href="#biblioteca" data-i18n="nav.biblioteca">Biblioteca</a>
       <a href="#todos" data-i18n="nav.todos">Todos los libros</a>
       <a href="#editorial" data-i18n="nav.editorial" id="navEditorial">Editorial</a>
       <a href="#plan" data-i18n="nav.plan">Plan de vida</a>
-      <a href="#oraciones" data-i18n="nav.oraciones">Oraciones</a>
       <a href="#citas" data-i18n="nav.citas">Citas</a>
       <details class="mas" id="menuMas">
         <summary data-i18n="nav.colaborar">Colaborar</summary>
@@ -1327,15 +1328,10 @@
       <div class="lista" id="planOracion" role="list" style="margin:12px 0 30px"></div>
       <h3 data-i18n="plan.lectura">Para la lectura espiritual</h3>
       <p class="meta" data-i18n="plan.lecturaNota">Para leer unos minutos cada día, con orden, de principio a fin.</p>
-      <div class="lista" id="planLectura" role="list" style="margin-top:12px"></div>
-    </div>
-  </section>
-
-  <!-- ORACIONES -->
-  <section class="vista" id="v-oraciones">
-    <div class="wrap">
-      <h2 data-i18n="or.titulo">Oraciones</h2>
-      <div id="listaOraciones"></div>
+      <div class="lista" id="planLectura" role="list" style="margin:12px 0 30px"></div>
+      <!-- ORACIONES: bloque de Plan de vida; #oraciones abre esta vista y baja hasta aquí -->
+      <h3 id="oraciones" data-i18n="or.titulo">Oraciones</h3>
+      <div id="listaOraciones" style="margin-top:12px"></div>
     </div>
   </section>
 
@@ -2104,7 +2100,7 @@
   else $("#btnDonar").hidden = true; // un botón que no hace nada confunde: sin enlace, solo el aviso
 
   // ---------- rutas ----------
-  const VISTAS = ["inicio","biblioteca","todos","editorial","plan","oraciones","citas","salvar","error","dona","contacto"];
+  const VISTAS = ["inicio","biblioteca","todos","editorial","plan","citas","salvar","error","dona","contacto"];
   let ultimaVista = "inicio";
   function ruta(){
     const h = location.hash.replace(/^#/, "");
@@ -2118,6 +2114,14 @@
     }
     if ($("#dlgLibro").open) $("#dlgLibro").close();
     if (h === "otra-humanidad"){ mostrar("inicio"); setTimeout(() => $("#otra-humanidad").scrollIntoView(), 0); return; }
+    if (h === "oraciones"){
+      // Al abrir el enlace directo, las portadas de arriba cargan después y el navegador repone el
+      // scroll: se baja otra vez al terminar la carga.
+      const bajar = () => $("#oraciones").scrollIntoView();
+      mostrar("plan"); setTimeout(bajar, 0);
+      if (document.readyState !== "complete") window.addEventListener("load", () => setTimeout(bajar, 0), { once: true });
+      return;
+    }
     mostrar(VISTAS.includes(h) ? h : "inicio");
     window.scrollTo(0, 0);
   }

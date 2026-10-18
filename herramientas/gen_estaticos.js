@@ -37,6 +37,16 @@ const { revisarDuplicados } = require("./revisar_duplicados.js");
 const duplicados = revisarDuplicados(D);
 if (duplicados.length){ console.error("Posibles libros duplicados en datos.js:\n" + duplicados.map(p => "- " + p).join("\n")); process.exit(1); }
 
+// Regla fija del menú: máximo 6 entradas de primer nivel en la barra (enlaces sueltos más el
+// submenú Colaborar). Lo nuevo entra en una vista existente o en el submenú, nunca como entrada.
+const MAX_MENU = 6;
+{
+  const nav = (leer("index.html").match(/<nav class="menu"[^>]*>([\s\S]*?)<\/nav>/) || [])[1];
+  if (!nav){ console.error('index.html no tiene <nav class="menu">'); process.exit(1); }
+  const entradas = (nav.replace(/<details[\s\S]*?<\/details>/g, "<details>").match(/<a\b|<details>/g) || []).length;
+  if (entradas > MAX_MENU){ console.error(`El menú tiene ${entradas} entradas de primer nivel; el máximo es ${MAX_MENU}. Fusionar vistas o pasar alguna al submenú.`); process.exit(1); }
+}
+
 // Mismo criterio que enIdioma() de index.html: la versión de otro idioma reemplaza los campos de la
 // ficha y tiene su propia página en libro/<id>/<idioma>/.
 const vista = (l, lang) => {
