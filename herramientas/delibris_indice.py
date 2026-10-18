@@ -93,7 +93,11 @@ def recorrer(refrescar=0):
         p, ultima = 0, None
         while ultima is None or p <= ultima:
             f = CACHE / f"{tid}_{p:05d}.html"
-            if f.exists() and p >= refrescar:
+            if p < refrescar and f.exists():
+                # Lo refrescado va a un archivo aparte: con reseñas nuevas la lista se corre y,
+                # si se pisara la página vieja, se perderían los libros que bajaron de página.
+                f = CACHE / f"{tid}_{p:05d}_{time.strftime('%Y%m%d')}.html"
+            if f.exists():
                 h = f.read_text(encoding="utf-8")
             else:
                 h = bajar(BASE.format(tid=tid, p=p))
@@ -110,21 +114,22 @@ def recorrer(refrescar=0):
 
 
 def armar():
-    vistos, trozos = set(), {}
+    # En orden de nombre, la página refrescada (con fecha) va después de la vieja y la reemplaza.
+    vistos, trozos = {}, {}
     for f in sorted(CACHE.glob("*.html")):
         tid = int(f.name.split("_")[0])
         for l in parsear(f.read_text(encoding="utf-8"), GENEROS[tid]):
-            if l["u"] in vistos or l["v"] is None:
-                continue
-            vistos.add(l["u"])
-            trozos.setdefault(clave(l["t"]), []).append(l)
+            if l["v"] is not None:
+                vistos[l["u"]] = l
+    for l in vistos.values():
+        trozos.setdefault(clave(l["t"]), []).append(l)
     SALIDA.mkdir(exist_ok=True)
     for viejo in SALIDA.glob("*.json"):
         viejo.unlink()
     for k, ls in trozos.items():
         ls.sort(key=lambda x: normalizar(x["t"]))
         (SALIDA / f"{k}.json").write_text(json.dumps(ls, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
-    (SALIDA / "_meta.json").write_text(json.dumps({"libros": len(vistos), "fecha": time.strftime("%Y-%m-%d")}), encoding="utf-8")
+    (SALIDA / "_meta.json").write_text(json.dumps({"libros": len(vistos), "fecha": time.strftime("%Y-%m-%d"), "claves": sorted(trozos)}), encoding="utf-8")
     print(f"índice armado: {len(vistos)} libros en {len(trozos)} trozos", flush=True)
 
 

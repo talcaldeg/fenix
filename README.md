@@ -44,6 +44,18 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   (`valor` 1 a 6, 6 = «Sin inconvenientes», y `genero` Literatura o Pensamiento, que fija el
   texto del nivel en `ESCALA_DELIBRIS` de `index.html`). `null` si el libro no está en Delibris.
   La biblioteca se ve en modo lista con esa valoración en cada fila.
+- Todos los libros (`#todos`, ficha en `#obra/<id de Open Library>`): catálogo mundial en el
+  idioma de la página, consultado en vivo a la API de Open Library (obras con edición en
+  español, o en inglés en el sitio EN). La ficha muestra la valoración de Delibris, los derechos
+  de autor estimados por la regla chilena (vida del autor + 70 años, con el año de muerte de
+  Open Library), y descarga si el libro está en Fénix (mismo título sin subtítulo y algún nombre
+  del autor en común) o un botón «Solicitar este libro» (FormSubmit) si no.
+- Índice de Delibris: delibris.org no permite consultarse desde otro sitio, así que
+  `herramientas/delibris_indice.py` recorre su buscador por género (respetando su pausa de 10 s;
+  el recorrido entero tarda unas 13 horas) y deja `delibris/<clave>.json`. Es incremental:
+  guarda cada página en `herramientas/.cache_delibris/` (fuera de git) y sigue donde quedó. Para
+  sumar las reseñas nuevas: `--refrescar 3`. La clave del trozo se calcula igual en
+  `claveDelibris` de `index.html`.
 - Formularios (salvar un libro, error, contacto): FormSubmit, destino en
   `FENIX.contacto.formularios`. El enlace de donación va en `FENIX.contacto.donar`.
 

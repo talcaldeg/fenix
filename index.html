@@ -1093,6 +1093,7 @@
   @media (max-width:600px){.ficha{grid-template-columns:1fr} .ficha .portada{max-width:160px}}
   .ficha .portada{border-radius:10px}
   .cerrar{position:absolute; right:8px; top:6px; width:44px; height:44px; border:0; border-radius:50%; background:var(--chip); font-size:26px; line-height:1; cursor:pointer; color:var(--ink); z-index:1}
+  [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
   .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 12px}
   .descargas{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0}
   .puntos{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font:14px system-ui,sans-serif; align-items:center; margin:12px 0}
@@ -1279,7 +1280,7 @@
       <div class="lista" id="tLista" role="list" hidden></div>
       <p class="vacio" id="tVacio" hidden></p>
       <div style="margin-top:14px"><button class="btn" type="button" id="tMas" hidden data-i18n="todos.mas">Ver más resultados</button></div>
-      <p class="leyenda-moral"><span data-i18n="todos.fuentes">Catálogo de</span> <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a><span data-i18n="todos.fuentes2"> (Internet Archive). Valoración moral de</span> <a href="https://www.delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="todos.fuentes3">, que reseña unos 80 mil libros; los demás aparecen sin valoración. Los derechos de autor se estiman por el año de muerte del autor y no reemplazan una revisión caso a caso.</span></p>
+      <p class="leyenda-moral"><span data-i18n="todos.fuentes">Catálogo de</span> <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a><span data-i18n="todos.fuentes2"> (Internet Archive). Valoración moral de</span> <a href="https://www.delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="todos.fuentes3"> (sitio de reseñas; no es un juicio oficial de la Iglesia), que reseña unos 80 mil libros; los demás aparecen sin valoración. Los derechos de autor se estiman por el año de muerte del autor y no reemplazan una revisión caso a caso.</span></p>
     </div>
   </section>
 
@@ -1430,13 +1431,13 @@
     en: {
       "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions","nav.todos":"All books",
       "todos.eyebrow":"World catalogue","todos.titulo":"All books in English","todos.lede":"Search for any book published in English. Its page shows the Delibris moral rating, whether it is under copyright and, if it is in Fénix, the button to download it; if it is not, you can ask us to look for it.",
-      "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":", which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
+      "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":" (a review site; not an official judgement of the Church), which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
       "todos.cuenta":"{n} books found","todos.cuenta1":"1 book found","todos.vacio":"No books found. Try a single word from the title or the author's surname.","todos.error":"The catalogue did not respond. Please try again in a moment.","todos.buscando":"Searching…","todos.edicion":"Edition",
-      "todos.enFenix":"In Fénix","todos.derechos":"Copyright","todos.calculando":"Checking…","todos.verOL":"See in Open Library","todos.verFicha":"See its page in Fénix","todos.buscarDelibris":"Search in delibris.org",
+      "todos.enFenix":"In Fénix","todos.derechos":"Copyright","todos.calculando":"Checking…","todos.verOL":"See in Open Library","todos.verFicha":"See its page in Fénix","todos.buscarDelibris":"Search in delibris.org","todos.noEncontrada":"Not found in Delibris",
       "todos.solicitar":"Request this book","todos.solicitarNota":"It is not in Fénix yet. Ask for it: we will look for it, check its rights and, if possible, publish it or tell you where to read it.","todos.solicitarEnviar":"Send request",
-      "der.libre":"Public domain in Chile: {a} died in {m}, more than 70 years ago. If this is a translation or an annotated edition, the translator or editor may hold their own rights, and the term differs elsewhere (80 years in Spain for authors who died before 1987; up to 100 in Mexico).",
-      "der.protegido":"Under copyright: {a} died in {m}; in Chile the work becomes free on 1 January {l}.","der.vivo":"Under copyright: there is no record of the author's death ({a}, born in {b}).",
-      "der.reciente":"Most likely under copyright: first published in {y}.","der.sinDatos":"Not enough data to tell. If you request it, we will check.",
+      "der.libre":"In Chile: {a} died in {m}, more than 70 years ago. If this is a translation or an annotated edition, the translator or editor may hold their own rights, and the term differs elsewhere (80 years in Spain for authors who died before 1987; up to 100 in Mexico).",
+      "der.protegido":"{a} died in {m}; in Chile the work becomes free on 1 January {l}.","der.vivo":"There is no record of the author's death ({a}, born in {b}).",
+      "der.reciente":"It was first published in {y}.","der.sinDatos":"Not enough data to tell. If you request it, we will check.",
       "der.etqLibre":"Public domain","der.etqProtegido":"Copyrighted","der.etqProbable":"Probably copyrighted","der.etqSinDatos":"No data",
       "ed.eyebrow":"Our own editions","ed.titulo":"Our editions","ed.lede":"Sometimes finding a book is not enough: it has to be translated from its original language, a transcription has to be checked, or an edition has to be made that reads well on a phone. These are the books prepared by Proyecto Fénix.",
       "ed.proximo":"We are working on new translations. If you would like to help translate or proofread, write to us from Contact.","x.edFenix":"Fénix edition","x.queHicimos":"What we did","x.verLibro":"See the book",
@@ -1486,11 +1487,11 @@
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en",
       "todos.cuenta":"{n} libros encontrados","todos.cuenta1":"1 libro encontrado","todos.vacio":"No encontramos libros. Pruebe con una sola palabra del título o con el apellido del autor.","todos.error":"El catálogo no respondió. Inténtelo de nuevo en un momento.","todos.buscando":"Buscando…","todos.edicion":"Edición",
-      "todos.enFenix":"En Fénix","todos.derechos":"Derechos de autor","todos.calculando":"Revisando…","todos.verOL":"Ver en Open Library","todos.verFicha":"Ver su ficha en Fénix","todos.buscarDelibris":"Buscar en delibris.org",
+      "todos.enFenix":"En Fénix","todos.derechos":"Derechos de autor","todos.calculando":"Revisando…","todos.verOL":"Ver en Open Library","todos.verFicha":"Ver su ficha en Fénix","todos.buscarDelibris":"Buscar en delibris.org","todos.noEncontrada":"No la encontramos en Delibris",
       "todos.solicitar":"Solicitar este libro","todos.solicitarNota":"Todavía no está en Fénix. Pídalo: lo buscamos, revisamos sus derechos y, si se puede, lo publicamos o le decimos dónde leerlo.","todos.solicitarEnviar":"Enviar solicitud",
-      "der.libre":"Dominio público en Chile: {a} murió en {m}, hace más de 70 años. Si es una traducción o una edición anotada, el traductor o el editor pueden tener derechos propios, y en otros países el plazo cambia (en España, 80 años para autores muertos antes de 1987; en México, hasta 100).",
-      "der.protegido":"Con derechos de autor: {a} murió en {m}; en Chile la obra queda libre el 1 de enero de {l}.","der.vivo":"Con derechos de autor: no hay registro de la muerte del autor ({a}, nacido en {b}).",
-      "der.reciente":"Con derechos de autor, con toda probabilidad: se publicó por primera vez en {y}.","der.sinDatos":"Sin datos suficientes para saberlo. Si lo solicita, lo revisamos.",
+      "der.libre":"En Chile: {a} murió en {m}, hace más de 70 años. Si es una traducción o una edición anotada, el traductor o el editor pueden tener derechos propios, y en otros países el plazo cambia (en España, 80 años para autores muertos antes de 1987; en México, hasta 100).",
+      "der.protegido":"{a} murió en {m}; en Chile la obra queda libre el 1 de enero de {l}.","der.vivo":"No hay registro de la muerte del autor ({a}, nacido en {b}).",
+      "der.reciente":"Se publicó por primera vez en {y}.","der.sinDatos":"Sin datos suficientes para saberlo. Si lo solicita, lo revisamos.",
       "der.etqLibre":"Dominio público","der.etqProtegido":"Con derechos","der.etqProbable":"Probablemente con derechos","der.etqSinDatos":"Sin datos"
     }
   };
@@ -1560,7 +1561,7 @@
       en: ["The work is incompatible with Catholic doctrine", "Its general approach or central theses are ambiguous or contrary to Church teaching", "Contains doctrinal errors of some weight", "For readers with specific training in the subject", "Requires general knowledge of the subject", "No drawbacks"]
     }
   };
-  ESCALA_DELIBRIS.Espiritualidad = ESCALA_DELIBRIS.Pensamiento; // Delibris la trata como obra de pensamiento
+  ESCALA_DELIBRIS.Espiritualidad = ESCALA_DELIBRIS.Pensamiento; // la ficha de un libro de Espiritualidad en Delibris muestra la leyenda de Pensamiento
   const textoDelibris = d => { const e = ESCALA_DELIBRIS[d.genero] || ESCALA_DELIBRIS.Literatura; return (e[lang] || e.es)[d.valor - 1]; };
   function moral(l){
     const d = l.delibris;
@@ -1723,32 +1724,41 @@
     return { id: d.key.split("/").pop(), titulo: ed.title || d.title, original: d.title, autores: d.author_name || [], claves: d.author_key || [],
       anio: d.first_publish_year, portada: ed.cover_i || d.cover_i, editorial: (ed.publisher || [])[0], fecha: (ed.publish_date || [])[0], isbn: (ed.isbn || [])[0] };
   }
-  const trozoDelibris = k => trozos[k] || (trozos[k] = fetch(`delibris/${k}.json`).then(r => r.ok ? r.json() : []).catch(() => []));
+  // _meta.json trae las claves que existen, para no pedir trozos que no hay.
+  let metaDelibris = null;
+  const claves = () => metaDelibris || (metaDelibris = fetch("delibris/_meta.json").then(r => r.json()).then(m => new Set(m.claves)).catch(() => new Set()));
+  const trozoDelibris = async k => (await claves()).has(k) ? (trozos[k] || (trozos[k] = fetch(`delibris/${k}.json`).then(r => r.ok ? r.json() : []).catch(() => []))) : [];
   async function valoracionDelibris(o){
     const f = libroFenix(o);
     if (f) return f.delibris || null;
     for (const ti of new Set([o.titulo, o.original])){
       const lista = await trozoDelibris(claveDelibris(ti));
       const c = corto(ti);
-      const d = lista.find(x => corto(x.t) === c && (!o.autores.length || cruzan(x.a, o.autores)));
+      const d = lista.find(x => corto(x.t) === c && (!o.autores.length || cruzan(x.a, nombres(o))));
       if (d) return { valor: d.v, genero: d.g, url: d.u };
     }
     return null;
   }
   // El libro está en Fénix si coinciden el título (sin subtítulo ni artículo) y algún apellido.
-  const libroFenix = o => libros().find(l => [o.titulo, o.original].some(ti => corto(ti) === corto(l.titulo)) && cruzan([l.autor], o.autores));
+  // En la ficha también valen los otros nombres del autor en Open Library (Thérèse de Lisieux = Teresa del Niño Jesús).
+  const nombres = o => [...o.autores, ...(o.alias || [])];
+  const libroFenix = o => libros().find(l => [o.titulo, o.original].some(ti => corto(ti) === corto(l.titulo)) && cruzan([l.autor], nombres(o)));
+  const autoresOL = o => o._autores || (o._autores = Promise.all(o.claves.slice(0, 3).map(k => fetch(`${OL}/authors/${k}.json`).then(r => r.json()).catch(() => ({}))))
+    .then(as => { o.alias = as.flatMap(a => [a.personal_name, a.fuller_name, ...(a.alternate_names || [])]).filter(Boolean); return as; }));
 
   // Derechos de autor por la regla chilena (Ley 17.336): vida del autor y 70 años desde su muerte.
   const anioDe = s => { const m = String(s || "").match(/(\d{3,4})(?!.*\d{3,4})/); return m ? +m[1] : null; };
   async function derechos(o){
     const hoy = new Date().getFullYear();
-    const autores = await Promise.all(o.claves.slice(0, 3).map(k => fetch(`${OL}/authors/${k}.json`).then(r => r.json()).catch(() => ({}))));
+    const autores = await autoresOL(o);
     const vivos = autores.filter(a => !anioDe(a.death_date) && anioDe(a.birth_date) > hoy - 110);
     const muertes = autores.map(a => anioDe(a.death_date)).filter(Boolean);
     const nombre = a => a.name || o.autores[0] || "";
     if (vivos.length) return { tipo: "protegido", etq: "der.etqProtegido", txt: t("der.vivo").replace("{a}", nombre(vivos[0])).replace("{b}", anioDe(vivos[0].birth_date)) };
     if (autores.length && muertes.length === autores.length){
       const m = Math.max(...muertes), a = autores.find(x => anioDe(x.death_date) === m);
+  // Sin coincidencia en el índice no se afirma que Delibris no lo reseñe: puede estar con otro título.
+  const moralObra = d => d ? moral({ delibris: d }) : `<span class="moral"><span class="circ" aria-hidden="true">${"<i></i>".repeat(6)}</span><span class="txt">${esc(t("todos.noEncontrada"))}</span></span>`;
       if (m + 70 < hoy) return { tipo: "libre", etq: "der.etqLibre", txt: t("der.libre").replace("{a}", nombre(a)).replace("{m}", m) };
       return { tipo: "protegido", etq: "der.etqProtegido", txt: t("der.protegido").replace("{a}", nombre(a)).replace("{m}", m).replace("{l}", m + 71) };
     }
@@ -1763,7 +1773,7 @@
     return `<div class="fila" role="listitem" data-obra="${esc(o.id)}" tabindex="0"><span class="mini"${tapa(o)}></span>
       <div class="libro-c"><div class="tt"><a href="#obra/${esc(o.id)}">${esc(o.titulo)}</a></div><div class="au">${esc(o.autores.slice(0, 2).join(", "))}${o.anio ? " · " + esc(o.anio) : ""}</div></div>
       <div class="etqs">${ed ? `<span>${esc(ed)}</span>` : ""}${f ? `<span class="etq ed-fenix">${esc(t("todos.enFenix"))}</span>` : ""}</div>
-      <span class="moral-obra" data-obra="${esc(o.id)}">${moral({})}</span><div class="marcas-f"><span class="ir" aria-hidden="true">›</span></div></div>`;
+      <span class="moral-obra" data-obra="${esc(o.id)}"><span class="moral"><span class="txt">${esc(t("todos.calculando"))}</span></span></span><div class="marcas-f"><span class="ir" aria-hidden="true">›</span></div></div>`;
   }
   let busqueda = { q: "", pagina: 1, total: 0 };
   async function buscarObras(mas){
@@ -1786,7 +1796,7 @@
       $("#tLista").insertAdjacentHTML("beforeend", nuevas.map(filaObra).join(""));
       $("#tLista").hidden = false;
       $("#tMas").hidden = busqueda.pagina * 20 >= busqueda.total;
-      nuevas.forEach(async o => { const d = await valoracionDelibris(o); const el = $(`.moral-obra[data-obra="${o.id}"]`); if (el) el.innerHTML = moral({ delibris: d }); });
+      nuevas.forEach(async o => { const d = await valoracionDelibris(o); const el = $(`.moral-obra[data-obra="${o.id}"]`); if (el) el.innerHTML = moralObra(d); });
     }catch(err){
       $("#tCuenta").textContent = ""; $("#tVacio").textContent = t("todos.error"); $("#tVacio").hidden = false;
       if (mas) busqueda.pagina--;
@@ -1803,6 +1813,7 @@
     if (!o){
       // Enlace directo a una obra: se pide a Open Library solo esa.
       $("#fichaCuerpo").innerHTML = `<p class="vacio" style="padding:22px">${esc(t("todos.buscando"))}</p>`;
+    await Promise.race([autoresOL(o), new Promise(r => setTimeout(r, 2500))]);
       if (!dlg.open) dlg.showModal();
       try{
         const j = await fetch(`${OL}/search.json?q=${encodeURIComponent(`key:/works/${id} language:${codigoOL()}`)}&fields=${CAMPOS}`).then(r => r.json());
@@ -1847,7 +1858,7 @@
     if (!dlg.open) dlg.showModal();
     valoracionDelibris(o).then(d => {
       const el = $("#obraMoral"); if (!el || obras[id] !== o) return;
-      el.innerHTML = moral({ delibris: d }) + (d
+      el.innerHTML = moralObra(d) + (d
         ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(d.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>`
         : `<a class="meta" style="margin:4px 0 0; display:inline-block" href="https://www.delibris.org/es/advanced-search?combine=${encodeURIComponent(o.titulo)}" target="_blank" rel="noopener">${esc(t("todos.buscarDelibris"))}</a>`);
     });
