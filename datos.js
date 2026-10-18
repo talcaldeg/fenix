@@ -9,6 +9,8 @@
 // - citas: textuales, cotejadas con el texto del libro.
 // - imagen: portada en img/portadas/<id>.jpg (cuadro de dominio público), con su crédito y enlace;
 //   se arma con herramientas/portadas.py, que también la pone dentro del EPUB.
+//   Obra protegida con portada oficial: src es la URL de la imagen en el sitio del titular (no se copia)
+//   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
   actualizado: "17-oct-2026", // poner la fecha al cambiar el catálogo
@@ -662,6 +664,31 @@ window.FENIX = {
       fuente: { texto: "Project Gutenberg, libro n.º 1656 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1656" },
       delibris: null,
       parecidos: ["ortodoxia", "confesiones", "quo-vadis"]
+    },
+    {
+      id: "orencio-y-eloisa",
+      titulo: "Orencio y Eloísa",
+      autor: "Benjamín Franzani",
+      anio: "2021",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      imagen: { src: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhL8ho_fkfQkc0zjyJuXk7zWCg46XZLFjCLw95nkYpoO31o26bDNtvgCzDale4V5aTEUOZOjuyu1Y309MsBILmiXWD29IW9finGqXUyDcBovYuop_mTNXk0LBL5GnWZ2ou9NwZKRY25In6Zk-RkB7KGKudLSFH3HynzonnSdBGLAWsobNgeN-vB53nmkhN2/s800/image1788018015", credito: { es: "portada oficial del relato", en: "official cover of the story" }, url: "https://www.benjaminfranzani.com/p/el-repertorio-del-juglar-historias.html", aviso: { es: "enlazada desde el sitio del autor", en: "linked from the author's website" } },
+      resumen: {
+        es: "Siar, ciudad portuaria de un imperio en ruinas, resiste hace cinco años el asedio de un ejército enemigo. En medio de la guerra, el joven jinete Orencio y la criada Eloísa se aman en silencio, sin que él se atreva a pedir su mano mientras la ciudad siga en peligro. Cuando Orencio cae enfermo y llegan dos emisarias de una ciudad aliada con noticias alarmantes, Eloísa se ve envuelta en una trama de espionaje, sospechas injustas y un asalto final. Relato breve de amor, lealtad y entrega, en seis partes, que acompaña a la novela «El Lobo de Plata» (saga «Crónicas de una Espada»).",
+        en: "Siar, a besieged port city in a crumbling empire, has withstood five years of enemy siege. Amid the war, the young horseman Orencio and the servant girl Eloísa love each other quietly, he unwilling to ask for her hand while the city remains in danger. When Orencio falls ill and two envoys from an allied city arrive with grave news, Eloísa is drawn into a web of espionage, unjust suspicion and a final assault. A short tale of love, loyalty and self-giving in six parts, a companion to the novel «El Lobo de Plata» («Crónicas de una Espada» saga)."
+      },
+      citas: [
+        "Porque las flores son inútiles para la aspereza de la guerra, por eso es que son ahora más necesarias que nunca.",
+        "Si yo he de ser un héroe como dices, lo serás tú también, lo seré por ti."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "benjaminfranzani.com", url: "https://www.benjaminfranzani.com/p/el-repertorio-del-juglar-historias.html" }
+      ],
+      fuente: { texto: "Publicado por el autor en su sitio, en «El repertorio del juglar» (obra protegida por derechos de autor; se enlaza, no se aloja)", url: "https://www.benjaminfranzani.com/p/el-repertorio-del-juglar-historias.html" },
+      delibris: null,
+      parecidos: ["quo-vadis", "apologia-de-socrates"]
     }
   ],
 

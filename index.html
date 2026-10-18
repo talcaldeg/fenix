@@ -603,7 +603,7 @@
           <span>${esc(t("l.moral"))}</span><span>${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</span></div></div>
       <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>
       ${l.fuente ? `<p class="meta" style="margin-top:14px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
-      ${l.imagen ? `<p class="meta" style="margin-top:6px">${esc(t("x.portada"))}: <a href="${esc(l.imagen.url)}" target="_blank" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(t("x.dominioPublico"))})</p>` : ""}
+      ${l.imagen ? `<p class="meta" style="margin-top:6px">${esc(t("x.portada"))}: <a href="${esc(l.imagen.url)}" target="_blank" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : t("x.dominioPublico"))})</p>` : ""}
     </div></div>`;
     $("#btnLeido").onclick = () => { leidos[id] ? delete leidos[id] : leidos[id] = true; almacen.guardar("leidos", leidos); abrirFicha(id); pintarTodo(); };
     $("#btnFav").onclick = () => { favoritos[id] ? delete favoritos[id] : favoritos[id] = true; almacen.guardar("favoritos", favoritos); abrirFicha(id); pintarTodo(); };
