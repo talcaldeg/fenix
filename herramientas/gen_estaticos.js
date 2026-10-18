@@ -73,7 +73,7 @@ const TX = {
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
-    de: "de", tema: "Cambiar a modo claro u oscuro", edFenix: "Edición Fénix"
+    de: "de", tema: "Cambiar a modo claro u oscuro", edFenix: "Edición Fénix", sello: "Recomendado por Fénix"
   },
   en: {
     cat: { lectura: "Spiritual reading", oracion: "Prayer", novela: "Novels", teatro: "Drama", poesia: "Poetry", ensayo: "Essays and history" },
@@ -84,7 +84,7 @@ const TX = {
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
-    de: "of", tema: "Switch between light and dark mode", edFenix: "Fénix edition"
+    de: "of", tema: "Switch between light and dark mode", edFenix: "Fénix edition", sello: "Recommended by Fénix"
   }
 };
 
@@ -121,6 +121,7 @@ const ESTILO = `
   .botones{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 8px}
   .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px system-ui,sans-serif; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
+  .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
   .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
   blockquote{margin:0 0 14px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic}
   .circ{display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px}
@@ -148,7 +149,7 @@ function paginaLibro(l){
   const inicio = B + (lang === "en" ? "?l=en" : "");
   const botones = [
     ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" download>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
-    ...externosEn(l, lang).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
+    ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
   ];
   const tieneArchivos = Object.keys(l.archivos || {}).length > 0;
@@ -216,6 +217,7 @@ ${JSON.stringify(ld, null, 2)}
   <div class="ficha">
     <div>${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}</div>
     <div>
+      ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
       <h1>${esc(l.titulo)}</h1>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>
       <div class="botones">${botones.join("\n        ")}</div>
