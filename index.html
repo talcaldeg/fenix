@@ -640,6 +640,7 @@
   // Portada: cifras del hero y un acceso por categoría (con el cuadro de un libro de esa categoría) más el plan de vida.
   function pintarInicio(){
     const ls = libros();
+    $(".hero .fondo").setAttribute("aria-label", t("hero.credito"));
     $("#cLibros").textContent = ls.length;
     $("#cOraciones").textContent = D.oraciones.filter(o => (o[lang]||[]).length).length;
     // Cada acceso con un cuadro distinto: no se repite una imagen ya usada en otro.
