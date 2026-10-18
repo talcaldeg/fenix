@@ -69,14 +69,56 @@
 
   section.vista{display:none; padding:28px 0 56px}
   section.vista.on{display:block}
+  #v-inicio{padding-top:0}
   h1{font-size:clamp(28px,5vw,44px); line-height:1.15; margin:0 0 12px}
   h2{font-size:clamp(22px,3.4vw,28px); margin:0 0 14px}
   h3{margin:0 0 6px; font-size:18px}
   .lede{color:var(--muted); font-size:clamp(16px,2.2vw,19px); max-width:680px}
   .eyebrow{font:700 12px system-ui,sans-serif; letter-spacing:1.6px; text-transform:uppercase; color:var(--oro); margin:0 0 8px}
 
-  .hero{background:linear-gradient(180deg,var(--bg2),var(--bg)); border-bottom:1px solid var(--line); padding:44px 0 34px}
-  .hero .acciones{display:flex; gap:10px; flex-wrap:wrap; margin-top:18px}
+  /* Portada: siempre oscura, para empalmar con la noche del cuadro de Grünewald (img/inicio.jpg). */
+  .hero{position:relative; overflow:hidden; background:#0f0d10; color:#f6ecd9; border-bottom:1px solid var(--line); min-height:min(80vh,660px); display:flex; align-items:center; padding:64px 0}
+  .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#0f0d10 url(img/inicio.jpg) center 16%/cover no-repeat; animation:acercar 2.8s ease-out both}
+  .hero .fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,#0f0d10 0%,rgba(15,13,16,.8) 18%,rgba(15,13,16,0) 52%), linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 28%)}
+  .hero .wrap{position:relative; width:100%}
+  .hero .txt{max-width:560px; animation:subir 1.1s .2s ease-out both}
+  .hero h1{font-size:clamp(38px,6.6vw,68px); line-height:1.04; letter-spacing:-.5px; margin-bottom:16px; text-shadow:0 2px 20px rgba(0,0,0,.65)}
+  .hero .eyebrow{color:#e8b04a}
+  .hero .lede{color:#dccdb7}
+  .hero .btn{background:rgba(255,248,236,.06); color:#f6ecd9; border-color:rgba(255,240,210,.35)}
+  .hero .btn.prim{background:#e8b04a; color:#1d1206; border-color:transparent}
+  .hero .btn:hover{border-color:#e8b04a}
+  .hero .cifras{display:flex; gap:28px; flex-wrap:wrap; margin-top:30px; font:13px/1.35 system-ui,sans-serif; color:#c9b9a2}
+  .hero .cifras b{display:block; font:700 30px/1.1 Georgia,serif; color:#f6ecd9}
+  .hero .credito{position:absolute; right:12px; bottom:8px; font:11px system-ui,sans-serif; color:rgba(246,236,217,.55); text-decoration:none}
+  .hero .credito:hover{color:#f6ecd9}
+  @keyframes acercar{from{transform:scale(1.07); opacity:.4} to{transform:scale(1); opacity:1}}
+  @keyframes subir{from{transform:translateY(14px); opacity:0} to{transform:none; opacity:1}}
+  @media (prefers-reduced-motion: reduce){.hero .fondo, .hero .txt{animation:none}}
+  @media (max-width:760px){
+    .hero{display:block; min-height:0; padding:0 0 40px}
+    .hero .fondo{position:relative; width:100%; height:min(78vw,440px); background-position:center 12%}
+    .hero .fondo::after{background:linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 50%)}
+    .hero .wrap{margin-top:-70px}
+    .hero .cifras{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
+    .hero .cifras b{font-size:26px}
+    .hero .credito{left:16px; right:16px}
+  }
+  .hero .acciones{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px}
+
+  .accesos{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
+  @media (max-width:760px){.accesos{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}}
+  .acceso{position:relative; overflow:hidden; border-radius:14px; min-height:160px; padding:16px; display:flex; flex-direction:column; justify-content:flex-end; gap:2px; color:#fff8ec; text-decoration:none; background:var(--c-lectura) center 25%/cover no-repeat; box-shadow:var(--sombra); transition:transform .15s}
+  .acceso.oracion{background-color:var(--c-oracion)} .acceso.novela{background-color:var(--c-novela)}
+  .acceso::before{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(22,15,12,.95) 0%, rgba(22,15,12,.55) 45%, rgba(22,15,12,.1) 100%)}
+  .acceso > *{position:relative}
+  .acceso b{font-size:19px; line-height:1.2}
+  .acceso span{font:13px/1.35 system-ui,sans-serif; opacity:.88}
+  .acceso:hover, .acceso:focus-visible{transform:translateY(-2px)}
+  .titulo-fila{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap}
+  .titulo-fila a{font:600 14px system-ui,sans-serif; text-decoration:none}
+  .banda{display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-top:44px}
+  .banda p{margin:0; color:var(--muted)}
   .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; font:600 14px system-ui,sans-serif; border:1px solid var(--line); background:var(--card); color:var(--ink); text-decoration:none; cursor:pointer}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
   .btn:disabled{opacity:.55; cursor:not-allowed}
@@ -206,20 +248,34 @@
   <!-- INICIO -->
   <section class="vista" id="v-inicio">
     <div class="hero">
+      <div class="fondo" role="img" aria-label="Matthias Grünewald, La Resurrección"></div>
       <div class="wrap">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Biblioteca gratuita</p>
-        <h1 data-i18n="hero.titulo">Libros que vuelven a la vida</h1>
-        <p class="lede" data-i18n="hero.lede">Lectura espiritual, oración y novelas para descargar en EPUB y PDF, en español e inglés. Cada libro trae un resumen, citas escogidas y otros parecidos. Si no se puede descargar libremente, le decimos dónde comprarlo.</p>
-        <div class="acciones">
-          <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
-          <a class="btn" href="#otra-humanidad" data-i18n="hero.otra">¿Qué es «otra humanidad»?</a>
+        <div class="txt">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Biblioteca gratuita</p>
+          <h1 data-i18n="hero.titulo">Libros que vuelven a la vida</h1>
+          <p class="lede" data-i18n="hero.lede">Lectura espiritual, oración y novelas para descargar gratis en EPUB y PDF. Cada libro trae un resumen, citas escogidas y otros parecidos; si no se puede descargar libremente, le decimos dónde leerlo o comprarlo.</p>
+          <div class="acciones">
+            <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
+            <a class="btn" href="#otra-humanidad" data-i18n="hero.otra">¿Qué es «otra humanidad»?</a>
+          </div>
+          <div class="cifras">
+            <div><b id="cLibros"></b><span data-i18n="hero.cLibros">libros en el catálogo</span></div>
+            <div><b id="cOraciones"></b><span data-i18n="hero.cOraciones">oraciones para rezar</span></div>
+            <div><b>0</b><span data-i18n="hero.cPublicidad">publicidad y registros</span></div>
+          </div>
         </div>
       </div>
+      <a class="credito" href="https://commons.wikimedia.org/wiki/File:Matthias_Gr%C3%BCnewald_-_Resurrection.jpg" target="_blank" rel="noopener" data-i18n="hero.credito">Matthias Grünewald, «La Resurrección», retablo de Isenheim, 1512-1516</a>
     </div>
     <div class="wrap">
-      <div style="margin-top:30px">
+      <div style="margin-top:34px">
+        <p class="eyebrow" data-i18n="acc.eyebrow">Explorar</p>
+        <div class="accesos" id="accesos"></div>
+      </div>
+
+      <div style="margin-top:40px">
         <p class="eyebrow" data-i18n="rec.eyebrow">Recomendados</p>
-        <h2 data-i18n="rec.titulo">Para empezar</h2>
+        <div class="titulo-fila"><h2 data-i18n="rec.titulo">Para empezar</h2><a href="#biblioteca" data-i18n="rec.todos">Ver todo el catálogo →</a></div>
         <div class="grilla" id="recomendados"></div>
       </div>
 
@@ -240,8 +296,19 @@
             <blockquote>«Vivo yo, mas no yo, sino Cristo vive en mí».<cite>San Pablo, Gálatas 2,20</cite></blockquote>
             <blockquote>«Estamos llamados a no ser más que una sola cosa con Él; nos hace comulgar, en cuanto miembros de su Cuerpo, en lo que Él vivió en su carne por nosotros y como modelo nuestro».<cite>Catecismo, n. 521</cite></blockquote>
             <blockquote>«La gracia es una participación en la vida de Dios».<cite>Catecismo, n. 1997</cite></blockquote>
-            <blockquote><span data-i18n="oh.citaDJ">«Que yo, plenamente identificado contigo, llegue a ser para ti como otra humanidad».</span><cite data-i18n="oh.citaDJRef">Paul de Jaegher, S.J., One with Jesus (traducción de Proyecto Fénix)</cite></blockquote>
+            <blockquote><span data-i18n="oh.citaDJ">«Que yo, plenamente identificado Contigo, llegue a ser para Ti como otra humanidad».</span><cite data-i18n="oh.citaDJRef">Paul de Jaegher, S.J., One with Jesus (traducción de Proyecto Fénix)</cite></blockquote>
           </div>
+        </div>
+      </div>
+
+      <div class="caja banda">
+        <div>
+          <h3 data-i18n="ban.titulo">¿Conoce un buen libro que se está perdiendo?</h3>
+          <p data-i18n="ban.texto">Cuéntenos cuál: lo buscamos, revisamos sus derechos y, si se puede, lo publicamos.</p>
+        </div>
+        <div class="acciones" style="display:flex; gap:10px; flex-wrap:wrap">
+          <a class="btn prim" href="#salvar" data-i18n="nav.salvar">Salvar un libro</a>
+          <a class="btn" href="#dona" data-i18n="nav.dona">Dona</a>
         </div>
       </div>
     </div>
@@ -411,9 +478,13 @@
     en: {
       "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Found an error?","nav.dona":"Donate","nav.contacto":"Contact",
       "hero.eyebrow":"Free library","hero.titulo":"Books that rise again",
-      "hero.lede":"Spiritual reading, prayer and novels to download in EPUB and PDF, in Spanish and English. Each book comes with a summary, chosen quotes and similar titles. If it cannot be downloaded freely, we tell you where to buy it.",
+      "hero.lede":"Spiritual reading, prayer and novels to download free in EPUB and PDF. Each book comes with a summary, chosen quotes and similar titles; if it cannot be downloaded freely, we tell you where to read or buy it.",
       "hero.ver":"Browse the library","hero.otra":"What is «another humanity»?",
-      "rec.eyebrow":"Recommended","rec.titulo":"Where to begin",
+      "hero.cLibros":"books in the catalogue","hero.cOraciones":"prayers to pray","hero.cPublicidad":"ads and sign-ups",
+      "hero.credito":"Matthias Grünewald, «The Resurrection», Isenheim Altarpiece, 1512-1516",
+      "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
+      "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
+      "rec.eyebrow":"Recommended","rec.titulo":"Where to begin","rec.todos":"See the whole catalogue →",
       "oh.eyebrow":"The idea behind us","oh.titulo":"Being for Christ «like another humanity»",
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
       "oh.p2":"The Jesuit Paul de Jaegher turned it into a prayer at the end of «One with Jesus»: that the soul, fully identified with Jesus, may become for Him «like another humanity». Lending Him our eyes, lips, mind and heart so that He may still look, speak, think and love today.",
@@ -445,6 +516,7 @@
     es: {
       "x.leer":"Descargar","x.enLinea":"Leer en línea","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos","x.puntuacion":"Puntuación","x.suya":"Suya","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
+      "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en"
     }
@@ -565,6 +637,32 @@
   function pintarRecomendados(){
     $("#recomendados").innerHTML = libros().filter(l => l.recomendado).map(tarjeta).join("");
   }
+  // Portada: cifras del hero y un acceso por categoría (con el cuadro de un libro de esa categoría) más el plan de vida.
+  function pintarInicio(){
+    const ls = libros();
+    $("#cLibros").textContent = ls.length;
+    $("#cOraciones").textContent = D.oraciones.filter(o => (o[lang]||[]).length).length;
+    // Cada acceso con un cuadro distinto: no se repite una imagen ya usada en otro.
+    const usadas = new Set();
+    const fondo = l => { if (!l || !l.imagen) return ""; usadas.add(l.imagen.src); return ` style="background-image:url('${esc(l.imagen.src)}')"`; };
+    const conImagen = xs => { const libres = xs.filter(l => l.imagen && !usadas.has(l.imagen.src)); return libres.find(l => l.recomendado) || libres[0] || xs[0]; };
+    const cats = ["lectura","oracion","novela"].map(c => {
+      const xs = ls.filter(l => l.categoria === c);
+      if (!xs.length) return "";
+      return `<a class="acceso ${c}" href="#biblioteca" data-cat="${c}"${fondo(conImagen(xs))}><b>${esc(categoria(c))}</b><span>${xs.length} ${esc(t(xs.length === 1 ? "x.libro" : "x.libros"))}</span></a>`;
+    });
+    const plan = [...((D.plan || {}).lectura || []), ...((D.plan || {}).oracion || [])].map(porId).filter(l => l && visible(l));
+    cats.push(`<a class="acceso oracion" href="#plan"${fondo(conImagen(plan))}><b>${esc(t("nav.plan"))}</b><span>${esc(t("acc.plan"))}</span></a>`);
+    $("#accesos").innerHTML = cats.join("");
+  }
+  // Un acceso de categoría abre la biblioteca ya filtrada.
+  document.addEventListener("click", e => {
+    const a = e.target.closest(".acceso[data-cat]"); if (!a) return;
+    ["#fBuscar","#fFormato"].forEach(s => $(s).value = "");
+    $("#fNoLeidos").checked = $("#fFavoritos").checked = false;
+    $("#fCategoria").value = a.dataset.cat; pintarCatalogo();
+  });
+  $$('#v-inicio a[href="#biblioteca"]:not([data-cat])').forEach(a => a.addEventListener("click", () => { $("#fCategoria").value = ""; pintarCatalogo(); }));
   ["#fBuscar","#fCategoria","#fFormato","#fNoLeidos","#fFavoritos"].forEach(s => $(s).addEventListener("input", pintarCatalogo));
   $("#fLimpiar").addEventListener("click", () => {
     ["#fBuscar","#fCategoria","#fFormato"].forEach(s => $(s).value = "");
@@ -698,7 +796,7 @@
   window.addEventListener("hashchange", ruta);
 
   $("#fechaCatalogo").textContent = D.actualizado || "";
-  function pintarTodo(){ pintarRecomendados(); pintarCatalogo(); pintarPlan(); pintarOraciones(); llenarSelectLibros(); }
+  function pintarTodo(){ pintarInicio(); pintarRecomendados(); pintarCatalogo(); pintarPlan(); pintarOraciones(); llenarSelectLibros(); }
   aplicarIdioma();
   ruta();
 })();
