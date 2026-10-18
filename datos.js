@@ -1,6 +1,7 @@
 // Catálogo de Proyecto Fénix. Para agregar un libro, copie una ficha y complete sus campos.
 // - archivos: rutas en libros/ (solo obras que se pueden difundir libremente).
-// - externos: descarga legal en otro sitio (Project Gutenberg, etc.).
+// - externos: descarga legal en otro sitio (Project Gutenberg, etc.); formato "web" = lectura en línea
+//   (así van las obras protegidas de san Josemaría, que la Fundación Studium publica en escriva.org).
 // - comprar: si no hay descarga libre.
 // - nota: puntuación del equipo de 1 a 5 (null = por calificar).
 // - delibris: valoración moral de delibris.org, de 1 a 6 (6 = «Sin inconvenientes»); el texto de
@@ -184,6 +185,350 @@ window.FENIX = {
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/quo-vadis" },
       parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo"]
+    },
+
+    // ---------- San Josemaría Escrivá: obras protegidas (Fundación Studium), lectura en línea en escriva.org ----------
+    {
+      id: "escriva-camino",
+      titulo: "Camino",
+      autor: "San Josemaría Escrivá",
+      anio: "1934",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: true,
+      resumen: {
+        es: "999 puntos breves de meditación, repartidos en 46 capítulos, escritos en un tono directo, como de conversación personal con el lector. Apareció en 1934 en Cuenca con el título «Consideraciones espirituales» y tomó su nombre definitivo en la edición de Valencia de 1939. Lleva más de cinco millones de ejemplares en más de cincuenta idiomas.",
+        en: "999 short points for meditation, in 46 chapters, written in a direct tone, like a personal conversation with the reader. It first appeared in Cuenca in 1934 as «Consideraciones espirituales» and took its final title in the Valencia edition of 1939. More than five million copies have been printed, in over fifty languages."
+      },
+      citas: ["La oración del cristiano nunca es monólogo."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/camino/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/camino/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/camino/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/camino" },
+      parecidos: ["escriva-surco", "escriva-forja", "imitacion-de-cristo"]
+    },
+    {
+      id: "escriva-surco",
+      titulo: "Surco",
+      autor: "San Josemaría Escrivá",
+      anio: "1986",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "1000 puntos de meditación en 32 capítulos, en la línea de «Camino», con especial atención a las virtudes humanas. Se dirige a la persona entera, «cuerpo y alma, naturaleza y gracia». Primera edición póstuma, de 1986.",
+        en: "1000 points for meditation in 32 chapters, in the vein of «The Way», with special attention to the human virtues. It speaks to the whole person, «body and soul, nature and grace». First published posthumously in 1986."
+      },
+      citas: ["Cuanto más generoso seas, por Dios, serás más feliz."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/surco/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/surco/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/surco/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/surco" },
+      parecidos: ["escriva-camino", "escriva-forja", "escriva-amigos-de-dios"]
+    },
+    {
+      id: "escriva-forja",
+      titulo: "Forja",
+      autor: "San Josemaría Escrivá",
+      anio: "1987",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "1055 puntos de meditación en 13 capítulos, muchos de ellos autobiográficos aunque escritos en tercera persona. Recorre el camino del cristiano hacia la identificación con Cristo. Primera edición de 1987.",
+        en: "1055 points for meditation in 13 chapters, many of them autobiographical though written in the third person. It follows the Christian's path towards identification with Christ. First published in 1987."
+      },
+      citas: ["Ojalá pueda decirse que la característica que define tu vida es «amar la Voluntad de Dios»."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/forja/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/forja/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/forja/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/forja" },
+      parecidos: ["escriva-camino", "escriva-surco", "one-with-jesus"]
+    },
+    {
+      id: "escriva-es-cristo-que-pasa",
+      titulo: "Es Cristo que pasa",
+      autor: "San Josemaría Escrivá",
+      anio: "1973",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "18 homilías pronunciadas en fiestas del año litúrgico. El hilo es la filiación divina, junto con la llamada universal a la santidad, la santificación del trabajo ordinario, la contemplación en medio del mundo y la unidad de vida. Fueron predicadas de viva voz a personas muy diversas, no escritas como tratado. Primera edición de 1973.",
+        en: "18 homilies preached on feasts of the liturgical year. The common thread is divine filiation, together with the universal call to holiness, the sanctification of ordinary work, contemplation in the middle of the world and unity of life. They were spoken to very varied listeners, not written as a treatise. First published in 1973."
+      },
+      citas: ["Trabajar así es oración. Estudiar así es oración. Investigar así es oración."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/es-cristo-que-pasa/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/es-cristo-que-pasa/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/es-cristo-que-pasa/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/es-cristo-que-pasa" },
+      parecidos: ["escriva-amigos-de-dios", "marmion-vida-del-alma", "presencia-de-dios"]
+    },
+    {
+      id: "escriva-amigos-de-dios",
+      titulo: "Amigos de Dios",
+      autor: "San Josemaría Escrivá",
+      anio: "1977",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "18 homilías que toman las virtudes cristianas como hilo de un «coloquio filial con Dios». Publicado en 1977, es la primera obra póstuma del autor.",
+        en: "18 homilies that take the Christian virtues as the thread of a «filial conversation with God». Published in 1977, it was the author's first posthumous work."
+      },
+      citas: ["Estas crisis mundiales son crisis de santos."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/amigos-de-dios/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/amigos-de-dios/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/amigos-de-dios/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/amigos-de-dios" },
+      parecidos: ["escriva-es-cristo-que-pasa", "escriva-surco", "presencia-de-dios"]
+    },
+    {
+      id: "escriva-amar-a-la-iglesia",
+      titulo: "Amar a la Iglesia",
+      autor: "San Josemaría Escrivá",
+      anio: "1986",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Reúne las homilías «Lealtad a la Iglesia», «El fin sobrenatural de la Iglesia» y «Sacerdote para la eternidad», con presentación de Jesús Urteaga y dos escritos del beato Álvaro del Portillo.",
+        en: "It gathers the homilies «Loyalty to the Church», «The Supernatural Aim of the Church» and «A Priest Forever», with a presentation by Jesús Urteaga and two writings by Blessed Álvaro del Portillo."
+      },
+      citas: ["Nuestra Madre es Santa, porque ha nacido pura y continuará sin mácula por la eternidad."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/amar-a-la-iglesia/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/amar-a-la-iglesia/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/amar-a-la-iglesia/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/amar-la-iglesia-0" },
+      parecidos: ["escriva-es-cristo-que-pasa", "escriva-conversaciones", "ortodoxia"]
+    },
+    {
+      id: "escriva-en-dialogo-con-el-senor",
+      titulo: "En diálogo con el Señor",
+      autor: "San Josemaría Escrivá",
+      anio: "2017",
+      idioma: "es",
+      categoria: "oracion",
+      recomendado: false,
+      resumen: {
+        es: "25 textos de su predicación a miembros del Opus Dei en Roma entre 1954 y 1975, publicados para el público general en 2017. Temas frecuentes: la identificación con Cristo, la filiación divina, el amor a Dios y a la Iglesia, la oración, la humildad y la caridad fraterna. Su fin es ayudar a hacer oración personal.",
+        en: "25 texts from his preaching to members of Opus Dei in Rome between 1954 and 1975, published for a general readership in 2017. Recurring themes: identification with Christ, divine filiation, love for God and the Church, prayer, humility and fraternal charity. It is meant to help the reader pray."
+      },
+      citas: ["¡Qué alegría tan grande sentirse metidos en Dios! ¡Endiosados!"],
+      archivos: {},
+      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" }],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/en-dialogo-con-el-senor" },
+      parecidos: ["escriva-forja", "one-with-jesus", "presencia-de-dios"]
+    },
+    {
+      id: "escriva-santo-rosario",
+      titulo: "Santo Rosario",
+      autor: "San Josemaría Escrivá",
+      anio: "1934",
+      idioma: "es",
+      categoria: "oracion",
+      recomendado: false,
+      resumen: {
+        es: "Consideraciones breves sobre los misterios gozosos, dolorosos y gloriosos, y un comentario a la letanía lauretana; desde 2003 incluye un apéndice con los misterios luminosos. Lo escribió de un tirón en 1931, en la acción de gracias después de la Misa, y se publicó en 1934.",
+        en: "Short considerations on the joyful, sorrowful and glorious mysteries, and a commentary on the Litany of Loreto; since 2003 it includes an appendix with the luminous mysteries. He wrote it at one sitting in 1931, during his thanksgiving after Mass, and it was published in 1934."
+      },
+      citas: ["No olvides, amigo mío, que somos niños."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/santo-rosario/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/santo-rosario/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/santo-rosario/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/santo-rosario" },
+      parecidos: ["escriva-via-crucis", "escriva-camino", "imitacion-de-cristo"]
+    },
+    {
+      id: "escriva-via-crucis",
+      titulo: "Via Crucis",
+      autor: "San Josemaría Escrivá",
+      anio: "1981",
+      idioma: "es",
+      categoria: "oracion",
+      recomendado: false,
+      resumen: {
+        es: "Comentarios breves a las catorce estaciones, nacidos de su oración personal. Cada estación trae un relato y unos puntos de meditación numerados. Primera edición de 1981.",
+        en: "Short commentaries on the fourteen stations, born of his personal prayer. Each station has a narrative and numbered points for meditation. First published in 1981."
+      },
+      citas: ["Dios es mi Padre, aunque me envíe sufrimiento."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/via-crucis/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/via-crucis/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/via-crucis/" },
+      nota: { literaria: null, teologica: null },
+      delibris: null,
+      parecidos: ["escriva-santo-rosario", "imitacion-de-cristo", "escriva-forja"]
+    },
+    {
+      id: "escriva-cartas-1",
+      titulo: "Cartas I",
+      autor: "San Josemaría Escrivá",
+      anio: "2020",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Las cuatro primeras «Cartas» largas del fundador a los miembros del Opus Dei, con cuya edición pública se comenzó en septiembre de 2020. Tratan de la vida ordinaria como camino de santidad, la humildad, la misión del cristiano en la vida social y la caridad al transmitir la fe.",
+        en: "The founder's first four long «Letters» to the members of Opus Dei, whose public edition began in September 2020. They deal with ordinary life as a path to holiness, humility, the Christian's mission in social life and charity in passing on the faith."
+      },
+      citas: ["Hijos míos, lo extraordinario nuestro es lo ordinario: lo ordinario hecho con perfección."],
+      archivos: {},
+      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/cartas-1/" }],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-1/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/cartas-i-edicion-critico-historica" },
+      parecidos: ["escriva-cartas-2", "escriva-carta-29", "escriva-es-cristo-que-pasa"]
+    },
+    {
+      id: "escriva-cartas-2",
+      titulo: "Cartas II",
+      autor: "San Josemaría Escrivá",
+      anio: "2022",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Cuatro cartas (n.º 5 a 8), fechadas entre 1939 y 1943 y muy reelaboradas en los años sesenta. Tratan de la misión de los laicos en la educación, el carisma del Opus Dei y su misión evangelizadora, la formación cristiana de la juventud y el espíritu de servicio a la Iglesia. Publicadas en 2022.",
+        en: "Four letters (nos. 5 to 8), dated between 1939 and 1943 and extensively reworked in the 1960s. They deal with the mission of lay people in education, the charism of Opus Dei and its evangelising mission, the Christian formation of young people and the spirit of service to the Church. Published in 2022."
+      },
+      citas: ["Solo cuando los hombres se acostumbren a decir y a oír la verdad, habrá comprensión y concordia."],
+      archivos: {},
+      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/cartas-2/" }],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-2/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/cartas-ii-edicion-critico-historica" },
+      parecidos: ["escriva-cartas-1", "escriva-carta-29", "escriva-amar-a-la-iglesia"]
+    },
+    {
+      id: "escriva-carta-29",
+      titulo: "Carta n.º 29",
+      autor: "San Josemaría Escrivá",
+      anio: "1959",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Carta larga, fechada el 9 de enero de 1959, sobre la obra de San Gabriel: el apostolado con personas que, en general, siguen el camino del matrimonio. Pertenece al género de las «Cartas» del fundador sobre el carisma y la historia del Opus Dei, en tono familiar. Su edición crítica apareció en «Studia et Documenta» 17 (2023).",
+        en: "A long letter, dated 9 January 1959, on the work of Saint Gabriel: the apostolate with people who are, in general, called to marriage. It belongs to the founder's «Letters» on the charism and history of Opus Dei, written in a familiar tone. Its critical edition appeared in «Studia et Documenta» 17 (2023)."
+      },
+      citas: ["En la vida espiritual no hay nada que inventar."],
+      archivos: {},
+      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/carta-29/" }],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/carta-29/" },
+      nota: { literaria: null, teologica: null },
+      delibris: null,
+      parecidos: ["escriva-cartas-1", "escriva-cartas-2", "escriva-es-cristo-que-pasa"]
+    },
+    {
+      id: "escriva-conversaciones",
+      titulo: "Conversaciones con Mons. Escrivá de Balaguer",
+      autor: "San Josemaría Escrivá",
+      anio: "1968",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Siete entrevistas de 1966 a 1968 (Le Figaro, The New York Times, Time, L'Osservatore della Domenica, Telva, Gaceta Universitaria y Palabra) sobre la Iglesia y el Concilio, las libertades personales, la universidad, la mujer en la sociedad y el Opus Dei. Cierra con la homilía «Amar al mundo apasionadamente», del 8 de octubre de 1967.",
+        en: "Seven interviews from 1966 to 1968 (Le Figaro, The New York Times, Time, L'Osservatore della Domenica, Telva, Gaceta Universitaria and Palabra) on the Church and the Council, personal freedoms, the university, women in society and Opus Dei. It ends with the homily «Passionately Loving the World», of 8 October 1967."
+      },
+      citas: ["El mundo no es malo, porque ha salido de las manos de Dios."],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/conversaciones/" },
+        { formato: "web", texto: "escriva.org (EN)", url: "https://escriva.org/en/conversaciones/" }
+      ],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/conversaciones/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/conversaciones-con-mons-escriva-de-balaguer" },
+      parecidos: ["escriva-amar-a-la-iglesia", "escriva-discursos-universidad", "ortodoxia"]
+    },
+    {
+      id: "escriva-abadesa-de-las-huelgas",
+      titulo: "La Abadesa de las Huelgas",
+      autor: "San Josemaría Escrivá",
+      anio: "1944",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Estudio teológico-jurídico, hecho sobre fuentes originales, de la jurisdicción cuasi episcopal que tuvo la abadesa del monasterio de Las Huelgas, en Burgos. Doce capítulos y dos apéndices: la serie cronológica de las abadesas y las reales cédulas de Felipe V. Primera edición de 1944.",
+        en: "A theological and juridical study, based on original sources, of the quasi-episcopal jurisdiction held by the abbess of the monastery of Las Huelgas in Burgos. Twelve chapters and two appendices: the chronological list of abbesses and the royal decrees of Philip V. First published in 1944."
+      },
+      citas: ["Aquí te presento, amable lector, a la famosa Abadesa de Las Huelgas."],
+      archivos: {},
+      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" }],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" },
+      nota: { literaria: null, teologica: null },
+      delibris: null,
+      parecidos: ["escriva-discursos-universidad", "escriva-conversaciones", "escriva-cartas-1"]
+    },
+    {
+      id: "escriva-discursos-universidad",
+      titulo: "Discursos sobre la Universidad",
+      autor: "San Josemaría Escrivá",
+      anio: "s. f.",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Volumen preparado por la Universidad de Navarra con motivo de la beatificación de su fundador. Reúne sus discursos académicos, la homilía del campus de octubre de 1967 y otras intervenciones públicas sobre la universidad; cierra con los discursos del acto académico del 26 de junio de 1992. Prólogo del beato Álvaro del Portillo.",
+        en: "A volume prepared by the University of Navarra on the occasion of its founder's beatification. It gathers his academic speeches, the campus homily of October 1967 and other public statements on the university, and closes with the speeches of the academic ceremony of 26 June 1992. Foreword by Blessed Álvaro del Portillo."
+      },
+      citas: ["Siete lustros han pasado ya desde que abandoné las aulas de la Universidad de Zaragoza y las tierras de Aragón en que nací."],
+      archivos: {},
+      externos: [{ formato: "web", texto: "escriva.org (ES)", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" }],
+      comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
+      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" },
+      nota: { literaria: null, teologica: null },
+      delibris: null,
+      parecidos: ["escriva-conversaciones", "escriva-abadesa-de-las-huelgas", "ortodoxia"]
     }
   ],
 
