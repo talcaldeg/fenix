@@ -22,7 +22,8 @@ from pathlib import Path
 
 CSS = """@charset "utf-8";
 body { font-family: Georgia, serif; line-height: 1.5; margin: 0 4%; }
-h1, h2, h3 { font-weight: normal; text-align: center; break-after: avoid; page-break-after: avoid; }
+h1, h2, h3 { font-weight: normal; text-align: center; break-after: avoid; page-break-after: avoid;
+  break-inside: avoid; page-break-inside: avoid; }
 h1 { font-size: 1.6em; margin: 2.5em 0 0.6em; }
 h2 { font-size: 1.3em; margin: 2em 0 0.4em; letter-spacing: 0.04em; }
 h3 { font-size: 1em; margin: 1.6em 0 0.6em; letter-spacing: 0.08em; }
