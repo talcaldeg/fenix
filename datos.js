@@ -7,6 +7,8 @@
 // - delibris: valoración moral de delibris.org, de 1 a 6 (6 = «Sin inconvenientes»); el texto de
 //   cada nivel según el género (Literatura o Pensamiento) está en index.html. null = no está en Delibris.
 // - citas: textuales, cotejadas con el texto del libro.
+// - editorial: solo si la edición la hizo Proyecto Fénix (traducción, revisión o edición digital);
+//   { es, en } dice qué se hizo. El libro aparece entonces en la sección Editorial.
 // - imagen: portada en img/portadas/<id>.jpg (cuadro de dominio público), con su crédito y enlace;
 //   se arma con herramientas/portadas.py, que también la pone dentro del EPUB.
 //   Obra protegida con portada oficial: src es la URL de la imagen en el sitio del titular (no se copia)
@@ -112,6 +114,7 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/kempis-imitacion-de-cristo-granada.epub", pdf: "libros/kempis-imitacion-de-cristo-granada.pdf" },
       fuente: { texto: "Transcripción de 2009 de la edición de 1817, en Internet Archive (dominio público); sin las notas al pie del transcriptor, con nota y portada de Proyecto Fénix", url: "https://archive.org/details/imitacion-de-cristo-de-fray-luis-de-granada" },
+      editorial: { es: "Edición digital de Proyecto Fénix sobre la impresión de 1817, a partir de una transcripción de 2009: sin las notas al pie del transcriptor, con una nota de la edición y portada nueva.", en: "Proyecto Fénix digital edition of the 1817 printing, from a 2009 transcription: without the transcriber's footnotes, with an edition note and a new cover." },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
       parecidos: ["marmion-vida-del-alma", "escriva-amigos-de-dios", "para-mi-vivir-es-cristo"]
     },
@@ -511,7 +514,7 @@ window.FENIX = {
       autor: "San Josemaría Escrivá",
       anio: "1944",
       idioma: "es",
-      categoria: "lectura",
+      categoria: "ensayo",
       recomendado: false,
       imagen: { src: "img/portadas/escriva-abadesa-de-las-huelgas.jpg", credito: { es: "Alfonso VIII y Leonor, fundadores de Las Huelgas, miniatura medieval", en: "Alfonso VIII and Eleanor, founders of Las Huelgas, medieval miniature" }, url: "https://commons.wikimedia.org/wiki/File:Alfonso_VIII_de_Castilla_y_Leonor.jpg" },
       resumen: {
@@ -627,7 +630,7 @@ window.FENIX = {
       autor: "Platón (trad. Patricio de Azcárate)",
       anio: "c. 390 a. C.",
       idioma: "es",
-      categoria: "lectura",
+      categoria: "ensayo",
       recomendado: false,
       resumen: {
         es: "La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. C., acusado de corromper a los jóvenes y de no creer en los dioses de la ciudad. Platón, que estuvo presente, la reconstruye en tres discursos: la defensa, la propuesta de pena tras el veredicto de culpa y las palabras finales después de la condena a muerte. Sócrates prefiere morir antes que dejar de buscar la verdad y de servir a lo que entiende como un mandato divino. Traducción de Patricio de Azcárate (1871), con la ortografía de la época, su argumento y sus notas.",
@@ -640,8 +643,9 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/platon-apologia-de-socrates.epub", pdf: "libros/platon-apologia-de-socrates.pdf" },
       fuente: { texto: "Obras completas de Platón, tomo I (Madrid, 1871), transcritas en es.wikisource.org (dominio público); edición digital y portada de Proyecto Fénix", url: "https://es.wikisource.org/wiki/Apolog%C3%ADa_de_S%C3%B3crates_(de_Azc%C3%A1rate_tr.)" },
+      editorial: { es: "Edición digital de Proyecto Fénix sobre la traducción de Patricio de Azcárate (1871), transcrita en Wikisource: conserva la ortografía de la época, el argumento y las notas del traductor, con portada nueva.", en: "Proyecto Fénix digital edition of Patricio de Azcárate's translation (1871), transcribed on Wikisource: it keeps the spelling of the time and the translator's introduction and notes, with a new cover." },
       delibris: null,
-      parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo-granada", "escriva-amigos-de-dios"]
+      parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo-granada"]
     },
     {
       id: "apology-of-socrates",
@@ -649,7 +653,7 @@ window.FENIX = {
       autor: "Plato (trans. Benjamin Jowett)",
       anio: "c. 390 BC",
       idioma: "en",
-      categoria: "lectura",
+      categoria: "ensayo",
       recomendado: false,
       resumen: {
         es: "La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. C., acusado de corromper a los jóvenes y de no creer en los dioses de la ciudad. Platón, que estuvo presente, la reconstruye en tres discursos: la defensa, la propuesta de pena tras el veredicto de culpa y las palabras finales después de la condena a muerte. Traducción inglesa de Benjamin Jowett.",

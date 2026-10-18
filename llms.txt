@@ -1,0 +1,56 @@
+# Proyecto Fénix
+
+> Biblioteca gratuita en español e inglés de clásicos de filosofía, lectura espiritual, oración y novelas, para descargar en EPUB y PDF o leer en línea. Cada libro trae resumen, citas escogidas, libros parecidos y la valoración moral de delibris.org. Sin publicidad ni registro.
+
+Fénix nació para dar a conocer una idea de la teología espiritual: ser para Cristo «como otra humanidad». Santa Isabel de la Trinidad pidió en 1904 al Espíritu Santo ser para Cristo «una humanidad de añadidura» en la que Él renueve todo Su misterio, y el jesuita Paul de Jaegher la hizo oración al final de «One with Jesus». No se trata de una nueva encarnación: es la vida de la gracia, que nos une a Cristo como miembros de Su Cuerpo (Catecismo, nn. 521 y 1997).
+
+Algunos libros son ediciones propias de Proyecto Fénix (traducción, revisión o edición digital); su página dice qué se hizo.
+
+Solo se alojan obras de dominio público o con permiso de difusión; las protegidas se enlazan a donde se pueden leer en línea o comprar. Cada libro tiene su propia página, en el idioma del libro.
+
+## Lectura espiritual
+
+- [Jesucristo, vida del alma - Beato Columba Marmion, O.S.B. (1917)](https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/) - Las conferencias del abad de Maredsous sobre el centro de la vida cristiana: Dios nos llama a ser Sus hijos en Cristo. Descarga gratuita en EPUB y PDF.
+- [One with Jesus: The Life of Identification with Christ - Paul de Jaegher, S.J. (1929)](https://talcaldeg.github.io/fenix/libro/one-with-jesus/) - A short, luminous book on the «life of identification» with Christ: letting Jesus, present in the soul by grace, live and love in us. Protegido por derechos de autor: se enlaza a donde comprarlo.
+- [The Imitation of Christ - Tomás de Kempis (c. 1418)](https://talcaldeg.github.io/fenix/libro/imitacion-de-cristo/) - The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Descarga gratuita en EPUB y PDF.
+- [Imitación de Cristo o menosprecio del mundo - Tomás de Kempis (trad. fray Luis de Granada) (c. 1418)](https://talcaldeg.github.io/fenix/libro/imitacion-de-cristo-granada/) - El clásico de la devoción moderna, en cuatro libros: consejos para la vida espiritual, la vida interior, el consuelo interior en diálogo con Cristo y el Santísimo Sacramento. Descarga gratuita en EPUB y PDF.
+- [The Confessions of St. Augustine - San Agustín de Hipona (c. 400)](https://talcaldeg.github.io/fenix/libro/confesiones/) - The story of a conversion told as a prayer: Augustine reviews before God his childhood, his disordered youth, his intellectual search and his encounter with grace in Milan, and ends by meditating on memory, time and creation. Descarga gratuita en EPUB y PDF.
+- [Orthodoxy - G. K. Chesterton (1908)](https://talcaldeg.github.io/fenix/libro/ortodoxia/) - Chesterton's «intellectual autobiography»: how, while looking on his own for a philosophy that explained the world, he found it already existed and was called Christianity. Descarga gratuita en EPUB y PDF.
+- [Es Cristo que pasa - San Josemaría Escrivá (1973)](https://talcaldeg.github.io/fenix/libro/escriva-es-cristo-que-pasa/) - 18 homilías pronunciadas en fiestas del año litúrgico. Se lee gratis en el sitio del titular.
+- [Amigos de Dios - San Josemaría Escrivá (1977)](https://talcaldeg.github.io/fenix/libro/escriva-amigos-de-dios/) - 18 homilías que toman las virtudes cristianas como hilo de un «coloquio filial con Dios». Se lee gratis en el sitio del titular.
+- [Amar a la Iglesia - San Josemaría Escrivá (1986)](https://talcaldeg.github.io/fenix/libro/escriva-amar-a-la-iglesia/) - Reúne las homilías «Lealtad a la Iglesia», «El fin sobrenatural de la Iglesia» y «Sacerdote para la eternidad», con presentación de Jesús Urteaga y dos escritos del beato Álvaro del Portillo. Se lee gratis en el sitio del titular.
+- [Cartas I - San Josemaría Escrivá (2020)](https://talcaldeg.github.io/fenix/libro/escriva-cartas-1/) - Las cuatro primeras «Cartas» largas del fundador a los miembros del Opus Dei, con cuya edición pública se comenzó en septiembre de 2020. Se lee gratis en el sitio del titular.
+- [Cartas II - San Josemaría Escrivá (2022)](https://talcaldeg.github.io/fenix/libro/escriva-cartas-2/) - Cuatro cartas (n.º 5 a 8), fechadas entre 1939 y 1943 y muy reelaboradas en los años sesenta. Se lee gratis en el sitio del titular.
+- [Carta n.º 29 - San Josemaría Escrivá (1959)](https://talcaldeg.github.io/fenix/libro/escriva-carta-29/) - Carta larga, fechada el 9 de enero de 1959, sobre la obra de San Gabriel: el apostolado con personas que, en general, siguen el camino del matrimonio. Se lee gratis en el sitio del titular.
+- [Conversaciones con Mons. Escrivá de Balaguer - San Josemaría Escrivá (1968)](https://talcaldeg.github.io/fenix/libro/escriva-conversaciones/) - Siete entrevistas de 1966 a 1968 (Le Figaro, The New York Times, Time, L'Osservatore della Domenica, Telva, Gaceta Universitaria y Palabra) sobre la Iglesia y el Concilio, las libertades personales, la universidad, la mujer en la sociedad y el Opus Dei. Se lee gratis en el sitio del titular.
+- [Discursos sobre la Universidad - San Josemaría Escrivá (s. f.)](https://talcaldeg.github.io/fenix/libro/escriva-discursos-universidad/) - Volumen preparado por la Universidad de Navarra con motivo de la beatificación de su fundador. Se lee gratis en el sitio del titular.
+- [Para mí, vivir es Cristo - Rodolfo Valdés (ed.) (2018)](https://talcaldeg.github.io/fenix/libro/para-mi-vivir-es-cristo/) - Ocho artículos de siete autores sobre una idea de san Pablo: ser cristiano es vivir en Cristo, vivir nuestra vida con Él y Su vida en la nuestra. Se lee gratis en el sitio del titular.
+- [The Lord is my Joy - Paul de Jaegher, S.J. (1948)](https://talcaldeg.github.io/fenix/libro/the-lord-is-my-joy/) - Another spiritual work by Paul de Jaegher, the author of «One with Jesus». Protegido por derechos de autor: se enlaza a donde comprarlo.
+
+## Oración
+
+- [The Practice of the Presence of God - Hermano Lorenzo de la Resurrección, O.C.D. (1692)](https://talcaldeg.github.io/fenix/libro/presencia-de-dios/) - Conversations and letters of a Carmelite brother who worked for years in his monastery's kitchen. Descarga gratuita en EPUB y PDF.
+- [Camino - San Josemaría Escrivá (1934)](https://talcaldeg.github.io/fenix/libro/escriva-camino/) - 999 puntos breves de meditación, repartidos en 46 capítulos, escritos en un tono directo, como de conversación personal con el lector. Se lee gratis en el sitio del titular.
+- [Surco - San Josemaría Escrivá (1986)](https://talcaldeg.github.io/fenix/libro/escriva-surco/) - 1000 puntos de meditación en 32 capítulos, en la línea de «Camino», con especial atención a las virtudes humanas. Se lee gratis en el sitio del titular.
+- [Forja - San Josemaría Escrivá (1987)](https://talcaldeg.github.io/fenix/libro/escriva-forja/) - 1055 puntos de meditación en 13 capítulos, muchos de ellos autobiográficos aunque escritos en tercera persona. Se lee gratis en el sitio del titular.
+- [En diálogo con el Señor - San Josemaría Escrivá (2017)](https://talcaldeg.github.io/fenix/libro/escriva-en-dialogo-con-el-senor/) - 25 textos de su predicación a miembros del Opus Dei en Roma entre 1954 y 1975, publicados para el público general en 2017. Se lee gratis en el sitio del titular.
+- [Santo Rosario - San Josemaría Escrivá (1934)](https://talcaldeg.github.io/fenix/libro/escriva-santo-rosario/) - Consideraciones breves sobre los misterios gozosos, dolorosos y gloriosos, y un comentario a la letanía lauretana; desde 2003 incluye un apéndice con los misterios luminosos. Se lee gratis en el sitio del titular.
+- [Via Crucis - San Josemaría Escrivá (1981)](https://talcaldeg.github.io/fenix/libro/escriva-via-crucis/) - Comentarios breves a las catorce estaciones, nacidos de su oración personal. Se lee gratis en el sitio del titular.
+- [Conocerle y conocerte - Rubén Herce (ed.) (2022)](https://talcaldeg.github.io/fenix/libro/conocerle-y-conocerte/) - Doce capítulos de doce autores que forman un itinerario de oración personal: rezar con la Palabra de Dios y con los santos, el silencio interior, cómo habla Dios, las dificultades, la unión entre oración y vida, la oración litúrgica y la contemplación en la vida ordinaria. Se lee gratis en el sitio del titular.
+
+## Novelas
+
+- [Quo Vadis: A Narrative of the Time of Nero - Henryk Sienkiewicz (1896)](https://talcaldeg.github.io/fenix/libro/quo-vadis/) - Rome under Nero: the patrician Vinicius falls in love with Lygia, a young Christian, and through her comes to know the persecuted community, Saint Peter and Saint Paul. Descarga gratuita en EPUB y PDF.
+- [Orencio y Eloísa - Benjamín Franzani (2021)](https://talcaldeg.github.io/fenix/libro/orencio-y-eloisa/) - Siar, ciudad portuaria de un imperio en ruinas, resiste hace cinco años el asedio de un ejército enemigo. Se lee gratis en el sitio del titular.
+- [Edward o el Caballero Verde - Benjamín Franzani (2021)](https://talcaldeg.github.io/fenix/libro/edward-caballero-verde/) - Sir Edward de Uterra, armado caballero a los quince años tras velar sus armas en oración, se niega a llevar blasón hasta ganarse un nombre con sus hechos. Se lee gratis en el sitio del titular.
+
+## Ensayo e historia
+
+- [La Abadesa de las Huelgas - San Josemaría Escrivá (1944)](https://talcaldeg.github.io/fenix/libro/escriva-abadesa-de-las-huelgas/) - Estudio teológico-jurídico, hecho sobre fuentes originales, de la jurisdicción cuasi episcopal que tuvo la abadesa del monasterio de Las Huelgas, en Burgos. Se lee gratis en el sitio del titular.
+- [Apología de Sócrates - Platón (trad. Patricio de Azcárate) (c. 390 a. C.)](https://talcaldeg.github.io/fenix/libro/apologia-de-socrates/) - La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. Descarga gratuita en EPUB y PDF.
+- [Apology - Plato (trans. Benjamin Jowett) (c. 390 BC)](https://talcaldeg.github.io/fenix/libro/apology-of-socrates/) - Socrates' defence before the court of Athens in 399 BC, accused of corrupting the young and of not believing in the city's gods. Descarga gratuita en EPUB y PDF.
+
+## Sitio
+
+- [Portada y buscador del catálogo](https://talcaldeg.github.io/fenix/) - biblioteca completa con filtros por categoría y formato, plan de vida (libros para la oración y la lectura espiritual de cada día), oraciones y formularios para proponer un libro o avisar un error.
+- [Mapa del sitio](https://talcaldeg.github.io/fenix/sitemap.xml)

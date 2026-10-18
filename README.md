@@ -15,6 +15,17 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   llevan un cuadro de dominio público como las demás.
 - `datos.js`: catálogo y oraciones. Un libro nuevo es una ficha más; sus campos están
   comentados arriba del archivo.
+- **Después de cambiar `datos.js`, correr `node herramientas/gen_estaticos.js`.** El sitio navega
+  por `#hash` y arma todo con JavaScript, así que Google no ve cada libro y los rastreadores de
+  IA (que no ejecutan JavaScript) no ven nada. El script deja una página estática por libro en
+  `libro/<id>/` (en el idioma del libro, con datos estructurados `Book`), `sitemap.xml`,
+  `llms.txt` y el JSON-LD de la portada. El `robots.txt` y la señal de contenido para IA
+  (`Content-Signal: search=yes,ai-input=yes,ai-train=yes`, igual que verumdata.cl) viven en la
+  raíz del repo `talcaldeg.github.io`, que también apunta a este sitemap.
+- Editorial: un libro cuya edición hizo Fénix (traducción, revisión, edición digital) lleva
+  `editorial: { es, en }` con qué se hizo; aparece en la sección Editorial y con la etiqueta
+  «Edición Fénix». Las categorías Teatro, Poesía y Ensayo e historia son para lo que no es
+  lectura espiritual ni oración (la Apología de Sócrates va en Ensayo e historia).
 - `libros/`: solo obras que se pueden difundir libremente (dominio público o con permiso). Lo
   demás va como `externos` (descarga legal en otro sitio) o `comprar`.
 - `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`.
