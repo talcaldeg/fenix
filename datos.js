@@ -104,7 +104,8 @@ window.FENIX = {
       versiones: {
         en: {
           titulo: "The Imitation of Christ",
-          autor: "Tomás de Kempis",
+          autor: "Thomas à Kempis",
+          imagen: { src: "img/portadas/imitacion-de-cristo-en.jpg", credito: { es: "El Greco, «Cristo con la cruz», c. 1590", en: "El Greco, «Christ Carrying the Cross», c. 1590" }, url: "https://commons.wikimedia.org/wiki/File:El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg" },
           resumen: {
             es: "El clásico de la devoción moderna, en cuatro libros: consejos para la vida espiritual, la vida interior, el consuelo interior en diálogo con Cristo y el Santísimo Sacramento. Frases cortas, directas, para leer de a poco y volver a ellas toda la vida.",
             en: "The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Short, direct sentences, to be read slowly and returned to for a lifetime."
@@ -146,6 +147,7 @@ window.FENIX = {
       versiones: {
         en: {
           titulo: "The Confessions of St. Augustine",
+          autor: "Saint Augustine of Hippo",
           resumen: {
             es: "La historia de una conversión contada como oración: Agustín repasa ante Dios su infancia, su juventud desordenada, su búsqueda intelectual y el encuentro con la gracia en Milán, y termina meditando sobre la memoria, el tiempo y la creación. Traducción inglesa de E. B. Pusey.",
             en: "The story of a conversion told as a prayer: Augustine reviews before God his childhood, his disordered youth, his intellectual search and his encounter with grace in Milan, and ends by meditating on memory, time and creation. English translation by E. B. Pusey."
@@ -190,7 +192,7 @@ window.FENIX = {
     {
       id: "presencia-de-dios",
       titulo: "The Practice of the Presence of God",
-      autor: "Hermano Lorenzo de la Resurrección, O.C.D.",
+      autor: "Brother Lawrence of the Resurrection, O.C.D.",
       anio: "1692",
       idioma: "en",
       categoria: "oracion",
@@ -717,6 +719,7 @@ window.FENIX = {
         en: {
           titulo: "Apology",
           autor: "Plato (trans. Benjamin Jowett)",
+          imagen: { src: "img/portadas/apologia-de-socrates-en.jpg", credito: { es: "Jacques-Louis David, «La muerte de Sócrates», 1787", en: "Jacques-Louis David, «The Death of Socrates», 1787" }, url: "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg" },
           anio: "c. 390 BC",
           resumen: {
             es: "La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. C., acusado de corromper a los jóvenes y de no creer en los dioses de la ciudad. Platón, que estuvo presente, la reconstruye en tres discursos: la defensa, la propuesta de pena tras el veredicto de culpa y las palabras finales después de la condena a muerte. Traducción inglesa de Benjamin Jowett.",

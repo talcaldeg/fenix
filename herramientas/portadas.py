@@ -1,24 +1,42 @@
 # -*- coding: utf-8 -*-
-"""Portada de un libro: la imagen del sitio y la portada dentro del EPUB.
+"""Portada de un libro: el cuadro con el marco Fénix, para el sitio y dentro del EPUB.
 
-    python herramientas/portadas.py <id> <cuadro.jpg> --titulo "..." --autor "..." [--cx 0.5] [--cy 0.5] [--epub libros/<archivo>.epub]
+    python herramientas/portadas.py <nombre> --cuadro <original.jpg> [--cx 0.5] [--cy 0.5] [--epub]
+    python herramientas/portadas.py <nombre> [<nombre> ...] [--epub]
+    python herramientas/portadas.py --todos [--epub]
 
-- Recorta el cuadro a 2:3 alrededor de (cx, cy) (0 a 1, desde arriba a la izquierda) y lo deja en
-  img/portadas/<id>.jpg, que usa el sitio (lista, recomendados y ficha).
-- Con --epub, arma la portada con título y autor sobre el cuadro y la pone como portada del EPUB:
-  reemplaza la de Gutenberg si la hay, o la agrega al inicio. Después se regenera el PDF con
-  herramientas/epub_a_pdf.py.
-El cuadro debe ser de dominio público (Wikimedia Commons); su crédito va en `imagen` de datos.js.
+<nombre> es el de la imagen en datos.js: img/portadas/<nombre>.jpg (casi siempre el id del libro;
+una versión en otro idioma lleva su propia imagen, p. ej. imitacion-de-cristo-en).
+
+- Con --cuadro, recorta el original a 2:3 alrededor de (cx, cy) (0 a 1, desde arriba a la
+  izquierda) y lo guarda sin marco en img/cuadros/<nombre>.jpg, de donde se regenera todo.
+- Arma la portada con el marco (herramientas/marco.py: códice para lectura y oración, enredadera
+  para lo demás) con título, autor y categoría de datos.js, y la deja en img/portadas/<nombre>.jpg,
+  que usa el sitio. Un libro que aún no está en datos.js lleva --titulo, --autor y --categoria.
+- Con --epub, pone la portada en el EPUB de esa ficha o versión (reemplaza la de Gutenberg si la
+  hay, o la agrega al inicio) y regenera su PDF con herramientas/epub_a_pdf.py.
+Solo para libros sin portada oficial (una imagen con URL externa se deja como está). El cuadro debe
+ser de dominio público (Wikimedia Commons); su crédito va en `imagen` de datos.js.
 """
 import argparse
+import json
 import re
+import subprocess
+import sys
+import tempfile
 import zipfile
+from io import BytesIO
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageFont
+from PIL import Image
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import marco  # noqa: E402
+from epub_a_pdf import convertir  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
-FUENTES = Path("C:/Windows/Fonts")
+CUADROS = RAIZ / "img" / "cuadros"
+PORTADAS = RAIZ / "img" / "portadas"
 NOMBRE_EN_EPUB = "fenix-portada.jpg"
 
 
@@ -34,44 +52,25 @@ def recortar(origen: Path, ancho: int, cx: float, cy: float) -> Image.Image:
     return im.crop((x, y, x + nw, y + nh)).resize((ancho, ancho * 3 // 2), Image.LANCZOS)
 
 
-def partir(texto, fuente, ancho, d):
-    lineas, actual = [], ""
-    for p in texto.split():
-        prueba = (actual + " " + p).strip()
-        if d.textlength(prueba, font=fuente) <= ancho or not actual:
-            actual = prueba
-        else:
-            lineas.append(actual)
-            actual = p
-    return lineas + [actual]
-
-
-def portada_libro(cuadro: Image.Image, titulo: str, autor: str) -> Image.Image:
-    im = cuadro.resize((1200, 1800), Image.LANCZOS)
-    w, h = im.size
-    # Degradado oscuro abajo para que el texto se lea sobre cualquier cuadro.
-    sombra = Image.new("L", (1, h))
-    for y in range(h):
-        sombra.putpixel((0, y), int(235 * max(0, (y - h * 0.45) / (h * 0.55)) ** 1.2))
-    im.paste(Image.new("RGB", (w, h), (22, 15, 12)), (0, 0), sombra.resize((w, h)))
-    d = ImageDraw.Draw(im)
-    f_tit = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 92)
-    f_aut = ImageFont.truetype(str(FUENTES / "georgia.ttf"), 50)
-    f_sel = ImageFont.truetype(str(FUENTES / "georgia.ttf"), 34)
-    margen = 90
-    lin_t = partir(titulo, f_tit, w - 2 * margen, d)
-    lin_a = partir(autor, f_aut, w - 2 * margen, d)
-    y = h - 150 - len(lin_a) * 64 - 40 - len(lin_t) * 108
-    for l in lin_t:
-        d.text((margen, y), l, font=f_tit, fill=(255, 248, 236))
-        y += 108
-    y += 40
-    for l in lin_a:
-        d.text((margen, y), l, font=f_aut, fill=(232, 214, 190))
-        y += 64
-    d.text((margen, h - 100), "PROYECTO FÉNIX", font=f_sel, fill=(214, 170, 90))
-    d.rectangle((40, 40, w - 40, h - 40), outline=(255, 240, 210), width=3)
-    return im
+def catalogo():
+    """Cada portada del catálogo: nombre, título, autor, categoría y EPUB (ficha y versiones)."""
+    js = ("global.window={};require(process.argv[1]);"
+          "console.log(JSON.stringify(window.FENIX.libros))")
+    libros = json.loads(subprocess.run(["node", "-e", js, str(RAIZ / "datos.js")], check=True,
+                                       capture_output=True, encoding="utf-8").stdout)
+    out = {}
+    for l in libros:
+        fichas = [(l, l)] + [({**l, **v}, v) for v in (l.get("versiones") or {}).values()]
+        for f, propia in fichas:
+            img = (f.get("imagen") or {}).get("src", "")
+            if not img or img.startswith("http"):
+                continue  # sin imagen o portada oficial
+            if propia is not l and "imagen" not in propia:
+                sys.exit(f"{l['id']}: la versión «{f['titulo']}» necesita su propia imagen en datos.js")
+            nombre = Path(img).stem
+            out[nombre] = {"titulo": f["titulo"], "autor": f["autor"], "categoria": l["categoria"],
+                           "epub": (propia.get("archivos") or {}).get("epub")}
+    return out
 
 
 def poner_en_epub(epub: Path, portada: Image.Image, titulo: str):
@@ -81,7 +80,6 @@ def poner_en_epub(epub: Path, portada: Image.Image, titulo: str):
     opf_ruta = re.search(r'full-path="([^"]+)"', archivos["META-INF/container.xml"].decode("utf-8")).group(1)
     base = opf_ruta.rsplit("/", 1)[0] + "/" if "/" in opf_ruta else ""
     opf = archivos[opf_ruta].decode("utf-8")
-    from io import BytesIO
     buf = BytesIO()
     portada.save(buf, "JPEG", quality=85)
     archivos[base + NOMBRE_EN_EPUB] = buf.getvalue()
@@ -120,24 +118,62 @@ def poner_en_epub(epub: Path, portada: Image.Image, titulo: str):
             z.writestr(nombre, datos, compress_type=zipfile.ZIP_DEFLATED)
 
 
+def generar(portadas: dict, con_epub: bool):
+    PORTADAS.mkdir(parents=True, exist_ok=True)
+    with tempfile.TemporaryDirectory() as tmp:
+        trabajos = []
+        for nombre, p in portadas.items():
+            cuadro = CUADROS / f"{nombre}.jpg"
+            if not cuadro.exists():
+                sys.exit(f"{nombre}: falta {cuadro.relative_to(RAIZ)} (páselo con --cuadro)")
+            trabajos.append((marco.svg(cuadro, p["titulo"], p["autor"], p["categoria"]), Path(tmp) / f"{nombre}.png"))
+        marco.rasterizar(trabajos)
+        for nombre, p in portadas.items():
+            grande = Image.open(Path(tmp) / f"{nombre}.png").convert("RGB")
+            salida = PORTADAS / f"{nombre}.jpg"
+            grande.resize((600, 900), Image.LANCZOS).save(salida, "JPEG", quality=84, optimize=True, progressive=True)
+            print(f"{salida.relative_to(RAIZ).as_posix()}: {salida.stat().st_size // 1024} KB")
+            if con_epub and p["epub"]:
+                epub = RAIZ / p["epub"]
+                poner_en_epub(epub, grande, p["titulo"])
+                print(f"{p['epub']}: portada puesta")
+                convertir(epub)
+
+
 def main():
     a = argparse.ArgumentParser()
-    a.add_argument("id")
-    a.add_argument("cuadro", type=Path)
-    a.add_argument("--titulo", required=True)
-    a.add_argument("--autor", required=True)
+    a.add_argument("nombres", nargs="*")
+    a.add_argument("--todos", action="store_true")
+    a.add_argument("--cuadro", type=Path)
     a.add_argument("--cx", type=float, default=0.5)
     a.add_argument("--cy", type=float, default=0.5)
-    a.add_argument("--epub", type=Path)
+    a.add_argument("--titulo")
+    a.add_argument("--autor")
+    a.add_argument("--categoria")
+    a.add_argument("--epub", action="store_true")
     o = a.parse_args()
-    cuadro = recortar(o.cuadro, 1200, o.cx, o.cy)
-    salida = RAIZ / "img" / "portadas" / f"{o.id}.jpg"
-    salida.parent.mkdir(parents=True, exist_ok=True)
-    cuadro.resize((600, 900), Image.LANCZOS).save(salida, "JPEG", quality=82, optimize=True, progressive=True)
-    print(f"{salida.relative_to(RAIZ)}: {salida.stat().st_size // 1024} KB")
-    if o.epub:
-        poner_en_epub(o.epub, portada_libro(cuadro, o.titulo, o.autor), o.titulo)
-        print(f"{o.epub}: portada puesta")
+    if o.todos == bool(o.nombres):
+        a.error("indique uno o más nombres, o --todos")
+    if o.cuadro:
+        if len(o.nombres) != 1:
+            a.error("--cuadro va con un solo nombre")
+        CUADROS.mkdir(parents=True, exist_ok=True)
+        destino = CUADROS / f"{o.nombres[0]}.jpg"
+        recortar(o.cuadro, 600, o.cx, o.cy).save(destino, "JPEG", quality=88, optimize=True)
+        print(f"{destino.relative_to(RAIZ).as_posix()}: cuadro guardado")
+    todo = catalogo()
+    if o.todos:
+        elegidas = todo
+    else:
+        elegidas = {}
+        for n in o.nombres:
+            if n in todo:
+                elegidas[n] = todo[n]
+            elif o.titulo and o.autor and o.categoria:
+                elegidas[n] = {"titulo": o.titulo, "autor": o.autor, "categoria": o.categoria, "epub": None}
+            else:
+                a.error(f"{n} no está en datos.js: agregue la ficha o pase --titulo, --autor y --categoria")
+    generar(elegidas, o.epub)
 
 
 if __name__ == "__main__":
