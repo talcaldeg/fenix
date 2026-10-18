@@ -527,7 +527,7 @@
   function parecido(p){
     const r = (p.resumen && (p.resumen[lang] || p.resumen.es)) || "";
     const de = (r.match(/^.+?\.(?=\s|$)/) || [r])[0];
-    return `<a class="parecido" href="#libro/${esc(p.id)}"><span class="mini ${esc(p.categoria)}"${p.imagen ? ` style="background-image:url('${esc(p.imagen.src)}')"` : ""}></span>
+    return `<a class="parecido" href="#libro/${esc(p.id)}"><span class="mini ${esc(p.categoria)}" aria-hidden="true"${p.imagen ? ` style="background-image:url('${esc(p.imagen.src)}')"` : ""}></span>
       <span><span class="tt" style="display:block">${esc(p.titulo)}</span><span class="au" style="display:block">${esc(p.autor)} · ${esc(categoria(p.categoria))}</span>${de ? `<span class="de">${esc(de)}</span>` : ""}</span></a>`;
   }
   function fila(l){
