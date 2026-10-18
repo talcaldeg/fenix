@@ -26,6 +26,7 @@
     --vino:#6b1d24; --oro:#8a5d14; --acento:#6b1d24; --acento-ink:#fff8ec; --chip:#efe4d2;
     --ok:#2f6b3a; --sombra:0 6px 24px rgba(60,30,10,.10);
     --c-lectura:#6b1d24; --c-oracion:#2c4a6e; --c-novela:#3f5a2e;
+    --c-teatro:#5a3a6b; --c-poesia:#7a4a1f; --c-ensayo:#3d4a52;
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
@@ -33,6 +34,7 @@
       --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e;
       --ok:#7cc48a; --sombra:0 6px 24px rgba(0,0,0,.35);
       --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+      --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
     }
   }
   :root[data-theme="dark"]{
@@ -40,6 +42,7 @@
     --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e;
     --ok:#7cc48a; --sombra:0 6px 24px rgba(0,0,0,.35);
     --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+      --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
   }
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
@@ -110,6 +113,7 @@
   @media (max-width:760px){.accesos{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}}
   .acceso{position:relative; overflow:hidden; border-radius:14px; min-height:160px; padding:16px; display:flex; flex-direction:column; justify-content:flex-end; gap:2px; color:#fff8ec; text-decoration:none; background:var(--c-lectura) center 25%/cover no-repeat; box-shadow:var(--sombra); transition:transform .15s}
   .acceso.oracion{background-color:var(--c-oracion)} .acceso.novela{background-color:var(--c-novela)}
+  .acceso.teatro{background-color:var(--c-teatro)} .acceso.poesia{background-color:var(--c-poesia)} .acceso.ensayo{background-color:var(--c-ensayo)}
   .acceso::before{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(22,15,12,.95) 0%, rgba(22,15,12,.55) 45%, rgba(22,15,12,.1) 100%)}
   .acceso > *{position:relative}
   .acceso b{font-size:19px; line-height:1.2}
@@ -136,6 +140,7 @@
   .libro:hover{transform:translateY(-2px); box-shadow:var(--sombra)}
   .portada{aspect-ratio:2/3; color:#fff8ec; padding:16px 14px; display:flex; flex-direction:column; justify-content:space-between; position:relative; background:var(--c-lectura)}
   .portada.oracion{background:var(--c-oracion)} .portada.novela{background:var(--c-novela)}
+  .portada.teatro{background:var(--c-teatro)} .portada.poesia{background:var(--c-poesia)} .portada.ensayo{background:var(--c-ensayo)}
   .portada::after{content:""; position:absolute; inset:8px; border:1px solid rgba(255,240,210,.45); border-radius:6px; pointer-events:none}
   .portada .t{font-size:18px; line-height:1.2; font-weight:700}
   .portada .a{font:13px system-ui,sans-serif; opacity:.9}
@@ -325,6 +330,9 @@
           <option value="lectura" data-i18n="cat.lectura">Lectura espiritual</option>
           <option value="oracion" data-i18n="cat.oracion">Oración</option>
           <option value="novela" data-i18n="cat.novela">Novelas</option>
+          <option value="teatro" data-i18n="cat.teatro">Teatro</option>
+          <option value="poesia" data-i18n="cat.poesia">Poesía</option>
+          <option value="ensayo" data-i18n="cat.ensayo">Ensayo e historia</option>
         </select>
         <select id="fFormato">
           <option value="" data-i18n="bib.formatos">Cualquier formato</option>
@@ -493,7 +501,7 @@
       "bib.titulo":"Library","bib.buscar":"Search title or author","bib.todas":"All categories","bib.idiomas":"All languages","bib.formatos":"Any format","bib.soloComprar":"Purchase only","bib.enLinea":"Read online",
       "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":" (a review site; not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks» and the fewer the circles, the more caution the reading calls for. Each book's level is explained on its page.",
       "l.libro":"Book","l.datos":"Category · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","x.portada":"Cover","x.dominioPublico":"public domain, Wikimedia Commons","bib.nota":"Read marks, favourites and your ratings are stored only in this browser.",
-      "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
+      "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","cat.teatro":"Drama","cat.poesia":"Poetry","cat.ensayo":"Essays and history","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
       "or.titulo":"Prayers","nav.plan":"Plan of life",
       "plan.eyebrow":"To be with God every day","plan.titulo":"Plan of life",
       "plan.lede":"A plan of life is a few fixed moments to be with God each day: a time of personal prayer, a few minutes of spiritual reading and other practices of piety. These books help with the first two.",
@@ -647,7 +655,7 @@
     const usadas = new Set();
     const fondo = l => { if (!l || !l.imagen) return ""; usadas.add(l.imagen.src); return ` style="background-image:url('${esc(l.imagen.src)}')"`; };
     const conImagen = xs => { const libres = xs.filter(l => l.imagen && !usadas.has(l.imagen.src)); return libres.find(l => l.recomendado) || libres[0] || xs[0]; };
-    const cats = ["lectura","oracion","novela"].map(c => {
+    const cats = ["lectura","oracion","novela","teatro","poesia","ensayo"].map(c => {
       const xs = ls.filter(l => l.categoria === c);
       if (!xs.length) return "";
       return `<a class="acceso ${c}" href="#biblioteca" data-cat="${c}"${fondo(conImagen(xs))}><b>${esc(categoria(c))}</b><span>${xs.length} ${esc(t(xs.length === 1 ? "x.libro" : "x.libros"))}</span></a>`;
