@@ -1877,10 +1877,11 @@
     $("#sinResultados").hidden = lista.length > 0;
   }
   function pintarRecomendados(){
-    const selloF = (D.recomendadosFenix || []).map(porId).filter(l => l && visible(l));
+    // En el inicio solo va lo que tiene EPUB; lo demás sigue en la biblioteca.
+    const selloF = (D.recomendadosFenix || []).map(porId).filter(l => l && visible(l) && tieneEpub(l));
     $("#selloFenix").innerHTML = selloF.map(tarjeta).join("");
     $("#bloqueSello").hidden = !selloF.length;
-    $("#recomendados").innerHTML = ordenar(libros().filter(l => l.recomendado && !esFenix(l))).map(tarjeta).join("");
+    $("#recomendados").innerHTML = ordenar(libros().filter(l => l.recomendado && !esFenix(l) && tieneEpub(l))).map(tarjeta).join("");
   }
   // Portada: cifras del hero y un acceso por categoría (con el cuadro de un libro de esa categoría) más el plan de vida.
   function pintarInicio(){
@@ -1891,7 +1892,7 @@
     // Cada acceso con un cuadro distinto: no se repite una imagen ya usada en otro.
     const usadas = new Set();
     const fondo = l => { if (!l || !l.imagen) return ""; usadas.add(l.imagen.src); return ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"`; };
-    const conImagen = xs => { const libres = xs.filter(l => l.imagen && !usadas.has(l.imagen.src)); return libres.find(l => l.recomendado) || libres[0] || xs[0]; };
+    const conImagen = xs => { const libres = xs.filter(l => l.imagen && !usadas.has(l.imagen.src)), ep = libres.filter(tieneEpub); return ep.find(l => l.recomendado) || ep[0] || libres.find(l => l.recomendado) || libres[0] || xs[0]; };
     const cats = ["lectura","oracion","novela","teatro","poesia","ensayo"].map(c => {
       const xs = ls.filter(l => l.categoria === c);
       if (!xs.length) return "";
@@ -2179,7 +2180,7 @@
   // Cita del día: cambia a medianoche (hora del visitante) y recorre todas antes de repetir; el paso
   // primo con el total evita que dos días seguidos salgan citas del mismo libro.
   function pintarCitaDia(){
-    const cs = citas(), el = $("#citaDia");
+    const cs = citas().filter(({ l }) => tieneEpub(l)), el = $("#citaDia");
     el.hidden = !cs.length; if (!cs.length) return;
     const hoy = new Date(), dia = Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 864e5);
     const mcd = (a, b) => b ? mcd(b, a % b) : a;
