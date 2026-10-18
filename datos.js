@@ -559,7 +559,7 @@ window.FENIX = {
     },
     {
       id: "conocerle-y-conocerte",
-      titulo: "Conocerle y conocerte. La oración personal, lugar de encuentro con el Dios cercano",
+      titulo: "Conocerle y conocerte",
       autor: "Rubén Herce (ed.)",
       anio: "2022",
       idioma: "es",
