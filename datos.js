@@ -624,6 +624,76 @@ window.FENIX = {
       nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/conocerle-y-conocerte-la-oracion-personal-lugar-de-encuentro-con-el-dios-cercano" },
       parecidos: ["presencia-de-dios", "escriva-camino", "escriva-en-dialogo-con-el-senor"]
+    },
+    {
+      id: "the-lord-is-my-joy",
+      titulo: "The Lord is my Joy",
+      autor: "Paul de Jaegher, S.J.",
+      anio: "1948",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Otra obra de espiritualidad de Paul de Jaegher, el autor de «One with Jesus». La edición inglesa salió en Londres (Burns Oates, 1948) y en Estados Unidos (Newman Press, 1949); en español se publicó como «El Señor es mi alegría» (El Mensajero del Corazón de Jesús, Bilbao, 1954, traducción del P. Luis Ramírez). Sigue protegida por derechos de autor hasta fines de 2028, por eso va como enlace para comprar. La reseña completa se agregará cuando Fénix tenga el texto.",
+        en: "Another spiritual work by Paul de Jaegher, the author of «One with Jesus». The English edition came out in London (Burns Oates, 1948) and in the United States (Newman Press, 1949). It remains under copyright until the end of 2028, so it is listed with a link to buy it. A full review will be added once Fénix has the text."
+      },
+      imagen: { src: "img/portadas/the-lord-is-my-joy.jpg", credito: { es: "Bartolomé Esteban Murillo, «El Buen Pastor», c. 1660", en: "Bartolomé Esteban Murillo, «The Good Shepherd», c. 1660" }, url: "https://commons.wikimedia.org/wiki/File:BuenPastorMurillo1660.jpg" },
+      citas: [],
+      archivos: {},
+      comprar: [
+        { texto: "Buscalibre (ISBN 9781258942526)", url: "https://www.buscalibre.cl/libro-the-lord-is-my-joy/9781258942526/p/56466857" },
+        { texto: "Amazon (ISBN 9781258942526)", url: "https://www.amazon.com/s?k=9781258942526" }
+      ],
+      fuente: { texto: "Reimpresión facsimilar de Literary Licensing; De Jaegher murió en 1958", url: "https://openlibrary.org/works/OL3683706W" },
+      nota: { literaria: null, teologica: null },
+      delibris: null,
+      parecidos: ["one-with-jesus", "presencia-de-dios", "imitacion-de-cristo"]
+    },
+    {
+      id: "apologia-de-socrates",
+      titulo: "Apología de Sócrates",
+      autor: "Platón (trad. Patricio de Azcárate)",
+      anio: "c. 390 a. C.",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. C., acusado de corromper a los jóvenes y de no creer en los dioses de la ciudad. Platón, que estuvo presente, la reconstruye en tres discursos: la defensa, la propuesta de pena tras el veredicto de culpa y las palabras finales después de la condena a muerte. Sócrates prefiere morir antes que dejar de buscar la verdad y de servir a lo que entiende como un mandato divino. Traducción de Patricio de Azcárate (1871), con la ortografía de la época, su argumento y sus notas.",
+        en: "Socrates' defence before the court of Athens in 399 BC, accused of corrupting the young and of not believing in the city's gods. Plato, who was present, reconstructs it in three speeches: the defence, the proposal of a penalty after the guilty verdict, and the final words after the death sentence. Socrates prefers to die rather than stop seeking the truth and serving what he understands as a divine command. Spanish translation by Patricio de Azcárate (1871), with the spelling of the time, his introduction and his notes."
+      },
+      imagen: { src: "img/portadas/apologia-de-socrates.jpg", credito: { es: "Jacques-Louis David, «La muerte de Sócrates», 1787", en: "Jacques-Louis David, «The Death of Socrates», 1787" }, url: "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg" },
+      citas: [
+        "El mayor bien del hombre es hablar de la virtud todos los dias de su vida y conversar sobre todas las demás cosas que han sido objeto de mis discursos, ya sea examinándome á mí mismo, ya examinando á los demás, porque una vida sin exámen no es vida.",
+        "Pero ya es tiempo de que nos retiremos de aquí, yo para morir, vosotros para vivir. ¿Entre vosotros y yo, quién lleva la mejor parte? Esto es lo que nadie sabe, excepto Dios."
+      ],
+      archivos: { epub: "libros/platon-apologia-de-socrates.epub", pdf: "libros/platon-apologia-de-socrates.pdf" },
+      fuente: { texto: "Obras completas de Platón, tomo I (Madrid, 1871), transcritas en es.wikisource.org (dominio público); edición digital y portada de Proyecto Fénix", url: "https://es.wikisource.org/wiki/Apolog%C3%ADa_de_S%C3%B3crates_(de_Azc%C3%A1rate_tr.)" },
+      nota: { literaria: null, teologica: null },
+      delibris: null,
+      parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo-granada", "escriva-amigos-de-dios"]
+    },
+    {
+      id: "apology-of-socrates",
+      titulo: "Apology",
+      autor: "Platón (trad. Benjamin Jowett)",
+      anio: "c. 390 a. C.",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. C., acusado de corromper a los jóvenes y de no creer en los dioses de la ciudad. Platón, que estuvo presente, la reconstruye en tres discursos: la defensa, la propuesta de pena tras el veredicto de culpa y las palabras finales después de la condena a muerte. Traducción inglesa de Benjamin Jowett.",
+        en: "Socrates' defence before the court of Athens in 399 BC, accused of corrupting the young and of not believing in the city's gods. Plato, who was present, reconstructs it in three speeches: the defence, the proposal of a penalty after the guilty verdict, and the final words after the death sentence. Socrates prefers to die rather than stop seeking the truth and serving what he understands as a divine command. English translation by Benjamin Jowett."
+      },
+      imagen: { src: "img/portadas/apologia-de-socrates.jpg", credito: { es: "Jacques-Louis David, «La muerte de Sócrates», 1787", en: "Jacques-Louis David, «The Death of Socrates», 1787" }, url: "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg" },
+      citas: [
+        "The unexamined life is not worth living.",
+        "The hour of departure has arrived, and we go our ways—I to die, and you to live. Which is better God only knows."
+      ],
+      archivos: { epub: "libros/platon-apology.epub", pdf: "libros/platon-apology.pdf" },
+      fuente: { texto: "Project Gutenberg, libro n.º 1656 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1656" },
+      nota: { literaria: null, teologica: null },
+      delibris: null,
+      parecidos: ["ortodoxia", "confesiones", "quo-vadis"]
     }
   ],
 
@@ -667,8 +737,8 @@ window.FENIX = {
       ],
       en: [],
       nota: {
-        es: "Fragmento citado en el Catecismo de la Iglesia Católica, n. 260. Más adelante, la misma oración pide al Espíritu Santo ser para Cristo «una humanidad de añadidura» (une humanité de surcroît), de donde viene la expresión «otra humanidad».",
-        en: "Excerpt quoted in the Catechism of the Catholic Church, no. 260 (Spanish edition). Later in the same prayer she asks the Holy Spirit that she may be for Christ «an additional humanity» (une humanité de surcroît), the source of the phrase «another humanity»."
+        es: "Fragmento citado en el Catecismo, n. 260. Más adelante, la misma oración pide al Espíritu Santo ser para Cristo «una humanidad de añadidura» (une humanité de surcroît), de donde viene la expresión «otra humanidad».",
+        en: "Excerpt quoted in the Catechism, no. 260 (Spanish edition). Later in the same prayer she asks the Holy Spirit that she may be for Christ «an additional humanity» (une humanité de surcroît), the source of the phrase «another humanity»."
       }
     }
   ]

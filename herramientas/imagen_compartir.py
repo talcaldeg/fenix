@@ -34,7 +34,7 @@ def main():
     f_tit = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 64)
     f_sub = ImageFont.truetype(str(FUENTES / "georgia.ttf"), 30)
     f_eti = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 22)
-    d.text((70, 150), "BIBLIOTECA CATÓLICA GRATUITA", font=f_eti, fill=ORO)
+    d.text((70, 150), "BIBLIOTECA GRATUITA", font=f_eti, fill=ORO)
     d.text((70, 188), "Proyecto Fénix", font=f_tit, fill=CREMA)
     lineas = ["Libros que vuelven a la vida:", "lectura espiritual, oración y", "novelas en EPUB y PDF, con", "reseñas, citas y plan de vida."]
     for i, l in enumerate(lineas):
