@@ -197,7 +197,7 @@ tomando las palabras del angélico mártir Teófano Vénard.
 
 Hacia fines de septiembre, como se le refiriera algo de lo que se había dicho en el recreo acerca de la responsabilidad de quienes tienen cargo de almas, se reanimó un instante y pronunció estas hermosas palabras:
 
-«“*Los pequeños serán juzgados con extrema dulzura*[^149]”. Es posible permanecer pequeño, aun en los cargos más temibles; ¿y no está escrito que al final “*el Señor se levantará para salvar a todos los mansos y humildes de la tierra*[^150]”? ¡No dice juzgar, sino salvar!»
+«“*Los pequeños serán juzgados con extrema dulzura*[^149]”. Es posible permanecer pequeño, aun en los cargos más temibles; ¿y no está escrito que al final “*el Señor se levantará para salvar a todos los mansos y humildes de la tierra*[^150]”? ¡No dice juzgar, sino salvar![^ed9]»
 
 Sin embargo, la ola del dolor subía cada vez más. La debilidad llegó a ser tan excesiva que, pronto, la santa pequeña enferma quedó reducida a no poder hacer, sin ayuda, el más leve movimiento. Oír hablar cerca de ella, aun en voz baja, se le volvía un penoso sufrimiento; la fiebre y la opresión no le permitían articular una sola palabra sin sentir la más extrema fatiga. En ese estado, sin embargo, la sonrisa no abandonó sus labios. ¿Pasaba una nube por su frente? Era el temor de dar a nuestras hermanas un aumento de pena. Hasta la antevíspera de su muerte quiso estar sola por la noche. Sin embargo, su enfermera se levantaba varias veces, a pesar de sus instancias. En una de sus visitas, la encontró con las manos juntas y los ojos alzados al cielo.
 
@@ -309,3 +309,5 @@ Este ángel nos había dicho algunos días antes de dejar este mundo: «*La muer
 [^151]: Sal 17, 5.
 
 [^152]: Sal 22, 4.
+
+[^ed9]: N. del E.: el versículo dice entero, en la Vulgata, «cuando Dios se levantó para el juicio, para salvar a todos los mansos de la tierra» (Sal 75, 10). Teresa subraya la misericordia sin negar el juicio, que revelará que el amor de Dios es más fuerte que la muerte (CEC 1040).

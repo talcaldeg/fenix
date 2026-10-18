@@ -10,9 +10,9 @@ Te ofrezco también todos los méritos de los Santos que están en el cielo y en
 
 Su divino Hijo, mi Esposo amado, en los días de Su vida mortal, nos dijo: «*Todo lo que pidan a mi Padre en mi nombre, Él se lo dará*». (Jn 16, 23.) Estoy, pues, cierta de que escucharás mis deseos... Lo sé, oh Dios mío, *cuanto más quieres dar, más haces desear*.
 
-Siento en mi corazón deseos inmensos, y con confianza Te pido que vengas a tomar posesión de mi alma. ¡Ah! No puedo recibir la santa comunión tan a menudo como lo deseo; pero, Señor, ¿no eres Tú Todopoderoso? Permanece en mí como en el Tabernáculo, no Te alejes jamás de Tu pequeña hostia.
+Siento en mi corazón deseos inmensos, y con confianza Te pido que vengas a tomar posesión de mi alma. ¡Ah! No puedo recibir la santa comunión tan a menudo como lo deseo; pero, Señor, ¿no eres Tú Todopoderoso? Permanece en mí como en el Tabernáculo, no Te alejes jamás de Tu pequeña hostia.[^ed10]
 
-Quisiera consolarte de la ingratitud de los malos, y Te suplico que me quites la libertad de desagradarte. Si por debilidad caigo alguna vez, que enseguida Tu divina mirada purifique mi alma, consumiendo todas mis imperfecciones, como el fuego que transforma todas las cosas en sí mismo.
+Quisiera consolarte de la ingratitud de los malos, y Te suplico que me quites la libertad de desagradarte.[^ed11] Si por debilidad caigo alguna vez, que enseguida Tu divina mirada purifique mi alma, consumiendo todas mis imperfecciones, como el fuego que transforma todas las cosas en sí mismo.
 
 Te doy gracias, oh Dios mío, por todas las gracias que me has concedido: en particular por haberme hecho pasar por el crisol del sufrimiento. Con gozo Te contemplaré en el último día, llevando el cetro de la cruz; puesto que Te has dignado darme en suerte esta cruz tan preciosa, espero parecerme a Ti en el cielo y ver brillar sobre mi cuerpo glorificado los sagrados estigmas de Tu pasión.
 
@@ -65,3 +65,7 @@ Oh Faz adorable, ¡sabremos obtener de Ti esta gracia! Olvidando nuestro destier
 [^181]: Is 53, 3.
 
 [^182]: Sal 136, 4.
+
+[^ed10]: N. del E.: es un deseo amoroso, no una afirmación doctrinal. La presencia eucarística de Cristo dura mientras subsisten las especies consagradas (CEC 1377); entre una comunión y otra, Dios habita en el alma en gracia (Jn 14, 23; CEC 260).
+
+[^ed11]: N. del E.: pide la gracia de no ofender nunca a Dios, no la pérdida del libre albedrío: la gracia no se opone a la libertad, y cuanto más dócil es el alma a ella, más libre se hace (CEC 1742).

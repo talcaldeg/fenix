@@ -102,7 +102,7 @@ Permítame decirle, Madre mía, por qué, si la Santísima Virgen me cura, deseo
 
 Pero ahora estoy enferma, y no sanaré. Sin embargo, permanezco en paz; hace mucho que no me pertenezco, estoy totalmente entregada a Jesús... Él es, pues, libre de hacer de mí todo lo que Le plazca. Me ha dado el atractivo de un destierro completo, me ha preguntado si consentía en beber ese cáliz: enseguida quise tomarlo, pero Él, retirando Su mano, me mostró que solo la aceptación Le bastaba.
 
-¡Dios mío, de cuántas inquietudes se libera uno al hacer el voto de obediencia! ¡Qué felices son las simples religiosas! Siendo su única brújula la voluntad de los superiores, están siempre seguras de ir por el camino recto, sin temor de equivocarse, aun cuando les parezca cierto que los superiores se equivocan. Pero, cuando se deja de consultar la brújula infalible, enseguida el alma se extravía por caminos áridos donde pronto le falta el agua de la gracia.
+¡Dios mío, de cuántas inquietudes se libera uno al hacer el voto de obediencia! ¡Qué felices son las simples religiosas! Siendo su única brújula la voluntad de los superiores, están siempre seguras de ir por el camino recto, sin temor de equivocarse, aun cuando les parezca cierto que los superiores se equivocan.[^ed6] Pero, cuando se deja de consultar la brújula infalible, enseguida el alma se extravía por caminos áridos donde pronto le falta el agua de la gracia.
 
 Madre mía, usted es la brújula que Jesús me ha dado para conducirme con seguridad a la ribera eterna. ¡Qué dulce me es fijar en usted mi mirada y cumplir luego la voluntad del Señor! Al permitir que sufra tentaciones contra la fe, el divino Maestro ha aumentado mucho en mi corazón *el espíritu de fe*, que me Lo hace ver vivo en el alma de usted y comunicándome por medio de usted Sus órdenes benditas. Sé bien, Madre mía, que usted me hace dulce y ligera la carga de la obediencia; pero me parece, según mis sentimientos íntimos, que no cambiaría de conducta y que mi ternura filial no sufriría disminución alguna, si a usted le pareciera bien tratarme con severidad, porque vería todavía la voluntad de mi Dios manifestándose de otra manera para el mayor bien de mi alma.
 
@@ -147,3 +147,5 @@ Esa voluntad, Jesús me la dio a conocer cuando, en la última Cena, dio Su *man
 [^92]: Jn 13, 34.
 
 [^93]: Jn 15, 13.
+
+[^ed6]: N. del E.: Teresa habla de la obediencia propia de la vida consagrada (CEC 915) en lo que se puede mandar con rectitud. No se trata de obedecer en lo que es pecado: la persona «debe obedecer siempre el juicio cierto de su conciencia» (CEC 1790).

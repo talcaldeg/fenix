@@ -54,7 +54,7 @@ Escuchaba con mucha atención las instrucciones que daba el señor abate Domin, 
 
 Pero no quiero ni podría decirlo todo... Hay cosas que pierden su perfume apenas se exponen al aire; hay pensamientos íntimos que no pueden traducirse en el lenguaje de la tierra sin perder al instante su sentido profundo y celestial.
 
-¡Ah, qué dulce fue el primer beso de Jesús a mi alma! ¡Sí, fue un beso de amor! Me sentía amada, y yo también decía: «¡Te amo, me entrego a Ti para siempre!». Jesús no me hizo ninguna petición, no reclamó ningún sacrificio. Hacía ya mucho tiempo que Él y la pequeña Teresa se habían mirado y comprendido... Ese día, nuestro encuentro ya no podía llamarse una simple mirada, sino una *fusión*. Ya no éramos dos: Teresa había desaparecido como la gota de agua que se pierde en el seno del océano, Jesús quedaba solo; ¡Él era el Maestro, el Rey! ¿No Le había pedido Teresa que le quitara su libertad? Esa libertad le daba miedo; se sentía tan débil, tan frágil, que quería unirse para siempre a la Fuerza divina.
+¡Ah, qué dulce fue el primer beso de Jesús a mi alma! ¡Sí, fue un beso de amor! Me sentía amada, y yo también decía: «¡Te amo, me entrego a Ti para siempre!». Jesús no me hizo ninguna petición, no reclamó ningún sacrificio. Hacía ya mucho tiempo que Él y la pequeña Teresa se habían mirado y comprendido... Ese día, nuestro encuentro ya no podía llamarse una simple mirada, sino una *fusión*. Ya no éramos dos: Teresa había desaparecido como la gota de agua que se pierde en el seno del océano, Jesús quedaba solo; ¡Él era el Maestro, el Rey! ¿No Le había pedido Teresa que le quitara su libertad? Esa libertad le daba miedo; se sentía tan débil, tan frágil, que quería unirse para siempre a la Fuerza divina.[^ed2]
 
 Y entonces su alegría se hizo tan grande, tan profunda, que no pudo contenerla. Pronto lágrimas deliciosas la inundaron, para gran asombro de sus compañeras, que más tarde se decían unas a otras: «¿Por qué habrá llorado? ¿No tendría alguna inquietud de conciencia?». «No, era más bien por no tener cerca a su madre o a su hermana carmelita, a quien tanto quiere». Y nadie comprendía que, cuando todo el gozo del cielo viene a un corazón, ese corazón desterrado, débil y mortal, no puede soportarlo sin derramar lágrimas...
 
@@ -137,3 +137,5 @@ En aquella habitación amueblada a la antigua, rodeada de libros y cuadernos, as
 [^26]: Lc 7, 47.
 
 [^27]: Lc 5, 32.
+
+[^ed2]: N. del E.: «fusión» y la gota que se pierde en el océano son lenguaje de los místicos para la unión íntima con Cristo, fruto principal de la comunión (CEC 1391). Es unión de amor, no disolución de la persona en Dios. Tampoco pedir que se le quite la libertad es renunciar al libre albedrío: es pedir no apartarse nunca de Él, y la gracia no se opone a la libertad, sino que la hace crecer (CEC 1742).

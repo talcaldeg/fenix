@@ -14,7 +14,7 @@ En el año 1895 recibí la gracia de comprender más que nunca cuánto desea Jes
 
 «Si Tu justicia se complace en descargarse, ella que solo se extiende sobre la tierra, ¡cuánto más desea Tu amor misericordioso abrasar las almas, puesto que *Tu misericordia se eleva hasta los cielos*[^75]! Oh Jesús, que sea yo esa feliz víctima, consume a Tu pequeña hostia con el fuego del divino amor».
 
-Madre mía, usted sabe de las llamas, o más bien de los océanos de gracias que vinieron a inundar mi alma, enseguida después de mi ofrenda del 9 de junio de 1895. ¡Ah! Desde ese día, el amor me penetra y me rodea; a cada instante, este *amor misericordioso* me renueva, me purifica y no deja en mi corazón ningún rastro de pecado. No, no puedo temer el purgatorio; sé que ni siquiera merecería entrar con las almas santas en ese lugar de expiación; pero sé también que el fuego del amor es más santificante que el del purgatorio, sé que Jesús no puede querer para nosotros sufrimientos inútiles, y que no me inspiraría los deseos que siento si no quisiera colmarlos.
+Madre mía, usted sabe de las llamas, o más bien de los océanos de gracias que vinieron a inundar mi alma, enseguida después de mi ofrenda del 9 de junio de 1895. ¡Ah! Desde ese día, el amor me penetra y me rodea; a cada instante, este *amor misericordioso* me renueva, me purifica y no deja en mi corazón ningún rastro de pecado. No, no puedo temer el purgatorio; sé que ni siquiera merecería entrar con las almas santas en ese lugar de expiación; pero sé también que el fuego del amor es más santificante que el del purgatorio, sé que Jesús no puede querer para nosotros sufrimientos inútiles, y que no me inspiraría los deseos que siento si no quisiera colmarlos.[^ed5]
 
 [^70]: Lc 17, 21.
 
@@ -27,3 +27,5 @@ Madre mía, usted sabe de las llamas, o más bien de los océanos de gracias que
 [^74]: Lc 15, 31.
 
 [^75]: Sal 35, 5.
+
+[^ed5]: N. del E.: Teresa no niega el purgatorio, al que llama «lugar de expiación»: confía en que el amor la purifique ya en esta vida. La Iglesia enseña la purificación final de quienes mueren en gracia, pero imperfectamente purificados (CEC 1030-1031), y que «una conversión que procede de una ferviente caridad puede llegar a la total purificación del pecador» (CEC 1472).

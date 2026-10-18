@@ -86,7 +86,7 @@ He ahí un ejemplo muy impresionante de lo que quisiera decir, pero estas cosas 
 
 * * * * *
 
-¡He aquí, pues, todo lo que Jesús nos reclama! No tiene necesidad de nuestras obras, sino únicamente de nuestro *amor*. Ese mismo Dios, que declara no tener necesidad de decirnos si tiene hambre, no temió *mendigar* un poco de agua a la Samaritana... ¡¡¡Tenía sed!!! Pero al decir: «*Dame de beber*[^128]», lo que el Creador del universo reclamaba era el amor de Su pobre criatura. ¡Tenía sed de amor!
+¡He aquí, pues, todo lo que Jesús nos reclama! No tiene necesidad de nuestras obras, sino únicamente de nuestro *amor*.[^ed7] Ese mismo Dios, que declara no tener necesidad de decirnos si tiene hambre, no temió *mendigar* un poco de agua a la Samaritana... ¡¡¡Tenía sed!!! Pero al decir: «*Dame de beber*[^128]», lo que el Creador del universo reclamaba era el amor de Su pobre criatura. ¡Tenía sed de amor!
 
 Sí, más que nunca Jesús está sediento. Solo encuentra ingratos e indiferentes entre los discípulos del mundo; y entre *Sus propios discípulos* halla, ¡ay!, muy pocos corazones que se entreguen sin reserva alguna a la ternura de Su Amor infinito.
 
@@ -124,7 +124,7 @@ Y ahora sé, comprendo cuán poco indiferente le era yo por su parte, y este pen
 
 ¡Ser Tu esposa, oh Jesús, ser carmelita, ser, por mi unión Contigo, madre de almas, todo eso debería bastarme! Sin embargo siento en mí otras vocaciones: siento la vocación de guerrero, de sacerdote, de apóstol, de doctor, de mártir... Quisiera realizar todas las obras más heroicas, siento el valor de un cruzado, quisiera morir en un campo de batalla en defensa de la Iglesia.
 
-¡La vocación de sacerdote! ¡Con cuánto amor, oh Jesús, Te llevaría en mis manos cuando mi voz Te hiciera bajar del cielo! ¡Con cuánto amor Te daría a las almas! Pero ¡ay!, aunque deseo ser sacerdote, admiro y envidio la humildad de san Francisco de Asís, y siento la vocación de imitarlo rehusando la sublime dignidad del sacerdocio. ¿Cómo conciliar entonces estos contrastes?
+¡La vocación de sacerdote! ¡Con cuánto amor, oh Jesús, Te llevaría en mis manos cuando mi voz Te hiciera bajar del cielo! ¡Con cuánto amor Te daría a las almas! Pero ¡ay!, aunque deseo ser sacerdote, admiro y envidio la humildad de san Francisco de Asís, y siento la vocación de imitarlo rehusando la sublime dignidad del sacerdocio. ¿Cómo conciliar entonces estos contrastes?[^ed8]
 
 Quisiera iluminar a las almas como los profetas, los doctores. Quisiera recorrer la tierra, predicar Tu Nombre y plantar sobre el suelo infiel Tu cruz gloriosa, ¡oh Amado mío! Pero una sola misión no me bastaría: quisiera anunciar al mismo tiempo el Evangelio en todas las partes del mundo, y hasta en las islas más remotas. Quisiera ser misionera no solo durante algunos años, sino que quisiera haberlo sido desde la creación del mundo, y seguir siéndolo hasta la consumación de los siglos.
 
@@ -179,3 +179,7 @@ El 3 de mayo de 1878, Su Santidad el Papa León XIII firmó la introducción de 
 [^133]: San Juan de la Cruz.
 
 [^134]: 1 Co 12, 31.
+
+[^ed7]: N. del E.: no es desprecio de las obras; en el capítulo X Teresa escribe que «las inspiraciones más sublimes no son nada sin las obras». Quiere decir que lo que da valor a las obras es la caridad: «La caridad de Cristo es en nosotros la fuente de todos nuestros méritos ante Dios» (CEC 2011, que cita el Acto de ofrenda de la santa).
+
+[^ed8]: N. del E.: es un deseo de amor que la santa no pretende cumplir y que resuelve, pocas líneas después, en su vocación al amor en el seno de la Iglesia. Solo el varón bautizado recibe válidamente la ordenación, por una decisión del Señor a la que la Iglesia «se reconoce vinculada» (CEC 1577).

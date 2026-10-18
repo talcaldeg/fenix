@@ -50,7 +50,7 @@ El año que siguió a mi profesión recibí grandes gracias durante el retiro ge
 
 Yo tenía entonces penas interiores de todo género que me sentía incapaz de decir; y de pronto mi alma se dilató por completo, fui comprendida de una manera maravillosa e incluso adivinada. El Padre me lanzó a toda vela sobre las olas de la confianza y del amor, que tanto me atraían, pero por las cuales no me atrevía a avanzar. Me dijo que mis faltas no entristecían al buen Dios: «En este momento, añadió, hago Sus veces junto a usted; pues bien, le aseguro de Su parte que está muy contento de su alma».
 
-¡Oh, qué feliz fui al oír estas consoladoras palabras! Jamás había oído decir que las faltas pudieran no entristecer al buen Dios. Esta seguridad me colmó de alegría; me hizo soportar con paciencia el destierro de la vida. Era, por lo demás, el eco de mis pensamientos íntimos. Sí, yo creía desde hacía mucho tiempo que el Señor es más tierno que una madre, ¡y conozco a fondo más de un corazón de madre! Sé que una madre siempre está dispuesta a perdonar las pequeñas indelicadezas involuntarias de su hijo. ¡Cuántas veces lo he experimentado con dulzura! Ningún reproche me habría tocado tanto como una sola de las caricias maternales; soy de una naturaleza tal que el temor me hace retroceder; con el amor no solo avanzo, ¡sino que vuelo!
+¡Oh, qué feliz fui al oír estas consoladoras palabras! Jamás había oído decir que las faltas pudieran no entristecer al buen Dios.[^ed4] Esta seguridad me colmó de alegría; me hizo soportar con paciencia el destierro de la vida. Era, por lo demás, el eco de mis pensamientos íntimos. Sí, yo creía desde hacía mucho tiempo que el Señor es más tierno que una madre, ¡y conozco a fondo más de un corazón de madre! Sé que una madre siempre está dispuesta a perdonar las pequeñas indelicadezas involuntarias de su hijo. ¡Cuántas veces lo he experimentado con dulzura! Ningún reproche me habría tocado tanto como una sola de las caricias maternales; soy de una naturaleza tal que el temor me hace retroceder; con el amor no solo avanzo, ¡sino que vuelo!
 
 * * * * *
 
@@ -149,3 +149,5 @@ Oh Madre mía, ¡qué dulce es la vía del *amor*! Sin duda se puede caer, se pu
 [^68]: Qo 2, 11.
 
 [^69]: Fue el 14 de septiembre de 1894. *Celina* se hizo *Sor Genoveva de Santa Teresa*.
+
+[^ed4]: N. del E.: Teresa se refiere a las faltas de fragilidad, como precisa enseguida («las pequeñas indelicadezas involuntarias de su hijo»). El pecado venial deliberado sí debilita la caridad, aunque no rompe la Alianza con Dios (CEC 1863).
