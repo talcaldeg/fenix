@@ -111,6 +111,10 @@ def leer(carpeta: Path):
                     c.cap_actual = cap
                     c.html.append(f"<h3>{romano(int(cap))}</h3>")
                 continue
+            # El marcador del texto latino a veces corta una oración: ese trozo sigue el párrafo anterior.
+            unir = (bool(c.html) and c.html[-1].startswith("<p>") and "\n" not in b
+                    and re.match(r"[a-záéíóúñ]", b) is not None
+                    and re.search(r"[.?!:;»”…)]\s*(<[^>]+>)*</p>$", c.html[-1]) is None)
             if re.fullmatch(r"[\\*\s]+", b) or re.fullmatch(r"[-_*]{3,}", b.strip()):
                 c.html.append('<p class="separador">* * *</p>')
                 continue
@@ -127,6 +131,8 @@ def leer(carpeta: Path):
                 c.html.append(f'<p class="subtitulo">{enlinea(b.strip()[1:-1])}</p>')
             elif len(lineas) > 1:
                 c.html.append(f'<p class="verso">{cuerpo}</p>')
+            elif unir:
+                c.html[-1] = c.html[-1][:-4] + " " + cuerpo + "</p>"
             else:
                 c.html.append(f"<p>{cuerpo}</p>")
             recien_titulo = False
