@@ -303,8 +303,19 @@ const bloque = `<!-- JSONLD:inicio - lo genera herramientas/gen_estaticos.js des
 ${JSON.stringify(ldInicio, null, 2)}
 </script>
 <!-- JSONLD:fin -->`;
-const indexNuevo = INDEX.replace(/<!-- JSONLD:inicio[\s\S]*?<!-- JSONLD:fin -->/, bloque);
-if (indexNuevo === INDEX && !INDEX.includes("<!-- JSONLD:inicio")) throw new Error("index.html no tiene las marcas JSONLD:inicio y JSONLD:fin");
+// Catálogo en HTML plano dentro de <noscript>: los rastreadores que no ejecutan JavaScript (los de IA)
+// y Google en su primera pasada ven así un enlace a cada libro desde la portada. El visitante no lo ve.
+const catalogo = `<!-- CATALOGO:inicio - lo genera herramientas/gen_estaticos.js desde datos.js; no editar a mano -->
+  <noscript><nav aria-label="Catálogo"><h2>Catálogo</h2><ul>
+${PAGINAS.map(l => `    <li><a href="${(l._ruta || "libro/" + l.id + "/")}">${esc(l.titulo)}</a> - ${esc(l.autor)}</li>`).join("\n")}
+  </ul></nav></noscript>
+  <!-- CATALOGO:fin -->`;
+const conCatalogo = INDEX.includes("<!-- CATALOGO:inicio")
+  ? INDEX.replace(/<!-- CATALOGO:inicio[\s\S]*?<!-- CATALOGO:fin -->/, catalogo)
+  : INDEX.replace("<main>\n", `<main>\n  ${catalogo}\n`);
+if (!conCatalogo.includes("<!-- CATALOGO:inicio")) throw new Error("index.html no tiene <main> para el catálogo");
+const indexNuevo = conCatalogo.replace(/<!-- JSONLD:inicio[\s\S]*?<!-- JSONLD:fin -->/, bloque);
+if (indexNuevo === conCatalogo && !INDEX.includes("<!-- JSONLD:inicio")) throw new Error("index.html no tiene las marcas JSONLD:inicio y JSONLD:fin");
 if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
 
 // ---------- sitemap.xml ----------

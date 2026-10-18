@@ -31,7 +31,9 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   por `#hash` y arma todo con JavaScript, así que Google no ve cada libro y los rastreadores de
   IA (que no ejecutan JavaScript) no ven nada. El script deja una página estática por libro en
   `libro/<id>/` (en el idioma del libro, con datos estructurados `Book`), `sitemap.xml`,
-  `llms.txt` y el JSON-LD de la portada. El `robots.txt` y la señal de contenido para IA
+  `llms.txt`, el JSON-LD de la portada y, dentro de `<noscript>`, un enlace a cada libro desde la
+  portada. Después de publicar, `node herramientas/indexnow.js` avisa a Bing (y por él a ChatGPT
+  y Copilot) de las páginas con fecha de hoy; `--todas` manda el sitemap entero. El `robots.txt` y la señal de contenido para IA
   (`Content-Signal: search=yes,ai-input=yes,ai-train=yes`, igual que verumdata.cl) viven en la
   raíz del repo `talcaldeg.github.io`, que también apunta a este sitemap.
 - Editorial: un libro cuya edición hizo Fénix (traducción, revisión, edición digital) lleva
