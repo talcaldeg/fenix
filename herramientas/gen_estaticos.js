@@ -268,7 +268,7 @@ const ldInicio = {
       "@id": SITIO + "#sitio",
       url: SITIO,
       name: "Proyecto Fénix",
-      description: "Clásicos de lectura espiritual y oración escogidos uno a uno, gratis en EPUB y PDF, con por qué leerlo, citas y valoración moral. Todo apunta a una idea: ser para Cristo «como otra humanidad». También reúne novelas, teatro, poesía y ensayo que vale la pena leer.",
+      description: "Novelas, teatro, poesía, ensayo y clásicos de todas las épocas, escogidos uno a uno y gratis en EPUB y PDF, con por qué leerlo, citas y valoración moral. Sin publicidad ni registro.",
       inLanguage: ["es", "en"],
       author: { "@type": "Person", name: "Tomás Alcalde", url: "https://talcaldeg.github.io/" }
     },
@@ -276,7 +276,7 @@ const ldInicio = {
       "@type": "CollectionPage",
       "@id": SITIO + "#catalogo",
       url: SITIO,
-      name: "Proyecto Fénix · Lectura espiritual y oración, gratis y escogida",
+      name: "Proyecto Fénix · Buenos libros, gratis y escogidos",
       isPartOf: { "@id": SITIO + "#sitio" },
       mainEntity: {
         "@type": "ItemList",
@@ -316,9 +316,9 @@ const ORDEN = ["lectura", "oracion", "novela", "teatro", "poesia", "ensayo"];
 const linea = l => `- [${l.titulo} - ${l.autor} (${l.anio})](${urlLibro(l)}) - ${primeraOracion(l.resumen[l.idioma] || l.resumen.es)}${Object.keys(l.archivos || {}).length ? " Descarga gratuita en " + Object.keys(l.archivos).map(f => f.toUpperCase()).join(" y ") + "." : (l.externos || []).length ? " Se lee gratis en el sitio del titular." : " Protegido por derechos de autor: se enlaza a donde comprarlo."}`;
 const llms = `# Proyecto Fénix
 
-> Biblioteca gratuita de lectura espiritual y oración escogida, en español e inglés: clásicos para descargar en EPUB y PDF o leer en línea, cada uno con por qué leerlo, resumen, citas, libros parecidos y la valoración moral de delibris.org. Para quien quiere tratar más a Dios y no sabe qué leer; también reúne novelas, teatro, poesía y ensayo que vale la pena leer. Sin publicidad ni registro.
+> Biblioteca digital gratuita, en español e inglés: novelas, teatro, poesía, ensayo y clásicos de todas las épocas, escogidos uno a uno, para descargar en EPUB y PDF o leer en línea, cada uno con por qué leerlo, resumen, citas, libros parecidos y la valoración moral de delibris.org. Sin publicidad ni registro.
 
-Fénix nació para dar a conocer una idea de la teología espiritual: ser para Cristo «como otra humanidad». Santa Isabel de la Trinidad pidió en 1904 al Espíritu Santo ser para Cristo «una humanidad de añadidura» en la que Él renueve todo Su misterio, y el jesuita Paul de Jaegher la hizo oración al final de «One with Jesus». No se trata de una nueva encarnación: es la vida de la gracia, que nos une a Cristo como miembros de Su Cuerpo (Catecismo, nn. 521 y 1997).
+Fénix existe para que los buenos libros no se pierdan: los busca, revisa sus derechos y, si se puede, los publica en ediciones que se leen bien en el celular.
 
 Algunos libros son ediciones propias de Proyecto Fénix (traducción, revisión o edición digital); su página dice qué se hizo.
 

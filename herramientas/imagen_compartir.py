@@ -12,7 +12,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 RAIZ = Path(__file__).resolve().parent.parent
 FUENTES = Path("C:/Windows/Fonts")
-PORTADAS = ["marmion-vida-del-alma", "quo-vadis", "confesiones", "imitacion-de-cristo"]
+PORTADAS = ["cervantes-don-quijote", "stevenson-isla-del-tesoro", "shakespeare-hamlet", "verne-la-vuelta-al-mundo-en-80-dias"]
 GRANATE, ORO, CREMA = (74, 20, 26), (232, 176, 74), (255, 244, 214)
 
 
@@ -36,7 +36,7 @@ def main():
     f_eti = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 22)
     d.text((70, 150), "BIBLIOTECA GRATUITA", font=f_eti, fill=ORO)
     d.text((70, 188), "Proyecto Fénix", font=f_tit, fill=CREMA)
-    lineas = ["Libros que vuelven a la vida:", "lectura espiritual, oración y", "novelas en EPUB y PDF, con", "reseñas, citas y plan de vida."]
+    lineas = ["Libros que vuelven a la vida:", "novelas, teatro, poesía y", "clásicos en EPUB y PDF, con", "reseñas y citas."]
     for i, l in enumerate(lineas):
         d.text((70, 300 + i * 44), l, font=f_sub, fill=(240, 222, 196))
     d.rectangle((70, 500, 190, 504), fill=ORO)
