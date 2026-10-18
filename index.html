@@ -280,9 +280,14 @@
   .barra{display:flex; align-items:center; gap:12px; min-height:58px}
   .marca{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; font-size:19px; white-space:nowrap}
   .marca img{width:30px; height:30px}
-  nav.menu{display:flex; gap:2px; flex-wrap:wrap; margin-left:auto}
-  nav.menu a{font-family:system-ui,sans-serif; font-size:15px; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
-  nav.menu a.on, nav.menu a:hover{color:var(--ink); background:var(--chip)}
+  nav.menu{display:flex; align-items:center; gap:2px; flex-wrap:nowrap; white-space:nowrap; margin-left:auto}
+  nav.menu a, nav.menu summary{font-family:system-ui,sans-serif; font-size:15px; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a.on, nav.menu a:hover, nav.menu summary:hover, .mas.on summary{color:var(--ink); background:var(--chip)}
+  .mas{position:relative}
+  .mas summary{list-style:none; cursor:pointer}
+  .mas summary::-webkit-details-marker{display:none}
+  .mas summary::after{content:" ▾"; font-size:12px}
+  .mas .sub{position:absolute; right:0; top:calc(100% + 6px); min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:var(--sombra)}
   .ajustes{display:flex; gap:6px}
   .pildora{border:1px solid var(--line); background:var(--card); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
   #btnMenu{display:none}
@@ -290,6 +295,8 @@
     #btnMenu{display:inline-block}
     nav.menu{display:none; position:absolute; left:0; right:0; top:58px; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column}
     nav.menu.abierto{display:flex}
+    nav.menu{align-items:stretch}
+    .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
     .barra{flex-wrap:wrap}
     .ajustes{margin-left:auto}
   }
@@ -468,10 +475,15 @@
       <a href="#editorial" data-i18n="nav.editorial" id="navEditorial">Editorial</a>
       <a href="#plan" data-i18n="nav.plan">Plan de vida</a>
       <a href="#oraciones" data-i18n="nav.oraciones">Oraciones</a>
-      <a href="#salvar" data-i18n="nav.salvar">Salvar un libro</a>
-      <a href="#error" data-i18n="nav.error">Avisar un error</a>
-      <a href="#dona" data-i18n="nav.dona">Donar</a>
-      <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+      <details class="mas" id="menuMas">
+        <summary data-i18n="nav.colaborar">Colaborar</summary>
+        <div class="sub">
+          <a href="#salvar" data-i18n="nav.salvar">Salvar un libro</a>
+          <a href="#error" data-i18n="nav.error">Avisar un error</a>
+          <a href="#dona" data-i18n="nav.dona">Donar</a>
+          <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
+        </div>
+      </details>
     </nav>
     <div class="ajustes">
       <button class="pildora" id="btnIdioma" title="Idioma / Language">English</button>
@@ -729,7 +741,7 @@
   // ---------- textos de la interfaz ----------
   const T = {
     en: {
-      "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.menu":"Menu","nav.editorial":"Our editions",
+      "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions",
       "ed.eyebrow":"Our own editions","ed.titulo":"Our editions","ed.lede":"Sometimes finding a book is not enough: it has to be translated from its original language, a transcription has to be checked, or an edition has to be made that reads well on a phone. These are the books prepared by Proyecto Fénix.",
       "ed.proximo":"We are working on new translations. If you would like to help translate or proofread, write to us from Contact.","x.edFenix":"Fénix edition","x.queHicimos":"What we did","x.verLibro":"See the book",
       "x.ayuda":"Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.","x.paginaLibro":"Page of this book (to share)",
@@ -803,6 +815,7 @@
   });
   $("#btnIdioma").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; almacen.guardar("idioma", lang); aplicarIdioma(); });
   $("#btnMenu").addEventListener("click", () => $("#btnMenu").setAttribute("aria-expanded", $("#menu").classList.toggle("abierto")));
+  document.addEventListener("click", e => { if (!e.target.closest("#menuMas")) $("#menuMas").open = false; });
 
   // ---------- utilidades ----------
   const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -1068,6 +1081,8 @@
     ultimaVista = v;
     $$(".vista").forEach(s => s.classList.toggle("on", s.id === "v-" + v));
     $$("nav.menu a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + v));
+    $("#menuMas").classList.toggle("on", !!$("#menuMas a.on"));
+    $("#menuMas").open = false;
     $("#menu").classList.remove("abierto");
   }
   window.addEventListener("hashchange", ruta);
