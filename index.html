@@ -1118,9 +1118,10 @@
   .etq.epub{background:var(--acento); color:var(--acento-ink); font-weight:700; letter-spacing:.03em}
   .etq.sello{background:transparent; border:1.5px solid var(--oro); color:var(--oro); font-weight:700; padding:1px 8px; font-size:12.5px; white-space:nowrap}
   .libro.fenix{border:2px solid var(--oro)}
-  .libro.sin-epub, .fila.sin-epub{opacity:.62}
-  .libro.sin-epub .portada, .fila.sin-epub .mini{filter:grayscale(.75)}
-  .libro.sin-epub:hover, .fila.sin-epub:hover, .fila.sin-epub:focus-visible{opacity:1}
+  /* Se atenúa la imagen, no el texto: así el texto conserva un contraste de 4,5:1 o más. */
+  .libro.sin-epub .portada, .fila.sin-epub .mini{filter:grayscale(.8); opacity:.5}
+  .libro.sin-epub .pie, .fila.sin-epub .tt{color:var(--muted)}
+  .libro.sin-epub:hover .portada, .fila.sin-epub:hover .mini{opacity:1; filter:none}
   .sin-epub-grupo{border-top:1px solid var(--line)}
   .sin-epub-grupo > summary{cursor:pointer; padding:12px 16px; font:600 14px system-ui,sans-serif; color:var(--muted); background:var(--bg2)}
   .sin-epub-grupo > summary:hover{color:var(--ink)}
@@ -1716,7 +1717,7 @@
     const con = lista.filter(l => tieneEpub(l) || esFenix(l)), sin = lista.filter(l => !tieneEpub(l) && !esFenix(l));
     const abierto = !con.length || $("#fBuscar").value.trim() || ["pdf", "web", "comprar"].includes($("#fFormato").value);
     $("#catalogo").innerHTML = !lista.length ? "" : (con.length ? cabecera() + con.map(fila).join("") : "")
-      + (sin.length ? `<details class="sin-epub-grupo"${abierto ? " open" : ""}><summary>${esc(t("x.sinEpub").replace("{n}", sin.length))}</summary>${con.length ? "" : cabecera()}${sin.map(fila).join("")}</details>` : "");
+      + (sin.length ? `<details class="sin-epub-grupo"${abierto ? " open" : ""}><summary>${esc(t("x.sinEpub").replace("{n}", sin.length))}</summary>${con.length ? "" : cabecera()}<div role="list">${sin.map(fila).join("")}</div></details>` : "");
     $("#catalogo").hidden = !lista.length;
     $("#sinResultados").hidden = lista.length > 0;
   }
