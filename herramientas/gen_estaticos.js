@@ -73,7 +73,14 @@ const TX = {
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
-    de: "de", tema: "Cambiar a modo claro u oscuro", edFenix: "Edición Fénix", sello: "Recomendado por Fénix"
+    de: "de", tema: "Cambiar a modo claro u oscuro", edFenix: "Edición Fénix", sello: "Recomendado por Fénix",
+    y: "y", ebook: "ebook",
+    tProp: F => `${F} gratis`, tExt: F => `${F} gratis, enlace legal`, tWeb: "Leer en línea gratis", tComprar: "Resumen y dónde comprarlo",
+    sProp: F => `Gratis en ${F}`, sExt: F => `Gratis en ${F} (enlace legal)`, sWeb: "Gratis para leer en línea", sComprar: "Protegido por derechos de autor: dónde comprarlo",
+    dProp: (t, a, F, ed) => `Descarga gratis «${t}» de ${a} en ${F}${ed ? ", edición Fénix" : ""}.`,
+    dExt: (t, a, F, s) => `«${t}» de ${a}: gratis y legal en ${F} (${s}).`,
+    dWeb: (t, a, s) => `Lee gratis «${t}» de ${a} en línea (${s}).`,
+    dComprar: (t, a) => `«${t}» de ${a}: por qué leerlo, resumen y dónde comprarlo.`
   },
   en: {
     cat: { lectura: "Spiritual reading", oracion: "Prayer", novela: "Novels", teatro: "Drama", poesia: "Poetry", ensayo: "Essays and history" },
@@ -84,7 +91,14 @@ const TX = {
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
-    de: "of", tema: "Switch between light and dark mode", edFenix: "Fénix edition", sello: "Recommended by Fénix"
+    de: "of", tema: "Switch between light and dark mode", edFenix: "Fénix edition", sello: "Recommended by Fénix",
+    y: "and", ebook: "ebook",
+    tProp: F => `Free ${F}`, tExt: F => `Free ${F}, legal link`, tWeb: "Read online free", tComprar: "Summary and where to buy",
+    sProp: F => `Free ${F}`, sExt: F => `Free ${F} (legal link)`, sWeb: "Free to read online", sComprar: "Under copyright: where to buy it",
+    dProp: (t, a, F, ed) => `Download «${t}» by ${a} free in ${F}${ed ? ", Fénix edition" : ""}.`,
+    dExt: (t, a, F, s) => `«${t}» by ${a}: free and legal in ${F} (${s}).`,
+    dWeb: (t, a, s) => `Read «${t}» by ${a} free online (${s}).`,
+    dComprar: (t, a) => `«${t}» by ${a}: why read it, summary and where to buy it.`
   }
 };
 
@@ -97,6 +111,33 @@ const urlLibro = l => SITIO + (l._ruta || "libro/" + l.id + "/");
 // Mismo criterio que index.html: cada idioma muestra solo lo suyo.
 const externosEn = (l, lang) => (l.externos || []).filter(e => (e.idioma || l.idioma) === lang);
 const visibleEn = (l, lang) => l.idioma === lang || externosEn(l, lang).length > 0;
+// Qué ofrece la página de cada libro, para el título, la descripción y el H1: nunca se promete una
+// descarga que no hay. Archivos propios > descarga en otro sitio > lectura en línea > compra.
+const TIPO_MIME = { pdf: "application/pdf", epub: "application/epub+zip" };
+const ORDEN_FORMATO = ["epub", "pdf", "ebook"];
+const autorCorto = a => a.replace(/\s*\(.*?\)\s*/g, " ").trim();
+// En el título, sin tratamiento ni siglas de orden: «Beato Columba Marmion, O.S.B.» pasa a «Columba Marmion».
+const autorTitulo = a => autorCorto(a).replace(/^(San|Santa|Santo|Beato|Beata|Saint|St\.|Blessed|Brother|Fray)\s+/, "").replace(/,\s*[A-Z](\.[A-Z])*\.?$/, "").trim();
+const sitioCorto = t => t.split(/[,(]/)[0].trim();
+function oferta(l, lang){
+  const x = TX[lang];
+  const ext = externosEn(l, lang);
+  const propios = l.idioma === lang ? Object.keys(l.archivos || {}) : [];
+  const descargas = ext.filter(e => e.formato !== "web");
+  const tipo = propios.length ? "prop" : descargas.length ? "ext" : ext.length ? "web" : "comprar";
+  const fmts = [...new Set(propios.length ? propios : descargas.map(e => e.formato))].sort((a, b) => ORDEN_FORMATO.indexOf(a) - ORDEN_FORMATO.indexOf(b));
+  const nombres = fmts.map(f => f === "ebook" ? x.ebook : f.toUpperCase());
+  const F = nombres.length > 1 ? nombres.slice(0, -1).join(", ") + " " + x.y + " " + nombres[nombres.length - 1] : nombres[0];
+  const sitio = sitioCorto(((tipo === "ext" ? descargas : ext)[0] || {}).texto || "");
+  const t = l.titulo, a = autorCorto(l.autor), at = autorTitulo(l.autor);
+  const cola = { prop: x.tProp(F), ext: x.tExt(F), web: x.tWeb, comprar: x.tComprar }[tipo];
+  // Google corta el título cerca de los 60 caracteres: si no cabe, sale el autor y queda título + formato.
+  const corto = t.split(":")[0];
+  const titulo = [`${t} - ${at} | ${cola}`, `${corto} - ${at} | ${cola}`, `${t} | ${cola}`, `${corto} | ${cola}`].find(s => s.length <= 70) || `${corto} | ${cola}`;
+  const sub = { prop: x.sProp(F), ext: x.sExt(F), web: x.sWeb, comprar: x.sComprar }[tipo];
+  const frase = { prop: () => x.dProp(t, a, F, !!l.editorial), ext: () => x.dExt(t, a, F, sitio), web: () => x.dWeb(t, a, sitio), comprar: () => x.dComprar(t, a) }[tipo]();
+  return { tipo, titulo, sub, frase, descargas, propios };
+}
 const textoDelibris = (d, lang) => { const e = ESCALA_DELIBRIS[d.genero] || ESCALA_DELIBRIS.Literatura; return (e[lang] || e.es)[d.valor - 1]; };
 
 const ESTILO = `
@@ -116,6 +157,7 @@ const ESTILO = `
   @media (max-width:640px){.ficha{grid-template-columns:1fr; gap:16px} .ficha img{max-width:130px}}
   .ficha img{width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:var(--chip)}
   h1{font-size:clamp(28px,5vw,38px); line-height:1.15; margin:0 0 8px}
+  h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 system-ui,sans-serif; color:var(--muted)}
   h2{font-size:20px; margin:28px 0 8px}
   .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 14px}
   .botones{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 8px}
@@ -142,8 +184,9 @@ const MEDICION = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/
 function paginaLibro(l){
   const lang = l.idioma, x = TX[lang];
   const resumen = l.resumen[lang] || l.resumen.es;
-  const descripcion = recortar(resumen, 158);
-  const titulo = `${l.titulo} - ${l.autor} | Proyecto Fénix`;
+  const of = oferta(l, lang);
+  const descripcion = recortar(of.frase + " " + resumen, 158);
+  const titulo = of.titulo;
   const img = l.imagen ? abs(l.imagen.src) : SITIO + "img/compartir.jpg";
   const B = l._base || "../../";
   const inicio = B + (lang === "en" ? "?l=en" : "");
@@ -169,8 +212,11 @@ function paginaLibro(l){
         description: resumen,
         image: img,
         url: urlLibro(l),
-        isAccessibleForFree: botones.length > 0 && !(l.comprar || []).length,
-        ...(tieneArchivos ? { workExample: Object.entries(l.archivos).map(([f, u]) => ({ "@type": "Book", bookFormat: "https://schema.org/EBook", encodingFormat: f === "pdf" ? "application/pdf" : "application/epub+zip", url: SITIO + u })) } : {}),
+        isAccessibleForFree: of.tipo !== "comprar",
+        ...(of.tipo === "prop" || of.tipo === "ext" ? { bookFormat: "https://schema.org/EBook", workExample: [
+          ...of.propios.map(f => ({ "@type": "Book", bookFormat: "https://schema.org/EBook", inLanguage: lang, encodingFormat: TIPO_MIME[f], url: SITIO + l.archivos[f], isAccessibleForFree: true })),
+          ...(of.tipo === "ext" ? of.descargas : []).map(e => ({ "@type": "Book", bookFormat: "https://schema.org/EBook", inLanguage: lang, ...(TIPO_MIME[e.formato] ? { encodingFormat: TIPO_MIME[e.formato] } : {}), url: e.url, isAccessibleForFree: true, provider: { "@type": "Organization", name: sitioCorto(e.texto) } }))
+        ] } : {}),
         isPartOf: { "@id": SITIO + "#sitio" }
       },
       {
@@ -218,7 +264,7 @@ ${JSON.stringify(ld, null, 2)}
     <div>${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}</div>
     <div>
       ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
-      <h1>${esc(l.titulo)}</h1>
+      <h1>${esc(l.titulo)}<span class="sub">${esc(of.sub)}</span></h1>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>
       <div class="botones">${botones.join("\n        ")}</div>
       ${tieneArchivos && l.idioma === lang ? `<p class="ayuda">${esc(x.ayuda)}</p>` : ""}
