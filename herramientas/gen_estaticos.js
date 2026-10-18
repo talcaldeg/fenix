@@ -3,7 +3,7 @@
 // El sitio (index.html) arma todo con JavaScript y navega por #hash: Google no indexa un #hash
 // como página aparte, y los rastreadores de IA (GPTBot, ClaudeBot, PerplexityBot) no ejecutan
 // JavaScript, así que sin esto solo verían la portada vacía. Este script deja:
-//   - libro/<id>/index.html: una página por libro, en el idioma del libro, con resumen, citas,
+//   - libro/<id>/index.html: una página por libro, en el idioma del libro, con por qué leerlo, resumen, citas,
 //     descargas, valoración moral, parecidos y datos estructurados (schema.org Book).
 //   - sitemap.xml: la portada y cada libro; lastmod cambia solo si la página cambió.
 //   - llms.txt: el catálogo en texto plano para los sistemas de IA (llmstxt.org).
@@ -59,7 +59,7 @@ const TX = {
     biblioteca: "Biblioteca gratuita", verTodo: "Ver toda la biblioteca", abrir: "Abrir en la biblioteca",
     descargar: "Descargar", enLinea: "Leer en línea", comprar: "Comprar",
     ayuda: "¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.",
-    resumen: "Resumen", citas: "Citas", moral: "Valoración moral", sinDelibris: "Sin valoración en Delibris",
+    porque: "Por qué leerlo", resumen: "Resumen", citas: "Citas", moral: "Valoración moral", sinDelibris: "Sin valoración en Delibris",
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
@@ -70,7 +70,7 @@ const TX = {
     biblioteca: "Free library", verTodo: "See the whole library", abrir: "Open in the library",
     descargar: "Download", enLinea: "Read online", comprar: "Buy",
     ayuda: "Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.",
-    resumen: "Summary", citas: "Quotes", moral: "Moral rating", sinDelibris: "Not rated by Delibris",
+    porque: "Why read it", resumen: "Summary", citas: "Quotes", moral: "Moral rating", sinDelibris: "Not rated by Delibris",
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
@@ -210,6 +210,8 @@ ${JSON.stringify(ld, null, 2)}
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>
       <div class="botones">${botones.join("\n        ")}</div>
       ${tieneArchivos && l.idioma === lang ? `<p class="ayuda">${esc(x.ayuda)}</p>` : ""}
+      ${l.porque ? `<h2>${esc(x.porque)}</h2>
+      <p>${esc(l.porque[lang] || l.porque.es)}</p>` : ""}
       <h2>${esc(x.resumen)}</h2>
       <p>${esc(resumen)}</p>
       ${l.editorial ? `<h2>${esc(x.edFenix)}</h2>\n      <p>${esc(l.editorial[lang] || l.editorial.es)}</p>` : ""}
@@ -266,7 +268,7 @@ const ldInicio = {
       "@id": SITIO + "#sitio",
       url: SITIO,
       name: "Proyecto Fénix",
-      description: "Biblioteca gratuita de clásicos: filosofía, lectura espiritual, oración y novelas para descargar en EPUB y PDF, con resumen, citas y valoración moral.",
+      description: "Clásicos de lectura espiritual y oración escogidos uno a uno, gratis en EPUB y PDF, con por qué leerlo, citas y valoración moral. Todo apunta a una idea: ser para Cristo «como otra humanidad». También reúne novelas, teatro, poesía y ensayo que vale la pena leer.",
       inLanguage: ["es", "en"],
       author: { "@type": "Person", name: "Tomás Alcalde", url: "https://talcaldeg.github.io/" }
     },
@@ -274,7 +276,7 @@ const ldInicio = {
       "@type": "CollectionPage",
       "@id": SITIO + "#catalogo",
       url: SITIO,
-      name: "Proyecto Fénix · Biblioteca gratuita",
+      name: "Proyecto Fénix · Lectura espiritual y oración, gratis y escogida",
       isPartOf: { "@id": SITIO + "#sitio" },
       mainEntity: {
         "@type": "ItemList",
@@ -314,7 +316,7 @@ const ORDEN = ["lectura", "oracion", "novela", "teatro", "poesia", "ensayo"];
 const linea = l => `- [${l.titulo} - ${l.autor} (${l.anio})](${urlLibro(l)}) - ${primeraOracion(l.resumen[l.idioma] || l.resumen.es)}${Object.keys(l.archivos || {}).length ? " Descarga gratuita en " + Object.keys(l.archivos).map(f => f.toUpperCase()).join(" y ") + "." : (l.externos || []).length ? " Se lee gratis en el sitio del titular." : " Protegido por derechos de autor: se enlaza a donde comprarlo."}`;
 const llms = `# Proyecto Fénix
 
-> Biblioteca gratuita en español e inglés de clásicos de filosofía, lectura espiritual, oración y novelas, para descargar en EPUB y PDF o leer en línea. Cada libro trae resumen, citas escogidas, libros parecidos y la valoración moral de delibris.org. Sin publicidad ni registro.
+> Biblioteca gratuita de lectura espiritual y oración escogida, en español e inglés: clásicos para descargar en EPUB y PDF o leer en línea, cada uno con por qué leerlo, resumen, citas, libros parecidos y la valoración moral de delibris.org. Para quien quiere tratar más a Dios y no sabe qué leer; también reúne novelas, teatro, poesía y ensayo que vale la pena leer. Sin publicidad ni registro.
 
 Fénix nació para dar a conocer una idea de la teología espiritual: ser para Cristo «como otra humanidad». Santa Isabel de la Trinidad pidió en 1904 al Espíritu Santo ser para Cristo «una humanidad de añadidura» en la que Él renueve todo Su misterio, y el jesuita Paul de Jaegher la hizo oración al final de «One with Jesus». No se trata de una nueva encarnación: es la vida de la gracia, que nos une a Cristo como miembros de Su Cuerpo (Catecismo, nn. 521 y 1997).
 
