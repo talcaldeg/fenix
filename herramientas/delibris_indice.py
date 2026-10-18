@@ -38,8 +38,13 @@ def normalizar(s):
     return re.sub(r"[^a-z0-9]+", " ", s).strip()
 
 
+ARTICULOS = re.compile(r"^(el|la|los|las|lo|un|una|unos|unas) ")
+
+
 def clave(titulo):
-    n = normalizar(titulo).replace(" ", "")
+    # Sin artículo inicial, para que «El camino» y «La casa» no caigan todos en el mismo trozo.
+    # El catálogo (index.html, claveDelibris) calcula la misma clave.
+    n = ARTICULOS.sub("", normalizar(titulo)).replace(" ", "")
     return (n[:2] or "__").ljust(2, "_")
 
 

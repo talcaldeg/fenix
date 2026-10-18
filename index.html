@@ -1076,7 +1076,7 @@
     .fila{grid-template-columns:44px minmax(0,1fr) auto; gap:4px 12px; padding:12px 14px}
     .fila.cab{display:none}
     .fila .libro-c{grid-column:2; grid-row:1} .fila .marcas-f{grid-column:3; grid-row:1}
-    .fila .etqs{grid-column:2 / 4; grid-row:2} .fila .moral{grid-column:2 / 4; grid-row:3}
+    .fila .etqs{grid-column:2 / 4; grid-row:2} .fila .moral, .fila .moral-obra{grid-column:2 / 4; grid-row:3}
     .fila .mini{grid-row:1 / 4; align-self:start}
     .moral .txt{white-space:normal}
   }
@@ -1112,6 +1112,8 @@
   .ed .mini{width:72px; height:108px; border-radius:6px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
   .ed p{margin:6px 0 10px; font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
   .etq.ed-fenix{color:var(--oro); font-weight:600}
+  .etq.der-libre{color:var(--ok); font-weight:600} .etq.der-protegido, .etq.der-probable{color:var(--vino); font-weight:600}
+  .fila .moral-obra{min-width:0}
   .ayuda{font:14px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 12px; margin:0 0 12px}
 
   .oracion-txt p{margin:0 0 12px}
@@ -1138,6 +1140,7 @@
     <nav class="menu" id="menu">
       <a href="#inicio" data-i18n="nav.inicio">Inicio</a>
       <a href="#biblioteca" data-i18n="nav.biblioteca">Biblioteca</a>
+      <a href="#todos" data-i18n="nav.todos">Todos los libros</a>
       <a href="#editorial" data-i18n="nav.editorial" id="navEditorial">Editorial</a>
       <a href="#plan" data-i18n="nav.plan">Plan de vida</a>
       <a href="#oraciones" data-i18n="nav.oraciones">Oraciones</a>
@@ -1259,6 +1262,24 @@
       <p class="vacio" id="sinResultados" hidden data-i18n="bib.vacio">No hay libros con esos filtros.</p>
       <p class="leyenda-moral"><span data-i18n="bib.leyendaMoral">Valoración moral tomada de</span> <a href="https://delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="bib.leyendaMoral2"> (sitio de reseñas; no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes» y, cuantos menos círculos, más cautela pide la lectura. El nivel de cada libro se explica en su ficha.</span></p>
       <p class="meta" style="margin-top:18px" data-i18n="bib.nota">Leídos, favoritos y su puntuación se guardan solo en este navegador.</p>
+    </div>
+  </section>
+
+  <!-- TODOS LOS LIBROS: catálogo de Open Library en el idioma de la página -->
+  <section class="vista" id="v-todos">
+    <div class="wrap">
+      <p class="eyebrow" data-i18n="todos.eyebrow">Catálogo mundial</p>
+      <h2 data-i18n="todos.titulo">Todos los libros en español</h2>
+      <p class="lede" data-i18n="todos.lede">Busque cualquier libro publicado en español. En su ficha verá la valoración moral de Delibris, si tiene derechos de autor y, si está en Fénix, el botón para descargarlo; si no está, puede pedirnos que lo busquemos.</p>
+      <form class="filtros" id="fTodos" role="search" style="margin-top:18px">
+        <input type="search" id="tBuscar" placeholder="Título, autor o ISBN" data-i18n-ph="todos.buscar" required>
+        <button class="btn prim" type="submit" data-i18n="todos.buscarBtn">Buscar</button>
+      </form>
+      <p class="meta" id="tCuenta"></p>
+      <div class="lista" id="tLista" role="list" hidden></div>
+      <p class="vacio" id="tVacio" hidden></p>
+      <div style="margin-top:14px"><button class="btn" type="button" id="tMas" hidden data-i18n="todos.mas">Ver más resultados</button></div>
+      <p class="leyenda-moral"><span data-i18n="todos.fuentes">Catálogo de</span> <a href="https://openlibrary.org" target="_blank" rel="noopener">Open Library</a><span data-i18n="todos.fuentes2"> (Internet Archive). Valoración moral de</span> <a href="https://www.delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="todos.fuentes3">, que reseña unos 80 mil libros; los demás aparecen sin valoración. Los derechos de autor se estiman por el año de muerte del autor y no reemplazan una revisión caso a caso.</span></p>
     </div>
   </section>
 
@@ -1407,7 +1428,16 @@
   // ---------- textos de la interfaz ----------
   const T = {
     en: {
-      "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions",
+      "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions","nav.todos":"All books",
+      "todos.eyebrow":"World catalogue","todos.titulo":"All books in English","todos.lede":"Search for any book published in English. Its page shows the Delibris moral rating, whether it is under copyright and, if it is in Fénix, the button to download it; if it is not, you can ask us to look for it.",
+      "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":", which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
+      "todos.cuenta":"{n} books found","todos.cuenta1":"1 book found","todos.vacio":"No books found. Try a single word from the title or the author's surname.","todos.error":"The catalogue did not respond. Please try again in a moment.","todos.buscando":"Searching…","todos.edicion":"Edition",
+      "todos.enFenix":"In Fénix","todos.derechos":"Copyright","todos.calculando":"Checking…","todos.verOL":"See in Open Library","todos.verFicha":"See its page in Fénix","todos.buscarDelibris":"Search in delibris.org",
+      "todos.solicitar":"Request this book","todos.solicitarNota":"It is not in Fénix yet. Ask for it: we will look for it, check its rights and, if possible, publish it or tell you where to read it.","todos.solicitarEnviar":"Send request",
+      "der.libre":"Public domain in Chile: {a} died in {m}, more than 70 years ago. If this is a translation or an annotated edition, the translator or editor may hold their own rights, and the term differs elsewhere (80 years in Spain for authors who died before 1987; up to 100 in Mexico).",
+      "der.protegido":"Under copyright: {a} died in {m}; in Chile the work becomes free on 1 January {l}.","der.vivo":"Under copyright: there is no record of the author's death ({a}, born in {b}).",
+      "der.reciente":"Most likely under copyright: first published in {y}.","der.sinDatos":"Not enough data to tell. If you request it, we will check.",
+      "der.etqLibre":"Public domain","der.etqProtegido":"Copyrighted","der.etqProbable":"Probably copyrighted","der.etqSinDatos":"No data",
       "ed.eyebrow":"Our own editions","ed.titulo":"Our editions","ed.lede":"Sometimes finding a book is not enough: it has to be translated from its original language, a transcription has to be checked, or an edition has to be made that reads well on a phone. These are the books prepared by Proyecto Fénix.",
       "ed.proximo":"We are working on new translations. If you would like to help translate or proofread, write to us from Contact.","x.edFenix":"Fénix edition","x.queHicimos":"What we did","x.verLibro":"See the book",
       "x.ayuda":"Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.","x.paginaLibro":"Page of this book (to share)",
@@ -1454,7 +1484,14 @@
       "x.ayuda":"¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
-      "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en"
+      "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en",
+      "todos.cuenta":"{n} libros encontrados","todos.cuenta1":"1 libro encontrado","todos.vacio":"No encontramos libros. Pruebe con una sola palabra del título o con el apellido del autor.","todos.error":"El catálogo no respondió. Inténtelo de nuevo en un momento.","todos.buscando":"Buscando…","todos.edicion":"Edición",
+      "todos.enFenix":"En Fénix","todos.derechos":"Derechos de autor","todos.calculando":"Revisando…","todos.verOL":"Ver en Open Library","todos.verFicha":"Ver su ficha en Fénix","todos.buscarDelibris":"Buscar en delibris.org",
+      "todos.solicitar":"Solicitar este libro","todos.solicitarNota":"Todavía no está en Fénix. Pídalo: lo buscamos, revisamos sus derechos y, si se puede, lo publicamos o le decimos dónde leerlo.","todos.solicitarEnviar":"Enviar solicitud",
+      "der.libre":"Dominio público en Chile: {a} murió en {m}, hace más de 70 años. Si es una traducción o una edición anotada, el traductor o el editor pueden tener derechos propios, y en otros países el plazo cambia (en España, 80 años para autores muertos antes de 1987; en México, hasta 100).",
+      "der.protegido":"Con derechos de autor: {a} murió en {m}; en Chile la obra queda libre el 1 de enero de {l}.","der.vivo":"Con derechos de autor: no hay registro de la muerte del autor ({a}, nacido en {b}).",
+      "der.reciente":"Con derechos de autor, con toda probabilidad: se publicó por primera vez en {y}.","der.sinDatos":"Sin datos suficientes para saberlo. Si lo solicita, lo revisamos.",
+      "der.etqLibre":"Dominio público","der.etqProtegido":"Con derechos","der.etqProbable":"Probablemente con derechos","der.etqSinDatos":"Sin datos"
     }
   };
   const originales = {};
@@ -1523,6 +1560,7 @@
       en: ["The work is incompatible with Catholic doctrine", "Its general approach or central theses are ambiguous or contrary to Church teaching", "Contains doctrinal errors of some weight", "For readers with specific training in the subject", "Requires general knowledge of the subject", "No drawbacks"]
     }
   };
+  ESCALA_DELIBRIS.Espiritualidad = ESCALA_DELIBRIS.Pensamiento; // Delibris la trata como obra de pensamiento
   const textoDelibris = d => { const e = ESCALA_DELIBRIS[d.genero] || ESCALA_DELIBRIS.Literatura; return (e[lang] || e.es)[d.valor - 1]; };
   function moral(l){
     const d = l.delibris;
@@ -1660,7 +1698,164 @@
   }
   $("#cerrarFicha").onclick = () => $("#dlgLibro").close();
   $("#dlgLibro").addEventListener("click", e => { if (e.target.id === "dlgLibro") e.target.close(); });
-  $("#dlgLibro").addEventListener("close", () => { if (location.hash.startsWith("#libro/")) history.replaceState(null, "", "#" + (ultimaVista || "biblioteca")); });
+  $("#dlgLibro").addEventListener("close", () => { if (/^#(libro|obra)\//.test(location.hash)) history.replaceState(null, "", "#" + (ultimaVista || "biblioteca")); });
+
+  // ---------- todos los libros (Open Library) ----------
+  // Busca en Open Library las obras con edición en el idioma de la página y muestra el título de
+  // esa edición. La valoración moral sale del índice propio de Delibris (delibris/<clave>.json,
+  // armado por herramientas/delibris_indice.py, porque delibris.org no deja consultarse desde otro
+  // sitio) y los derechos de autor se estiman por el año de muerte del autor.
+  const OL = "https://openlibrary.org";
+  const CAMPOS = "key,title,author_name,author_key,first_publish_year,cover_i,editions,editions.title,editions.cover_i,editions.publisher,editions.publish_date,editions.isbn";
+  const codigoOL = () => lang === "es" ? "spa" : "eng";
+  const norm = s => String(s || "").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "").replace(/[^a-z0-9]+/g, " ").trim();
+  const sinArticulo = s => s.replace(/^(el|la|los|las|lo|un|una|unos|unas|the|a|an) /, "");
+  const corto = s => sinArticulo(norm(String(s || "").split(/[:.(\[]/)[0]));
+  // Misma clave que herramientas/delibris_indice.py (dos letras del título sin artículo inicial).
+  const claveDelibris = ti => (norm(ti).replace(/^(el|la|los|las|lo|un|una|unos|unas) /, "").replace(/ /g, "").slice(0, 2) || "__").padEnd(2, "_");
+  const palabras = autores => new Set(autores.flatMap(a => norm(a).split(" ")).filter(w => w.length >= 4));
+  const cruzan = (a, b) => { const pa = palabras(a); return [...palabras(b)].some(w => pa.has(w)); };
+  const obras = {};   // obra de Open Library ya vista, por id (OL...W)
+  const trozos = {};  // trozos del índice de Delibris ya bajados
+
+  function datosObra(d){
+    const ed = ((d.editions || {}).docs || [])[0] || {};
+    return { id: d.key.split("/").pop(), titulo: ed.title || d.title, original: d.title, autores: d.author_name || [], claves: d.author_key || [],
+      anio: d.first_publish_year, portada: ed.cover_i || d.cover_i, editorial: (ed.publisher || [])[0], fecha: (ed.publish_date || [])[0], isbn: (ed.isbn || [])[0] };
+  }
+  const trozoDelibris = k => trozos[k] || (trozos[k] = fetch(`delibris/${k}.json`).then(r => r.ok ? r.json() : []).catch(() => []));
+  async function valoracionDelibris(o){
+    const f = libroFenix(o);
+    if (f) return f.delibris || null;
+    for (const ti of new Set([o.titulo, o.original])){
+      const lista = await trozoDelibris(claveDelibris(ti));
+      const c = corto(ti);
+      const d = lista.find(x => corto(x.t) === c && (!o.autores.length || cruzan(x.a, o.autores)));
+      if (d) return { valor: d.v, genero: d.g, url: d.u };
+    }
+    return null;
+  }
+  // El libro está en Fénix si coinciden el título (sin subtítulo ni artículo) y algún apellido.
+  const libroFenix = o => libros().find(l => [o.titulo, o.original].some(ti => corto(ti) === corto(l.titulo)) && cruzan([l.autor], o.autores));
+
+  // Derechos de autor por la regla chilena (Ley 17.336): vida del autor y 70 años desde su muerte.
+  const anioDe = s => { const m = String(s || "").match(/(\d{3,4})(?!.*\d{3,4})/); return m ? +m[1] : null; };
+  async function derechos(o){
+    const hoy = new Date().getFullYear();
+    const autores = await Promise.all(o.claves.slice(0, 3).map(k => fetch(`${OL}/authors/${k}.json`).then(r => r.json()).catch(() => ({}))));
+    const vivos = autores.filter(a => !anioDe(a.death_date) && anioDe(a.birth_date) > hoy - 110);
+    const muertes = autores.map(a => anioDe(a.death_date)).filter(Boolean);
+    const nombre = a => a.name || o.autores[0] || "";
+    if (vivos.length) return { tipo: "protegido", etq: "der.etqProtegido", txt: t("der.vivo").replace("{a}", nombre(vivos[0])).replace("{b}", anioDe(vivos[0].birth_date)) };
+    if (autores.length && muertes.length === autores.length){
+      const m = Math.max(...muertes), a = autores.find(x => anioDe(x.death_date) === m);
+      if (m + 70 < hoy) return { tipo: "libre", etq: "der.etqLibre", txt: t("der.libre").replace("{a}", nombre(a)).replace("{m}", m) };
+      return { tipo: "protegido", etq: "der.etqProtegido", txt: t("der.protegido").replace("{a}", nombre(a)).replace("{m}", m).replace("{l}", m + 71) };
+    }
+    if (o.anio && o.anio > hoy - 70) return { tipo: "probable", etq: "der.etqProbable", txt: t("der.reciente").replace("{y}", o.anio) };
+    return { tipo: "sinDatos", etq: "der.etqSinDatos", txt: t("der.sinDatos") };
+  }
+
+  const tapa = o => o.portada ? ` style="background-image:url('https://covers.openlibrary.org/b/id/${encodeURIComponent(o.portada)}-M.jpg')"` : "";
+  function filaObra(o){
+    const f = libroFenix(o);
+    const ed = [o.editorial, o.fecha].filter(Boolean).join(", ");
+    return `<div class="fila" role="listitem" data-obra="${esc(o.id)}" tabindex="0"><span class="mini"${tapa(o)}></span>
+      <div class="libro-c"><div class="tt"><a href="#obra/${esc(o.id)}">${esc(o.titulo)}</a></div><div class="au">${esc(o.autores.slice(0, 2).join(", "))}${o.anio ? " · " + esc(o.anio) : ""}</div></div>
+      <div class="etqs">${ed ? `<span>${esc(ed)}</span>` : ""}${f ? `<span class="etq ed-fenix">${esc(t("todos.enFenix"))}</span>` : ""}</div>
+      <span class="moral-obra" data-obra="${esc(o.id)}">${moral({})}</span><div class="marcas-f"><span class="ir" aria-hidden="true">›</span></div></div>`;
+  }
+  let busqueda = { q: "", pagina: 1, total: 0 };
+  async function buscarObras(mas){
+    const q = $("#tBuscar").value.trim(); if (!q) return;
+    if (!mas) busqueda = { q, pagina: 1, total: 0, idioma: lang };
+    else busqueda.pagina++;
+    $("#tVacio").hidden = true; $("#tMas").hidden = true;
+    if (!mas){ $("#tLista").hidden = true; $("#tLista").innerHTML = ""; }
+    $("#tCuenta").textContent = t("todos.buscando");
+    try{
+      const url = `${OL}/search.json?q=${encodeURIComponent(q + " language:" + codigoOL())}&fields=${CAMPOS}&limit=20&page=${busqueda.pagina}`;
+      const r = await fetch(url); if (!r.ok) throw new Error(r.status);
+      const j = await r.json();
+      busqueda.total = j.numFound || 0;
+      const nuevas = (j.docs || []).map(datosObra);
+      nuevas.forEach(o => obras[o.id] = o);
+      $("#tCuenta").textContent = busqueda.total === 1 ? t("todos.cuenta1") : t("todos.cuenta").replace("{n}", busqueda.total.toLocaleString(lang === "es" ? "es-CL" : "en-GB"));
+      if (!busqueda.total){ $("#tVacio").textContent = t("todos.vacio"); $("#tVacio").hidden = false; return; }
+      if (!mas) $("#tLista").innerHTML = `<div class="fila cab" aria-hidden="true"><span></span><span>${esc(t("l.libro"))}</span><span>${esc(t("todos.edicion"))}</span><span>${esc(t("l.moral"))}</span><span></span></div>`;
+      $("#tLista").insertAdjacentHTML("beforeend", nuevas.map(filaObra).join(""));
+      $("#tLista").hidden = false;
+      $("#tMas").hidden = busqueda.pagina * 20 >= busqueda.total;
+      nuevas.forEach(async o => { const d = await valoracionDelibris(o); const el = $(`.moral-obra[data-obra="${o.id}"]`); if (el) el.innerHTML = moral({ delibris: d }); });
+    }catch(err){
+      $("#tCuenta").textContent = ""; $("#tVacio").textContent = t("todos.error"); $("#tVacio").hidden = false;
+      if (mas) busqueda.pagina--;
+    }
+  }
+  $("#fTodos").addEventListener("submit", e => { e.preventDefault(); buscarObras(false); });
+  $("#tMas").addEventListener("click", () => buscarObras(true));
+  document.addEventListener("click", e => { const a = e.target.closest(".fila[data-obra]"); if (a){ e.preventDefault(); location.hash = "obra/" + a.dataset.obra; } });
+  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".fila[data-obra]"); if (a && e.key === "Enter") location.hash = "obra/" + a.dataset.obra; });
+
+  async function abrirObra(id){
+    let o = obras[id];
+    const dlg = $("#dlgLibro");
+    if (!o){
+      // Enlace directo a una obra: se pide a Open Library solo esa.
+      $("#fichaCuerpo").innerHTML = `<p class="vacio" style="padding:22px">${esc(t("todos.buscando"))}</p>`;
+      if (!dlg.open) dlg.showModal();
+      try{
+        const j = await fetch(`${OL}/search.json?q=${encodeURIComponent(`key:/works/${id} language:${codigoOL()}`)}&fields=${CAMPOS}`).then(r => r.json());
+        if (!(j.docs || []).length) throw new Error("sin obra");
+        o = obras[id] = datosObra(j.docs[0]);
+      }catch(err){ $("#fichaCuerpo").innerHTML = `<p class="vacio" style="padding:22px">${esc(t("todos.error"))}</p>`; return; }
+    }
+    const f = libroFenix(o);
+    const archivos = f ? Object.entries(archivosEn(f)) : [];
+    const externos = f ? externosEn(f) : [];
+    const acciones = (archivos.length || externos.length)
+      ? [...archivos.map(([fm, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${fm.toUpperCase()}</a>`),
+         ...externos.map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
+         `<a class="btn" href="#libro/${esc(f.id)}">${esc(t("todos.verFicha"))}</a>`].join("")
+      : `<button class="btn prim" type="button" id="btnSolicitar">${esc(t("todos.solicitar"))}</button>`;
+    const portadaObra = o.portada
+      ? `<div class="portada img"${tapa(o)} role="img" aria-label="${esc(o.titulo)}"><div class="t">${esc(o.titulo)}</div><div class="a">${esc(o.autores[0] || "")}</div></div>`
+      : `<div class="portada"><div class="t">${esc(o.titulo)}</div><div class="f">✠</div><div class="a">${esc(o.autores[0] || "")}</div></div>`;
+    $("#fichaCuerpo").innerHTML = `<div class="ficha">${portadaObra}<div>
+      <h3 style="font-size:22px">${esc(o.titulo)}</h3>
+      <p class="meta">${esc(o.autores.slice(0, 3).join(", "))}${o.anio ? " · " + esc(o.anio) : ""}</p>
+      ${o.editorial || o.isbn ? `<p class="meta" style="margin-top:4px">${esc(t("todos.edicion"))}: ${esc([o.editorial, o.fecha, o.isbn ? "ISBN " + o.isbn : ""].filter(Boolean).join(" · "))}</p>` : ""}
+      <div class="descargas">${acciones}</div>
+      ${archivos.length ? `<p class="ayuda">${esc(t("x.ayuda"))}</p>` : ""}
+      <form class="formulario" id="formSolicitar" data-asunto="Fénix - solicitud de libro" hidden>
+        <p class="ayuda" style="margin:0">${esc(t("todos.solicitarNota"))}</p>
+        <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off">
+        <input type="hidden" name="titulo" value="${esc(o.titulo)}"><input type="hidden" name="autor" value="${esc(o.autores.join(", "))}">
+        <input type="hidden" name="open_library" value="${esc(OL + "/works/" + o.id)}">${o.isbn ? `<input type="hidden" name="isbn" value="${esc(o.isbn)}">` : ""}
+        <label><span>${esc(t("f.porque"))}</span><textarea name="motivo"></textarea></label>
+        <label><span>${esc(t("f.correoOpc"))}</span><input type="email" name="email"></label>
+        <button class="btn prim" type="submit">${esc(t("todos.solicitarEnviar"))}</button>
+        <div class="estado" role="status"></div>
+      </form>
+      <div class="seccion-ficha"><strong>${esc(t("l.moral"))}</strong><div style="margin-top:8px" id="obraMoral">${esc(t("todos.calculando"))}</div></div>
+      <div class="seccion-ficha"><strong>${esc(t("todos.derechos"))}</strong><p style="margin:6px 0 0" id="obraDerechos">${esc(t("todos.calculando"))}</p></div>
+      <p class="meta" style="margin-top:14px"><a href="${esc(OL + "/works/" + o.id)}" target="_blank" rel="noopener">${esc(t("todos.verOL"))}</a></p>
+    </div></div>`;
+    const sol = $("#btnSolicitar");
+    if (sol) sol.onclick = () => { $("#formSolicitar").hidden = false; sol.hidden = true; $("#formSolicitar textarea").focus(); };
+    $("#formSolicitar").addEventListener("submit", e => { e.preventDefault(); enviarFormulario(e.target); });
+    if (!dlg.open) dlg.showModal();
+    valoracionDelibris(o).then(d => {
+      const el = $("#obraMoral"); if (!el || obras[id] !== o) return;
+      el.innerHTML = moral({ delibris: d }) + (d
+        ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(d.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>`
+        : `<a class="meta" style="margin:4px 0 0; display:inline-block" href="https://www.delibris.org/es/advanced-search?combine=${encodeURIComponent(o.titulo)}" target="_blank" rel="noopener">${esc(t("todos.buscarDelibris"))}</a>`);
+    });
+    derechos(o).then(d => {
+      const el = $("#obraDerechos"); if (!el) return;
+      el.innerHTML = `<span class="etq der-${d.tipo}">${esc(t(d.etq))}</span> ${esc(d.txt)}`;
+    });
+  }
 
   // ---------- oraciones ----------
   const idiomaOracion = {};
@@ -1704,8 +1899,8 @@
   function llenarSelectLibros(){
     $("#selLibroError").innerHTML = libros().map(l => `<option>${esc(l.titulo)} - ${esc(l.autor)}</option>`).join("");
   }
-  $$("form.formulario").forEach(f => f.addEventListener("submit", async e => {
-    e.preventDefault();
+  $$("form.formulario").forEach(f => f.addEventListener("submit", e => { e.preventDefault(); enviarFormulario(f); }));
+  async function enviarFormulario(f){
     const estado = $(".estado", f), boton = $("button[type=submit]", f);
     if (f._honey.value) return;
     const datos = Object.fromEntries(new FormData(f));
@@ -1723,20 +1918,24 @@
     }catch(err){
       estado.className = "estado err"; estado.textContent = t("x.fallo");
     }finally{ boton.disabled = false; }
-  }));
+  }
 
   // ---------- donar ----------
   if (D.contacto.donar){ $("#btnDonar").href = D.contacto.donar; $("#donarPendiente").hidden = true; }
   else $("#btnDonar").hidden = true; // un botón que no hace nada confunde: sin enlace, solo el aviso
 
   // ---------- rutas ----------
-  const VISTAS = ["inicio","biblioteca","editorial","plan","oraciones","salvar","error","dona","contacto"];
+  const VISTAS = ["inicio","biblioteca","todos","editorial","plan","oraciones","salvar","error","dona","contacto"];
   let ultimaVista = "inicio";
   function ruta(){
     const h = location.hash.replace(/^#/, "");
     if (h.startsWith("libro/")){
       if (!$(".vista.on")) mostrar("biblioteca");
       abrirFicha(h.slice(6)); return;
+    }
+    if (h.startsWith("obra/")){
+      if (!$(".vista.on")) mostrar("todos");
+      abrirObra(h.slice(5)); return;
     }
     if ($("#dlgLibro").open) $("#dlgLibro").close();
     if (h === "otra-humanidad"){ mostrar("inicio"); setTimeout(() => $("#otra-humanidad").scrollIntoView(), 0); return; }
@@ -1754,7 +1953,9 @@
   window.addEventListener("hashchange", ruta);
 
   $("#fechaCatalogo").textContent = D.actualizado || "";
-  function pintarTodo(){ pintarInicio(); pintarRecomendados(); pintarCatalogo(); pintarEditorial(); pintarPlan(); pintarOraciones(); llenarSelectLibros(); }
+  // Al cambiar de idioma, los resultados del catálogo mundial eran del otro idioma: se rehace la búsqueda.
+  function pintarTodos(){ if (busqueda.q && busqueda.idioma !== lang){ $("#tBuscar").value = busqueda.q; buscarObras(false); } }
+  function pintarTodo(){ pintarInicio(); pintarTodos(); pintarRecomendados(); pintarCatalogo(); pintarEditorial(); pintarPlan(); pintarOraciones(); llenarSelectLibros(); }
   aplicarIdioma();
   ruta();
 })();
