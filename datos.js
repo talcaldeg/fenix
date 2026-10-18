@@ -4,6 +4,12 @@
 //   idioma del enlace si difiere del libro (el sitio en español no muestra nada en inglés y viceversa)
 //   (así van las obras protegidas de san Josemaría, que la Fundación Studium publica en escriva.org).
 // - comprar: si no hay descarga libre.
+// - Una obra es UNA ficha (regla dura). Antes de agregar un libro, buscarlo por título y autor en
+//   este archivo y correr `node herramientas/revisar_duplicados.js` (gen_estaticos.js también lo corre
+//   y se detiene si hay duplicados). Otra traducción o idioma va en `versiones` de la misma ficha:
+//   versiones: { en: { titulo, autor, anio, resumen, citas, archivos, externos, comprar, fuente,
+//   imagen, editorial, parecidos } }; solo lo que cambia (editorial: null si esa versión no es de
+//   Fénix). Cada sitio muestra la versión de su idioma. Una ficha que se fusiona deja su id en `alias`.
 // - delibris: valoración moral de delibris.org, de 1 a 6 (6 = «Sin inconvenientes»); el texto de
 //   cada nivel según el género (Literatura o Pensamiento) está en index.html. null = no está en Delibris.
 // - citas: textuales, cotejadas con el texto del libro.
@@ -75,28 +81,6 @@ window.FENIX = {
     },
     {
       id: "imitacion-de-cristo",
-      titulo: "The Imitation of Christ",
-      autor: "Tomás de Kempis",
-      anio: "c. 1418",
-      idioma: "en",
-      categoria: "lectura",
-      recomendado: true,
-      resumen: {
-        es: "El clásico de la devoción moderna, en cuatro libros: consejos para la vida espiritual, la vida interior, el consuelo interior en diálogo con Cristo y el Santísimo Sacramento. Frases cortas, directas, para leer de a poco y volver a ellas toda la vida.",
-        en: "The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Short, direct sentences, to be read slowly and returned to for a lifetime."
-      },
-      imagen: { src: "img/portadas/imitacion-de-cristo.jpg", credito: { es: "El Greco, «Cristo con la cruz», c. 1590", en: "El Greco, «Christ Carrying the Cross», c. 1590" }, url: "https://commons.wikimedia.org/wiki/File:El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg" },
-      citas: [
-        "At the Day of Judgment it will be demanded of us, not what we have read, but what we have done; not how well we have spoken, but how holily we have lived.",
-        "For man proposeth, but God disposeth."
-      ],
-      archivos: { epub: "libros/kempis-imitation-of-christ.epub", pdf: "libros/kempis-imitation-of-christ.pdf" },
-      fuente: { texto: "Project Gutenberg, libro n.º 1653 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1653" },
-      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
-      parecidos: ["confesiones", "marmion-vida-del-alma", "presencia-de-dios"]
-    },
-    {
-      id: "imitacion-de-cristo-granada",
       titulo: "Imitación de Cristo o menosprecio del mundo",
       autor: "Tomás de Kempis (trad. fray Luis de Granada)",
       anio: "c. 1418",
@@ -116,32 +100,28 @@ window.FENIX = {
       fuente: { texto: "Transcripción de 2009 de la edición de 1817, en Internet Archive (dominio público); sin las notas al pie del transcriptor, con nota y portada de Proyecto Fénix", url: "https://archive.org/details/imitacion-de-cristo-de-fray-luis-de-granada" },
       editorial: { es: "Edición digital de Proyecto Fénix sobre la impresión de 1817, a partir de una transcripción de 2009: sin las notas al pie del transcriptor, con una nota de la edición y portada nueva.", en: "Proyecto Fénix digital edition of the 1817 printing, from a 2009 transcription: without the transcriber's footnotes, with an edition note and a new cover." },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
-      parecidos: ["marmion-vida-del-alma", "escriva-amigos-de-dios", "para-mi-vivir-es-cristo"]
+      parecidos: ["marmion-vida-del-alma", "escriva-amigos-de-dios", "para-mi-vivir-es-cristo"],
+      versiones: {
+        en: {
+          titulo: "The Imitation of Christ",
+          autor: "Tomás de Kempis",
+          resumen: {
+            es: "El clásico de la devoción moderna, en cuatro libros: consejos para la vida espiritual, la vida interior, el consuelo interior en diálogo con Cristo y el Santísimo Sacramento. Frases cortas, directas, para leer de a poco y volver a ellas toda la vida.",
+            en: "The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Short, direct sentences, to be read slowly and returned to for a lifetime."
+          },
+          citas: [
+            "At the Day of Judgment it will be demanded of us, not what we have read, but what we have done; not how well we have spoken, but how holily we have lived.",
+            "For man proposeth, but God disposeth."
+          ],
+          archivos: { epub: "libros/kempis-imitation-of-christ.epub", pdf: "libros/kempis-imitation-of-christ.pdf" },
+          fuente: { texto: "Project Gutenberg, libro n.º 1653 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1653" },
+          editorial: null,
+          parecidos: ["confesiones", "marmion-vida-del-alma", "presencia-de-dios"]
+        }
+      }
     },
     {
       id: "confesiones",
-      titulo: "The Confessions of St. Augustine",
-      autor: "San Agustín de Hipona",
-      anio: "c. 400",
-      idioma: "en",
-      categoria: "lectura",
-      recomendado: false,
-      resumen: {
-        es: "La historia de una conversión contada como oración: Agustín repasa ante Dios su infancia, su juventud desordenada, su búsqueda intelectual y el encuentro con la gracia en Milán, y termina meditando sobre la memoria, el tiempo y la creación. Traducción inglesa de E. B. Pusey.",
-        en: "The story of a conversion told as a prayer: Augustine reviews before God his childhood, his disordered youth, his intellectual search and his encounter with grace in Milan, and ends by meditating on memory, time and creation. English translation by E. B. Pusey."
-      },
-      imagen: { src: "img/portadas/confesiones.jpg", credito: { es: "Sandro Botticelli, «San Agustín en su estudio», c. 1480", en: "Sandro Botticelli, «Saint Augustine in His Study», c. 1480" }, url: "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_St_Augustine_-_WGA02709.jpg" },
-      citas: [
-        "Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
-        "Too late loved I Thee, O Thou Beauty of ancient days, yet ever new! too late I loved Thee!"
-      ],
-      archivos: { epub: "libros/agustin-confessions.epub", pdf: "libros/agustin-confessions.pdf" },
-      fuente: { texto: "Project Gutenberg, libro n.º 3296 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/3296" },
-      delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/confesiones" },
-      parecidos: ["imitacion-de-cristo", "ortodoxia", "presencia-de-dios"]
-    },
-    {
-      id: "confesiones-es",
       titulo: "Confesiones",
       autor: "San Agustín de Hipona",
       anio: "c. 400",
@@ -162,7 +142,25 @@ window.FENIX = {
       editorial: { es: "Traducción nueva de Proyecto Fénix desde el latín, de los trece libros, cotejada con la traducción inglesa de Pusey y revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición y portada nueva.", en: "A new Proyecto Fénix translation from the Latin of all thirteen books, checked against Pusey's English translation and reviewed in its doctrinal passages against the Catechism; prepared with the help of artificial intelligence, with an edition note and a new cover." },
       fuente: { texto: "Traducción de Proyecto Fénix desde el latín (edición de J. J. O'Donnell en The Latin Library), cotejada con la traducción inglesa de E. B. Pusey; licencia CC BY-NC-SA 4.0", url: "https://www.thelatinlibrary.com/augustine.html" },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/confesiones" },
-      parecidos: ["historia-de-un-alma", "imitacion-de-cristo-granada", "marmion-vida-del-alma"]
+      parecidos: ["historia-de-un-alma", "imitacion-de-cristo", "marmion-vida-del-alma"],
+      versiones: {
+        en: {
+          titulo: "The Confessions of St. Augustine",
+          resumen: {
+            es: "La historia de una conversión contada como oración: Agustín repasa ante Dios su infancia, su juventud desordenada, su búsqueda intelectual y el encuentro con la gracia en Milán, y termina meditando sobre la memoria, el tiempo y la creación. Traducción inglesa de E. B. Pusey.",
+            en: "The story of a conversion told as a prayer: Augustine reviews before God his childhood, his disordered youth, his intellectual search and his encounter with grace in Milan, and ends by meditating on memory, time and creation. English translation by E. B. Pusey."
+          },
+          imagen: { src: "img/portadas/confesiones.jpg", credito: { es: "Sandro Botticelli, «San Agustín en su estudio», c. 1480", en: "Sandro Botticelli, «Saint Augustine in His Study», c. 1480" }, url: "https://commons.wikimedia.org/wiki/File:Sandro_Botticelli_-_St_Augustine_-_WGA02709.jpg" },
+          citas: [
+            "Thou madest us for Thyself, and our heart is restless, until it repose in Thee.",
+            "Too late loved I Thee, O Thou Beauty of ancient days, yet ever new! too late I loved Thee!"
+          ],
+          archivos: { epub: "libros/agustin-confessions.epub", pdf: "libros/agustin-confessions.pdf" },
+          fuente: { texto: "Project Gutenberg, libro n.º 3296 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/3296" },
+          editorial: null,
+          parecidos: ["imitacion-de-cristo", "ortodoxia", "presencia-de-dios"]
+        }
+      }
     },
     {
       id: "historia-de-un-alma",
@@ -187,7 +185,7 @@ window.FENIX = {
       editorial: { es: "Traducción nueva de Proyecto Fénix desde el francés de la edición de 1912, con sus notas, revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición y portada nueva.", en: "A new Proyecto Fénix translation from the French of the 1912 edition, with its notes, reviewed in its doctrinal passages against the Catechism; prepared with the help of artificial intelligence, with an edition note and a new cover." },
       fuente: { texto: "Traducción de Proyecto Fénix desde el francés de la edición de 1912 del Carmelo de Lisieux (Project Gutenberg, libro n.º 36708); licencia CC BY-NC-SA 4.0", url: "https://www.gutenberg.org/ebooks/36708" },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://www.delibris.org/es/historia-de-un-alma-0" },
-      parecidos: ["confesiones-es", "marmion-vida-del-alma", "imitacion-de-cristo-granada"]
+      parecidos: ["confesiones", "marmion-vida-del-alma", "imitacion-de-cristo"]
     },
     {
       id: "presencia-de-dios",
@@ -485,9 +483,19 @@ window.FENIX = {
       },
       citas: ["Hijos míos, lo extraordinario nuestro es lo ordinario: lo ordinario hecho con perfección."],
       archivos: {},
-      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/cartas-1/" }],
+      // opusdei.org publica cada carta por separado en EPUB y PDF (edición de Luis Cano, © Scriptor y Fundación Studium).
+      externos: [
+        { formato: "epub", idioma: "es", texto: "Carta 1 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/Singuli%20dies20240511170204015700.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 1 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Singuli-dies-cristiano%20vida%20corriente-opusdei20240511170226271129.pdf" },
+        { formato: "epub", idioma: "es", texto: "Carta 2 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/Carta%202%20de%20San%20Josemar%C3%ADa20230816092931794913.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 2 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Carta%20Josemaria%20Escriva%20Humildad20221114095438261613.pdf" },
+        { formato: "epub", idioma: "es", texto: "Carta 3 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/carta3sjme%20-%20Josemaria%20Escriva%20de%20Balaguer20220107144802012927.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 3 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Carta%20sanJosemaria%20cristiano%20vida%20social20220117131850319581.pdf" },
+        { formato: "epub", idioma: "es", texto: "Carta 4 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/Vos_autem20221222115955175662.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 4 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/San%20Josemaria%20caridad%20transmision%20fe20221222120015808915.pdf" }
+      ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
-      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-1/" },
+      fuente: { texto: "Cada carta en EPUB y PDF en opusdei.org, edición de Luis Cano (© Scriptor y Fundación Studium; obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/santidad-cristianos-vida-corriente/" },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/cartas-i-edicion-critico-historica" },
       parecidos: ["escriva-cartas-2", "escriva-carta-29", "escriva-es-cristo-que-pasa"]
     },
@@ -506,9 +514,19 @@ window.FENIX = {
       },
       citas: ["Solo cuando los hombres se acostumbren a decir y a oír la verdad, habrá comprensión y concordia."],
       archivos: {},
-      externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/cartas-2/" }],
+      // opusdei.org publica cada carta por separado en EPUB y PDF (edición de Luis Cano, © Scriptor y Fundación Studium).
+      externos: [
+        { formato: "epub", idioma: "es", texto: "Carta 5 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/Carta%20sobre%20la%20misio%CC%81n%20de%20los%20cristianos%20laicos%20en%20la%20educacio%CC%81n20250108113317774604.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 5 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Carta%20sobre%20la%20misio%CC%81n%20de%20los%20cristianos%20laicos%20en%20la%20educacio%CC%81n20250108113340502737.pdf" },
+        { formato: "epub", idioma: "es", texto: "Carta 6 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/Algunos_rasgos_del_espiritu_del_opus_dei20231216102204875211.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 6 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Algunos_rasgos_del_espiritu_del_opus_dei20231216102226482656.pdf" },
+        { formato: "epub", idioma: "es", texto: "Carta 7 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/Quem%20per%20annos-labor-san-rafael-opusdei20241022084726105905.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 7 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Quem-per-annos-labor-san-rafael-opusdei20241022084745609234.pdf" },
+        { formato: "epub", idioma: "es", texto: "Carta 8 · opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/sobre-el-espiritu-de-servicio-a-la-iglesia20250430190014520448.epub" },
+        { formato: "pdf", idioma: "es", texto: "Carta 8 · opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/sobre-el-espiritu-de-servicio-a-la-iglesia20250430185942125318.pdf" }
+      ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
-      fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-2/" },
+      fuente: { texto: "Cada carta en EPUB y PDF en opusdei.org, edición de Luis Cano (© Scriptor y Fundación Studium; obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/carta-san-josemaria-mision-cristianos-educacion/" },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/cartas-ii-edicion-critico-historica" },
       parecidos: ["escriva-cartas-1", "escriva-carta-29", "escriva-amar-a-la-iglesia"]
     },
@@ -694,29 +712,26 @@ window.FENIX = {
       fuente: { texto: "Obras completas de Platón, tomo I (Madrid, 1871), transcritas en es.wikisource.org (dominio público); edición digital y portada de Proyecto Fénix", url: "https://es.wikisource.org/wiki/Apolog%C3%ADa_de_S%C3%B3crates_(de_Azc%C3%A1rate_tr.)" },
       editorial: { es: "Edición digital de Proyecto Fénix sobre la traducción de Patricio de Azcárate (1871), transcrita en Wikisource: conserva la ortografía de la época, el argumento y las notas del traductor, con portada nueva.", en: "Proyecto Fénix digital edition of Patricio de Azcárate's translation (1871), transcribed on Wikisource: it keeps the spelling of the time and the translator's introduction and notes, with a new cover." },
       delibris: null,
-      parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo-granada"]
-    },
-    {
-      id: "apology-of-socrates",
-      titulo: "Apology",
-      autor: "Plato (trans. Benjamin Jowett)",
-      anio: "c. 390 BC",
-      idioma: "en",
-      categoria: "ensayo",
-      recomendado: false,
-      resumen: {
-        es: "La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. C., acusado de corromper a los jóvenes y de no creer en los dioses de la ciudad. Platón, que estuvo presente, la reconstruye en tres discursos: la defensa, la propuesta de pena tras el veredicto de culpa y las palabras finales después de la condena a muerte. Traducción inglesa de Benjamin Jowett.",
-        en: "Socrates' defence before the court of Athens in 399 BC, accused of corrupting the young and of not believing in the city's gods. Plato, who was present, reconstructs it in three speeches: the defence, the proposal of a penalty after the guilty verdict, and the final words after the death sentence. Socrates prefers to die rather than stop seeking the truth and serving what he understands as a divine command. English translation by Benjamin Jowett."
-      },
-      imagen: { src: "img/portadas/apologia-de-socrates.jpg", credito: { es: "Jacques-Louis David, «La muerte de Sócrates», 1787", en: "Jacques-Louis David, «The Death of Socrates», 1787" }, url: "https://commons.wikimedia.org/wiki/File:David_-_The_Death_of_Socrates.jpg" },
-      citas: [
-        "The unexamined life is not worth living.",
-        "The hour of departure has arrived, and we go our ways—I to die, and you to live. Which is better God only knows."
-      ],
-      archivos: { epub: "libros/platon-apology.epub", pdf: "libros/platon-apology.pdf" },
-      fuente: { texto: "Project Gutenberg, libro n.º 1656 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1656" },
-      delibris: null,
-      parecidos: ["ortodoxia", "confesiones", "quo-vadis"]
+      parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo"],
+      versiones: {
+        en: {
+          titulo: "Apology",
+          autor: "Plato (trans. Benjamin Jowett)",
+          anio: "c. 390 BC",
+          resumen: {
+            es: "La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. C., acusado de corromper a los jóvenes y de no creer en los dioses de la ciudad. Platón, que estuvo presente, la reconstruye en tres discursos: la defensa, la propuesta de pena tras el veredicto de culpa y las palabras finales después de la condena a muerte. Traducción inglesa de Benjamin Jowett.",
+            en: "Socrates' defence before the court of Athens in 399 BC, accused of corrupting the young and of not believing in the city's gods. Plato, who was present, reconstructs it in three speeches: the defence, the proposal of a penalty after the guilty verdict, and the final words after the death sentence. Socrates prefers to die rather than stop seeking the truth and serving what he understands as a divine command. English translation by Benjamin Jowett."
+          },
+          citas: [
+            "The unexamined life is not worth living.",
+            "The hour of departure has arrived, and we go our ways—I to die, and you to live. Which is better God only knows."
+          ],
+          archivos: { epub: "libros/platon-apology.epub", pdf: "libros/platon-apology.pdf" },
+          fuente: { texto: "Project Gutenberg, libro n.º 1656 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1656" },
+          editorial: null,
+          parecidos: ["ortodoxia", "confesiones", "quo-vadis"]
+        }
+      }
     },
     {
       id: "orencio-y-eloisa",
@@ -2628,8 +2643,25 @@ window.FENIX = {
   // (categoria "lectura"), ids de `libros`. Cada sitio muestra solo los de su idioma.
   plan: {
     oracion: ["escriva-camino", "escriva-surco", "escriva-forja", "conocerle-y-conocerte", "presencia-de-dios"],
-    lectura: ["marmion-vida-del-alma", "escriva-es-cristo-que-pasa", "escriva-amigos-de-dios", "imitacion-de-cristo", "imitacion-de-cristo-granada", "one-with-jesus", "confesiones", "ortodoxia"]
+    lectura: ["marmion-vida-del-alma", "escriva-es-cristo-que-pasa", "escriva-amigos-de-dios", "imitacion-de-cristo", "one-with-jesus", "confesiones", "ortodoxia"]
   },
+
+  // Ids de fichas que se fusionaron en otra: el enlace viejo (libro/<id>/ o #libro/<id>) lleva a la
+  // ficha nueva, en la versión del idioma indicado. Leídos y favoritos guardados con el id viejo se conservan.
+  alias: {
+    "imitacion-de-cristo-granada": { id: "imitacion-de-cristo", idioma: "es" },
+    "confesiones-es": { id: "confesiones", idioma: "es" },
+    "apology-of-socrates": { id: "apologia-de-socrates", idioma: "en" }
+  },
+
+  // Fichas que herramientas/revisar_duplicados.js confunde pero son obras distintas, con el porqué.
+  distintos: [
+    { ids: ["apologia-de-socrates", "jenofonte-apologia-de-socrates"], porque: "dos obras: la Apología de Platón y la de Jenofonte" },
+    { ids: ["escriva-cartas-1", "escriva-cartas-2"], porque: "volúmenes distintos: cartas 1 a 4 y cartas 5 a 8" },
+    { ids: ["escriva-cartas-1", "escriva-carta-29"], porque: "la carta 29 no está en el volumen I" },
+    { ids: ["escriva-cartas-2", "escriva-carta-29"], porque: "la carta 29 no está en el volumen II" },
+    { ids: ["perez-galdos-la-corte-de-carlos-iv", "galdos-memorias-cortesano-1815"], porque: "dos Episodios nacionales distintos" }
+  ],
 
   oraciones: [
     {

@@ -31,6 +31,22 @@ const escribirSiCambia = (f, txt) => {
 global.window = {};
 eval(leer("datos.js"));
 const D = window.FENIX;
+
+// Regla dura: una obra, una ficha. Si hay un posible duplicado, no se genera nada.
+const { revisarDuplicados } = require("./revisar_duplicados.js");
+const duplicados = revisarDuplicados(D);
+if (duplicados.length){ console.error("Posibles libros duplicados en datos.js:\n" + duplicados.map(p => "- " + p).join("\n")); process.exit(1); }
+
+// Mismo criterio que enIdioma() de index.html: la versión de otro idioma reemplaza los campos de la
+// ficha y tiene su propia página en libro/<id>/<idioma>/.
+const vista = (l, lang) => {
+  const v = (l.versiones || {})[lang];
+  if (!v || l.idioma === lang) return l;
+  const externos = [...(v.externos || []).map(e => ({ idioma: lang, ...e })), ...(l.externos || []).map(e => ({ idioma: l.idioma, ...e }))];
+  return { ...l, archivos: {}, comprar: [], ...v, idioma: lang, externos, _ruta: `libro/${l.id}/${lang}/`, _base: "../../../" };
+};
+// Todas las páginas de libro: la de cada ficha y la de cada versión.
+const PAGINAS = D.libros.flatMap(l => [l, ...Object.keys(l.versiones || {}).map(k => vista(l, k))]);
 const INDEX = leer("index.html");
 
 // Lo que ya vive en index.html se toma de ahí, para no tener dos copias: favicon y escala de Delibris.
@@ -67,7 +83,7 @@ const abs = src => /^https?:/.test(src) ? src : SITIO + src;
 const porId = id => D.libros.find(l => l.id === id);
 const primeraOracion = r => (String(r || "").match(/^.+?\.(?=\s|$)/) || [r || ""])[0];
 const recortar = (s, n) => s.length <= n ? s : s.slice(0, s.lastIndexOf(" ", n - 1)) + "…";
-const urlLibro = l => SITIO + "libro/" + l.id + "/";
+const urlLibro = l => SITIO + (l._ruta || "libro/" + l.id + "/");
 // Mismo criterio que index.html: cada idioma muestra solo lo suyo.
 const externosEn = (l, lang) => (l.externos || []).filter(e => (e.idioma || l.idioma) === lang);
 const visibleEn = (l, lang) => l.idioma === lang || externosEn(l, lang).length > 0;
@@ -115,14 +131,15 @@ function paginaLibro(l){
   const descripcion = recortar(resumen, 158);
   const titulo = `${l.titulo} - ${l.autor} | Proyecto Fénix`;
   const img = l.imagen ? abs(l.imagen.src) : SITIO + "img/compartir.jpg";
-  const inicio = "../../" + (lang === "en" ? "?l=en" : "");
+  const B = l._base || "../../";
+  const inicio = B + (lang === "en" ? "?l=en" : "");
   const botones = [
-    ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="../../${esc(u)}" download>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
+    ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" download>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
     ...externosEn(l, lang).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
   ];
   const tieneArchivos = Object.keys(l.archivos || {}).length > 0;
-  const parecidos = (l.parecidos || []).map(porId).filter(p => p && visibleEn(p, lang));
+  const parecidos = (l.parecidos || []).map(porId).filter(p => p && visibleEn(vista(p, lang), lang)).map(p => vista(p, lang));
   const d = l.delibris;
   const ld = {
     "@context": "https://schema.org",
@@ -160,7 +177,8 @@ function paginaLibro(l){
 ${FAVICON}
 <meta name="description" content="${esc(descripcion)}">
 <meta name="color-scheme" content="light dark">
-<link rel="canonical" href="${urlLibro(l)}">
+<link rel="canonical" href="${urlLibro(l)}">${Object.keys(porId(l.id).versiones || {}).length ? [porId(l.id), ...Object.keys(porId(l.id).versiones).map(k => vista(porId(l.id), k))].map(p => `
+<link rel="alternate" hreflang="${p.idioma}" href="${urlLibro(p)}">`).join("") : ""}
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="Proyecto Fénix">
 <meta property="og:title" content="${esc(l.titulo + " - " + l.autor)}">
@@ -183,7 +201,7 @@ ${JSON.stringify(ld, null, 2)}
 <header><div class="wrap barra"><a class="marca" href="${inicio}">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></header>
 <main class="wrap">
   <div class="ficha">
-    <div>${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : "../../" + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}</div>
+    <div>${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}</div>
     <div>
       <h1>${esc(l.titulo)}</h1>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>
@@ -196,7 +214,7 @@ ${JSON.stringify(ld, null, 2)}
       <h2>${esc(x.moral)}</h2>
       ${d ? `<p><span class="circ" aria-hidden="true">${[1, 2, 3, 4, 5, 6].map(n => `<i class="${n <= d.valor ? "on" : ""}"></i>`).join("")}</span><strong>${d.valor} ${esc(x.de)} 6</strong>: ${esc(textoDelibris(d, lang))}. <a href="${esc(d.url)}" rel="noopener">${esc(x.verEn)}</a></p>` : `<p>${esc(x.sinDelibris)}</p>`}
       <p class="meta">${esc(x.moralNota)}</p>
-      ${parecidos.length ? `<h2>${esc(x.parecidos)}</h2>\n      <ul class="parecidos">${parecidos.map(p => `<li><a href="../${esc(p.id)}/">${esc(p.titulo)}</a> · ${esc(p.autor)}</li>`).join("")}</ul>` : ""}
+      ${parecidos.length ? `<h2>${esc(x.parecidos)}</h2>\n      <ul class="parecidos">${parecidos.map(p => `<li><a href="${l._ruta ? "../../" : "../"}${esc((vista(p, lang)._ruta || "libro/" + p.id + "/").slice(6))}">${esc(p.titulo)}</a> · ${esc(p.autor)}</li>`).join("")}</ul>` : ""}
       <div class="botones"><a class="btn" href="${inicio}#libro/${esc(l.id)}">${esc(x.abrir)}</a><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
       ${l.fuente ? `<p class="meta">${esc(x.fuente)}: <a href="${esc(l.fuente.url)}" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta">${esc(x.portada)}: <a href="${esc(l.imagen.url)}" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : x.dominio)})</p>` : ""}
@@ -212,9 +230,26 @@ ${SCRIPT_TEMA}
 
 // ---------- páginas de libro ----------
 const cambiadas = new Set();
-for (const l of D.libros) if (escribirSiCambia(`libro/${l.id}/index.html`, paginaLibro(l))) cambiadas.add(urlLibro(l));
+for (const l of PAGINAS) if (escribirSiCambia((l._ruta || `libro/${l.id}/`) + "index.html", paginaLibro(l))) cambiadas.add(urlLibro(l));
+// Fichas fusionadas en otra (alias): su dirección vieja redirige a la página nueva.
+for (const [viejo, a] of Object.entries(D.alias || {})){
+  const destino = vista(porId(a.id), a.idioma || porId(a.id).idioma);
+  const url = urlLibro(destino);
+  escribirSiCambia(`libro/${viejo}/index.html`, `<!doctype html>
+<html lang="${destino.idioma}">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+<title>${esc(destino.titulo)} | Proyecto Fénix</title>
+<link rel="canonical" href="${url}">
+<meta http-equiv="refresh" content="0; url=${url}">
+</head>
+<body><p><a href="${url}">${esc(destino.titulo)}</a></p></body>
+</html>
+`);
+}
 // Libros que salieron del catálogo: se borra su página.
-const ids = new Set(D.libros.map(l => l.id));
+const ids = new Set([...D.libros.map(l => l.id), ...Object.keys(D.alias || {})]);
 const dirLibro = path.join(RAIZ, "libro");
 for (const d of fs.readdirSync(dirLibro)) if (!ids.has(d)) { fs.rmSync(path.join(dirLibro, d), { recursive: true }); console.log("borrada libro/" + d); }
 
@@ -259,7 +294,7 @@ const hoy = new Date().toISOString().slice(0, 10);
 const previo = fs.existsSync(path.join(RAIZ, "sitemap.xml")) ? leer("sitemap.xml") : "";
 const lastmodPrevio = {};
 for (const m of previo.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) lastmodPrevio[m[1]] = m[2];
-const urls = [SITIO, ...D.libros.map(urlLibro)];
+const urls = [SITIO, ...PAGINAS.map(urlLibro)];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>
@@ -283,7 +318,7 @@ Algunos libros son ediciones propias de Proyecto Fénix (traducción, revisión 
 
 Solo se alojan obras de dominio público o con permiso de difusión; las protegidas se enlazan a donde se pueden leer en línea o comprar. Cada libro tiene su propia página, en el idioma del libro.
 
-${ORDEN.map(c => { const xs = D.libros.filter(l => l.categoria === c); return xs.length ? `## ${TX.es.cat[c]}\n\n${xs.map(linea).join("\n")}\n` : ""; }).filter(Boolean).join("\n")}
+${ORDEN.map(c => { const xs = PAGINAS.filter(l => l.categoria === c); return xs.length ? `## ${TX.es.cat[c]}\n\n${xs.map(linea).join("\n")}\n` : ""; }).filter(Boolean).join("\n")}
 ## Sitio
 
 - [Portada y buscador del catálogo](${SITIO}) - biblioteca completa con filtros por categoría y formato, plan de vida (libros para la oración y la lectura espiritual de cada día), oraciones y formularios para proponer un libro o avisar un error.

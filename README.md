@@ -15,6 +15,14 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   llevan un cuadro de dominio público como las demás.
 - `datos.js`: catálogo y oraciones. Un libro nuevo es una ficha más; sus campos están
   comentados arriba del archivo.
+- **Regla dura: una obra, una ficha.** Antes de subir un libro, buscarlo por título y autor en
+  `datos.js` y correr `node herramientas/revisar_duplicados.js`. Otra traducción o idioma de una
+  obra que ya está va en `versiones` de su ficha (cada sitio muestra la versión de su idioma y
+  tiene su página en `libro/<id>/<idioma>/`); una ficha fusionada deja su id en `alias`, que
+  redirige el enlace viejo. Dos obras que el revisor confunde se declaran en `distintos`.
+  `gen_estaticos.js` corre la revisión y no genera nada si hay un duplicado.
+- Antes de enlazar un libro solo para leer en línea, buscar si se descarga en EPUB o PDF en un
+  sitio legal y preferir esa descarga (las Cartas de san Josemaría van a opusdei.org).
 - **Después de cambiar `datos.js`, correr `node herramientas/gen_estaticos.js`.** El sitio navega
   por `#hash` y arma todo con JavaScript, así que Google no ve cada libro y los rastreadores de
   IA (que no ejecutan JavaScript) no ven nada. El script deja una página estática por libro en
