@@ -14,6 +14,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`.
 - Leídos, favoritos y la puntuación de cada visitante quedan en su navegador (`localStorage`).
   La puntuación «Fénix» se completa en `nota` de cada ficha.
+- Valoración moral: `delibris` de cada ficha, leída en la página del libro en delibris.org
+  (`valor` 1 a 6, 6 = «Sin inconvenientes», y `genero` Literatura o Pensamiento, que fija el
+  texto del nivel en `ESCALA_DELIBRIS` de `index.html`). `null` si el libro no está en Delibris.
+  La biblioteca se ve en modo lista con esa valoración en cada fila.
 - Formularios (salvar un libro, error, contacto): FormSubmit, destino en
   `FENIX.contacto.formularios`. El enlace de donación va en `FENIX.contacto.donar`.
 
