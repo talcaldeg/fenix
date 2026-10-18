@@ -530,6 +530,59 @@ window.FENIX = {
       nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["escriva-conversaciones", "escriva-abadesa-de-las-huelgas", "ortodoxia"]
+    },
+
+    // ---------- Libros electrónicos gratuitos de opusdei.org: protegidos, descarga en el sitio oficial ----------
+    {
+      id: "para-mi-vivir-es-cristo",
+      titulo: "Para mí, vivir es Cristo",
+      autor: "Rodolfo Valdés (ed.)",
+      anio: "2018",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: true,
+      resumen: {
+        es: "Ocho artículos de siete autores sobre una idea de san Pablo: ser cristiano es vivir en Cristo, vivir nuestra vida con Él y su vida en la nuestra. Parten de una carta pastoral de Mons. Fernando Ocáriz, prelado del Opus Dei, del 14 de febrero de 2017, y recorren la esperanza, la oración contemplativa en medio del mundo, la formación de la persona entera y de la afectividad, la libertad interior, la lucha espiritual como respuesta agradecida al don de Dios y el sentido de misión.",
+        en: "Eight articles by seven authors on an idea of Saint Paul: to be a Christian is to live in Christ, to live our life with Him and His life in ours. They start from a pastoral letter of Msgr. Fernando Ocáriz, prelate of Opus Dei, dated 14 February 2017, and cover hope, contemplative prayer in the middle of the world, the formation of the whole person and of the affections, interior freedom, spiritual struggle as a grateful response to God's gift, and the sense of mission."
+      },
+      imagen: { src: "img/portadas/para-mi-vivir-es-cristo.jpg", credito: { es: "Caravaggio, «La conversión de san Pablo», c. 1600-1601", en: "Caravaggio, «The Conversion of Saint Paul», c. 1600-1601" }, url: "https://commons.wikimedia.org/wiki/File:Conversion_on_the_Way_to_Damascus-Caravaggio_(c.1600-1).jpg" },
+      citas: ["Ser cristiano es vivir en Cristo, vivir nuestra vida con Él, vivir su vida en la nuestra."],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/para-mi-vivir-es-cristo.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/pdf/es/para-mi-vivir-es-cristo.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei (obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/libro-electronico-para-mi-vivir-es-cristo/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/para-mi-vivir-es-cristo" },
+      parecidos: ["one-with-jesus", "marmion-vida-del-alma", "escriva-es-cristo-que-pasa"]
+    },
+    {
+      id: "conocerle-y-conocerte",
+      titulo: "Conocerle y conocerte. La oración personal, lugar de encuentro con el Dios cercano",
+      autor: "Rubén Herce (ed.)",
+      anio: "2022",
+      idioma: "es",
+      categoria: "oracion",
+      recomendado: false,
+      resumen: {
+        es: "Doce capítulos de doce autores que forman un itinerario de oración personal: rezar con la Palabra de Dios y con los santos, el silencio interior, cómo habla Dios, las dificultades, la unión entre oración y vida, la oración litúrgica y la contemplación en la vida ordinaria. El título viene de «Camino», n. 91, de san Josemaría: orar es, «en dos palabras: conocerle y conocerte».",
+        en: "Twelve chapters by twelve authors that form a path of personal prayer: praying with the Word of God and with the saints, interior silence, how God speaks, difficulties, the unity of prayer and life, liturgical prayer and contemplation in ordinary life. The title comes from «The Way», no. 91, by Saint Josemaría: to pray is, «in two words: to know Him and to know yourself»."
+      },
+      imagen: { src: "img/portadas/conocerle-y-conocerte.jpg", credito: { es: "Jean-François Millet, «El Ángelus», 1857-1859", en: "Jean-François Millet, «The Angelus», 1857-1859" }, url: "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois_Millet_-_The_Angelus_-_Google_Art_Project.jpg" },
+      citas: [
+        "La oración cultiva una relación con Dios Padre, con Dios Hijo y con Dios Espíritu Santo, y nos identifica así con Cristo.",
+        "Saberme hijo de Dios es fundamental para entrar en oración."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/doc/epub/Conocerle%20y%20conocerte%20-%20Rube%CC%81n%20Herce20220211103944293804.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Conocerle-y-conocerte-Rube%CC%81n-Herce-OpusDei20220211104056760739.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Fundación Studium en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/conocerle-conocerte-oracion-libro/" },
+      nota: { literaria: null, teologica: null },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/conocerle-y-conocerte-la-oracion-personal-lugar-de-encuentro-con-el-dios-cercano" },
+      parecidos: ["presencia-de-dios", "escriva-camino", "escriva-en-dialogo-con-el-senor"]
     }
   ],
 
