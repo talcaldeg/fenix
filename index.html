@@ -152,7 +152,6 @@
   .puntos{display:grid; grid-template-columns:auto 1fr; gap:4px 12px; font:14px system-ui,sans-serif; align-items:center; margin:12px 0}
   .estrellas button{border:0; background:none; padding:0 1px; cursor:pointer; font-size:18px; color:var(--line)}
   .estrellas button.on{color:var(--oro)}
-  .estrellas.fija{color:var(--oro); letter-spacing:1px}
   .marcas{display:flex; gap:8px; flex-wrap:wrap}
   .parecidos{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; margin-top:8px}
   .parecido{display:grid; grid-template-columns:44px minmax(0,1fr); gap:12px; align-items:start; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); text-decoration:none}
@@ -440,14 +439,14 @@
       "f.donde":"Where? (chapter, page or sentence)","f.descripcion":"Description","f.nombre":"Name","f.correo":"Email","f.mensaje":"Message",
       "pie":"Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
       "x.leer":"Download","x.enLinea":"Read online","x.web":"Online","x.comprar":"Buy","x.leido":"Read","x.marcarLeido":"Mark as read","x.quitarLeido":"Mark as not read","x.fav":"Favourite","x.marcarFav":"Add to favourites","x.quitarFav":"Remove from favourites",
-      "x.resumen":"Summary","x.citas":"Quotes","x.parecidos":"Similar books","x.puntuacion":"Rating","x.fenix":"Fénix","x.suya":"Yours","x.literaria":"Literary quality","x.teologica":"Theological quality",
-      "x.porCalificar":"not yet rated","x.fuente":"Source","x.enviando":"Sending…","x.enviado":"Thank you! We received your message.","x.fallo":"It could not be sent. Please try again in a moment.","x.verIn":"See in"
+      "x.resumen":"Summary","x.citas":"Quotes","x.parecidos":"Similar books","x.puntuacion":"Rating","x.suya":"Yours","x.literaria":"Literary quality","x.teologica":"Theological quality",
+      "x.fuente":"Source","x.enviando":"Sending…","x.enviado":"Thank you! We received your message.","x.fallo":"It could not be sent. Please try again in a moment.","x.verIn":"See in"
     },
     es: {
       "x.leer":"Descargar","x.enLinea":"Leer en línea","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
-      "x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos","x.puntuacion":"Puntuación","x.fenix":"Fénix","x.suya":"Suya","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
+      "x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos","x.puntuacion":"Puntuación","x.suya":"Suya","x.literaria":"Calidad literaria","x.teologica":"Calidad teológica",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
-      "x.porCalificar":"por calificar","x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en"
+      "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en"
     }
   };
   const originales = {};
@@ -576,7 +575,6 @@
   document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro, .fila[data-id]"); if (a && e.key === "Enter") location.hash = "libro/" + a.dataset.id; });
 
   // ---------- ficha del libro ----------
-  const estrellasFijas = n => n ? `<span class="estrellas fija">${"★".repeat(n)}${"☆".repeat(5-n)}</span>` : `<span class="meta" style="margin:0">${esc(t("x.porCalificar"))}</span>`;
   function estrellasMias(id, eje){
     const v = (misNotas[id]||{})[eje] || 0;
     return `<span class="estrellas" data-id="${esc(id)}" data-eje="${eje}">${[1,2,3,4,5].map(n => `<button type="button" data-n="${n}" class="${n<=v?"on":""}" aria-label="${n}">★</button>`).join("")}</span>`;
@@ -588,7 +586,6 @@
       ...externosEn(l).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
       ...comprarEn(l).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
     ].join("");
-    const nota = l.nota || {};
     $("#fichaCuerpo").innerHTML = `<div class="ficha">${portada(l)}<div>
       <h3 style="font-size:22px">${esc(l.titulo)}</h3>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</p>
@@ -598,11 +595,11 @@
         <button class="btn" id="btnFav">${favoritos[id] ? "★ " + esc(t("x.quitarFav")) : "☆ " + esc(t("x.marcarFav"))}</button>
       </div>
       <div class="seccion-ficha"><strong>${esc(t("x.resumen"))}</strong><p style="margin:6px 0 0">${esc(l.resumen[lang] || l.resumen.es)}</p></div>
-      <div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div style="margin-top:8px">${(l.citas||[]).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</div></div>
+      ${(l.citas||[]).length ? `<div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div style="margin-top:8px">${l.citas.map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</div></div>` : ""}
       <div class="seccion-ficha"><strong>${esc(t("x.puntuacion"))}</strong>
-        <div class="puntos"><span></span><span class="meta" style="margin:0">${esc(t("x.fenix"))} / ${esc(t("x.suya"))}</span>
-          <span>${esc(t("x.literaria"))}</span><span>${estrellasFijas(nota.literaria)} · ${estrellasMias(id,"literaria")}</span>
-          <span>${esc(t("x.teologica"))}</span><span>${estrellasFijas(nota.teologica)} · ${estrellasMias(id,"teologica")}</span>
+        <div class="puntos"><span></span><span class="meta" style="margin:0">${esc(t("x.suya"))}</span>
+          <span>${esc(t("x.literaria"))}</span><span>${estrellasMias(id,"literaria")}</span>
+          <span>${esc(t("x.teologica"))}</span><span>${estrellasMias(id,"teologica")}</span>
           <span>${esc(t("l.moral"))}</span><span>${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</span></div></div>
       <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>
       ${l.fuente ? `<p class="meta" style="margin-top:14px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}

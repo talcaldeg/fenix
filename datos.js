@@ -4,7 +4,6 @@
 //   idioma del enlace si difiere del libro (el sitio en español no muestra nada en inglés y viceversa)
 //   (así van las obras protegidas de san Josemaría, que la Fundación Studium publica en escriva.org).
 // - comprar: si no hay descarga libre.
-// - nota: puntuación del equipo de 1 a 5 (null = por calificar).
 // - delibris: valoración moral de delibris.org, de 1 a 6 (6 = «Sin inconvenientes»); el texto de
 //   cada nivel según el género (Literatura o Pensamiento) está en index.html. null = no está en Delibris.
 // - citas: textuales, cotejadas con el texto del libro.
@@ -41,7 +40,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/marmion-jesucristo-vida-del-alma.epub", pdf: "libros/marmion-jesucristo-vida-del-alma.pdf" },
       fuente: { texto: "Edición de la Fundación Gratis Date, autorizada por el abad de Maredsous", url: "https://www.gratisdate.org/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/jesucristo-vida-del-alma-christ-life-soul" },
       parecidos: ["one-with-jesus", "imitacion-de-cristo", "presencia-de-dios"]
     },
@@ -68,7 +66,6 @@ window.FENIX = {
         { texto: "Amazon (ISBN 9781989905890)", url: "https://www.amazon.com/s?k=9781989905890" }
       ],
       fuente: { texto: "Original francés de 1929; traducción inglesa de 1946", url: "https://openlibrary.org/books/OL19427278M" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo", "presencia-de-dios"]
     },
@@ -91,7 +88,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/kempis-imitation-of-christ.epub", pdf: "libros/kempis-imitation-of-christ.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 1653 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1653" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
       parecidos: ["confesiones", "marmion-vida-del-alma", "presencia-de-dios"]
     },
@@ -117,7 +113,6 @@ window.FENIX = {
         { formato: "pdf", texto: "archive.org", url: "https://archive.org/download/imitacion-de-cristo-de-fray-luis-de-granada/Imitaci%C3%B3n%20de%20cristo%20de%20Fray%20Luis%20de%20Granada.pdf" }
       ],
       fuente: { texto: "Internet Archive; traducción de dominio público, transcripción de 2009 sin licencia declarada (por eso no se aloja en Fénix)", url: "https://archive.org/details/imitacion-de-cristo-de-fray-luis-de-granada" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
       parecidos: ["marmion-vida-del-alma", "escriva-amigos-de-dios", "para-mi-vivir-es-cristo"]
     },
@@ -140,7 +135,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/agustin-confessions.epub", pdf: "libros/agustin-confessions.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 3296 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/3296" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/confesiones" },
       parecidos: ["imitacion-de-cristo", "ortodoxia", "presencia-de-dios"]
     },
@@ -163,7 +157,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/lorenzo-practice-of-the-presence-of-god.epub", pdf: "libros/lorenzo-practice-of-the-presence-of-god.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 5657 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/5657" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/la-practica-de-la-presencia-de-dios" },
       parecidos: ["one-with-jesus", "imitacion-de-cristo", "marmion-vida-del-alma"]
     },
@@ -186,7 +179,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/chesterton-orthodoxy.epub", pdf: "libros/chesterton-orthodoxy.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 130 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/130" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/ortodoxia" },
       parecidos: ["confesiones", "quo-vadis", "imitacion-de-cristo"]
     },
@@ -209,7 +201,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/sienkiewicz-quo-vadis.epub", pdf: "libros/sienkiewicz-quo-vadis.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 2853 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/2853" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Literatura", url: "https://delibris.org/es/quo-vadis" },
       parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo"]
     },
@@ -236,7 +227,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/camino/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/camino" },
       parecidos: ["escriva-surco", "escriva-forja", "imitacion-de-cristo"]
     },
@@ -261,7 +251,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/surco/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/surco" },
       parecidos: ["escriva-camino", "escriva-forja", "escriva-amigos-de-dios"]
     },
@@ -286,7 +275,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/forja/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/forja" },
       parecidos: ["escriva-camino", "escriva-surco", "one-with-jesus"]
     },
@@ -311,7 +299,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/es-cristo-que-pasa/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/es-cristo-que-pasa" },
       parecidos: ["escriva-amigos-de-dios", "marmion-vida-del-alma", "presencia-de-dios"]
     },
@@ -336,7 +323,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/amigos-de-dios/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/amigos-de-dios" },
       parecidos: ["escriva-es-cristo-que-pasa", "escriva-surco", "presencia-de-dios"]
     },
@@ -361,7 +347,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/amar-a-la-iglesia/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/amar-la-iglesia-0" },
       parecidos: ["escriva-es-cristo-que-pasa", "escriva-conversaciones", "ortodoxia"]
     },
@@ -383,7 +368,6 @@ window.FENIX = {
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/en-dialogo-con-el-se%C3%B1or/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/en-dialogo-con-el-senor" },
       parecidos: ["escriva-forja", "one-with-jesus", "presencia-de-dios"]
     },
@@ -408,7 +392,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/santo-rosario/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/santo-rosario" },
       parecidos: ["escriva-via-crucis", "escriva-camino", "imitacion-de-cristo"]
     },
@@ -433,7 +416,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/via-crucis/" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["escriva-santo-rosario", "imitacion-de-cristo", "escriva-forja"]
     },
@@ -455,7 +437,6 @@ window.FENIX = {
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/cartas-1/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-1/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/cartas-i-edicion-critico-historica" },
       parecidos: ["escriva-cartas-2", "escriva-carta-29", "escriva-es-cristo-que-pasa"]
     },
@@ -477,7 +458,6 @@ window.FENIX = {
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/cartas-2/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/cartas-2/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/cartas-ii-edicion-critico-historica" },
       parecidos: ["escriva-cartas-1", "escriva-carta-29", "escriva-amar-a-la-iglesia"]
     },
@@ -499,7 +479,6 @@ window.FENIX = {
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/carta-29/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/carta-29/" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["escriva-cartas-1", "escriva-cartas-2", "escriva-es-cristo-que-pasa"]
     },
@@ -524,7 +503,6 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/conversaciones/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/conversaciones-con-mons-escriva-de-balaguer" },
       parecidos: ["escriva-amar-a-la-iglesia", "escriva-discursos-universidad", "ortodoxia"]
     },
@@ -546,7 +524,6 @@ window.FENIX = {
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["escriva-discursos-universidad", "escriva-conversaciones", "escriva-cartas-1"]
     },
@@ -568,7 +545,6 @@ window.FENIX = {
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/josemaria-escriva-de-balaguer-y-la-universidad/" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["escriva-conversaciones", "escriva-abadesa-de-las-huelgas", "ortodoxia"]
     },
@@ -594,7 +570,6 @@ window.FENIX = {
         { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/pdf/es/para-mi-vivir-es-cristo.pdf" }
       ],
       fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei (obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/libro-electronico-para-mi-vivir-es-cristo/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/para-mi-vivir-es-cristo" },
       parecidos: ["one-with-jesus", "marmion-vida-del-alma", "escriva-es-cristo-que-pasa"]
     },
@@ -621,7 +596,6 @@ window.FENIX = {
         { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/doc/pdf/Conocerle-y-conocerte-Rube%CC%81n-Herce-OpusDei20220211104056760739.pdf" }
       ],
       fuente: { texto: "Edición gratuita de la Fundación Studium en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/conocerle-conocerte-oracion-libro/" },
-      nota: { literaria: null, teologica: null },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/conocerle-y-conocerte-la-oracion-personal-lugar-de-encuentro-con-el-dios-cercano" },
       parecidos: ["presencia-de-dios", "escriva-camino", "escriva-en-dialogo-con-el-senor"]
     },
@@ -645,7 +619,6 @@ window.FENIX = {
         { texto: "Amazon (ISBN 9781258942526)", url: "https://www.amazon.com/s?k=9781258942526" }
       ],
       fuente: { texto: "Reimpresión facsimilar de Literary Licensing; De Jaegher murió en 1958", url: "https://openlibrary.org/works/OL3683706W" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["one-with-jesus", "presencia-de-dios", "imitacion-de-cristo"]
     },
@@ -668,7 +641,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/platon-apologia-de-socrates.epub", pdf: "libros/platon-apologia-de-socrates.pdf" },
       fuente: { texto: "Obras completas de Platón, tomo I (Madrid, 1871), transcritas en es.wikisource.org (dominio público); edición digital y portada de Proyecto Fénix", url: "https://es.wikisource.org/wiki/Apolog%C3%ADa_de_S%C3%B3crates_(de_Azc%C3%A1rate_tr.)" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo-granada", "escriva-amigos-de-dios"]
     },
@@ -691,7 +663,6 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/platon-apology.epub", pdf: "libros/platon-apology.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 1656 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/1656" },
-      nota: { literaria: null, teologica: null },
       delibris: null,
       parecidos: ["ortodoxia", "confesiones", "quo-vadis"]
     }
