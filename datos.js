@@ -100,19 +100,16 @@ window.FENIX = {
       categoria: "lectura",
       recomendado: true,
       resumen: {
-        es: "El clásico de la devoción moderna, en cuatro libros: consejos para la vida espiritual, la vida interior, el consuelo interior en diálogo con Cristo y el Santísimo Sacramento. Frases cortas, directas, para leer de a poco y volver a ellas toda la vida. Esta es la traducción de fray Luis de Granada, con su prólogo, transcrita en 2009 de una edición de 1817 con la ortografía modernizada; donde a esa edición le faltaban páginas, el transcriptor tomó el texto de la traducción del P. Juan Eusebio Nieremberg y lo indica en nota.",
-        en: "The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Short, direct sentences, to be read slowly and returned to for a lifetime. This is the Spanish translation by Fray Luis de Granada, with his prologue, transcribed in 2009 from an 1817 edition with modernized spelling; where that edition had missing pages, the transcriber used the translation of Fr. Juan Eusebio Nieremberg and says so in a footnote."
+        es: "El clásico de la devoción moderna, en cuatro libros: consejos para la vida espiritual, la vida interior, el consuelo interior en diálogo con Cristo y el Santísimo Sacramento. Frases cortas, directas, para leer de a poco y volver a ellas toda la vida. Esta es la traducción de fray Luis de Granada, con su prólogo, transcrita en 2009 de una edición de 1817 con la ortografía modernizada; donde a esa edición le faltaban páginas, se usó la traducción del P. Juan Eusebio Nieremberg, como explica la nota inicial de esta edición.",
+        en: "The classic of the devotio moderna, in four books: counsels for the spiritual life, the interior life, inward consolation in dialogue with Christ, and the Blessed Sacrament. Short, direct sentences, to be read slowly and returned to for a lifetime. This is the Spanish translation by Fray Luis de Granada, with his prologue, transcribed in 2009 from an 1817 edition with modernized spelling; where that edition had missing pages, the translation of Fr. Juan Eusebio Nieremberg is used, as the opening note of this edition explains."
       },
       imagen: { src: "img/portadas/imitacion-de-cristo.jpg", credito: { es: "El Greco, «Cristo con la cruz», c. 1590", en: "El Greco, «Christ Carrying the Cross», c. 1590" }, url: "https://commons.wikimedia.org/wiki/File:El_Greco_-_Christ_Carrying_the_Cross_-_Google_Art_Project.jpg" },
       citas: [
         "Por cierto las palabras subidas no hacen santo ni justo, mas la virtuosa vida hace al hombre amable a Dios.",
         "Ciertamente el día del juicio no nos preguntarán qué leímos, mas qué hicimos; ni cuan bien hablamos, mas cuán honestamente vivimos."
       ],
-      archivos: {},
-      externos: [
-        { formato: "pdf", texto: "archive.org", url: "https://archive.org/download/imitacion-de-cristo-de-fray-luis-de-granada/Imitaci%C3%B3n%20de%20cristo%20de%20Fray%20Luis%20de%20Granada.pdf" }
-      ],
-      fuente: { texto: "Internet Archive; traducción de dominio público, transcripción de 2009 sin licencia declarada (por eso no se aloja en Fénix)", url: "https://archive.org/details/imitacion-de-cristo-de-fray-luis-de-granada" },
+      archivos: { epub: "libros/kempis-imitacion-de-cristo-granada.epub", pdf: "libros/kempis-imitacion-de-cristo-granada.pdf" },
+      fuente: { texto: "Transcripción de 2009 de la edición de 1817, en Internet Archive (dominio público); sin las notas al pie del transcriptor, con nota y portada de Proyecto Fénix", url: "https://archive.org/details/imitacion-de-cristo-de-fray-luis-de-granada" },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/imitacion-de-cristo" },
       parecidos: ["marmion-vida-del-alma", "escriva-amigos-de-dios", "para-mi-vivir-es-cristo"]
     },
