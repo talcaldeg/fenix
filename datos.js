@@ -671,6 +671,57 @@ window.FENIX = {
       parecidos: ["presencia-de-dios", "escriva-camino", "escriva-en-dialogo-con-el-senor"]
     },
     {
+      id: "a-la-luz-del-evangelio",
+      titulo: "A la luz del Evangelio",
+      autor: "Fernando Ocáriz",
+      anio: "2020",
+      idioma: "es",
+      categoria: "oracion",
+      recomendado: true,
+      resumen: {
+        es: "Textos breves del prelado del Opus Dei para meditar el Evangelio en la vida corriente: la llamada de Dios, la oración y el silencio, la Misa como centro y raíz, la filiación divina, el trabajo, la familia, la amistad, la misericordia y la alegría. Nacieron como apuntes para la predicación que el autor fue tomando en un cuaderno desde 1977; les dio una forma breve para que ayuden a la oración y a un trato más directo con Jesucristo. El hilo de fondo es la identificación con Cristo: no solo imitarlo, sino llegar a identificarse con Él.",
+        en: "Short texts by the prelate of Opus Dei for meditating on the Gospel in ordinary life: God's call, prayer and silence, the Mass as centre and root, divine filiation, work, family, friendship, mercy and joy. They began as notes for preaching that the author kept in a notebook from 1977; he gave them a brief form so that they help prayer and a more direct dealing with Jesus Christ. The thread running through them is identification with Christ: not only imitating Him, but coming to be identified with Him."
+      },
+      imagen: { src: "img/portadas/a-la-luz-del-evangelio.jpg", credito: { es: "Rembrandt, «Los peregrinos de Emaús», 1648", en: "Rembrandt, «The Supper at Emmaus», 1648" }, url: "https://commons.wikimedia.org/wiki/File:Rembrandt_The_Supper_at_Emmaus.jpg" },
+      citas: [
+        "La vida cristiana no nos lleva a identificarnos con una idea, sino con una persona: con Jesucristo.",
+        "El camino de nuestra entrada en la intimidad del Padre, del Hijo y del Espíritu Santo, es seguir a Cristo, pero de tal modo que no solo le imitemos, sino que lleguemos a identificarnos con él."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://odnmedia.s3.amazonaws.com/files/A-la-luz-del-Evangelio-Fernando-Ocariz20210520-08133320210703-100732.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://odnmedia.s3.amazonaws.com/files/A-la-luz-del-Evangelio-Fernando-Ocariz20210520-081449.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Fundación Studium en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/a-la-luz-del-evangelio-fernando-ocariz-libro-palabra/" },
+      delibris: null,
+      parecidos: ["conocerle-y-conocerte", "para-mi-vivir-es-cristo", "santos-evangelios-navarra"]
+    },
+    {
+      id: "santos-evangelios-navarra",
+      titulo: "Santos Evangelios",
+      autor: "Facultad de Teología de la Universidad de Navarra",
+      anio: "2017",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: true,
+      resumen: {
+        es: "Los cuatro Evangelios en la traducción de la Facultad de Teología de la Universidad de Navarra, hecha desde los textos originales según las orientaciones del Concilio Vaticano II (Dei Verbum, 22): es la misma de su Sagrada Biblia, publicada en papel entre 1997 y 2004. Trae 443 comentarios, notas que se abren con un toque sobre la palabra y dos mapas en color, con prólogo de Mons. Fernando Ocáriz como Gran Canciller. La Facultad y su editorial, EUNSA, la regalaron por los 50 años de la Facultad, en versión española y latinoamericana. La Biblia completa de Navarra se vende aparte.",
+        en: "The four Gospels in the translation by the Faculty of Theology of the University of Navarra, made from the original texts following the guidance of the Second Vatican Council (Dei Verbum, 22): the same as its Holy Bible, printed between 1997 and 2004. It includes 443 commentaries, notes that open with a tap on the word and two colour maps, with a foreword by Msgr. Fernando Ocáriz as Grand Chancellor. The Faculty and its publisher, EUNSA, gave it away for the Faculty's 50th anniversary, in Spanish and Latin American versions. The complete Navarre Bible is sold separately."
+      },
+      imagen: { src: "img/portadas/santos-evangelios-navarra.jpg", credito: { es: "Jacob Jordaens, «Los cuatro evangelistas», c. 1625-1630", en: "Jacob Jordaens, «The Four Evangelists», c. 1625-1630" }, url: "https://commons.wikimedia.org/wiki/File:Four_Evangelists_Jordaens_Louvre_Inv1404.jpg" },
+      citas: [],
+      archivos: {},
+      externos: [
+        { formato: "ebook", texto: "Google Play Libros, gratis (edición latinoamericana)", url: "https://play.google.com/store/books/details?id=K8c3DwAAQBAJ" },
+        { formato: "ebook", texto: "Apple Books, gratis (edición latinoamericana)", url: "https://itunes.apple.com/es/book/santos-evangelios/id1291470055" },
+        { formato: "ebook", texto: "Google Play Libros, gratis (edición española)", url: "https://play.google.com/store/books/details?id=J8c3DwAAQBAJ" }
+      ],
+      comprar: [{ texto: "Biblia completa de Navarra, edición latinoamericana (Google Play Libros)", url: "https://play.google.com/store/books/details?id=oqgkDQAAQBAJ" }],
+      fuente: { texto: "Edición digital gratuita de la Facultad de Teología y EUNSA, Universidad de Navarra (obra protegida por derechos de autor)", url: "https://opusdei.org/es/article/edicion-digital-gratuita-de-los-evangelios-universidad-de-navarra/" },
+      delibris: null,
+      parecidos: ["a-la-luz-del-evangelio", "imitacion-de-cristo", "para-mi-vivir-es-cristo"]
+    },
+    {
       id: "the-lord-is-my-joy",
       titulo: "The Lord is my Joy",
       autor: "Paul de Jaegher, S.J.",
