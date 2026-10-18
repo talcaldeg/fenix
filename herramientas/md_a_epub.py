@@ -42,6 +42,7 @@ aside.notas p { text-indent: 0; margin: 0 0 0.4em; }
 .portadilla .t1 { font-size: 1.7em; line-height: 1.3; margin-bottom: 0.4em; }
 .portadilla .t2 { font-size: 1.1em; margin-bottom: 2.5em; }
 .portadilla .t3 { font-style: italic; margin-bottom: 0.3em; }
+.portadilla .t4 { margin-bottom: 2.5em; }
 .nota p { text-indent: 0; margin: 0 0 0.9em; }
 """
 ROMANOS = [(1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"),
@@ -142,7 +143,8 @@ def leer(carpeta: Path):
     return caps
 
 
-def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, original: str):
+def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, original: str,
+          cuidado: str = "Edición al cuidado de Tomás Alcalde"):
     caps = leer(carpeta)
     archivos = {"mimetype": b"application/epub+zip",
                 "META-INF/container.xml": ('<?xml version="1.0" encoding="utf-8"?>\n<container version="1.0" '
@@ -154,7 +156,7 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
 
     porta = (f'<section class="portadilla" epub:type="titlepage"><p class="t1">{html.escape(titulo)}</p>'
              f'<p class="t2">{html.escape(autor)}</p><p class="t3">{html.escape(subtitulo)}</p>'
-             '<p>Proyecto Fénix</p></section>')
+             f'<p class="t4">{html.escape(cuidado)}</p><p>Proyecto Fénix</p></section>')
     archivos["OEBPS/portadilla.xhtml"] = pagina(titulo, porta, "frontmatter").encode("utf-8")
     spine += ["portadilla", "nav"]
 
@@ -200,7 +202,8 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
            'unique-identifier="uid" xml:lang="es">\n  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
            f'    <dc:identifier id="uid">{uid}</dc:identifier>\n    <dc:title>{html.escape(titulo)}</dc:title>\n'
            f'    <dc:creator>{html.escape(autor)}</dc:creator>\n'
-           '    <dc:contributor>Proyecto Fénix (traducción)</dc:contributor>\n    <dc:language>es</dc:language>\n'
+           '    <dc:contributor>Proyecto Fénix (traducción)</dc:contributor>\n'
+           '    <dc:contributor>Tomás Alcalde (edición)</dc:contributor>\n    <dc:language>es</dc:language>\n'
            f'    <dc:publisher>Proyecto Fénix</dc:publisher>\n    <dc:source>{html.escape(original)}</dc:source>\n'
            '    <dc:rights>Traducción de Proyecto Fénix, CC BY-NC-SA 4.0</dc:rights>\n'
            '    <meta property="dcterms:modified">2026-10-18T00:00:00Z</meta>\n  </metadata>\n'
