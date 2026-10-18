@@ -125,6 +125,9 @@ const SCRIPT_TEMA = `<script>
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>`;
 
+// La medición (GoatCounter) se copia tal cual del bloque MEDICION de index.html, para que haya una sola versión.
+const MEDICION = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- MEDICION:inicio[\s\S]*?<!-- MEDICION:fin -->/) || [""])[0];
+
 function paginaLibro(l){
   const lang = l.idioma, x = TX[lang];
   const resumen = l.resumen[lang] || l.resumen.es;
@@ -223,6 +226,7 @@ ${JSON.stringify(ld, null, 2)}
 </main>
 <footer><div class="wrap">${esc(x.pie)}</div></footer>
 ${SCRIPT_TEMA}
+${MEDICION}
 </body>
 </html>
 `;
