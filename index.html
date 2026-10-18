@@ -1416,7 +1416,7 @@
       "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions","nav.todos":"All books",
       "todos.eyebrow":"World catalogue","todos.titulo":"All books in English","todos.lede":"Search for any book published in English. Its page shows the Delibris moral rating, whether it is under copyright and, if it is in Fénix, the button to download it; if it is not, you can ask us to look for it.",
       "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":" (a review site; not an official judgement of the Church), which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
-      "todos.cuenta":"{n} books found","todos.cuenta1":"1 book found","todos.vacio":"No books found. Try a single word from the title or the author's surname.","todos.error":"The catalogue did not respond. Please try again in a moment.","todos.buscando":"Searching…","todos.edicion":"Edition",
+      "todos.cuenta":"{n} books found","todos.cuenta1":"1 book found","todos.cuentaAprox":"About {n} books","todos.masEd1":"and 1 more edition","todos.masEd":"and {n} more editions","todos.vacio":"No books found. Try a single word from the title or the author's surname.","todos.error":"The catalogue did not respond. Please try again in a moment.","todos.buscando":"Searching…","todos.edicion":"Edition",
       "todos.enFenix":"In Fénix","todos.derechos":"Copyright","todos.calculando":"Checking…","todos.verOL":"See in Open Library","todos.verFicha":"See its page in Fénix","todos.buscarDelibris":"Search in delibris.org","todos.noEncontrada":"Not found in Delibris","todos.indice":"Our Delibris index: {n} books, as of {f}.",
       "todos.solicitar":"Request this book","todos.solicitarNota":"It is not in Fénix yet. Ask for it: we will look for it, check its rights and, if possible, publish it or tell you where to read it.","todos.solicitarEnviar":"Send request",
       "der.libre":"In Chile: {a} died in {m}, more than 70 years ago. If this is a translation or an annotated edition, the translator or editor may hold their own rights, and the term differs elsewhere (80 years in Spain for authors who died before 1987; up to 100 in Mexico).",
@@ -1470,7 +1470,7 @@
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos su mensaje.","x.fallo":"No se pudo enviar. Inténtelo de nuevo en un momento.","x.verIn":"Ver en",
-      "todos.cuenta":"{n} libros encontrados","todos.cuenta1":"1 libro encontrado","todos.vacio":"No encontramos libros. Pruebe con una sola palabra del título o con el apellido del autor.","todos.error":"El catálogo no respondió. Inténtelo de nuevo en un momento.","todos.buscando":"Buscando…","todos.edicion":"Edición",
+      "todos.cuenta":"{n} libros encontrados","todos.cuenta1":"1 libro encontrado","todos.cuentaAprox":"Cerca de {n} libros","todos.masEd1":"y 1 edición más","todos.masEd":"y {n} ediciones más","todos.vacio":"No encontramos libros. Pruebe con una sola palabra del título o con el apellido del autor.","todos.error":"El catálogo no respondió. Inténtelo de nuevo en un momento.","todos.buscando":"Buscando…","todos.edicion":"Edición",
       "todos.enFenix":"En Fénix","todos.derechos":"Derechos de autor","todos.calculando":"Revisando…","todos.verOL":"Ver en Open Library","todos.verFicha":"Ver su ficha en Fénix","todos.buscarDelibris":"Buscar en delibris.org","todos.noEncontrada":"No la encontramos en Delibris","todos.indice":"Nuestro índice de Delibris: {n} libros, al {f}.",
       "todos.solicitar":"Solicitar este libro","todos.solicitarNota":"Todavía no está en Fénix. Pídalo: lo buscamos, revisamos sus derechos y, si se puede, lo publicamos o le decimos dónde leerlo.","todos.solicitarEnviar":"Enviar solicitud",
       "der.libre":"En Chile: {a} murió en {m}, hace más de 70 años. Si es una traducción o una edición anotada, el traductor o el editor pueden tener derechos propios, y en otros países el plazo cambia (en España, 80 años para autores muertos antes de 1987; en México, hasta 100).",
@@ -1768,13 +1768,16 @@
     const ed = [o.editorial, o.fecha].filter(Boolean).join(", ");
     return `<div class="fila" role="listitem" data-obra="${esc(o.id)}" tabindex="0"><span class="mini"${tapa(o)}></span>
       <div class="libro-c"><div class="tt"><a href="#obra/${esc(o.id)}">${esc(o.titulo)}</a></div><div class="au">${esc(o.autores.slice(0, 2).join(", "))}${o.anio ? " · " + esc(o.anio) : ""}</div></div>
-      <div class="etqs">${ed ? `<span>${esc(ed)}</span>` : ""}${f ? `<span class="etq ed-fenix">${esc(t("todos.enFenix"))}</span>` : ""}</div>
+      <div class="etqs">${ed ? `<span>${esc(ed)}</span>` : ""}<span class="mas-ed"></span>${f ? `<span class="etq ed-fenix">${esc(t("todos.enFenix"))}</span>` : ""}</div>
       <span class="moral-obra" data-obra="${esc(o.id)}"><span class="moral"><span class="txt">${esc(t("todos.calculando"))}</span></span></span><div class="marcas-f"><span class="ir" aria-hidden="true">›</span></div></div>`;
   }
-  let busqueda = { q: "", pagina: 1, total: 0 };
+  // Open Library a veces registra el mismo libro como obras distintas: se agrupan por título
+  // (sin subtítulo ni artículo) y autor, y la fila dice cuántas ediciones más hay.
+  const claveObra = o => corto(o.titulo) + "|" + (norm(o.autores[0] || "").split(" ").sort((a, b) => b.length - a.length)[0] || "");
+  let busqueda = { q: "", pagina: 1, total: 0, vistos: new Map() };
   async function buscarObras(mas){
     const q = $("#tBuscar").value.trim(); if (!q) return;
-    if (!mas) busqueda = { q, pagina: 1, total: 0, idioma: lang };
+    if (!mas) busqueda = { q, pagina: 1, total: 0, idioma: lang, vistos: new Map() };
     else busqueda.pagina++;
     $("#tVacio").hidden = true; $("#tMas").hidden = true;
     if (!mas){ $("#tLista").hidden = true; $("#tLista").innerHTML = ""; }
@@ -1784,12 +1787,23 @@
       const r = await fetch(url); if (!r.ok) throw new Error(r.status);
       const j = await r.json();
       busqueda.total = j.numFound || 0;
-      const nuevas = (j.docs || []).map(datosObra);
-      nuevas.forEach(o => obras[o.id] = o);
-      $("#tCuenta").textContent = busqueda.total === 1 ? t("todos.cuenta1") : t("todos.cuenta").replace("{n}", busqueda.total.toLocaleString(lang === "es" ? "es-CL" : "en-GB"));
+      const nuevas = [];
+      for (const o of (j.docs || []).map(datosObra)){
+        obras[o.id] = o;
+        const k = claveObra(o), ya = busqueda.vistos.get(k);
+        if (!ya){ o.repetidas = 0; busqueda.vistos.set(k, o); nuevas.push(o); continue; }
+        ya.repetidas++;
+        const el = $(`.fila[data-obra="${ya.id}"] .mas-ed`);
+        if (el) el.textContent = t(ya.repetidas === 1 ? "todos.masEd1" : "todos.masEd").replace("{n}", ya.repetidas);
+      }
+      nuevas.forEach(o => { o.repetidas = o.repetidas || 0; });
+      const todo = busqueda.pagina * 20 >= busqueda.total, num = x => x.toLocaleString(lang === "es" ? "es-CL" : "en-GB");
+      const visibles = busqueda.vistos.size;
+      $("#tCuenta").textContent = todo ? (visibles === 1 ? t("todos.cuenta1") : t("todos.cuenta").replace("{n}", num(visibles))) : t("todos.cuentaAprox").replace("{n}", num(busqueda.total));
       if (!busqueda.total){ $("#tVacio").textContent = t("todos.vacio"); $("#tVacio").hidden = false; return; }
       if (!mas) $("#tLista").innerHTML = `<div class="fila cab" aria-hidden="true"><span></span><span>${esc(t("l.libro"))}</span><span>${esc(t("todos.edicion"))}</span><span>${esc(t("l.moral"))}</span><span></span></div>`;
       $("#tLista").insertAdjacentHTML("beforeend", nuevas.map(filaObra).join(""));
+      nuevas.forEach(o => { if (o.repetidas){ const el = $(`.fila[data-obra="${o.id}"] .mas-ed`); if (el) el.textContent = t(o.repetidas === 1 ? "todos.masEd1" : "todos.masEd").replace("{n}", o.repetidas); } });
       $("#tLista").hidden = false;
       $("#tMas").hidden = busqueda.pagina * 20 >= busqueda.total;
       nuevas.forEach(async o => { const d = await valoracionDelibris(o); const el = $(`.moral-obra[data-obra="${o.id}"]`); if (el) el.innerHTML = moralObra(d); });
