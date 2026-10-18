@@ -20,7 +20,8 @@ const SITIO = "https://talcaldeg.github.io/fenix/";
 const leer = f => fs.readFileSync(path.join(RAIZ, f), "utf8");
 const escribirSiCambia = (f, txt) => {
   const ruta = path.join(RAIZ, f);
-  const antes = fs.existsSync(ruta) ? fs.readFileSync(ruta, "utf8") : null;
+  // git en Windows puede dejar el archivo con CRLF: se compara sin \r para no marcar cambios falsos.
+  const antes = fs.existsSync(ruta) ? fs.readFileSync(ruta, "utf8").replace(/\r\n/g, "\n") : null;
   if (antes === txt) return false;
   fs.mkdirSync(path.dirname(ruta), { recursive: true });
   fs.writeFileSync(ruta, txt, "utf8");
