@@ -970,9 +970,9 @@
   .lede{color:var(--muted); font-size:clamp(16px,2.2vw,19px); max-width:680px}
   .eyebrow{font:700 12px system-ui,sans-serif; letter-spacing:1.6px; text-transform:uppercase; color:var(--oro); margin:0 0 8px}
 
-  /* Portada: siempre oscura, para empalmar con la noche del cuadro de Grünewald (img/inicio.jpg). */
+  /* Portada: siempre oscura, para empalmar con la noche del fénix (img/inicio-fenix.jpg). */
   .hero{position:relative; overflow:hidden; background:#0f0d10; color:#f6ecd9; border-bottom:1px solid var(--line); min-height:min(80vh,660px); display:flex; align-items:center; padding:64px 0}
-  .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#0f0d10 url(img/inicio.jpg) center 16%/cover no-repeat; animation:acercar 2.8s ease-out both}
+  .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#0f0d10 url(img/inicio-fenix.jpg) center top/cover no-repeat; animation:acercar 2.8s ease-out both}
   .hero .fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,#0f0d10 0%,rgba(15,13,16,.8) 18%,rgba(15,13,16,0) 52%), linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 28%)}
   .hero .wrap{position:relative; width:100%}
   .hero .txt{max-width:560px; animation:subir 1.1s .2s ease-out both}
@@ -991,7 +991,7 @@
   @media (prefers-reduced-motion: reduce){.hero .fondo, .hero .txt{animation:none}}
   @media (max-width:760px){
     .hero{display:block; min-height:0; padding:0 0 40px}
-    .hero .fondo{position:relative; width:100%; height:min(78vw,440px); background-position:center 12%}
+    .hero .fondo{position:relative; width:100%; height:min(78vw,440px); background-position:center top}
     .hero .fondo::after{background:linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 50%)}
     .hero .wrap{margin-top:-70px}
     .hero .cifras{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
@@ -1186,7 +1186,7 @@
   <!-- INICIO -->
   <section class="vista" id="v-inicio">
     <div class="hero">
-      <div class="fondo" role="img" aria-label="Matthias Grünewald, La Resurrección"></div>
+      <div class="fondo" role="img" aria-label="Ave fénix que renace de sus cenizas"></div>
       <div class="wrap">
         <div class="txt">
           <p class="eyebrow" data-i18n="hero.eyebrow">Biblioteca gratuita de lectura espiritual</p>
@@ -1203,7 +1203,6 @@
           </div>
         </div>
       </div>
-      <a class="credito" href="https://commons.wikimedia.org/wiki/File:Matthias_Gr%C3%BCnewald_-_Resurrection.jpg" target="_blank" rel="noopener" data-i18n="hero.credito">Matthias Grünewald, «La Resurrección», retablo de Isenheim, 1512-1516</a>
     </div>
     <div class="wrap">
       <a class="cita-dia" id="citaDia" hidden></a>
@@ -1503,7 +1502,7 @@
       "hero.lede":"Classics of spiritual reading and prayer, chosen one by one, free in EPUB and PDF. Each book says why it is worth reading and comes with quotes and its moral rating; if you do not know where to start, we suggest the first ones. Everything points to one idea: being for Christ «like another humanity».",
       "hero.ver":"Browse the library","hero.otra":"What is «another humanity»?",
       "hero.cLibros":"books in the catalogue","hero.cOraciones":"prayers to pray","hero.cPublicidad":"ads and sign-ups",
-      "hero.credito":"Matthias Grünewald, «The Resurrection», Isenheim Altarpiece, 1512-1516",
+      "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
       "rec.eyebrow":"Recommended","rec.titulo":"Where to begin","rec.todos":"See the whole catalogue →",
@@ -1693,7 +1692,7 @@
   // Portada: cifras del hero y un acceso por categoría (con el cuadro de un libro de esa categoría) más el plan de vida.
   function pintarInicio(){
     const ls = libros();
-    $(".hero .fondo").setAttribute("aria-label", t("hero.credito"));
+    $(".hero .fondo").setAttribute("aria-label", lang === "es" ? "Ave fénix que renace de sus cenizas" : t("hero.imagen"));
     $("#cLibros").textContent = ls.length;
     $("#cOraciones").textContent = D.oraciones.filter(o => (o[lang]||[]).length).length;
     // Cada acceso con un cuadro distinto: no se repite una imagen ya usada en otro.

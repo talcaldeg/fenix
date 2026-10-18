@@ -1,7 +1,7 @@
 # Proyecto Fénix
 
 Biblioteca gratuita: lectura espiritual, oración y novelas en EPUB y PDF, en español e
-inglés, con reseña, citas y libros parecidos. Objetivo: dar a conocer la teología de ser para
+inglés, con por qué leerlo, reseña, citas y libros parecidos. Objetivo: dar a conocer la teología de ser para
 Cristo «como otra humanidad» (santa Isabel de la Trinidad; Paul de Jaegher, *One with Jesus*).
 
 Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
