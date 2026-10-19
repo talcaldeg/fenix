@@ -27,6 +27,7 @@ import tempfile
 import zipfile
 from io import BytesIO
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 from PIL import Image
 
@@ -73,6 +74,26 @@ def catalogo():
     return out
 
 
+def pagina_portada(portada: Image.Image, titulo: str) -> bytes:
+    """Página de portada como envoltura SVG: los lectores (Play Books, Apple Books, Kobo) la
+    escalan a la pantalla completa sin recortarla. Un <img> con max-height:100vh queda chico.
+    Lo que sobra de pantalla toma el color del borde de la portada, no el negro del lector."""
+    w, h = portada.size
+    titulo = escape(titulo)
+    fondo = "#%02x%02x%02x" % portada.getpixel((2, h // 2))[:3]
+    return ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
+            '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">\n'
+            f'<head><title>{titulo}</title>'
+            f'<style>html,body{{margin:0;padding:0;height:100%;background:{fondo}}}'
+            'svg{display:block;width:100%;height:100%;overflow:visible}</style></head>\n'
+            f'<body epub:type="cover"><svg xmlns="http://www.w3.org/2000/svg" '
+            'xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" '
+            f'viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMid meet" overflow="visible">'
+            f'<rect x="-{w}" y="-{h}" width="{3 * w}" height="{3 * h}" fill="{fondo}"/>'
+            f'<image width="{w}" height="{h}" xlink:href="{NOMBRE_EN_EPUB}"><title>{titulo}</title></image>'
+            '</svg></body></html>\n').encode("utf-8")
+
+
 def poner_en_epub(epub: Path, portada: Image.Image, titulo: str):
     z = zipfile.ZipFile(epub)
     archivos = {i.filename: z.read(i.filename) for i in z.infolist()}
@@ -102,15 +123,14 @@ def poner_en_epub(epub: Path, portada: Image.Image, titulo: str):
             x = re.sub(r'(<image[^>]*?)height="\d+"', r'\1height="1800"', x)
             archivos[ruta] = x.encode("utf-8")
         else:
-            pagina = ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
-                      '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">\n'
-                      f'<head><title>{titulo}</title><style>body{{margin:0;padding:0;text-align:center}}'
-                      'img{max-width:100%;max-height:100vh}</style></head>\n'
-                      f'<body epub:type="cover"><img src="{NOMBRE_EN_EPUB}" alt="{titulo}"/></body></html>\n')
-            archivos[base + "fenix-portada.xhtml"] = pagina.encode("utf-8")
-            opf = opf.replace("</manifest>", '<item href="fenix-portada.xhtml" id="fenix-portada-pag" media-type="application/xhtml+xml"/>\n  </manifest>', 1)
+            opf = opf.replace("</manifest>", '<item href="fenix-portada.xhtml" id="fenix-portada-pag" media-type="application/xhtml+xml" properties="svg"/>\n  </manifest>', 1)
             opf = re.sub(r"(<spine[^>]*>)", r'\1\n    <itemref idref="fenix-portada-pag"/>', opf, count=1)
-        archivos[opf_ruta] = opf.encode("utf-8")
+    if base + "fenix-portada.xhtml" in archivos or 'id="fenix-portada-pag"' in opf:
+        # Se reescribe siempre, para que un EPUB con la página vieja (<img>) quede al día.
+        archivos[base + "fenix-portada.xhtml"] = pagina_portada(portada, titulo)
+        opf = re.sub(r'(<item [^>]*id="fenix-portada-pag" media-type="application/xhtml\+xml")\s*/>',
+                     r'\1 properties="svg"/>', opf)
+    archivos[opf_ruta] = opf.encode("utf-8")
 
     with zipfile.ZipFile(epub, "w") as z:
         z.writestr(zipfile.ZipInfo("mimetype"), archivos.pop("mimetype"), compress_type=zipfile.ZIP_STORED)
