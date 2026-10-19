@@ -82,3 +82,45 @@ Escriba cada tramo en `salida/<mismo nombre>.md`. Relea su salida contra el orig
 oraciones faltantes, rayas largas, pronombres divinos sin mayúscula, comillas rectas.
 Su mensaje final (máx. 10 líneas): tramos hechos, conteo de palabras de cada uno y las dudas de
 sentido que quedaron (cita corta del original y cómo la resolvió).
+
+## De la Eucaristía a la Trinidad (Bernadot, desde el francés)
+
+Tratado espiritual del dominico Marie-Vincent Bernadot (1919). Las reglas de arriba (fidelidad,
+registro, mayúsculas divinas, ortografía, puntuación) rigen igual; esto es lo propio del libro.
+
+- **Tratamiento.** Bernadot habla a Dios, a Cristo y al Espíritu Santo de «vous», a la francesa:
+  en castellano va de «tú», con mayúscula (Tú, Te, Ti, Tu, Tus): «Padre santo, inclínate sobre Tu
+  pequeña criatura». Cristo hablando a Sus discípulos (vous plural): «ustedes». Al lector, si lo
+  interpela en singular, «tú». La oración de santa Gertrudis a la Trinidad, también de «tú».
+- **Encabezados.** `## Avant-propos` → `## Prólogo`; `## I. L'union eucharistique` → `## I. La
+  unión eucarística` (y así II, III, IV). `###` y `####` se conservan con su numeración. Una
+  línea suelta que hace de título sin `#` («Le mystère du Christ») va como `### El misterio de
+  Cristo`. El epígrafe del Prólogo («Je suis la Voie : marchez en Moi...») va en cursiva, un
+  verso por párrafo, y «Je sois la Vérité» es errata del original por «Je suis».
+- **Notas.** Las llamadas `[^N]` se conservan en su lugar y con su número. El bloque
+  «---- NOTES ----» se traduce al final del archivo como `[^N]: texto.` Referencias bíblicas al
+  modo castellano, sin cambiar la numeración del original (los salmos van con la numeración de la
+  Vulgata que trae Bernadot: «Ps XXXIX, 8» → «Sal 39, 8»): Col 1, 15; Jn 15, 5; 1 Co 12, 13;
+  Ef 3, 8; Flp 1, 21; Hb 7, 25; Ct 5, 1; Lm 2, 13 (Thren.); Ne 8, 10 (Nehem.); Si 24, 26.
+  «Ibid.» queda «Ibid.». Obras: *Suma teológica*, III, q. 79, a. 1, ad 1; *El diálogo* (santa
+  Catalina de Siena); *Comentario a la carta a los Colosenses*; *Sobre la unión con Dios*
+  (*De l'union avec Dieu*); *Máximas espirituales* (san Juan de la Cruz); Concilio de Florencia.
+- **Citas bíblicas** en cursiva, como las trae él: se traducen de su francés (que sigue la
+  Vulgata), no de una Biblia castellana.
+- **Glosario.** communion → comunión (el sacramento: la Comunión, con mayúscula solo si el
+  original la pone); communier → comulgar (o «entrar en comunión», si no es el sacramento);
+  le communiant → el que comulga; la sainte Humanité (de Jésus) → la santa Humanidad; les Trois
+  divines Personnes → las tres divinas Personas; la très sainte Trinité → la santísima Trinidad;
+  l'adorable Trinité → la adorable Trinidad; le Verbe → el Verbo; l'Esprit-Saint → el Espíritu
+  Santo; le Christ Jésus → Cristo Jesús; Notre-Seigneur → Nuestro Señor; le
+  Bien-Aimé → el Amado; vie divine / surnaturelle → vida divina / sobrenatural; grâce
+  sanctifiante → gracia santificante; demeurer → permanecer; union → unión; vie d'union → vida
+  de unión; habitation (de la Trinité) → inhabitación; circumincession → circuminsesión;
+  missions divines invisibles → misiones divinas invisibles; fils adoptifs → hijos adoptivos;
+  recueillement → recogimiento; désolations de l'âme → desolaciones del alma; actes de désir /
+  d'amour → actos de deseo / de amor; les espèces (sacramentelles) → las especies; le
+  Saint-Sacrement → el Santísimo Sacramento; la louange de gloire → la alabanza de gloria;
+  complaisances → complacencias; l'âme fidèle → el alma fiel; le chef (du corps) → la cabeza;
+  les membres → los miembros; mérites → méritos; le Sacré-Cœur → el Sagrado Corazón.
+- Términos técnicos sin cambiar de grado: «nature», «personne», «substance», «grâce»,
+  «participation», «mérite», «présence réelle» se traducen por su equivalente exacto.

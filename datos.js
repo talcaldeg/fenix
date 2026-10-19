@@ -267,6 +267,31 @@ window.FENIX = {
       parecidos: ["confesiones", "marmion-vida-del-alma", "imitacion-de-cristo"]
     },
     {
+      id: "de-la-eucaristia-a-la-trinidad",
+      titulo: "De la Eucaristía a la Trinidad",
+      autor: "Marie-Vincent Bernadot, O.P.",
+      anio: "1919",
+      idioma: "es",
+      categoria: "lectura",
+      resumen: {
+        es: "Un libro breve del dominico Marie-Vincent Bernadot sobre lo que pasa en el alma cuando comulga. Cristo baja de la Trinidad hasta nosotros en la Eucaristía para llevarnos de vuelta con Él hasta la Trinidad: la comunión nos une a Su santa Humanidad y nos da a las tres divinas Personas. Bernadot explica cómo esa unión permanece después de la comunión, cómo se mantiene en el recogimiento, el trabajo, la tentación, el dolor y la alegría, y cómo crece con actos de deseo y de amor, hasta su fin: ser hijos de Dios en Cristo para alabanza de la Trinidad. Traducción nueva de Proyecto Fénix, hecha desde el francés.",
+        en: "A short book by the Dominican Marie-Vincent Bernadot on what happens in the soul at Holy Communion. Christ comes down from the Trinity to us in the Eucharist in order to bring us back with Him to the Trinity: Communion unites us to His sacred Humanity and gives us the three divine Persons. Bernadot explains how this union lasts after Communion, how it is kept in recollection, work, temptation, suffering and joy, and how it grows through acts of desire and love, toward its end: to be children of God in Christ for the praise of the Trinity. A new Proyecto Fénix translation from the French."
+      },
+      porque: {"es":"Para quien comulga seguido y siente que la comunión se le volvió rutina, o que se acaba al salir de la iglesia. Bernadot muestra que el encuentro sigue durante el día y enseña a vivirlo en el trabajo, en el cansancio y en las alegrías. Es corto, sereno y muy bueno para leer antes o después de comulgar, o en un rato de adoración.","en":"For anyone who receives Communion often and feels it has become routine, or that it ends on leaving the church. Bernadot shows that the encounter goes on through the day and teaches how to live it in work, in tiredness and in joy. It is short, serene and very good to read before or after Communion, or during a time of adoration."},
+      imagen: { src: "img/portadas/de-la-eucaristia-a-la-trinidad.jpg", credito: { es: "Rafael, «La disputa del Sacramento», 1509-1510", en: "Raphael, «The Disputation of the Holy Sacrament», 1509-1510" }, url: "https://commons.wikimedia.org/wiki/File:Disputa_del_Sacramento_(Rafael).jpg" },
+      citas: [
+        "Desde las alturas de la Trinidad, el Verbo encarnado desciende al hombre en la Eucaristía para que por la comunión el hombre ascienda a su fin último, la adorable Trinidad.",
+        "Comenzada en el bautismo, estrechada en la confirmación, nuestra unión con Cristo se consuma en el momento de la comunión.",
+        "Toda entera la adorable Trinidad habita en el corazón del que comulga.",
+        "Para que se perpetúe la unión de nuestra alma con la santa Humanidad de Nuestro Señor y la adorable Trinidad, basta con permanecer en estado de gracia."
+      ],
+      archivos: { epub: "libros/bernadot-de-la-eucaristia-a-la-trinidad.epub", pdf: "libros/bernadot-de-la-eucaristia-a-la-trinidad.pdf" },
+      editorial: { es: "Traducción nueva de Proyecto Fénix desde el francés del texto de 1919, con las notas del autor y cinco notas del editor, revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición y portada nueva.", en: "A new Proyecto Fénix translation from the French text of 1919, with the author's notes and five editor's notes, reviewed in its doctrinal passages against the Catechism; prepared with the help of artificial intelligence, with an edition note and a new cover." },
+      fuente: { texto: "Traducción de Proyecto Fénix desde el francés de 1919; licencia CC BY-NC-SA 4.0", url: "https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" },
+      delibris: null,
+      parecidos: ["marmion-vida-del-alma", "historia-de-un-alma", "imitacion-de-cristo"]
+    },
+    {
       id: "presencia-de-dios",
       titulo: "The Practice of the Presence of God",
       autor: "Brother Lawrence of the Resurrection, O.C.D.",

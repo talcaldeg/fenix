@@ -1,0 +1,11 @@
+# Nota de esta edición
+
+Esta es una traducción nueva de Proyecto Fénix, hecha directamente del francés de *De l'Eucharistie à la Trinité*, del padre Marie-Vincent Bernadot, dominico (1883-1941), publicada por primera vez en Marsella en 1919.
+
+El libro tuvo muchas reimpresiones en vida de su autor. En 1943, ya muerto el padre Bernadot, las Éditions du Cerf publicaron una «nueva edición aumentada con un capítulo inédito»; las reediciones posteriores volvieron al texto breve. Esta traducción sigue ese texto breve, el de 1919: el prólogo y los cuatro capítulos sobre la unión eucarística, su permanencia, el modo de mantenerla y perfeccionarla, y su fin. No incluye el capítulo agregado en 1943.
+
+Se tradujo solo lo que escribió el autor, desde una edición digital moderna del texto francés, sin su presentación, sus notas ni su maqueta. Las notas al pie son las de Bernadot; las referencias bíblicas se dan al modo castellano, con la numeración de la Vulgata que él usaba en los salmos y en el capítulo 6 de san Juan. Las notas marcadas «N. del E.» son de esta edición: aclaran, con el Catecismo, cinco pasajes que sin contexto podrían leerse mal. Siguiendo la costumbre de Fénix, los pronombres que se refieren a Dios van con mayúscula.
+
+La traducción se preparó con ayuda de inteligencia artificial, se cotejó párrafo por párrafo con el original francés y se revisó en sus pasajes doctrinales contra el Catecismo de la Iglesia Católica. Si encuentra un error, puede avisarlo desde el sitio de Proyecto Fénix.
+
+Traducción de Proyecto Fénix, 2026. Se puede copiar y difundir gratis, con crédito y sin fines de lucro, bajo la licencia Creative Commons BY-NC-SA 4.0.

@@ -5,7 +5,7 @@
 
 - Lee, en orden de nombre, los .md de la carpeta (menos nota.md). Cada `## ` abre un capítulo; el
   texto de un archivo sin encabezado sigue el capítulo anterior (tramos de un mismo capítulo).
-  `### ` es un subtítulo dentro del capítulo.
+  `### ` es un subtítulo dentro del capítulo y `#### `, uno de tercer nivel.
 - nota.md (si existe) va como «Nota de esta edición», después del índice.
 - Notas `[^n]` (o `[^ed1]`, del editor) con su `[^n]: texto` al final del tramo: se renumeran por
   capítulo y van al pie
@@ -24,13 +24,14 @@ from pathlib import Path
 
 CSS = """@charset "utf-8";
 body { font-family: Georgia, serif; line-height: 1.5; margin: 0 4%; }
-h1, h2, h3 { font-weight: normal; text-align: center; break-after: avoid; page-break-after: avoid;
+h1, h2, h3, h4 { font-weight: normal; text-align: center; break-after: avoid; page-break-after: avoid;
   break-inside: avoid; page-break-inside: avoid; }
 h1 { font-size: 1.6em; margin: 2.5em 0 0.6em; }
 h2 { font-size: 1.3em; margin: 2em 0 0.4em; letter-spacing: 0.04em; }
 h3 { font-size: 1em; margin: 1.6em 0 0.6em; letter-spacing: 0.08em; }
+h4 { font-size: 1em; font-style: italic; margin: 1.4em 0 0.5em; }
 p { margin: 0; text-indent: 1.4em; text-align: justify; hyphens: auto; -webkit-hyphens: auto; }
-h1 + p, h2 + p, h3 + p, p.subtitulo + p, p.separador + p, p.verso + p { text-indent: 0; }
+h1 + p, h2 + p, h3 + p, h4 + p, p.subtitulo + p, p.separador + p, p.verso + p { text-indent: 0; }
 p.subtitulo { text-align: center; text-indent: 0; font-style: italic; margin: 0 1em 2em; }
 p.separador { text-align: center; text-indent: 0; margin: 1em 0; letter-spacing: 0.5em; }
 p.verso { text-indent: 0; text-align: left; margin: 0.8em 2em; }
@@ -112,6 +113,10 @@ def leer(carpeta: Path):
             c.notas.update(defs)
             if b.startswith("### "):  # subtítulo dentro del capítulo (Preparación para la muerte: «Punto I»)
                 c.html.append(f"<h3>{enlinea(b[4:].strip())}</h3>")
+                recien_titulo = False
+                continue
+            if b.startswith("#### "):  # tercer nivel (De la Eucaristía a la Trinidad: «1. Nuestro modelo»)
+                c.html.append(f"<h4>{enlinea(b[5:].strip())}</h4>")
                 recien_titulo = False
                 continue
             if re.fullmatch(r"\d+\.\d+\.\d+", b.strip()):
