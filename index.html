@@ -2390,7 +2390,7 @@
     $("#listaBuscados").innerHTML = buscadosVisibles().map((b, i) => `<div class="buscado" role="listitem">
       <div><div class="tt">${esc(b.titulo[lang])}</div><div class="au">${esc(b.autor)}</div></div>
       ${b.delibris ? moral(b) : estimada(b.estimada)}
-      <div class="acc">${b.reservado ? `<span class="etq">${esc(t("enc.reservado"))}</span>` : ""}<button class="btn" type="button" data-buscado="${i}">${esc(t("enc.copiarLibro"))}</button></div></div>`).join("");
+      <div class="acc">${b.reservado ? `<span class="etq">${esc(t("enc.reservado"))}</span>` : ""}<button class="btn" type="button" data-buscado="${i}" aria-label="${esc(t("enc.copiarLibro"))}: ${esc(b.titulo[lang])}">${esc(t("enc.copiarLibro"))}</button></div></div>`).join("");
   }
   async function copiar(texto, boton){
     const antes = boton.textContent;
