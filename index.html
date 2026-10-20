@@ -1184,6 +1184,10 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   /* Portadas y miniaturas son <img> con loading="lazy": no se bajan las de vistas ocultas ni las que están fuera de pantalla. */
   .portada > img.fondo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:inherit}
   img.mini{display:block; object-fit:cover}
+  /* Título y autor en texto bajo la portada: se recorre el catálogo sin leer la portada y lo indexan lectores de pantalla y buscadores. */
+  .libro .pie .tl{flex:1 0 100%; display:flex; flex-direction:column; gap:2px; margin-bottom:4px}
+  .libro .pie .tl .tt{font:700 15px/1.25 Georgia,serif; color:var(--ink); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+  .libro .pie .tl .au{font-size:13px; color:var(--muted)}
   .libro .pie{padding:10px 12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font:14px system-ui,sans-serif; color:var(--muted)}
   .etq{background:var(--chip); border-radius:999px; padding:2px 8px}
   .etq.leido{color:var(--ok)}
@@ -1262,6 +1266,9 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .sin-epub-grupo > summary:hover{color:var(--ink)}
   .sin-epub-grupo .fila:first-of-type{border-top:1px solid var(--line)}
   .ficha .sello{display:inline-block; margin:0 0 8px}
+  /* Citas: más aire entre una y otra, y solo dos a la vista; el resto tras «Ver más citas». */
+  .citas-ficha{margin-top:8px} .citas-ficha blockquote{margin-bottom:18px; line-height:1.55}
+  .citas-ficha summary{cursor:pointer; font:600 14px system-ui,sans-serif; color:var(--acento); margin-bottom:12px}
   .etq.der-libre{color:var(--ok); font-weight:600} .etq.der-protegido, .etq.der-probable{color:var(--vino); font-weight:600}
   .fila .moral-obra{min-width:0}
   .ayuda{font:14px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 12px; margin:0 0 12px}
@@ -1512,7 +1519,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
         <div class="txt">
           <p class="eyebrow" data-i18n="hero.eyebrow">Biblioteca digital gratuita</p>
           <h1 data-i18n="hero.titulo">Libros que vuelven a la vida</h1>
-          <p class="lede" data-i18n="hero.lede">Novelas, teatro, poesía, ensayo y clásicos de todas las épocas, escogidos uno a uno y gratis en EPUB y PDF. Cada libro dice por qué leerlo y trae citas y su valoración moral; si no sabes por dónde empezar, te proponemos los primeros.</p>
+          <p class="lede" data-i18n="hero.lede">Clásicos escogidos uno a uno, gratis en EPUB y PDF, con citas y valoración moral.</p>
           <div class="acciones">
             <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
             <a class="btn" href="#todos" data-i18n="hero.buscar">Buscar cualquier libro</a>
@@ -1520,7 +1527,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
           <div class="cifras">
             <div><b id="cLibros"></b><span data-i18n="hero.cLibros">libros en el catálogo</span></div>
             <div><b id="cCitas"></b><span data-i18n="hero.cCitas">citas escogidas</span></div>
-            <div><b>0</b><span data-i18n="hero.cPublicidad">publicidad y registros</span></div>
+            <div><b aria-hidden="true">✓</b><span data-i18n="hero.cPublicidad">Sin publicidad ni registro</span></div>
           </div>
         </div>
       </div>
@@ -1963,13 +1970,13 @@ function iniciar(){
       "x.ayuda":"Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.","x.paginaLibro":"Page of this book (to share)",
       "doc.titulo":"Proyecto Fénix · Good books, free and hand-picked",
       "hero.eyebrow":"A free digital library","hero.titulo":"Books brought back to life",
-      "hero.lede":"Novels, plays, poetry, essays and classics from every age, chosen one by one and free in EPUB and PDF. Each book says why it is worth reading and comes with quotes and its moral rating; if you do not know where to start, we suggest the first ones.",
+      "hero.lede":"Classics chosen one by one, free in EPUB and PDF, with quotes and a moral rating.",
       "hero.ver":"Browse the library","hero.buscar":"Search any book",
-      "hero.cLibros":"books in the catalogue","hero.cCitas":"hand-picked quotes","hero.cPublicidad":"ads and sign-ups",
+      "hero.cLibros":"books in the catalogue","hero.cCitas":"hand-picked quotes","hero.cPublicidad":"No ads, no sign-up",
       "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
-      "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
+      "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
       "rec.eyebrow":"Suggestions","rec.titulo":"Where to begin","rec.todos":"See the whole catalogue →",
       "oh.eyebrow":"The idea behind us","oh.titulo":"Being for Christ «like another humanity»",
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
@@ -2005,7 +2012,7 @@ function iniciar(){
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
       "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
-      "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
+      "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.masCitas":"Ver {n} citas más","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
       "x.edFenix":"Edición Fénix","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
       "x.ayuda":"¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
@@ -2111,7 +2118,7 @@ function iniciar(){
   }
   function tarjeta(l){
     return `<article class="libro${claseLibro(l)}" data-id="${esc(l.id)}" tabindex="0">${portada(l)}
-      <div class="pie">${sello(l)}${etqsFormato(l, true)}<span class="etq">${esc(categoria(l.categoria))}</span>
+      <div class="pie"><div class="tl"><span class="tt">${esc(l.titulo)}</span><span class="au">${esc(l.autor)}</span></div>${sello(l)}${etqsFormato(l, true)}<span class="etq">${esc(categoria(l.categoria))}</span>
       ${leidos[l.id] ? `<span class="leido" title="${esc(t("x.leido"))}" aria-label="${esc(t("x.leido"))}">✓</span>` : ""}
       ${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></article>`;
   }
@@ -2263,7 +2270,7 @@ function iniciar(){
       ${l.porque ? `<div class="seccion-ficha"><strong>${esc(t("x.porque"))}</strong><p style="margin:6px 0 0">${esc(l.porque[lang] || l.porque.es)}</p></div>` : ""}
       <div class="seccion-ficha"><strong>${esc(t("x.resumen"))}</strong><p style="margin:6px 0 0">${esc(l.resumen[lang] || l.resumen.es)}</p></div>
       ${l.editorial ? `<div class="seccion-ficha"><strong>${esc(t("x.edFenix"))}</strong><p style="margin:6px 0 0">${esc(l.editorial[lang] || l.editorial.es)}</p></div>` : ""}
-      ${(l.citas||[]).length ? `<div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div style="margin-top:8px">${l.citas.map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</div></div>` : ""}
+      ${(l.citas||[]).length ? `<div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div class="citas-ficha">${l.citas.slice(0, 2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}${l.citas.length > 2 ? `<details><summary>${esc(t("x.masCitas").replace("{n}", l.citas.length - 2))}</summary>${l.citas.slice(2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</details>` : ""}</div></div>` : ""}
       <div class="seccion-ficha"><strong>${esc(t("l.moral"))}</strong><div style="margin-top:8px">${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</div></div>
       <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>
       <p class="meta" style="margin-top:14px"><a href="${esc(rutaLibro(l))}" data-pagina>${esc(t("x.paginaLibro"))}</a></p>

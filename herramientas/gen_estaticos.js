@@ -75,7 +75,7 @@ const TX = {
     biblioteca: "Biblioteca gratuita", verTodo: "Ver toda la biblioteca", abrir: "Abrir en la biblioteca",
     descargar: "Descargar", enLinea: "Leer en línea", comprar: "Comprar",
     ayuda: "¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.",
-    porque: "Por qué leerlo", resumen: "Resumen", citas: "Citas", moral: "Valoración moral", sinDelibris: "Sin valoración en Delibris",
+    porque: "Por qué leerlo", resumen: "Resumen", citas: "Citas", masCitas: "Ver {n} citas más", moral: "Valoración moral", sinDelibris: "Sin valoración en Delibris",
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
@@ -93,7 +93,7 @@ const TX = {
     biblioteca: "Free library", verTodo: "See the whole library", abrir: "Open in the library",
     descargar: "Download", enLinea: "Read online", comprar: "Buy",
     ayuda: "Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.",
-    porque: "Why read it", resumen: "Summary", citas: "Quotes", moral: "Moral rating", sinDelibris: "Not rated by Delibris",
+    porque: "Why read it", resumen: "Summary", citas: "Quotes", masCitas: "See {n} more quotes", moral: "Moral rating", sinDelibris: "Not rated by Delibris",
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
@@ -153,14 +153,17 @@ const ESTILO = `
   *{box-sizing:border-box}
   body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 Georgia,"Iowan Old Style","Palatino Linotype",serif}
   a{color:var(--vino)}
-  .wrap{max-width:860px; margin:0 auto; padding:0 16px}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 16px}
   header{border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
   .marca{color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
   .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
   main{padding:28px 0 48px}
-  .ficha{display:grid; grid-template-columns:220px 1fr; gap:28px}
-  @media (max-width:640px){.ficha{grid-template-columns:1fr; gap:16px} .ficha img{max-width:130px}}
+  /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
+  .ficha{display:grid; grid-template-columns:320px minmax(0,1fr); grid-template-areas:"lado cabeza" "lado cuerpo"; column-gap:44px; align-items:start}
+  .ficha .lado{grid-area:lado; position:sticky; top:20px} .ficha .cabeza{grid-area:cabeza} .ficha .cuerpo{grid-area:cuerpo; max-width:640px}
+  .ficha .lado .botones{flex-direction:column} .ficha .lado .btn{justify-content:center}
+  @media (max-width:760px){.ficha{grid-template-columns:1fr; grid-template-areas:"cabeza" "lado" "cuerpo"} .ficha .lado{position:static} .ficha img{max-width:150px} .ficha .lado .botones{flex-direction:row}}
   .ficha img{width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:var(--chip)}
   h1{font-size:clamp(28px,5vw,38px); line-height:1.15; margin:0 0 8px}
   h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 system-ui,sans-serif; color:var(--muted)}
@@ -171,7 +174,8 @@ const ESTILO = `
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
   .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
   .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
-  blockquote{margin:0 0 14px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic}
+  blockquote{margin:0 0 20px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic; line-height:1.6}
+  details.citas summary{cursor:pointer; font:600 15px system-ui,sans-serif; color:var(--vino); margin-bottom:14px}
   .circ{display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px}
   .circ i{width:12px; height:12px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
@@ -267,19 +271,22 @@ ${JSON.stringify(ld, null, 2)}
 <header><div class="wrap barra"><a class="marca" href="${inicio}">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></header>
 <main class="wrap">
   <div class="ficha">
-    <div>${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}</div>
-    <div>
+    <div class="lado">${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}
+      <div class="botones">${botones.join("\n        ")}</div>
+      ${tieneArchivos && l.idioma === lang ? `<p class="ayuda">${esc(x.ayuda)}</p>` : ""}
+    </div>
+    <div class="cabeza">
       ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
       <h1>${esc(l.titulo)}<span class="sub">${esc(of.sub)}</span></h1>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>
-      <div class="botones">${botones.join("\n        ")}</div>
-      ${tieneArchivos && l.idioma === lang ? `<p class="ayuda">${esc(x.ayuda)}</p>` : ""}
+    </div>
+    <div class="cuerpo">
       ${l.porque ? `<h2>${esc(x.porque)}</h2>
       <p>${esc(l.porque[lang] || l.porque.es)}</p>` : ""}
       <h2>${esc(x.resumen)}</h2>
       <p>${esc(resumen)}</p>
       ${l.editorial ? `<h2>${esc(x.edFenix)}</h2>\n      <p>${esc(l.editorial[lang] || l.editorial.es)}</p>` : ""}
-      ${(l.citas || []).length ? `<h2>${esc(x.citas)}</h2>\n      ${l.citas.map(c => `<blockquote>${esc(c)}</blockquote>`).join("\n      ")}` : ""}
+      ${(l.citas || []).length ? `<h2>${esc(x.citas)}</h2>\n      ${l.citas.slice(0, 2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("\n      ")}${l.citas.length > 2 ? `\n      <details class="citas"><summary>${esc(x.masCitas.replace("{n}", l.citas.length - 2))}</summary>${l.citas.slice(2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</details>` : ""}` : ""}
       <h2>${esc(x.moral)}</h2>
       ${d ? `<p><span class="circ" aria-hidden="true">${[1, 2, 3, 4, 5, 6].map(n => `<i class="${n <= d.valor ? "on" : ""}"></i>`).join("")}</span><strong>${d.valor} ${esc(x.de)} 6</strong>: ${esc(textoDelibris(d, lang))}. <a href="${esc(d.url)}" rel="noopener">${esc(x.verEn)}</a></p>` : `<p>${esc(x.sinDelibris)}</p>`}
       <p class="meta">${esc(x.moralNota)}</p>

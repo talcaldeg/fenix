@@ -97,14 +97,17 @@
   *{box-sizing:border-box}
   body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 Georgia,"Iowan Old Style","Palatino Linotype",serif}
   a{color:var(--vino)}
-  .wrap{max-width:860px; margin:0 auto; padding:0 16px}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 16px}
   header{border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
   .marca{color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
   .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
   main{padding:28px 0 48px}
-  .ficha{display:grid; grid-template-columns:220px 1fr; gap:28px}
-  @media (max-width:640px){.ficha{grid-template-columns:1fr; gap:16px} .ficha img{max-width:130px}}
+  /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
+  .ficha{display:grid; grid-template-columns:320px minmax(0,1fr); grid-template-areas:"lado cabeza" "lado cuerpo"; column-gap:44px; align-items:start}
+  .ficha .lado{grid-area:lado; position:sticky; top:20px} .ficha .cabeza{grid-area:cabeza} .ficha .cuerpo{grid-area:cuerpo; max-width:640px}
+  .ficha .lado .botones{flex-direction:column} .ficha .lado .btn{justify-content:center}
+  @media (max-width:760px){.ficha{grid-template-columns:1fr; grid-template-areas:"cabeza" "lado" "cuerpo"} .ficha .lado{position:static} .ficha img{max-width:150px} .ficha .lado .botones{flex-direction:row}}
   .ficha img{width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:var(--chip)}
   h1{font-size:clamp(28px,5vw,38px); line-height:1.15; margin:0 0 8px}
   h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 system-ui,sans-serif; color:var(--muted)}
@@ -115,7 +118,8 @@
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
   .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
   .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
-  blockquote{margin:0 0 14px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic}
+  blockquote{margin:0 0 20px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic; line-height:1.6}
+  details.citas summary{cursor:pointer; font:600 15px system-ui,sans-serif; color:var(--vino); margin-bottom:14px}
   .circ{display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px}
   .circ i{width:12px; height:12px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
@@ -128,15 +132,18 @@
 <header><div class="wrap barra"><a class="marca" href="../../">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="Cambiar a modo claro u oscuro" title="Cambiar a modo claro u oscuro">◐</button></div></header>
 <main class="wrap">
   <div class="ficha">
-    <div><img src="../../img/portadas/irving-rip-van-winkle.jpg" alt="John Quidor, «El regreso de Rip Van Winkle», 1849" width="400" height="600"></div>
-    <div>
-      
-      <h1>Rip Van Winkle<span class="sub">Gratis en EPUB y PDF (enlace legal)</span></h1>
-      <p class="meta">Washington Irving (trad. Carmen Torres Calderón Pinillos) · 1819 · Novelas</p>
+    <div class="lado"><img src="../../img/portadas/irving-rip-van-winkle.jpg" alt="John Quidor, «El regreso de Rip Van Winkle», 1849" width="400" height="600">
       <div class="botones"><a class="btn prim" href="https://ws-export.wmcloud.org/?format=epub&amp;lang=es&amp;page=Rip%20Van%20Winkle%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29" rel="noopener">Descargar EPUB · Wikisource</a>
         <a class="btn prim" href="https://es.wikisource.org/wiki/Rip_Van_Winkle_(traducci%C3%B3n_de_Carmen_Torres_Calder%C3%B3n_Pinillos)" rel="noopener">Leer en línea · Wikisource</a>
         <a class="btn prim" href="https://ws-export.wmcloud.org/?format=pdf-a4&amp;lang=es&amp;page=Rip%20Van%20Winkle%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29" rel="noopener">Descargar PDF · Wikisource</a></div>
       
+    </div>
+    <div class="cabeza">
+      
+      <h1>Rip Van Winkle<span class="sub">Gratis en EPUB y PDF (enlace legal)</span></h1>
+      <p class="meta">Washington Irving (trad. Carmen Torres Calderón Pinillos) · 1819 · Novelas</p>
+    </div>
+    <div class="cuerpo">
       <h2>Por qué leerlo</h2>
       <p>Un cuento corto y amable, para una tarde tranquila, sobre alguien que se pierde de su propio tiempo. Le sirve especialmente a quien siente que los años pasan sin que los note, y deja una pregunta serena sobre qué permanece y qué cambia cuando uno se distrae del mundo.</p>
       <h2>Resumen</h2>
@@ -145,7 +152,7 @@
       <h2>Citas</h2>
       <blockquote>Rip Van Winkle era, sin embargo, uno de aquellos felices mortales de disposición fácil y bobalicona que toman el mundo descuidadamente, comen con la misma indiferencia pan blanco o pan moreno a condición de evitarse la menor molestia, y preferirían morirse de hambre con un penique a trabajar por una libra.</blockquote>
       <blockquote>En realidad, Rip no era político: las transiciones de estados e imperios hacíanle muy poca mella; pero existía cierta clase de despotismo bajo el cual había gemido largo tiempo: el gobierno de las faldas.</blockquote>
-      <blockquote>Yo no soy yo mismo, soy alguna otra persona; no estoy allá, no; ése es alguien que se ha metido dentro de mi piel.</blockquote>
+      <details class="citas"><summary>Ver 1 citas más</summary><blockquote>Yo no soy yo mismo, soy alguna otra persona; no estoy allá, no; ése es alguien que se ha metido dentro de mi piel.</blockquote></details>
       <h2>Valoración moral</h2>
       <p><span class="circ" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><strong>6 de 6</strong>: Sin inconvenientes. <a href="https://www.delibris.org/es/rip-van-winkle-0" rel="noopener">Ver en delibris.org</a></p>
       <p class="meta">Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».</p>

@@ -97,14 +97,17 @@
   *{box-sizing:border-box}
   body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 Georgia,"Iowan Old Style","Palatino Linotype",serif}
   a{color:var(--vino)}
-  .wrap{max-width:860px; margin:0 auto; padding:0 16px}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 16px}
   header{border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
   .marca{color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
   .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
   main{padding:28px 0 48px}
-  .ficha{display:grid; grid-template-columns:220px 1fr; gap:28px}
-  @media (max-width:640px){.ficha{grid-template-columns:1fr; gap:16px} .ficha img{max-width:130px}}
+  /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
+  .ficha{display:grid; grid-template-columns:320px minmax(0,1fr); grid-template-areas:"lado cabeza" "lado cuerpo"; column-gap:44px; align-items:start}
+  .ficha .lado{grid-area:lado; position:sticky; top:20px} .ficha .cabeza{grid-area:cabeza} .ficha .cuerpo{grid-area:cuerpo; max-width:640px}
+  .ficha .lado .botones{flex-direction:column} .ficha .lado .btn{justify-content:center}
+  @media (max-width:760px){.ficha{grid-template-columns:1fr; grid-template-areas:"cabeza" "lado" "cuerpo"} .ficha .lado{position:static} .ficha img{max-width:150px} .ficha .lado .botones{flex-direction:row}}
   .ficha img{width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:var(--chip)}
   h1{font-size:clamp(28px,5vw,38px); line-height:1.15; margin:0 0 8px}
   h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 system-ui,sans-serif; color:var(--muted)}
@@ -115,7 +118,8 @@
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
   .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
   .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
-  blockquote{margin:0 0 14px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic}
+  blockquote{margin:0 0 20px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic; line-height:1.6}
+  details.citas summary{cursor:pointer; font:600 15px system-ui,sans-serif; color:var(--vino); margin-bottom:14px}
   .circ{display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px}
   .circ i{width:12px; height:12px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
@@ -128,15 +132,18 @@
 <header><div class="wrap barra"><a class="marca" href="../../">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="Cambiar a modo claro u oscuro" title="Cambiar a modo claro u oscuro">◐</button></div></header>
 <main class="wrap">
   <div class="ficha">
-    <div><img src="../../img/portadas/irving-la-leyenda-de-sleepy-hollow.jpg" alt="John Quidor, «El jinete sin cabeza persiguiendo a Ichabod Crane», 1858" width="400" height="600"></div>
-    <div>
-      
-      <h1>La leyenda del Valle Encantado<span class="sub">Gratis en EPUB y PDF (enlace legal)</span></h1>
-      <p class="meta">Washington Irving (trad. Carmen de Pinillos) · 1820 · Novelas</p>
+    <div class="lado"><img src="../../img/portadas/irving-la-leyenda-de-sleepy-hollow.jpg" alt="John Quidor, «El jinete sin cabeza persiguiendo a Ichabod Crane», 1858" width="400" height="600">
       <div class="botones"><a class="btn prim" href="https://ws-export.wmcloud.org/?format=epub&amp;lang=es&amp;page=La%20leyenda%20del%20Valle%20Encantado%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29" rel="noopener">Descargar EPUB · Wikisource</a>
         <a class="btn prim" href="https://es.wikisource.org/wiki/La_leyenda_del_Valle_Encantado_(traducción_de_Carmen_Torres_Calderón_Pinillos)" rel="noopener">Leer en línea · Wikisource</a>
         <a class="btn prim" href="https://ws-export.wmcloud.org/?format=pdf-a4&amp;lang=es&amp;page=La%20leyenda%20del%20Valle%20Encantado%20%28traducci%C3%B3n%20de%20Carmen%20Torres%20Calder%C3%B3n%20Pinillos%29" rel="noopener">Descargar PDF · Wikisource</a></div>
       
+    </div>
+    <div class="cabeza">
+      
+      <h1>La leyenda del Valle Encantado<span class="sub">Gratis en EPUB y PDF (enlace legal)</span></h1>
+      <p class="meta">Washington Irving (trad. Carmen de Pinillos) · 1820 · Novelas</p>
+    </div>
+    <div class="cuerpo">
       <h2>Por qué leerlo</h2>
       <p>Para leer en una noche de invierno, con una lámpara y sin apuro: mezcla el miedo suave del cuento de fogata con una sonrisa ante la vanidad del maestro. Sirve a quien busca un clásico breve y ameno, que recuerda cómo se contaban las historias en la aldea antes de las pantallas.</p>
       <h2>Resumen</h2>
@@ -145,8 +152,7 @@
       <h2>Citas</h2>
       <blockquote>Si alguna vez anhelara yo un pacífico retiro donde huir del mundo y de sus distracciones y soñar en tranquila quietud todo el resto de una agitada existencia, nada respondería mejor a tal propósito que este escondido vallecito.</blockquote>
       <blockquote>Por más despierta que haya sido una persona antes de penetrar en la región de los sueños, es seguro que se apropiará en poco tiempo la influencia encantada del ambiente, volviéndose fantástica, fingiendo quimeras y viendo aparecidos.</blockquote>
-      <blockquote>Son como aquellas fajas de agua tranquila que bordean algún tumultuoso arroyo, donde permanecen quietamente al ancla burbujas y pajas meciéndose con suavidad en su improvisado puerto sin ser molestadas por el flujo de la corriente.</blockquote>
-      <blockquote>Todas las historias de duendes y espectros que había oído al crepúsculo, acudían ahora en tropel a su memoria.</blockquote>
+      <details class="citas"><summary>Ver 2 citas más</summary><blockquote>Son como aquellas fajas de agua tranquila que bordean algún tumultuoso arroyo, donde permanecen quietamente al ancla burbujas y pajas meciéndose con suavidad en su improvisado puerto sin ser molestadas por el flujo de la corriente.</blockquote><blockquote>Todas las historias de duendes y espectros que había oído al crepúsculo, acudían ahora en tropel a su memoria.</blockquote></details>
       <h2>Valoración moral</h2>
       <p><span class="circ" aria-hidden="true"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i></span><strong>6 de 6</strong>: Sin inconvenientes. <a href="https://www.delibris.org/es/la-leyenda-de-sleepy-hollow" rel="noopener">Ver en delibris.org</a></p>
       <p class="meta">Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».</p>
