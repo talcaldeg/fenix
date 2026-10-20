@@ -994,7 +994,7 @@ window.FENIX = {
       archivos: { epub: "libros/platon-apologia-de-socrates.epub", pdf: "libros/platon-apologia-de-socrates.pdf" },
       fuente: { texto: "Obras completas de Platón, tomo I (Madrid, 1871), transcritas en es.wikisource.org (dominio público); edición digital y portada de Proyecto Fénix", url: "https://es.wikisource.org/wiki/Apolog%C3%ADa_de_S%C3%B3crates_(de_Azc%C3%A1rate_tr.)" },
       editorial: { es: "Edición digital de Proyecto Fénix sobre la traducción de Patricio de Azcárate (1871), transcrita en Wikisource: conserva la ortografía de la época, el argumento y las notas del traductor, con portada nueva.", en: "Proyecto Fénix digital edition of Patricio de Azcárate's translation (1871), transcribed on Wikisource: it keeps the spelling of the time and the translator's introduction and notes, with a new cover." },
-      delibris: null,
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/apologia-de-socrates"},
       parecidos: ["confesiones", "ortodoxia", "imitacion-de-cristo"],
       versiones: {
         en: {
