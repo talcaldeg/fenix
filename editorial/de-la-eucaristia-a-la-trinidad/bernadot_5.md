@@ -2,7 +2,7 @@
 
 Importa soberanamente vigilar nuestras alegrías.
 
-¿Qué es, en efecto, la alegría, sino el florecimiento del alma en la posesión de lo que ama? La naturaleza de nuestra alegría manifiesta la naturaleza de nuestro amor, su pureza, la pureza de nuestro corazón. Es necesario, pues, velar con exacto cuidado para no alejarnos de Dios en la alegría y practicar la palabra de san Pablo: *Tengan en ustedes los mismos sentimientos que animaban a Cristo Jesús*[^110]. Alegrarnos con Jesús y solo de lo que Le alegra, sea en nosotros, sea en el prójimo, sea en Él mismo. En todas las cosas necesitamos mantenernos en Dios, pero sobre todo en la alegría y en el amor.
+¿Qué es, en efecto, la alegría, sino el florecimiento del alma en la posesión de lo que ama? La naturaleza de nuestra alegría manifiesta la naturaleza de nuestro amor, su pureza, la pureza de nuestro corazón. Es necesario, pues, velar con exacto cuidado para no alejarnos de Dios en la alegría y practicar la palabra de san Pablo: *Tengan en ustedes los mismos sentimientos que animaban a Cristo Jesús*[^110]. Alegrarnos con Jesús y solo de lo que le alegra, sea en nosotros, sea en el prójimo, sea en Él mismo. En todas las cosas necesitamos mantenernos en Dios, pero sobre todo en la alegría y en el amor.
 
 ### La fuente de la alegría
 
@@ -10,13 +10,13 @@ Las criaturas nos dan alegrías. Algunas, las de la amistad, por ejemplo, son ex
 
 Pero estas alegrías no son más que secundarias. Para el cristiano, la alegría fundamental es saber que Dios es. ¡Dios existe! El Infinito, el Ser esencial y necesario. Causa de todo, la Verdad, la Belleza, el Bien, la Bondad, el Poder, la Santidad, la soberana Pureza y la Justicia y el Amor… ¡Dios existe y es todo eso! ¡Lo es eternamente, inmutablemente, infinitamente!…
 
-Dios existe, y se conoce y se ama. Es uno y es trino: es Padre, Verbo y Espíritu. Como Padre despliega Su vida infinita en Su Hijo, que es Su Pensamiento y Su Gloria, y ambos se consuman en la unidad de Su común Amor, el Espíritu Santo, término subsistente y eterno de Su misterioso Beso, de Su Alegría, de Su infinito Júbilo. El Padre, el Hijo y el Espíritu Santo se aman con un amor sin medida: son felices, infinitamente felices, eternamente felices, inmutablemente felices… ¡Y nos llaman a entrar en comunión con Su Vida, eternamente!
+Dios existe, y se conoce y se ama. Es uno y es trino: es Padre, Verbo y Espíritu. Como Padre despliega su vida infinita en su Hijo, que es su Pensamiento y su Gloria, y ambos se consuman en la unidad de su común Amor, el Espíritu Santo, término subsistente y eterno de su misterioso Beso, de su Alegría, de su infinito Júbilo. El Padre, el Hijo y el Espíritu Santo se aman con un amor sin medida: son felices, infinitamente felices, eternamente felices, inmutablemente felices… ¡Y nos llaman a entrar en comunión con su Vida, eternamente!
 
-Saber esto es, para el alma que ama, la fuente de una alegría sin fin y la más alta de todas. Alegrarse de que Dios sea Dios, alegrarse de la alegría de Dios es un acto sublime y santísimo: es la caridad pura. Esta alegría arranca al alma de las miserias de la pobre vida humana para elevarla por encima de todo y hacerla entrar en la vida íntima de la adorable Trinidad, en lo que san Pablo llama *las profundidades de Dios*[^111]. Ella hacía cantar a David: *Señor, quien Te mira rebosa de regocijo*[^112]. Es uno de los frutos más divinos de la presencia y de la operación del Espíritu Santo en la criatura redimida. Diviniza el alma.
+Saber esto es, para el alma que ama, la fuente de una alegría sin fin y la más alta de todas. Alegrarse de que Dios sea Dios, alegrarse de la alegría de Dios es un acto sublime y santísimo: es la caridad pura. Esta alegría arranca al alma de las miserias de la pobre vida humana para elevarla por encima de todo y hacerla entrar en la vida íntima de la adorable Trinidad, en lo que san Pablo llama *las profundidades de Dios*[^111]. Ella hacía cantar a David: *Señor, quien te mira rebosa de regocijo*[^112]. Es uno de los frutos más divinos de la presencia y de la operación del Espíritu Santo en la criatura redimida. Diviniza el alma.
 
 A esta alegría hay que referir todas las demás. Será fácil si recordamos que todas nuestras alegrías no son ni pueden ser más que un rebosar de la alegría infinita del Espíritu Santo, *que nos ha sido dado*[^113].
 
-La fuente de toda alegría está en nosotros: El que cree en mí, de su seno correrán ríos de agua viva. El Evangelista añade: *Jesús decía esto del Espíritu que habían de recibir los que creyeran en Él*[^114]. El bautismo abrió esta fuente interior. Cada comunión la ensancha. *Un río alegra con sus ondas la ciudad de Dios, el santuario donde habita el Altísimo*[^115].
+La fuente de toda alegría está en nosotros: El que cree en mí, de su seno correrán ríos de agua viva. El Evangelista añade: *Jesús decía esto del Espíritu que habían de recibir los que creyeran en Él*[^114]. El Bautismo abrió esta fuente interior. Cada Comunión la ensancha. *Un río alegra con sus ondas la ciudad de Dios, el santuario donde habita el Altísimo*[^115].
 
 La más pequeña verdad de fe es un mundo de alegría donde nuestra alma puede dilatarse a toda hora: *Porque creen, serán colmados de una alegría inenarrable*, dice el Príncipe de los Apóstoles[^116]. *Serán*, añade Isaías, *como un huerto siempre regado, como una fuente cuyas aguas nunca se agotan*[^117].
 
@@ -24,13 +24,13 @@ De nosotros depende, pues, vivir en la alegría. ¡Y qué alegría! Hay alegría
 
 ### Vivir en la alegría
 
-*Alégrense, pues, en el Señor, sin cesar. Se lo repito: alégrense*[^118]. Dios creó a Sus hijos para la alegría. Lo hizo todo para que vivan en alegría. ¿Qué es la creación, qué es la santificación, sino una ordenación a la bienaventuranza natural o sobrenatural, una efusión de la alegría divina? ¿Qué es la Eucaristía, sino una fuente inagotable de alegría abierta en la Iglesia y en cada alma? Él quiere que vivamos en alegría. Jesús lo pidió en Su oración suprema: *Padre santo, pido que tengan en sí la plenitud de mi alegría*[^119].
+*Alégrense, pues, en el Señor, sin cesar. Se lo repito: alégrense*[^118]. Dios creó a sus hijos para la alegría. Lo hizo todo para que vivan en alegría. ¿Qué es la creación, qué es la santificación, sino una ordenación a la bienaventuranza natural o sobrenatural, una efusión de la alegría divina? ¿Qué es la Eucaristía, sino una fuente inagotable de alegría abierta en la Iglesia y en cada alma? Él quiere que vivamos en alegría. Jesús lo pidió en su oración suprema: *Padre santo, pido que tengan en sí la plenitud de mi alegría*[^119].
 
-El dolor mismo debe convertirse y resolverse en alegría. El alma santa de Cristo contenía a la vez inmensas alegrías e inmensos dolores. Por su parte inferior, se sumergía en la extrema agonía; por sus cumbres, penetraba en el júbilo divino. Pero la alegría dominaba cualquier otro sentimiento: en ella venían a fundirse todos Sus sufrimientos e inmolaciones, pues Jesús sabía que Sus inmolaciones, cuanto más duras eran, más gloria daban a Dios y más alta exaltación preparaban a Su Humanidad.
+El dolor mismo debe convertirse y resolverse en alegría. El alma santa de Cristo contenía a la vez inmensas alegrías e inmensos dolores. Por su parte inferior, se sumergía en la extrema agonía; por sus cumbres, penetraba en el júbilo divino. Pero la alegría dominaba cualquier otro sentimiento: en ella venían a fundirse todos sus sufrimientos e inmolaciones, pues Jesús sabía que sus inmolaciones, cuanto más duras eran, más gloria daban a Dios y más alta exaltación preparaban a su Humanidad.
 
 Nuestra alma puede estar así desolada y gozosa: desolada en esa parte inferior que se aproxima a los sentidos; gozosa en esas cumbres que gobierna solo la voluntad. Aun en las horas más duras, el dolor no habita solo en nosotros: tenemos también a Aquel que consuela: *Rogaré al Padre y les dará otro Consolador para que permanezca siempre con ustedes. Es el Espíritu de verdad… Estará en ustedes*[^120].
 
-Permanezcamos en la alegría: será permanecer en el Espíritu Santo. Recordemos que la comunión nos ha sumergido en Aquel a quien santa Catalina de Siena gustaba llamar el océano de la paz: «Oh Dios eterno, exclamaba ella, Tú eres un océano tranquilo donde viven y se alimentan las almas. Ellas hallan allí su reposo en la unión del amor».
+Permanezcamos en la alegría: será permanecer en el Espíritu Santo. Recordemos que la Comunión nos ha sumergido en Aquel a quien santa Catalina de Siena gustaba llamar el océano de la paz: «Oh Dios eterno, exclamaba ella, Tú eres un océano tranquilo donde viven y se alimentan las almas. Ellas hallan allí su reposo en la unión del amor».
 
 La alegría es un culto que debemos rendir a Dios. Es el barómetro del alma: su grado indica el grado del amor. En la prueba y la persecución perpetuas, la Iglesia, tipo sublime del alma, no deja de alegrarse. Su liturgia es una fiesta que renace cada día. Cuenta sus días por sus fiestas; camina en el dolor, pero con los ojos levantados al cielo, cantando las perfecciones y el amor del Esposo. Vive en alegría: alegría libre, fuerte y serena, fruto del amor.
 
@@ -38,17 +38,17 @@ El cristiano es un sembrador de alegría, y por eso hace grandes cosas. La alegr
 
 \*
 
-¡Alegría y regocijo sean para Ti, en mi nombre, oh Dios de mi vida, por la soberanía de Tu Trinidad, por la esencial unidad de Tu sustancia, por la propiedad de Tus Personas, por Su unión y Sus íntimas relaciones, fuente de Tu inefable dicha!
+¡Alegría y regocijo sean para Ti, en mi nombre, oh Dios de mi vida, por la soberanía de tu Trinidad, por la esencial unidad de tu sustancia, por la propiedad de tus Personas, por su unión y sus íntimas relaciones, fuente de tu inefable dicha!
 
-Alegría y regocijo sean para Ti, por Tu incomprensible grandeza, por Tu inmutable eternidad, por Tu suprema santidad, que excluye toda mancha y es la fuente de toda pureza, y por Tu gloriosa y perfecta felicidad.
+Alegría y regocijo sean para Ti, por tu incomprensible grandeza, por tu inmutable eternidad, por tu suprema santidad, que excluye toda mancha y es la fuente de toda pureza, y por tu gloriosa y perfecta felicidad.
 
-¡Alegría y regocijo sean para Ti, por la carne purísima de Tu Humanidad, con la cual me purificaste; por Tu augustísima alma; por Tu divino corazón, que el amor traspasó por mí hasta la muerte!
+¡Alegría y regocijo sean para Ti, por la Carne purísima de tu Humanidad, con la cual me purificaste; por tu augustísima alma; por tu divino Corazón, que el amor traspasó por mí hasta la muerte!
 
-¡Alegría y regocijo sean para Ti en ese corazón amantísimo, lleno de tierna solicitud hacia mí, tan sediento en su amor por mí que jamás reposará hasta que me haya recibido en Sí mismo por la eternidad!
+¡Alegría y regocijo sean para Ti en ese Corazón amantísimo, lleno de tierna solicitud hacia mí, tan sediento en su amor por mí que jamás reposará hasta que me haya recibido en sí mismo por la eternidad!
 
-¡Alegría y regocijo sean para Ti, por el corazón y el alma dignísima de la gloriosa Virgen María, Tu Madre, que me diste por madre a mí mismo en las necesidades de mi salvación, abriéndome para siempre el tesoro de su bondad maternal!
+¡Alegría y regocijo sean para Ti, por el Corazón y el alma dignísima de la gloriosa Virgen María, tu Madre, que me diste por madre a mí mismo en las necesidades de mi salvación, abriéndome para siempre el tesoro de su bondad maternal!
 
-¡Alegría y regocijo sean para Ti de parte de todas Tus criaturas que llenan el cielo, la tierra y los abismos! ¡Que Te den esa alabanza eterna que sale de Ti y vuelve a Ti como a su principio!
+¡Alegría y regocijo sean para Ti de parte de todas tus criaturas que llenan el cielo, la tierra y los abismos! ¡Que te den esa alabanza eterna que sale de Ti y vuelve a Ti como a su principio!
 
 ¡Alegría y regocijo sean para Ti de parte de mi corazón y de mi alma, de parte de mi espíritu y de mi carne, de parte de todos los seres del universo!
 
@@ -58,33 +58,33 @@ Santa Gertrudis
 
 ### II. Perfeccionar la unión
 
-Fundada en el estado de gracia santificante, la unión con Dios puede existir en grados muy diversos. En la escala de la perfección, los grados son casi infinitos. La comunión de la mañana nos establece en esa unión de amor que hemos tratado de describir. ¡Ay! Esta unión puede relajarse. Pero también puede hacerse sin cesar más perfecta. El esfuerzo del cristiano a lo largo del día debe ser precisamente aumentar y perfeccionar la unión eucarística. Un medio muy eficaz es la repetición de los actos de deseo y de los actos de amor.
+Fundada en el estado de gracia santificante, la unión con Dios puede existir en grados muy diversos. En la escala de la perfección, los grados son casi infinitos. La Comunión de la mañana nos establece en esa unión de amor que hemos tratado de describir. ¡Ay! Esta unión puede relajarse. Pero también puede hacerse sin cesar más perfecta. El esfuerzo del cristiano a lo largo del día debe ser precisamente aumentar y perfeccionar la unión eucarística. Un medio muy eficaz es la repetición de los actos de deseo y de los actos de amor.
 
 #### 1. Repetición de los actos de deseo
 
-Daniel recibió la comunicación del misterio de Cristo porque era hombre de deseos. Un alma que desea a Jesús no puede dejar de entrar profundamente en el conocimiento y el gusto de Sus misterios.
+Daniel recibió la comunicación del misterio de Cristo porque era hombre de deseos. Un alma que desea a Jesús no puede dejar de entrar profundamente en el conocimiento y el gusto de sus misterios.
 
 El deseo aparta los obstáculos; abre la puerta del alma para la cual se realiza la arrebatadora palabra del Apocalipsis: *Mira que estoy a la puerta y llamo: si alguien oye mi voz y abre la puerta, entraré en su casa, cenaré con él y él conmigo*[^122].
 
 El deseo dilata el alma y la adapta al objeto deseado: la ajusta, por así decir, a Dios. El Padre celestial se dignó asegurárselo a santa Catalina de Siena: «Ninguna virtud puede merecerte la vida eterna si me sirves de manera finita, pues yo, el Dios infinito, quiero ser servido de manera infinita: ahora bien, tú no tienes de infinito sino el deseo y el impulso de tu alma». Pero, decía además, «este deseo, como todas las demás virtudes, solo vale por Cristo crucificado, mi Hijo único[^123]».
 
-Será muy bueno excitar en el alma el deseo de la comunión. «El perfecto ejercicio del amor, dice Bossuet, es desear sin cesar recibir a Jesucristo. La mesa está preparada: faltan los invitados; pero, oh Jesús, Tú los llamas».
+Será muy bueno excitar en el alma el deseo de la Comunión. «El perfecto ejercicio del amor, dice Bossuet, es desear sin cesar recibir a Jesucristo. La mesa está preparada: faltan los invitados; pero, oh Jesús, Tú los llamas».
 
-La vida de muchos santos fue una larga y ardiente aspiración de su alma hacia la unión eucarística. San Ignacio Mártir escribía a los romanos: «No tengo gusto por un alimento corruptible, ni por los placeres de este mundo. Quiero el pan de Dios, que es la carne de Jesucristo, del linaje de David. Quiero como bebida Su sangre, que es caridad incorruptible[^124]».
+La vida de muchos santos fue una larga y ardiente aspiración de su alma hacia la unión eucarística. San Ignacio Mártir escribía a los romanos: «No tengo gusto por un alimento corruptible, ni por los placeres de este mundo. Quiero el pan de Dios, que es la Carne de Jesucristo, del linaje de David. Quiero como bebida su Sangre, que es caridad incorruptible[^124]».
 
-Santa Catalina de Siena suspiraba noche y día por la comunión. Apenas llegaba el alba, corría a la iglesia, literalmente llevada por su deseo, cuyo ardor devolvía el movimiento a su cuerpo desvencijado. «Padre mío, tengo mucha hambre», decía a menudo al beato Raimundo para expresarle su necesidad de comulgar: «Por amor de Dios, dé a mi alma su alimento».
+Santa Catalina de Siena suspiraba noche y día por la Comunión. Apenas llegaba el alba, corría a la iglesia, literalmente llevada por su deseo, cuyo ardor devolvía el movimiento a su cuerpo desvencijado. «Padre mío, tengo mucha hambre», decía a menudo al beato Raimundo para expresarle su necesidad de comulgar: «Por amor de Dios, dé a mi alma su alimento».
 
-Santa Margarita María decía: «Mi corazón se siente consumido por el deseo de amar a mi Dios, y eso me da un deseo insaciable de la comunión y del sufrimiento… Un día de Viernes Santo, cuenta, hallándome en un deseo ardiente de recibir a Nuestro Señor, Le dije con muchas lágrimas: “Amable Jesús, quiero consumirme deseándote y, no pudiendo poseerte en este día, no cesaré de desearte”. Vino a consolarme con Su dulce presencia y me dijo: “Hija mía, tu deseo ha penetrado tan adentro en mi corazón que, si no hubiera instituido este sacramento de amor, lo haría ahora para hacerme tu alimento. Me complazco tanto en ser allí deseado que, cuantas veces el corazón forma este deseo, tantas veces lo miro con amor para atraerlo hacia mí”».
+Santa Margarita María decía: «Mi corazón se siente consumido por el deseo de amar a mi Dios, y eso me da un deseo insaciable de la Comunión y del sufrimiento… Un día de Viernes Santo, cuenta, hallándome en un deseo ardiente de recibir a Nuestro Señor, le dije con muchas lágrimas: “Amable Jesús, quiero consumirme deseándote y, no pudiendo poseerte en este día, no cesaré de desearte”. Vino a consolarme con su dulce presencia y me dijo: “Hija mía, tu deseo ha penetrado tan adentro en mi Corazón que, si no hubiera instituido este sacramento de amor, lo haría ahora para hacerme tu alimento. Me complazco tanto en ser allí deseado que, cuantas veces el corazón forma este deseo, tantas veces lo miro con amor para atraerlo hacia mí”».
 
 En el tabernáculo, Jesús parece estar, como antaño bajo los pórticos del Templo, de pie y clamando a la muchedumbre: ¡Si alguien tiene sed, que venga a mí y beba[^125]! o renovando la invitación de la divina Sabiduría: Vengan a mí, todos los que me desean, y sáciense[^126].
 
-Despertemos, pues, en nosotros deseos cada vez más frecuentes, cada vez más ardientes. Que nuestra alma esté siempre vuelta hacia la Eucaristía. Vivamos en estado de deseo, en estado de aspiración, como el Salmista: *Abro la boca y atraigo el Espíritu*[^127]. Esta sed de lo divino es una de las gracias más preciosas que Dios hizo prometer por Sus Profetas: *Vendrán días en que enviaré el hambre sobre la tierra, no el hambre de pan ni la sed de agua, sino el hambre del Verbo de Dios*[^128].
+Despertemos, pues, en nosotros deseos cada vez más frecuentes, cada vez más ardientes. Que nuestra alma esté siempre vuelta hacia la Eucaristía. Vivamos en estado de deseo, en estado de aspiración, como el Salmista: *Abro la boca y atraigo el Espíritu*[^127]. Esta sed de lo divino es una de las gracias más preciosas que Dios hizo prometer por sus Profetas: *Vendrán días en que enviaré el hambre sobre la tierra, no el hambre de pan ni la sed de agua, sino el hambre del Verbo de Dios*[^128].
 
 ¿Hasta dónde es legítimo que nuestro deseo se lance? ¿Podemos aspirar a los más secretos misterios de la unión divina?
 
 Sí, con tal que nuestro deseo se mantenga en la humildad y en la gozosa sumisión a la voluntad de Dios.
 
-Sin duda, desear los favores extraordinarios que la teología llama gracias gratuitamente dadas (revelaciones, visiones, etc.) sería necio orgullo y exponerse a las peores ilusiones. Pero desear la unión más estrecha posible de nuestra alma con Dios es legítimo y santificante. *¡Que me bese con un beso de Su boca!*[^129], exclama la esposa del Cantar. Y habla en nombre de toda criatura redimida y santificada por la gracia, que aspira a ese feliz estado en que el alma *se adhiere al Señor hasta no ser con Él sino un solo espíritu*[^130].
+Sin duda, desear los favores extraordinarios que la teología llama gracias gratuitamente dadas (revelaciones, visiones, etc.) sería necio orgullo y exponerse a las peores ilusiones. Pero desear la unión más estrecha posible de nuestra alma con Dios es legítimo y santificante. *¡Que me bese con un beso de su boca!*[^129], exclama la esposa del Cantar. Y habla en nombre de toda criatura redimida y santificada por la gracia, que aspira a ese feliz estado en que el alma *se adhiere al Señor hasta no ser con Él sino un solo espíritu*[^130].
 
 ¿Quién hará nacer del pobre yo de nuestra alma esos deseos tan santos como audaces?
 
@@ -94,7 +94,7 @@ Como el ciervo suspira por las fuentes de agua, así mi alma suspira por Ti, oh 
 
 Mi alma tiene sed de Dios, del Dios vivo…
 
-Dios mío, a Ti Te busco,
+Dios mío, a Ti te busco,
 
 Tiene sed de Ti, mi alma,
 
@@ -108,11 +108,11 @@ Salmos 41 y 62
 
 San Juan escribió: *Dios es amor*[^132]. Se puede decir también: Jesús es amor. Y debería poderse añadir: el cristiano es amor.
 
-En el seno de la adorable Trinidad, la vida del Verbo es amar a Su Padre, refluir, por un amor inmenso, hacia Su fuente y devolverle todo lo que de ella recibe.
+En el seno de la adorable Trinidad, la vida del Verbo es amar a su Padre, refluir, por un amor inmenso, hacia su fuente y devolverle todo lo que de ella recibe.
 
-En la tierra, el amor fue también Su vida. El Verbo se encarnó por amor a Su Padre, para revelárnoslo y conquistarnos para Él. El amor Lo hizo hombre, el amor Lo clavó en la cruz. En el fondo de todos Sus misterios, de todos Sus trabajos, de todos Sus sufrimientos, está el amor de Su Padre.
+En la tierra, el amor fue también su vida. El Verbo se encarnó por amor a su Padre, para revelárnoslo y conquistarnos para Él. El amor lo hizo hombre, el amor lo clavó en la Cruz. En el fondo de todos sus misterios, de todos sus trabajos, de todos sus sufrimientos, está el amor de su Padre.
 
-Es el mismo amor el que Lo hizo pan y Lo retiene en el secreto del tabernáculo. ¿Qué hace Él en el impenetrable silencio de la Hostia? Ante todo, ama a Su Padre.
+Es el mismo amor el que lo hizo pan y lo retiene en el secreto del tabernáculo. ¿Qué hace Él en el impenetrable silencio de la Hostia? Ante todo, ama a su Padre.
 
 El que comulga procurará vivir como Jesús: primero amará a Dios. Lo amará como lo exige el primer mandamiento, que contiene todos los demás: con todo su corazón, con todo su espíritu, con todas sus fuerzas. Sin duda, no es posible a la flaqueza humana hacer continuamente actos formales de amor. Al menos, con la gracia de Dios, podemos multiplicarlos de tal modo que gobiernen muy de cerca los actos de las demás virtudes y ejerzan sobre nuestra vida una influencia cada vez más estrecha, cada vez más penetrante.
 
@@ -128,13 +128,13 @@ El que comulga procurará vivir como Jesús: primero amará a Dios. Lo amará co
 
 \*
 
-¡Dios mío! ¡Amor mío! Tú eres todo mío y yo soy todo Tuyo. Dilátame en el amor, para que aprenda a gustar en el fondo de mi corazón cuán dulce es amar, y fundirse y perderse en el amor.
+¡Dios mío! ¡Amor mío! Tú eres todo mío y yo soy todo tuyo. Dilátame en el amor, para que aprenda a gustar en el fondo de mi corazón cuán dulce es amar, y fundirse y perderse en el amor.
 
 Que el amor me arrebate y me eleve por encima de mí mismo por la viveza de sus transportes.
 
-Que cante el cántico del amor. Que Te siga, oh mi Amado, hasta las alturas de Tu gloria. Que todas las fuerzas de mi alma se agoten en alabarte, y que ella desfallezca de alegría y de amor.
+Que cante el cántico del amor. Que te siga, oh mi Amado, hasta las alturas de tu gloria. Que todas las fuerzas de mi alma se agoten en alabarte, y que ella desfallezca de alegría y de amor.
 
-Que Te ame más que a mí. Que no me ame a mí mismo sino por Ti. Y que ame en Ti a todos los que Te aman de verdad, como lo ordena la ley de amor, que descubrimos en Tu luz.
+Que te ame más que a mí. Que no me ame a mí mismo sino por Ti. Y que ame en Ti a todos los que te aman de verdad, como lo ordena la ley de amor, que descubrimos en tu luz.
 
 Imitación, libro III, cap. V
 
@@ -158,13 +158,13 @@ Oh cristiano, *¡si supieras el don de Dios!*
 
 Instrúyeme, dirígeme, sostenme.
 
-¡Oh Padre! Por Tu infinito poder, fija en Ti mi memoria y llénala de pensamientos santos y divinos.
+¡Oh Padre! Por tu infinito poder, fija en Ti mi memoria y llénala de pensamientos santos y divinos.
 
-¡Oh Hijo! Por Tu eterna sabiduría, ilumina mi entendimiento, concédele el conocimiento de Tu soberana verdad y de mi propia bajeza.
+¡Oh Hijo! Por tu eterna sabiduría, ilumina mi entendimiento, concédele el conocimiento de tu soberana verdad y de mi propia bajeza.
 
-¡Oh Espíritu Santo, que eres el amor del Padre y del Hijo! Por Tu incomprensible bondad, transporta mi voluntad a Ti e inflámala con el fuego inextinguible de Tu caridad.
+¡Oh Espíritu Santo, que eres el amor del Padre y del Hijo! Por tu incomprensible bondad, transporta mi voluntad a Ti e inflámala con el fuego inextinguible de tu caridad.
 
-¡Oh Señor mío y Dios mío! ¡Oh principio mío y fin mío, oh esencia soberanamente simple, soberanamente tranquila y soberanamente amable! ¡Oh abismo de dulzura y de delicias! ¡Oh mi amable luz y soberana dicha de mi alma! ¡Océano de alegrías inexpresables! Plenitud perfecta de todo bien, Dios mío y mi Todo, ¿qué me falta aún cuando Te poseo?
+¡Oh Señor mío y Dios mío! ¡Oh principio mío y fin mío, oh esencia soberanamente simple, soberanamente tranquila y soberanamente amable! ¡Oh abismo de dulzura y de delicias! ¡Oh mi amable luz y soberana dicha de mi alma! ¡Océano de alegrías inexpresables! Plenitud perfecta de todo bien, Dios mío y mi Todo, ¿qué me falta aún cuando te poseo?
 
 Tú eres mi bien único e inmutable.
 
@@ -172,7 +172,7 @@ No debo buscar sino a Ti.
 
 No busco ni deseo sino a Ti.
 
-Señor, atráeme tras de Ti. Llamo, Señor: ábreme. Abre a un huérfano que Te implora. Sumérgeme en el abismo de Tu divinidad. Hazme un solo espíritu Contigo, para que pueda, dentro de mí, poseer Tus delicias.
+Señor, atráeme tras de Ti. Llamo, Señor: ábreme. Abre a un huérfano que te implora. Sumérgeme en el abismo de tu divinidad. Hazme un solo espíritu contigo, para que pueda, dentro de mí, poseer tus delicias.
 
 Beato Alberto Magno
 

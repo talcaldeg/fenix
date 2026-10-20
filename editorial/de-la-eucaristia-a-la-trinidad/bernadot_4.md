@@ -2,7 +2,7 @@
 
 Sufrir es necesario.
 
-Está escrito de nuestra cabeza: *Era necesario que Cristo padeciera, y así podía entrar en Su gloria*[^84]. Esto vale también de los miembros. *Todos los que quieren vivir piadosamente en Cristo Jesús tendrán que sufrir persecución*[^85]. Subimos al cielo como se sube a un calvario, llevando la cruz: *Si alguien quiere caminar tras de mí, renuncie a sí mismo, tome su cruz y me siga*[^86].
+Está escrito de nuestra cabeza: *Era necesario que Cristo padeciera, y así podía entrar en su gloria*[^84]. Esto vale también de los miembros. *Todos los que quieren vivir piadosamente en Cristo Jesús tendrán que sufrir persecución*[^85]. Subimos al Cielo como se sube a un calvario, llevando la cruz: *Si alguien quiere caminar tras de mí, renuncie a sí mismo, tome su cruz y me siga*[^86].
 
 Es, pues, esencial saber sufrir.
 
@@ -18,11 +18,11 @@ El sufrimiento afecta sobre todo al cuerpo y a las potencias inferiores del alma
 
 En este camino Jesús nos ha precedido y ha avanzado más lejos de lo que nosotros podremos ir jamás.
 
-Porque venía con miras al Calvario, el Espíritu Santo dispuso especialmente Su Humanidad para el sufrimiento, Le dio un cuerpo de una delicadeza exquisita y de una extrema sensibilidad, a fin de que fuera capaz de sufrir en exceso. Su misma perfección llevaba Su capacidad de sufrir a medidas inauditas. En efecto, en los días de la Pasión hubo como un desbordamiento de sufrimientos y de torturas. Isaías no sabe cómo describirlo:
+Porque venía con miras al Calvario, el Espíritu Santo dispuso especialmente su Humanidad para el sufrimiento, le dio un cuerpo de una delicadeza exquisita y de una extrema sensibilidad, a fin de que fuera capaz de sufrir en exceso. Su misma perfección llevaba su capacidad de sufrir a medidas inauditas. En efecto, en los días de la Pasión hubo como un desbordamiento de sufrimientos y de torturas. Isaías no sabe cómo describirlo:
 
-*Muchos quedaron atónitos al verlo, tan desfigurado estaba, no siendo Su aspecto ya el de un hombre,*
+*Muchos quedaron atónitos al verlo, tan desfigurado estaba, no siendo su aspecto ya el de un hombre,*
 
-*ni Su rostro el de los hijos de los hombres…*
+*ni su rostro el de los hijos de los hombres…*
 
 *No tiene forma ni belleza.*
 
@@ -36,13 +36,13 @@ Porque venía con miras al Calvario, el Espíritu Santo dispuso especialmente Su
 
 Mantenerse estrechamente unido a Aquel que tanto sufrió.
 
-Es a la vez lo más fácil y lo más consolador. Recordaremos que somos los miembros de Cristo y que debemos continuar Su Pasión, participando primero en los sufrimientos y en las llagas de Su divino cuerpo. Hoy, Su gloria tan caramente comprada Lo pone en la imposibilidad de sufrir. Pero lo que no puede soportar en Su Humanidad personal, quiere soportarlo en «Su humanidad de añadidura», en nosotros mismos, y continuar así Su Pasión.
+Es a la vez lo más fácil y lo más consolador. Recordaremos que somos los miembros de Cristo y que debemos continuar su Pasión, participando primero en los sufrimientos y en las llagas de su divino Cuerpo. Hoy, su gloria tan caramente comprada lo pone en la imposibilidad de sufrir. Pero lo que no puede soportar en su Humanidad personal, quiere soportarlo en «su humanidad de añadidura», en nosotros mismos, y continuar así su Pasión.
 
-Más aún, ¿no parece que quiere extender hoy la humillación de esa bendita Pasión más allá de los límites que Su perfección Le impedía franquear en otro tiempo? Pues, si soportó durante Su vida mortal sufrimientos que nosotros nunca soportaremos, hay otros que no pudo conocer por experiencia, por ejemplo la enfermedad. Lo que no pudo soportar Él mismo, lo soportará en nosotros, entra en nuestra vida, nos incorpora a Sí mismo a fin de que podamos sufrir, no solo por Él, sino verdaderamente con Él y en Él. En verdad podemos decir: *Con Cristo estoy clavado en la cruz*[^89].
+Más aún, ¿no parece que quiere extender hoy la humillación de esa bendita Pasión más allá de los límites que su perfección le impedía franquear en otro tiempo? Pues, si soportó durante su vida mortal sufrimientos que nosotros nunca soportaremos, hay otros que no pudo conocer por experiencia, por ejemplo la enfermedad. Lo que no pudo soportar Él mismo, lo soportará en nosotros, entra en nuestra vida, nos incorpora a sí mismo a fin de que podamos sufrir, no solo por Él, sino verdaderamente con Él y en Él. En verdad podemos decir: *Con Cristo estoy clavado en la cruz*[^89].
 
 Todo sufrimiento bien llevado apresura la obra de Dios en nosotros. Nada santifica más. Acaba nuestra semejanza íntima con Jesús. Realiza la obra maravillosa de que habla san Pablo: *la formación de Cristo en nosotros*[^90]… *Mientras nuestro hombre exterior se va deshaciendo, nuestro hombre interior se renueva de día en día*[^91]. «Cada dolor, dice monseñor Gay, es como un beso que el crucifijo nos da y un nuevo rasgo de semejanza que tenemos con Jesús.»
 
-Apoyado en tales certezas, ¿quién no soportaría, no solo con paciencia, sino con santa alegría del alma, las peores pruebas? *Sobreabundo de gozo en mis tribulaciones*, decía san Pablo… *Estoy lleno de gozo en mis sufrimientos, pues completo en mi propia carne lo que falta a la Pasión de Cristo, por Su cuerpo, que es la Iglesia*[^92]. Por eso felicitaba a los cristianos a quienes Dios probaba: *Es una gracia que Dios les concede, por consideración a Cristo, no solo creer en Él, sino también sufrir por Él*[^93].
+Apoyado en tales certezas, ¿quién no soportaría, no solo con paciencia, sino con santa alegría del alma, las peores pruebas? *Sobreabundo de gozo en mis tribulaciones*, decía san Pablo… *Estoy lleno de gozo en mis sufrimientos, pues completo en mi propia carne lo que falta a la Pasión de Cristo, por su cuerpo, que es la Iglesia*[^92]. Por eso felicitaba a los cristianos a quienes Dios probaba: *Es una gracia que Dios les concede, por consideración a Cristo, no solo creer en Él, sino también sufrir por Él*[^93].
 
 Nuestra meta debe ser, sufriendo con Jesús y en Jesús, poder hacer nuestras estas otras palabras del gran Apóstol: *Estamos oprimidos de todas maneras, pero no aplastados; en la angustia, pero no en la desesperación; perseguidos, pero no abandonados; debilitados, pero no perdidos; llevando siempre en nuestro cuerpo la muerte de Jesús, a fin de que la vida de Jesús se manifieste también en nuestro cuerpo. Pues nosotros, que vivimos, somos entregados sin cesar a la muerte a causa de Jesús, a fin de que la vida de Jesús se manifieste también en nuestro cuerpo… Nuestra leve aflicción del momento presente produce para nosotros, más allá de toda medida, un peso eterno de gloria*[^94].
 
@@ -50,13 +50,13 @@ Cada sufrimiento, en efecto, es una semilla de eternidad.
 
 *
 
-Oh Señor mío Jesús, creo y, por Tu gracia, quiero creer y profesar siempre, y sé que es verdad y que será verdad hasta el fin del mundo, que nada grande se hace sin sufrimiento, sin humillación, y que todas las cosas son posibles por estos medios. Creo, oh Dios mío, que la pobreza vale más que las riquezas, la pena más que el placer, la oscuridad y el desprecio más que la fama, y la ignominia más que los honores.
+Oh Señor mío Jesús, creo y, por tu gracia, quiero creer y profesar siempre, y sé que es verdad y que será verdad hasta el fin del mundo, que nada grande se hace sin sufrimiento, sin humillación, y que todas las cosas son posibles por estos medios. Creo, oh Dios mío, que la pobreza vale más que las riquezas, la pena más que el placer, la oscuridad y el desprecio más que la fama, y la ignominia más que los honores.
 
-Señor mío, no Te pido que me infligas estas pruebas, pues no sé si podría soportarlas. Pero al menos, oh Señor, ya esté en la prosperidad o en la adversidad, quiero creer lo que he dicho. No quiero poner mi fe en las riquezas, el rango, el poder y la reputación. No quiero asentar mi corazón en los éxitos de este mundo, ni en sus ventajas. No quiero desear lo que los hombres llaman los bienes de la vida. Por Tu gracia, quiero, por el contrario, estimar mucho a los que se descuida o desdeña, honrar a los pobres, reverenciar a los que sufren, admirar y venerar a Tus confesores y a Tus santos, y escoger mi parte entre ellos a pesar del mundo.
+Señor mío, no te pido que me infligas estas pruebas, pues no sé si podría soportarlas. Pero al menos, oh Señor, ya esté en la prosperidad o en la adversidad, quiero creer lo que he dicho. No quiero poner mi fe en las riquezas, el rango, el poder y la reputación. No quiero asentar mi corazón en los éxitos de este mundo, ni en sus ventajas. No quiero desear lo que los hombres llaman los bienes de la vida. Por tu gracia, quiero, por el contrario, estimar mucho a los que se descuida o desdeña, honrar a los pobres, reverenciar a los que sufren, admirar y venerar a tus confesores y a tus santos, y escoger mi parte entre ellos a pesar del mundo.
 
-Y por último, oh mi querido Señor, aunque soy tan débil que no puedo pedirte el sufrimiento como un don, y no tengo la fuerza para hacerlo, Te pediré al menos la gracia de acogerlo bien cuando, en Tu sabiduría y en Tu amor, me lo envíes.
+Y por último, oh mi querido Señor, aunque soy tan débil que no puedo pedirte el sufrimiento como un don, y no tengo la fuerza para hacerlo, te pediré al menos la gracia de acogerlo bien cuando, en tu sabiduría y en tu amor, me lo envíes.
 
-Deseo humillarme en todas las cosas, no responder a las malas palabras sino con el silencio y guardar la paciencia cuando la pena o el sufrimiento se prolonguen, y todo esto por amor a Ti y a Tu cruz, sabiendo que, de esta manera, mereceré las promesas de esta vida y de la vida eterna.
+Deseo humillarme en todas las cosas, no responder a las malas palabras sino con el silencio y guardar la paciencia cuando la pena o el sufrimiento se prolonguen, y todo esto por amor a Ti y a tu Cruz, sabiendo que, de esta manera, mereceré las promesas de esta vida y de la vida eterna.
 
 San John Henry Newman
 
@@ -64,9 +64,9 @@ San John Henry Newman
 
 Es la segunda etapa. Muy diverso en sus causas y en sus modos, el dolor alcanza directamente el corazón: penas, disgustos, separaciones, desgarramientos, tristeza hasta la agonía.
 
-Es más temible para la naturaleza que el sufrimiento, más purificador porque obliga a renuncias más duras y, por lo mismo, más rico en frutos de santidad. Se entra mucho más adentro en la Pasión de Cristo por el dolor que por el sufrimiento. Los sufrimientos corporales de Jesús fueron atroces: pero ¿quién dirá la profundidad de Su dolor, de la agonía de Su Corazón? Porque fue un abismo de amor, ese Corazón sagrado fue un abismo de dolor. Se sabe con qué nombre llama Isaías a Cristo: el hombre de dolores. Su vida terrena fue una larga agonía que mantenían Su ciencia, Su santidad y Su amor infinitos. Desde la encarnación comenzó esta agonía, ya aplastante, para alcanzar su paroxismo en los días de la Pasión. Indecible martirio de treinta y tres años que agotaba a toda hora Su capacidad de sufrir. *Habitó en el dolor*[^95].
+Es más temible para la naturaleza que el sufrimiento, más purificador porque obliga a renuncias más duras y, por lo mismo, más rico en frutos de santidad. Se entra mucho más adentro en la Pasión de Cristo por el dolor que por el sufrimiento. Los sufrimientos corporales de Jesús fueron atroces: pero ¿quién dirá la profundidad de su dolor, de la agonía de su Corazón? Porque fue un abismo de amor, ese Corazón sagrado fue un abismo de dolor. Se sabe con qué nombre llama Isaías a Cristo: el hombre de dolores. Su vida terrena fue una larga agonía que mantenían su ciencia, su santidad y su amor infinitos. Desde la Encarnación comenzó esta agonía, ya aplastante, para alcanzar su paroxismo en los días de la Pasión. Indecible martirio de treinta y tres años que agotaba a toda hora su capacidad de sufrir. *Habitó en el dolor*[^95].
 
-Quien aspira a la unión perfecta debe entrar valerosamente en el dolor de Cristo Jesús y soportar con Él todas las penas, los desgarramientos y las agonías del corazón. San Pablo deseaba conocerlo a Él, entrar en comunión con Sus dolores y hacerse conforme a Él en Su muerte[^96].
+Quien aspira a la unión perfecta debe entrar valerosamente en el dolor de Cristo Jesús y soportar con Él todas las penas, los desgarramientos y las agonías del corazón. San Pablo deseaba conocerlo a Él, entrar en comunión con sus dolores y hacerse conforme a Él en su muerte[^96].
 
 Al que cree le resulta entonces bastante fácil permanecer en Dios, pues, en cualquier pena en que entre, en cualquier agonía a la que sea empujado, aunque sea extrema y sin remedio, siempre encontrará ante sí a Jesús, cargado con la misma pena, sufriendo la misma agonía, y otras mucho más terribles aún, que Él santifica y diviniza, a fin de que, habitando con Él en el dolor, no dejemos de permanecer en el amor.
 
@@ -82,7 +82,7 @@ Cantaré, haré resonar la alabanza: esa es mi gloria.
 
 ¡Despierta, arpa mía!
 
-Quiero alabarte, oh Señor, porque Tu bondad se eleva por encima de los cielos y Tu fidelidad hasta las nubes…
+Quiero alabarte, oh Señor, porque tu bondad se eleva por encima de los cielos y tu fidelidad hasta las nubes…
 
 Ven en nuestra ayuda en la tribulación.
 
@@ -108,7 +108,7 @@ En estas horas, todo es doloroso, incluso el recuerdo de las gracias recibidas e
 
 ¿Qué hacer entonces? Entregarse a la acción divina. Resistirle sería dañino y, además, la mayoría de las veces, imposible. Puesto que es el Espíritu Santo mismo quien actúa, permanecer en este dolor purificador es todavía permanecer en Dios.
 
-La unión con Cristo Jesús y con Su Pasión es más útil que nunca. Por grande que sea la desolación del alma, nunca se acercará al absoluto abandono de la santa alma de Cristo en las horas espantosas en que se Le oía gemir: *Mi alma está triste hasta la muerte… Dios mío, Dios mío, ¿por qué me has abandonado?*[^99], y en que se veía a Dios Padre «soltando contra este Hijo amado todo el poder de los infiernos y pareciendo retirar al mismo tiempo toda la protección del cielo[^100]». *Su dolor*, dice el Profeta, *es inmenso como el mar*[^101].[^ed3]
+La unión con Cristo Jesús y con su Pasión es más útil que nunca. Por grande que sea la desolación del alma, nunca se acercará al absoluto abandono de la santa alma de Cristo en las horas espantosas en que se le oía gemir: *Mi alma está triste hasta la muerte… Dios mío, Dios mío, ¿por qué me has abandonado?*[^99], y en que se veía a Dios Padre «soltando contra este Hijo amado todo el poder de los infiernos y pareciendo retirar al mismo tiempo toda la protección del Cielo[^100]». *Su dolor*, dice el Profeta, *es inmenso como el mar*[^101].[^ed3]
 
 Pero hay que decirse bien que incluso la unión con Jesús, de ordinario tan dulce y tan consoladora, está entonces como helada, muda y dolorosa. El corazón no la siente. Es en la fe donde ella calla. Es en la fe donde el alma debe mantenerse unida y en cierto modo aferrada a Dios. La fe es el único refugio, *el reino inconmovible*[^102] de que habla san Pablo: *Es en la fe donde nos mantenemos en pie.*
 
@@ -116,13 +116,13 @@ Más que nunca, la pobre alma desamparada debe creer en el gran amor con que Dio
 
 En estas horas benditas de desolación interior o, por mejor decir, de purificación sobrenatural, se cumplen grandes cosas: el Amor consuma la unión del alma con su Dios, según lo que Él prometió: *En la fe te desposaré con una unión eterna*[^106]. Así, cumplida la obra de purificación, la esposa aparece revestida de pureza, de alegría y de fuerza: *¿Quién es esta que sube del desierto? Va rebosante de delicias y apoyada en su Amado*[^107].
 
-En resumen, cuando está en la prueba, el alma no tiene más que mantenerse estrechamente unida a Cristo Jesús y, por las llagas de Su santa Humanidad, penetrar en la Divinidad.
+En resumen, cuando está en la prueba, el alma no tiene más que mantenerse estrechamente unida a Cristo Jesús y, por las llagas de su santa Humanidad, penetrar en la Divinidad.
 
-El alma sacrificada es un holocausto, una hostia. Que consienta en ello: no solo su holocausto se une al holocausto de Jesús, sino que se funde en el Suyo: llega a ser para Dios, con Jesús, un único holocausto gloriosísimo. Toda la Trinidad pone en ella Sus complacencias: el Padre, reconociendo en ella los rasgos de Su Hijo amado, le derrama Su inefable ternura; el Verbo, viéndola proseguir Su Pasión redentora, la atrae como a una esposa escogida; el Espíritu Santo ama en ella un instrumento perfecto de Su gracia para la santificación de la Iglesia y se hace su inspirador y su gobernante.
+El alma sacrificada es un holocausto, una hostia. Que consienta en ello: no solo su holocausto se une al holocausto de Jesús, sino que se funde en el suyo: llega a ser para Dios, con Jesús, un único holocausto gloriosísimo. Toda la Trinidad pone en ella sus complacencias: el Padre, reconociendo en ella los rasgos de su Hijo amado, le derrama su inefable ternura; el Verbo, viéndola proseguir su Pasión redentora, la atrae como a una esposa escogida; el Espíritu Santo ama en ella un instrumento perfecto de su gracia para la santificación de la Iglesia y se hace su inspirador y su gobernante.
 
-No nos quejemos, pues, de sufrir. Vayamos a la cruz con la espontaneidad de Jesús, que se ofreció a Sí mismo como una hostia de suave olor[^108]. «Si los celos pudieran penetrar en el reino del amor eterno, dice san Francisco de Sales, los ángeles envidiarían los sufrimientos de un Dios por el hombre y los del hombre por Dios.»
+No nos quejemos, pues, de sufrir. Vayamos a la cruz con la espontaneidad de Jesús, que se ofreció a sí mismo como una hostia de suave olor[^108]. «Si los celos pudieran penetrar en el reino del amor eterno, dice san Francisco de Sales, los ángeles envidiarían los sufrimientos de un Dios por el hombre y los del hombre por Dios.»
 
-Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *He sido crucificado con Cristo y, si vivo, ya no soy yo quien vive, es Cristo quien vive en mí. Lo que vivo ahora en la carne, lo vivo en la fe en el Hijo de Dios, que me amó y se entregó a Sí mismo por mí*[^109].
+Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *He sido crucificado con Cristo y, si vivo, ya no soy yo quien vive, es Cristo quien vive en mí. Lo que vivo ahora en la carne, lo vivo en la fe en el Hijo de Dios, que me amó y se entregó a sí mismo por mí*[^109].
 
 *
 
@@ -134,11 +134,11 @@ He caído en un pozo de agua y las aguas me sumergen.
 
 Me agoto de gritar. Mi garganta está en llamas. Mis ojos se consumen esperando a mi Dios…
 
-¡Oh Dios, Tus caminos son santos!…
+¡Oh Dios, tus caminos son santos!…
 
 ¡Bendice, alma mía, al Señor!
 
-¡Que todo lo que hay en mí bendiga Su santo nombre!
+¡Que todo lo que hay en mí bendiga su santo nombre!
 
 ¡Bendice, alma mía, a Yahvé!
 
@@ -172,7 +172,7 @@ Salmos
 
 [^92]: Ibid., 7, 4; Col 1, 24.
 
-[^93]: Flp 1, 29. La Madre Margarita María Doëns, consumida por una larga y espantosa enfermedad, parecía exultar en su tortura: «Se diría que usted goza», le dijo una de sus hermanas. «Sí», respondió, «gozo de que Nuestro Señor haga en mí lo que Le agrada».
+[^93]: Flp 1, 29. La Madre Margarita María Doëns, consumida por una larga y espantosa enfermedad, parecía exultar en su tortura: «Se diría que usted goza», le dijo una de sus hermanas. «Sí», respondió, «gozo de que Nuestro Señor haga en mí lo que le agrada».
 
 [^94]: 2 Co 4, 8-17.
 
@@ -206,4 +206,4 @@ Salmos
 
 [^109]: Ga 2, 19-20.
 
-[^ed3]: N. del E.: el abandono de Cristo en la cruz no significa que el Padre Lo rechazara ni Lo castigara como a un pecador: «Jesús no conoció la reprobación como si él mismo hubiese pecado», pero, «en el amor redentor que le unía siempre al Padre», asumió nuestro alejamiento de Dios (Catecismo, n. 603).
+[^ed3]: N. del E.: el abandono de Cristo en la Cruz no significa que el Padre lo rechazara ni lo castigara como a un pecador: «Jesús no conoció la reprobación como si él mismo hubiese pecado», pero, «en el amor redentor que le unía siempre al Padre», asumió nuestro alejamiento de Dios (Catecismo, n. 603).
