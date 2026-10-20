@@ -92,6 +92,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - Valoración moral: `delibris` de cada ficha, leída en la página del libro en delibris.org
   (`valor` 1 a 6, 6 = «Sin inconvenientes», y `genero` Literatura o Pensamiento, que fija el
   texto del nivel en `ESCALA_DELIBRIS` de `index.html`). `null` si el libro no está en Delibris.
+  `herramientas/revisar_delibris.js` cruza cada ficha con el índice de Delibris (título sin
+  subtítulo ni artículo y algún nombre del autor en común) y `gen_estaticos.js` no publica si
+  una ficha quedó en `null` estando en el índice o con otro valor; `--arreglar` lo escribe en
+  `datos.js`. Un falso cruce se declara en `FENIX.sinDelibris` (`{ id, porque }`).
   La biblioteca se ve en modo lista con esa valoración en cada fila.
 - Todos los libros (`#todos`, ficha en `#obra/<id de Open Library>`): catálogo mundial en el
   idioma de la página, consultado en vivo a la API de Open Library (obras con edición en

@@ -37,6 +37,12 @@ const { revisarDuplicados } = require("./revisar_duplicados.js");
 const duplicados = revisarDuplicados(D);
 if (duplicados.length){ console.error("Posibles libros duplicados en datos.js:\n" + duplicados.map(p => "- " + p).join("\n")); process.exit(1); }
 
+// La valoración moral de cada ficha debe calzar con el índice de Delibris (una ficha con null
+// mostraría «Sin valoración» aunque Delibris lo reseñe).
+const { revisarDelibris } = require("./revisar_delibris.js");
+const moral = revisarDelibris(D).problemas;
+if (moral.length){ console.error("Valoración de Delibris desalineada con el índice:\n" + moral.map(p => "- " + p).join("\n") + "\nCorregir con: node herramientas/revisar_delibris.js --arreglar"); process.exit(1); }
+
 // Regla fija del menú: máximo 6 entradas de primer nivel en la barra (enlaces sueltos más el
 // submenú Colaborar). Lo nuevo entra en una vista existente o en el submenú, nunca como entrada.
 const MAX_MENU = 6;

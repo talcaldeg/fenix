@@ -11,7 +11,9 @@
 //   imagen, editorial, parecidos } }; solo lo que cambia (editorial: null si esa versión no es de
 //   Fénix). Cada sitio muestra la versión de su idioma. Una ficha que se fusiona deja su id en `alias`.
 // - delibris: valoración moral de delibris.org, de 1 a 6 (6 = «Sin inconvenientes»); el texto de
-//   cada nivel según el género (Literatura o Pensamiento) está en index.html. null = no está en Delibris.
+//   cada nivel según el género (Literatura o Pensamiento) está en index.html. null = no está en Delibris;
+//   antes de dejarlo en null, correr `node herramientas/revisar_delibris.js` (gen_estaticos.js lo corre
+//   y se detiene si el índice de Delibris sí lo trae).
 // - porque: «Por qué leerlo», { es, en }: 2 o 3 frases propias sobre a quién le sirve y qué gana el lector
 //   (no repite el resumen). Lo de fe se audita con auditar-teologia.
 // - citas: textuales, cotejadas con el texto del libro.
@@ -637,7 +639,7 @@ window.FENIX = {
       ],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/via-crucis/" },
-      delibris: null,
+      delibris: {"valor":6,"genero":"Espiritualidad","url":"https://www.delibris.org/es/crucis-1"},
       parecidos: ["escriva-santo-rosario", "imitacion-de-cristo", "escriva-forja"]
     },
     {
@@ -794,7 +796,7 @@ window.FENIX = {
       externos: [{ formato: "web", idioma: "es", texto: "escriva.org", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" }],
       comprar: [{ texto: "librerías (escriva.org)", url: "https://escriva.org/es/page/where-to-buy-a-book/" }],
       fuente: { texto: "Texto publicado por la Fundación Studium en escriva.org (obra protegida por derechos de autor)", url: "https://escriva.org/es/la-abadesa-de-las-huelgas/" },
-      delibris: null,
+      delibris: {"valor":6,"genero":"Pensamiento","url":"https://www.delibris.org/es/la-abadesa-de-las-huelgas-edicion-critico-historica"},
       parecidos: ["escriva-discursos-universidad", "escriva-conversaciones", "escriva-cartas-1"]
     },
     {
@@ -912,7 +914,7 @@ window.FENIX = {
         { formato: "pdf", texto: "opusdei.org", url: "https://odnmedia.s3.amazonaws.com/files/A-la-luz-del-Evangelio-Fernando-Ocariz20210520-081449.pdf" }
       ],
       fuente: { texto: "Edición gratuita de la Fundación Studium en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-cl/article/a-la-luz-del-evangelio-fernando-ocariz-libro-palabra/" },
-      delibris: null,
+      delibris: {"valor":6,"genero":"Espiritualidad","url":"https://www.delibris.org/es/la-luz-del-evangelio"},
       parecidos: ["conocerle-y-conocerte", "para-mi-vivir-es-cristo", "santos-evangelios-navarra"]
     },
     {
