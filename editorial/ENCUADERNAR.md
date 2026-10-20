@@ -102,7 +102,7 @@ Lo lee `herramientas/md_a_epub.py` (mira su encabezado). Lo esencial:
 - `## Título` abre un capítulo; `### ` y `#### ` son subtítulos. Un archivo sin `##` sigue el
   capítulo anterior.
 - Un párrafo en cursiva justo después del `##` es el sumario del capítulo.
-- Cursiva `*así*`. Notas: llamada `[^3]` en el texto y `[^3]: texto de la nota.` al final del
+- Cursiva `*así*`. Notas: llamada `[^3]` en el texto, pegada a la palabra (`gracia[^3]`, no `gracia [^3]`; igual el armador la pega), y `[^3]: texto de la nota.` al final del
   mismo archivo. Solo las notas del autor; nada de comentarios tuyos dentro del texto.
 - Sin números de página, encabezados repetidos, guiones de corte de línea ni restos del OCR o de
   Gutenberg (licencias, `[Illustration]`).

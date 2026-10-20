@@ -26,6 +26,11 @@ CSS = """@charset "utf-8";
 body { font-family: Georgia, serif; line-height: 1.5; margin: 0 4%; }
 h1, h2, h3, h4 { font-weight: normal; text-align: center; break-after: avoid; page-break-after: avoid;
   break-inside: avoid; page-break-inside: avoid; }
+/* Título huérfano al pie de la página: Play Books y otros lectores con columnas ignoran break-after.
+   El ::after reserva unas cuatro líneas dentro del título (que no se parte) y el margen negativo
+   las devuelve; si no caben en la página, el título pasa a la siguiente con su texto, con
+   cualquier tamaño de letra. */
+h2::after, h3::after, h4::after { content: ""; display: block; height: 6em; margin-bottom: -6em; }
 h1 { font-size: 1.6em; margin: 2.5em 0 0.6em; }
 h2 { font-size: 1.3em; margin: 2em 0 0.4em; letter-spacing: 0.04em; }
 h3 { font-size: 1em; margin: 1.6em 0 0.6em; letter-spacing: 0.08em; }
@@ -140,7 +145,9 @@ def leer(carpeta: Path):
                 return f'<a class="ref" epub:type="noteref" href="#n{k}" id="r{k}"><sup>{k}</sup></a>'
             lineas = b.split("\n")
             cuerpo = "<br/>".join(enlinea(l.strip()) for l in lineas)
-            cuerpo = re.sub(r"\[\^(\w+)\]", llamada, cuerpo)
+            # La llamada va pegada a la palabra: un espacio antes («criatura ¹») la deja suelta y
+            # puede quedar sola al comienzo de la línea siguiente.
+            cuerpo = re.sub(r"\s*\[\^(\w+)\]", llamada, cuerpo)
             if recien_titulo and re.fullmatch(r"\*[^*].*\*", b.strip()):
                 c.html.append(f'<p class="subtitulo">{enlinea(b.strip()[1:-1])}</p>')
             elif len(lineas) > 1:

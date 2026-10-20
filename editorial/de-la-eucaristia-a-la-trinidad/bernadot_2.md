@@ -12,11 +12,11 @@ Sin embargo, la Iglesia nos lleva a desear su permanencia cuando pone en nuestro
 
 *Ya no saben desear*
 
-*sino a Ti, oh Jesús amado.* [^35]
+*sino a Ti, oh Jesús amado.*[^35]
 
 ¿No es un exceso soñar con una unión constantemente actual con Jesús-Hostia, con una posesión habitual de Su adorable Humanidad?
 
-No, puesto que el Maestro mismo hace nacer y alienta estos extraordinarios deseos: El que come mi carne y bebe mi sangre permanece en mí, y yo en él [^36].
+No, puesto que el Maestro mismo hace nacer y alienta estos extraordinarios deseos: El que come mi carne y bebe mi sangre permanece en mí, y yo en él[^36].
 
 \*
 
@@ -52,19 +52,19 @@ Sin embargo, es lícito decir que permanecemos en unión permanente con la Human
 
 El Padre eterno decía a santa Catalina de Siena: «Considera qué excelencia adquiere el alma que recibe como conviene este pan de vida, este alimento de los ángeles. Al recibir este sacramento, ella permanece en mí y yo en ella. Como el pez está en el mar y el mar en el pez, así estoy yo en el alma y el alma está en mí, el Océano de paz. De esta comunión queda la gracia; pues, después de haber recibido este pan de vida en estado de gracia, el alma recoge de él la gracia, una vez que los accidentes del pan se han consumido.
 
-Te dejo la huella de la gracia, como lo hace el sello que se aplica sobre la cera caliente, la cual conserva su marca cuando se lo retira. Del mismo modo obra la virtud de este sacramento en el alma, en la que deja tras de sí el ardor de mi divina caridad, la clemencia del Espíritu Santo, con la luz de la Sabiduría, mi Hijo único [^37]».
+Te dejo la huella de la gracia, como lo hace el sello que se aplica sobre la cera caliente, la cual conserva su marca cuando se lo retira. Del mismo modo obra la virtud de este sacramento en el alma, en la que deja tras de sí el ardor de mi divina caridad, la clemencia del Espíritu Santo, con la luz de la Sabiduría, mi Hijo único[^37]».
 
 #### 1. Nuestra unión con la santa Humanidad en virtud de Sus méritos y de Su amor.
 
 La santa Humanidad está siempre presente para mí por la acción incesante de Sus méritos y el resplandor perpetuo de Su amor.
 
-*Cristo*, dice san Pablo, *está siempre vivo para interceder en nuestro favor* [^38]. En el cielo y en el Santísimo Sacramento, no cesa de interceder recordando Su mérito a Su Padre, que Le debe el salvarnos. Muestra la Humanidad que asumió, la cual mereció por nosotros, y Sus llagas, signos de Su sacrificio. Expone el ardiente deseo de nuestra salvación que abrasa Su santa alma, deseo que es mucho más que una oración: un recordatorio de Sus derechos infinitos, y que es escuchado de inmediato.
+*Cristo*, dice san Pablo, *está siempre vivo para interceder en nuestro favor*[^38]. En el cielo y en el Santísimo Sacramento, no cesa de interceder recordando Su mérito a Su Padre, que Le debe el salvarnos. Muestra la Humanidad que asumió, la cual mereció por nosotros, y Sus llagas, signos de Su sacrificio. Expone el ardiente deseo de nuestra salvación que abrasa Su santa alma, deseo que es mucho más que una oración: un recordatorio de Sus derechos infinitos, y que es escuchado de inmediato.
 
-Intercede por todos los que ha rescatado, por todos y por cada uno en particular. Pues para cada uno tiene una mirada, una efusión especial de Su amor: *Yo soy el buen Pastor. El buen Pastor llama a sus ovejas, a cada una por su nombre propio, y las conduce a los pastos. Conozco a mis ovejas* [^39]. No es, dice santo Tomás, un simple conocimiento, sino un conocimiento de aprobación y de amor, en que el corazón tiene su parte como la inteligencia.
+Intercede por todos los que ha rescatado, por todos y por cada uno en particular. Pues para cada uno tiene una mirada, una efusión especial de Su amor: *Yo soy el buen Pastor. El buen Pastor llama a sus ovejas, a cada una por su nombre propio, y las conduce a los pastos. Conozco a mis ovejas*[^39]. No es, dice santo Tomás, un simple conocimiento, sino un conocimiento de aprobación y de amor, en que el corazón tiene su parte como la inteligencia.
 
-Desde el fondo de Su sagrario, Jesús me mira sin cesar, con una mirada que me penetra hasta lo más hondo. ¡Mirada atenta y tan tierna! *La luz de Tu rostro, Señor, se imprime sobre mí como un signo* [^40]. Ni uno solo de mis pensamientos, ni uno solo de mis actos escapa a Jesús. Ni uno solo de mis deseos que Él no conozca mejor que yo mismo. Se da cuenta de todos mis estados, de todas mis necesidades, de todos mis peligros, de todas mis aspiraciones. No solo para ser su testigo, sino para darme, por el instrumento de Su Humanidad glorificada, la gracia necesaria a esos estados.
+Desde el fondo de Su sagrario, Jesús me mira sin cesar, con una mirada que me penetra hasta lo más hondo. ¡Mirada atenta y tan tierna! *La luz de Tu rostro, Señor, se imprime sobre mí como un signo*[^40]. Ni uno solo de mis pensamientos, ni uno solo de mis actos escapa a Jesús. Ni uno solo de mis deseos que Él no conozca mejor que yo mismo. Se da cuenta de todos mis estados, de todas mis necesidades, de todos mis peligros, de todas mis aspiraciones. No solo para ser su testigo, sino para darme, por el instrumento de Su Humanidad glorificada, la gracia necesaria a esos estados.
 
-En todo instante me ama. ¡Y con qué amor! Ciertamente el amor increado del Verbo nos sigue a todas partes, y es un inefable descanso saber que estamos siempre en ese amor sin poder salir jamás de él. Pero, en cuanto hombre también, Jesús me ama. Desde Su sagrario derrama sobre mí oleadas de ternura. Me envuelve de amor. Amor que no languidece; ni por un momento puedo decir: Ahora Jesús no piensa en mí. Aun de noche, vela sobre mi sueño. *El camino por donde ando está bajo la mirada del Señor* [^41]. Amor que no se desanima: por mucho que Lo olvide y Lo ofenda, sigue repartiéndome Sus gracias. Amor de asistencia y de ternura, de amigo, de hermano, de esposo. De noche y de día, estoy bajo la influencia de la mirada y del amor de Jesús.
+En todo instante me ama. ¡Y con qué amor! Ciertamente el amor increado del Verbo nos sigue a todas partes, y es un inefable descanso saber que estamos siempre en ese amor sin poder salir jamás de él. Pero, en cuanto hombre también, Jesús me ama. Desde Su sagrario derrama sobre mí oleadas de ternura. Me envuelve de amor. Amor que no languidece; ni por un momento puedo decir: Ahora Jesús no piensa en mí. Aun de noche, vela sobre mi sueño. *El camino por donde ando está bajo la mirada del Señor*[^41]. Amor que no se desanima: por mucho que Lo olvide y Lo ofenda, sigue repartiéndome Sus gracias. Amor de asistencia y de ternura, de amigo, de hermano, de esposo. De noche y de día, estoy bajo la influencia de la mirada y del amor de Jesús.
 
 ¿No es ya preciosa entre Jesús y el alma esta unión creada por el incesante resplandor de la caridad del Corazón de Jesús?
 
@@ -92,15 +92,15 @@ Salmo 22
 
 Hay una presencia de la santa Humanidad de eficacia aún más íntima: Su misteriosa presencia por Su acción vital.
 
-*Yo soy la Vida* [^42], dice Jesús. Cuando se mostraba a los hombres en los días de Su vida mortal, Su santa Humanidad dejaba estallar a menudo Su poder milagroso; Su contacto bastaba para obrar las mayores obras. *Salía de Él una fuerza que los sanaba a todos* [^43]. Lejos de haber disminuido, hoy Su eficacia no conoce obstáculo ni intermitencia. Actúa sobre todos y en todo momento. Cada uno de nosotros se encuentra en la feliz imposibilidad de escapar a Su acción o, como dicen los teólogos, al contacto de Su poder.
+*Yo soy la Vida*[^42], dice Jesús. Cuando se mostraba a los hombres en los días de Su vida mortal, Su santa Humanidad dejaba estallar a menudo Su poder milagroso; Su contacto bastaba para obrar las mayores obras. *Salía de Él una fuerza que los sanaba a todos*[^43]. Lejos de haber disminuido, hoy Su eficacia no conoce obstáculo ni intermitencia. Actúa sobre todos y en todo momento. Cada uno de nosotros se encuentra en la feliz imposibilidad de escapar a Su acción o, como dicen los teólogos, al contacto de Su poder.
 
 Ella es el centro del universo sobrenatural, el sol que ilumina todas las criaturas espirituales de Dios, la atmósfera sobrenatural fuera de la cual no es posible vida alguna, ni luz alguna, ni seguridad alguna, ni relación alguna con Dios. Colocada en la cumbre de toda la creación, en contacto inmediato con la Divinidad, inundada de la vida divina en una medida inmensa, la santa Humanidad se convierte ella misma en fuente de vida, punto de partida de las efusiones divinas. Se inclina sobre las criaturas; y he aquí que del alma y del corazón de Jesús la vida sale a grandes torrentes, diluvio de luz y de amor que desciende, como cataratas deslumbrantes, de grado en grado sobre todos los elegidos y hasta los confines del mundo, para llenar de luz y de gozo a todos los hijos de Dios. Así, a toda hora, como un sol que envía sus rayos, como una fuente demasiado llena que dejara correr sus aguas vivas, el corazón de Jesús, sin empobrecerse jamás, se derrama inagotablemente en una inmensa efusión de gracia que comienza por beatificar el cielo y luego se esparce sobre la tierra por los siete ríos de los sacramentos y los otros mil arroyos que derivan de ese océano de amor, para santificar a los predestinados y hacer florecer las virtudes que manifiestan la vida cristiana.
 
-En el Calvario, la santa Humanidad nos mereció la vida; ahora nos la distribuye: *a cada uno de nosotros se le da la gracia según la medida del don de Cristo* [^44]. ¿Qué son los sacramentos sino la santa Humanidad empleándose en santificar a los hombres?
+En el Calvario, la santa Humanidad nos mereció la vida; ahora nos la distribuye: *a cada uno de nosotros se le da la gracia según la medida del don de Cristo*[^44]. ¿Qué son los sacramentos sino la santa Humanidad empleándose en santificar a los hombres?
 
 Aun fuera de los sacramentos, siempre activa, no cesa de obrar directamente sobre las almas mediante iluminaciones interiores e impulsos eficaces. Si estoy en estado de gracia, es por causa de ella y por ella. Ningún socorro sobrenatural me llega, sino de Su Corazón; ningún rayo de luz divina, sino de Su alma. No puedo hacer nada sin ella, ni siquiera tener un buen pensamiento, ni siquiera decir: Señor Jesús. Ella es el principio de mi actividad sobrenatural, de mi progreso, de mi florecimiento en Dios. Desde su origen hasta su plena expansión, mi vida brota de esta fuente. Que por un instante la santa Humanidad de Jesús se retire, o que yo me sustraiga a Su resplandor, y recaigo de inmediato en la muerte. *Como la cabeza manda a los miembros,* dice el Concilio de Trento, *como la vid penetra todos los sarmientos con su savia, así Cristo Jesús ejerce su influencia sobre todos los justos y en todo instante. Esa influencia precede, acompaña y corona sus buenas obras, y las hace agradables a Dios y meritorias ante Él* (Sesión VI, cap. 16).
 
-El Apóstol lo había dicho en una palabra: *Christus vita vestra*: Cristo es la vida de ustedes; pues, añade santo Tomás, es el motor de la vida de ustedes: *quia ipse est actor vitæ vestræ* [^45].
+El Apóstol lo había dicho en una palabra: *Christus vita vestra*: Cristo es la vida de ustedes; pues, añade santo Tomás, es el motor de la vida de ustedes: *quia ipse est actor vitæ vestræ*[^45].
 
 \*
 
@@ -150,11 +150,11 @@ A la intimidad de esta unión no se puede comparar nada de lo terrestre y humano
 
 Pero la santa Humanidad ha recibido comunicación de este poder divino; de modo que no solo deja extenderse sobre mi miseria la protección de Su oración y el resplandor de Su ternura infinita, sino que además ejerce la eficacia penetrante del poder divino introduciéndose hasta el último fondo de mi espíritu y de mi voluntad.
 
-La unión del esposo y la esposa, la unión misma del alma con el cuerpo no es tan íntima como la unión de mi alma con la santa Humanidad. Pues la gracia que ella me comunica, fruto de Su sacrificio, penetra la esencia misma de mi alma. Como el perfume penetra la sustancia del vaso que lo contiene; como el rayo invade el cristal para darle su pureza y su brillo; como el fuego penetra el hierro, lo calienta, lo ilumina, lo transforma y lo hace fuego: así la gracia que me llega de la Eucaristía, derramándose en mi alma, se apodera de ella para regirla, penetrarla y, según la palabra de santo Tomás, *transformarla en Dios y embriagarla de Dios* [^46].
+La unión del esposo y la esposa, la unión misma del alma con el cuerpo no es tan íntima como la unión de mi alma con la santa Humanidad. Pues la gracia que ella me comunica, fruto de Su sacrificio, penetra la esencia misma de mi alma. Como el perfume penetra la sustancia del vaso que lo contiene; como el rayo invade el cristal para darle su pureza y su brillo; como el fuego penetra el hierro, lo calienta, lo ilumina, lo transforma y lo hace fuego: así la gracia que me llega de la Eucaristía, derramándose en mi alma, se apodera de ella para regirla, penetrarla y, según la palabra de santo Tomás, *transformarla en Dios y embriagarla de Dios*[^46].
 
 Esta gracia es verdaderamente mi vida, mi verdadera vida, mucho más que la vida de mi cuerpo, o incluso que la vida natural de mi espíritu. Es el yo de mi yo, *el alma de mi alma*, dice Contenson. De modo que, en su último fondo, en su centro más interior, en su dentro más íntimo, mi vida es la gracia que me viene a cada minuto de la Hostia. El Señor decía a la beata Ángela de Foligno: *Yo soy más íntimo a tu alma que ella misma*.
 
-*Para mí, vivir es Cristo* [^47], exclamaba san Pablo. Con la misma verdad y la misma alegría interior, puedo decir: la vida, para mí, es la Eucaristía. Y no hago más que repetir lo que dijo primero el Maestro mismo: *El que me come vivirá por mí* [^48].
+*Para mí, vivir es Cristo*[^47], exclamaba san Pablo. Con la misma verdad y la misma alegría interior, puedo decir: la vida, para mí, es la Eucaristía. Y no hago más que repetir lo que dijo primero el Maestro mismo: *El que me come vivirá por mí*[^48].
 
 \*
 
@@ -174,9 +174,9 @@ Conviene notar que ordinariamente no es en el momento de la comunión cuando la 
 
 #### 1. La permanencia de la santísima Trinidad en el que comulga
 
-La presencia de las tres divinas Personas no está ligada, como la presencia física de la santa Humanidad, a la integridad de las especies eucarísticas. Ellas habitaban nuestra alma antes de la comunión. La habitan, pues, después de que la santa Hostia ha desaparecido de nuestro pecho, pero por una presencia más íntima, cuya influencia y eficacia la comunión ha hecho crecer. Después de la comunión, la capacidad que el alma tiene de recibir a Dios permanece agrandada. Vendremos al que ama, dice Nuestro Señor, yo, mi Padre y nuestro común Espíritu, *vendremos y haremos en él nuestra morada* [^49].
+La presencia de las tres divinas Personas no está ligada, como la presencia física de la santa Humanidad, a la integridad de las especies eucarísticas. Ellas habitaban nuestra alma antes de la comunión. La habitan, pues, después de que la santa Hostia ha desaparecido de nuestro pecho, pero por una presencia más íntima, cuya influencia y eficacia la comunión ha hecho crecer. Después de la comunión, la capacidad que el alma tiene de recibir a Dios permanece agrandada. Vendremos al que ama, dice Nuestro Señor, yo, mi Padre y nuestro común Espíritu, *vendremos y haremos en él nuestra morada*[^49].
 
-La unión está tan bien establecida, es tan profunda, tan firme, que por su naturaleza es permanente. Es un *don irrevocable* [^50]. Los Tres hacen más que visitarnos: se establecen para quedarse. Nuestra alma se vuelve como un cielo y nuestra vida íntima como *un preludio y un comienzo de la eterna bienaventuranza* [^51]. Nuestro Señor decía: *El reino de Dios está dentro de ustedes* [^52]. Por eso san Pablo se atreve a escribir: *El templo de Dios es santo, y ese templo son ustedes… Ustedes son el templo del Dios vivo* [^53].
+La unión está tan bien establecida, es tan profunda, tan firme, que por su naturaleza es permanente. Es un *don irrevocable*[^50]. Los Tres hacen más que visitarnos: se establecen para quedarse. Nuestra alma se vuelve como un cielo y nuestra vida íntima como *un preludio y un comienzo de la eterna bienaventuranza*[^51]. Nuestro Señor decía: *El reino de Dios está dentro de ustedes*[^52]. Por eso san Pablo se atreve a escribir: *El templo de Dios es santo, y ese templo son ustedes… Ustedes son el templo del Dios vivo*[^53].
 
 En este templo las tres divinas Personas no permanecen inactivas. Obran sin cesar. Obran cada una según el carácter que le es propio. El misterio de la Trinidad se encuentra también en la actividad misma y en el amor que las tres divinas Personas profesan al alma: el alma es amada de manera distinta por cada una de ellas y, sin embargo, amada con un único amor. Amor único, porque, cada vez que obran hacia fuera, las tres divinas Personas actúan necesariamente como uno solo. Y, sin embargo, triple efusión de amor, cuyos caracteres revelan algo del carácter propio de cada uno de los Tres que es su fuente.
 
@@ -206,13 +206,13 @@ En el cielo, la comunicación es perfecta. Sin velo alguno, sin traba alguna, lo
 
 En la tierra solo tenemos el comienzo de esta dicha inefable. Pero tenemos en ella una verdadera participación: la vida de la gracia aquí abajo y la de la gloria en el cielo son sustancialmente una misma cosa; la gracia comienza lo que la gloria acabará. Hay, pues, ya en nosotros algo de este admirable misterio de la circuminsesión de los Tres.
 
-Jesús nos lo ha dado a entender: *Nadie va a mi Padre sino por mí* [^55]*… Nadie viene a mí si mi Padre no lo atrae* [^56]. ¿Qué quiere decir esto sino: Jamás irán a mi Padre si no entran en el movimiento de amor que me une a Él; y jamás vendrán a mí si mi Padre no los arrastra en ese movimiento de amor que Lo precipita en mí mismo y nos consuma en la unidad del Espíritu Santo?
+Jesús nos lo ha dado a entender: *Nadie va a mi Padre sino por mí*[^55]*… Nadie viene a mí si mi Padre no lo atrae*[^56]. ¿Qué quiere decir esto sino: Jamás irán a mi Padre si no entran en el movimiento de amor que me une a Él; y jamás vendrán a mí si mi Padre no los arrastra en ese movimiento de amor que Lo precipita en mí mismo y nos consuma en la unidad del Espíritu Santo?
 
 El alma que ama a las tres divinas Personas es, pues, un alma arrastrada por el Espíritu Santo en ese movimiento circular de visión y de amor que hace la dicha del mismo Dios, dicha plenamente comunicada a los ángeles y a los bienaventurados.
 
-Así podemos decir con san Agustín: «Los santos llevan a Dios; su alma es un cielo, pues Dios la habita [^57]». Y con san Juan:
+Así podemos decir con san Agustín: «Los santos llevan a Dios; su alma es un cielo, pues Dios la habita[^57]». Y con san Juan:
 
-*Vivimos en sociedad con el Padre y con Su Hijo Jesucristo* [^58]. Entre los Tres y nosotros hay una sociedad, una familiaridad, la vida en común.
+*Vivimos en sociedad con el Padre y con Su Hijo Jesucristo*[^58]. Entre los Tres y nosotros hay una sociedad, una familiaridad, la vida en común.
 
 \*
 
