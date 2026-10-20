@@ -200,6 +200,8 @@ def main():
             else:
                 a.error(f"{n} no está en datos.js: agregue la ficha o pase --titulo, --autor y --categoria")
     generar(elegidas, o.epub)
+    import miniaturas  # noqa: E402  (WebP livianas para el sitio)
+    miniaturas.generar(set(elegidas))
 
 
 if __name__ == "__main__":

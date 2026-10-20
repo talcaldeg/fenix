@@ -9,6 +9,16 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `index.html`: el sitio entero (vistas por `#hash`, modo claro y oscuro, ES/EN). Cada idioma
   muestra solo lo suyo: en español no aparece ningún libro, enlace ni oración en inglés, y al
   revés. Un enlace en otro idioma que el libro lleva `idioma` en `externos`.
+- La ficha de un libro se abre encima de la vista y pone en la barra la página estática del libro
+  (`libro/<id>/` o `libro/<id>/<idioma>/`, con `history.pushState`): lo que se copia de ahí trae
+  la vista previa en WhatsApp. Atrás cierra la ficha. Todo enlace a un libro dentro del sitio va a
+  esa ruta (no a `#libro/<id>`); un `#libro/<id>` viejo se reemplaza por la página estática.
+  `?abrir=<id>` abre la ficha sobre la biblioteca (botón de las páginas estáticas) y `?q=<texto>`
+  abre la biblioteca con esa búsqueda (lo usa el 404 de `talcaldeg.github.io`).
+- Peso: cada vista se arma recién cuando se abre, y las imágenes son `<img loading="lazy">` en
+  WebP liviano (`herramientas/miniaturas.py`: `img/cuadros/mini/`, `img/cuadros/medio/`,
+  `img/portadas/medio/` y el fondo del inicio). `portadas.py` las rehace solo; si se cambia una
+  imagen a mano, correr `python herramientas/miniaturas.py`.
 - **Regla fija del menú: máximo 6 entradas de primer nivel, contando Colaborar.** Una sección
   nueva entra en una vista que ya existe o en el submenú, nunca como entrada suelta. Inicio no
   va en el menú (lo lleva la marca) y Oraciones es un bloque de Plan de vida (`#oraciones` abre

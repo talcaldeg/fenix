@@ -3,6 +3,10 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- La ficha de un libro pone en la barra su página estática (libro/<id>/): la base fija la carpeta
+     del sitio para que las rutas relativas no cambien. En el inicio, el fondo del fénix se pide primero. -->
+<script>(function(){var d=location.href.replace(/[?#].*$/,"").replace(/[^\/]*$/,""),b=document.createElement("base");b.href=d;document.head.appendChild(b);
+if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link");p.rel="preload";p.as="image";p.type="image/webp";p.href=d+(matchMedia("(max-width:480px)").matches?"img/inicio-fenix-movil.webp":"img/inicio-fenix.webp");p.setAttribute("fetchpriority","high");document.head.appendChild(p);document.documentElement.classList.add("pre-inicio");}})();</script>
 <title data-i18n="doc.titulo">Proyecto Fénix · Buenos libros, gratis y escogidos</title>
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%236b1d24%22/%3E%3Cg%20fill%3D%22%23e8b04a%22%3E%3Cpath%20d%3D%22M31%2056C24%2052%2015%2051%207%2053L6.5%2046.5%204.5%2045.5%206%2038.5%203.5%2037%205%2029%202.5%2027.5%202.5%207.5C8%2017%2019%2026%2031%2036.5Z%22/%3E%3Cpath%20d%3D%22M33%2056C40%2052%2049%2051%2057%2053L57.5%2046.5%2059.5%2045.5%2058%2038.5%2060.5%2037%2059%2029%2061.5%2027.5%2061.5%207.5C56%2017%2045%2026%2033%2036.5Z%22/%3E%3Cpath%20d%3D%22M32%2038C29.3%2033%2028.9%2027.6%2029.8%2022.8C30.7%2018.4%2033.4%2015.6%2037.2%2016.1L42.6%2018%2037.6%2020.1C36%2023%2035.7%2028%2034.8%2032.8Z%22/%3E%3Cpath%20d%3D%22M31.4%2019.4C28%2017%2026.6%2013.2%2027.7%209.2C28.8%2012.4%2030.6%2014%2033%2015.2Z%22/%3E%3Cpath%20d%3D%22M33.6%2016.4C32.4%2012.8%2033.2%209.4%2035.4%206.8C35.2%2010.2%2036.1%2012.4%2037.5%2014.4Z%22/%3E%3C/g%3E%3Cpath%20d%3D%22M5%2045.2C13%2042.6%2022%2043.4%2030.4%2048.2M4.6%2036.8C11.6%2033.6%2019.6%2034.2%2027.4%2039.2M59%2045.2C51%2042.6%2042%2043.4%2033.6%2048.2M59.4%2036.8C52.4%2033.6%2044.4%2034.2%2036.6%2039.2%22%20fill%3D%22none%22%20stroke%3D%22%236b1d24%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
 <meta name="description" content="Novelas, teatro, poesía, ensayo y clásicos de todas las épocas, escogidos uno a uno y gratis en EPUB y PDF, con por qué leerlo, citas y valoración moral. Sin publicidad ni registro.">
@@ -1084,7 +1088,14 @@
     .ajustes{margin-left:auto}
   }
 
+  /* main ocupa la pantalla desde el primer pintado: el footer no salta cuando el JavaScript arma la vista (CLS). */
+  main{min-height:100vh}
   section.vista{display:none; padding:28px 0 56px}
+  /* En el inicio, el hero (con el fondo del fénix, que es el LCP) se pinta sin esperar a datos.js;
+     lo de abajo aparece cuando el JavaScript lo arma. Las cifras reservan su alto. */
+  html.pre-inicio #v-inicio{display:block}
+  html.pre-inicio #v-inicio > .wrap{display:none}
+  .hero .cifras b{min-height:1.1em}
   section.vista.on{display:block}
   #v-inicio{padding-top:0}
   h1{font-size:clamp(28px,5vw,44px); line-height:1.15; margin:0 0 12px}
@@ -1093,9 +1104,9 @@
   .lede{color:var(--muted); font-size:clamp(16px,2.2vw,19px); max-width:680px}
   .eyebrow{font:700 12px system-ui,sans-serif; letter-spacing:1.6px; text-transform:uppercase; color:var(--oro); margin:0 0 8px}
 
-  /* Portada: siempre oscura, para empalmar con la noche del fénix (img/inicio-fenix.jpg). */
+  /* Portada: siempre oscura, para empalmar con la noche del fénix (img/inicio-fenix.webp, que saca herramientas/miniaturas.py del JPG). */
   .hero{position:relative; overflow:hidden; background:#0f0d10; color:#f6ecd9; border-bottom:1px solid var(--line); min-height:min(80vh,660px); display:flex; align-items:center; padding:64px 0}
-  .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#0f0d10 url(img/inicio-fenix.jpg) center top/cover no-repeat; animation:acercar 2.8s ease-out both}
+  .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#0f0d10 url(img/inicio-fenix.webp) center top/cover no-repeat; animation:acercar 2.8s ease-out both}
   .hero .fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,#0f0d10 0%,rgba(15,13,16,.8) 18%,rgba(15,13,16,0) 52%), linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 28%)}
   .hero .wrap{position:relative; width:100%}
   .hero .txt{max-width:560px; animation:subir 1.1s .2s ease-out both}
@@ -1121,6 +1132,8 @@
     .hero .cifras b{font-size:26px}
     .hero .credito{left:16px; right:16px}
   }
+  /* Celulares: el fondo en 860 px (57 KB) en vez del de 1072 px. */
+  @media (max-width:480px){.hero .fondo{background-image:url(img/inicio-fenix-movil.webp)}}
   .hero .acciones{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px}
 
   .accesos{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
@@ -1166,6 +1179,9 @@
   /* Portada con marco Fénix (img/portadas/): título y autor ya van impresos en la imagen. */
   .portada.marco{background-size:cover; background-position:center; border-radius:4px; box-shadow:0 1px 4px rgba(0,0,0,.28)}
   .portada.marco::after{display:none}
+  /* Portadas y miniaturas son <img> con loading="lazy": no se bajan las de vistas ocultas ni las que están fuera de pantalla. */
+  .portada > img.fondo{position:absolute; inset:0; width:100%; height:100%; object-fit:cover; border-radius:inherit}
+  img.mini{display:block; object-fit:cover}
   .libro .pie{padding:10px 12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font:14px system-ui,sans-serif; color:var(--muted)}
   .etq{background:var(--chip); border-radius:999px; padding:2px 8px}
   .etq.leido{color:var(--ok)}
@@ -1535,7 +1551,7 @@
             <div class="precision" data-i18n="oh.precision">Una precisión: no se trata de una nueva encarnación ni de que la persona deje de ser ella misma. Es la vida de la gracia, que nos une a Cristo como miembros de Su Cuerpo. La expresión pertenece a la teología espiritual; su fundamento sí es doctrina de la Iglesia (Catecismo, nn. 521 y 1997).</div>
             <div class="acciones" style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
               <a class="btn prim" href="#oraciones" data-i18n="oh.rezar">Rezar la oración</a>
-              <a class="btn" href="#libro/one-with-jesus" data-i18n="oh.libro">Ver «One with Jesus»</a>
+              <a class="btn" href="libro/one-with-jesus/" data-i18n="oh.libro">Ver «One with Jesus»</a>
             </div>
           </div>
           <div>
@@ -1873,16 +1889,25 @@
   </section>
 </main>
 
-<dialog id="dlgLibro"><div style="position:relative"><button class="cerrar" id="cerrarFicha" aria-label="Cerrar">×</button><div id="fichaCuerpo"></div></div></dialog>
+<dialog id="dlgLibro" aria-labelledby="fichaTitulo"><div style="position:relative"><button class="cerrar" id="cerrarFicha" aria-label="Cerrar">×</button><div id="fichaCuerpo"></div></div></dialog>
 
 <footer>
   <div class="wrap" data-i18n="pie">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.</div>
   <div class="wrap" style="margin-top:6px"><span data-i18n="pie2">Catálogo actualizado al</span> <span id="fechaCatalogo"></span> · <a href="#contacto" data-i18n="nav.contacto">Contacto</a></div>
 </footer>
 
-<script src="datos.js"></script>
+<!-- defer: el HTML (y el hero del inicio) se pinta sin esperar al catálogo; el código de abajo corre cuando datos.js ya cargó. -->
+<script src="datos.js" defer></script>
 <script>
-(function(){
+// Corre con el DOM listo y después de un primer pintado (el hero del inicio ya visible), no antes.
+// requestAnimationFrame no corre en una pestaña en segundo plano: ahí parte por el setTimeout.
+document.addEventListener("DOMContentLoaded", () => {
+  let ya = false;
+  const partir = () => { if (!ya){ ya = true; iniciar(); } };
+  requestAnimationFrame(() => setTimeout(partir));
+  setTimeout(partir, 200);
+});
+function iniciar(){
   "use strict";
   const D = window.FENIX;
   const $ = (s, r=document) => r.querySelector(s);
@@ -2064,9 +2089,15 @@
   const citas = () => libros().filter(l => l.idioma === lang).flatMap(l => (l.citas || []).map(c => ({ c, l })));
 
   // Miniaturas y fondos: el cuadro sin marco (img/cuadros/), que a ese tamaño se lee mejor que la portada entera.
+  // El sitio usa las copias WebP livianas que deja herramientas/miniaturas.py (mini 96 px, medio 360 px);
+  // el JPG de 600x900 queda para las páginas estáticas y el EPUB.
   const cuadro = src => src.replace("img/portadas/", "img/cuadros/");
+  const webp = (src, tam) => src.replace(/^img\/(cuadros|portadas)\/([^/]+)\.jpg$/, `img/$1/${tam}/$2.webp`);
+  const miniatura = (l, tam = "mini", w = 44, h = 66) => l.imagen
+    ? `<img class="mini ${esc(l.categoria)}" src="${esc(webp(cuadro(l.imagen.src), tam))}" alt="" loading="lazy" decoding="async" width="${w}" height="${h}">`
+    : `<span class="mini ${esc(l.categoria)}" aria-hidden="true"></span>`;
   function portada(l){
-    if (l.imagen && !/^https?:/.test(l.imagen.src)) return `<div class="portada marco ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.autor)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"></div>`;
+    if (l.imagen && !/^https?:/.test(l.imagen.src)) return `<div class="portada marco ${esc(l.categoria)}" role="img" aria-label="${esc(l.titulo)} · ${esc(l.autor)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"><img class="fondo" src="${esc(webp(l.imagen.src, "medio"))}" alt="" loading="lazy" decoding="async" width="360" height="540"></div>`;
     if (l.imagen) return `<div class="portada img ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"><div class="t">${esc(l.titulo)}</div><div class="a">${esc(l.autor)}</div></div>`;
     return `<div class="portada ${esc(l.categoria)}"><div class="t">${esc(l.titulo)}</div><div class="f">✠</div><div class="a">${esc(l.autor)}</div></div>`;
   }
@@ -2103,12 +2134,12 @@
   function parecido(p){
     const r = (p.resumen && (p.resumen[lang] || p.resumen.es)) || "";
     const de = (r.match(/^.+?\.(?=\s|$)/) || [r])[0];
-    return `<a class="parecido" href="#libro/${esc(p.id)}"><span class="mini ${esc(p.categoria)}" aria-hidden="true"${p.imagen ? ` style="background-image:url('${esc(cuadro(p.imagen.src))}')"` : ""}></span>
+    return `<a class="parecido" href="${esc(rutaLibro(p))}">${miniatura(p)}
       <span><span class="tt" style="display:block">${esc(p.titulo)}</span><span class="au" style="display:block">${esc(p.autor)} · ${esc(categoria(p.categoria))}</span>${de ? `<span class="de">${esc(de)}</span>` : ""}</span></a>`;
   }
   function fila(l){
-    return `<div class="fila${claseLibro(l)}" role="listitem" data-id="${esc(l.id)}" tabindex="0"><span class="mini ${esc(l.categoria)}"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
-      <div class="libro-c"><div class="tt"><a href="libro/${esc(l.id)}/">${esc(l.titulo)}</a></div><div class="au">${esc(l.autor)} · ${esc(l.anio)}</div></div>
+    return `<div class="fila${claseLibro(l)}" role="listitem" data-id="${esc(l.id)}" tabindex="0">${miniatura(l)}
+      <div class="libro-c"><div class="tt"><a href="${esc(rutaLibro(l))}">${esc(l.titulo)}</a></div><div class="au">${esc(l.autor)} · ${esc(l.anio)}</div></div>
       <div class="etqs">${sello(l)}${etqsFormato(l)}<span class="etq">${esc(categoria(l.categoria))}</span>
         ${l.editorial ? `<span class="etq ed-fenix">${esc(t("x.edFenix"))}</span>` : ""}</div>
       ${moral(l)}
@@ -2157,7 +2188,7 @@
     $("#cCitas").textContent = citas().length;
     // Cada acceso con un cuadro distinto: no se repite una imagen ya usada en otro.
     const usadas = new Set();
-    const fondo = l => { if (!l || !l.imagen) return ""; usadas.add(l.imagen.src); return ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"`; };
+    const fondo = l => { if (!l || !l.imagen) return ""; usadas.add(l.imagen.src); return ` style="background-image:url('${esc(webp(cuadro(l.imagen.src), "medio"))}')"`; };
     const conImagen = xs => { const libres = xs.filter(l => l.imagen && !usadas.has(l.imagen.src)), ep = libres.filter(tieneEpub); return ep.find(l => l.recomendado) || ep[0] || libres.find(l => l.recomendado) || libres[0] || xs[0]; };
     const cats = ["lectura","oracion","novela","teatro","poesia","ensayo"].map(c => {
       const xs = ls.filter(l => l.categoria === c);
@@ -2182,9 +2213,23 @@
     $("#fNoLeidos").checked = $("#fFavoritos").checked = false;
     pintarCatalogo();
   });
-  // El título de cada fila es un enlace real a libro/<id>/ (para buscadores); en el sitio abre la ficha.
-  document.addEventListener("click", e => { const a = e.target.closest(".libro, .fila[data-id], .ed[data-id]"); if (a){ e.preventDefault(); location.hash = "libro/" + a.dataset.id; } });
-  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro, .fila[data-id], .ed[data-id]"); if (a && e.key === "Enter") location.hash = "libro/" + a.dataset.id; });
+  // El título de cada fila y todo enlace a un libro van a su página estática libro/<id>/ (para
+  // buscadores y para abrir en otra pestaña); en el sitio abren la ficha encima de la vista y la barra
+  // muestra esa misma página. Ctrl o clic central la abren aparte, como un enlace normal.
+  document.addEventListener("click", e => {
+    if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
+    const c = e.target.closest(".libro, .fila[data-id], .ed[data-id]");
+    if (c){ e.preventDefault(); irALibro(c.dataset.id); return; }
+    const a = e.target.closest("a[href]");
+    if (!a || a.target || a.hasAttribute("download") || a.hasAttribute("data-pagina")) return;
+    const u = new URL(a.href);
+    if (u.origin !== location.origin) return;
+    const id = idDeRuta(u.pathname);
+    if (id){ e.preventDefault(); irALibro(id); return; }
+    // Desde la URL de una ficha, un enlace a una vista (#biblioteca) no recarga la página.
+    if (esRaiz(u.pathname) && !esRaiz(location.pathname)){ e.preventDefault(); ir(u.href); }
+  });
+  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro, .fila[data-id], .ed[data-id]"); if (a && e.key === "Enter") irALibro(a.dataset.id); });
 
   // ---------- ficha del libro ----------
   function abrirFicha(id){
@@ -2197,7 +2242,7 @@
     ].join("");
     $("#fichaCuerpo").innerHTML = `<div class="ficha">${portada(l)}<div>
       ${sello(l)}
-      <h3 style="font-size:22px">${esc(l.titulo)}</h3>
+      <h3 style="font-size:22px" id="fichaTitulo">${esc(l.titulo)}</h3>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</p>
       <div class="descargas">${desc}</div>
       ${Object.keys(archivosEn(l)).length ? `<p class="ayuda">${esc(t("x.ayuda"))}</p>` : ""}
@@ -2214,7 +2259,7 @@
       ${(l.citas||[]).length ? `<div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div style="margin-top:8px">${l.citas.map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</div></div>` : ""}
       <div class="seccion-ficha"><strong>${esc(t("l.moral"))}</strong><div style="margin-top:8px">${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</div></div>
       <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>
-      <p class="meta" style="margin-top:14px"><a href="${esc(rutaLibro(l))}">${esc(t("x.paginaLibro"))}</a></p>
+      <p class="meta" style="margin-top:14px"><a href="${esc(rutaLibro(l))}" data-pagina>${esc(t("x.paginaLibro"))}</a></p>
       ${l.fuente ? `<p class="meta" style="margin-top:6px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta" style="margin-top:6px">${esc(t("x.portada"))}: <a href="${esc(l.imagen.url)}" target="_blank" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : t("x.dominioPublico"))})</p>` : ""}
     </div></div>`;
@@ -2231,15 +2276,27 @@
     // Solicitar una corrección: abre el formulario de errores con este libro ya elegido.
     $("#btnCorregir").onclick = () => {
       $("#selLibroError").value = `${l.titulo} - ${l.autor}`;
-      location.hash = "error";
+      ir("#error");
       setTimeout(() => $('#v-error textarea[name="descripcion"]').focus(), 0);
     };
     const dlg = $("#dlgLibro");
     if (!dlg.open) dlg.showModal();
   }
-  $("#cerrarFicha").onclick = () => $("#dlgLibro").close();
-  $("#dlgLibro").addEventListener("click", e => { if (e.target.id === "dlgLibro") e.target.close(); });
-  $("#dlgLibro").addEventListener("close", () => { if (/^#(libro|obra)\//.test(location.hash)) history.replaceState(null, "", "#" + (ultimaVista || "biblioteca")); });
+  // Al cerrar la ficha, la barra vuelve a la vista de antes: se retrocede lo que avanzaron las fichas
+  // abiertas (una ficha abierta desde otra suma un paso). Si la cerró el botón Atrás, ya está ahí.
+  // La X, el fondo y Escape lo hacen al tiro: el evento close puede llegar tarde (pestaña en segundo plano).
+  let volviendo = false;
+  function volverDeFicha(){
+    const s = history.state;
+    if (s && s.ficha && !volviendo){ volviendo = true; history.go(-s.prof); }
+    else if (/^#obra\//.test(location.hash)) history.replaceState(null, "", "#" + (ultimaVista || "todos"));
+  }
+  window.addEventListener("popstate", () => { volviendo = false; });
+  function cerrarFicha(){ const d = $("#dlgLibro"); if (d.open) d.close(); volverDeFicha(); }
+  $("#cerrarFicha").onclick = cerrarFicha;
+  $("#dlgLibro").addEventListener("click", e => { if (e.target.id === "dlgLibro") cerrarFicha(); });
+  $("#dlgLibro").addEventListener("cancel", e => { e.preventDefault(); cerrarFicha(); });
+  $("#dlgLibro").addEventListener("close", () => { if (!$("#dlgLibro").open) volverDeFicha(); });
 
   // ---------- todos los libros (Open Library) ----------
   // Busca en Open Library las obras con edición en el idioma de la página y muestra el título de
@@ -2384,13 +2441,13 @@
     const acciones = (archivos.length || externos.length)
       ? [...archivos.map(([fm, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${fm.toUpperCase()}</a>`),
          ...externos.map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
-         `<a class="btn" href="#libro/${esc(f.id)}">${esc(t("todos.verFicha"))}</a>`].join("")
+         `<a class="btn" href="${esc(rutaLibro(f))}">${esc(t("todos.verFicha"))}</a>`].join("")
       : `<button class="btn prim" type="button" id="btnSolicitar">${esc(t("todos.solicitar"))}</button>`;
     const portadaObra = o.portada
       ? `<div class="portada img"${tapa(o)} role="img" aria-label="${esc(o.titulo)}"><div class="t">${esc(o.titulo)}</div><div class="a">${esc(o.autores[0] || "")}</div></div>`
       : `<div class="portada"><div class="t">${esc(o.titulo)}</div><div class="f">✠</div><div class="a">${esc(o.autores[0] || "")}</div></div>`;
     $("#fichaCuerpo").innerHTML = `<div class="ficha">${portadaObra}<div>
-      <h3 style="font-size:22px">${esc(o.titulo)}</h3>
+      <h3 style="font-size:22px" id="fichaTitulo">${esc(o.titulo)}</h3>
       <p class="meta">${esc(o.autores.slice(0, 3).join(", "))}${o.anio ? " · " + esc(o.anio) : ""}</p>
       ${o.editorial || o.isbn ? `<p class="meta" style="margin-top:4px">${esc(t("todos.edicion"))}: ${esc([o.editorial, o.fecha, o.isbn ? "ISBN " + o.isbn : ""].filter(Boolean).join(" · "))}</p>` : ""}
       <div class="descargas">${acciones}</div>
@@ -2452,7 +2509,7 @@
     const mcd = (a, b) => b ? mcd(b, a % b) : a;
     const paso = [37, 41, 43, 47, 53, 59, 61, 67].find(p => mcd(p, cs.length) === 1) || 1;
     const { c, l } = cs[(dia * paso) % cs.length];
-    el.href = "#libro/" + l.id;
+    el.href = rutaLibro(l);
     el.innerHTML = `<p class="eyebrow" style="margin:0">${esc(t("cit.dia"))}</p><p class="txt">${esc(c)}</p>
       <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline"><span class="de">${esc(l.autor)}, <i>${esc(l.titulo)}</i></span><span class="ir">${esc(t("cit.verLibro"))}</span></div>`;
   }
@@ -2461,7 +2518,7 @@
     const q = sin($("#cBuscar").value.trim()), cat = $("#cCategoria").value;
     const cs = citas().filter(({ c, l }) => (!cat || l.categoria === cat) && (!q || sin(c + " " + l.titulo + " " + l.autor).includes(q)));
     $("#cCuenta").textContent = cs.length === 1 ? t("cit.cuenta1") : t("cit.cuenta").replace("{n}", cs.length);
-    $("#listaCitas").innerHTML = cs.map(({ c, l }) => `<a class="cita" role="listitem" href="#libro/${esc(l.id)}"><span class="mini ${esc(l.categoria)}" aria-hidden="true"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
+    $("#listaCitas").innerHTML = cs.map(({ c, l }) => `<a class="cita" role="listitem" href="${esc(rutaLibro(l))}">${miniatura(l)}
       <blockquote>${esc(c)}<cite>${esc(l.autor)}, ${esc(l.titulo)}</cite></blockquote></a>`).join("");
     $("#cVacio").hidden = cs.length > 0;
   }
@@ -2473,8 +2530,8 @@
     const ls = libros().filter(l => l.editorial);
     $("#navEditorial").hidden = !ls.length;
     $("#listaEditorial").innerHTML = ls.map(l => `<article class="caja ed" data-id="${esc(l.id)}" tabindex="0">
-      <span class="mini ${esc(l.categoria)}" aria-hidden="true"${l.imagen ? ` style="background-image:url('${esc(cuadro(l.imagen.src))}')"` : ""}></span>
-      <div><h3><a href="libro/${esc(l.id)}/" style="color:inherit; text-decoration:none">${esc(l.titulo)}</a></h3>
+      ${miniatura(l, "medio", 72, 108)}
+      <div><h3><a href="${esc(rutaLibro(l))}" style="color:inherit; text-decoration:none">${esc(l.titulo)}</a></h3>
         <div class="meta" style="margin:0">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</div>
         <p><strong>${esc(t("x.queHicimos"))}:</strong> ${esc(l.editorial[lang] || l.editorial.es)}</p>
         <span class="btn">${esc(t("x.verLibro"))}</span></div></article>`).join("");
@@ -2580,13 +2637,41 @@
   else $("#btnDonar").hidden = true; // un botón que no hace nada confunde: sin enlace, solo el aviso
 
   // ---------- rutas ----------
+  // Las vistas van por #hash; la ficha de un libro, por la ruta de su página estática (libro/<id>/ o
+  // libro/<id>/<idioma>/, ver rutaLibro) puesta con history.pushState: lo que se copia de la barra y se
+  // pega en WhatsApp trae la vista previa del libro, y Atrás cierra la ficha.
   const VISTAS = ["inicio","biblioteca","todos","editorial","plan","citas","salvar","error","dona","contacto"];
-  let ultimaVista = "inicio";
+  let ultimaVista = null;
+  const RAIZ = new URL(document.baseURI).pathname;
+  const esRaiz = p => p === RAIZ || p === RAIZ + "index.html";
+  function idDeRuta(p){
+    const m = p.startsWith(RAIZ) && p.slice(RAIZ.length).match(/^libro\/([^/]+)\/(?:(?:es|en)\/)?(?:index\.html)?$/);
+    return m ? decodeURIComponent(m[1]) : null;
+  }
+  const contar = () => { if (window.goatcounter && goatcounter.count) goatcounter.count(); };
+  let urlVista = location.href;
+  function alNavegar(){ if (location.href === urlVista) return; urlVista = location.href; ruta(); contar(); }
+  // Ir a una vista (#error) sin recargar, también desde la URL de una ficha.
+  function ir(destino){ history.pushState(null, "", destino); alNavegar(); }
+  function irALibro(id){
+    const l = porId(id); if (!l) return;
+    const s = history.state, prof = s && s.ficha ? s.prof + 1 : 1;
+    history.pushState({ ficha: l.id, prof }, "", rutaLibro(l));
+    urlVista = location.href;
+    abrirFicha(l.id); contar();
+  }
   function ruta(){
-    const h = location.hash.replace(/^#/, "");
-    if (h.startsWith("libro/")){
+    const id = idDeRuta(location.pathname);
+    if (id){
       if (!$(".vista.on")) mostrar("biblioteca");
-      abrirFicha(h.slice(6)); return;
+      abrirFicha(id); return;
+    }
+    let h = location.hash.replace(/^#/, "");
+    // Enlace viejo #libro/<id>: se reemplaza por la página estática del libro.
+    if (h.startsWith("libro/")){
+      const l = porId(decodeURIComponent(h.slice(6)));
+      if (l){ location.replace(rutaLibro(l)); return; }
+      history.replaceState(null, "", "#biblioteca"); urlVista = location.href; h = "biblioteca";
     }
     if (h.startsWith("obra/")){
       if (!$(".vista.on")) mostrar("todos");
@@ -2610,11 +2695,15 @@
       if (document.readyState !== "complete") window.addEventListener("load", () => setTimeout(bajar, 0), { once: true });
       return;
     }
-    mostrar(VISTAS.includes(h) ? h : "inicio");
-    window.scrollTo(0, 0);
+    // Cerrar una ficha devuelve a la misma vista: solo se sube al principio si la vista cambia.
+    const v = VISTAS.includes(h) ? h : "inicio", cambia = v !== ultimaVista;
+    mostrar(v);
+    if (cambia) window.scrollTo(0, 0);
   }
   function mostrar(v){
     ultimaVista = v;
+    pintarVista(v);
+    document.documentElement.classList.remove("pre-inicio");
     $$(".vista").forEach(s => s.classList.toggle("on", s.id === "v-" + v));
     $$("nav.menu a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + v));
     $("#menuMas").classList.toggle("on", !!$("#menuMas a.on"));
@@ -2622,15 +2711,40 @@
     $("#menu").classList.remove("abierto");
   }
   // Cada vista o ficha cuenta como una visita en GoatCounter (ver el bloque de medición al final).
-  window.addEventListener("hashchange", () => { ruta(); if (window.goatcounter && goatcounter.count) goatcounter.count(); });
+  // popstate (Atrás y Adelante) y hashchange pueden llegar los dos por el mismo cambio: alNavegar lo atiende una vez.
+  window.addEventListener("popstate", alNavegar);
+  window.addEventListener("hashchange", alNavegar);
 
   $("#fechaCatalogo").textContent = D.actualizado || "";
   // Al cambiar de idioma, los resultados del catálogo mundial eran del otro idioma: se rehace la búsqueda.
   function pintarTodos(){ if (busqueda.q && busqueda.idioma !== lang){ $("#tBuscar").value = busqueda.q; buscarObras(false); } }
-  function pintarTodo(){ pintarInicio(); pintarTodos(); pintarRecomendados(); pintarCatalogo(); pintarEditorial(); pintarBuscados(); pintarPlan(); pintarOraciones(); pintarCitaDia(); pintarCitas(); llenarSelectLibros(); }
+  // Cada vista se arma recién cuando se abre (y una vez por idioma): pintar todo al cargar dejaba
+  // miles de elementos y bajaba las imágenes de vistas que nadie abrió.
+  const PINTORES = {
+    inicio: [pintarInicio, pintarRecomendados, pintarCitaDia], biblioteca: [pintarCatalogo], todos: [pintarTodos],
+    editorial: [pintarEditorial, pintarBuscados], plan: [pintarPlan, pintarOraciones], citas: [pintarCitas], error: [llenarSelectLibros]
+  };
+  let pintadas = new Set();
+  function pintarVista(v){ if (pintadas.has(v)) return; pintadas.add(v); (PINTORES[v] || []).forEach(f => f()); }
+  // Cambio de idioma, leído o favorito: se rehace la vista abierta y las demás al volver a ellas.
+  function pintarTodo(){
+    pintadas = new Set();
+    $("#navEditorial").hidden = !libros().some(l => l.editorial);
+    if (ultimaVista) pintarVista(ultimaVista);
+  }
   aplicarIdioma();
+  // ?abrir=<id> (botón «Abrir en la biblioteca» de la página estática) abre la ficha sobre la
+  // biblioteca; ?q=<texto> (página 404) abre la biblioteca con esa búsqueda.
+  const pedido = new URLSearchParams(location.search), abrir = pedido.get("abrir"), q = pedido.get("q");
+  if (abrir || q !== null){
+    const u = new URL(location.href);
+    u.searchParams.delete("abrir"); u.searchParams.delete("q"); u.hash = "biblioteca";
+    history.replaceState(null, "", u.href); urlVista = location.href;
+    if (q) $("#fBuscar").value = q;
+  }
   ruta();
-})();
+  if (abrir) irALibro(abrir);
+}
 </script>
 <!-- MEDICION:inicio - GoatCounter: cuenta visitas y clics de descarga sin cookies ni datos personales. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
 <script>

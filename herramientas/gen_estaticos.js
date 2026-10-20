@@ -278,7 +278,7 @@ ${JSON.stringify(ld, null, 2)}
       ${d ? `<p><span class="circ" aria-hidden="true">${[1, 2, 3, 4, 5, 6].map(n => `<i class="${n <= d.valor ? "on" : ""}"></i>`).join("")}</span><strong>${d.valor} ${esc(x.de)} 6</strong>: ${esc(textoDelibris(d, lang))}. <a href="${esc(d.url)}" rel="noopener">${esc(x.verEn)}</a></p>` : `<p>${esc(x.sinDelibris)}</p>`}
       <p class="meta">${esc(x.moralNota)}</p>
       ${parecidos.length ? `<h2>${esc(x.parecidos)}</h2>\n      <ul class="parecidos">${parecidos.map(p => `<li><a href="${l._ruta ? "../../" : "../"}${esc((vista(p, lang)._ruta || "libro/" + p.id + "/").slice(6))}">${esc(p.titulo)}</a> · ${esc(p.autor)}</li>`).join("")}</ul>` : ""}
-      <div class="botones"><a class="btn" href="${inicio}#libro/${esc(l.id)}">${esc(x.abrir)}</a><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
+      <div class="botones"><a class="btn" href="${B}?${lang === "en" ? "l=en&amp;" : ""}abrir=${encodeURIComponent(l.id)}">${esc(x.abrir)}</a><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
       ${l.fuente ? `<p class="meta">${esc(x.fuente)}: <a href="${esc(l.fuente.url)}" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta">${esc(x.portada)}: <a href="${esc(l.imagen.url)}" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : x.dominio)})</p>` : ""}
     </div>
