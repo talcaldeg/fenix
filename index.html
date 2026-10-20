@@ -954,7 +954,10 @@
   .wrap{max-width:1080px; margin:0 auto; padding:0 16px}
   .sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 
-  #oraciones{scroll-margin-top:84px}  /* que la barra fija no tape el título al bajar */
+  #oraciones, #editores{scroll-margin-top:84px}
+  .editores{margin-top:44px; padding-top:30px; border-top:1px solid var(--line)}
+  .pasos{margin:8px 0 0; padding-left:20px; font:15px/1.55 system-ui,sans-serif}
+  .pasos li{margin-bottom:8px}  /* que la barra fija no tape el título al bajar */
   header.top{position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg) 90%,transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; gap:12px; min-height:58px}
   .marca{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; font-size:19px; white-space:nowrap}
@@ -1196,6 +1199,7 @@
       <details class="mas" id="menuMas">
         <summary data-i18n="nav.colaborar">Colaborar</summary>
         <div class="sub">
+          <a href="#editores" data-i18n="nav.editores">Ser editor</a>
           <a href="#salvar" data-i18n="nav.salvar">Salvar un libro</a>
           <a href="#error" data-i18n="nav.error">Avisar un error</a>
           <a href="#dona" data-i18n="nav.dona">Donar</a>
@@ -1497,7 +1501,69 @@
       <h2 data-i18n="ed.titulo">Editorial</h2>
       <p class="lede" data-i18n="ed.lede">A veces no basta con encontrar un libro: hay que traducirlo desde su lengua original, revisar una transcripción o armar una edición que se lea bien en el celular. Estos son los libros que preparamos en Proyecto Fénix.</p>
       <div id="listaEditorial" style="margin-top:22px"></div>
-      <p class="meta" style="margin-top:18px" data-i18n="ed.proximo">Estamos trabajando en nuevas traducciones. Si quieres ayudar a traducir o corregir, escríbenos desde Contacto.</p>
+      <p class="meta" style="margin-top:18px" data-i18n="ed.proximo">Estamos trabajando en nuevas traducciones. Si quieres ayudar, más abajo te contamos cómo sumarte como editor.</p>
+
+      <!-- EDITORES: bloque de Editorial; #editores abre esta vista y baja hasta aquí -->
+      <div id="editores" class="editores">
+        <p class="eyebrow" data-i18n="edi.eyebrow">Súmate</p>
+        <h2 data-i18n="edi.titulo">Sé editor de un libro</h2>
+        <p class="lede" data-i18n="edi.lede">Hay libros buenos que casi nadie lee porque no están en español, o porque su única versión es un escaneo difícil de leer. Te invitamos a hacerte cargo de uno: elegir el libro, poner una fecha y entregar una edición que cualquiera pueda leer gratis en su celular.</p>
+        <blockquote style="margin:16px 0 22px"><span data-i18n="edi.cita">«La lectura ha hecho muchos santos.»</span><cite data-i18n="edi.citaRef">San Josemaría, Camino, 116</cite></blockquote>
+        <p data-i18n="edi.porque">Todo cristiano está llamado a anunciar a Cristo con su vida y con su palabra (Catecismo, 905). Editar un buen libro es una forma concreta de hacerlo: el texto que dejes listo lo van a leer personas que nunca vas a conocer, por muchos años.</p>
+        <div class="dos-col" style="margin-top:22px">
+          <div class="caja">
+            <h3 data-i18n="edi.comoTitulo">Cómo funciona</h3>
+            <ol class="pasos">
+              <li data-i18n="edi.paso1">Elige el libro: el que te propongamos o uno que tengas en mente, siempre que sus derechos lo permitan.</li>
+              <li data-i18n="edi.paso2">Pon tu fecha de entrega. La eliges tú, según el tiempo que tengas.</li>
+              <li data-i18n="edi.paso3">Edita desde cero o sobre una traducción base hecha con inteligencia artificial, que revisas frase por frase contra el original.</li>
+              <li data-i18n="edi.paso4">Envía tu edición. La publicamos en EPUB y PDF, con su propia página para compartir y, cuando el original es de otro idioma, también en versión bilingüe.</li>
+            </ol>
+          </div>
+          <div class="caja">
+            <h3 data-i18n="edi.recibesTitulo">Qué ofrece Fénix</h3>
+            <ul class="pasos">
+              <li data-i18n="edi.recibe1">El libro queda publicado gratis, sin publicidad y con una licencia abierta.</li>
+              <li data-i18n="edi.recibe2">Si quieres, tu nombre aparece en el libro como encargado de la edición.</li>
+              <li data-i18n="edi.recibe3">Es un trabajo voluntario y sin pago: lo que se gana es que el libro exista.</li>
+            </ul>
+            <h3 data-i18n="edi.opcTitulo" style="margin-top:16px">Si quieres aportar más</h3>
+            <ul class="pasos">
+              <li data-i18n="edi.opc1">Tus citas favoritas del libro.</li>
+              <li data-i18n="edi.opc2">Una portada sin derechos de autor o hecha por ti.</li>
+              <li data-i18n="edi.opc3">Un prólogo.</li>
+            </ul>
+          </div>
+        </div>
+        <form class="formulario" data-asunto="Fénix - nuevo editor" style="margin-top:26px">
+          <input type="text" name="_honey" class="oculto" tabindex="-1" autocomplete="off">
+          <h3 data-i18n="edi.formTitulo">Quiero ser editor</h3>
+          <label><span data-i18n="f.nombre">Nombre</span><input name="nombre" required></label>
+          <label><span data-i18n="f.correo">Correo</span><input type="email" name="email" required></label>
+          <label><span data-i18n="edi.fLibro">¿Qué libro?</span>
+            <select name="libro_opcion">
+              <option data-i18n="edi.fLibro1">El que me propongan</option>
+              <option data-i18n="edi.fLibro2">Tengo uno en mente</option>
+            </select></label>
+          <label><span data-i18n="edi.fCual">Si tienes uno en mente, ¿cuál? (título y autor)</span><input name="libro"></label>
+          <label><span data-i18n="edi.fModo">¿Cómo prefieres editar?</span>
+            <select name="modo">
+              <option data-i18n="edi.fModo1">Sobre la traducción base con IA</option>
+              <option data-i18n="edi.fModo2">Desde cero</option>
+              <option data-i18n="edi.fModo3">Todavía no sé</option>
+            </select></label>
+          <label><span data-i18n="edi.fFecha">Fecha en que te comprometes a entregarlo</span><input type="date" name="fecha_entrega" required></label>
+          <label><span data-i18n="edi.fNombre">¿Tu nombre en el libro?</span>
+            <select name="credito">
+              <option data-i18n="edi.fNombre1">Sí, como encargado de la edición</option>
+              <option data-i18n="edi.fNombre2">No, prefiero que no aparezca</option>
+            </select></label>
+          <label><span data-i18n="edi.fComentario">Comentarios (idiomas que lees, experiencia, dudas)</span><textarea name="comentario"></textarea></label>
+          <button class="btn prim" type="submit" data-i18n="edi.fEnviar">Me comprometo</button>
+          <div class="estado" role="status"></div>
+          <p class="meta" data-i18n="edi.fNota">Te respondemos por correo con el libro y los archivos para empezar. La edición terminada, las citas, la portada o el prólogo se envían respondiendo ese correo.</p>
+        </form>
+      </div>
     </div>
   </section>
 
@@ -1674,8 +1740,9 @@
       "der.protegido":"{a} died in {m}; in Chile the work becomes free on 1 January {l}.","der.vivo":"There is no record of the author's death ({a}, born in {b}).",
       "der.reciente":"It was first published in {y}.","der.sinDatos":"Not enough data to tell. If you request it, we will check.",
       "der.etqLibre":"Public domain","der.etqProtegido":"Copyrighted","der.etqProbable":"Probably copyrighted","der.etqSinDatos":"No data",
+      "nav.editores":"Become an editor","edi.eyebrow":"Join us","edi.titulo":"Become the editor of a book","edi.lede":"There are good books that hardly anyone reads because they are not in Spanish, or because their only version is a scan that is hard to read. We invite you to take charge of one: choose the book, set a date and deliver an edition that anyone can read for free on their phone.","edi.cita":"«Reading has made many saints.»","edi.citaRef":"St Josemaría, The Way, 116 (our translation)","edi.porque":"Every Christian is called to proclaim Christ by their life and their word (Catechism, 905). Editing a good book is a concrete way to do it: the text you get ready will be read by people you will never meet, for many years.","edi.comoTitulo":"How it works","edi.paso1":"Choose the book: the one we suggest or one you have in mind, as long as its rights allow it.","edi.paso2":"Set your delivery date. You choose it, according to the time you have.","edi.paso3":"Edit from scratch or on top of a base translation made with artificial intelligence, which you check sentence by sentence against the original.","edi.paso4":"Send your edition. We publish it as EPUB and PDF, with its own page to share and, when the original is in another language, also in a bilingual version.","edi.recibesTitulo":"What Fénix offers","edi.recibe1":"The book is published for free, without ads and under an open licence.","edi.recibe2":"If you wish, your name appears in the book as the editor.","edi.recibe3":"It is volunteer, unpaid work: what you gain is that the book exists.","edi.opcTitulo":"If you would like to contribute more","edi.opc1":"Your favourite quotes from the book.","edi.opc2":"A copyright-free cover or one made by you.","edi.opc3":"A foreword.","edi.formTitulo":"I want to be an editor","edi.fLibro":"Which book?","edi.fLibro1":"The one you suggest","edi.fLibro2":"I have one in mind","edi.fCual":"If you have one in mind, which? (title and author)","edi.fModo":"How would you rather edit?","edi.fModo1":"On the AI base translation","edi.fModo2":"From scratch","edi.fModo3":"Not sure yet","edi.fFecha":"Date you commit to deliver it","edi.fNombre":"Your name in the book?","edi.fNombre1":"Yes, as the editor","edi.fNombre2":"No, I would rather not","edi.fComentario":"Comments (languages you read, experience, questions)","edi.fEnviar":"I commit","edi.fNota":"We will reply by email with the book and the files to get started. The finished edition, quotes, cover or foreword are sent by replying to that email.",
       "ed.eyebrow":"Our own editions","ed.titulo":"Our editions","ed.lede":"Sometimes finding a book is not enough: it has to be translated from its original language, a transcription has to be checked, or an edition has to be made that reads well on a phone. These are the books prepared by Proyecto Fénix.",
-      "ed.proximo":"We are working on new translations. If you would like to help translate or proofread, write to us from Contact.","x.edFenix":"Fénix edition","x.queHicimos":"What we did","x.verLibro":"See the book",
+      "ed.proximo":"We are working on new translations. If you would like to help, further down we explain how to join as an editor.","x.edFenix":"Fénix edition","x.queHicimos":"What we did","x.verLibro":"See the book",
       "x.ayuda":"Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.","x.paginaLibro":"Page of this book (to share)",
       "doc.titulo":"Proyecto Fénix · Good books, free and hand-picked",
       "hero.eyebrow":"A free digital library","hero.titulo":"Books brought back to life",
@@ -2306,6 +2373,14 @@
     }
     if ($("#dlgLibro").open) $("#dlgLibro").close();
     if (h === "otra-humanidad"){ mostrar("inicio"); setTimeout(() => $("#otra-humanidad").scrollIntoView(), 0); return; }
+    if (h === "editores"){
+      const bajar = () => $("#editores").scrollIntoView();
+      mostrar("editorial"); setTimeout(bajar, 0);
+      if (document.readyState !== "complete") window.addEventListener("load", () => setTimeout(bajar, 0), { once: true });
+      $$("nav.menu a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#editores"));
+      $("#menuMas").classList.toggle("on", true);
+      return;
+    }
     if (h === "oraciones"){
       // Al abrir el enlace directo, las portadas de arriba cargan después y el navegador repone el
       // scroll: se baja otra vez al terminar la carga.

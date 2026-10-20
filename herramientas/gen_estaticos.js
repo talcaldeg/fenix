@@ -396,7 +396,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 ${ORDEN.map(c => { const xs = PAGINAS.filter(l => l.categoria === c); return xs.length ? `## ${TX.es.cat[c]}\n\n${xs.map(linea).join("\n")}\n` : ""; }).filter(Boolean).join("\n")}
 ## Sitio
 
-- [Portada y buscador del catálogo](${SITIO}) - biblioteca completa con filtros por categoría y formato, plan de vida (libros para la oración y la lectura espiritual de cada día), oraciones y formularios para proponer un libro o avisar un error.
+- [Portada y buscador del catálogo](${SITIO}) - biblioteca completa con filtros por categoría y formato, plan de vida (libros para la oración y la lectura espiritual de cada día), oraciones, formularios para proponer un libro o avisar un error, y una invitación a ser editor de un libro (#editores).
 - [Mapa del sitio](${SITIO}sitemap.xml)
 `;
 escribirSiCambia("llms.txt", llms);
