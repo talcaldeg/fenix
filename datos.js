@@ -989,7 +989,7 @@ window.FENIX = {
         "En efecto, ni Anito, ni Melito pueden causarme mal alguno, porque el mal no puede nada contra el hombre de bien.",
         "¡Ah! ¿No es una ignorancia vergonzante creer conocer una cosa que no se conoce?",
         "Lo que sé de cierto es que cometer injusticias y desobedecer al que es mejor y está por cima de nosotros, sea Dios, sea hombre, es lo más criminal y lo más vergonzoso.",
-        "Pero ya es tiempo de que nos retiremos de aquí, yo para morir, vosotros para vivir. ¿Entre vosotros y yo, quién lleva la mejor parte? Esto es lo que nadie sabe, excepto Dios."
+        "Pero ya es tiempo de que nos retiremos de aquí, yo para morir, vosotros para vivir. Quién de vosotros o de mí lleva la mejor parte, nadie lo sabe, excepto Dios."
       ],
       archivos: { epub: "libros/platon-apologia-de-socrates.epub", pdf: "libros/platon-apologia-de-socrates.pdf" },
       fuente: { texto: "Obras completas de Platón, tomo I (Madrid, 1871), transcritas en es.wikisource.org (dominio público); edición digital y portada de Proyecto Fénix", url: "https://es.wikisource.org/wiki/Apolog%C3%ADa_de_S%C3%B3crates_(de_Azc%C3%A1rate_tr.)" },
