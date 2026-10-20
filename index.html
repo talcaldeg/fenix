@@ -1075,7 +1075,8 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .mas summary::-webkit-details-marker{display:none}
   .mas summary::after{content:" ▾"; font-size:12px}
   .mas .sub{position:absolute; right:0; top:calc(100% + 6px); min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:var(--sombra)}
-  .ajustes{display:flex; gap:6px}
+  .ajustes, .ajustes-nav{display:flex; gap:6px}
+  .ajustes-nav{margin-left:10px}
   .pildora{border:1px solid var(--line); background:var(--card); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
   #btnMenu{display:none}
   @media (max-width:860px){
@@ -1084,8 +1085,9 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
     nav.menu.abierto{display:flex}
     nav.menu{align-items:stretch}
     .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
-    .barra{flex-wrap:wrap}
     .ajustes{margin-left:auto}
+    /* En el celular, idioma y tema van dentro del menú: el encabezado queda en una fila (logo y Menú). */
+    .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
   }
 
   /* main ocupa la pantalla desde el primer pintado: el footer no salta cuando el JavaScript arma la vista (CLS). */
@@ -1125,7 +1127,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   @media (prefers-reduced-motion: reduce){.hero .fondo, .hero .txt{animation:none}}
   @media (max-width:760px){
     .hero{display:block; min-height:0; padding:0 0 40px}
-    .hero .fondo{position:relative; width:100%; height:min(78vw,440px); background-position:center top}
+    .hero .fondo{position:relative; width:100%; height:min(78vw,38vh,440px); height:min(78vw,38svh,440px); background-position:center top}
     .hero .fondo::after{background:linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 50%)}
     .hero .wrap{margin-top:-70px}
     .hero .cifras{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
@@ -1185,6 +1187,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .libro .pie{padding:10px 12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font:14px system-ui,sans-serif; color:var(--muted)}
   .etq{background:var(--chip); border-radius:999px; padding:2px 8px}
   .etq.leido{color:var(--ok)}
+  .libro .pie .leido{margin-left:auto; color:var(--ok); font-weight:700} .libro .pie .leido + .fav{margin-left:4px}
   .fav{margin-left:auto; color:var(--oro); font-size:16px}
 
   .lista{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden}
@@ -1324,10 +1327,12 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
           <a href="#contacto" data-i18n="nav.contacto">Contacto</a>
         </div>
       </details>
+      <div class="ajustes-nav">
+        <button class="pildora" id="btnIdioma" title="Idioma / Language">English</button>
+        <button class="pildora" id="btnTema" title="Modo claro u oscuro" aria-label="Modo claro u oscuro">◐</button>
+      </div>
     </nav>
     <div class="ajustes">
-      <button class="pildora" id="btnIdioma" title="Idioma / Language">English</button>
-      <button class="pildora" id="btnTema" title="Modo claro u oscuro" aria-label="Modo claro u oscuro">◐</button>
       <button class="pildora" id="btnMenu" aria-expanded="false">☰ <span data-i18n="nav.menu">Menú</span></button>
     </div>
   </div>
@@ -1964,7 +1969,7 @@ function iniciar(){
       "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
-      "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
+      "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
       "rec.eyebrow":"Suggestions","rec.titulo":"Where to begin","rec.todos":"See the whole catalogue →",
       "oh.eyebrow":"The idea behind us","oh.titulo":"Being for Christ «like another humanity»",
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
@@ -2000,7 +2005,7 @@ function iniciar(){
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
       "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
-      "x.sello":"Recomendado por Fénix","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
+      "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
       "x.edFenix":"Edición Fénix","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
       "x.ayuda":"¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
@@ -2076,13 +2081,16 @@ function iniciar(){
   const prioridad = l => esFenix(l) ? posSello(l) - 1000 : tieneEpub(l) ? 0 : 1;
   const ordenar = xs => xs.map((l, i) => [l, i]).sort((a, b) => prioridad(a[0]) - prioridad(b[0]) || a[1] - b[1]).map(x => x[0]);
   const claseLibro = l => (esFenix(l) ? " fenix" : "") + (!tieneEpub(l) && !esFenix(l) ? " sin-epub" : "");
-  function etqsFormato(l){
+  // `uno`: la tarjeta lleva una sola etiqueta de formato (EPUB si lo tiene; si no, los demás juntos).
+  function etqsFormato(l, uno){
     const fm = [...new Set(formatos(l))];
     if (!fm.length) return `<span class="etq">${esc(t("x.comprar"))}</span>`;
     const otros = fm.filter(f => f !== "epub").map(etqFormato);
+    if (uno && fm.includes("epub")) return `<span class="etq epub">EPUB</span>`;
     return (fm.includes("epub") ? `<span class="etq epub">EPUB</span>` : "") + (otros.length ? `<span class="etq">${otros.join(" · ")}</span>` : "");
   }
-  const sello = l => esFenix(l) ? `<span class="etq sello">✦ ${esc(t("x.sello"))}</span>` : "";
+  // En tarjetas y filas va la versión corta, que cabe a 390 px; la ficha lleva el sello entero.
+  const sello = (l, entero) => esFenix(l) ? `<span class="etq sello" title="${esc(t("x.sello"))}">✦ ${esc(t(entero ? "x.sello" : "x.selloCorto"))}</span>` : "";
   // Página estática del libro; la versión en otro idioma tiene la suya en libro/<id>/<idioma>/ (gen_estaticos.js).
   const rutaLibro = l => { const o = D.libros.find(x => x.id === l.id); return "libro/" + l.id + "/" + (o && o.idioma !== lang && (o.versiones || {})[lang] ? lang + "/" : ""); };
   // Citas en el idioma de la página: las de un libro en otro idioma no se muestran.
@@ -2103,9 +2111,8 @@ function iniciar(){
   }
   function tarjeta(l){
     return `<article class="libro${claseLibro(l)}" data-id="${esc(l.id)}" tabindex="0">${portada(l)}
-      <div class="pie">${sello(l)}${etqsFormato(l)}<span class="etq">${esc(categoria(l.categoria))}</span>
-      ${l.editorial ? `<span class="etq ed-fenix">${esc(t("x.edFenix"))}</span>` : ""}
-      ${leidos[l.id] ? `<span class="etq leido">✓ ${esc(t("x.leido"))}</span>` : ""}
+      <div class="pie">${sello(l)}${etqsFormato(l, true)}<span class="etq">${esc(categoria(l.categoria))}</span>
+      ${leidos[l.id] ? `<span class="leido" title="${esc(t("x.leido"))}" aria-label="${esc(t("x.leido"))}">✓</span>` : ""}
       ${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></article>`;
   }
 
@@ -2241,7 +2248,7 @@ function iniciar(){
       ...comprarEn(l).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
     ].join("");
     $("#fichaCuerpo").innerHTML = `<div class="ficha">${portada(l)}<div>
-      ${sello(l)}
+      ${sello(l, true)}
       <h3 style="font-size:22px" id="fichaTitulo">${esc(l.titulo)}</h3>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</p>
       <div class="descargas">${desc}</div>
