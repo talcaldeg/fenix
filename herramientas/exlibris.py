@@ -6,7 +6,9 @@
 
 - La página va justo después de la portada (primer ítem del spine). El idioma sale de
   `dc:language` del EPUB: «Biblioteca gratuita» o «Free library» al pie.
-- Idempotente: si el EPUB ya trae el exlibris, solo se reemplaza la imagen.
+- Idempotente: si el EPUB ya trae el exlibris, se reemplazan la imagen y su página.
+- La página es una envoltura SVG, como la portada (portadas.pagina_portada): así Play Books la
+  escala a pantalla completa; con <img> y max-height:100vh quedaba chica.
 - Las imágenes salen con semilla fija, así que se rehacen iguales. Después se regenera el PDF con
   herramientas/epub_a_pdf.py.
 """
@@ -23,6 +25,7 @@ from PIL import Image, ImageDraw, ImageFilter, ImageFont
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import logo  # noqa: E402
+from portadas import pagina_portada  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 FUENTES = Path("C:/Windows/Fonts")
@@ -147,19 +150,17 @@ def poner(epub: Path, rutas):
     lang = re.search(r"<dc:language[^>]*>\s*([a-z]{2})", opf)
     idioma = "en" if lang and lang.group(1) == "en" else "es"
     archivos[base + IMAGEN] = rutas[idioma].read_bytes()
+    # Se reescribe siempre, para que un EPUB con la página vieja (<img>) quede al día.
+    archivos[base + PAGINA] = pagina_portada(Image.open(rutas[idioma]).convert("RGB"),
+                                             "Ex libris Proyecto Fénix", IMAGEN, "frontmatter")
     if PAGINA not in opf:
-        alt = "Ex libris Proyecto Fénix"
-        pagina = ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
-                  '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">\n'
-                  f'<head><title>{alt}</title><style>body{{margin:0;padding:0;text-align:center}}'
-                  'img{max-width:100%;max-height:100vh}</style></head>\n'
-                  f'<body epub:type="frontmatter"><img src="{IMAGEN}" alt="{alt}"/></body></html>\n')
-        archivos[base + PAGINA] = pagina.encode("utf-8")
-        opf = opf.replace("</manifest>", f'<item href="{PAGINA}" id="fenix-exlibris-pag" media-type="application/xhtml+xml"/>\n'
+        opf = opf.replace("</manifest>", f'<item href="{PAGINA}" id="fenix-exlibris-pag" media-type="application/xhtml+xml" properties="svg"/>\n'
                           f'  <item href="{IMAGEN}" id="fenix-exlibris" media-type="image/jpeg"/>\n  </manifest>', 1)
         # Justo después de la portada, que es el primer ítem del spine.
         opf = re.sub(r"(<spine[^>]*>\s*<itemref [^>]*/>)", r'\1\n    <itemref idref="fenix-exlibris-pag"/>', opf, count=1)
-        archivos[opf_ruta] = opf.encode("utf-8")
+    opf = re.sub(r'(<item [^>]*id="fenix-exlibris-pag" media-type="application/xhtml\+xml")\s*/>',
+                 r'\1 properties="svg"/>', opf)
+    archivos[opf_ruta] = opf.encode("utf-8")
     with zipfile.ZipFile(epub, "w") as z:
         z.writestr(zipfile.ZipInfo("mimetype"), archivos.pop("mimetype"), compress_type=zipfile.ZIP_STORED)
         for nombre, datos in archivos.items():

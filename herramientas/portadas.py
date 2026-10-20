@@ -74,9 +74,10 @@ def catalogo():
     return out
 
 
-def pagina_portada(portada: Image.Image, titulo: str) -> bytes:
-    """Página de portada como envoltura SVG: los lectores (Play Books, Apple Books, Kobo) la
-    escalan a la pantalla completa sin recortarla. Un <img> con max-height:100vh queda chico.
+def pagina_portada(portada: Image.Image, titulo: str, href: str = NOMBRE_EN_EPUB,
+                   tipo: str = "cover") -> bytes:
+    """Página de imagen (portada o exlibris) como envoltura SVG: los lectores (Play Books, Apple
+    Books, Kobo) la escalan a la pantalla completa sin recortarla. Un <img> con max-height:100vh queda chico.
     Lo que sobra de pantalla toma el color del borde de la portada, no el negro del lector."""
     w, h = portada.size
     titulo = escape(titulo)
@@ -86,11 +87,11 @@ def pagina_portada(portada: Image.Image, titulo: str) -> bytes:
             f'<head><title>{titulo}</title>'
             f'<style>html,body{{margin:0;padding:0;height:100%;background:{fondo}}}'
             'svg{display:block;width:100%;height:100%;overflow:visible}</style></head>\n'
-            f'<body epub:type="cover"><svg xmlns="http://www.w3.org/2000/svg" '
+            f'<body epub:type="{tipo}"><svg xmlns="http://www.w3.org/2000/svg" '
             'xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="100%" height="100%" '
             f'viewBox="0 0 {w} {h}" preserveAspectRatio="xMidYMid meet" overflow="visible">'
             f'<rect x="-{w}" y="-{h}" width="{3 * w}" height="{3 * h}" fill="{fondo}"/>'
-            f'<image width="{w}" height="{h}" xlink:href="{NOMBRE_EN_EPUB}"><title>{titulo}</title></image>'
+            f'<image width="{w}" height="{h}" xlink:href="{href}"><title>{titulo}</title></image>'
             '</svg></body></html>\n').encode("utf-8")
 
 
@@ -130,6 +131,11 @@ def poner_en_epub(epub: Path, portada: Image.Image, titulo: str):
         archivos[base + "fenix-portada.xhtml"] = pagina_portada(portada, titulo)
         opf = re.sub(r'(<item [^>]*id="fenix-portada-pag" media-type="application/xhtml\+xml")\s*/>',
                      r'\1 properties="svg"/>', opf)
+    envoltura = re.search(r'<item [^>]*href="([^"]+)"[^>]*id="coverpage-wrapper"', opf)
+    if envoltura and NOMBRE_EN_EPUB in opf:
+        # La envoltura de Gutenberg no da altura a html, body ni a su div, así que el SVG queda
+        # chico en Play Books: se la reemplaza por la nuestra.
+        archivos[base + envoltura.group(1)] = pagina_portada(portada, titulo)
     archivos[opf_ruta] = opf.encode("utf-8")
 
     with zipfile.ZipFile(epub, "w") as z:
