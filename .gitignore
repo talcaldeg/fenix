@@ -2,3 +2,4 @@ __pycache__/
 herramientas/.cache_delibris/
 # Copias de trabajo de cada sesión (herramientas/sesion.py)
 .sesiones/
+.entregas/

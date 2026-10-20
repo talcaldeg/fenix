@@ -47,6 +47,15 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
   luego `portadas.py ... --epub`, `exlibris.py` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
+- Encuadernadores (`#encuadernadores`, bloque de la vista Editorial): personas que ponen su agente
+  de IA (Claude Code, Codex...) a preparar un libro con sus tokens. El sitio les da un prompt para
+  copiar, general o con el libro ya puesto, que manda al agente a seguir `editorial/ENCUADERNAR.md`
+  (derechos, criterio moral, la vía más barata y el formato del paquete). La lista sale de
+  `buscados` en `datos.js` y se oculta sola cuando el libro ya está en ese idioma. El agente revisa
+  su paquete con `herramientas/revisar_entrega.py`; al recibirlo, `herramientas/recibir_entrega.py
+  <zip>` lo revisa igual, arma EPUB, portada, exlibris y PDF, y agrega la ficha. El mensaje tipo
+  para invitarlos está en `editorial/ENCUADERNADORES.md`; el formulario llega con asunto
+  «Fénix - encuadernador» (una reserva se anota en `reservado` del libro buscado).
 - `herramientas/logo.py`: el logo (un libro abierto cuyas páginas se levantan como las alas del
   fénix) en una sola fuente. Lo usan `img/favicon.svg`, el ícono embebido de `index.html` y de
   `libro/`, la viñeta y el sello de `marco.py` y el timbre de `exlibris.py`. Si cambia el dibujo:

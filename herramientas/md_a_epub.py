@@ -153,8 +153,21 @@ def leer(carpeta: Path):
     return caps
 
 
+ETIQUETAS = {
+    "es": {"nota": "Nota de esta edición", "indice": "Índice", "cuidado": "Edición al cuidado de {}",
+           "traduccion": "traducción", "edicion": "edición"},
+    "en": {"nota": "Note on this edition", "indice": "Contents", "cuidado": "Edited by {}",
+           "traduccion": "translation", "edicion": "editor"},
+}
+
+
 def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, original: str,
-          cuidado: str = "Edición al cuidado de Tomás Alcalde"):
+          idioma: str = "es", editor: str = "Tomás Alcalde", traduccion: bool = True,
+          derechos: str = "Traducción de Proyecto Fénix, CC BY-NC-SA 4.0"):
+    """idioma: es o en (etiquetas y metadatos). editor: quien queda a cargo de la edición.
+    traduccion: False si se editó una traducción ajena de dominio público (no la firma Fénix)."""
+    et = ETIQUETAS[idioma]
+    cuidado = et["cuidado"].format(editor)
     caps = leer(carpeta)
     archivos = {"mimetype": b"application/epub+zip",
                 "META-INF/container.xml": ('<?xml version="1.0" encoding="utf-8"?>\n<container version="1.0" '
@@ -173,11 +186,11 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
     nota = carpeta / "nota.md"
     if nota.exists():
         partes = [f"<p>{enlinea(b)}</p>" for b in bloques(nota.read_text(encoding="utf-8")) if not b.startswith("#")]
-        archivos["OEBPS/nota.xhtml"] = pagina("Nota de esta edición", '<section class="nota" epub:type="foreword">'
-                                              "<h1>Nota de esta edición</h1>" + "".join(partes) + "</section>",
+        archivos["OEBPS/nota.xhtml"] = pagina(et["nota"], '<section class="nota" epub:type="foreword">'
+                                              f"<h1>{et['nota']}</h1>" + "".join(partes) + "</section>",
                                               "frontmatter").encode("utf-8")
         spine.append("nota")
-        toc.append(("nota.xhtml", "Nota de esta edición"))
+        toc.append(("nota.xhtml", et["nota"]))
 
     for i, c in enumerate(caps, 1):
         nombre = f"c{i:02d}"
@@ -195,7 +208,7 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
         toc.append((f"{nombre}.xhtml", re.sub(r"\*", "", c.titulo)))
 
     lis = "".join(f'<li><a href="{h}">{html.escape(t)}</a></li>' for h, t in toc)
-    archivos["OEBPS/nav.xhtml"] = pagina("Índice", f'<nav epub:type="toc" id="toc"><h1>Índice</h1><ol>{lis}</ol></nav>',
+    archivos["OEBPS/nav.xhtml"] = pagina(et["indice"], f'<nav epub:type="toc" id="toc"><h1>{et["indice"]}</h1><ol>{lis}</ol></nav>',
                                          "frontmatter").encode("utf-8")
     uid = f"urn:uuid:{uuid.uuid5(uuid.NAMESPACE_URL, 'fenix/' + salida.stem)}"
     puntos = "".join(f'<navPoint id="p{i}" playOrder="{i}"><navLabel><text>{html.escape(t)}</text></navLabel>'
@@ -209,13 +222,13 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
     items += [f'<item id="{s}" href="{s}.xhtml" media-type="application/xhtml+xml"/>' for s in spine if s != "nav"]
     refs = "".join(f'<itemref idref="{s}"/>' for s in spine)
     opf = ('<?xml version="1.0" encoding="utf-8"?>\n<package xmlns="http://www.idpf.org/2007/opf" version="3.0" '
-           'unique-identifier="uid" xml:lang="es">\n  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
+           f'unique-identifier="uid" xml:lang="{idioma}">\n  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'
            f'    <dc:identifier id="uid">{uid}</dc:identifier>\n    <dc:title>{html.escape(titulo)}</dc:title>\n'
            f'    <dc:creator>{html.escape(autor)}</dc:creator>\n'
-           '    <dc:contributor>Proyecto Fénix (traducción)</dc:contributor>\n'
-           '    <dc:contributor>Tomás Alcalde (edición)</dc:contributor>\n    <dc:language>es</dc:language>\n'
+           + (f'    <dc:contributor>Proyecto Fénix ({et["traduccion"]})</dc:contributor>\n' if traduccion else '')
+           + f'    <dc:contributor>{html.escape(editor)} ({et["edicion"]})</dc:contributor>\n    <dc:language>{idioma}</dc:language>\n'
            f'    <dc:publisher>Proyecto Fénix</dc:publisher>\n    <dc:source>{html.escape(original)}</dc:source>\n'
-           '    <dc:rights>Traducción de Proyecto Fénix, CC BY-NC-SA 4.0</dc:rights>\n'
+           f'    <dc:rights>{html.escape(derechos)}</dc:rights>\n'
            '    <meta property="dcterms:modified">2026-10-18T00:00:00Z</meta>\n  </metadata>\n'
            f'  <manifest>\n    {chr(10).join(items)}\n  </manifest>\n  <spine toc="ncx">{refs}</spine>\n</package>\n')
     archivos["OEBPS/content.opf"] = opf.encode("utf-8")
@@ -237,5 +250,10 @@ if __name__ == "__main__":
     a.add_argument("--autor", required=True)
     a.add_argument("--subtitulo", default="Traducción de Proyecto Fénix")
     a.add_argument("--original", default="")
+    a.add_argument("--idioma", choices=list(ETIQUETAS), default="es")
+    a.add_argument("--editor", default="Tomás Alcalde")
+    a.add_argument("--sin-traduccion", action="store_true", help="edición de una traducción ajena de dominio público")
+    a.add_argument("--derechos", default="Traducción de Proyecto Fénix, CC BY-NC-SA 4.0")
     o = a.parse_args()
-    armar(o.carpeta, o.salida, o.titulo, o.autor, o.subtitulo, o.original)
+    armar(o.carpeta, o.salida, o.titulo, o.autor, o.subtitulo, o.original, o.idioma, o.editor,
+          not o.sin_traduccion, o.derechos)

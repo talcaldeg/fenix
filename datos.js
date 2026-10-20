@@ -3553,6 +3553,56 @@ window.FENIX = {
     }
   ],
 
+  // Libros que Fénix busca (sección Encuadernadores, #encuadernadores): libres en Chile y en EE.UU.
+  // (autor, y traductor si lo hay, muerto antes de 1956; obra anterior a 1931) y bien valorados en
+  // Delibris (5 o 6). Una línea por obra (recibir_entrega.py la saca así). titulo: en cada idioma que
+  // se pide; sin "en", no aparece en el sitio en inglés. delibris como en las fichas, o null con
+  // `estimada` { valor, genero } si Delibris no la reseña. reservado: "dd-mmm-aaaa" cuando alguien la
+  // toma (formulario «Fénix - encuadernador»). El sitio oculta sola la que ya está en ese idioma.
+  buscados: [
+    { titulo: {"es": "Orgullo y prejuicio", "en": "Pride and Prejudice"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/orgullo-y-prejuicio"} },
+    { titulo: {"es": "Sentido y sensibilidad", "en": "Sense and Sensibility"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sentido-y-sensibilidad"} },
+    { titulo: {"es": "Emma", "en": "Emma"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"} },
+    { titulo: {"es": "Persuasión", "en": "Persuasion"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },
+    { titulo: {"es": "Mansfield Park", "en": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
+    { titulo: {"es": "La abadía de Northanger", "en": "Northanger Abbey"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"} },
+    { titulo: {"es": "Ortodoxia", "en": "Orthodoxy"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/ortodoxia"} },
+    { titulo: {"es": "Herejes", "en": "Heretics"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/herejes"} },
+    { titulo: {"es": "El hombre eterno", "en": "The Everlasting Man"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-hombre-eterno-0"} },
+    { titulo: {"es": "San Francisco de Asís", "en": "St. Francis of Assisi"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/san-francisco-de-asis-0"} },
+    { titulo: {"es": "El candor del padre Brown", "en": "The Innocence of Father Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-candor-del-padre-brown"} },
+    { titulo: {"es": "La sabiduría del padre Brown", "en": "The Wisdom of Father Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-sabiduria-del-padre-brown"} },
+    { titulo: {"es": "El hombre que fue jueves", "en": "The Man Who Was Thursday"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-hombre-que-fue-jueves"} },
+    { titulo: {"es": "La esfera y la cruz", "en": "The Ball and the Cross"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/la-esfera-y-la-cruz"} },
+    { titulo: {"es": "El Napoleón de Notting Hill", "en": "The Napoleon of Notting Hill"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-napoleon-de-notting-hill"} },
+    { titulo: {"es": "Lo que está mal en el mundo", "en": "What's Wrong with the World"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/lo-que-esta-mal-en-el-mundo"} },
+    { titulo: {"es": "Las glorias de María", "en": "The Glories of Mary"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/las-glorias-de-maria"} },
+    { titulo: {"es": "Visitas al Santísimo Sacramento y a María Santísima", "en": "Visits to the Most Blessed Sacrament and to the Blessed Virgin Mary"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/visitas-al-santisimo-sacramento-y-maria-santisima-para-todos-los-dias"} },
+    { titulo: {"es": "Práctica del amor a Jesucristo", "en": "The Practice of the Love of Jesus Christ"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/practica-del-amor-jesucristo"} },
+    { titulo: {"es": "Meditaciones sobre la Pasión de Jesucristo", "en": "The Passion and the Death of Jesus Christ"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/meditaciones-sobre-la-pasion-de-jesucristo"} },
+    { titulo: {"es": "Del gran medio de la oración", "en": "Prayer, the Great Means of Salvation"}, autor: "San Alfonso María de Ligorio", delibris: null, estimada: {"valor": 6, "genero": "Pensamiento"} },
+    { titulo: {"es": "Introducción a la vida devota", "en": "Introduction to the Devout Life"}, autor: "San Francisco de Sales", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/introduccion-la-vida-devota"} },
+    { titulo: {"es": "Tratado del amor de Dios", "en": "Treatise on the Love of God"}, autor: "San Francisco de Sales", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/tratado-del-amor-de-dios"} },
+    { titulo: {"es": "El combate espiritual", "en": "The Spiritual Combat"}, autor: "Lorenzo Scupoli", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/combate-espiritual"} },
+    { titulo: {"es": "El abandono en la Providencia divina", "en": "Abandonment to Divine Providence"}, autor: "Jean-Pierre de Caussade", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-abandono-de-si-mismo-en-la-providencia-divina"} },
+    { titulo: {"es": "Tratado de la verdadera devoción a la Santísima Virgen", "en": "True Devotion to Mary"}, autor: "San Luis María Grignion de Montfort", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/tratado-de-la-verdadera-devocion-la-santisima-virgen"} },
+    { titulo: {"es": "Todo por Jesús", "en": "All for Jesus"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/todo-por-jesus"} },
+    { titulo: {"es": "Progreso del alma en la vida espiritual", "en": "Growth in Holiness"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/progreso-del-alma-en-la-vida-espiritual"} },
+    { titulo: {"es": "El alma de todo apostolado", "en": "The Soul of the Apostolate"}, autor: "Jean-Baptiste Chautard", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-alma-de-todo-apostolado"} },
+    { titulo: {"es": "Apologia pro vita sua", "en": "Apologia pro Vita Sua"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"} },
+    { titulo: {"es": "Perder y ganar", "en": "Loss and Gain"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"} },
+    { titulo: {"es": "El sueño de Geroncio", "en": "The Dream of Gerontius"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"} },
+    { titulo: {"es": "Señor del mundo", "en": "Lord of the World"}, autor: "Robert Hugh Benson", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/senor-del-mundo"} },
+    { titulo: {"es": "La amistad de Cristo", "en": "The Friendship of Christ"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/la-amistad-de-cristo"} },
+    { titulo: {"es": "¿Con qué autoridad?", "en": "By What Authority?"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/con-que-autoridad"} },
+    { titulo: {"es": "Confesiones de un converso", "en": "Confessions of a Convert"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/confesiones-de-un-converso"} },
+    { titulo: {"es": "Europa y la fe", "en": "Europe and the Faith"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/europe-and-faith"} },
+    { titulo: {"es": "Fabiola o la Iglesia de las catacumbas", "en": "Fabiola, or the Church of the Catacombs"}, autor: "Cardenal Nicholas Wiseman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fabiola-o-la-iglesia-de-las-catacumbas"} },
+    { titulo: {"es": "Ben-Hur", "en": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
+    { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
+    { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} }
+  ],
+
   // Plan de vida: libros para el rato de oración (categoria "oracion") y para la lectura espiritual
   // (categoria "lectura"), ids de `libros`. Cada sitio muestra solo los de su idioma.
   plan: {
