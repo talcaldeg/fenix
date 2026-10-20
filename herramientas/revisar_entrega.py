@@ -6,6 +6,7 @@
 Solo usa la biblioteca estándar de Python, para que corra en cualquier equipo. Las reglas del
 paquete están en editorial/ENCUADERNAR.md. Termina con «Entrega lista» o con la lista de errores.
 """
+import html
 import json
 import re
 import sys
@@ -32,13 +33,16 @@ def plano(s):
     s = re.sub(r"\[\^[^\]]+\]", "", s)
     s = re.sub(r"[*_#>]", "", s)
     s = re.sub(r"[«»“”\"]", '"', s).replace("’", "'").replace("‘", "'")
+    s = re.sub(r"\s*(--|—|–)\s*", "—", s)  # Gutenberg escribe -- en el .txt y — en el EPUB
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
 def texto_epub(ruta):
     with zipfile.ZipFile(ruta) as z:
         partes = [z.read(n).decode("utf-8", "replace") for n in z.namelist() if n.endswith((".xhtml", ".html", ".htm"))]
-    return re.sub(r"<[^>]+>", " ", " ".join(partes))
+    # Las etiquetas de bloque separan palabras; las de línea (versalitas, cursiva) no: «I<span>t is</span>».
+    t = re.sub(r"</?(p|div|h\d|li|br|tr|td|blockquote)\b[^>]*>", " ", " ".join(partes))
+    return html.unescape(re.sub(r"<[^>]+>", "", t))
 
 
 def medidas_jpeg(ruta):
@@ -112,9 +116,11 @@ def revisar(carpeta: Path):
         if len(par) < 3:
             A.append("ficha: «parecidos» debería traer tres ids de Fénix")
         if ids is not None:
+            # Un lote de entregas puede citarse entre sí: valen los id de las carpetas hermanas.
+            lote = {p.name for p in carpeta.resolve().parent.iterdir() if p.is_dir()}
             for p in par:
-                if p not in ids:
-                    E.append(f"ficha: el parecido {p} no existe en datos.js")
+                if p not in ids and p not in lote:
+                    E.append(f"ficha: el parecido {p} no existe en datos.js ni en el lote")
 
     im = f.get("imagen") or {}
     if not isinstance(im.get("credito"), dict) or not all(im["credito"].get(k) for k in ("es", "en")):

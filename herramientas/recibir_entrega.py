@@ -118,14 +118,22 @@ def agregar_a_datos(f: dict, epub: Path):
     t = t[:fin] + ",\n" + ficha_js(f, epub) + t[fin:]
     hoy = date.today()
     t = re.sub(r'actualizado: "[^"]*"', f'actualizado: "{hoy.day}-{MESES[hoy.month - 1]}-{hoy.year}"', t, count=1)
-    # Fuera de la lista de buscados: la línea cuyo título en ese idioma coincide.
-    tit = plano(f["titulo"])
-    lineas = t.split("\n")
-    quedan = [ln for ln in lineas if not (ln.lstrip().startswith("{ titulo:") and
-                                          any(plano(x) == tit for x in re.findall(r'"([^"]+)"', ln)))]
-    if len(quedan) < len(lineas):
-        print("Sacado de buscados:", f["titulo"])
-    ruta.write_text("\n".join(quedan), encoding="utf-8")
+    # En buscados se saca solo el título de ese idioma (la obra se sigue buscando en el otro); sin
+    # títulos, la línea entera. Se compara sin subtítulo, como el sitio («...Thursday: A Nightmare»).
+    tit, idioma = plano(f["titulo"].split(":")[0]), f["idioma"]
+    lineas = []
+    for ln in t.split("\n"):
+        m = re.match(r'(\s*\{ titulo: )(\{[^}]*\})(.*)', ln)
+        if m:
+            ts = json.loads(m.group(2))
+            if plano(ts.get(idioma, "").split(":")[0]) == tit:
+                del ts[idioma]
+                print(f"Sacado de buscados ({idioma}):", f["titulo"])
+                if not ts:
+                    continue
+                ln = m.group(1) + js(ts) + m.group(3)
+        lineas.append(ln)
+    ruta.write_text("\n".join(lineas), encoding="utf-8")
 
 
 def main():

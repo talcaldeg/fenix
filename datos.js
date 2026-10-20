@@ -23,7 +23,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "18-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "20-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3550,6 +3550,329 @@ window.FENIX = {
       fuente: {"texto": "Edición de Establecimiento Gráfico de Olivieri y Domínguez, Buenos Aires, 1927, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Don_Segundo_Sombra"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/don-segundo-sombra"},
       parecidos: ["conscience-la-nina-robada", "lecomte-du-nouy-incertidumbre", "pardo-bazan-la-sirena-negra"]
+    },
+    {
+      id: "austen-emma",
+      titulo: "Emma",
+      autor: "Jane Austen",
+      anio: "1815",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Emma Woodhouse, joven, rica y segura de su buen ojo, se dedica a arreglar casamientos en su pueblo de Highbury. Sus equivocaciones, a veces graciosas y a veces hirientes, la obligan a conocerse mejor. Una comedia de enredos sobre la vanidad, la amistad y el difícil arte de ver con claridad.", "en": "Emma Woodhouse, young, rich and sure of her good eye, spends her time matchmaking in the village of Highbury. Her mistakes, sometimes funny and sometimes hurtful, force her to know herself better. A comedy of errors about vanity, friendship and the hard art of seeing clearly."},
+      porque: {"es": "Para quien disfruta una comedia bien armada y quiere, de paso, mirarse al espejo: Emma se parece a cualquiera que cree saber lo que más le conviene a los demás. Muestra con humor el valor de pedir perdón y de agradecer a quien nos corrige con cariño.", "en": "For readers who enjoy a well-built comedy and would like to glance in the mirror along the way: Emma resembles anyone who thinks they know what is best for others. It shows, with humour, the worth of apologizing and of being grateful to those who correct us with affection."},
+      imagen: {"src": "img/portadas/austen-emma.jpg", "credito": {"es": "Thomas Gainsborough, «Mrs. Richard Brinsley Sheridan», 1785-1787", "en": "Thomas Gainsborough, «Mrs. Richard Brinsley Sheridan», 1785-1787"}, "url": "https://commons.wikimedia.org/wiki/File:Thomas_Gainsborough,_Mrs._Richard_Brinsley_Sheridan,_1785-1787,_NGA_99.jpg"},
+      citas: [
+        "It is very difficult for the prosperous to be humble.",
+        "If I loved you less, I might be able to talk about it more.",
+        "Vanity working on a weak head, produces every sort of mischief.",
+        "One half of the world cannot understand the pleasures of the other."
+      ],
+      archivos: {"epub": "libros/austen-emma.epub", "pdf": "libros/austen-emma.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 158 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/158"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"},
+      parecidos: ["austen-pride-and-prejudice", "austen-mansfield-park", "austen-northanger-abbey"]
+    },
+    {
+      id: "austen-mansfield-park",
+      titulo: "Mansfield Park",
+      autor: "Jane Austen",
+      anio: "1814",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Fanny Price, una niña pobre, crece en la casa de sus tíos ricos en Mansfield Park, tímida y casi invisible. Cuando llegan los hermanos Crawford, brillantes y encantadores, toda la casa se descompone entre diversiones, coqueteos y teatro de aficionados. Fanny se mantiene firme, y su fidelidad a lo que cree justo acaba por prevalecer.", "en": "Fanny Price, a poor child, grows up in her rich relatives' house at Mansfield Park, shy and nearly invisible. When the brilliant, charming Crawford siblings arrive, the whole household unravels amid amusements, flirtations and amateur theatricals. Fanny holds firm, and her loyalty to what she thinks right in the end prevails."},
+      porque: {"es": "Para quien se ha sentido solo por no seguir la corriente. Fanny muestra que la firmeza tranquila vale más que el brillo social, y que las buenas costumbres de una casa pesan más de lo que parece. Es la más moral de las novelas de Austen, y también la más lenta de leer.", "en": "For anyone who has felt alone for not going with the crowd. Fanny shows that quiet firmness is worth more than social shine, and that the good habits of a household weigh more than they seem to. It is the most moral of Austen's novels, and also the slowest to read."},
+      imagen: {"src": "img/portadas/austen-mansfield-park.jpg", "credito": {"es": "John Constable, «Wivenhoe Park, Essex», 1816", "en": "John Constable, «Wivenhoe Park, Essex», 1816"}, "url": "https://commons.wikimedia.org/wiki/File:John_Constable_-_Wivenhoe_Park,_Essex_-_Google_Art_Project.jpg"},
+      citas: [
+        "Let other pens dwell on guilt and misery.",
+        "If any one faculty of our nature may be called more wonderful than the rest, I do think it is memory.",
+        "I cannot think well of a man who sports with any woman’s feelings",
+        "Here’s what may leave all painting and all music behind, and what poetry only can attempt to describe!"
+      ],
+      archivos: {"epub": "libros/austen-mansfield-park.epub", "pdf": "libros/austen-mansfield-park.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 141 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/141"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"},
+      parecidos: ["austen-emma", "austen-persuasion", "austen-northanger-abbey"]
+    },
+    {
+      id: "austen-northanger-abbey",
+      titulo: "Northanger Abbey",
+      autor: "Jane Austen",
+      anio: "1817",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Catherine Morland, lectora ávida de novelas góticas, viaja a Bath y luego a la abadía de Northanger, donde su imaginación ve misterios y crímenes en cada pasillo. La realidad le enseñará a distinguir la fantasía del mundo verdadero. Una parodia cariñosa y divertida, y una defensa de la novela.", "en": "Catherine Morland, an avid reader of Gothic novels, travels to Bath and then to Northanger Abbey, where her imagination sees mysteries and crimes in every corridor. Reality teaches her to tell fantasy from the real world. An affectionate, funny parody, and a defence of the novel."},
+      porque: {"es": "Es la más breve y ligera de las novelas de Austen, buena para empezar con ella. Sirve a quien disfruta de los libros y se ríe de sí mismo: Catherine aprende a distinguir lo que lee de lo que vive, sin perder la ingenuidad ni la bondad.", "en": "The shortest and lightest of Austen's novels, a good one to start with. It suits anyone who loves books and can laugh at themselves: Catherine learns to tell what she reads from what she lives, without losing her innocence or her kindness."},
+      imagen: {"src": "img/portadas/austen-northanger-abbey.jpg", "credito": {"es": "John Constable, «Castillo de Hadleigh», 1828-1829", "en": "John Constable, «Hadleigh Castle», 1828-1829"}, "url": "https://commons.wikimedia.org/wiki/File:John_Constable_-_Hadleigh_Castle_-_Google_Art_Project.jpg"},
+      citas: [
+        "The person, be it gentleman or lady, who has not pleasure in a good novel, must be intolerably stupid.",
+        "I cannot speak well enough to be unintelligible.",
+        "Where people wish to attach, they should always be ignorant.",
+        "To torment and to instruct might sometimes be used as synonymous words."
+      ],
+      archivos: {"epub": "libros/austen-northanger-abbey.epub", "pdf": "libros/austen-northanger-abbey.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 121 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/121"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"},
+      parecidos: ["austen-pride-and-prejudice", "austen-emma", "austen-mansfield-park"]
+    },
+    {
+      id: "austen-persuasion",
+      titulo: "Persuasion",
+      autor: "Jane Austen",
+      anio: "1817",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Anne Elliot rechazó siendo muy joven la propuesta del capitán Wentworth, convencida por los consejos de una amiga de la familia. Ocho años después, él regresa de las guerras navales, rico y con fama. Última novela completa de Jane Austen: una historia serena y madura sobre las segundas oportunidades.", "en": "As a very young woman Anne Elliot refused Captain Wentworth's proposal, swayed by the advice of a family friend. Eight years later he returns from the naval wars, rich and renowned. Jane Austen's last completed novel: a quiet, mature story about second chances."},
+      porque: {"es": "Es la novela para quien cree que ya perdió su oportunidad. Anne enseña la fidelidad paciente y el valor de decir por fin lo que se siente. Su tono, más sereno que el de otras obras de Austen, la hace muy apropiada para lectores adultos.", "en": "This is the novel for anyone who thinks their chance has passed. Anne shows patient fidelity and the courage to say at last what one feels. Its tone, calmer than in Austen's other works, makes it especially fitting for adult readers."},
+      imagen: {"src": "img/portadas/austen-persuasion.jpg", "credito": {"es": "J. M. W. Turner, «La batalla de Trafalgar, 21 de octubre de 1805», 1822-1824", "en": "J. M. W. Turner, «The Battle of Trafalgar, 21 October 1805», 1822-1824"}, "url": "https://commons.wikimedia.org/wiki/File:Turner_-_The_Battle_of_Trafalgar,_21_October_1805,_1822%E2%80%931824,_BHC0565.jpg"},
+      citas: [
+        "She had been forced into prudence in her youth, she learned romance as she grew older: the natural sequel of an unnatural beginning.",
+        "All the privilege I claim for my own sex (it is not a very enviable one; you need not covet it), is that of loving longest, when existence or when hope is gone.",
+        "You pierce my soul. I am half agony, half hope.",
+        "there could have been no two hearts so open, no tastes so similar, no feelings so in unison, no countenances so beloved."
+      ],
+      archivos: {"epub": "libros/austen-persuasion.epub", "pdf": "libros/austen-persuasion.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 105 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/105"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"},
+      parecidos: ["austen-pride-and-prejudice", "austen-sense-and-sensibility", "austen-emma"]
+    },
+    {
+      id: "austen-sense-and-sensibility",
+      titulo: "Sense and Sensibility",
+      autor: "Jane Austen",
+      anio: "1811",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Las hermanas Dashwood, la prudente Elinor y la apasionada Marianne, quedan sin fortuna tras la muerte de su padre y se trasladan a una casa humilde en Devon. Allí sus corazones se ponen a prueba de maneras opuestas: una calla lo que siente, la otra lo muestra todo. Primera novela publicada de Jane Austen.", "en": "The Dashwood sisters, prudent Elinor and passionate Marianne, are left without fortune after their father's death and move to a modest cottage in Devon. There their hearts are tested in opposite ways: one keeps her feelings quiet, the other shows everything. Jane Austen's first published novel."},
+      porque: {"es": "Sirve a quien se pregunta cómo querer con hondura sin perder el juicio, y cómo sufrir sin hacer sufrir a los demás. Elinor ofrece un retrato admirable de dominio de sí y de lealtad familiar. Una lectura amable que deja pensando en el valor de la templanza.", "en": "It suits anyone wondering how to love deeply without losing judgment, and how to suffer without making others suffer. Elinor is an admirable portrait of self-command and family loyalty. A gentle read that leaves you thinking about the value of temperance."},
+      imagen: {"src": "img/portadas/austen-sense-and-sensibility.jpg", "credito": {"es": "Thomas Lawrence, «Julia, Lady Peel», 1827", "en": "Thomas Lawrence, «Julia, Lady Peel», 1827"}, "url": "https://commons.wikimedia.org/wiki/File:Julia,_Lady_Peel_-_Lawrence_1827.jpg"},
+      citas: [
+        "The more I know of the world, the more am I convinced that I shall never see a man whom I can really love.",
+        "Know your own happiness. You want nothing but patience—or give it a more fascinating name, call it hope.",
+        "It is not time or opportunity that is to determine intimacy;—it is disposition alone."
+      ],
+      archivos: {"epub": "libros/austen-sense-and-sensibility.epub", "pdf": "libros/austen-sense-and-sensibility.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 161 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/161"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sentido-y-sensibilidad"},
+      parecidos: ["austen-pride-and-prejudice", "austen-persuasion", "austen-mansfield-park"]
+    },
+    {
+      id: "chesterton-heretics",
+      titulo: "Heretics",
+      autor: "G. K. Chesterton",
+      anio: "1905",
+      idioma: "en",
+      categoria: "ensayo",
+      recomendado: false,
+      resumen: {"es": "Una colección de ensayos en que Chesterton examina a los pensadores y escritores célebres de su tiempo (Kipling, Shaw, Wells, Whistler, entre otros) y sostiene que lo más importante de una persona es su visión del universo. Discute las modas del momento con humor y paradojas, y deja ver una filosofía propia que desarrollaría después en «Ortodoxia».", "en": "A collection of essays in which Chesterton examines the celebrated thinkers and writers of his day (Kipling, Shaw, Wells, Whistler and others) and argues that the most important thing about a person is his view of the universe. He takes on the fashions of the moment with humour and paradox, and sketches a philosophy of his own that he would develop later in «Orthodoxy»."},
+      porque: {"es": "Para quien disfruta de la polémica de ideas bien escrita y quiere ver cómo se discutía el pensamiento moderno hace más de un siglo. Muchas de las modas que Chesterton critica siguen vivas con otros nombres, así que el libro se lee casi como actualidad. Es también una buena puerta de entrada a su estilo antes de pasar a sus obras mayores.", "en": "For readers who enjoy well-written debate about ideas and want to see how modern thought was argued over more than a century ago. Many of the fashions Chesterton criticizes are still alive under other names, so the book reads almost like current affairs. It is also a good doorway into his style before moving on to his larger works."},
+      imagen: {"src": "img/portadas/chesterton-heretics.jpg", "credito": {"es": "James McNeill Whistler, «Arreglo en gris y negro n.º 1» (La madre del artista), 1871", "en": "James McNeill Whistler, «Arrangement in Grey and Black No. 1» (The Artist's Mother), 1871"}, "url": "https://commons.wikimedia.org/wiki/File:Whistlers_Mother_high_res.jpg"},
+      citas: [
+        "the most practical and important thing about a man is still his view of the universe.",
+        "Eternity is the eve of something.",
+        "I never look up at the stars without feeling that they are the fires of a schoolboy’s rocket, fixed in their everlasting fall."
+      ],
+      archivos: {"epub": "libros/chesterton-heretics.epub", "pdf": "libros/chesterton-heretics.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 470 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/470"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/herejes"},
+      parecidos: ["ortodoxia", "chesterton-whats-wrong-with-the-world", "chesterton-the-everlasting-man"]
+    },
+    {
+      id: "chesterton-st-francis-of-assisi",
+      titulo: "St. Francis of Assisi",
+      autor: "G. K. Chesterton",
+      anio: "1923",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "Una biografía breve y poco convencional de Francisco de Asís, escrita con la mirada de Chesterton: más interesada en comprender por qué Francisco hizo lo que hizo que en acumular datos. El libro presenta su pobreza, su alegría y su relación con la naturaleza como la clave de su vida, y relata su influencia en la Edad Media. Es la visión de un autor católico, sin pretensión de erudición.", "en": "A short and unconventional biography of Francis of Assisi, written through Chesterton's eyes: more interested in understanding why Francis did what he did than in piling up facts. The book presents his poverty, joy and relationship with nature as the key to his life, and tells of his influence on the Middle Ages. It is the view of a Catholic author, with no pretence to scholarship."},
+      porque: {"es": "Para quien quiere acercarse a san Francisco sin una biografía académica y prefiere una lectura vivaz, llena de imágenes. Muestra qué veía Chesterton en el santo y por qué le parecía un hombre que miraba el mundo del revés. Sirve a lectores de cualquier edad que busquen un retrato más humano que solemne.", "en": "For those who want to approach Saint Francis without an academic biography and prefer a lively reading full of images. It shows what Chesterton saw in the saint and why he thought of him as a man who looked at the world upside down. It suits readers of any age looking for a portrait that is more human than solemn."},
+      imagen: {"src": "img/portadas/chesterton-st-francis-of-assisi.jpg", "credito": {"es": "Giotto, «Estigmatización de san Francisco», h. 1295-1300", "en": "Giotto, «Stigmatization of Saint Francis», c. 1295-1300"}, "url": "https://commons.wikimedia.org/wiki/File:Giotto._Stigmatization_of_St_Francis._1295-1300._314x162cm._Louvre,_Paris.jpg"},
+      citas: [
+        "Brother Fire, God made you beautiful and strong and useful; I pray you be courteous with me.",
+        "any scene such as a landscape can sometimes be more clearly and freshly seen if it is seen upside down.",
+        "St. Francis was talking the true language of a troubadour when he said that he also had a most glorious and gracious lady and that her name was Poverty."
+      ],
+      archivos: {"epub": "libros/chesterton-st-francis-of-assisi.epub", "pdf": "libros/chesterton-st-francis-of-assisi.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 63084 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/63084"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/san-francisco-de-asis-0"},
+      parecidos: ["ortodoxia", "chesterton-the-everlasting-man", "chesterton-heretics"]
+    },
+    {
+      id: "chesterton-the-ball-and-the-cross",
+      titulo: "The Ball and the Cross",
+      autor: "G. K. Chesterton",
+      anio: "1909",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Evan MacIan, un highlander católico, y Turnbull, un periodista ateo, acuerdan batirse a duelo por una discusión sobre Dios, y la policía y la opinión pública se lo impiden una y otra vez. Perseguidos por toda Inglaterra, descubren que se respetan más entre sí que a los tibios que los rodean. Una novela de aventuras, y a la vez un debate sobre la fe y la libertad con un duelo de espadas de por medio.", "en": "Evan MacIan, a Catholic Highlander, and Turnbull, an atheist journalist, agree to fight a duel over a quarrel about God, and the police and public opinion keep stopping them. Hunted across England, they discover that they respect each other more than the lukewarm people around them. It is an adventure novel and, at the same time, a debate about faith and freedom with a sword fight in the middle."},
+      porque: {"es": "Para quien disfruta de una discusión seria narrada con humor y sin rencor, y para quien sospecha que creer o no creer importa de verdad. Chesterton da a cada bando sus mejores argumentos. Se lee casi de un tirón.", "en": "For anyone who enjoys a serious argument told with humour and without rancour, and who suspects that believing or not believing really matters. Chesterton gives each side its best arguments. It reads almost in one breath."},
+      imagen: {"src": "img/portadas/chesterton-the-ball-and-the-cross.jpg", "credito": {"es": "Canaletto, «La catedral de San Pablo», h. 1754", "en": "Canaletto, «St Paul's Cathedral», c. 1754"}, "url": "https://commons.wikimedia.org/wiki/File:Canaletto_-_St._Paul%27s_Cathedral_-_Google_Art_Project.jpg"},
+      citas: [
+        "Man is a contradiction in terms; he is a beast whose superiority to other beasts consists in having fallen.",
+        "I would fight for my friend, but if I lost my friend, I should still be there. I would fight for my country, but if I lost my country, I should still exist.",
+        "If a man must not fight for this, may he fight for anything?",
+        "It is a monstrous thing, for which men die."
+      ],
+      archivos: {"epub": "libros/chesterton-the-ball-and-the-cross.epub", "pdf": "libros/chesterton-the-ball-and-the-cross.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 5265 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/5265"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/la-esfera-y-la-cruz"},
+      parecidos: ["chesterton-the-man-who-was-thursday", "chesterton-the-napoleon-of-notting-hill", "ortodoxia"]
+    },
+    {
+      id: "chesterton-the-everlasting-man",
+      titulo: "The Everlasting Man",
+      autor: "G. K. Chesterton",
+      anio: "1925",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "Chesterton cuenta la historia de la humanidad «desde fuera», como la vería alguien que no diera nada por supuesto: el hombre prehistórico, los mitos paganos, el mundo romano y, al final, el cristianismo. El libro sostiene que la figura de Cristo y la historia de la Iglesia no encajan en el esquema de una religión más entre otras. Es una obra de apologética escrita con ingenio, que expone la tesis del autor sin tratado de por medio.", "en": "Chesterton tells the story of humanity «from the outside», as it might look to someone who took nothing for granted: prehistoric man, pagan myths, the Roman world and, at the end, Christianity. The book argues that the figure of Christ and the history of the Church do not fit the pattern of one religion among others. It is a work of apologetics written with wit, setting out the author's thesis without a formal treatise."},
+      porque: {"es": "Para el lector curioso que quiere ver cómo un católico lee la historia universal y por qué cree que el cristianismo es único. También le sirve a quien ha dudado de la fe y busca una defensa hecha con imaginación, no con fórmulas. Se dice que influyó en la conversión de C. S. Lewis, y ayuda a entender por qué tanta gente lo recomienda.", "en": "For the curious reader who wants to see how a Catholic reads world history and why he believes Christianity is unique. It also serves those who have doubted the faith and look for a defence made with imagination rather than formulas. It is said to have influenced C. S. Lewis's conversion, and it helps explain why so many people recommend it."},
+      imagen: {"src": "img/portadas/chesterton-the-everlasting-man.jpg", "credito": {"es": "Gerard van Honthorst, «La adoración de los pastores», 1622", "en": "Gerard van Honthorst, «Adoration of the Shepherds», 1622"}, "url": "https://commons.wikimedia.org/wiki/File:Gerard_van_Honthorst_-_Adoration_of_the_Shepherds_(1622).jpg"},
+      citas: [
+        "Christianity has died many times and risen again; for it had a god who knew the way out of the grave.",
+        "Omnipotence and impotence, or divinity and infancy, do definitely make a sort of epigram which a million repetitions cannot turn into a platitude.",
+        "Bethlehem is emphatically a place where extremes meet."
+      ],
+      archivos: {"epub": "libros/chesterton-the-everlasting-man.epub", "pdf": "libros/chesterton-the-everlasting-man.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 65688 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/65688"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-hombre-eterno-0"},
+      parecidos: ["ortodoxia", "chesterton-st-francis-of-assisi", "chesterton-heretics"]
+    },
+    {
+      id: "chesterton-the-innocence-of-father-brown",
+      titulo: "The Innocence of Father Brown",
+      autor: "G. K. Chesterton",
+      anio: "1911",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Doce relatos en que un sacerdote bajito y distraído, el padre Brown, resuelve crímenes que desconciertan a la policía de Londres y de París. No le sirven las huellas ni los instrumentos: le sirve conocer el corazón humano, porque sabe de qué es capaz un hombre y por qué. Cada caso trae una paradoja y un golpe de ingenio, y detrás, la fe sencilla de quien ha escuchado muchas confesiones.", "en": "Twelve stories in which a short, absent-minded priest, Father Brown, solves crimes that baffle the police of London and Paris. He needs no fingerprints or gadgets: he reads the human heart, because he knows what a man is capable of and why. Every case brings a paradox and a stroke of wit, and behind them the plain faith of someone who has heard a great many confessions."},
+      porque: {"es": "Para quien disfruta de un buen misterio y quiere, además, que el detective tenga alma. Los relatos son breves, de ritmo ágil y con final sorprendente, así que sirven tanto para una tarde como para leer de a uno antes de dormir. Chesterton enseña a mirar con humildad lo que parece evidente.", "en": "For anyone who enjoys a good mystery and would like the detective to have a soul as well. The stories are short, brisk and end with a surprise, so they suit an afternoon or one a night before sleep. Chesterton teaches the reader to look with humility at what seems obvious."},
+      imagen: {"src": "img/portadas/chesterton-the-innocence-of-father-brown.jpg", "credito": {"es": "John Atkinson Grimshaw, «Blackman Street, Londres», 1885", "en": "John Atkinson Grimshaw, «Blackman Street, London», 1885"}, "url": "https://commons.wikimedia.org/wiki/File:Grimshaw_John_Atkinson_Blackman_Street_London_1885_Oil_On_Canvas.jpg"},
+      citas: [
+        "The criminal is the creative artist; the detective only the critic",
+        "Reason and justice grip the remotest and the loneliest star.",
+        "Where does a wise man hide a leaf? In the forest. But what does he do if there is no forest?"
+      ],
+      archivos: {"epub": "libros/chesterton-the-innocence-of-father-brown.epub", "pdf": "libros/chesterton-the-innocence-of-father-brown.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 204 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/204"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-candor-del-padre-brown"},
+      parecidos: ["chesterton-the-wisdom-of-father-brown", "chesterton-the-man-who-was-thursday", "ortodoxia"]
+    },
+    {
+      id: "chesterton-the-man-who-was-thursday",
+      titulo: "The Man Who Was Thursday: A Nightmare",
+      autor: "G. K. Chesterton",
+      anio: "1908",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Gabriel Syme, poeta y policía, se infiltra en el consejo secreto de los anarquistas de Europa, cuyos siete miembros llevan por nombre los días de la semana. Lo que empieza como una novela de espías se vuelve una persecución cada vez más extraña, hasta que el presidente, Domingo, y el sentido de todo el enredo salen a la luz. Es una pesadilla que acaba siendo una parábola sobre el orden, el mal y el sufrimiento.", "en": "Gabriel Syme, poet and policeman, infiltrates the secret council of the anarchists of Europe, whose seven members are named after the days of the week. What begins as a spy novel becomes an ever stranger chase, until the president, Sunday, and the meaning of the whole tangle come to light. It is a nightmare that turns out to be a parable about order, evil and suffering."},
+      porque: {"es": "Para el lector que busca una aventura vertiginosa con verdadera hondura, y a quien no le importa que el libro lo desconcierte antes de explicarse. Conviene leerlo sin saber el final. Chesterton convierte el vértigo de la duda moderna en una invitación a la gratitud y al valor.", "en": "For the reader who wants a dizzying adventure with real depth, and who does not mind being baffled before the book explains itself. It is best read without knowing the ending. Chesterton turns the vertigo of modern doubt into an invitation to gratitude and courage."},
+      imagen: {"src": "img/portadas/chesterton-the-man-who-was-thursday.jpg", "credito": {"es": "James McNeill Whistler, «Nocturno en negro y oro: el cohete que cae», h. 1875", "en": "James McNeill Whistler, «Nocturne in Black and Gold: The Falling Rocket», c. 1875"}, "url": "https://commons.wikimedia.org/wiki/File:Whistler-Nocturne_in_black_and_gold.jpg"},
+      citas: [
+        "Chaos is dull; because in chaos the train might indeed go anywhere, to Baker Street or to Bagdad. But man is a magician, and his whole magic is in this, that he does say Victoria, and lo! it is Victoria.",
+        "Our digestions, for instance, going sacredly and silently right, that is the foundation of all poetry.",
+        "His respectability was spontaneous and sudden, a rebellion against rebellion.",
+        "“Can ye drink of the cup that I drink of?”"
+      ],
+      archivos: {"epub": "libros/chesterton-the-man-who-was-thursday.epub", "pdf": "libros/chesterton-the-man-who-was-thursday.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 1695 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/1695"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-hombre-que-fue-jueves"},
+      parecidos: ["chesterton-the-ball-and-the-cross", "chesterton-the-napoleon-of-notting-hill", "ortodoxia"]
+    },
+    {
+      id: "chesterton-the-napoleon-of-notting-hill",
+      titulo: "The Napoleon of Notting Hill",
+      autor: "G. K. Chesterton",
+      anio: "1904",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "En un Londres futuro y aburrido, un funcionario bromista es elegido rey por azar y, para divertirse, reparte a cada barrio un estandarte y una alabarda medievales. Solo un joven, Adam Wayne, se toma la broma en serio y defiende su calle como si fuera una patria. Una fantasía cómica sobre el patriotismo, el humor y la importancia de amar lo pequeño.", "en": "In a dull future London, a joking civil servant is chosen king by chance and, for fun, gives every borough a medieval banner and halberd. Only one young man, Adam Wayne, takes the joke seriously and defends his street as if it were a homeland. It is a comic fantasy about patriotism, humour and the importance of loving what is small."},
+      porque: {"es": "Para el lector que quiere reír y pensar a la vez, y para quien tiene cariño por su barrio, su ciudad o su pueblo. Es una de las obras más ligeras de Chesterton y también una de las más imaginativas. Deja ganas de mirar la propia calle con ojos nuevos.", "en": "For the reader who wants to laugh and think at once, and for anyone fond of their neighbourhood, city or village. It is one of Chesterton's lightest works and also one of his most imaginative. It leaves you wanting to look at your own street with new eyes."},
+      imagen: {"src": "img/portadas/chesterton-the-napoleon-of-notting-hill.jpg", "credito": {"es": "Edmund Blair Leighton, «¡Que Dios te acompañe!», 1900", "en": "Edmund Blair Leighton, «God Speed!», 1900"}, "url": "https://commons.wikimedia.org/wiki/File:Leighton-God_Speed!.jpg"},
+      citas: [
+        "Humour, my friends, is the one sanctity remaining to mankind. It is the one thing you are thoroughly afraid of.",
+        "But whatever is touched with it is never again wholly common; whatever is touched with it takes a magic from outside the world.",
+        "the patriot never under any circumstances boasts of the largeness of his country, but always, and of necessity, boasts of the smallness of it."
+      ],
+      archivos: {"epub": "libros/chesterton-the-napoleon-of-notting-hill.epub", "pdf": "libros/chesterton-the-napoleon-of-notting-hill.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 20058 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/20058"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-napoleon-de-notting-hill"},
+      parecidos: ["chesterton-the-man-who-was-thursday", "chesterton-the-wisdom-of-father-brown", "ortodoxia"]
+    },
+    {
+      id: "chesterton-whats-wrong-with-the-world",
+      titulo: "What's Wrong with the World",
+      autor: "G. K. Chesterton",
+      anio: "1910",
+      idioma: "en",
+      categoria: "ensayo",
+      recomendado: false,
+      resumen: {"es": "Chesterton pasa revista a los males sociales de comienzos del siglo XX (la pobreza, la educación, el lugar de la mujer, el hogar) y propone que el remedio no es una ingeniería nueva sino devolver a la gente común la propiedad, la familia y la libertad de su casa. Entre bromas y paradojas defiende al ciudadano corriente frente a los reformadores y a los grandes intereses.", "en": "Chesterton surveys the social ills of the early twentieth century (poverty, education, the place of women, the home) and proposes that the remedy is not some new engineering but giving ordinary people back property, family and the freedom of their own house. Through jokes and paradox he defends the common citizen against reformers and big interests alike."},
+      porque: {"es": "Para el lector que se pregunta qué falla en la sociedad y desconfía tanto de las soluciones de moda como del simple pesimismo. Sirve a quien se interesa por la familia, la educación o la propiedad, y quiere ver una defensa de la vida corriente hecha con ingenio. Es un libro de ideas, pero se lee con gusto por su humor.", "en": "For the reader who wonders what is going wrong in society and distrusts both fashionable solutions and plain pessimism. It suits those interested in family, education or property who want to see the ordinary life defended with wit. It is a book of ideas, yet it reads with pleasure because of its humour."},
+      imagen: {"src": "img/portadas/chesterton-whats-wrong-with-the-world.jpg", "credito": {"es": "Ford Madox Brown, «El trabajo», 1852-1865", "en": "Ford Madox Brown, «Work», 1852-1865"}, "url": "https://commons.wikimedia.org/wiki/File:Ford_Madox_Brown_-_Work_-_Google_Art_Project.jpg"},
+      citas: [
+        "The Christian ideal has not been tried and found wanting. It has been found difficult; and left untried.",
+        "to the moderately poor the home is the only place of liberty. Nay, it is the only place of anarchy.",
+        "Coercion is a kind of encouragement; and anarchy (or what some call liberty) is essentially oppressive, because it is essentially discouraging."
+      ],
+      archivos: {"epub": "libros/chesterton-whats-wrong-with-the-world.epub", "pdf": "libros/chesterton-whats-wrong-with-the-world.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 1717 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/1717"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/lo-que-esta-mal-en-el-mundo"},
+      parecidos: ["ortodoxia", "chesterton-heretics", "chesterton-the-everlasting-man"]
+    },
+    {
+      id: "austen-pride-and-prejudice",
+      titulo: "Pride and Prejudice",
+      autor: "Jane Austen",
+      anio: "1813",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Elizabeth Bennet, viva e independiente, y el reservado señor Darcy empiezan mal: él la desdeña y ella se forma de él un juicio rápido. Entre bailes, cartas y visitas en la campiña inglesa, ambos tendrán que reconocer sus errores. La novela más querida de Jane Austen, con una ironía finísima y una familia inolvidable.", "en": "Lively, independent Elizabeth Bennet and the reserved Mr. Darcy get off to a bad start: he slights her, and she quickly makes up her mind about him. Through balls, letters and visits in the English countryside, each has to admit being wrong. Jane Austen's best-loved novel, with a fine irony and an unforgettable family."},
+      porque: {"es": "Para quien quiere una historia de amor que se gana despacio, con inteligencia y sin escenas turbias. Enseña, riéndose, lo caro que cuesta juzgar a las personas por las apariencias, y lo bueno que es corregirse a tiempo. Se lee en una tarde de descanso y se vuelve a leer años después.", "en": "For anyone who wants a love story that is earned slowly, with wit and nothing unseemly. It teaches, with a smile, how costly it is to judge people by appearances, and how good it is to correct yourself in time. It reads in a restful afternoon and rewards a second reading years later."},
+      imagen: {"src": "img/portadas/austen-pride-and-prejudice.jpg", "credito": {"es": "Thomas Lawrence, «Sarah Barrett Moulton: Pinkie», 1794", "en": "Thomas Lawrence, «Sarah Barrett Moulton: Pinkie», 1794"}, "url": "https://commons.wikimedia.org/wiki/File:Thomas_Lawrence_-_Sarah_Barrett_Moulton,_Pinkie.jpg"},
+      citas: [
+        "It is a truth universally acknowledged, that a single man in possession of a good fortune must be in want of a wife.",
+        "I could easily forgive his pride, if he had not mortified mine.",
+        "Till this moment, I never knew myself.",
+        "There is a stubbornness about me that never can bear to be frightened at the will of others.",
+        "I declare, after all, there is no enjoyment like reading!"
+      ],
+      archivos: {"epub": "libros/austen-pride-and-prejudice.epub", "pdf": "libros/austen-pride-and-prejudice.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 1342 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/1342"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/orgullo-y-prejuicio"},
+      parecidos: ["austen-sense-and-sensibility", "austen-emma", "austen-persuasion"]
+    },
+    {
+      id: "chesterton-the-wisdom-of-father-brown",
+      titulo: "The Wisdom of Father Brown",
+      autor: "G. K. Chesterton",
+      anio: "1914",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Segunda colección de casos del padre Brown: una banda de ladrones en los Alpes italianos, un duelo que nunca se celebra, un asesino que no existe, una antigua maldición de familia. Con su paraguas y su cara de no enterarse de nada, el pequeño sacerdote desmonta cada enigma desde dentro, mostrando que el mal rara vez es tan misterioso como parece y que la razón sana descubre lo que la ciencia pomposa no ve.", "en": "A second collection of Father Brown cases: a gang of thieves in the Italian Alps, a duel that never takes place, a murderer who does not exist, an old family curse. With his umbrella and his air of understanding nothing, the little priest takes each riddle apart from the inside, showing that evil is rarely as mysterious as it looks and that sound reason finds what pompous science misses."},
+      porque: {"es": "Para quien ya conoce al padre Brown y quiere más, y para quien empieza por aquí sin perder nada, porque cada relato se lee solo. Hay humor, ironía contra los expertos sin sentido común y una compasión muy poco frecuente en la novela policial. Se disfruta a cualquier edad.", "en": "For readers who already know Father Brown and want more, and for newcomers who lose nothing by starting here, since every story stands alone. There is humour, irony at the expense of experts without common sense, and a compassion rare in detective fiction. It can be enjoyed at any age."},
+      imagen: {"src": "img/portadas/chesterton-the-wisdom-of-father-brown.jpg", "credito": {"es": "Léon Cogniet, «La mujer del bandido italiano», h. 1825", "en": "Léon Cogniet, «The Italian Brigand's Wife», c. 1825"}, "url": "https://commons.wikimedia.org/wiki/File:Leon_coignet_The_Italian_Brigand_s_Wife.jpg"},
+      citas: [
+        "“One is never thinking of the real sorrow,” said the strange priest. “One can only be kind when it comes.”",
+        "Even in a minute instance, it is best to look first to the main tendencies of Nature. A particular flower may not be dead in early winter, but the flowers are dying; a particular pebble may never be wetted with the tide, but the tide is coming in.",
+        "If God Almighty held the truncheon of the lists, if St Michael blew the trumpet for the swords to cross--even then, if one of them stood ready, the other would not come."
+      ],
+      archivos: {"epub": "libros/chesterton-the-wisdom-of-father-brown.epub", "pdf": "libros/chesterton-the-wisdom-of-father-brown.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 223 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/223"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-sabiduria-del-padre-brown"},
+      parecidos: ["chesterton-the-innocence-of-father-brown", "chesterton-the-napoleon-of-notting-hill", "ortodoxia"]
     }
   ],
 
@@ -3560,22 +3883,22 @@ window.FENIX = {
   // `estimada` { valor, genero } si Delibris no la reseña. reservado: "dd-mmm-aaaa" cuando alguien la
   // toma (formulario «Fénix - encuadernador»). El sitio oculta sola la que ya está en ese idioma.
   buscados: [
-    { titulo: {"es": "Orgullo y prejuicio", "en": "Pride and Prejudice"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/orgullo-y-prejuicio"} },
-    { titulo: {"es": "Sentido y sensibilidad", "en": "Sense and Sensibility"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sentido-y-sensibilidad"} },
-    { titulo: {"es": "Emma", "en": "Emma"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"} },
-    { titulo: {"es": "Persuasión", "en": "Persuasion"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },
-    { titulo: {"es": "Mansfield Park", "en": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
-    { titulo: {"es": "La abadía de Northanger", "en": "Northanger Abbey"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"} },
+    { titulo: {"es": "Orgullo y prejuicio"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/orgullo-y-prejuicio"} },
+    { titulo: {"es": "Sentido y sensibilidad"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sentido-y-sensibilidad"} },
+    { titulo: {"es": "Emma"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"} },
+    { titulo: {"es": "Persuasión"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },
+    { titulo: {"es": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
+    { titulo: {"es": "La abadía de Northanger"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"} },
     { titulo: {"es": "Ortodoxia", "en": "Orthodoxy"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/ortodoxia"} },
-    { titulo: {"es": "Herejes", "en": "Heretics"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/herejes"} },
-    { titulo: {"es": "El hombre eterno", "en": "The Everlasting Man"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-hombre-eterno-0"} },
-    { titulo: {"es": "San Francisco de Asís", "en": "St. Francis of Assisi"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/san-francisco-de-asis-0"} },
-    { titulo: {"es": "El candor del padre Brown", "en": "The Innocence of Father Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-candor-del-padre-brown"} },
-    { titulo: {"es": "La sabiduría del padre Brown", "en": "The Wisdom of Father Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-sabiduria-del-padre-brown"} },
-    { titulo: {"es": "El hombre que fue jueves", "en": "The Man Who Was Thursday"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-hombre-que-fue-jueves"} },
-    { titulo: {"es": "La esfera y la cruz", "en": "The Ball and the Cross"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/la-esfera-y-la-cruz"} },
-    { titulo: {"es": "El Napoleón de Notting Hill", "en": "The Napoleon of Notting Hill"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-napoleon-de-notting-hill"} },
-    { titulo: {"es": "Lo que está mal en el mundo", "en": "What's Wrong with the World"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/lo-que-esta-mal-en-el-mundo"} },
+    { titulo: {"es": "Herejes"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/herejes"} },
+    { titulo: {"es": "El hombre eterno"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-hombre-eterno-0"} },
+    { titulo: {"es": "San Francisco de Asís"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/san-francisco-de-asis-0"} },
+    { titulo: {"es": "El candor del padre Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-candor-del-padre-brown"} },
+    { titulo: {"es": "La sabiduría del padre Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-sabiduria-del-padre-brown"} },
+    { titulo: {"es": "El hombre que fue jueves"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-hombre-que-fue-jueves"} },
+    { titulo: {"es": "La esfera y la cruz"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/la-esfera-y-la-cruz"} },
+    { titulo: {"es": "El Napoleón de Notting Hill"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-napoleon-de-notting-hill"} },
+    { titulo: {"es": "Lo que está mal en el mundo"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/lo-que-esta-mal-en-el-mundo"} },
     { titulo: {"es": "Las glorias de María", "en": "The Glories of Mary"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/las-glorias-de-maria"} },
     { titulo: {"es": "Visitas al Santísimo Sacramento y a María Santísima", "en": "Visits to the Most Blessed Sacrament and to the Blessed Virgin Mary"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/visitas-al-santisimo-sacramento-y-maria-santisima-para-todos-los-dias"} },
     { titulo: {"es": "Práctica del amor a Jesucristo", "en": "The Practice of the Love of Jesus Christ"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/practica-del-amor-jesucristo"} },
@@ -3624,7 +3947,9 @@ window.FENIX = {
     { ids: ["escriva-cartas-1", "escriva-cartas-2"], porque: "volúmenes distintos: cartas 1 a 4 y cartas 5 a 8" },
     { ids: ["escriva-cartas-1", "escriva-carta-29"], porque: "la carta 29 no está en el volumen I" },
     { ids: ["escriva-cartas-2", "escriva-carta-29"], porque: "la carta 29 no está en el volumen II" },
-    { ids: ["perez-galdos-la-corte-de-carlos-iv", "galdos-memorias-cortesano-1815"], porque: "dos Episodios nacionales distintos" }
+    { ids: ["perez-galdos-la-corte-de-carlos-iv", "galdos-memorias-cortesano-1815"], porque: "dos Episodios nacionales distintos" },
+    { ids: ["chesterton-the-everlasting-man", "chesterton-the-man-who-was-thursday"], porque: "dos obras de Chesterton: un ensayo de 1925 y una novela de 1908" },
+    { ids: ["chesterton-the-innocence-of-father-brown", "chesterton-the-wisdom-of-father-brown"], porque: "la primera y la segunda colección de relatos del padre Brown" }
   ],
 
   oraciones: [

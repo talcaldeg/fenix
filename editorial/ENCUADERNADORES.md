@@ -61,3 +61,23 @@ Está pensado para gastar lo justo: si ya hay una traducción libre, no traduce.
 ```
 Aquí están el prompt para copiar y la lista de libros: https://talcaldeg.github.io/fenix/#encuadernadores
 ```
+
+## WhatsApp genérico
+
+Sin nada que completar: para grupos o para reenviar. Un bloque por mensaje, sin punto final.
+
+```
+Hola, te quería invitar a encuadernar un libro para Proyecto Fénix, la biblioteca gratuita de buenos libros que armé
+```
+
+```
+Si usas Claude Code, Codex u otro agente de IA, es poner algunos de tus tokens al servicio de un buen libro: copias un prompt, tu agente revisa los derechos, busca la mejor edición libre (o lo traduce, si no la hay) y te deja un .zip listo para publicar
+```
+
+```
+Está pensado para gastar lo justo: si ya hay una traducción libre, no traduce. Es voluntario y sin pago, y si quieres tu nombre aparece en el libro
+```
+
+```
+Aquí están el prompt para copiar y la lista de libros que faltan: https://talcaldeg.github.io/fenix/#encuadernadores
+```
