@@ -1148,6 +1148,8 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .acceso b{font-size:19px; line-height:1.2}
   .acceso span{font:13px/1.35 system-ui,sans-serif; opacity:.88}
   .acceso:hover, .acceso:focus-visible{transform:translateY(-2px)}
+  /* Seis categorías y el plan: el plan ocupa dos columnas y la grilla queda sin hueco (4 + 4 y, en el celular, 2 + 2 + 2 + 2). */
+  .acceso[href="#plan"]{grid-column:span 2}
   .titulo-fila{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap}
   .titulo-fila a{font:600 14px system-ui,sans-serif; text-decoration:none}
   .banda{display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-top:44px}
@@ -1195,7 +1197,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .fav{margin-left:auto; color:var(--oro); font-size:16px}
 
   .lista{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden}
-  .fila{display:grid; grid-template-columns:44px minmax(0,2.2fr) minmax(0,1.3fr) minmax(0,2.3fr) 40px; gap:16px; align-items:center; padding:10px 16px; border-top:1px solid var(--line); cursor:pointer}
+  .fila{display:grid; grid-template-columns:44px minmax(0,2.2fr) minmax(0,1.8fr) minmax(0,1.6fr) 40px; gap:16px; align-items:center; padding:10px 16px; border-top:1px solid var(--line); cursor:pointer}
   .fila .mini{width:44px; height:66px; border-radius:4px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
   .fila .mini.oracion{background-color:var(--c-oracion)} .fila .mini.novela{background-color:var(--c-novela)}
   .fila:first-child{border-top:0}
@@ -1261,6 +1263,13 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .libro.sin-epub .portada, .fila.sin-epub .mini{filter:grayscale(.8); opacity:.5}
   .libro.sin-epub .pie, .fila.sin-epub .tt{color:var(--muted)}
   .libro.sin-epub:hover .portada, .fila.sin-epub:hover .mini{opacity:1; filter:none}
+  /* En el plan de vida no se atenúa nada: Camino, Surco y Forja se leen en línea y son el centro del plan. */
+  #v-plan .fila.sin-epub .mini{opacity:1; filter:none} #v-plan .fila.sin-epub .tt{color:var(--ink)}
+  /* En «Recomendados por Fénix» el sello sobra: lo dice el título de la sección y el borde dorado. */
+  #selloFenix .etq.sello{display:none}
+  /* Mientras carga la miniatura, el color de su categoría (antes teatro, poesía y ensayo caían en el de lectura). */
+  img.mini.teatro{background-color:var(--c-teatro)} img.mini.poesia{background-color:var(--c-poesia)} img.mini.ensayo{background-color:var(--c-ensayo)}
+  img.mini.oracion{background-color:var(--c-oracion)} img.mini.novela{background-color:var(--c-novela)}
   .sin-epub-grupo{border-top:1px solid var(--line)}
   .sin-epub-grupo > summary{cursor:pointer; padding:12px 16px; font:600 14px system-ui,sans-serif; color:var(--muted); background:var(--bg2)}
   .sin-epub-grupo > summary:hover{color:var(--ink)}

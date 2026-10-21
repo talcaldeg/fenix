@@ -100,9 +100,9 @@
   .wrap{max-width:1040px; margin:0 auto; padding:0 16px}
   header{border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
-  .marca{color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
+  .marca{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
   .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
-  main{padding:28px 0 48px}
+  main.wrap{padding-top:28px; padding-bottom:48px}
   /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
   .ficha{display:grid; grid-template-columns:320px minmax(0,1fr); grid-template-areas:"lado cabeza" "lado cuerpo"; column-gap:44px; align-items:start}
   .ficha .lado{grid-area:lado; position:sticky; top:20px} .ficha .cabeza{grid-area:cabeza} .ficha .cuerpo{grid-area:cuerpo; max-width:640px}
@@ -129,7 +129,7 @@
 </style>
 </head>
 <body>
-<header><div class="wrap barra"><a class="marca" href="../../">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="Cambiar a modo claro u oscuro" title="Cambiar a modo claro u oscuro">◐</button></div></header>
+<header><div class="wrap barra"><a class="marca" href="../../"><img src="../../img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="Cambiar a modo claro u oscuro" title="Cambiar a modo claro u oscuro">◐</button></div></header>
 <main class="wrap">
   <div class="ficha">
     <div class="lado"><img src="../../img/portadas/lope-de-vega-el-perro-del-hortelano.jpg" alt="Francisco de Goya, «El perro» (Pinturas negras), 1820-1823" width="400" height="600">
