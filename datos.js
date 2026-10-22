@@ -3955,7 +3955,56 @@ window.FENIX = {
     { titulo: {"es": "Fabiola o la Iglesia de las catacumbas", "en": "Fabiola, or the Church of the Catacombs"}, autor: "Cardenal Nicholas Wiseman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fabiola-o-la-iglesia-de-las-catacumbas"} },
     { titulo: {"es": "Ben-Hur", "en": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
-    { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} }
+    { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },
+    { titulo: {"es": "Niebla"}, autor: "Miguel de Unamuno", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/niebla"} },
+    { titulo: {"es": "El jardín secreto"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-jardin-secreto"} },
+    { titulo: {"es": "El pequeño Lord Fauntleroy"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-pequeno-lord"} },
+    { titulo: {"es": "Ética a Nicómaco"}, autor: "Aristóteles", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/etica-nicomaco"} },
+    { titulo: {"es": "Estudio en escarlata"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/estudio-en-escarlata"} },
+    { titulo: {"es": "El signo de los cuatro"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-signo-de-los-cuatro"} },
+    { titulo: {"es": "Las aventuras de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/aventuras-de-sherlock-holmes"} },
+    { titulo: {"es": "Las memorias de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/las-memorias-de-sherlock-holmes"} },
+    { titulo: {"es": "El regreso de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-regreso-de-sherlock-holmes"} },
+    { titulo: {"es": "El valle del terror"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-valle-del-terror"} },
+    { titulo: {"es": "El último saludo de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-ultimo-saludo-de-sherlock-holmes"} },
+    { titulo: {"es": "Peter Pan"}, autor: "J. M. Barrie", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/peter-pan-0"} },
+    { titulo: {"es": "Tarzán de los monos"}, autor: "Edgar Rice Burroughs", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/tarzan-de-los-monos"} },
+    { titulo: {"es": "El libro de la selva"}, autor: "Rudyard Kipling", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-libro-de-la-selva"} },
+    { titulo: {"es": "Sobre el problema de la empatía"}, autor: "Santa Teresa Benedicta de la Cruz (Edith Stein)", delibris: null, estimada: {"valor": 6, "genero": "Pensamiento"} },
+    { titulo: {"es": "Ofrenda lírica (Gitanjali)"}, autor: "Rabindranath Tagore", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ofrenda-lirica"} },
+    { titulo: {"es": "La luna nueva"}, autor: "Rabindranath Tagore", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-luna-nueva"} },
+    { titulo: {"es": "El jardinero"}, autor: "Rabindranath Tagore", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/el-jardinero"} },
+    { titulo: {"es": "La anunciación a María"}, autor: "Paul Claudel", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-anunciacion-maria"} },
+    { titulo: {"es": "El zapato de raso"}, autor: "Paul Claudel", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-zapato-de-raso"} },
+    { titulo: {"es": "Cinco grandes odas"}, autor: "Paul Claudel", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cinco-grandes-odas"} },
+    { titulo: {"es": "El rehén"}, autor: "Paul Claudel", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/lotage"} },
+    { titulo: {"es": "Conocimiento del Este"}, autor: "Paul Claudel", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/conocimiento-del-este"} },
+    { titulo: {"es": "Dublineses"}, autor: "James Joyce", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/dublineses"} },
+    { titulo: {"es": "Al faro"}, autor: "Virginia Woolf", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/al-faro"} },
+    { titulo: {"es": "El cuarto de Jacob"}, autor: "Virginia Woolf", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/el-cuarto-de-jacob"} },
+    { titulo: {"es": "Noche y día"}, autor: "Virginia Woolf", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/noche-y-dia"} },
+    { titulo: {"es": "Fouché"}, autor: "Stefan Zweig", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fouche"} },
+    { titulo: {"es": "Tres maestros: Balzac, Dickens, Dostoievski"}, autor: "Stefan Zweig", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/tres-maestros-balzac-dickens-dostoievsky"} },
+    { titulo: {"es": "Ardiente secreto"}, autor: "Stefan Zweig", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ardiente-secreto"} },
+    { titulo: {"es": "Jeremías"}, autor: "Stefan Zweig", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeremias"} },
+    { titulo: {"es": "Mendel el de los libros"}, autor: "Stefan Zweig", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mendel-el-de-los-libros"} },
+    { titulo: {"es": "Carta de una desconocida"}, autor: "Stefan Zweig", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/carta-de-una-desconocida"} },
+    { titulo: {"es": "Veinticuatro horas en la vida de una mujer"}, autor: "Stefan Zweig", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/veinticuatro-horas-en-la-vida-de-una-mujer-y-otros-relatos"} }
+  ],
+
+  // Cola interna de obras con derechos (el sitio no la muestra): via "permiso" = pedirlo al titular
+  // por escrito (skill buscar-libros, sección 4) y, con el sí, alojar; via "esperar" = libre en Chile
+  // pero no en EE.UU. (GitHub Pages), entra a `buscados` el 1 de enero de `libre`. estado:
+  // "por pedir" | "pedido dd-mmm-aaaa" | "concedido" | "negado". Fuente de cada dato en `fuente`.
+  pendientesDerechos: [
+    { obra: "Novelas de Georgette Heyer (Arabella, Frederica, Venetia, Cotillion y otras)", autor: "Georgette Heyer (m. 1974)", via: "permiso", libre: "2045", titular: "The Estate of Georgette Heyer, representado por Peter Buckman (The Ampersand Agency); en español, Ediciones Palabra", contacto: "office@theampersandagency.co.uk", fuente: "https://theampersandagency.co.uk/contact", estado: "por pedir" },
+    { obra: "The Giver (El dador)", autor: "Lois Lowry (viva)", via: "permiso", libre: null, titular: "Lois Lowry; editorial original HMH (Houghton Mifflin), en español Editorial Everest (trad. Luisa Balseiro)", contacto: "formulario de https://loislowry.com/contact/", fuente: "https://loislowry.com/contact/", estado: "por pedir" },
+    { obra: "Obras de José Miguel Ibáñez Langlois (Libro de la Pasión, Por qué sufrir, La Virgen María y otras)", autor: "José Miguel Ibáñez Langlois (vivo)", via: "permiso", libre: null, titular: "el autor; editorial Rialp", contacto: "ediciones@rialp.com, +34 913 260 504", fuente: "https://www.rialp.com/autor/jose-miguel-ibanez-langlois/", estado: "por pedir" },
+    { obra: "Obras de Enrique Monasterio (El Belén que puso Dios, Pensar por libre, Relatos a la sombra de la Cruz, Un safari en mi pasillo)", autor: "Enrique Monasterio", via: "permiso", libre: null, titular: "el autor; El Belén que puso Dios, Ediciones Palabra (descatalogado)", contacto: "sin verificar: falta el correo del autor o de Palabra", fuente: "https://almudi.org/noticias-articulos-y-opinion/13183-la-verdadera-historia-de-la-navidad", estado: "por pedir" },
+    { obra: "Edward o el Caballero Verde y Orencio y Eloísa (hoy fichas con enlace: edward-caballero-verde, orencio-y-eloisa)", autor: "Benjamín Franzani (vivo)", via: "permiso", libre: null, titular: "el autor; editorial Vuelo Ártico", contacto: "info@vueloartico.com (contacto de prensa en su sitio)", fuente: "https://www.benjaminfranzani.com/p/para-resenadores-y-prensa.html", estado: "por pedir" },
+    { obra: "Diario de santa Faustina, «La Divina Misericordia en mi alma»", autor: "Santa Faustina Kowalska (m. 1938)", via: "permiso", libre: "2048", titular: "Congregación de las Hermanas de Nuestra Señora de la Misericordia (Cracovia); edición en español de Marian Press, Stockbridge (trad. Eva Bylicka)", contacto: "https://www.saint-faustina.org/contacts/", fuente: "https://www.saint-faustina.org/diary-full-text", estado: "por pedir" },
+    { obra: "El principito", autor: "Antoine de Saint-Exupéry (m. 1944)", via: "esperar", libre: "2039", titular: "libre en Chile desde 2015; en EE.UU. protegido hasta el 31-dic-2038 (publicado en 1943)", contacto: null, fuente: "https://www.delibris.org/es/el-principito", estado: "en espera" },
+    { obra: "Rebelión en la granja", autor: "George Orwell (m. 1950)", via: "esperar", libre: "2041", titular: "libre en Chile desde 2021; en EE.UU. protegido hasta el 31-dic-2040 (publicado en 1945)", contacto: null, fuente: "https://www.delibris.org/es/rebelion-en-la-granja", estado: "en espera" }
   ],
 
   // Plan de vida: libros para el rato de oración (categoria "oracion") y para la lectura espiritual
