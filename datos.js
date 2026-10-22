@@ -25,7 +25,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "21-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "22-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3875,6 +3875,36 @@ window.FENIX = {
       fuente: {"texto": "Project Gutenberg, libro n.º 223 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/223"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-sabiduria-del-padre-brown"},
       parecidos: ["chesterton-the-innocence-of-father-brown", "chesterton-the-napoleon-of-notting-hill", "ortodoxia"]
+    },
+    {
+      id: "saint-exupery-el-principito",
+      titulo: "El principito",
+      autor: "Antoine de Saint-Exupéry",
+      anio: "1943",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {
+        es: "Un aviador cae con su avión en el desierto del Sahara, a mil millas de cualquier lugar habitado, y al amanecer lo despierta un niño que le pide que le dibuje un cordero. Es un pequeño príncipe que viene de un asteroide apenas más grande que una casa, donde dejó una rosa orgullosa a la que no supo querer. Mientras el aviador intenta reparar el motor, el principito le cuenta su viaje por otros planetas, habitados por un rey sin súbditos, un vanidoso, un bebedor, un hombre de negocios, un farolero y un geógrafo, y su llegada a la Tierra, donde un zorro le enseña qué significa domesticar y por qué su rosa es única. Escrito e ilustrado por el autor en Nueva York, durante la guerra.",
+        en: "An airman crashes his plane in the Sahara, a thousand miles from any inhabited place, and at dawn he is woken by a child who asks him to draw a sheep. He is a little prince from an asteroid barely bigger than a house, where he left a proud rose he did not know how to love. While the airman tries to repair his engine, the little prince tells him of his journey through other planets, inhabited by a king with no subjects, a conceited man, a drunkard, a businessman, a lamplighter and a geographer, and of his arrival on Earth, where a fox teaches him what it means to tame and why his rose is unique. Written and illustrated by the author in New York, during the war."
+      },
+      porque: {"es":"Se lee en una tarde y sirve a cualquier edad: al niño le cuenta una aventura y al adulto le recuerda lo que olvidó al crecer. Es una buena puerta para hablar en familia o con amigos de la amistad, la fidelidad y el tiempo que se le da a quien se quiere. Conviene releerlo cada tantos años, porque cada vez dice algo distinto.","en":"It can be read in an afternoon and suits any age: it tells the child an adventure and reminds the adult of what was forgotten on growing up. It is a good way into a family or friendly conversation about friendship, faithfulness and the time we give to those we love. It is worth rereading every few years, because it says something different each time."},
+      imagen: { src: "img/portadas/saint-exupery-el-principito.jpg", credito: { es: "Vincent van Gogh, «La noche estrellada», 1889", en: "Vincent van Gogh, «The Starry Night», 1889" }, url: "https://commons.wikimedia.org/wiki/File:Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpg" },
+      citas: [
+        "Todas las personas mayores fueron primero niños. (Pero pocas lo recuerdan).",
+        "Solo se ve bien con el corazón. Lo esencial es invisible a los ojos.",
+        "Es el tiempo que perdiste por tu rosa lo que hace a tu rosa tan importante.",
+        "Te vuelves responsable para siempre de lo que has domesticado.",
+        "Lo que embellece el desierto es que esconde un pozo en alguna parte..."
+      ],
+      archivos: {},
+      comprar: [
+        { texto: "Buscalibre", url: "https://www.buscalibre.cl/libros/search?q=el+principito+saint-exupery" },
+        { texto: "Amazon", url: "https://www.amazon.com/s?k=el+principito+saint-exupery" }
+      ],
+      fuente: { texto: "Publicado en Nueva York en 1943; protegido en EE.UU. hasta 2038 (se enlaza, no se aloja). Citas traducidas por Proyecto Fénix del original francés", url: "https://openlibrary.org/works/OL10263W" },
+      delibris: { valor: 6, genero: "Literatura", url: "https://www.delibris.org/es/el-principito" },
+      parecidos: ["dickens-el-cantico-de-navidad", "flaubert-un-corazon-sencillo", "irving-cuentos-de-la-alhambra"]
     }
   ],
 
