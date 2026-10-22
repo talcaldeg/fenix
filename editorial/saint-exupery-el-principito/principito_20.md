@@ -122,7 +122,7 @@ Y volvió adonde estaba el zorro:
 
 «Adiós», dijo...
 
-«Adiós», dijo el zorro. «Este es mi secreto. Es muy simple: Solo se ve bien con el corazón. Lo esencial es invisible a los ojos».
+«Adiós», dijo el zorro. «Este es mi secreto. Es muy simple: solo se ve bien con el corazón. Lo esencial es invisible a los ojos».
 
 «Lo esencial es invisible a los ojos», repitió el principito, para acordarse.
 
