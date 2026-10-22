@@ -18,7 +18,9 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - Peso: cada vista se arma recién cuando se abre, y las imágenes son `<img loading="lazy">` en
   WebP liviano (`herramientas/miniaturas.py`: `img/cuadros/mini/`, `img/cuadros/medio/`,
   `img/portadas/medio/` y el fondo del inicio). `portadas.py` las rehace solo; si se cambia una
-  imagen a mano, correr `python herramientas/miniaturas.py`.
+  imagen a mano, correr `python herramientas/miniaturas.py`. El mismo script arma
+  `img/portadas/og/` (1200x630), la imagen que declara cada ficha al compartirse por WhatsApp o
+  redes; una portada oficial externa se comparte vertical, porque no se copia.
 - **Regla fija del menú: máximo 6 entradas de primer nivel, contando Colaborar.** Una sección
   nueva entra en una vista que ya existe o en el submenú, nunca como entrada suelta. Inicio no
   va en el menú (lo lleva la marca) y Oraciones es un bloque de Plan de vida (`#oraciones` abre

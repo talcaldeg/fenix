@@ -200,6 +200,9 @@ function paginaLibro(l){
   const descripcion = recortar(of.frase + " " + resumen, 158);
   const titulo = of.titulo;
   const img = l.imagen ? abs(l.imagen.src) : SITIO + "img/compartir.jpg";
+  // Al compartir, la versión 1200x630 de miniaturas.py: con la portada vertical la tarjeta de WhatsApp sale angosta.
+  const og = l.imagen && l.imagen.src.replace(/^img\/portadas\//, "img/portadas/og/");
+  const imgOg = !l.imagen ? img : og !== l.imagen.src && fs.existsSync(path.join(RAIZ, og)) ? SITIO + og : null;
   const B = l._base || "../../";
   const inicio = B + (lang === "en" ? "?l=en" : "");
   const botones = [
@@ -256,12 +259,14 @@ ${FAVICON}
 <meta property="og:title" content="${esc(l.titulo + " - " + l.autor)}">
 <meta property="og:description" content="${esc(descripcion)}">
 <meta property="og:url" content="${urlLibro(l)}">
-<meta property="og:image" content="${esc(img)}">
+<meta property="og:image" content="${esc(imgOg || img)}">${imgOg ? `
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">` : ""}
 <meta property="og:locale" content="${lang === "en" ? "en_US" : "es_CL"}">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="${imgOg ? "summary_large_image" : "summary"}">
 <meta name="twitter:title" content="${esc(l.titulo + " - " + l.autor)}">
 <meta name="twitter:description" content="${esc(descripcion)}">
-<meta name="twitter:image" content="${esc(img)}">
+<meta name="twitter:image" content="${esc(imgOg || img)}">
 <!-- Generada por herramientas/gen_estaticos.js desde datos.js. No editar a mano. -->
 <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
