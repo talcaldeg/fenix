@@ -82,6 +82,11 @@
   .texto blockquote{font-style:normal; border-left-color:var(--line)}
   .texto pre{white-space:pre-wrap; font:inherit}
   .texto hr{border:0; text-align:center; margin:2em 0} .texto hr::after{content:"⁂"; color:var(--muted)}
+  .texto figure{margin:1.5em 0; text-align:center} .texto figure img{max-width:100%; height:auto; border-radius:6px}
+  .texto figcaption{margin-top:6px; font:italic 15px/1.5 Georgia,serif; color:var(--muted)}
+  /* Los dibujos con fondo transparente (El principito) son negros: en modo oscuro van sobre papel claro. */
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .texto figure img{background:#faf6ef; padding:8px}}
+  :root[data-theme="dark"] .texto figure img{background:#faf6ef; padding:8px}
   .fin{margin-top:40px; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--card)}
   .fin p{margin:0; font:16px/1.5 system-ui,sans-serif}
 </style>

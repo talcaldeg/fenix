@@ -28,7 +28,9 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `herramientas/muestras.py` a `muestras/<archivo>.json` (sin portada, exlibris, índice, nota de
   la edición ni encabezado de Gutenberg), y `gen_estaticos.js` lo corre solo: rehace solo lo de
   los EPUB que cambiaron. Si un libro empieza con un prefacio largo de otro (editor, traductor),
-  se pone en `INICIO` de `muestras.py` el título donde parte la muestra.
+  se pone en `INICIO` de `muestras.py` el título donde parte la muestra. Las imágenes que caen
+  en la muestra (los dibujos de El principito, los grabados de Gutenberg) van como WebP de hasta
+  700 px en `muestras/img/<archivo>/`, con `loading="lazy"`: solo se bajan al llegar a ellas.
 - **Regla fija del menú: máximo 6 entradas de primer nivel, contando Colaborar.** Una sección
   nueva entra en una vista que ya existe o en el submenú, nunca como entrada suelta. Inicio no
   va en el menú (lo lleva la marca) y Oraciones es un bloque de Plan de vida (`#oraciones` abre

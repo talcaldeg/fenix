@@ -20,7 +20,8 @@ const path = require("path");
 
 const RAIZ = path.join(__dirname, "..");
 const SITIO = "https://talcaldeg.github.io/fenix/";
-const leer = f => fs.readFileSync(path.join(RAIZ, f), "utf8");
+// Sin \r: con CRLF de git en Windows, los bloques copiados de index.html hacían que toda página pareciera cambiada.
+const leer = f => fs.readFileSync(path.join(RAIZ, f), "utf8").replace(/\r\n/g, "\n");
 const escribirSiCambia = (f, txt) => {
   const ruta = path.join(RAIZ, f);
   // git en Windows puede dejar el archivo con CRLF: se compara sin \r para no marcar cambios falsos.
@@ -224,11 +225,11 @@ document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.da
 </script>`;
 
 // La medición (GoatCounter) se copia tal cual del bloque MEDICION de index.html, para que haya una sola versión.
-const MEDICION = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- MEDICION:inicio[\s\S]*?<!-- MEDICION:fin -->/) || [""])[0];
+const MEDICION = (leer("index.html").match(/<!-- MEDICION:inicio[\s\S]*?<!-- MEDICION:fin -->/) || [""])[0];
 // Igual el aviso de qué aplicación abre el EPUB en el celular (bloque AVISO_EPUB de index.html).
-const AVISO_EPUB = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- AVISO_EPUB:inicio[\s\S]*?<!-- AVISO_EPUB:fin -->/) || [""])[0];
+const AVISO_EPUB = (leer("index.html").match(/<!-- AVISO_EPUB:inicio[\s\S]*?<!-- AVISO_EPUB:fin -->/) || [""])[0];
 // Igual lo que deja instalar el sitio como app (bloque PWA de index.html), con sus rutas puestas sobre la base de la ficha.
-const PWA = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- PWA:inicio[\s\S]*?<!-- PWA:fin -->/) || [""])[0];
+const PWA = (leer("index.html").match(/<!-- PWA:inicio[\s\S]*?<!-- PWA:fin -->/) || [""])[0];
 const pwaEn = B => PWA.replace(/href="(?![a-z]+:|\/)/g, `href="${B}`);
 
 function paginaLibro(l){
@@ -394,6 +395,11 @@ ${pwaEn(B)}
   .texto blockquote{font-style:normal; border-left-color:var(--line)}
   .texto pre{white-space:pre-wrap; font:inherit}
   .texto hr{border:0; text-align:center; margin:2em 0} .texto hr::after{content:"⁂"; color:var(--muted)}
+  .texto figure{margin:1.5em 0; text-align:center} .texto figure img{max-width:100%; height:auto; border-radius:6px}
+  .texto figcaption{margin-top:6px; font:italic 15px/1.5 Georgia,serif; color:var(--muted)}
+  /* Los dibujos con fondo transparente (El principito) son negros: en modo oscuro van sobre papel claro. */
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .texto figure img{background:#faf6ef; padding:8px}}
+  :root[data-theme="dark"] .texto figure img{background:#faf6ef; padding:8px}
   .fin{margin-top:40px; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--card)}
   .fin p{margin:0; font:16px/1.5 system-ui,sans-serif}
 </style>
@@ -405,7 +411,7 @@ ${pwaEn(B)}
   <h1>${esc(l.titulo)}<span class="sub">${esc(x.primeras[0].toUpperCase() + x.primeras.slice(1))}</span></h1>
   <p class="meta">${esc(l.autor)} · ${esc(l.anio)}</p>
   <div class="texto">
-${m.html}
+${m.html.replace(/@@RAIZ@@/g, B)}
   </div>
   <div class="fin">
     <p>${esc(x.finMuestra)}</p>

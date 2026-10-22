@@ -16,23 +16,31 @@ import hashlib
 import html
 import json
 import posixpath
+import shutil
 import re
 import sys
 import zipfile
 from pathlib import Path
 
+import io
+
 import lxml.html
+from PIL import Image
 
 RAIZ = Path(__file__).resolve().parent.parent
 LIBROS = RAIZ / "libros"
 SALIDA = RAIZ / "muestras"
 MINIMO, MAXIMO = 2000, 4000
-VERSION = 1  # subirla si cambia la extracción, para que se rehagan todas
+VERSION = 2  # subirla si cambia la extracción, para que se rehagan todas
+# Imágenes de la muestra (los dibujos de El principito, los grabados de Gutenberg): WebP de hasta
+# ANCHO_IMG px en muestras/img/<archivo>/, con loading="lazy" para que no pesen al abrir la página.
+# En el HTML van con la marca RAIZ_IMG, que gen_estaticos.js cambia por la ruta relativa a la raíz.
+ANCHO_IMG, RAIZ_IMG = 700, "@@RAIZ@@"
 
-BLOQUES = {"p", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "pre", "ul", "ol", "hr"}
+BLOQUES = {"p", "h1", "h2", "h3", "h4", "h5", "h6", "blockquote", "pre", "ul", "ol", "hr", "figure"}
 TITULOS = {"h1", "h2", "h3", "h4", "h5", "h6"}
 EN_LINEA = {"em", "i", "strong", "b", "sup", "sub", "small", "cite", "abbr", "q"}
-FUERA = {"table", "img", "svg", "figure", "figcaption", "script", "style", "nav", "head", "aside", "audio", "video"}
+FUERA = {"table", "svg", "figcaption", "script", "style", "nav", "head", "aside", "audio", "video"}
 # Secciones que se saltan enteras (hasta el título siguiente): índice, nota de la edición, nota del transcriptor.
 SALTAR = re.compile(r"^(contents|table of contents|índice|indice|contenido|contenidos|sumario|nota de esta edición|transcriber.?s note)$", re.I)
 # Libros cuyo comienzo es un prefacio largo de otro (editor, traductor, biógrafo): la muestra parte
@@ -61,8 +69,38 @@ def es_ref_nota(el):
     return bool(t) and bool(NOTA_REF.match(t)) and (tag == "sup" or el.get("href", "").find("#") >= 0)
 
 
+class Imagenes:
+    """Pasa las imágenes del EPUB que entran en la muestra a WebP liviano y entrega su <img>."""
+
+    def __init__(self, z, stem):
+        self.z, self.dir, self.doc, self.hechas = z, SALIDA / "img" / stem, "", {}
+
+    def img(self, el):
+        src = el.get("src") or el.get("{http://www.w3.org/1999/xlink}href") or ""
+        ruta = posixpath.normpath(posixpath.join(posixpath.dirname(self.doc), src))
+        if ruta not in self.hechas:
+            try:
+                im = Image.open(io.BytesIO(self.z.read(ruta)))
+            except (KeyError, OSError):
+                self.hechas[ruta] = ""
+                return ""
+            im = im.convert("RGBA" if im.mode in ("RGBA", "LA", "P") else "RGB")
+            if im.width > ANCHO_IMG:
+                im = im.resize((ANCHO_IMG, round(im.height * ANCHO_IMG / im.width)), Image.LANCZOS)
+            nombre = re.sub(r"[^a-z0-9-]+", "-", posixpath.splitext(posixpath.basename(ruta))[0].lower()) + ".webp"
+            self.dir.mkdir(parents=True, exist_ok=True)
+            im.save(self.dir / nombre, "WEBP", quality=80, method=6)
+            url = f"{RAIZ_IMG}muestras/img/{self.dir.name}/{nombre}"
+            self.hechas[ruta] = (f'<img src="{html.escape(url)}" alt="{html.escape(el.get("alt") or "")}" '
+                                 f'width="{im.width}" height="{im.height}" loading="lazy" decoding="async">')
+        return self.hechas[ruta]
+
+
+IMAGENES = None  # la de el libro que se está extrayendo
+
+
 def limpio(el):
-    """HTML del contenido de el, solo con marcas de texto (cursiva, negrita, saltos)."""
+    """HTML del contenido de el, solo con marcas de texto (cursiva, negrita, saltos) e imágenes."""
     partes = [html.escape(el.text or "", quote=False)]
     for h in el:
         tag = h.tag if isinstance(h.tag, str) else ""
@@ -70,6 +108,8 @@ def limpio(el):
             tag = tag.split("}")[-1].lower()
             if tag == "br":
                 partes.append("<br>")
+            elif tag in ("img", "image"):
+                partes.append(IMAGENES.img(h))
             elif tag in EN_LINEA:
                 partes.append(f"<{tag}>{limpio(h)}</{tag}>")
             elif tag in ("p", "div") and el.tag in ("blockquote", "li"):
@@ -91,7 +131,9 @@ def bloques(el):
         ident = (h.get("id") or "") + " " + (h.get("class") or "")
         if tag in FUERA or re.search(r"pg-header|pg-footer|pg-boilerplate|pgheader|pgfooter|\btoc\b", ident):
             continue
-        if tag in BLOQUES:
+        if tag == "img":
+            yield "figure", h
+        elif tag in BLOQUES:
             yield tag, h
         elif tag == "div" and not any(isinstance(d.tag, str) and d.tag.split("}")[-1].lower() in BLOQUES | {"div", "section"} for d in h.iter() if d is not h):
             yield "p", h
@@ -112,25 +154,30 @@ def documentos(z):
         href, es_nav = manifiesto[idref]
         if es_nav or posixpath.basename(href).startswith(("fenix-", "wrap0000")):
             continue
-        crudo = z.read(posixpath.normpath(posixpath.join(posixpath.dirname(opf), href)))
-        doc = lxml.html.fromstring(crudo)
+        ruta = posixpath.normpath(posixpath.join(posixpath.dirname(opf), href))
+        doc = lxml.html.fromstring(z.read(ruta))
         cuerpo = doc.find(".//body")
         if cuerpo is None:
             cuerpo = doc
         if re.search(r"\b(cover|frontmatter|toc|titlepage)\b", cuerpo.get("{http://www.idpf.org/2007/ops}type") or cuerpo.get("epub:type") or ""):
             continue
-        yield cuerpo
+        yield cuerpo, ruta
 
 
 def extraer(epub):
+    global IMAGENES
     salida, palabras, saltando, completo = [], 0, False, True
     # Lo que va antes del primer título (notas de transcripción, leyendas de grabados) no es el libro.
     inicio = re.compile(INICIO.get(epub.stem, r"."))
     empezo = False
     with zipfile.ZipFile(epub) as z:
-        for cuerpo in documentos(z):
+        IMAGENES = Imagenes(z, epub.stem)
+        if IMAGENES.dir.exists():
+            shutil.rmtree(IMAGENES.dir)
+        for cuerpo, IMAGENES.doc in documentos(z):
             for tag, el in bloques(cuerpo):
                 t = texto(el)
+                con_img = el.find(".//img") is not None or el.tag == "img"
                 if tag in TITULOS and t:
                     empezo = empezo or bool(inicio.search(t))
                     saltando = bool(SALTAR.match(t.strip(" .:")))
@@ -139,13 +186,21 @@ def extraer(epub):
                     if palabras >= MINIMO:
                         completo = False
                         break
-                if not empezo or saltando or not t and tag != "hr" or ILUSTRACION.match(t):
+                if not empezo or saltando or not t and tag != "hr" and not con_img or ILUSTRACION.match(t) and not con_img:
                     continue
                 if palabras >= MAXIMO:
                     completo = False
                     break
                 if tag == "hr":
                     salida.append((tag, "<hr>"))
+                    continue
+                if tag == "figure" or con_img and len(t.split()) < 40:
+                    # Imagen con su leyenda (figcaption, o el texto corto del div de Gutenberg).
+                    imgs = "".join(IMAGENES.img(i) for i in el.iter("img"))
+                    cap = el.find(".//figcaption")
+                    leyenda = limpio(cap) if cap is not None else (re.sub(r"<img[^>]*>", "", limpio(el)).strip() if t else "")
+                    if imgs:
+                        salida.append(("figure", f"<figure>{imgs}{f'<figcaption>{leyenda}</figcaption>' if leyenda else ''}</figure>"))
                     continue
                 contenido = limpio(el)
                 if tag in ("ul", "ol"):
@@ -194,6 +249,10 @@ def main():
         if j.stem not in vigentes:
             j.unlink()
             print(f"borrada muestras/{j.name}")
+    for d in (SALIDA / "img").glob("*") if (SALIDA / "img").exists() else []:
+        if d.stem not in vigentes:
+            shutil.rmtree(d)
+            print(f"borrada muestras/img/{d.name}")
 
 
 if __name__ == "__main__":
