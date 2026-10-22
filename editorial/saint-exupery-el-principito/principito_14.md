@@ -2,7 +2,7 @@
 
 El sexto planeta era un planeta diez veces más grande. Lo habitaba un señor anciano que escribía libros enormes.
 
-![](dibujos/dibujo32.jpg)
+![](dibujos/dibujo32.png)
 
 «¡Vaya! ¡Aquí viene un explorador!», exclamó cuando vio al principito.
 

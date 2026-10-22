@@ -56,7 +56,7 @@ El principito estaba ahora pálido de rabia.
 
 «Hace millones de años que las flores fabrican espinas. Hace millones de años que los corderos se comen igual las flores. ¿Y no es serio tratar de entender por qué se toman tanto trabajo en fabricarse espinas que nunca sirven para nada? ¿No es importante la guerra entre los corderos y las flores? ¿No es más serio y más importante que las sumas de un señor gordo y colorado? ¡Y si yo conozco una flor única en el mundo, que no existe en ninguna parte salvo en mi planeta, y que un corderito puede destruir de un solo golpe, así, una mañana, sin darse cuenta de lo que hace, eso no es importante!».
 
-![](dibujos/dibujo18.jpg)
+![](dibujos/dibujo18.png)
 
 Se puso colorado y luego continuó:
 

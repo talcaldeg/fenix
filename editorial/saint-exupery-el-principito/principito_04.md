@@ -10,7 +10,7 @@ También esta vez fue gracias al cordero, porque de pronto el principito me preg
 
 «¡Ah! ¡Qué contento estoy!».
 
-![](dibujos/dibujo14.jpg)
+![](dibujos/dibujo14.png)
 
 No entendí por qué era tan importante que los corderos se comieran los arbustos. Pero el principito agregó:
 
@@ -34,12 +34,12 @@ Y, en efecto, en el planeta del principito había, como en todos los planetas, h
 
 «Es una cuestión de disciplina», me decía más tarde el principito. «Cuando uno ha terminado de arreglarse por la mañana, hay que arreglar con cuidado el planeta. Hay que obligarse a arrancar con regularidad los baobabs apenas se los distingue de los rosales, a los que se parecen mucho cuando son muy jóvenes. Es un trabajo muy aburrido, pero muy fácil».
 
-![](dibujos/dibujo15.jpg)
+![](dibujos/dibujo15.png)
 
 Y un día me aconsejó que me esmerara en hacer un buen dibujo, para que esto les entrara bien en la cabeza a los niños de mi tierra. «Si algún día viajan», me decía, «les podrá servir. A veces no hay ningún inconveniente en dejar el trabajo para más tarde. Pero, si se trata de los baobabs, es siempre una catástrofe. Conocí un planeta habitado por un perezoso. Había descuidado tres arbustos...».
 
-![](dibujos/dibujo16.jpg)
+![](dibujos/dibujo16.png)
 
 Y, siguiendo las indicaciones del principito, dibujé ese planeta. No me gusta mucho adoptar el tono de un moralista. Pero el peligro de los baobabs es tan poco conocido, y los riesgos que correría quien se extraviara en un asteroide son tan grandes, que, por una vez, hago una excepción a mi reserva. Digo: «¡Niños! ¡Cuidado con los baobabs!». Si trabajé tanto en ese dibujo, fue para advertir a mis amigos de un peligro que rozaban desde hacía mucho tiempo, igual que yo, sin conocerlo. La lección que daba valía la pena. Quizá se pregunten ustedes: ¿por qué no hay en este libro otros dibujos tan grandiosos como el dibujo de los baobabs? La respuesta es muy simple: lo intenté, pero no lo logré. Cuando dibujé los baobabs, me impulsaba el sentimiento de la urgencia.
 
-![](dibujos/dibujo17.jpg)
+![](dibujos/dibujo17.png)

@@ -12,7 +12,7 @@
   del capítulo. Párrafo en cursiva justo después del título: sumario del capítulo.
 - Marcadores `libro.capítulo.párrafo` en su propia línea (Confesiones): el cambio de capítulo
   pone su número romano como subtítulo; el marcador no se imprime.
-- `![pie](dibujos/x.jpg)` en su propio párrafo: imagen centrada (ruta relativa a la carpeta), con
+- `![pie](dibujos/x.png)` en su propio párrafo: imagen centrada (ruta relativa a la carpeta), con
   el pie debajo si lo trae (los dibujos de El principito).
 - Después: herramientas/portadas.py <id> ... --epub para la portada, herramientas/exlibris.py y
   herramientas/epub_a_pdf.py.
@@ -56,6 +56,7 @@ aside.notas p { text-indent: 0; margin: 0 0 0.4em; }
 figure.dibujo { margin: 1.2em 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
 figure.dibujo img { max-width: 80%; max-height: 60vh; }
 figure.dibujo figcaption { font-size: 0.85em; font-style: italic; margin-top: 0.3em; }
+@media (prefers-color-scheme: dark) { figure.dibujo img { background: #fff; padding: 0.4em; } }
 figure.dibujo + p { text-indent: 0; }
 """
 ROMANOS = [(1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"),

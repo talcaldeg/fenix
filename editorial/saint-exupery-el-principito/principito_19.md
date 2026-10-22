@@ -10,7 +10,7 @@ Era un jardín lleno de rosas en flor.
 
 El principito las miró. Todas se parecían a su flor.
 
-![](dibujos/dibujo37.jpg)
+![](dibujos/dibujo37.png)
 
 «¿Quiénes son ustedes?», les preguntó, asombrado.
 

@@ -4,7 +4,7 @@ Cuando uno quiere hacerse el ingenioso, a veces le pasa que miente un poco. No h
 
 Las personas mayores, por supuesto, no les creerán. Se imaginan que ocupan mucho lugar. Se ven tan importantes como los baobabs. Aconséjenles, entonces, que hagan el cálculo. Adoran las cifras: eso les gustará. Pero no pierdan su tiempo en esa tarea. Es inútil. Ustedes confían en mí.
 
-![](dibujos/dibujo33.jpg)
+![](dibujos/dibujo33.png)
 
 El principito, una vez en la Tierra, se sorprendió mucho de no ver a nadie. Ya tenía miedo de haberse equivocado de planeta, cuando un anillo color de luna se movió en la arena.
 
@@ -38,7 +38,7 @@ Y se quedaron callados.
 
 El principito la miró largo rato:
 
-![](dibujos/dibujo34.jpg)
+![](dibujos/dibujo34.png)
 
 «Eres un animal raro», le dijo por fin, «delgado como un dedo...».
 

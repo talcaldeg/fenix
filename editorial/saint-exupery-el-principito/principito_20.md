@@ -6,7 +6,7 @@ Fue entonces cuando apareció el zorro.
 
 «Buenos días», respondió cortésmente el principito, que se dio vuelta pero no vio nada.
 
-![](dibujos/dibujo38.jpg)
+![](dibujos/dibujo38.png)
 
 «Estoy aquí», dijo la voz, «debajo del manzano».
 
@@ -30,7 +30,7 @@ Pero, después de pensarlo, agregó:
 
 «Los hombres», dijo el zorro, «tienen escopetas y cazan. ¡Es muy molesto! También crían gallinas. Es lo único que tienen de interesante. ¿Buscas gallinas?».
 
-![](dibujos/dibujo39.jpg)
+![](dibujos/dibujo39.png)
 
 «No», dijo el principito. «Busco amigos. ¿Qué significa “domesticar”?».
 
@@ -80,7 +80,7 @@ El zorro se calló y miró largo rato al principito:
 
 Al día siguiente el principito volvió.
 
-![](dibujos/dibujo40.jpg)
+![](dibujos/dibujo40.png)
 
 «Habría sido mejor que volvieras a la misma hora», dijo el zorro. «Si vienes, por ejemplo, a las cuatro de la tarde, desde las tres empezaré a ser feliz. Mientras más avance la hora, más feliz me sentiré. A las cuatro ya estaré agitado e inquieto; ¡descubriré el precio de la felicidad! Pero si vienes a cualquier hora, nunca sabré a qué hora preparar el corazón... Hacen falta ritos».
 
@@ -118,7 +118,7 @@ Y las rosas se sentían incómodas.
 
 Y volvió adonde estaba el zorro:
 
-![](dibujos/dibujo41.jpg)
+![](dibujos/dibujo41.png)
 
 «Adiós», dijo...
 

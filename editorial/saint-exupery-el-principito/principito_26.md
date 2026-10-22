@@ -10,7 +10,7 @@ A veces me digo: «¡Seguro que no! El principito encierra su flor todas las noc
 
 Otras veces me digo: «Uno se distrae alguna vez, ¡y eso basta! Una noche se olvidó del globo de cristal, o el cordero salió sin ruido durante la noche...». ¡Entonces los cascabeles se convierten todos en lágrimas!...
 
-![](dibujos/dibujo46.jpg)
+![](dibujos/dibujo46.png)
 
 Ese es un misterio muy grande. Para ustedes, que también quieren al principito, igual que para mí, nada del universo es lo mismo si en alguna parte, quién sabe dónde, un cordero que no conocemos se ha comido, sí o no, una rosa...
 
@@ -20,6 +20,6 @@ Miren el cielo. Pregúntense: ¿el cordero se comió o no se comió la flor? Y v
 
 Este es, para mí, el paisaje más hermoso y más triste del mundo. Es el mismo paisaje de la página anterior, pero lo dibujé una vez más para mostrárselo bien. Es aquí donde el principito apareció en la Tierra y después desapareció.
 
-![](dibujos/dibujo47.jpg)
+![](dibujos/dibujo47.png)
 
 Miren con atención este paisaje para estar seguros de reconocerlo, si algún día viajan a África, por el desierto. Y, si les toca pasar por ahí, se lo suplico, no se apuren, ¡esperen un poco justo debajo de la estrella! Si entonces un niño se les acerca, si se ríe, si tiene el pelo de oro, si no responde cuando le preguntan, adivinarán bien quién es. ¡Entonces sean buenos! No me dejen tan triste: escríbanme pronto que ha vuelto...

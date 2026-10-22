@@ -22,7 +22,7 @@ Me detuve, con el corazón apretado, pero seguía sin entender.
 
 «Ahora vete», dijo... «¡Quiero bajar!».
 
-![](dibujos/dibujo43.jpg)
+![](dibujos/dibujo43.png)
 
 Entonces yo mismo bajé los ojos hacia el pie del muro, ¡y di un salto! Allí estaba, erguida hacia el principito, una de esas serpientes amarillas que lo despachan a uno en treinta segundos. Mientras buscaba en el bolsillo para sacar mi revólver, eché a correr, pero, al ruido que hice, la serpiente se dejó deslizar suavemente en la arena, como un chorro de agua que muere, y, sin apurarse demasiado, se escurrió entre las piedras con un leve ruido de metal.
 
@@ -160,11 +160,11 @@ Y él también se calló, porque estaba llorando...
 
 «Es aquí. Déjame dar un paso solo».
 
-![](dibujos/dibujo44.jpg)
+![](dibujos/dibujo44.png)
 
 Y se sentó porque tenía miedo.
 
-![](dibujos/dibujo45.jpg)
+![](dibujos/dibujo45.png)
 
 Dijo todavía:
 

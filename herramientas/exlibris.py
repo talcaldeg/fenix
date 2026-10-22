@@ -31,6 +31,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 FUENTES = Path("C:/Windows/Fonts")
 TINTA = np.array([112, 24, 34], float)  # vino de timbre
 PAPEL = np.array([243, 235, 218], float)
+BORDE = np.array([233, 225, 207], float)  # el papel con la viñeta a ~14 % del canto
 PIE = {"es": ["Biblioteca gratuita", "talcaldeg.github.io/fenix"],
        "en": ["Free library", "talcaldeg.github.io/fenix"]}
 GIRO = {"es": -5, "en": 4}
@@ -106,12 +107,18 @@ def entintar(rng, m, giro):
 
 
 def papel(rng, w, h):
+    """La textura se apaga hacia los bordes hasta BORDE plano: la página del lector (y el PDF,
+    que es A5 y no 2:3) se rellena con ese color, y con viñeta hasta el canto se notaba el corte."""
     base = np.ones((h, w, 3)) * PAPEL
     mancha = (ruido(rng, w, h, 220) - 0.5) * 9 + (ruido(rng, w, h, 60) - 0.5) * 4
     grano = (rng.random((h, w)) - 0.5) * 9
     yy, xx = np.mgrid[0:h, 0:w]
     vin = ((xx / w - 0.5) ** 2 + (yy / h - 0.5) ** 2) * 38
-    return np.clip(base + (mancha + grano - vin)[..., None] * np.array([1.0, 1.0, 1.15]), 0, 255)
+    tex = base + (mancha + grano - vin)[..., None] * np.array([1.0, 1.0, 1.15])
+    canto = np.minimum.reduce([xx, yy, w - 1 - xx, h - 1 - yy]) / (0.14 * w)
+    peso = np.clip(canto, 0, 1)
+    peso = (peso * peso * (3 - 2 * peso))[..., None]  # smoothstep
+    return np.clip(BORDE + (tex - BORDE) * peso, 0, 255)
 
 
 def imagen(idioma):

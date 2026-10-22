@@ -29,6 +29,7 @@ from io import BytesIO
 from pathlib import Path
 from xml.sax.saxutils import escape
 
+import numpy as np
 from PIL import Image
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
@@ -81,7 +82,10 @@ def pagina_portada(portada: Image.Image, titulo: str, href: str = NOMBRE_EN_EPUB
     Lo que sobra de pantalla toma el color del borde de la portada, no el negro del lector."""
     w, h = portada.size
     titulo = escape(titulo)
-    fondo = "#%02x%02x%02x" % portada.getpixel((2, h // 2))[:3]
+    # Mediana del canto entero, no un píxel: un píxel suelto trae el grano y el JPEG.
+    a = np.asarray(portada.convert("RGB"))
+    canto = np.concatenate([a[:3].reshape(-1, 3), a[-3:].reshape(-1, 3), a[:, :3].reshape(-1, 3), a[:, -3:].reshape(-1, 3)])
+    fondo = "#%02x%02x%02x" % tuple(int(v) for v in np.median(canto, axis=0))
     return ('<?xml version="1.0" encoding="utf-8"?>\n<!DOCTYPE html>\n'
             '<html xmlns="http://www.w3.org/1999/xhtml" xmlns:epub="http://www.idpf.org/2007/ops">\n'
             f'<head><title>{titulo}</title>'

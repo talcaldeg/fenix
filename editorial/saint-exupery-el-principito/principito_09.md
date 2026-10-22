@@ -4,7 +4,7 @@ Se encontraba en la región de los asteroides 325, 326, 327, 328, 329 y 330. Emp
 
 El primero estaba habitado por un rey. El rey, vestido de púrpura y armiño, estaba sentado en un trono muy sencillo y, sin embargo, majestuoso.
 
-![](dibujos/dibujo26.jpg)
+![](dibujos/dibujo26.png)
 
 «¡Ah! He aquí un súbdito», exclamó el rey cuando vio al principito.
 
