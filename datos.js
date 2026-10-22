@@ -269,6 +269,34 @@ window.FENIX = {
       parecidos: ["confesiones", "marmion-vida-del-alma", "imitacion-de-cristo"]
     },
     {
+      id: "diario-santa-faustina",
+      titulo: "Diario. La Divina Misericordia en mi alma",
+      autor: "Santa Faustina Kowalska",
+      anio: "1938",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Los seis cuadernos que santa Faustina Kowalska, religiosa polaca de la Congregación de las Hermanas de la Madre de Dios de la Misericordia, escribió en Vilna y Cracovia entre 1934 y 1938 por obediencia a sus confesores, el beato Miguel Sopoćko y el padre José Andrasz. Allí cuenta su vida interior y las palabras que recibió de Jesús: el pedido de pintar Su imagen con la firma «Jesús, en Ti confío», de una Fiesta de la Misericordia el domingo después de Pascua y de la confianza como respuesta del alma. Es una revelación privada, que no añade nada a la fe de la Iglesia pero ayuda a vivirla. San Juan Pablo II la canonizó el 30 de abril de 2000 y ese día dispuso que el segundo domingo de Pascua se llame en toda la Iglesia domingo de la Misericordia divina.",
+        en: "The six notebooks that Saint Faustina Kowalska, a Polish sister of the Congregation of the Sisters of Our Lady of Mercy, wrote in Vilnius and Kraków between 1934 and 1938 in obedience to her confessors, Blessed Michael Sopoćko and Father Józef Andrasz. In them she tells of her inner life and of the words she received from Jesus: the request to paint His image signed «Jesus, I trust in You», for a Feast of Mercy on the Sunday after Easter, and for trust as the soul's answer. It is a private revelation, which adds nothing to the faith of the Church but helps us live it. Saint John Paul II canonized her on 30 April 2000 and that day decreed that the Second Sunday of Easter be called Divine Mercy Sunday throughout the Church."
+      },
+      porque: {"es":"Para quien carga con culpas viejas o siente que no merece volver a Dios. El Diario repite, página tras página, que la miseria del hombre no es un obstáculo para la misericordia sino su ocasión, y que lo que se pide de vuelta es confianza. Es largo y no se lee de corrido: rinde más abierto en cualquier parte, de a pocos números.","en":"For anyone weighed down by old guilt or who feels unworthy of returning to God. Page after page the Diary repeats that human misery is no obstacle to mercy but its occasion, and that what is asked in return is trust. It is long and not meant to be read straight through: it gives most when opened anywhere, a few entries at a time."},
+      imagen: { src: "img/portadas/diario-santa-faustina.jpg", credito: { es: "Eugeniusz Kazimirowski, «Jesús Misericordioso», 1934, pintado bajo la guía de santa Faustina", en: "Eugeniusz Kazimirowski, «Divine Mercy», 1934, painted under Saint Faustina's guidance" }, url: "https://commons.wikimedia.org/wiki/File:Kazimirowski_Eugeniusz,_Divine_Mercy,_1934.jpg" },
+      citas: [
+        "Pinta una imagen según el modelo que ves, y firma: Jesús, en Ti confío.",
+        "Hija Mía, tu confianza y tu amor impiden Mi justicia y no puedo castigar porque Me lo impides.",
+        "Este gran libro es Tu Pasión afrontada por amor hacia mí. De este libro he aprendido cómo amar a Dios y a las almas.",
+        "Mi mayor deseo es que las almas Te conozcan, que sepan que eres su eterna felicidad, que crean en Tu bondad y que alaben Tu infinita misericordia."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "web", texto: "santafaustina.es (texto completo, de la congregación)", url: "https://www.santafaustina.es/el-diario-2/" }
+      ],
+      fuente: { texto: "Texto completo que la Congregación de las Hermanas de la Madre de Dios de la Misericordia publica gratis en su sitio; traducción al español © 1993 de los Padres Marianos de Stockbridge (obra protegida por derechos de autor; se enlaza, no se aloja)", url: "https://www.santafaustina.es/el-diario/" },
+      delibris: null,
+      parecidos: ["historia-de-un-alma", "presencia-de-dios", "imitacion-de-cristo"]
+    },
+    {
       id: "de-la-eucaristia-a-la-trinidad",
       titulo: "De la Eucaristía a la Trinidad",
       autor: "Marie-Vincent Bernadot, O.P.",
@@ -3999,7 +4027,7 @@ window.FENIX = {
     { obra: "Obras de José Miguel Ibáñez Langlois (Libro de la Pasión, Por qué sufrir, La Virgen María y otras)", autor: "José Miguel Ibáñez Langlois (vivo)", via: "permiso", libre: null, titular: "el autor; editorial Rialp", contacto: "ediciones@rialp.com, +34 913 260 504", fuente: "https://www.rialp.com/autor/jose-miguel-ibanez-langlois/", estado: "pedido 22-oct-2026" },
     { obra: "Obras de Enrique Monasterio (El Belén que puso Dios, Pensar por libre, Relatos a la sombra de la Cruz, Un safari en mi pasillo)", autor: "Enrique Monasterio", via: "permiso", libre: null, titular: "el autor; El Belén que puso Dios, Ediciones Palabra (descatalogado)", contacto: "monasterix@gmail.com (correo del autor en su blog; Palabra: palabra@palabra.es)", fuente: "https://pensarporlibre.blogspot.com/", estado: "pedido 22-oct-2026" },
     { obra: "Edward o el Caballero Verde y Orencio y Eloísa (hoy fichas con enlace: edward-caballero-verde, orencio-y-eloisa)", autor: "Benjamín Franzani (vivo)", via: "permiso", libre: null, titular: "el autor; editorial Vuelo Ártico", contacto: "info@vueloartico.com (contacto de prensa en su sitio)", fuente: "https://www.benjaminfranzani.com/p/para-resenadores-y-prensa.html", estado: "pedido 22-oct-2026" },
-    { obra: "Diario de santa Faustina, «La Divina Misericordia en mi alma»", autor: "Santa Faustina Kowalska (m. 1938)", via: "permiso", libre: "2048", titular: "Congregación de las Hermanas de Nuestra Señora de la Misericordia (Cracovia); edición en español de Marian Press, Stockbridge (trad. Eva Bylicka)", contacto: "misericordia@faustyna.pl (Wydawnictwo Misericordia, editorial de la congregación); la traducción al español es © 1993 de los Padres Marianos de Stockbridge, y la congregación la publica gratis en PDF (enlace en santafaustina.es/el-diario-2/)", fuente: "https://www.faustyna.pl/zmbm/kontakt/", estado: "pedido 22-oct-2026" },
+    { obra: "Diario de santa Faustina, «La Divina Misericordia en mi alma»", autor: "Santa Faustina Kowalska (m. 1938)", via: "permiso", libre: "2048", titular: "Congregación de las Hermanas de Nuestra Señora de la Misericordia (Cracovia); edición en español de Marian Press, Stockbridge (trad. Eva Bylicka)", contacto: "misericordia@faustyna.pl (Wydawnictwo Misericordia, editorial de la congregación); la traducción al español es © 1993 de los Padres Marianos de Stockbridge, y la congregación la publica gratis en un lector en línea, no en PDF (santafaustina.es/el-diario-2/; hoy ficha con enlace: diario-santa-faustina)", fuente: "https://www.faustyna.pl/zmbm/kontakt/", estado: "pedido 22-oct-2026" },
     { obra: "The Ordinary Princess", autor: "M. M. Kaye (m. 2004)", via: "permiso", libre: "2075", titular: "The Estate of M. M. Kaye, representado por Georgia Glover (David Higham Associates); editorial actual Penguin", contacto: "reception@davidhigham.co.uk (el formulario de permisos de la agencia es solo para extractos)", fuente: "https://davidhigham.co.uk/authors-dh/m-m-kaye/", estado: "pedido 22-oct-2026" },
     { obra: "El principito", autor: "Antoine de Saint-Exupéry (m. 1944)", via: "esperar", libre: "2039", titular: "libre en Chile desde 2015; en EE.UU. protegido hasta el 31-dic-2038 (publicado en 1943)", contacto: null, fuente: "https://www.delibris.org/es/el-principito", estado: "en espera" },
     { obra: "Rebelión en la granja", autor: "George Orwell (m. 1950)", via: "esperar", libre: "2041", titular: "libre en Chile desde 2021; en EE.UU. protegido hasta el 31-dic-2040 (publicado en 1945)", contacto: null, fuente: "https://www.delibris.org/es/rebelion-en-la-granja", estado: "en espera" }
