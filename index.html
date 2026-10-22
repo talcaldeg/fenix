@@ -1106,6 +1106,14 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .ajustes{align-items:center}
   #btnLupa{display:inline-flex; align-items:center; justify-content:center; padding:6px 11px; color:var(--ink)}
   #btnLupa svg{width:18px; height:18px}
+  #btnLupa[aria-expanded="true"]{background:var(--chip)}
+  /* Panel de la lupa: se despliega bajo la barra, en la misma página, como en Wikipedia, Goodreads o Gutenberg. */
+  .panel-buscar{border-top:1px solid var(--line); background:var(--bg); padding:12px 0}
+  .panel-buscar form{position:relative; display:flex; gap:8px; max-width:640px; margin:0 auto}
+  .panel-buscar .combo{flex:1 1 auto; min-width:0}
+  .panel-buscar input{width:100%; padding:10px 14px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); font:16px/1.3 system-ui,sans-serif}
+  .panel-buscar input:focus{outline:2px solid var(--acento); outline-offset:1px; border-color:transparent}
+  .panel-buscar .combo-lista{max-height:min(60vh,340px)}
   /* El menú en una fila necesita unos 950 px en español (con la lupa): bajo 960 pasa a «Menú». */
   @media (max-width:960px){
     #btnMenu{display:inline-block}
@@ -1174,8 +1182,8 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .hero-buscar input::placeholder{color:#c9b9a2}
   .hero-buscar input:focus{outline:2px solid #e8b04a; outline-offset:1px; border-color:transparent}
   .hero-buscar .combo-lista{max-height:340px}
-  .hero-buscar .combo-lista li.todos{border-top:1px solid var(--line); margin-top:4px; padding-top:10px; color:var(--vino); font-weight:600}
-  .hero-buscar .combo-lista li.vacio + li.todos{border-top:0; margin-top:0}
+  .combo-lista li.todos{border-top:1px solid var(--line); margin-top:4px; padding-top:10px; color:var(--vino); font-weight:600}
+  .combo-lista li.vacio + li.todos{border-top:0; margin-top:0}
   .hero-buscar + .acciones{margin-top:14px}
 
   .accesos{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
@@ -1390,8 +1398,19 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
       </div>
     </nav>
     <div class="ajustes">
-      <button class="pildora" id="btnLupa" type="button" aria-label="Buscar un libro" title="Buscar un libro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
+      <button class="pildora" id="btnLupa" type="button" aria-label="Buscar un libro" title="Buscar un libro" aria-expanded="false" aria-controls="panelBuscar"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
       <button class="pildora" id="btnMenu" aria-expanded="false">☰ <span data-i18n="nav.menu">Menú</span></button>
+    </div>
+  </div>
+  <div class="panel-buscar" id="panelBuscar" hidden>
+    <div class="wrap">
+      <form id="bForm" role="search" autocomplete="off">
+        <div class="combo">
+          <input type="search" id="bBuscar" aria-label="Buscar un libro" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="bLista" placeholder="Busca un título o un autor" data-i18n-ph="hero.buscarPh">
+        </div>
+        <button class="btn prim" type="submit" data-i18n="todos.buscarBtn">Buscar</button>
+        <ul class="combo-lista" id="bLista" role="listbox" hidden></ul>
+      </form>
     </div>
   </div>
 </header>
@@ -2118,7 +2137,7 @@ function iniciar(){
     $$("[data-i18n]").forEach(el => el.textContent = lang === "es" ? originales[el.dataset.i18n] : t(el.dataset.i18n));
     $$("[data-i18n-ph]").forEach(el => el.placeholder = lang === "es" ? originales[el.dataset.i18nPh] : t(el.dataset.i18nPh));
     $("#btnIdioma").textContent = lang === "es" ? "English" : "Español";
-    $("#hBuscar").setAttribute("aria-label", t("hero.buscarAria"));
+    $("#hBuscar").setAttribute("aria-label", t("hero.buscarAria")); $("#bBuscar").setAttribute("aria-label", t("hero.buscarAria"));
     $("#btnLupa").setAttribute("aria-label", t("hero.buscarAria")); $("#btnLupa").title = t("hero.buscarAria");
     pintarTodo();
   }
@@ -2136,19 +2155,22 @@ function iniciar(){
   $("#btnMenu").addEventListener("click", () => $("#btnMenu").setAttribute("aria-expanded", $("#menu").classList.toggle("abierto")));
   const cerrarMenu = () => { $("#menu").classList.remove("abierto"); $("#btnMenu").setAttribute("aria-expanded", "false"); };
   document.addEventListener("click", e => { if (!e.target.closest("#menuMas")) $("#menuMas").open = false; });
-  // Un toque fuera del menú del celular solo lo cierra: no abre lo que quedaba debajo (un libro, un enlace).
-  // La lupa y el botón Menú atienden su propio clic.
-  document.addEventListener("click", e => {
-    if (!$("#menu").classList.contains("abierto") || e.target.closest("#menu, .ajustes")) return;
-    e.preventDefault(); e.stopPropagation(); cerrarMenu();
-  }, true);
-  // Lupa: el buscador es el de la portada; desde otra vista se va al inicio y se deja el cursor en él.
+  // Lupa: abre el panel de búsqueda bajo la barra sin salir de la vista; otro toque, Escape o un toque fuera lo cierran.
+  const cerrarPanel = () => { $("#panelBuscar").hidden = true; $("#btnLupa").setAttribute("aria-expanded", "false"); };
   $("#btnLupa").addEventListener("click", () => {
     cerrarMenu();
-    const enfocar = () => { $("#hForm").scrollIntoView({ block:"center" }); $("#hBuscar").focus({ preventScroll:true }); };
-    if ($("#v-inicio").classList.contains("on")) enfocar();
-    else { window.addEventListener("hashchange", () => setTimeout(enfocar, 0), { once:true }); location.hash = "inicio"; }
+    const abrir = $("#panelBuscar").hidden;
+    $("#panelBuscar").hidden = !abrir; $("#btnLupa").setAttribute("aria-expanded", String(abrir));
+    if (abrir) $("#bBuscar").focus();
   });
+  document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("#panelBuscar").hidden && $("#bLista").hidden){ cerrarPanel(); $("#btnLupa").focus(); } });
+  // Un toque fuera del menú del celular o del panel de búsqueda solo los cierra: no abre lo que quedaba
+  // debajo (un libro, un enlace). La lupa y el botón Menú atienden su propio clic.
+  document.addEventListener("click", e => {
+    const menu = $("#menu").classList.contains("abierto"), panel = !$("#panelBuscar").hidden;
+    if (!(menu || panel) || e.target.closest("#menu, .ajustes, #panelBuscar")) return;
+    e.preventDefault(); e.stopPropagation(); cerrarMenu(); cerrarPanel();
+  }, true);
 
   // ---------- utilidades ----------
   const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -2530,11 +2552,11 @@ function iniciar(){
   }
   $("#fTodos").addEventListener("submit", e => { e.preventDefault(); buscarObras(false); });
 
-  // ---------- buscador del inicio ----------
+  // ---------- buscadores (portada y lupa de la barra) ----------
   // Sugiere libros de Fénix mientras se escribe (cada uno abre su ficha) y siempre ofrece buscar en
   // todos los libros. Enter sin elegir: la biblioteca filtrada si algo coincide; si no, el catálogo mundial.
-  (function(){
-    const entrada = $("#hBuscar"), lista = $("#hLista"), MAX = 6;
+  function buscador(pre, alElegir){
+    const entrada = $(`#${pre}Buscar`), lista = $(`#${pre}Lista`), MAX = 6;
     const sin = s => String(s || "").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
     let vistos = [], activo = -1;
     const coinciden = q => { const pal = sin(q).split(/\s+/).filter(Boolean); return !pal.length ? [] : libros().filter(l => { const tx = sin(l.titulo + " " + l.autor); return pal.every(p => tx.includes(p)); }); };
@@ -2542,7 +2564,7 @@ function iniciar(){
     const marcar = i => {
       activo = i;
       $$("li[data-i]", lista).forEach((li, k) => li.setAttribute("aria-selected", k === i ? "true" : "false"));
-      const li = $(`#hOp${i}`);
+      const li = $(`#${pre}Op${i}`);
       if (li){ entrada.setAttribute("aria-activedescendant", li.id); li.scrollIntoView({ block:"nearest" }); }
     };
     const enBiblioteca = q => {
@@ -2552,7 +2574,7 @@ function iniciar(){
     };
     const enTodos = q => { $("#tBuscar").value = q; location.hash = "todos"; buscarObras(false); };
     const elegir = i => {
-      const q = entrada.value.trim(); cerrar();
+      const q = entrada.value.trim(); cerrar(); alElegir();
       if (i < vistos.length) irALibro(vistos[i].id); else enTodos(q);
     };
     const mostrar = () => {
@@ -2560,9 +2582,9 @@ function iniciar(){
       if (!q){ cerrar(); return; }
       vistos = ordenar(coinciden(q)).slice(0, MAX);
       lista.innerHTML = (vistos.length
-        ? vistos.map((l, i) => `<li role="option" id="hOp${i}" data-i="${i}">${esc(l.titulo)} <small>- ${esc(l.autor)}</small></li>`).join("")
+        ? vistos.map((l, i) => `<li role="option" id="${pre}Op${i}" data-i="${i}">${esc(l.titulo)} <small>- ${esc(l.autor)}</small></li>`).join("")
         : `<li class="vacio">${esc(t("hero.sinFenix"))}</li>`)
-        + `<li role="option" class="todos" id="hOp${vistos.length}" data-i="${vistos.length}">${esc(t("hero.buscarTodos").replace("{q}", q))}</li>`;
+        + `<li role="option" class="todos" id="${pre}Op${vistos.length}" data-i="${vistos.length}">${esc(t("hero.buscarTodos").replace("{q}", q))}</li>`;
       lista.hidden = false; entrada.setAttribute("aria-expanded", "true"); activo = -1;
     };
     entrada.addEventListener("input", mostrar);
@@ -2576,13 +2598,15 @@ function iniciar(){
     });
     lista.addEventListener("mousedown", e => { const li = e.target.closest("li[data-i]"); if (li){ e.preventDefault(); elegir(+li.dataset.i); } });
     entrada.addEventListener("blur", cerrar);
-    $("#hForm").addEventListener("submit", e => {
+    $(`#${pre}Form`).addEventListener("submit", e => {
       e.preventDefault();
       const q = entrada.value.trim(); if (!q) return;
-      cerrar();
+      cerrar(); alElegir();
       if (coinciden(q).length) enBiblioteca(q); else enTodos(q);
     });
-  })();
+  }
+  buscador("h", () => {});
+  buscador("b", () => { cerrarPanel(); $("#bBuscar").value = ""; });
   $("#tMas").addEventListener("click", () => buscarObras(true));
   document.addEventListener("click", e => { const a = e.target.closest(".fila[data-obra]"); if (a){ e.preventDefault(); location.hash = "obra/" + a.dataset.obra; } });
   document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".fila[data-obra]"); if (a && e.key === "Enter") location.hash = "obra/" + a.dataset.obra; });
@@ -2874,7 +2898,7 @@ function iniciar(){
     $$("nav.menu a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + v));
     $("#menuMas").classList.toggle("on", !!$("#menuMas a.on"));
     $("#menuMas").open = false;
-    cerrarMenu();
+    cerrarMenu(); cerrarPanel();
   }
   // Cada vista o ficha cuenta como una visita en GoatCounter (ver el bloque de medición al final).
   // popstate (Atrás y Adelante) y hashchange pueden llegar los dos por el mismo cambio: alNavegar lo atiende una vez.
