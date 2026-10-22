@@ -12,6 +12,8 @@
   del capítulo. Párrafo en cursiva justo después del título: sumario del capítulo.
 - Marcadores `libro.capítulo.párrafo` en su propia línea (Confesiones): el cambio de capítulo
   pone su número romano como subtítulo; el marcador no se imprime.
+- `![pie](dibujos/x.jpg)` en su propio párrafo: imagen centrada (ruta relativa a la carpeta), con
+  el pie debajo si lo trae (los dibujos de El principito).
 - Después: herramientas/portadas.py <id> ... --epub para la portada, herramientas/exlibris.py y
   herramientas/epub_a_pdf.py.
 """
@@ -51,6 +53,10 @@ aside.notas p { text-indent: 0; margin: 0 0 0.4em; }
 .portadilla .t3 { font-style: italic; margin-bottom: 0.3em; }
 .portadilla .t4 { margin-bottom: 2.5em; }
 .nota p { text-indent: 0; margin: 0 0 0.9em; }
+figure.dibujo { margin: 1.2em 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
+figure.dibujo img { max-width: 80%; max-height: 60vh; }
+figure.dibujo figcaption { font-size: 0.85em; font-style: italic; margin-top: 0.3em; }
+figure.dibujo + p { text-indent: 0; }
 """
 ROMANOS = [(1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"),
            (40, "XL"), (10, "X"), (9, "IX"), (5, "V"), (4, "IV"), (1, "I")]
@@ -96,7 +102,9 @@ class Capitulo:
         self.cap_actual = None
 
 
-def leer(carpeta: Path):
+def leer(carpeta: Path, imagenes: dict = None):
+    """imagenes: si viene, se llena con nombre en el EPUB -> ruta del archivo."""
+    imagenes = {} if imagenes is None else imagenes
     caps = []
     for md in sorted(carpeta.glob("*.md")):
         if md.name == "nota.md":
@@ -122,6 +130,17 @@ def leer(carpeta: Path):
                 continue
             if b.startswith("#### "):  # tercer nivel (De la Eucaristía a la Trinidad: «1. Nuestro modelo»)
                 c.html.append(f"<h4>{enlinea(b[5:].strip())}</h4>")
+                recien_titulo = False
+                continue
+            img = re.fullmatch(r"!\[([^\]]*)\]\(([^)]+)\)", b.strip())
+            if img:
+                ruta = carpeta / img.group(2)
+                if not ruta.exists():
+                    raise SystemExit(f"falta la imagen {ruta}")
+                imagenes[ruta.name] = ruta
+                pie = f"<figcaption>{enlinea(img.group(1))}</figcaption>" if img.group(1) else ""
+                c.html.append(f'<figure class="dibujo"><img src="img/{ruta.name}" '
+                              f'alt="{html.escape(img.group(1) or "Dibujo")}"/>{pie}</figure>')
                 recien_titulo = False
                 continue
             if re.fullmatch(r"\d+\.\d+\.\d+", b.strip()):
@@ -175,7 +194,8 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
     traduccion: False si se editó una traducción ajena de dominio público (no la firma Fénix)."""
     et = ETIQUETAS[idioma]
     cuidado = et["cuidado"].format(editor)
-    caps = leer(carpeta)
+    imagenes = {}
+    caps = leer(carpeta, imagenes)
     archivos = {"mimetype": b"application/epub+zip",
                 "META-INF/container.xml": ('<?xml version="1.0" encoding="utf-8"?>\n<container version="1.0" '
                                            'xmlns="urn:oasis:names:tc:opendocument:xmlns:container"><rootfiles>'
@@ -227,6 +247,10 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
              '<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>',
              '<item id="css" href="estilo.css" media-type="text/css"/>']
     items += [f'<item id="{s}" href="{s}.xhtml" media-type="application/xhtml+xml"/>' for s in spine if s != "nav"]
+    tipos = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".gif": "image/gif"}
+    for i, (nombre, ruta) in enumerate(sorted(imagenes.items()), 1):
+        archivos[f"OEBPS/img/{nombre}"] = ruta.read_bytes()
+        items.append(f'<item id="img{i}" href="img/{nombre}" media-type="{tipos[ruta.suffix.lower()]}"/>')
     refs = "".join(f'<itemref idref="{s}"/>' for s in spine)
     opf = ('<?xml version="1.0" encoding="utf-8"?>\n<package xmlns="http://www.idpf.org/2007/opf" version="3.0" '
            f'unique-identifier="uid" xml:lang="{idioma}">\n  <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">\n'

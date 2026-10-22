@@ -35,13 +35,14 @@ Detente y avísale a tu usuario en cuanto falle uno de estos filtros:
    sirve: entregarás una versión (ver paso 5).
 2. **¿Alguien lo está haciendo?** En `datos.js`, la lista `buscados`: si el libro tiene
    `reservado`, otra persona lo tomó.
-3. **Derechos de autor.** Fénix solo publica lo que es libre en Chile y en Estados Unidos (el
-   sitio está alojado allí):
-   - el autor murió hace más de 70 años (en 2026: antes de 1956), y
-   - la obra se publicó hace más de 95 años (en 2026: antes de 1931).
-   - Si usas una traducción ajena, el **traductor** también debe cumplir las dos reglas
-     (muerto antes de 1956 y traducción publicada antes de 1931). Una traducción anónima vale
-     si se publicó antes de 1931.
+3. **Derechos de autor.** Un libro **en español** basta con que sea libre en Chile:
+   - el autor murió hace más de 70 años (en 2026: antes de 1956).
+   - Si usas una traducción ajena, el **traductor** también murió antes de 1956 (una
+     traducción anónima vale si se publicó hace más de 70 años). Si no hay traducción libre,
+     se traduce del original.
+   - Un libro **en inglés** u otro idioma debe ser libre también en Estados Unidos (el sitio
+     está alojado allí): además, publicado hace más de 95 años (en 2026: antes de 1931), y lo
+     mismo la traducción.
    - Notas, prólogos e introducciones de editores modernos tienen sus propios derechos: no se
      copian.
 4. **Valoración moral.** Busca el libro en Delibris (https://www.delibris.org/es/, buscador por

@@ -3897,12 +3897,9 @@ window.FENIX = {
         "Te vuelves responsable para siempre de lo que has domesticado.",
         "Lo que embellece el desierto es que esconde un pozo en alguna parte..."
       ],
-      archivos: {},
-      comprar: [
-        { texto: "Buscalibre", url: "https://www.buscalibre.cl/libros/search?q=el+principito+saint-exupery" },
-        { texto: "Amazon", url: "https://www.amazon.com/s?k=el+principito+saint-exupery" }
-      ],
-      fuente: { texto: "Publicado en Nueva York en 1943; protegido en EE.UU. hasta 2038 (se enlaza, no se aloja). Citas traducidas por Proyecto Fénix del original francés", url: "https://openlibrary.org/works/OL10263W" },
+      editorial: { es: "Traducción nueva de Proyecto Fénix, directa del francés de 1943, con los 47 dibujos del autor y una nota de la edición.", en: "New Proyecto Fénix translation, straight from the 1943 French, with the author's 47 drawings and an edition note." },
+      archivos: { epub: "libros/saint-exupery-el-principito.epub", pdf: "libros/saint-exupery-el-principito.pdf" },
+      fuente: { texto: "Le Petit Prince, Nueva York, 1943 (dominio público en Chile desde 2015); traducción de Proyecto Fénix, CC BY-NC-SA 4.0", url: "https://openlibrary.org/works/OL10263W" },
       delibris: { valor: 6, genero: "Literatura", url: "https://www.delibris.org/es/el-principito" },
       parecidos: ["dickens-el-cantico-de-navidad", "flaubert-un-corazon-sencillo", "irving-cuentos-de-la-alhambra"]
     }

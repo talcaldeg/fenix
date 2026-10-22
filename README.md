@@ -52,8 +52,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `editorial: { es, en }` con qué se hizo; aparece en la sección Editorial y con la etiqueta
   «Edición Fénix». Las categorías Teatro, Poesía y Ensayo e historia son para lo que no es
   lectura espiritual ni oración (la Apología de Sócrates va en Ensayo e historia).
-- `libros/`: solo obras que se pueden difundir libremente (dominio público o con permiso). Lo
-  demás va como `externos` (descarga legal en otro sitio) o `comprar`.
+- `libros/`: solo obras que se pueden difundir libremente (dominio público o con permiso). Un
+  libro en español basta con que sea libre en Chile, aunque siga protegido en EE.UU. (decisión
+  de Tomás del 22-oct-2026, con el riesgo de un aviso DMCA asumido; si llega, se baja y queda
+  como enlace); en inglés, libre en Chile y en EE.UU. Lo demás va como `externos` (descarga
+  legal en otro sitio) o `comprar`.
 - `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`.
 - `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
