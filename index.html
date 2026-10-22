@@ -2071,12 +2071,12 @@ function iniciar(){
       "f.enviar":"Send","f.libro":"Book","f.libroPh":"Type the title or the author","f.libroVacio":"No matching book. You can send it as written.","f.tipo":"Type of error","f.t1":"Typo or spelling","f.t2":"File will not open or download","f.t3":"Missing or jumbled text","f.t4":"Error in the review or a quote","f.t5":"Doctrinal error","f.t6":"Other",
       "f.donde":"Where? (chapter, page or sentence)","f.descripcion":"Description","f.nombre":"Name","f.correo":"Email","f.mensaje":"Message",
       "pie":"Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
-      "x.leer":"Download","x.enLinea":"Read online","x.web":"Online","x.comprar":"Buy","x.leido":"Read","x.marcarLeido":"Mark as read","x.quitarLeido":"Mark as not read","x.fav":"Favourite","x.marcarFav":"Add to favourites","x.quitarFav":"Remove from favourites",
+      "x.leer":"Download","x.hojear":"Look inside: the first pages","x.enLinea":"Read online","x.web":"Online","x.comprar":"Buy","x.leido":"Read","x.marcarLeido":"Mark as read","x.quitarLeido":"Mark as not read","x.fav":"Favourite","x.marcarFav":"Add to favourites","x.quitarFav":"Remove from favourites",
       "x.porque":"Why read it","x.resumen":"Summary","x.citas":"Quotes","x.parecidos":"Similar books",
       "x.fuente":"Source","x.enviando":"Sending…","x.enviado":"Thank you! We received your message.","x.fallo":"It could not be sent. Please try again in a moment.","x.verIn":"See in"
     },
     es: {
-      "x.leer":"Descargar","x.enLinea":"Leer en línea","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
+      "x.leer":"Descargar","x.hojear":"Hojear las primeras páginas","x.enLinea":"Leer en línea","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.porque":"Por qué leerlo","x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos",
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "hero.buscarAria":"Buscar un libro","hero.sinFenix":"Todavía no está en Fénix.","hero.buscarTodos":"Buscar «{q}» en todos los libros →",
@@ -2326,6 +2326,8 @@ function iniciar(){
     id = l.id; // un id viejo (alias) abre la ficha nueva
     const desc = [
       ...Object.entries(archivosEn(l)).map(([f, url]) => botonArchivo(f, url)),
+      // Hojear: las primeras páginas en una página aparte (gen_estaticos.js la arma para cada EPUB propio).
+      ...(archivosEn(l).epub ? [`<a class="btn" href="${esc(rutaLibro(l))}muestra/">${esc(t("x.hojear"))}</a>`] : []),
       ...[...externosEn(l)].sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
       ...comprarEn(l).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
     ].join("");

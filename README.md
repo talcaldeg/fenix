@@ -21,6 +21,14 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   imagen a mano, correr `python herramientas/miniaturas.py`. El mismo script arma
   `img/portadas/og/` (1200x630), la imagen que declara cada ficha al compartirse por WhatsApp o
   redes; una portada oficial externa se comparte vertical, porque no se copia.
+- Hojear: todo libro con EPUB propio trae «Hojear las primeras páginas», una página aparte
+  (`libro/<id>/muestra/`) con el primer capítulo (corta en el primer cambio de capítulo pasadas
+  2.000 palabras, o al pasar 4.000), que se lee en el navegador sin descargar nada. Como es una
+  página suelta, la biblioteca y la ficha no cargan nada extra. El texto lo saca
+  `herramientas/muestras.py` a `muestras/<archivo>.json` (sin portada, exlibris, índice, nota de
+  la edición ni encabezado de Gutenberg), y `gen_estaticos.js` lo corre solo: rehace solo lo de
+  los EPUB que cambiaron. Si un libro empieza con un prefacio largo de otro (editor, traductor),
+  se pone en `INICIO` de `muestras.py` el título donde parte la muestra.
 - **Regla fija del menú: máximo 6 entradas de primer nivel, contando Colaborar.** Una sección
   nueva entra en una vista que ya existe o en el submenú, nunca como entrada suelta. Inicio no
   va en el menú (lo lleva la marca) y Oraciones es un bloque de Plan de vida (`#oraciones` abre

@@ -5,6 +5,8 @@
 // JavaScript, así que sin esto solo verían la portada vacía. Este script deja:
 //   - libro/<id>/index.html: una página por libro, en el idioma del libro, con por qué leerlo, resumen, citas,
 //     descargas, valoración moral, parecidos y datos estructurados (schema.org Book).
+//   - libro/<id>/muestra/index.html: las primeras páginas de cada libro con EPUB propio, para «Hojear»
+//     en el navegador (el texto sale de herramientas/muestras.py, que este script corre).
 //   - sitemap.xml: la portada y cada libro; lastmod cambia solo si la página cambió.
 //   - llms.txt: el catálogo en texto plano para los sistemas de IA (llmstxt.org).
 //   - index.html: el bloque JSON-LD entre las marcas JSONLD:inicio y JSONLD:fin.
@@ -54,6 +56,19 @@ const MAX_MENU = 6;
   if (entradas > MAX_MENU){ console.error(`El menú tiene ${entradas} entradas de primer nivel; el máximo es ${MAX_MENU}. Fusionar vistas o pasar alguna al submenú.`); process.exit(1); }
 }
 
+// Primeras páginas de cada EPUB de libros/ para «Hojear» (muestras/<archivo>.json). muestras.py solo
+// rehace las de los EPUB nuevos o cambiados.
+{
+  const r = require("child_process").spawnSync("python", [path.join(__dirname, "muestras.py")], { encoding: "utf8", env: { ...process.env, PYTHONIOENCODING: "utf-8" } });
+  if (r.status !== 0){ console.error("herramientas/muestras.py falló:\n" + (r.stderr || r.error)); process.exit(1); }
+  if (r.stdout.trim()) process.stdout.write(r.stdout);
+}
+const muestraDe = l => {
+  const e = (l.archivos || {}).epub;
+  const f = e && path.join(RAIZ, "muestras", path.basename(e, ".epub") + ".json");
+  return f && fs.existsSync(f) ? JSON.parse(fs.readFileSync(f, "utf8")) : null;
+};
+
 // Mismo criterio que enIdioma() de index.html: la versión de otro idioma reemplaza los campos de la
 // ficha y tiene su propia página en libro/<id>/<idioma>/.
 const vista = (l, lang) => {
@@ -82,6 +97,9 @@ const TX = {
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
     de: "de", tema: "Cambiar a modo claro u oscuro", edFenix: "Edición Fénix", sello: "Recomendado por Fénix",
     y: "y", ebook: "ebook",
+    hojear: "Hojear las primeras páginas", primeras: "primeras páginas", volver: "Volver a la ficha del libro",
+    finMuestra: "Hasta aquí las primeras páginas. Para seguir leyendo, descarga el libro completo, gratis:",
+    dMuestra: (t, a) => `Lee gratis en línea las primeras páginas de «${t}» de ${a}, sin descargar nada.`,
     tProp: F => `${F} gratis`, tExt: F => `${F} gratis, enlace legal`, tWeb: "Leer en línea gratis", tComprar: "Resumen y dónde comprarlo",
     sProp: F => `Gratis en ${F}`, sExt: F => `Gratis en ${F} (enlace legal)`, sWeb: "Gratis para leer en línea", sComprar: "Protegido por derechos de autor: dónde comprarlo",
     dProp: (t, a, F, ed) => `Descarga gratis «${t}» de ${a} en ${F}${ed ? ", edición Fénix" : ""}.`,
@@ -100,6 +118,9 @@ const TX = {
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
     de: "of", tema: "Switch between light and dark mode", edFenix: "Fénix edition", sello: "Recommended by Fénix",
     y: "and", ebook: "ebook",
+    hojear: "Look inside: the first pages", primeras: "first pages", volver: "Back to the book page",
+    finMuestra: "That is the end of the first pages. To keep reading, download the whole book, free:",
+    dMuestra: (t, a) => `Read the first pages of «${t}» by ${a} online, free and without downloading anything.`,
     tProp: F => `Free ${F}`, tExt: F => `Free ${F}, legal link`, tWeb: "Read online free", tComprar: "Summary and where to buy",
     sProp: F => `Free ${F}`, sExt: F => `Free ${F} (legal link)`, sWeb: "Free to read online", sComprar: "Under copyright: where to buy it",
     dProp: (t, a, F, ed) => `Download «${t}» by ${a} free in ${F}${ed ? ", Fénix edition" : ""}.`,
@@ -213,6 +234,7 @@ function paginaLibro(l){
   const inicio = B + (lang === "en" ? "?l=en" : "");
   const botones = [
     ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${f === "pdf" ? `target="_blank" rel="noopener"` : "download"}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
+    ...(muestraDe(l) ? [`<a class="btn" href="muestra/">${esc(x.hojear)}</a>`] : []),
     ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
   ];
@@ -320,9 +342,89 @@ ${MEDICION}
 `;
 }
 
+// «Hojear»: las primeras páginas del libro (muestras/<archivo>.json), para leer en el navegador sin
+// descargar nada. Es una página aparte y liviana: la biblioteca y la ficha no cargan nada extra.
+function paginaMuestra(l, m){
+  const lang = l.idioma, x = TX[lang];
+  const B = (l._base || "../../") + "../";
+  const inicio = B + (lang === "en" ? "?l=en" : "");
+  const url = urlLibro(l) + "muestra/";
+  const titulo = `${l.titulo} - ${x.primeras} | Proyecto Fénix`;
+  const descripcion = x.dMuestra(l.titulo, autorCorto(l.autor));
+  const og = l.imagen && l.imagen.src.replace(/^img\/portadas\//, "img/portadas/og/");
+  const imagen = !l.imagen ? SITIO + "img/compartir.jpg" : og !== l.imagen.src && fs.existsSync(path.join(RAIZ, og)) ? SITIO + og : abs(l.imagen.src);
+  const descargas = Object.entries(l.archivos || {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${f === "pdf" ? `target="_blank" rel="noopener"` : "download"}>${esc(x.descargar)} ${f.toUpperCase()}</a>`);
+  return `<!doctype html>
+<html lang="${lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(titulo)}</title>
+${FAVICON}
+${pwaEn(B)}
+<meta name="description" content="${esc(descripcion)}">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="${url}">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Proyecto Fénix">
+<meta property="og:title" content="${esc(l.titulo + " - " + x.primeras)}">
+<meta property="og:description" content="${esc(descripcion)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${esc(imagen)}">
+<!-- Generada por herramientas/gen_estaticos.js desde muestras/ (herramientas/muestras.py). No editar a mano. -->
+<style>${ESTILO}
+  .lectura{max-width:680px; margin:0 auto}
+  .lectura .volver{display:inline-block; margin:0 0 18px; font:600 15px system-ui,sans-serif; text-decoration:none}
+  .lectura .meta{margin-bottom:28px}
+  .texto{font-size:19px; line-height:1.75; hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word}
+  .texto p{margin:0 0 1em}
+  .texto h2,.texto h3,.texto h4,.texto h5,.texto h6{text-align:center; hyphens:manual; -webkit-hyphens:manual; line-height:1.35; margin:2em 0 1em; font-size:22px}
+  .texto h3,.texto h4,.texto h5,.texto h6{font-size:19px}
+  .texto blockquote{font-style:normal; border-left-color:var(--line)}
+  .texto pre{white-space:pre-wrap; font:inherit}
+  .texto hr{border:0; text-align:center; margin:2em 0} .texto hr::after{content:"⁂"; color:var(--muted)}
+  .fin{margin-top:40px; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--card)}
+  .fin p{margin:0; font:16px/1.5 system-ui,sans-serif}
+</style>
+</head>
+<body>
+<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></header>
+<main class="wrap"><article class="lectura">
+  <a class="volver" id="volver" href="../">← ${esc(x.volver)}</a>
+  <h1>${esc(l.titulo)}<span class="sub">${esc(x.primeras[0].toUpperCase() + x.primeras.slice(1))}</span></h1>
+  <p class="meta">${esc(l.autor)} · ${esc(l.anio)}</p>
+  <div class="texto">
+${m.html}
+  </div>
+  <div class="fin">
+    <p>${esc(x.finMuestra)}</p>
+    <div class="botones">${descargas.join("")}</div>
+    <p class="ayuda">${esc(x.ayuda)}</p>
+  </div>
+</article></main>
+<footer><div class="wrap">${esc(x.pie)}</div></footer>
+${SCRIPT_TEMA}
+<script>
+// Si se llegó desde la ficha del sitio, Volver regresa ahí (con la biblioteca detrás) en vez de abrir la página suelta.
+document.getElementById("volver").onclick=function(e){try{if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){e.preventDefault();history.back()}}catch(err){}};
+</script>
+${AVISO_EPUB}
+${MEDICION}
+</body>
+</html>
+`;
+}
+
 // ---------- páginas de libro ----------
 const cambiadas = new Set();
 for (const l of PAGINAS) if (escribirSiCambia((l._ruta || `libro/${l.id}/`) + "index.html", paginaLibro(l))) cambiadas.add(urlLibro(l));
+// Hojear: una página de primeras páginas por cada libro con EPUB propio; la de un libro que ya no lo tiene se borra.
+const conMuestra = new Set();
+for (const l of PAGINAS){
+  const m = muestraDe(l), dir = (l._ruta || `libro/${l.id}/`) + "muestra/";
+  if (m){ conMuestra.add(urlLibro(l) + "muestra/"); if (escribirSiCambia(dir + "index.html", paginaMuestra(l, m))) cambiadas.add(urlLibro(l) + "muestra/"); }
+  else if (fs.existsSync(path.join(RAIZ, dir))) { fs.rmSync(path.join(RAIZ, dir), { recursive: true }); console.log("borrada " + dir); }
+}
 // Fichas fusionadas en otra (alias): su dirección vieja redirige a la página nueva.
 for (const [viejo, a] of Object.entries(D.alias || {})){
   const destino = vista(porId(a.id), a.idioma || porId(a.id).idioma);
@@ -407,7 +509,7 @@ const hoy = new Date().toISOString().slice(0, 10);
 const previo = fs.existsSync(path.join(RAIZ, "sitemap.xml")) ? leer("sitemap.xml") : "";
 const lastmodPrevio = {};
 for (const m of previo.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) lastmodPrevio[m[1]] = m[2];
-const urls = [SITIO, ...PAGINAS.map(urlLibro)];
+const urls = [SITIO, ...PAGINAS.map(urlLibro), ...conMuestra];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>
