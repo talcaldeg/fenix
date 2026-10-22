@@ -27,7 +27,7 @@ RAIZ = os.path.dirname(os.path.abspath(os.path.join(_AQUI, subprocess.run(
     ["git", "rev-parse", "--git-common-dir"], cwd=_AQUI, capture_output=True, text=True).stdout.strip())))
 SESIONES = os.path.join(RAIZ, ".sesiones")
 # Salidas de herramientas/gen_estaticos.js: si chocan al integrar, se toma la de main y se regeneran.
-GENERADOS = ("libro/", "sitemap.xml", "llms.txt")
+GENERADOS = ("libro/", "sitemap.xml", "llms.txt", "sw.js")
 
 
 def git(*args, cwd, check=True):
