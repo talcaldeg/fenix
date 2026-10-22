@@ -86,6 +86,12 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   miniaturas y fondos. La portada oficial (URL externa) se deja como está. El crédito va en
   `imagen` de la ficha. Las obras de Project Gutenberg se alojan en `libros/` con esa portada
   (el texto y la licencia de Gutenberg quedan intactos).
+- App instalable (PWA): `manifest.webmanifest`, íconos `img/icono-*.png` (salen de
+  `herramientas/logo.py`) y `sw.js`. El bloque `PWA` del `<head>` de `index.html` lo copia
+  `gen_estaticos.js` en cada ficha, y el mismo script renueva `VERSION` de `sw.js` cuando cambian
+  `index.html` o `datos.js`. El service worker pide primero a la red (páginas y datos) y guarda lo
+  visitado para leerlo sin señal; no guarda `libros/`. El pie ofrece «Instalar como app» en
+  Android y Chrome, y en el iPhone explica Compartir › Agregar a inicio.
 - Leídos y favoritos de cada visitante quedan en su navegador (`localStorage`).
   No hay puntuación de estrellas, ni de Fénix ni del visitante: solo la valoración moral de Delibris.
 - Cada ficha lleva al menos tres `citas` reales y verificadas: las más célebres, las más

@@ -4,7 +4,7 @@
 Única fuente del dibujo. De aquí salen img/favicon.svg (que también usa el encabezado del sitio),
 la viñeta y el sello de las portadas (marco.py) y el timbre del exlibris (exlibris.py).
 
-    python herramientas/logo.py      (reescribe img/favicon.svg e imprime el data URI para index.html)
+    python herramientas/logo.py      (reescribe img/favicon.svg y los íconos PNG de la app, e imprime el data URI para index.html)
 
 - Caja 64 x 64. Las alas-página tienen tres plumas: los dos cortes de cada lado se dibujan como
   trazo del color de fondo, así que `marca()` necesita saber sobre qué color va.
@@ -43,6 +43,32 @@ def data_uri():
     return "data:image/svg+xml," + quote(favicon(), safe="/")
 
 
+def icono_lleno(escala):
+    """Cuadrado vino sin esquinas redondas, con el dibujo reducido a `escala` y centrado: Android
+    recorta el ícono «maskable» a su forma (lo seguro es un círculo del 80 % central: con 0,64 caben las puntas de las alas) y el iPhone redondea el suyo."""
+    m = 32 * (1 - escala)
+    return (f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="{VINO}"/>'
+            f'<g transform="translate({m:g} {m:g}) scale({escala:g})">{marca(ORO, VINO)}</g></svg>')
+
+
+# Íconos de la app instalable (manifest.webmanifest y apple-touch-icon de index.html).
+ICONOS = {
+    "icono-192.png": (favicon, 192),
+    "icono-512.png": (favicon, 512),
+    "icono-maskable-512.png": (lambda: icono_lleno(0.64), 512),
+    "icono-apple-180.png": (lambda: icono_lleno(0.84), 180),
+}
+
+
+def iconos():
+    import fitz  # PyMuPDF dibuja el SVG
+    for nombre, (svg, lado) in ICONOS.items():
+        doc = fitz.open(stream=svg().encode("utf-8"), filetype="svg")
+        z = lado / doc[0].rect.width
+        doc[0].get_pixmap(matrix=fitz.Matrix(z, z), alpha=True).save(str(RAIZ / "img" / nombre))
+
+
 if __name__ == "__main__":
     (RAIZ / "img" / "favicon.svg").write_text(favicon(), encoding="utf-8")
+    iconos()
     print(data_uri())

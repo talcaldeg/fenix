@@ -1,0 +1,19 @@
+{
+  "id": "./",
+  "name": "Proyecto Fénix",
+  "short_name": "Fénix",
+  "description": "Buenos libros, gratis y escogidos: novelas, teatro, poesía, ensayo y clásicos en EPUB y PDF.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "theme_color": "#6b1d24",
+  "background_color": "#6b1d24",
+  "categories": ["books", "education"],
+  "icons": [
+    { "src": "img/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "img/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "img/icono-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

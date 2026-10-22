@@ -11,6 +11,15 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%236b1d24%22/%3E%3Cg%20fill%3D%22%23e8b04a%22%3E%3Cpath%20d%3D%22M31%2056C24%2052%2015%2051%207%2053L6.5%2046.5%204.5%2045.5%206%2038.5%203.5%2037%205%2029%202.5%2027.5%202.5%207.5C8%2017%2019%2026%2031%2036.5Z%22/%3E%3Cpath%20d%3D%22M33%2056C40%2052%2049%2051%2057%2053L57.5%2046.5%2059.5%2045.5%2058%2038.5%2060.5%2037%2059%2029%2061.5%2027.5%2061.5%207.5C56%2017%2045%2026%2033%2036.5Z%22/%3E%3Cpath%20d%3D%22M32%2038C29.3%2033%2028.9%2027.6%2029.8%2022.8C30.7%2018.4%2033.4%2015.6%2037.2%2016.1L42.6%2018%2037.6%2020.1C36%2023%2035.7%2028%2034.8%2032.8Z%22/%3E%3Cpath%20d%3D%22M31.4%2019.4C28%2017%2026.6%2013.2%2027.7%209.2C28.8%2012.4%2030.6%2014%2033%2015.2Z%22/%3E%3Cpath%20d%3D%22M33.6%2016.4C32.4%2012.8%2033.2%209.4%2035.4%206.8C35.2%2010.2%2036.1%2012.4%2037.5%2014.4Z%22/%3E%3C/g%3E%3Cpath%20d%3D%22M5%2045.2C13%2042.6%2022%2043.4%2030.4%2048.2M4.6%2036.8C11.6%2033.6%2019.6%2034.2%2027.4%2039.2M59%2045.2C51%2042.6%2042%2043.4%2033.6%2048.2M59.4%2036.8C52.4%2033.6%2044.4%2034.2%2036.6%2039.2%22%20fill%3D%22none%22%20stroke%3D%22%236b1d24%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
 <meta name="description" content="Novelas, teatro, poesía, ensayo y clásicos de todas las épocas, escogidos uno a uno y gratis en EPUB y PDF, con por qué leerlo, citas y valoración moral. Sin publicidad ni registro.">
 <meta name="color-scheme" content="light dark">
+<!-- PWA:inicio - Instalable como app en el celular (manifest, íconos de herramientas/logo.py y sw.js). Las rutas son relativas a la
+     carpeta del sitio: herramientas/gen_estaticos.js copia el bloque en cada ficha y les antepone su base. -->
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="theme-color" content="#6b1d24">
+<link rel="apple-touch-icon" href="img/icono-apple-180.png">
+<meta name="apple-mobile-web-app-title" content="Fénix">
+<meta name="mobile-web-app-capable" content="yes">
+<script>if ("serviceWorker" in navigator) addEventListener("load", function(){ navigator.serviceWorker.register(new URL("sw.js", document.querySelector('link[rel="manifest"]').href)).catch(function(){}); });</script>
+<!-- PWA:fin -->
 <!-- Vista previa al compartir el enlace (WhatsApp, redes). La imagen sale de herramientas/imagen_compartir.py. -->
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Proyecto Fénix">
@@ -1319,6 +1328,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .ficha .aviso{font:13px system-ui,sans-serif; color:var(--ok); align-self:center}
 
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
+  footer button.enlace{background:none; border:0; padding:0; font:inherit; color:inherit; text-decoration:underline; cursor:pointer}
 </style>
 </head>
 <body>
@@ -1916,8 +1926,21 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
 
 <footer>
   <div class="wrap" data-i18n="pie">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.</div>
-  <div class="wrap" style="margin-top:6px"><span data-i18n="pie2">Catálogo actualizado al</span> <span id="fechaCatalogo"></span> · <a href="#contacto" data-i18n="nav.contacto">Contacto</a></div>
+  <div class="wrap" style="margin-top:6px"><span data-i18n="pie2">Catálogo actualizado al</span> <span id="fechaCatalogo"></span> · <a href="#contacto" data-i18n="nav.contacto">Contacto</a><span id="instalarApp" hidden> · <button type="button" class="enlace" data-i18n="pie.instalar">Instalar como app</button></span><span id="instalarIos" hidden> · <span data-i18n="pie.iphone">En el iPhone, instala Fénix con Compartir › Agregar a inicio</span></span></div>
 </footer>
+<!-- Botón para instalar como app. Android y Chrome ofrecen el botón (beforeinstallprompt); Safari del iPhone no tiene ese aviso, así que se
+     explica en una línea. Ya instalada (pantalla completa), no aparece nada. -->
+<script>
+(function(){
+  if (matchMedia("(display-mode: standalone)").matches || navigator.standalone) return;
+  var ua = navigator.userAgent, ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (ios && !/CriOS|FxiOS|EdgiOS/.test(ua)){ document.getElementById("instalarIos").hidden = false; return; }
+  var aviso, caja = document.getElementById("instalarApp");
+  addEventListener("beforeinstallprompt", function(e){ e.preventDefault(); aviso = e; caja.hidden = false; });
+  addEventListener("appinstalled", function(){ caja.hidden = true; });
+  caja.querySelector("button").onclick = function(){ if (!aviso) return; aviso.prompt(); aviso.userChoice.then(function(r){ if (r.outcome === "accepted") caja.hidden = true; }); aviso = null; };
+})();
+</script>
 
 <!-- defer: el HTML (y el hero del inicio) se pinta sin esperar al catálogo; el código de abajo corre cuando datos.js ya cargó. -->
 <script src="datos.js" defer></script>
@@ -1996,7 +2019,7 @@ function iniciar(){
       "oh.precision":"A clarification: this is not a new incarnation, nor does the person cease to be himself. It is the life of grace, which unites us to Christ as members of His Body. The expression belongs to spiritual theology; its foundation is the Church's doctrine (Catechism, nos. 521 and 1997).",
       "oh.rezar":"Pray the prayer","oh.libro":"See «One with Jesus»","oh.citaDJ":"«May I, fully identified with You, become like another humanity to You».","oh.citaDJRef":"Paul de Jaegher, S.J., One with Jesus",
       "bib.titulo":"Library","bib.buscar":"Search title or author","bib.todas":"All categories","bib.idiomas":"All languages","bib.formatos":"Any format","bib.soloComprar":"Purchase only","bib.enLinea":"Read online",
-      "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":" (a review site; not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks» and the fewer the circles, the more caution the reading calls for. Each book's level is explained on its page.",
+      "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","pie.instalar":"Install as an app","pie.iphone":"On iPhone, install Fénix with Share › Add to Home Screen","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":" (a review site; not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks» and the fewer the circles, the more caution the reading calls for. Each book's level is explained on its page.",
       "l.libro":"Book","l.datos":"Category · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","x.portada":"Cover","x.dominioPublico":"public domain, Wikimedia Commons","bib.nota":"Read marks and favourites are stored only in this browser.",
       "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","cat.teatro":"Drama","cat.poesia":"Poetry","cat.ensayo":"Essays and history","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
       "or.titulo":"Prayers","nav.plan":"Plan of life",

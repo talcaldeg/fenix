@@ -8,6 +8,7 @@
 //   - sitemap.xml: la portada y cada libro; lastmod cambia solo si la página cambió.
 //   - llms.txt: el catálogo en texto plano para los sistemas de IA (llmstxt.org).
 //   - index.html: el bloque JSON-LD entre las marcas JSONLD:inicio y JSONLD:fin.
+//   - sw.js: su VERSION, para que la app instalada se renueve al publicar.
 //
 // Uso (desde la carpeta fenix):  node herramientas/gen_estaticos.js
 // Se corre después de cambiar datos.js. Es idempotente: sin cambios en datos.js no cambia nada.
@@ -192,6 +193,9 @@ document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.da
 const MEDICION = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- MEDICION:inicio[\s\S]*?<!-- MEDICION:fin -->/) || [""])[0];
 // Igual el aviso de qué aplicación abre el EPUB en el celular (bloque AVISO_EPUB de index.html).
 const AVISO_EPUB = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- AVISO_EPUB:inicio[\s\S]*?<!-- AVISO_EPUB:fin -->/) || [""])[0];
+// Igual lo que deja instalar el sitio como app (bloque PWA de index.html), con sus rutas puestas sobre la base de la ficha.
+const PWA = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- PWA:inicio[\s\S]*?<!-- PWA:fin -->/) || [""])[0];
+const pwaEn = B => PWA.replace(/href="(?![a-z]+:|\/)/g, `href="${B}`);
 
 function paginaLibro(l){
   const lang = l.idioma, x = TX[lang];
@@ -250,6 +254,7 @@ function paginaLibro(l){
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>${esc(titulo)}</title>
 ${FAVICON}
+${pwaEn(B)}
 <meta name="description" content="${esc(descripcion)}">
 <meta name="color-scheme" content="light dark">
 <link rel="canonical" href="${urlLibro(l)}">${Object.keys(porId(l.id).versiones || {}).length ? [porId(l.id), ...Object.keys(porId(l.id).versiones).map(k => vista(porId(l.id), k))].map(p => `
@@ -384,6 +389,16 @@ if (!conCatalogo.includes("<!-- CATALOGO:inicio")) throw new Error("index.html n
 const indexNuevo = conCatalogo.replace(/<!-- JSONLD:inicio[\s\S]*?<!-- JSONLD:fin -->/, bloque);
 if (indexNuevo === conCatalogo && !INDEX.includes("<!-- JSONLD:inicio")) throw new Error("index.html no tiene las marcas JSONLD:inicio y JSONLD:fin");
 if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
+
+// ---------- sw.js ----------
+// La VERSION sale de index.html y datos.js: si cambian, el navegador instala el service worker
+// nuevo y este borra la caché vieja, así la app instalada no se queda con el catálogo anterior.
+{
+  const huella = require("crypto").createHash("sha1").update(indexNuevo + leer("datos.js").replace(/\r\n/g, "\n")).digest("hex").slice(0, 10);
+  const sw = leer("sw.js").replace(/\r\n/g, "\n");
+  if (!/const VERSION = "fenix-[^"]*";/.test(sw)) throw new Error('sw.js no tiene const VERSION = "fenix-...";');
+  escribirSiCambia("sw.js", sw.replace(/const VERSION = "fenix-[^"]*";/, `const VERSION = "fenix-${huella}";`));
+}
 
 // ---------- sitemap.xml ----------
 const hoy = new Date().toISOString().slice(0, 10);
