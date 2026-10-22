@@ -125,9 +125,9 @@
 <main class="wrap">
   <div class="ficha">
     <div class="lado"><img src="../../img/portadas/preparacion-para-la-muerte.jpg" alt="Juan de Valdés Leal, «In ictu oculi», 1672" width="400" height="600">
-      <div class="botones"><a class="btn prim" href="../../libros/ligorio-preparacion-para-la-muerte.epub" download>Descargar EPUB</a>
-        <a class="btn prim" href="../../libros/ligorio-preparacion-para-la-muerte.pdf" download>Descargar PDF</a></div>
-      <p class="ayuda">¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.</p>
+      <div class="botones"><a class="btn prim" href="../../libros/ligorio-preparacion-para-la-muerte.epub" data-archivo download>Descargar EPUB</a>
+        <a class="btn prim" href="../../libros/ligorio-preparacion-para-la-muerte.pdf" data-archivo target="_blank" rel="noopener">Descargar PDF</a></div>
+      <p class="ayuda">¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.</p>
     </div>
     <div class="cabeza">
       
@@ -161,6 +161,36 @@
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>
+<!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
+<style>
+.aviso-epub{position:fixed; left:16px; right:16px; bottom:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 system-ui,sans-serif}
+.aviso-epub p{margin:0; flex:1}
+.aviso-epub a{color:var(--vino); font-weight:600}
+.aviso-epub button{flex:none; width:40px; height:40px; border:0; background:none; color:var(--muted); font-size:24px; line-height:1; cursor:pointer}
+</style>
+<script>
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest('a[download][href$=".epub"]');
+  if (!a) return;
+  var ua = navigator.userAgent, android = /Android/.test(ua), ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (!android && !ios) return;
+  var en = /^en/.test(document.documentElement.lang), play = "https://play.google.com/store/apps/details?id=com.google.android.apps.books";
+  var html = android
+    ? (en ? 'The book is saved in <b>Downloads</b>. To read it, tap the download notice and choose <b>Google Play Books</b>. Don\'t have it? <a href="' + play + '" target="_blank" rel="noopener">Install it for free</a>. The PDF, instead, opens straight away.'
+          : 'El libro queda en <b>Descargas</b>. Para leerlo, toca el aviso de la descarga y elige <b>Google Play Libros</b>. ¿No la tienes? <a href="' + play + '" target="_blank" rel="noopener">Instálala gratis</a>. El PDF, en cambio, se abre directo.')
+    : (en ? 'Tap <b>Download</b>. Then open it from Safari\'s downloads (the ↓ arrow), tap Share and choose <b>Books</b>. The PDF, instead, opens straight away.'
+          : 'Toca <b>Descargar</b>. Después ábrelo desde las descargas de Safari (la flecha ↓), toca Compartir y elige <b>Libros</b>. El PDF, en cambio, se abre directo.');
+  var v = document.querySelector(".aviso-epub");
+  if (v) v.remove();
+  v = document.createElement("div");
+  v.className = "aviso-epub"; v.setAttribute("role", "status");
+  v.innerHTML = "<p>" + html + '</p><button type="button" aria-label="' + (en ? "Close" : "Cerrar") + '">×</button>';
+  v.querySelector("button").onclick = function(){ v.remove(); };
+  // Dentro del diálogo abierto (la ficha es modal y tapa todo lo demás).
+  (a.closest("dialog") || document.body).appendChild(v);
+});
+</script>
+<!-- AVISO_EPUB:fin -->
 <!-- MEDICION:inicio - GoatCounter: cuenta visitas y clics de descarga sin cookies ni datos personales. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
 <script>
 window.goatcounter = {path: function(p){ return p + location.hash; }};
@@ -168,7 +198,7 @@ document.addEventListener("click", function(e){
   var a = e.target.closest && e.target.closest("a.btn[href]");
   if (!a || !window.goatcounter.count) return;
   var externo = a.host && a.host !== location.host;
-  if (!a.hasAttribute("download") && !externo) return;
+  if (!a.hasAttribute("download") && !a.hasAttribute("data-archivo") && !externo) return;
   var libro = (location.hash.match(/libro\/([^/?&]+)/) || location.pathname.match(/libro\/([^/]+)/) || [0, "sin-libro"])[1];
   goatcounter.count({path: "clic/" + libro + "/" + a.textContent.trim().replace(/\s+/g, " "), title: a.href, event: true});
 });

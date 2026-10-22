@@ -74,7 +74,7 @@ const TX = {
     cat: { lectura: "Lectura espiritual", oracion: "Oración", novela: "Novelas", teatro: "Teatro", poesia: "Poesía", ensayo: "Ensayo e historia" },
     biblioteca: "Biblioteca gratuita", verTodo: "Ver toda la biblioteca", abrir: "Abrir en la biblioteca",
     descargar: "Descargar", enLinea: "Leer en línea", comprar: "Comprar",
-    ayuda: "¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.",
+    ayuda: "¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.",
     porque: "Por qué leerlo", resumen: "Resumen", citas: "Citas", masCitas: "Ver {n} citas más", moral: "Valoración moral", sinDelibris: "Sin valoración en Delibris",
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
@@ -92,7 +92,7 @@ const TX = {
     cat: { lectura: "Spiritual reading", oracion: "Prayer", novela: "Novels", teatro: "Drama", poesia: "Poetry", ensayo: "Essays and history" },
     biblioteca: "Free library", verTodo: "See the whole library", abrir: "Open in the library",
     descargar: "Download", enLinea: "Read online", comprar: "Buy",
-    ayuda: "Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.",
+    ayuda: "Which one? The PDF opens straight away in the browser, on any phone or computer. The EPUB is saved in Downloads and is read with a reading app (Google Play Books on Android, Books on iPhone, Kindle or Kobo), which lets you enlarge the text.",
     porque: "Why read it", resumen: "Summary", citas: "Quotes", masCitas: "See {n} more quotes", moral: "Moral rating", sinDelibris: "Not rated by Delibris",
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
@@ -190,6 +190,8 @@ document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.da
 
 // La medición (GoatCounter) se copia tal cual del bloque MEDICION de index.html, para que haya una sola versión.
 const MEDICION = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- MEDICION:inicio[\s\S]*?<!-- MEDICION:fin -->/) || [""])[0];
+// Igual el aviso de qué aplicación abre el EPUB en el celular (bloque AVISO_EPUB de index.html).
+const AVISO_EPUB = (fs.readFileSync(path.join(RAIZ, "index.html"), "utf8").match(/<!-- AVISO_EPUB:inicio[\s\S]*?<!-- AVISO_EPUB:fin -->/) || [""])[0];
 
 function paginaLibro(l){
   const lang = l.idioma, x = TX[lang];
@@ -201,7 +203,7 @@ function paginaLibro(l){
   const B = l._base || "../../";
   const inicio = B + (lang === "en" ? "?l=en" : "");
   const botones = [
-    ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" download>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
+    ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${f === "pdf" ? `target="_blank" rel="noopener"` : "download"}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
     ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
   ];
@@ -299,6 +301,7 @@ ${JSON.stringify(ld, null, 2)}
 </main>
 <footer><div class="wrap">${esc(x.pie)}</div></footer>
 ${SCRIPT_TEMA}
+${AVISO_EPUB}
 ${MEDICION}
 </body>
 </html>

@@ -1115,6 +1115,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .hero h1{font-size:clamp(38px,6.6vw,68px); line-height:1.04; letter-spacing:-.5px; margin-bottom:16px; text-wrap:balance; text-shadow:0 2px 20px rgba(0,0,0,.65)}
   .hero .eyebrow{color:#e8b04a}
   .hero .lede{color:#dccdb7}
+.hero .legal{margin:12px 0 0; max-width:520px; padding:2px 0 2px 12px; border-left:3px solid #e8b04a; font:600 15px/1.45 system-ui,sans-serif; color:#f6ecd9}
   .hero .btn{background:rgba(255,248,236,.06); color:#f6ecd9; border-color:rgba(255,240,210,.35)}
   .hero .btn.prim{background:#e8b04a; color:#1d1206; border-color:transparent}
   .hero .btn:hover{border-color:#e8b04a}
@@ -1529,6 +1530,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
           <p class="eyebrow" data-i18n="hero.eyebrow">Biblioteca digital gratuita</p>
           <h1 data-i18n="hero.titulo">Libros que vuelven a la vida</h1>
           <p class="lede" data-i18n="hero.lede">Clásicos escogidos uno a uno, gratis en EPUB y PDF, con citas y valoración moral.</p>
+          <p class="legal" data-i18n="hero.legal">Todo es legal: solo publicamos libros de dominio público o con permiso de su titular. Nada es pirata.</p>
           <div class="acciones">
             <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
             <a class="btn" href="#todos" data-i18n="hero.buscar">Buscar cualquier libro</a>
@@ -1976,10 +1978,11 @@ function iniciar(){
       "enc.copiado":"Copied","enc.copiarLibro":"Copy prompt","enc.reservado":"In preparation","enc.estimada":"Not reviewed by Delibris; rating estimated by Fénix",
       "enc.copiarError":"Could not copy: select the text and copy it by hand.",
       "ed.proximo":"We are working on new translations. If you would like to help, further down we explain how to join as an editor, or how to bind a book with your AI.","x.edFenix":"Fénix edition","x.queHicimos":"What we did","x.verLibro":"See the book",
-      "x.ayuda":"Which one? The PDF opens on any phone or computer. The EPUB is for reading apps (Google Play Books, Apple Books, Kindle or Kobo) and lets you enlarge the text.","x.paginaLibro":"Page of this book (to share)",
+      "x.ayuda":"Which one? The PDF opens straight away in the browser, on any phone or computer. The EPUB is saved in Downloads and is read with a reading app (Google Play Books on Android, Books on iPhone, Kindle or Kobo), which lets you enlarge the text.","x.paginaLibro":"Page of this book (to share)",
       "doc.titulo":"Proyecto Fénix · Good books, free and hand-picked",
       "hero.eyebrow":"A free digital library","hero.titulo":"Books brought back to life",
       "hero.lede":"Classics chosen one by one, free in EPUB and PDF, with quotes and a moral rating.",
+      "hero.legal":"Everything is legal: we only publish books in the public domain or with the permission of their rights holder. Nothing is pirated.",
       "hero.ver":"Browse the library","hero.buscar":"Search any book",
       "hero.cLibros":"books in the catalogue","hero.cCitas":"hand-picked quotes","hero.cPublicidad":"No ads, no sign-up",
       "hero.imagen":"A phoenix rising from its ashes",
@@ -2023,7 +2026,7 @@ function iniciar(){
       "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
       "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.masCitas":"Ver {n} citas más","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
       "x.edFenix":"Edición Fénix","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
-      "x.ayuda":"¿Cuál elegir? El PDF se abre en cualquier celular o computador. El EPUB es para aplicaciones de lectura (Google Play Libros, Apple Libros, Kindle o Kobo) y deja agrandar la letra.",
+      "x.ayuda":"¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos tu mensaje.","x.fallo":"No se pudo enviar. Inténtalo de nuevo en un momento.","x.verIn":"Ver en",
@@ -2254,12 +2257,16 @@ function iniciar(){
   });
   document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro, .fila[data-id], .ed[data-id]"); if (a && e.key === "Enter") irALibro(a.dataset.id); });
 
+  // El PDF se abre en el visor del navegador (con `download`, en el celular solo quedaba en Descargas);
+  // el EPUB se descarga y el bloque AVISO_EPUB explica con qué aplicación abrirlo.
+  const botonArchivo = (f, url) => `<a class="btn prim" href="${esc(url)}" data-archivo ${f === "pdf" ? `target="_blank" rel="noopener"` : "download"}>${esc(t("x.leer"))} ${f.toUpperCase()}</a>`;
+
   // ---------- ficha del libro ----------
   function abrirFicha(id){
     const l = porId(id); if (!l) return;
     id = l.id; // un id viejo (alias) abre la ficha nueva
     const desc = [
-      ...Object.entries(archivosEn(l)).map(([f, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${f.toUpperCase()}</a>`),
+      ...Object.entries(archivosEn(l)).map(([f, url]) => botonArchivo(f, url)),
       ...[...externosEn(l)].sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
       ...comprarEn(l).map(c => `<a class="btn" href="${esc(c.url)}" target="_blank" rel="noopener">${esc(t("x.comprar"))} · ${esc(c.texto)}</a>`)
     ].join("");
@@ -2462,7 +2469,7 @@ function iniciar(){
     const archivos = f ? Object.entries(archivosEn(f)) : [];
     const externos = f ? externosEn(f) : [];
     const acciones = (archivos.length || externos.length)
-      ? [...archivos.map(([fm, url]) => `<a class="btn prim" href="${esc(url)}" download>${esc(t("x.leer"))} ${fm.toUpperCase()}</a>`),
+      ? [...archivos.map(([fm, url]) => botonArchivo(fm, url)),
          ...externos.map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t("x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),
          `<a class="btn" href="${esc(rutaLibro(f))}">${esc(t("todos.verFicha"))}</a>`].join("")
       : `<button class="btn prim" type="button" id="btnSolicitar">${esc(t("todos.solicitar"))}</button>`;
@@ -2769,6 +2776,36 @@ function iniciar(){
   if (abrir) irALibro(abrir);
 }
 </script>
+<!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
+<style>
+.aviso-epub{position:fixed; left:16px; right:16px; bottom:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 system-ui,sans-serif}
+.aviso-epub p{margin:0; flex:1}
+.aviso-epub a{color:var(--vino); font-weight:600}
+.aviso-epub button{flex:none; width:40px; height:40px; border:0; background:none; color:var(--muted); font-size:24px; line-height:1; cursor:pointer}
+</style>
+<script>
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest('a[download][href$=".epub"]');
+  if (!a) return;
+  var ua = navigator.userAgent, android = /Android/.test(ua), ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (!android && !ios) return;
+  var en = /^en/.test(document.documentElement.lang), play = "https://play.google.com/store/apps/details?id=com.google.android.apps.books";
+  var html = android
+    ? (en ? 'The book is saved in <b>Downloads</b>. To read it, tap the download notice and choose <b>Google Play Books</b>. Don\'t have it? <a href="' + play + '" target="_blank" rel="noopener">Install it for free</a>. The PDF, instead, opens straight away.'
+          : 'El libro queda en <b>Descargas</b>. Para leerlo, toca el aviso de la descarga y elige <b>Google Play Libros</b>. ¿No la tienes? <a href="' + play + '" target="_blank" rel="noopener">Instálala gratis</a>. El PDF, en cambio, se abre directo.')
+    : (en ? 'Tap <b>Download</b>. Then open it from Safari\'s downloads (the ↓ arrow), tap Share and choose <b>Books</b>. The PDF, instead, opens straight away.'
+          : 'Toca <b>Descargar</b>. Después ábrelo desde las descargas de Safari (la flecha ↓), toca Compartir y elige <b>Libros</b>. El PDF, en cambio, se abre directo.');
+  var v = document.querySelector(".aviso-epub");
+  if (v) v.remove();
+  v = document.createElement("div");
+  v.className = "aviso-epub"; v.setAttribute("role", "status");
+  v.innerHTML = "<p>" + html + '</p><button type="button" aria-label="' + (en ? "Close" : "Cerrar") + '">×</button>';
+  v.querySelector("button").onclick = function(){ v.remove(); };
+  // Dentro del diálogo abierto (la ficha es modal y tapa todo lo demás).
+  (a.closest("dialog") || document.body).appendChild(v);
+});
+</script>
+<!-- AVISO_EPUB:fin -->
 <!-- MEDICION:inicio - GoatCounter: cuenta visitas y clics de descarga sin cookies ni datos personales. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
 <script>
 window.goatcounter = {path: function(p){ return p + location.hash; }};
@@ -2776,7 +2813,7 @@ document.addEventListener("click", function(e){
   var a = e.target.closest && e.target.closest("a.btn[href]");
   if (!a || !window.goatcounter.count) return;
   var externo = a.host && a.host !== location.host;
-  if (!a.hasAttribute("download") && !externo) return;
+  if (!a.hasAttribute("download") && !a.hasAttribute("data-archivo") && !externo) return;
   var libro = (location.hash.match(/libro\/([^/?&]+)/) || location.pathname.match(/libro\/([^/]+)/) || [0, "sin-libro"])[1];
   goatcounter.count({path: "clic/" + libro + "/" + a.textContent.trim().replace(/\s+/g, " "), title: a.href, event: true});
 });
