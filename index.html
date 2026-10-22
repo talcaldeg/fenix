@@ -1161,6 +1161,17 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   /* Celulares: el fondo en 860 px (57 KB) en vez del de 1072 px. */
   @media (max-width:480px){.hero .fondo{background-image:url(img/inicio-fenix-movil.webp)}}
   .hero .acciones{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px}
+  /* Buscador del inicio: la portada es oscura en los dos temas; la lista sale con los colores del tema. */
+  .hero-buscar{display:flex; gap:8px; margin-top:24px; max-width:520px}
+  .hero-buscar .combo{flex:1 1 auto; min-width:0}
+  .hero-buscar input{width:100%; padding:12px 14px; border:1px solid rgba(255,240,210,.35); border-radius:10px; background:rgba(255,248,236,.08); color:#f6ecd9; font:16px/1.3 system-ui,sans-serif}
+  .hero-buscar input{color-scheme:dark}
+  .hero-buscar input::placeholder{color:#c9b9a2}
+  .hero-buscar input:focus{outline:2px solid #e8b04a; outline-offset:1px; border-color:transparent}
+  .hero-buscar .combo-lista{max-height:340px}
+  .hero-buscar .combo-lista li.todos{border-top:1px solid var(--line); margin-top:4px; padding-top:10px; color:var(--vino); font-weight:600}
+  .hero-buscar .combo-lista li.vacio + li.todos{border-top:0; margin-top:0}
+  .hero-buscar + .acciones{margin-top:14px}
 
   .accesos{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
   @media (max-width:760px){.accesos{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}}
@@ -1557,6 +1568,13 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
           <h1 data-i18n="hero.titulo">Libros que vuelven a la vida</h1>
           <p class="lede" data-i18n="hero.lede">Clásicos escogidos uno a uno, gratis en EPUB y PDF, con citas y valoración moral.</p>
           <p class="legal" data-i18n="hero.legal">Todo es legal: solo publicamos libros de dominio público o con permiso de su titular. Nada es pirata.</p>
+          <form class="hero-buscar" id="hForm" role="search" autocomplete="off">
+            <div class="combo">
+              <input type="search" id="hBuscar" aria-label="Buscar un libro" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="hLista" placeholder="Busca un título o un autor" data-i18n-ph="hero.buscarPh">
+              <ul class="combo-lista" id="hLista" role="listbox" hidden></ul>
+            </div>
+            <button class="btn prim" type="submit" data-i18n="todos.buscarBtn">Buscar</button>
+          </form>
           <div class="acciones">
             <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
             <a class="btn" href="#todos" data-i18n="hero.buscar">Buscar cualquier libro</a>
@@ -2022,7 +2040,7 @@ function iniciar(){
       "hero.eyebrow":"A free digital library","hero.titulo":"Books brought back to life",
       "hero.lede":"Classics chosen one by one, free in EPUB and PDF, with quotes and a moral rating.",
       "hero.legal":"Everything is legal: we only publish books in the public domain or with the permission of their rights holder. Nothing is pirated.",
-      "hero.ver":"Browse the library","hero.buscar":"Search any book",
+      "hero.ver":"Browse the library","hero.buscar":"Search any book","hero.buscarPh":"Search for a title or an author","hero.buscarAria":"Search for a book","hero.sinFenix":"Not in Fénix yet.","hero.buscarTodos":"Search all books for “{q}” →",
       "hero.cLibros":"books in the catalogue","hero.cCitas":"hand-picked quotes","hero.cPublicidad":"No ads, no sign-up",
       "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
@@ -2061,6 +2079,7 @@ function iniciar(){
       "x.leer":"Descargar","x.enLinea":"Leer en línea","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.porque":"Por qué leerlo","x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos",
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
+      "hero.buscarAria":"Buscar un libro","hero.sinFenix":"Todavía no está en Fénix.","hero.buscarTodos":"Buscar «{q}» en todos los libros →",
       "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
       "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
       "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.masCitas":"Ver {n} citas más","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
@@ -2093,6 +2112,7 @@ function iniciar(){
     $$("[data-i18n]").forEach(el => el.textContent = lang === "es" ? originales[el.dataset.i18n] : t(el.dataset.i18n));
     $$("[data-i18n-ph]").forEach(el => el.placeholder = lang === "es" ? originales[el.dataset.i18nPh] : t(el.dataset.i18nPh));
     $("#btnIdioma").textContent = lang === "es" ? "English" : "Español";
+    $("#hBuscar").setAttribute("aria-label", t("hero.buscarAria"));
     pintarTodo();
   }
 
@@ -2486,6 +2506,60 @@ function iniciar(){
     }
   }
   $("#fTodos").addEventListener("submit", e => { e.preventDefault(); buscarObras(false); });
+
+  // ---------- buscador del inicio ----------
+  // Sugiere libros de Fénix mientras se escribe (cada uno abre su ficha) y siempre ofrece buscar en
+  // todos los libros. Enter sin elegir: la biblioteca filtrada si algo coincide; si no, el catálogo mundial.
+  (function(){
+    const entrada = $("#hBuscar"), lista = $("#hLista"), MAX = 6;
+    const sin = s => String(s || "").toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
+    let vistos = [], activo = -1;
+    const coinciden = q => { const pal = sin(q).split(/\s+/).filter(Boolean); return !pal.length ? [] : libros().filter(l => { const tx = sin(l.titulo + " " + l.autor); return pal.every(p => tx.includes(p)); }); };
+    const cerrar = () => { lista.hidden = true; entrada.setAttribute("aria-expanded", "false"); entrada.removeAttribute("aria-activedescendant"); activo = -1; };
+    const marcar = i => {
+      activo = i;
+      $$("li[data-i]", lista).forEach((li, k) => li.setAttribute("aria-selected", k === i ? "true" : "false"));
+      const li = $(`#hOp${i}`);
+      if (li){ entrada.setAttribute("aria-activedescendant", li.id); li.scrollIntoView({ block:"nearest" }); }
+    };
+    const enBiblioteca = q => {
+      $("#fBuscar").value = q; $("#fCategoria").value = ""; $("#fFormato").value = "";
+      $("#fNoLeidos").checked = false; $("#fFavoritos").checked = false;
+      location.hash = "biblioteca"; pintarCatalogo();
+    };
+    const enTodos = q => { $("#tBuscar").value = q; location.hash = "todos"; buscarObras(false); };
+    const elegir = i => {
+      const q = entrada.value.trim(); cerrar();
+      if (i < vistos.length) irALibro(vistos[i].id); else enTodos(q);
+    };
+    const mostrar = () => {
+      const q = entrada.value.trim();
+      if (!q){ cerrar(); return; }
+      vistos = ordenar(coinciden(q)).slice(0, MAX);
+      lista.innerHTML = (vistos.length
+        ? vistos.map((l, i) => `<li role="option" id="hOp${i}" data-i="${i}">${esc(l.titulo)} <small>- ${esc(l.autor)}</small></li>`).join("")
+        : `<li class="vacio">${esc(t("hero.sinFenix"))}</li>`)
+        + `<li role="option" class="todos" id="hOp${vistos.length}" data-i="${vistos.length}">${esc(t("hero.buscarTodos").replace("{q}", q))}</li>`;
+      lista.hidden = false; entrada.setAttribute("aria-expanded", "true"); activo = -1;
+    };
+    entrada.addEventListener("input", mostrar);
+    entrada.addEventListener("focus", mostrar);
+    entrada.addEventListener("keydown", e => {
+      const n = lista.hidden ? 0 : vistos.length + 1;
+      if (e.key === "ArrowDown"){ e.preventDefault(); if (lista.hidden) mostrar(); else marcar(Math.min(activo + 1, n - 1)); }
+      else if (e.key === "ArrowUp"){ e.preventDefault(); if (n) marcar(Math.max(activo - 1, 0)); }
+      else if (e.key === "Enter" && !lista.hidden && activo >= 0){ e.preventDefault(); elegir(activo); }
+      else if (e.key === "Escape"){ cerrar(); }
+    });
+    lista.addEventListener("mousedown", e => { const li = e.target.closest("li[data-i]"); if (li){ e.preventDefault(); elegir(+li.dataset.i); } });
+    entrada.addEventListener("blur", cerrar);
+    $("#hForm").addEventListener("submit", e => {
+      e.preventDefault();
+      const q = entrada.value.trim(); if (!q) return;
+      cerrar();
+      if (coinciden(q).length) enBiblioteca(q); else enTodos(q);
+    });
+  })();
   $("#tMas").addEventListener("click", () => buscarObras(true));
   document.addEventListener("click", e => { const a = e.target.closest(".fila[data-obra]"); if (a){ e.preventDefault(); location.hash = "obra/" + a.dataset.obra; } });
   document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".fila[data-obra]"); if (a && e.key === "Enter") location.hash = "obra/" + a.dataset.obra; });
