@@ -1102,7 +1102,12 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .ajustes-nav{margin-left:10px}
   .pildora{border:1px solid var(--line); background:var(--card); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
   #btnMenu{display:none}
-  @media (max-width:860px){
+  /* Lupa: lleva al buscador de la portada desde cualquier vista; en el celular queda al lado de Menú. */
+  .ajustes{align-items:center}
+  #btnLupa{display:inline-flex; align-items:center; justify-content:center; padding:6px 11px; color:var(--ink)}
+  #btnLupa svg{width:18px; height:18px}
+  /* El menú en una fila necesita unos 950 px en español (con la lupa): bajo 960 pasa a «Menú». */
+  @media (max-width:960px){
     #btnMenu{display:inline-block}
     nav.menu{display:none; position:absolute; left:0; right:0; top:58px; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column}
     nav.menu.abierto{display:flex}
@@ -1162,7 +1167,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   @media (max-width:480px){.hero .fondo{background-image:url(img/inicio-fenix-movil.webp)}}
   .hero .acciones{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px}
   /* Buscador del inicio: la portada es oscura en los dos temas; la lista sale con los colores del tema. */
-  .hero-buscar{display:flex; gap:8px; margin-top:24px; max-width:520px}
+  .hero-buscar{position:relative; display:flex; gap:8px; margin-top:24px; max-width:520px}
   .hero-buscar .combo{flex:1 1 auto; min-width:0}
   .hero-buscar input{width:100%; padding:12px 14px; border:1px solid rgba(255,240,210,.35); border-radius:10px; background:rgba(255,248,236,.08); color:#f6ecd9; font:16px/1.3 system-ui,sans-serif}
   .hero-buscar input{color-scheme:dark}
@@ -1385,6 +1390,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
       </div>
     </nav>
     <div class="ajustes">
+      <button class="pildora" id="btnLupa" type="button" aria-label="Buscar un libro" title="Buscar un libro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></button>
       <button class="pildora" id="btnMenu" aria-expanded="false">☰ <span data-i18n="nav.menu">Menú</span></button>
     </div>
   </div>
@@ -1571,13 +1577,13 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
           <form class="hero-buscar" id="hForm" role="search" autocomplete="off">
             <div class="combo">
               <input type="search" id="hBuscar" aria-label="Buscar un libro" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="hLista" placeholder="Busca un título o un autor" data-i18n-ph="hero.buscarPh">
-              <ul class="combo-lista" id="hLista" role="listbox" hidden></ul>
             </div>
             <button class="btn prim" type="submit" data-i18n="todos.buscarBtn">Buscar</button>
+            <!-- La lista cuelga del formulario y no del input: toma el ancho de input y botón juntos. -->
+            <ul class="combo-lista" id="hLista" role="listbox" hidden></ul>
           </form>
           <div class="acciones">
             <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
-            <a class="btn" href="#todos" data-i18n="hero.buscar">Buscar cualquier libro</a>
           </div>
           <div class="cifras">
             <div><b id="cLibros"></b><span data-i18n="hero.cLibros">libros en el catálogo</span></div>
@@ -2040,7 +2046,7 @@ function iniciar(){
       "hero.eyebrow":"A free digital library","hero.titulo":"Books brought back to life",
       "hero.lede":"Classics chosen one by one, free in EPUB and PDF, with quotes and a moral rating.",
       "hero.legal":"Everything is legal: we only publish books in the public domain or with the permission of their rights holder. Nothing is pirated.",
-      "hero.ver":"Browse the library","hero.buscar":"Search any book","hero.buscarPh":"Search for a title or an author","hero.buscarAria":"Search for a book","hero.sinFenix":"Not in Fénix yet.","hero.buscarTodos":"Search all books for “{q}” →",
+      "hero.ver":"Browse the library","hero.buscarPh":"Search for a title or an author","hero.buscarAria":"Search for a book","hero.sinFenix":"Not in Fénix yet.","hero.buscarTodos":"Search all books for “{q}” →",
       "hero.cLibros":"books in the catalogue","hero.cCitas":"hand-picked quotes","hero.cPublicidad":"No ads, no sign-up",
       "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
@@ -2113,6 +2119,7 @@ function iniciar(){
     $$("[data-i18n-ph]").forEach(el => el.placeholder = lang === "es" ? originales[el.dataset.i18nPh] : t(el.dataset.i18nPh));
     $("#btnIdioma").textContent = lang === "es" ? "English" : "Español";
     $("#hBuscar").setAttribute("aria-label", t("hero.buscarAria"));
+    $("#btnLupa").setAttribute("aria-label", t("hero.buscarAria")); $("#btnLupa").title = t("hero.buscarAria");
     pintarTodo();
   }
 
@@ -2127,7 +2134,21 @@ function iniciar(){
   });
   $("#btnIdioma").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; almacen.guardar("idioma", lang); aplicarIdioma(); });
   $("#btnMenu").addEventListener("click", () => $("#btnMenu").setAttribute("aria-expanded", $("#menu").classList.toggle("abierto")));
+  const cerrarMenu = () => { $("#menu").classList.remove("abierto"); $("#btnMenu").setAttribute("aria-expanded", "false"); };
   document.addEventListener("click", e => { if (!e.target.closest("#menuMas")) $("#menuMas").open = false; });
+  // Un toque fuera del menú del celular solo lo cierra: no abre lo que quedaba debajo (un libro, un enlace).
+  // La lupa y el botón Menú atienden su propio clic.
+  document.addEventListener("click", e => {
+    if (!$("#menu").classList.contains("abierto") || e.target.closest("#menu, .ajustes")) return;
+    e.preventDefault(); e.stopPropagation(); cerrarMenu();
+  }, true);
+  // Lupa: el buscador es el de la portada; desde otra vista se va al inicio y se deja el cursor en él.
+  $("#btnLupa").addEventListener("click", () => {
+    cerrarMenu();
+    const enfocar = () => { $("#hForm").scrollIntoView({ block:"center" }); $("#hBuscar").focus({ preventScroll:true }); };
+    if ($("#v-inicio").classList.contains("on")) enfocar();
+    else { window.addEventListener("hashchange", () => setTimeout(enfocar, 0), { once:true }); location.hash = "inicio"; }
+  });
 
   // ---------- utilidades ----------
   const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
@@ -2853,7 +2874,7 @@ function iniciar(){
     $$("nav.menu a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + v));
     $("#menuMas").classList.toggle("on", !!$("#menuMas a.on"));
     $("#menuMas").open = false;
-    $("#menu").classList.remove("abierto");
+    cerrarMenu();
   }
   // Cada vista o ficha cuenta como una visita en GoatCounter (ver el bloque de medición al final).
   // popstate (Atrás y Adelante) y hashchange pueden llegar los dos por el mismo cambio: alNavegar lo atiende una vez.

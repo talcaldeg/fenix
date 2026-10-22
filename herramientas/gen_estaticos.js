@@ -95,7 +95,7 @@ const TX = {
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
-    de: "de", tema: "Cambiar a modo claro u oscuro", edFenix: "Edición Fénix", sello: "Recomendado por Fénix",
+    de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", sello: "Recomendado por Fénix",
     y: "y", ebook: "ebook",
     hojear: "Hojear las primeras páginas", primeras: "primeras páginas", volver: "Volver a la ficha del libro",
     finMuestra: "Hasta aquí las primeras páginas. Para seguir leyendo, descarga el libro completo, gratis:",
@@ -116,7 +116,7 @@ const TX = {
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
-    de: "of", tema: "Switch between light and dark mode", edFenix: "Fénix edition", sello: "Recommended by Fénix",
+    de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", sello: "Recommended by Fénix",
     y: "and", ebook: "ebook",
     hojear: "Look inside: the first pages", primeras: "first pages", volver: "Back to the book page",
     finMuestra: "That is the end of the first pages. To keep reading, download the whole book, free:",
@@ -182,6 +182,16 @@ const ESTILO = `
   .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
   .marca{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
   .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
+  /* Lupa: abre un buscador que lleva a la biblioteca filtrada (index.html lee ?q=). */
+  .ajustes{display:flex; align-items:center; gap:6px}
+  /* El buscador cuelga de la barra y no de la lupa: en el celular no se sale por la izquierda. */
+  .barra{position:relative} details.buscar{position:static}
+  details.buscar summary{list-style:none; display:inline-flex; align-items:center; justify-content:center; padding:6px 11px}
+  details.buscar summary::-webkit-details-marker{display:none}
+  details.buscar summary svg{width:18px; height:18px}
+  details.buscar form{position:absolute; right:16px; top:calc(100% - 4px); z-index:20; display:flex; gap:8px; width:min(380px,calc(100vw - 32px)); padding:10px; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  details.buscar input{flex:1 1 auto; min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font:16px/1.3 system-ui,sans-serif}
+  details.buscar .btn{min-height:0; padding:10px 14px; font-size:15px; cursor:pointer}
   main.wrap{padding-top:28px; padding-bottom:48px}
   /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
   .ficha{display:grid; grid-template-columns:320px minmax(0,1fr); grid-template-areas:"lado cabeza" "lado cuerpo"; column-gap:44px; align-items:start}
@@ -209,6 +219,7 @@ const ESTILO = `
 
 const SCRIPT_TEMA = `<script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
+var b=document.querySelector("details.buscar");if(b){b.addEventListener("toggle",function(){if(b.open)setTimeout(function(){b.querySelector("input[name=q]").focus()},0)});document.addEventListener("click",function(e){if(b.open&&!b.contains(e.target))b.open=false});document.addEventListener("keydown",function(e){if(e.key==="Escape")b.open=false})}
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>`;
 
@@ -304,7 +315,7 @@ ${JSON.stringify(ld, null, 2)}
 </style>
 </head>
 <body>
-<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></header>
+<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="${esc(x.buscar)}" title="${esc(x.buscar)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="${B}" method="get" role="search">${lang === "en" ? `<input type="hidden" name="l" value="en">` : ""}<input type="search" name="q" required aria-label="${esc(x.buscar)}" placeholder="${esc(x.buscarPh)}"><button class="btn prim" type="submit">${esc(x.buscarBtn)}</button></form></details><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></div></header>
 <main class="wrap">
   <div class="ficha">
     <div class="lado">${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}
