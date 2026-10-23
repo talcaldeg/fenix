@@ -66,31 +66,49 @@ window.FENIX = {
     },
     {
       id: "one-with-jesus",
-      titulo: "One with Jesus: The Life of Identification with Christ",
+      titulo: "La vida de identificación con Cristo Jesús",
       autor: "Paul de Jaegher, S.J.",
-      anio: "1929",
-      idioma: "en",
+      anio: "1927",
+      idioma: "es",
       categoria: "lectura",
       recomendado: true,
       resumen: {
-        es: "Un libro breve y luminoso sobre la «vida de identificación» con Cristo: dejar que Jesús, presente en el alma por la gracia, viva y ame en nosotros. El autor insiste en que esta unión se apoya en la presencia real de Dios en el alma en gracia, no en una simple amistad o imitación exterior, y la recorre desde los comienzos hasta su plenitud. Termina con la oración para unirse a Jesús que está en la sección de oraciones.",
-        en: "A short, luminous book on the «life of identification» with Christ: letting Jesus, present in the soul by grace, live and love in us. The author insists that this union rests on God's real indwelling in the soul in grace, not on mere friendship or outward imitation, and follows it from its beginnings to its fullness. It closes with the prayer to unite oneself to Jesus found in the prayers section."
+        es: "Un libro breve y luminoso sobre la «vida de identificación» con Cristo: dejar que Jesús, presente en el alma por la gracia, viva y ame en nosotros. El autor insiste en que esta unión se apoya en la presencia real de Dios en el alma en gracia, no en una simple amistad o imitación exterior, y la recorre desde los comienzos hasta su plenitud, con propósitos para la práctica. Termina con la oración para unirse a Jesús que está en la sección de oraciones. Traducción nueva de Proyecto Fénix, publicada con permiso de los jesuitas de Flandes y de los Países Bajos.",
+        en: "A short, luminous book on the «life of identification» with Christ: letting Jesus, present in the soul by grace, live and love in us. The author insists that this union rests on God's real indwelling in the soul in grace, not on mere friendship or outward imitation, and follows it from its beginnings to its fullness, with resolutions for practice. It closes with the prayer to unite oneself to Jesus found in the prayers section. A new Proyecto Fénix translation, published with the permission of the Jesuits of Flanders and the Netherlands."
       },
       porque: {"es":"Para quien ya reza y siente que su relación con Cristo se ha quedado en la admiración o en la costumbre. El libro propone algo más hondo: dejar que Él viva en uno. Es corto y se lee en pocas sesiones, pero conviene volver sobre sus páginas con lápiz en mano, porque pide ser meditado.","en":"For the reader who already prays and feels that the bond with Christ has settled into admiration or habit. The book proposes something deeper: letting Him live in us. It is short and can be read in a few sittings, but it rewards a second pass with a pencil in hand, because it asks to be meditated."},
-      imagen: { src: "img/portadas/one-with-jesus.jpg", credito: { es: "Francisco Ribalta, «Cristo abrazando a san Bernardo», c. 1625", en: "Francisco Ribalta, «Christ Embracing Saint Bernard», c. 1625" }, url: "https://commons.wikimedia.org/wiki/File:Francisco_Ribalta_001.jpg" },
+      imagen: { src: "img/portadas/one-with-jesus-es.jpg", credito: { es: "Francisco Ribalta, «Cristo abrazando a san Bernardo», c. 1625", en: "Francisco Ribalta, «Christ Embracing Saint Bernard», c. 1625" }, url: "https://commons.wikimedia.org/wiki/File:Francisco_Ribalta_001.jpg" },
       citas: [
-        "Powerfully seconding the action of God, it will not be long before they become other Christs.",
-        "May I, fully identified with You, become like another humanity to You.",
-        "My whole spiritual life may then be summed up in dying to self, through love of Jesus, so that he may live and love in me.",
-        "My son, give me your heart, that in you and through you, in a life of union I may love, or rather we may love the Father ardently."
+        "Secundando poderosamente la acción de Dios, no tardarán en hacerse otros Cristos.",
+        "Que yo, plenamente identificado contigo, llegue a ser para Ti como otra humanidad.",
+        "Toda mi vida espiritual puede entonces resumirse en morir a mí mismo, por amor de Jesús, para que Él viva y ame en mí.",
+        "Hijo mío, dame tu corazón, para que en ti y por ti, en una vida de unión, yo ame, o más bien amemos juntos, ardientemente al Padre."
       ],
-      archivos: {},
-      comprar: [
-        { texto: "Barnes & Noble", url: "https://www.barnesandnoble.com/w/one-with-jesus-paul-de-jaegher/1140532926" },
-        { texto: "Amazon (ISBN 9781989905890)", url: "https://www.amazon.com/s?k=9781989905890" }
-      ],
-      fuente: { texto: "Original francés de 1929; traducción inglesa de 1946", url: "https://openlibrary.org/books/OL19427278M" },
+      archivos: { epub: "libros/de-jaegher-la-vida-de-identificacion.epub", pdf: "libros/de-jaegher-la-vida-de-identificacion.pdf" },
+      editorial: { es: "Traducción nueva de Proyecto Fénix, hecha desde la traducción inglesa de 1929 (el original francés de 1927 no está digitalizado), con el prefacio, los cuatro capítulos, los propósitos, la conclusión y la oración final, las notas del autor y cuatro notas del editor, revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición y portada nueva. Se publica gratis con permiso de los jesuitas de Flandes y de los Países Bajos, titulares de los derechos.", en: "A new Proyecto Fénix translation, made from the 1929 English translation (the 1927 French original is not digitized), with the preface, the four chapters, the resolutions, the conclusion and the closing prayer, the author's notes and four editor's notes, reviewed in its doctrinal passages against the Catechism; prepared with the help of artificial intelligence, with an edition note and a new cover. Published free of charge with the permission of the Jesuits of Flanders and the Netherlands, who hold the rights." },
+      fuente: { texto: "Traducción de Proyecto Fénix desde One with Jesus (1929), con permiso de los jesuitas de Flandes y de los Países Bajos; gratis y sin fines comerciales", url: "https://archive.org/details/1953PaulDeJaegherSJOneWithJesus600dpi" },
       delibris: null,
+      versiones: {
+        en: {
+          titulo: "One with Jesus: The Life of Identification with Christ",
+          autor: "Paul de Jaegher, S.J.",
+          anio: "1929",
+          imagen: { src: "img/portadas/one-with-jesus.jpg", credito: { es: "Francisco Ribalta, «Cristo abrazando a san Bernardo», c. 1625", en: "Francisco Ribalta, «Christ Embracing Saint Bernard», c. 1625" }, url: "https://commons.wikimedia.org/wiki/File:Francisco_Ribalta_001.jpg" },
+          citas: [
+            "Powerfully seconding the action of God, it will not be long before they become other Christs.",
+            "May I, fully identified with You, become like another humanity to You.",
+            "My whole spiritual life may then be summed up in dying to self, through love of Jesus, so that he may live and love in me.",
+            "My son, give me your heart, that in you and through you, in a life of union I may love, or rather we may love the Father ardently."
+          ],
+          archivos: {},
+          comprar: [
+            { texto: "Barnes & Noble", url: "https://www.barnesandnoble.com/w/one-with-jesus-paul-de-jaegher/1140532926" },
+            { texto: "Amazon (ISBN 9781989905890)", url: "https://www.amazon.com/s?k=9781989905890" }
+          ],
+          fuente: { texto: "English translation of 1929 (Burns Oates); Newman Press reprint, 1953", url: "https://openlibrary.org/books/OL19427278M" },
+          editorial: null
+        }
+      },
       parecidos: ["marmion-vida-del-alma", "imitacion-de-cristo", "presencia-de-dios"]
     },
     {
