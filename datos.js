@@ -25,7 +25,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "22-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "23-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3881,7 +3881,10 @@ window.FENIX = {
       archivos: {"epub": "libros/austen-pride-and-prejudice.epub", "pdf": "libros/austen-pride-and-prejudice.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 1342 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/1342"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/orgullo-y-prejuicio"},
-      parecidos: ["austen-sense-and-sensibility", "austen-emma", "austen-persuasion"]
+      parecidos: ["austen-sense-and-sensibility", "austen-emma", "austen-persuasion"],
+      versiones: {
+        es: {"titulo": "Orgullo y prejuicio", "autor": "Jane Austen (trad. José Jordán de Urríes y Azara)", "anio": "1813", "resumen": {"es": "La llegada del rico y amable señor Bingley a Netherfield revoluciona a la familia Bennet, que tiene cinco hijas por casar y una madre empeñada en conseguirlo. Isabel, la segunda, viva e ingeniosa, se forma un juicio rápido y adverso del orgulloso señor Darcy, amigo de Bingley, y presta oído a las quejas del encantador Wickham. Una carta inesperada la obliga a revisar todo lo que creía saber. Entre bailes, visitas y cartas, los dos protagonistas aprenden a corregir su orgullo y sus prejuicios.", "en": "The arrival of the rich and amiable Mr. Bingley at Netherfield turns the Bennet household upside down: there are five daughters to marry and a mother set on doing it. Elizabeth, the second, lively and witty, quickly forms a poor opinion of proud Mr. Darcy, Bingley's friend, and listens to the grievances of the charming Wickham. An unexpected letter forces her to rethink everything she believed she knew. Through balls, visits and letters, both learn to correct their pride and their prejudices."}, "citas": ["Es verdad universalmente admitida que un soltero poseedor de buena fortuna tiene que necesitar una mujer.", "con facilidad perdonaría su orgullo si no hubiera mortificado el mío", "Pero la vanidad, no el amor, ha sido mi locura.", "Hasta este momento no me he conocido", "Declaro que no hay placer como la lectura."], "fuente": {"texto": "Traducción de José Jordán de Urríes y Azara, Madrid, Calpe, 1924 (Colección Universal, n.os 958 a 963), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Índice:Orgullo_y_prejuicio_-_Tomo_I_(1924).pdf"}, "imagen": {"src": "img/portadas/austen-pride-and-prejudice-es.jpg", "credito": {"es": "Thomas Lawrence, «Elizabeth Farren, más tarde condesa de Derby», 1790", "en": "Thomas Lawrence, «Elizabeth Farren, Later Countess of Derby», 1790"}, "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_Elizabeth_Farren,_by_Thomas_Lawrence.jpg"}, "archivos": {"epub": "libros/austen-pride-and-prejudice-es.epub", "pdf": "libros/austen-pride-and-prejudice-es.pdf"}, "editorial": {"es": "Edición digital de Proyecto Fénix sobre la traducción de José Jordán de Urríes y Azara (Calpe, 1924), con ortografía actualizada y diálogos entre comillas. Edición al cuidado de Juan Ignacio Alcalde G..", "en": "Proyecto Fénix digital edition of José Jordán de Urríes y Azara's Spanish translation (Calpe, 1924), with updated spelling and dialogue set in quotation marks. Edited by Juan Ignacio Alcalde G.."}}
+      }
     },
     {
       id: "chesterton-the-wisdom-of-father-brown",
@@ -3940,7 +3943,6 @@ window.FENIX = {
   // `estimada` { valor, genero } si Delibris no la reseña. reservado: "dd-mmm-aaaa" cuando alguien la
   // toma (formulario «Fénix - encuadernador»). El sitio oculta sola la que ya está en ese idioma.
   buscados: [
-    { titulo: {"es": "Orgullo y prejuicio"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/orgullo-y-prejuicio"} },
     { titulo: {"es": "Sentido y sensibilidad"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sentido-y-sensibilidad"} },
     { titulo: {"es": "Emma"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"} },
     { titulo: {"es": "Persuasión"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },
