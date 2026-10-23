@@ -173,6 +173,7 @@ def revisar(carpeta: Path):
     if not (tdir / "nota.md").exists():
         E.append("falta texto/nota.md («Nota de esta edición»)")
     todo = ""
+    antiguas = []
     for p in mds:
         t = p.read_text(encoding="utf-8")
         todo += "\n" + t
@@ -187,6 +188,12 @@ def revisar(carpeta: Path):
             n = t.count('"')
             if n:
                 A.append(f"{p.name}: {n} comillas rectas (en español van «»)")
+            n = len(re.findall(r"“[^”«»\n]*»|«[^»“”\n]*”", t))
+            if n:
+                A.append(f"{p.name}: {n} citas que abren con un tipo de comilla y cierran con otro (“...» o «...”)")
+            antiguas += re.findall(
+                r"(?<!\w)(fué|fuí|dió|vió|sólo|éste|ésta|éstos|éstas|ése|ésa|ésos|ésas|aquél|aquélla|aquéllos|aquéllas|\w+(?:ió|ó)(?:se|le|les|lo|la|los|las|me|te|nos))(?!\w)",
+                t)
         for patron, que in ((r"Project Gutenberg|\*\*\* ?(START|END) OF", "restos de Gutenberg"),
                             (r"\[Illustration|\[Ilustraci", "marcas de ilustración"),
                             (r"^\s*\d{1,4}\s*$", "líneas que son solo un número (¿páginas?)"),
@@ -194,6 +201,9 @@ def revisar(carpeta: Path):
             n = len(re.findall(patron, t, re.M))
             if n:
                 A.append(f"{p.name}: {n} {que}")
+    if antiguas:
+        A.append(f"texto: {len(antiguas)} tildes de la ortografía antigua ({', '.join(sorted(set(antiguas))[:5])}...);"
+                 " hoy: fue, dio, solo, este, volviose")
     if not re.search(r"^## ", todo, re.M):
         E.append("texto/: ningún capítulo empieza con «## »")
     base = plano(todo)

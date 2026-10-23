@@ -109,7 +109,9 @@ Lo lee `herramientas/md_a_epub.py` (mira su encabezado). Lo esencial:
   Gutenberg (licencias, `[Illustration]`).
 - En español: comillas «», nunca raya larga (—) ni semirraya (–) (los diálogos van con «»),
   signos ¿ ¡ de apertura y ortografía de la RAE actual. En una edición antigua (vías B y C) se
-  actualizan tildes y ortografía («á» → «a», «fué» → «fue») sin cambiar ninguna palabra.
+  actualizan tildes y ortografía («á» → «a», «fué» → «fue», «volvióse» → «volviose») sin
+  cambiar ninguna palabra. Una cita dentro de un diálogo va con “ ” y cierra con el mismo tipo
+  de comilla con que abrió.
 - En inglés: comillas tipográficas “ ” y ‘ ’; se conserva la ortografía del original.
 - `nota.md`: dos a cuatro párrafos sin título. Qué edición se reproduce o desde qué original se
   tradujo (con año y editorial), qué se cambió, que se preparó con ayuda de inteligencia
@@ -125,7 +127,8 @@ python herramientas/md_a_epub.py entrega/<id>/texto entrega/<id>/prueba.epub --t
 ```
 
 (`--sin-traduccion` si es una traducción ajena; `--derechos` con el texto de la licencia.) El
-`prueba.epub` es para ti: no va en el `.zip`.
+`prueba.epub` es para que tu usuario vea el libro antes de entregarlo (paso 7): no va en el
+`.zip`, porque Fénix lo vuelve a armar con la portada y el exlibris.
 
 ### ficha.json
 
@@ -188,15 +191,20 @@ cambiaste en el texto; palabras del libro; dudas que quedaron (cita corta y cóm
 python herramientas/revisar_entrega.py entrega/<id>
 ```
 
-Corrige todo lo que marque como ERROR y vuelve a correrlo hasta que diga «Entrega lista». Luego
-comprime la carpeta (sin `prueba.epub`) en `<id>.zip`.
+Corrige todo lo que marque como ERROR y los AVISO que de verdad sean errores, y vuelve a
+correrlo hasta que diga «Entrega lista». Si cambiaste el texto, vuelve a armar `prueba.epub`.
+Luego comprime la carpeta (sin `prueba.epub`) en `<id>.zip`.
 
 ## 7. Mensaje final a tu usuario
 
-En no más de 8 líneas: la ruta del `.zip`, la vía elegida, cuántas palabras tiene el libro y
+En no más de 10 líneas: la ruta del `.zip`, la vía elegida, cuántas palabras tiene el libro y
 estos pasos para entregarlo:
 
-1. Subir el `.zip` a Google Drive, Dropbox, OneDrive o WeTransfer, con enlace que cualquiera
+1. Abrir `prueba.epub` (da su ruta completa) en su lector (Apple Books, Google Play Libros,
+   Calibre o Thorium) y hojear el primer capítulo, uno del medio con diálogos y el final. Si ve
+   algo raro, que te lo diga antes de entregar. Es una vista previa: sin portada, que la pone
+   Fénix.
+2. Subir el `.zip` a Google Drive, Dropbox, OneDrive o WeTransfer, con enlace que cualquiera
    pueda abrir.
-2. Enviar el enlace en https://talcaldeg.github.io/fenix/#encuadernadores (opción «Entrego el
+3. Enviar el enlace en https://talcaldeg.github.io/fenix/#encuadernadores (opción «Entrego el
    libro terminado»).
