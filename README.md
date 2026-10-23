@@ -67,7 +67,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   de Tomás del 22-oct-2026, con el riesgo de un aviso DMCA asumido; si llega, se baja y queda
   como enlace); en inglés, libre en Chile y en EE.UU. Lo demás va como `externos` (descarga
   legal en otro sitio) o `comprar`.
-- `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`.
+- `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`, con el índice y sus enlaces
+  al capítulo (PyMuPDF los deja todos en la portada si no se reponen) y el índice lateral del
+  lector de PDF. Antes corre `herramientas/anclas.py`, que corrige en el EPUB los enlaces a un
+  ancla colgada al final del capítulo anterior (defecto de algunos EPUB de Gutenberg).
 - `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
