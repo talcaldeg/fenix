@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-10-22</lastmod>
+    <lastmod>2026-10-23</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/</loc>
@@ -649,6 +649,10 @@
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/es/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/chesterton-the-wisdom-of-father-brown/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
@@ -762,6 +766,10 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/muestra/</loc>
+    <lastmod>2026-10-23</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/es/muestra/</loc>
     <lastmod>2026-10-23</lastmod>
   </url>
   <url>
