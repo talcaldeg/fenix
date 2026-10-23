@@ -4,6 +4,8 @@ Esta es una traducción nueva de Proyecto Fénix, hecha directamente del francé
 
 Saint-Exupéry desapareció en vuelo en julio de 1944, y en Chile su obra es de dominio público desde el 1 de enero de 2015. Las traducciones al español que circulan tienen sus propios derechos, por eso esta edición no sigue ninguna: se tradujo del original. Los dibujos son los del autor, en el lugar que ocupan en la primera edición.
 
+Los dibujos se tomaron del escaneo de la edición de Gallimard de 1984 que está en Internet Archive (archive.org).
+
 La traducción busca la sencillez del original: frases cortas, el tuteo entre el principito y quienes encuentra, y el «ustedes» con que el narrador habla al lector. Se mantuvieron las palabras que el libro vuelve a usar a propósito, como «personas mayores» y «domesticar».
 
 La traducción se preparó con ayuda de inteligencia artificial y se cotejó párrafo por párrafo con el original francés. Si encuentras un error, puedes avisarlo desde el sitio de Proyecto Fénix.
