@@ -2315,11 +2315,14 @@ function iniciar(){
     // En el inicio solo va lo que tiene EPUB; lo demás sigue en la biblioteca.
     // Cada bloque muestra un múltiplo de 4 para que no quede una fila coja; si tiene menos de 4,
     // los muestra todos centrados. «Editorial Fénix» trae las ediciones propias que no
-    // salieron en el sello, primero las que tienen sello y después en el orden del catálogo.
+    // salieron en el sello, primero las que tienen sello y después en el orden del catálogo; si
+    // falta para completar la fila, repite ediciones del sello (Imitación de Cristo primero).
     const filasEnteras = xs => xs.length < 4 ? xs : xs.slice(0, xs.length - xs.length % 4);
     const todosSello = (D.recomendadosFenix || []).map(porId).filter(l => l && visible(l) && tieneEpub(l));
     const selloF = filasEnteras(todosSello);
-    const ediciones = filasEnteras(ordenar(libros().filter(l => l.editorial && tieneEpub(l) && !selloF.includes(l))));
+    const propias = ordenar(libros().filter(l => l.editorial && tieneEpub(l) && !selloF.includes(l)));
+    const relleno = [...new Set([porId("imitacion-de-cristo"), ...selloF])].filter(l => l && l.editorial && selloF.includes(l));
+    const ediciones = filasEnteras(propias.length ? [...propias, ...relleno.slice(0, (4 - propias.length % 4) % 4)] : []);
     $("#selloFenix").innerHTML = selloF.map(tarjeta).join("");
     $("#bloqueSello").hidden = !selloF.length;
     $("#recomendados").innerHTML = ediciones.map(tarjeta).join("");
