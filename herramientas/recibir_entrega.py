@@ -107,6 +107,8 @@ def ficha_js(f: dict, epub: Path) -> str:
     ed = con_credito(f)
     if ed:
         campos.append(("editorial", js(ed)))
+    elif f.get("credito"):
+        campos.append(("encuadernador", js(f["credito"])))
     campos.append(("parecidos", js(f.get("parecidos") or [])))
     return "    {\n" + ",\n".join(f"      {k}: {v}" for k, v in campos) + "\n    }"
 

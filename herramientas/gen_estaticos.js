@@ -113,7 +113,7 @@ const TX = {
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
-    de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", sello: "Recomendado por Fénix",
+    de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", preparado: "Preparado por", sello: "Recomendado por Fénix",
     y: "y", ebook: "ebook", menu: "Menú", otroIdioma: "English", tambien: "También en inglés",
     hojear: "Hojear las primeras páginas", primeras: "primeras páginas", volver: "Volver a la ficha del libro",
     finMuestra: "Hasta aquí las primeras páginas. Para seguir leyendo, descarga el libro completo, gratis:",
@@ -134,7 +134,7 @@ const TX = {
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
-    de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", sello: "Recommended by Fénix",
+    de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", preparado: "Prepared by", sello: "Recommended by Fénix",
     y: "and", ebook: "ebook", menu: "Menu", otroIdioma: "Español", tambien: "Also in Spanish",
     hojear: "Look inside: the first pages", primeras: "first pages", volver: "Back to the book page",
     finMuestra: "That is the end of the first pages. To keep reading, download the whole book, free:",
@@ -377,7 +377,7 @@ ${JSON.stringify(ld, null, 2)}
       <p>${esc(l.porque[lang] || l.porque.es)}</p>` : ""}
       <h2>${esc(x.resumen)}</h2>
       <p>${esc(resumen)}</p>
-      ${l.editorial ? `<h2>${esc(x.edFenix)}</h2>\n      <p>${esc(l.editorial[lang] || l.editorial.es)}</p>` : ""}
+      ${l.editorial ? `<h2>${esc(x.edFenix)}</h2>\n      <p>${esc(l.editorial[lang] || l.editorial.es)}</p>` : ""}${l.encuadernador && !l.editorial ? `\n      <h2>${esc(x.preparado)}</h2>\n      <p>${esc(l.encuadernador)}</p>` : ""}
       ${(l.citas || []).length ? `<h2>${esc(x.citas)}</h2>\n      ${l.citas.slice(0, 2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("\n      ")}${l.citas.length > 2 ? `\n      <details class="citas"><summary>${esc(x.masCitas.replace("{n}", l.citas.length - 2))}</summary>${l.citas.slice(2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</details>` : ""}` : ""}
       <h2>${esc(x.moral)}</h2>
       ${d ? `<p><span class="circ" aria-hidden="true">${[1, 2, 3, 4, 5, 6].map(n => `<i class="${n <= d.valor ? "on" : ""}"></i>`).join("")}</span><strong>${d.valor} ${esc(x.de)} 6</strong>: ${esc(textoDelibris(d, lang))}. <a href="${esc(d.url)}" rel="noopener">${esc(x.verEn)}</a></p>` : `<p>${esc(x.sinDelibris)}</p>`}

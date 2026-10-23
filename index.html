@@ -2076,7 +2076,7 @@ function iniciar(){
       "enc.promptLibro":"The book is “{t}”, by {a}, in English.",
       "enc.copiado":"Copied","enc.copiarLibro":"Copy prompt","enc.reservado":"In preparation","enc.estimada":"Not reviewed by Delibris; rating estimated by Fénix",
       "enc.copiarError":"Could not copy: select the text and copy it by hand.",
-      "ed.proximo":"We are working on new translations. If you would like to help, further down we explain how to join as an editor, or how to bind a book with your AI.","x.edFenix":"Fénix edition","x.queHicimos":"What we did","x.verLibro":"See the book",
+      "ed.proximo":"We are working on new translations. If you would like to help, further down we explain how to join as an editor, or how to bind a book with your AI.","x.edFenix":"Fénix edition","x.preparado":"Prepared by","x.queHicimos":"What we did","x.verLibro":"See the book",
       "x.ayuda":"Which one? The PDF opens straight away in the browser, on any phone or computer. The EPUB is saved in Downloads and is read with a reading app (Google Play Books on Android, Books on iPhone, Kindle or Kobo), which lets you enlarge the text.","x.paginaLibro":"Page of this book (to share)",
       "doc.titulo":"Proyecto Fénix · Good books, free and hand-picked",
       "hero.eyebrow":"A free digital library","hero.titulo":"Books brought back to life",
@@ -2125,7 +2125,7 @@ function iniciar(){
       "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","bib.cuenta":"{n} libros","bib.cuenta1":"1 libro","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
       "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
       "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.masCitas":"Ver {n} citas más","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
-      "x.edFenix":"Edición Fénix","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
+      "x.edFenix":"Edición Fénix","x.preparado":"Preparado por","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
       "x.ayuda":"¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
@@ -2418,6 +2418,7 @@ function iniciar(){
       ${l.porque ? `<div class="seccion-ficha"><strong>${esc(t("x.porque"))}</strong><p style="margin:6px 0 0">${esc(l.porque[lang] || l.porque.es)}</p></div>` : ""}
       <div class="seccion-ficha"><strong>${esc(t("x.resumen"))}</strong><p style="margin:6px 0 0">${esc(l.resumen[lang] || l.resumen.es)}</p></div>
       ${l.editorial ? `<div class="seccion-ficha"><strong>${esc(t("x.edFenix"))}</strong><p style="margin:6px 0 0">${esc(l.editorial[lang] || l.editorial.es)}</p></div>` : ""}
+      ${l.encuadernador && !l.editorial ? `<div class="seccion-ficha"><strong>${esc(t("x.preparado"))}</strong><p style="margin:6px 0 0">${esc(l.encuadernador)}</p></div>` : ""}
       ${(l.citas||[]).length ? `<div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div class="citas-ficha">${l.citas.slice(0, 2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}${l.citas.length > 2 ? `<details><summary>${esc(t("x.masCitas").replace("{n}", l.citas.length - 2))}</summary>${l.citas.slice(2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</details>` : ""}</div></div>` : ""}
       <div class="seccion-ficha"><strong>${esc(t("l.moral"))}</strong><div style="margin-top:8px">${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</div></div>
       <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>

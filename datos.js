@@ -17,6 +17,8 @@
 // - porque: «Por qué leerlo», { es, en }: 2 o 3 frases propias sobre a quién le sirve y qué gana el lector
 //   (no repite el resumen). Lo de fe se audita con auditar-teologia.
 // - citas: textuales, cotejadas con el texto del libro.
+// - encuadernador: nombre de quien preparó la ficha (vía A de un encuadernador, sin editorial);
+//   con editorial, el crédito va dentro de ese texto.
 // - editorial: solo si la edición la hizo Proyecto Fénix (traducción, revisión o edición digital);
 //   { es, en } dice qué se hizo. El libro aparece entonces en la sección Editorial.
 // - imagen: portada en img/portadas/<id>.jpg (cuadro de dominio público), con su crédito y enlace;
@@ -3954,6 +3956,7 @@ window.FENIX = {
       archivos: {"epub": "libros/unamuno-niebla.epub", "pdf": "libros/unamuno-niebla.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 49836 (dominio público), sobre la primera edición: Madrid, Renacimiento, 1914", "url": "https://www.gutenberg.org/ebooks/49836"},
       delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/niebla"},
+      encuadernador: "Juan Ignacio Alcalde G.",
       parecidos: ["pardo-bazan-la-sirena-negra", "pardo-bazan-la-quimera", "cervantes-don-quijote"]
     }
   ],
