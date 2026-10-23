@@ -1,7 +1,11 @@
 # -*- coding: utf-8 -*-
 """Revisa el paquete de un encuadernador antes de entregarlo (y Fénix, al recibirlo).
 
-    python herramientas/revisar_entrega.py entrega/<id>
+    python herramientas/revisar_entrega.py entrega/<id> [--arreglar]
+
+--arreglar corrige primero lo mecánico (tildes de la ortografía antigua) y después revisa.
+Todo arreglo que Fénix tuvo que hacer al recibir un paquete se vuelve aquí un ERROR, y si es
+mecánico, parte de --arreglar: así lo paga el agente del encuadernador y no Fénix.
 
 Solo usa la biblioteca estándar de Python, para que corra en cualquier equipo. Las reglas del
 paquete están en editorial/ENCUADERNAR.md. Termina con «Entrega lista» o con la lista de errores.
@@ -17,6 +21,32 @@ RAIZ = Path(__file__).resolve().parent.parent
 CATEGORIAS = {"lectura", "oracion", "novela", "teatro", "poesia", "ensayo"}
 GENEROS = {"Literatura", "Pensamiento", "Espiritualidad"}
 CAMPOS_EPUB = ("titulo", "autor", "subtitulo", "original", "editor", "traduccionFenix", "derechos")
+# Tildes que la RAE ya no pone (fué, sólo, éste, acercóse). Son mecánicas: --arreglar las quita.
+ANTIGUAS = re.compile(
+    r"(?<!\w)(fué|fuí|dió|vió|sólo|éste|ésta|éstos|éstas|ése|ésa|ésos|ésas|aquél|aquélla|aquéllos|aquéllas"
+    r"|\w+(?:ió|ó)(?:se|le|les|lo|la|los|las|me|te|nos))(?!\w)")
+SIN_TILDE = str.maketrans("áéíóúÁÉÍÓÚ", "aeiouAEIOU")
+
+
+def arreglar(carpeta: Path):
+    """Quita las tildes antiguas del texto (solo en español) y de las citas de la ficha."""
+    fp = carpeta / "ficha.json"
+    f = json.loads(fp.read_text(encoding="utf-8"))
+    if f.get("idioma") != "es":
+        return
+    quitar = lambda s: ANTIGUAS.sub(lambda m: m.group(0).translate(SIN_TILDE), s)  # noqa: E731
+    n = 0
+    # nota.md queda fuera: ahí se citan las formas antiguas como ejemplo («fué» por «fue»).
+    for p in sorted(p for p in (carpeta / "texto").glob("*.md") if p.name != "nota.md"):
+        t = p.read_text(encoding="utf-8")
+        n += len(ANTIGUAS.findall(t))
+        if ANTIGUAS.search(t):
+            p.write_text(quitar(t), encoding="utf-8")
+    citas = [quitar(c) for c in f.get("citas", [])]
+    if citas != f.get("citas", []):
+        f["citas"] = citas
+        fp.write_text(json.dumps(f, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    print(f"--arreglar: {n} tildes antiguas quitadas")
 
 
 def ids_fenix():
@@ -191,9 +221,7 @@ def revisar(carpeta: Path):
             n = len(re.findall(r"“[^”«»\n]*»|«[^»“”\n]*”", t))
             if n:
                 A.append(f"{p.name}: {n} citas que abren con un tipo de comilla y cierran con otro (“...» o «...”)")
-            antiguas += re.findall(
-                r"(?<!\w)(fué|fuí|dió|vió|sólo|éste|ésta|éstos|éstas|ése|ésa|ésos|ésas|aquél|aquélla|aquéllos|aquéllas|\w+(?:ió|ó)(?:se|le|les|lo|la|los|las|me|te|nos))(?!\w)",
-                t)
+            antiguas += ANTIGUAS.findall(t)
         for patron, que in ((r"Project Gutenberg|\*\*\* ?(START|END) OF", "restos de Gutenberg"),
                             (r"\[Illustration|\[Ilustraci", "marcas de ilustración"),
                             (r"^\s*\d{1,4}\s*$", "líneas que son solo un número (¿páginas?)"),
@@ -202,8 +230,8 @@ def revisar(carpeta: Path):
             if n:
                 A.append(f"{p.name}: {n} {que}")
     if antiguas:
-        A.append(f"texto: {len(antiguas)} tildes de la ortografía antigua ({', '.join(sorted(set(antiguas))[:5])}...);"
-                 " hoy: fue, dio, solo, este, volviose")
+        E.append(f"texto: {len(antiguas)} tildes de la ortografía antigua ({', '.join(sorted(set(antiguas))[:5])}...);"
+                 " hoy: fue, dio, solo, este, volviose. Se quitan solas con --arreglar")
     if not re.search(r"^## ", todo, re.M):
         E.append("texto/: ningún capítulo empieza con «## »")
     base = plano(todo)
@@ -216,9 +244,12 @@ def revisar(carpeta: Path):
 
 
 def main():
-    if len(sys.argv) != 2:
+    args = [a for a in sys.argv[1:] if a != "--arreglar"]
+    if len(args) != 1:
         sys.exit(__doc__)
-    carpeta = Path(sys.argv[1])
+    carpeta = Path(args[0])
+    if "--arreglar" in sys.argv and (carpeta / "ficha.json").exists():
+        arreglar(carpeta)
     E, A, _ = revisar(carpeta)
     for a in A:
         print("AVISO:", a)

@@ -81,6 +81,12 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   <zip>` lo revisa igual, arma EPUB, portada, exlibris y PDF, y agrega la ficha. El mensaje tipo
   para invitarlos está en `editorial/ENCUADERNADORES.md`; el formulario llega con asunto
   «Fénix - encuadernador» (una reserva se anota en `reservado` del libro buscado).
+  **Regla dura: lo que Fénix tenga que arreglarle a un paquete recibido, lo paga el agente del
+  encuadernador la próxima vez.** El arreglo se vuelve un ERROR en `revisar_entrega.py` (y parte
+  de `--arreglar` si es mecánico) y, si es criterio, va en `editorial/ENCUADERNAR.md`. El prompt
+  del sitio no se toca: solo apunta a ENCUADERNAR.md en `main`, así que el cambio llega solo. Un
+  paquete que llega con el error se arregla aquí con `revisar_entrega.py .entregas/<id>/<id>
+  --arreglar` y se vuelve a pasar la carpeta a `recibir_entrega.py`.
 - `herramientas/logo.py`: el logo (un libro abierto cuyas páginas se levantan como las alas del
   fénix) en una sola fuente. Lo usan `img/favicon.svg`, el ícono embebido de `index.html` y de
   `libro/`, la viñeta y el sello de `marco.py` y el timbre de `exlibris.py`. Si cambia el dibujo:

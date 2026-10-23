@@ -188,10 +188,11 @@ cambiaste en el texto; palabras del libro; dudas que quedaron (cita corta y cóm
 ## 6. Revisa y empaqueta
 
 ```bash
-python herramientas/revisar_entrega.py entrega/<id>
+python herramientas/revisar_entrega.py entrega/<id> --arreglar
 ```
 
-Corrige todo lo que marque como ERROR y los AVISO que de verdad sean errores, y vuelve a
+`--arreglar` corrige solo lo mecánico (las tildes de la ortografía antigua, también en las citas
+de la ficha) y después revisa. Corrige todo lo que marque como ERROR y los AVISO que de verdad sean errores, y vuelve a
 correrlo hasta que diga «Entrega lista». Si cambiaste el texto, vuelve a armar `prueba.epub`.
 Luego comprime la carpeta (sin `prueba.epub`) en `<id>.zip`.
 
