@@ -119,6 +119,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [Orgullo y prejuicio - Jane Austen (trad. José Jordán de Urríes y Azara) (1813)](https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/es/) - La llegada del rico y amable señor Bingley a Netherfield revoluciona a la familia Bennet, que tiene cinco hijas por casar y una madre empeñada en conseguirlo. Descarga gratuita en EPUB y PDF.
 - [The Wisdom of Father Brown - G. K. Chesterton (1914)](https://talcaldeg.github.io/fenix/libro/chesterton-the-wisdom-of-father-brown/) - A second collection of Father Brown cases: a gang of thieves in the Italian Alps, a duel that never takes place, a murderer who does not exist, an old family curse. Descarga gratuita en EPUB y PDF.
 - [El principito - Antoine de Saint-Exupéry (1943)](https://talcaldeg.github.io/fenix/libro/saint-exupery-el-principito/) - Un aviador cae con su avión en el desierto del Sahara, a mil millas de cualquier lugar habitado, y al amanecer lo despierta un niño que le pide que le dibuje un cordero. Descarga gratuita en EPUB y PDF.
+- [Niebla - Miguel de Unamuno (1914)](https://talcaldeg.github.io/fenix/libro/unamuno-niebla/) - Augusto Pérez, un joven rico y ocioso que vive sin rumbo tras la muerte de su madre, se enamora de pronto de Eugenia, una pianista que no lo quiere. Descarga gratuita en EPUB y PDF.
 
 ## Teatro
 

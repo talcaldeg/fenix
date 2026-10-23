@@ -3933,6 +3933,28 @@ window.FENIX = {
       fuente: { texto: "Le Petit Prince, Nueva York, 1943 (dominio público en Chile desde 2015); traducción de Proyecto Fénix, CC BY-NC-SA 4.0", url: "https://openlibrary.org/works/OL10263W" },
       delibris: { valor: 6, genero: "Literatura", url: "https://www.delibris.org/es/el-principito" },
       parecidos: ["dickens-el-cantico-de-navidad", "flaubert-un-corazon-sencillo", "irving-cuentos-de-la-alhambra"]
+    },
+    {
+      id: "unamuno-niebla",
+      titulo: "Niebla",
+      autor: "Miguel de Unamuno",
+      anio: "1914",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Augusto Pérez, un joven rico y ocioso que vive sin rumbo tras la muerte de su madre, se enamora de pronto de Eugenia, una pianista que no lo quiere. Mientras la corteja, conversa con su perro Orfeo y con su amigo Víctor sobre el amor, la vida y la existencia, y su enamoramiento le hace sentir por primera vez que existe. Cuando el desengaño lo lleva a pensar en el suicidio, va a consultar al propio Unamuno, que le revela que no es más que un personaje de su novela. Unamuno la llamó «nivola» para marcar su distancia con la novela tradicional.", "en": "Augusto Pérez, a rich and idle young man drifting through life after his mother's death, suddenly falls in love with Eugenia, a piano teacher who does not love him. While courting her, he talks with his dog Orfeo and his friend Víctor about love, life and existence, and his infatuation makes him feel for the first time that he exists. When disappointment leads him to think of suicide, he goes to consult Unamuno himself, who reveals that he is only a character in his novel. Unamuno called it a «nivola» to set it apart from the traditional novel."},
+      porque: {"es": "Para lectores que disfrutan de las preguntas grandes: quién soy, si mi vida tiene sentido, qué lugar ocupa Dios. Es una de las cumbres de la novela española del siglo XX, con mucho humor y un final que no se olvida. Conviene leerla con algo de madurez, porque toca la tentación del suicidio y las dudas de fe de su autor.", "en": "For readers who enjoy the big questions: who am I, does my life have meaning, where does God fit in. It is one of the peaks of the twentieth-century Spanish novel, full of humour and with an unforgettable ending. It is best read with some maturity, since it deals with the temptation of suicide and its author's doubts about faith."},
+      imagen: {"src": "img/portadas/unamuno-niebla.jpg", "credito": {"es": "Caspar David Friedrich, «El caminante sobre el mar de nubes», 1818", "en": "Caspar David Friedrich, «Wanderer above the Sea of Fog», 1818"}, "url": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Wanderer_above_the_sea_of_fog.jpg"},
+      citas: [
+        "Y la vida es esto, la niebla. La vida es una nebulosa.",
+        "Gracias al amor siento al alma de bulto, la toco.",
+        "El amor es un éxtasis; nos saca de nosotros mismos",
+        "¿No es acaso todo esto un sueño de Dios o de quien sea, que se desvanecerá en cuanto Él despierte"
+      ],
+      archivos: {"epub": "libros/unamuno-niebla.epub", "pdf": "libros/unamuno-niebla.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 49836 (dominio público), sobre la primera edición: Madrid, Renacimiento, 1914", "url": "https://www.gutenberg.org/ebooks/49836"},
+      delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/niebla"},
+      parecidos: ["pardo-bazan-la-sirena-negra", "pardo-bazan-la-quimera", "cervantes-don-quijote"]
     }
   ],
 
@@ -3983,7 +4005,6 @@ window.FENIX = {
     { titulo: {"es": "Ben-Hur", "en": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
     { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },
-    { titulo: {"es": "Niebla"}, autor: "Miguel de Unamuno", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/niebla"} },
     { titulo: {"es": "El jardín secreto"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-jardin-secreto"} },
     { titulo: {"es": "El pequeño Lord Fauntleroy"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-pequeno-lord"} },
     { titulo: {"es": "Ética a Nicómaco"}, autor: "Aristóteles", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/etica-nicomaco"} },
