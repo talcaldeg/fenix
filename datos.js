@@ -32,7 +32,7 @@ window.FENIX = {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
     // Enlace de donación (Mercado Pago, PayPal, etc.). Vacío = la sección muestra "en preparación".
-    donar: ""
+    donar: "https://ko-fi.com/proyectofenix"
   },
   // Sello «Recomendados por Fénix»: van primero en la portada y en el catálogo, en este orden.
   // Cada sitio muestra solo los de su idioma (One with Jesus no tiene versión en español).
