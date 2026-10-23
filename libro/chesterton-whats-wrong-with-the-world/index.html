@@ -141,10 +141,41 @@
   ul.parecidos{padding-left:20px}
   ul.parecidos li{margin:4px 0}
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
+  footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
+  nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
+  nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a:hover, nav.menu summary:hover{color:var(--ink); background:var(--chip)}
+  .mas{position:relative} .mas summary{list-style:none; cursor:pointer} .mas summary::-webkit-details-marker{display:none} .mas summary::after{content:" ▾"; font-size:12px}
+  .mas .sub{position:absolute; right:0; top:calc(100% + 6px); z-index:30; min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  .ajustes-nav{display:flex; gap:6px; margin-left:10px}
+  a.pildora{display:inline-flex; align-items:center; text-decoration:none}
+  #btnMenu{display:none}
+  @media (max-width:960px){
+    #btnMenu{display:inline-block}
+    nav.menu{display:none; position:absolute; left:0; right:0; top:100%; z-index:25; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column; align-items:stretch}
+    nav.menu.abierto{display:flex}
+    .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
+    .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
+  }
 </style>
 </head>
 <body>
-<header><div class="wrap barra"><a class="marca" href="../../?l=en"><img src="../../img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="Search for a book" title="Search for a book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="../../" method="get" role="search"><input type="hidden" name="l" value="en"><input type="search" name="q" required aria-label="Search for a book" placeholder="Search for a title or an author"><button class="btn prim" type="submit">Search</button></form></details><button class="pildora" id="btnTema" type="button" aria-label="Switch between light and dark mode" title="Switch between light and dark mode">◐</button></div></div></header>
+<header><div class="wrap barra"><a class="marca" href="../../?l=en"><img src="../../img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><nav class="menu" id="menu" aria-label="Main menu"><a href="../../?l=en#biblioteca" data-i18n="nav.biblioteca">Library</a>
+      <a href="../../?l=en#todos" data-i18n="nav.todos">All books</a>
+      <a href="../../?l=en#plan" data-i18n="nav.plan">Plan of life</a>
+      <a href="../../?l=en#citas" data-i18n="nav.citas">Quotes</a>
+      <details class="mas" id="menuMas">
+        <summary data-i18n="nav.colaborar">Get involved</summary>
+        <div class="sub">
+          <a href="../../?l=en#editores" data-i18n="nav.editores">Become an editor</a>
+          <a href="../../?l=en#encuadernadores" data-i18n="nav.encuadernadores">Bind a book with AI</a>
+          <a href="../../?l=en#salvar" data-i18n="nav.salvar">Save a book</a>
+          <a href="../../?l=en#error" data-i18n="nav.error">Report an error</a>
+          <a href="../../?l=en#dona" data-i18n="nav.dona">Donate</a>
+          <a href="../../?l=en#contacto" data-i18n="nav.contacto">Contact</a>
+        </div>
+      </details><div class="ajustes-nav"><a class="pildora" href="../../" hreflang="es" lang="es">Español</a><button class="pildora" id="btnTema" type="button" aria-label="Switch between light and dark mode" title="Switch between light and dark mode">◐</button></div></nav><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="Search for a book" title="Search for a book"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="../../" method="get" role="search"><input type="hidden" name="l" value="en"><input type="search" name="q" required aria-label="Search for a book" placeholder="Search for a title or an author"><button class="btn prim" type="submit">Search</button></form></details><button class="pildora" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu">☰ Menu</button></div></div></header>
 <main class="wrap">
   <div class="ficha">
     <div class="lado"><img src="../../img/portadas/chesterton-whats-wrong-with-the-world.jpg" alt="Ford Madox Brown, «Work», 1852-1865" width="400" height="600">
@@ -179,10 +210,15 @@
     </div>
   </div>
 </main>
-<footer><div class="wrap">Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.</div></footer>
+<footer><div class="wrap">Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.<nav aria-label="Get involved"><a href="../../?l=en#contacto">Contact</a><a href="../../?l=en#error">Report an error</a><a href="../../?l=en#dona">Donate</a></nav></div></footer>
 <script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
-var b=document.querySelector("details.buscar");if(b){b.addEventListener("toggle",function(){if(b.open)setTimeout(function(){b.querySelector("input[name=q]").focus()},0)});document.addEventListener("click",function(e){if(b.open&&!b.contains(e.target))b.open=false});document.addEventListener("keydown",function(e){if(e.key==="Escape")b.open=false})}
+var b=document.querySelector("details.buscar"),n=document.getElementById("menu"),m=document.getElementById("btnMenu"),s=document.getElementById("menuMas");
+function cm(){if(n){n.classList.remove("abierto");m.setAttribute("aria-expanded","false")}}
+if(m)m.addEventListener("click",function(){if(b)b.open=false;m.setAttribute("aria-expanded",n.classList.toggle("abierto"))});
+if(b){b.addEventListener("toggle",function(){if(b.open){cm();setTimeout(function(){b.querySelector("input[name=q]").focus()},0)}})}
+document.addEventListener("click",function(e){if(b&&b.open&&!b.contains(e.target))b.open=false;if(s&&s.open&&!s.contains(e.target))s.open=false;if(n&&n.classList.contains("abierto")&&!n.contains(e.target)&&!m.contains(e.target))cm()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(b)b.open=false;cm()}});
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>
 <!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->

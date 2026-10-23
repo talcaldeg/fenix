@@ -149,10 +149,42 @@
   ul.parecidos{padding-left:20px}
   ul.parecidos li{margin:4px 0}
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
+  footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
+  nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
+  nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a:hover, nav.menu summary:hover{color:var(--ink); background:var(--chip)}
+  .mas{position:relative} .mas summary{list-style:none; cursor:pointer} .mas summary::-webkit-details-marker{display:none} .mas summary::after{content:" ▾"; font-size:12px}
+  .mas .sub{position:absolute; right:0; top:calc(100% + 6px); z-index:30; min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  .ajustes-nav{display:flex; gap:6px; margin-left:10px}
+  a.pildora{display:inline-flex; align-items:center; text-decoration:none}
+  #btnMenu{display:none}
+  @media (max-width:960px){
+    #btnMenu{display:inline-block}
+    nav.menu{display:none; position:absolute; left:0; right:0; top:100%; z-index:25; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column; align-items:stretch}
+    nav.menu.abierto{display:flex}
+    .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
+    .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
+  }
 </style>
 </head>
 <body>
-<header><div class="wrap barra"><a class="marca" href="../../"><img src="../../img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="Buscar un libro" title="Buscar un libro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="../../" method="get" role="search"><input type="search" name="q" required aria-label="Buscar un libro" placeholder="Busca un título o un autor"><button class="btn prim" type="submit">Buscar</button></form></details><button class="pildora" id="btnTema" type="button" aria-label="Cambiar a modo claro u oscuro" title="Cambiar a modo claro u oscuro">◐</button></div></div></header>
+<header><div class="wrap barra"><a class="marca" href="../../"><img src="../../img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><nav class="menu" id="menu" aria-label="Menú principal"><a href="../../#biblioteca" data-i18n="nav.biblioteca">Biblioteca</a>
+      <a href="../../#todos" data-i18n="nav.todos">Todos los libros</a>
+      <a href="../../#editorial" data-i18n="nav.editorial">Editorial</a>
+      <a href="../../#plan" data-i18n="nav.plan">Plan de vida</a>
+      <a href="../../#citas" data-i18n="nav.citas">Citas</a>
+      <details class="mas" id="menuMas">
+        <summary data-i18n="nav.colaborar">Colaborar</summary>
+        <div class="sub">
+          <a href="../../#editores" data-i18n="nav.editores">Ser editor</a>
+          <a href="../../#encuadernadores" data-i18n="nav.encuadernadores">Encuadernar con IA</a>
+          <a href="../../#salvar" data-i18n="nav.salvar">Salvar un libro</a>
+          <a href="../../#error" data-i18n="nav.error">Avisar un error</a>
+          <a href="../../#dona" data-i18n="nav.dona">Donar</a>
+          <a href="../../#contacto" data-i18n="nav.contacto">Contacto</a>
+        </div>
+      </details><div class="ajustes-nav"><a class="pildora" href="../../?l=en" hreflang="en" lang="en">English</a><button class="pildora" id="btnTema" type="button" aria-label="Cambiar a modo claro u oscuro" title="Cambiar a modo claro u oscuro">◐</button></div></nav><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="Buscar un libro" title="Buscar un libro"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="../../" method="get" role="search"><input type="search" name="q" required aria-label="Buscar un libro" placeholder="Busca un título o un autor"><button class="btn prim" type="submit">Buscar</button></form></details><button class="pildora" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu">☰ Menú</button></div></div></header>
 <main class="wrap">
   <div class="ficha">
     <div class="lado"><img src="../../img/portadas/lope-de-vega-amor-pleito-y-desafio.jpg" alt="Jean-Léon Gérôme, «El duelo tras la mascarada», 1857-1859" width="400" height="600">
@@ -187,10 +219,15 @@
     </div>
   </div>
 </main>
-<footer><div class="wrap">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.</div></footer>
+<footer><div class="wrap">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.<nav aria-label="Colaborar"><a href="../../#contacto">Contacto</a><a href="../../#error">Avisar un error</a><a href="../../#dona">Donar</a></nav></div></footer>
 <script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
-var b=document.querySelector("details.buscar");if(b){b.addEventListener("toggle",function(){if(b.open)setTimeout(function(){b.querySelector("input[name=q]").focus()},0)});document.addEventListener("click",function(e){if(b.open&&!b.contains(e.target))b.open=false});document.addEventListener("keydown",function(e){if(e.key==="Escape")b.open=false})}
+var b=document.querySelector("details.buscar"),n=document.getElementById("menu"),m=document.getElementById("btnMenu"),s=document.getElementById("menuMas");
+function cm(){if(n){n.classList.remove("abierto");m.setAttribute("aria-expanded","false")}}
+if(m)m.addEventListener("click",function(){if(b)b.open=false;m.setAttribute("aria-expanded",n.classList.toggle("abierto"))});
+if(b){b.addEventListener("toggle",function(){if(b.open){cm();setTimeout(function(){b.querySelector("input[name=q]").focus()},0)}})}
+document.addEventListener("click",function(e){if(b&&b.open&&!b.contains(e.target))b.open=false;if(s&&s.open&&!s.contains(e.target))s.open=false;if(n&&n.classList.contains("abierto")&&!n.contains(e.target)&&!m.contains(e.target))cm()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(b)b.open=false;cm()}});
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>
 <!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->

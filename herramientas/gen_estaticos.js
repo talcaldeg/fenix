@@ -85,6 +85,23 @@ const INDEX = leer("index.html");
 // Lo que ya vive en index.html se toma de ahí, para no tener dos copias: favicon y escala de Delibris.
 const FAVICON = INDEX.match(/<link rel="icon"[^>]*>/)[0];
 const ESCALA_DELIBRIS = eval("(" + INDEX.match(/const ESCALA_DELIBRIS = (\{[\s\S]*?\n  \});/)[1] + ")");
+// La ficha lleva el mismo menú que la biblioteca, como en Gutenberg, Standard Ebooks, Goodreads o
+// Wikisource: se toma el <nav> de index.html (sin idioma ni tema, que la ficha arma a su modo), sus
+// enlaces #vista apuntan a index.html y en inglés los textos salen de las claves nav.* de index.html.
+const NAV_INDEX = INDEX.match(/<nav class="menu" id="menu">([\s\S]*?)<div class="ajustes-nav">/)[1].replace(/<!--[\s\S]*?-->/g, "").trim();
+// Las claves nav.* con texto solo están en el bloque inglés de index.html; el español es el texto del HTML.
+const NAV_EN = Object.fromEntries([...INDEX.matchAll(/"(nav\.\w+)":"([^"]*)"/g)].map(m => [m[1], m[2]]));
+const NAV_ES = Object.fromEntries([...NAV_INDEX.matchAll(/data-i18n="(nav\.\w+)"[^>]*>([^<]*)</g)].map(m => [m[1], m[2]]));
+const textoNav = (k, lang) => {
+  const s = lang === "en" ? NAV_EN[k] : NAV_ES[k];
+  if (!s){ console.error(`Falta el texto de ${k} en ${lang} (index.html).`); process.exit(1); }
+  return s;
+};
+const navFicha = (lang, B) => NAV_INDEX
+  .replace(/href="#([^"]*)"/g, (_, v) => `href="${B}${lang === "en" ? "?l=en" : ""}#${v}"`)
+  .replace(/(data-i18n="(nav\.\w+)"[^>]*>)[^<]*</g, (_, a, k) => `${a}${esc(textoNav(k, lang))}<`)
+  // Como en index.html, Editorial sale solo si ese idioma tiene alguna edición Fénix.
+  .replace(/\s*<a [^>]*id="navEditorial"[^>]*>[^<]*<\/a>/, m => D.libros.map(l => vista(l, lang)).some(p => visibleEn(p, lang) && p.editorial) ? m.replace(' id="navEditorial"', "") : "");
 
 const TX = {
   es: {
@@ -97,7 +114,7 @@ const TX = {
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
     de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", sello: "Recomendado por Fénix",
-    y: "y", ebook: "ebook",
+    y: "y", ebook: "ebook", menu: "Menú", otroIdioma: "English", tambien: "También en inglés",
     hojear: "Hojear las primeras páginas", primeras: "primeras páginas", volver: "Volver a la ficha del libro",
     finMuestra: "Hasta aquí las primeras páginas. Para seguir leyendo, descarga el libro completo, gratis:",
     dMuestra: (t, a) => `Lee gratis en línea las primeras páginas de «${t}» de ${a}, sin descargar nada.`,
@@ -118,7 +135,7 @@ const TX = {
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
     de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", sello: "Recommended by Fénix",
-    y: "and", ebook: "ebook",
+    y: "and", ebook: "ebook", menu: "Menu", otroIdioma: "Español", tambien: "Also in Spanish",
     hojear: "Look inside: the first pages", primeras: "first pages", volver: "Back to the book page",
     finMuestra: "That is the end of the first pages. To keep reading, download the whole book, free:",
     dMuestra: (t, a) => `Read the first pages of «${t}» by ${a} online, free and without downloading anything.`,
@@ -216,11 +233,33 @@ const ESTILO = `
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
   ul.parecidos{padding-left:20px}
   ul.parecidos li{margin:4px 0}
-  footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}`;
+  footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
+  footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
+  nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
+  nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a:hover, nav.menu summary:hover{color:var(--ink); background:var(--chip)}
+  .mas{position:relative} .mas summary{list-style:none; cursor:pointer} .mas summary::-webkit-details-marker{display:none} .mas summary::after{content:" ▾"; font-size:12px}
+  .mas .sub{position:absolute; right:0; top:calc(100% + 6px); z-index:30; min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  .ajustes-nav{display:flex; gap:6px; margin-left:10px}
+  a.pildora{display:inline-flex; align-items:center; text-decoration:none}
+  #btnMenu{display:none}
+  @media (max-width:960px){
+    #btnMenu{display:inline-block}
+    nav.menu{display:none; position:absolute; left:0; right:0; top:100%; z-index:25; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column; align-items:stretch}
+    nav.menu.abierto{display:flex}
+    .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
+    .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
+  }`;
 
 const SCRIPT_TEMA = `<script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
-var b=document.querySelector("details.buscar");if(b){b.addEventListener("toggle",function(){if(b.open)setTimeout(function(){b.querySelector("input[name=q]").focus()},0)});document.addEventListener("click",function(e){if(b.open&&!b.contains(e.target))b.open=false});document.addEventListener("keydown",function(e){if(e.key==="Escape")b.open=false})}
+var b=document.querySelector("details.buscar"),n=document.getElementById("menu"),m=document.getElementById("btnMenu"),s=document.getElementById("menuMas");
+function cm(){if(n){n.classList.remove("abierto");m.setAttribute("aria-expanded","false")}}
+if(m)m.addEventListener("click",function(){if(b)b.open=false;m.setAttribute("aria-expanded",n.classList.toggle("abierto"))});
+if(b){b.addEventListener("toggle",function(){if(b.open){cm();setTimeout(function(){b.querySelector("input[name=q]").focus()},0)}})}
+document.addEventListener("click",function(e){if(b&&b.open&&!b.contains(e.target))b.open=false;if(s&&s.open&&!s.contains(e.target))s.open=false;if(n&&n.classList.contains("abierto")&&!n.contains(e.target)&&!m.contains(e.target))cm()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(b)b.open=false;cm()}});
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>`;
 
@@ -244,6 +283,10 @@ function paginaLibro(l){
   const imgOg = !l.imagen ? img : og !== l.imagen.src && fs.existsSync(path.join(RAIZ, og)) ? SITIO + og : null;
   const B = l._base || "../../";
   const inicio = B + (lang === "en" ? "?l=en" : "");
+  // La misma obra en el otro idioma (versiones de datos.js): se enlaza en la ficha y desde el botón de idioma.
+  const raizL = porId(l.id);
+  const otra = raizL ? [raizL, ...Object.keys(raizL.versiones || {}).map(k => vista(raizL, k))].find(p => p.idioma !== lang) : null;
+  const otraUrl = otra ? B + (otra._ruta || "libro/" + otra.id + "/") : null;
   const botones = [
     ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${f === "pdf" ? `target="_blank" rel="noopener"` : "download"}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
     ...(muestraDe(l) ? [`<a class="btn" href="muestra/">${esc(x.hojear)}</a>`] : []),
@@ -316,7 +359,7 @@ ${JSON.stringify(ld, null, 2)}
 </style>
 </head>
 <body>
-<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="${esc(x.buscar)}" title="${esc(x.buscar)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="${B}" method="get" role="search">${lang === "en" ? `<input type="hidden" name="l" value="en">` : ""}<input type="search" name="q" required aria-label="${esc(x.buscar)}" placeholder="${esc(x.buscarPh)}"><button class="btn prim" type="submit">${esc(x.buscarBtn)}</button></form></details><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></div></header>
+<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><nav class="menu" id="menu" aria-label="${lang === "en" ? "Main menu" : "Menú principal"}">${navFicha(lang, B)}<div class="ajustes-nav"><a class="pildora" href="${otraUrl || B + (lang === "en" ? "" : "?l=en")}" hreflang="${lang === "en" ? "es" : "en"}" lang="${lang === "en" ? "es" : "en"}">${esc(x.otroIdioma)}</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></nav><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="${esc(x.buscar)}" title="${esc(x.buscar)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="${B}" method="get" role="search">${lang === "en" ? `<input type="hidden" name="l" value="en">` : ""}<input type="search" name="q" required aria-label="${esc(x.buscar)}" placeholder="${esc(x.buscarPh)}"><button class="btn prim" type="submit">${esc(x.buscarBtn)}</button></form></details><button class="pildora" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu">☰ ${esc(x.menu)}</button></div></div></header>
 <main class="wrap">
   <div class="ficha">
     <div class="lado">${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}
@@ -326,7 +369,8 @@ ${JSON.stringify(ld, null, 2)}
     <div class="cabeza">
       ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
       <h1>${esc(l.titulo)}<span class="sub">${esc(of.sub)}</span></h1>
-      <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>
+      <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>${otra ? `
+      <p class="meta">${esc(x.tambien)}: <a href="${otraUrl}" hreflang="${otra.idioma}" lang="${otra.idioma}">${esc(otra.titulo)}</a></p>` : ""}
     </div>
     <div class="cuerpo">
       ${l.porque ? `<h2>${esc(x.porque)}</h2>
@@ -345,7 +389,7 @@ ${JSON.stringify(ld, null, 2)}
     </div>
   </div>
 </main>
-<footer><div class="wrap">${esc(x.pie)}</div></footer>
+<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${inicio}#${v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div></footer>
 ${SCRIPT_TEMA}
 ${AVISO_EPUB}
 ${MEDICION}

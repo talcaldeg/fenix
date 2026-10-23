@@ -72,6 +72,23 @@
   ul.parecidos{padding-left:20px}
   ul.parecidos li{margin:4px 0}
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
+  footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
+  nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
+  nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a:hover, nav.menu summary:hover{color:var(--ink); background:var(--chip)}
+  .mas{position:relative} .mas summary{list-style:none; cursor:pointer} .mas summary::-webkit-details-marker{display:none} .mas summary::after{content:" ▾"; font-size:12px}
+  .mas .sub{position:absolute; right:0; top:calc(100% + 6px); z-index:30; min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  .ajustes-nav{display:flex; gap:6px; margin-left:10px}
+  a.pildora{display:inline-flex; align-items:center; text-decoration:none}
+  #btnMenu{display:none}
+  @media (max-width:960px){
+    #btnMenu{display:inline-block}
+    nav.menu{display:none; position:absolute; left:0; right:0; top:100%; z-index:25; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column; align-items:stretch}
+    nav.menu.abierto{display:flex}
+    .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
+    .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
+  }
   .lectura{max-width:680px; margin:0 auto}
   .lectura .volver{display:inline-block; margin:0 0 18px; font:600 15px system-ui,sans-serif; text-decoration:none}
   .lectura .meta{margin-bottom:28px}
@@ -136,7 +153,12 @@
 <footer><div class="wrap">Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.</div></footer>
 <script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
-var b=document.querySelector("details.buscar");if(b){b.addEventListener("toggle",function(){if(b.open)setTimeout(function(){b.querySelector("input[name=q]").focus()},0)});document.addEventListener("click",function(e){if(b.open&&!b.contains(e.target))b.open=false});document.addEventListener("keydown",function(e){if(e.key==="Escape")b.open=false})}
+var b=document.querySelector("details.buscar"),n=document.getElementById("menu"),m=document.getElementById("btnMenu"),s=document.getElementById("menuMas");
+function cm(){if(n){n.classList.remove("abierto");m.setAttribute("aria-expanded","false")}}
+if(m)m.addEventListener("click",function(){if(b)b.open=false;m.setAttribute("aria-expanded",n.classList.toggle("abierto"))});
+if(b){b.addEventListener("toggle",function(){if(b.open){cm();setTimeout(function(){b.querySelector("input[name=q]").focus()},0)}})}
+document.addEventListener("click",function(e){if(b&&b.open&&!b.contains(e.target))b.open=false;if(s&&s.open&&!s.contains(e.target))s.open=false;if(n&&n.classList.contains("abierto")&&!n.contains(e.target)&&!m.contains(e.target))cm()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(b)b.open=false;cm()}});
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
 </script>
 <script>
