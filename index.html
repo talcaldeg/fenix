@@ -1277,7 +1277,10 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .filtros{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 20px; font:14px system-ui,sans-serif}
   .filtros input[type=search], .filtros select{padding:8px 10px; border:1px solid var(--line); border-radius:9px; background:var(--card)}
   .filtros input[type=search]{flex:1 1 220px}
-  .filtros label{display:flex; align-items:center; gap:6px; cursor:pointer}
+  /* Casillas con área de toque de 40 px de alto (la casilla sola medía 13 px). */
+  .filtros label{display:flex; align-items:center; gap:8px; min-height:40px; padding:0 4px; cursor:pointer}
+  .filtros input[type=checkbox]{width:18px; height:18px; margin:0; accent-color:var(--acento)}
+  #fCuenta{margin:-8px 0 12px}
   .vacio{color:var(--muted); font:15px system-ui,sans-serif; padding:24px 0}
 
   dialog{border:1px solid var(--line); border-radius:16px; padding:0; max-width:760px; width:calc(100% - 32px); background:var(--card); color:var(--ink); box-shadow:var(--sombra)}
@@ -1694,6 +1697,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
         <label><input type="checkbox" id="fFavoritos"> <span data-i18n="bib.favoritos">Favoritos</span></label>
         <button type="button" class="pildora" id="fLimpiar" data-i18n="bib.limpiar">Limpiar filtros</button>
       </div>
+      <p class="meta" id="fCuenta" aria-live="polite"></p>
       <div class="lista" id="catalogo" role="list"></div>
       <p class="vacio" id="sinResultados" hidden data-i18n="bib.vacio">No hay libros con esos filtros.</p>
       <p class="leyenda-moral"><span data-i18n="bib.leyendaMoral">Valoración moral tomada de</span> <a href="https://delibris.org/es/advanced-search" target="_blank" rel="noopener">delibris.org</a><span data-i18n="bib.leyendaMoral2"> (sitio de reseñas; no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes» y, cuantos menos círculos, más cautela pide la lectura. El nivel de cada libro se explica en su ficha.</span></p>
@@ -2036,7 +2040,7 @@ function iniciar(){
     en: {
       "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions","nav.todos":"All books","nav.citas":"Quotes",
       "cit.eyebrow":"From the books in the library","cit.titulo":"Quotes","cit.lede":"Passages chosen from each book, copied exactly from the text. Tap one to see its book.","cit.buscar":"Search a word, a title or an author","cit.vacio":"No quotes match that search.",
-      "cit.cuenta":"{n} quotes","cit.cuenta1":"1 quote","cit.dia":"Quote of the day","cit.verLibro":"See the book →",
+      "cit.cuenta":"{n} quotes","cit.cuenta1":"1 quote","bib.cuenta":"{n} books","bib.cuenta1":"1 book","cit.dia":"Quote of the day","cit.verLibro":"See the book →",
       "x.compartir":"Share","x.copiado":"Link copied. Paste it wherever you like.","x.copiaEnlace":"Copy this link:","x.corregir":"Request a correction",
       "todos.eyebrow":"World catalogue","todos.titulo":"All books in English","todos.lede":"Search for any book published in English. Its page shows the Delibris moral rating, whether it is under copyright and, if it is in Fénix, the button to download it; if it is not, you can ask us to look for it.",
       "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":" (a review site; not an official judgement of the Church), which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
@@ -2105,7 +2109,7 @@ function iniciar(){
       "x.porque":"Por qué leerlo","x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos",
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "hero.buscarAria":"Buscar un libro","hero.sinFenix":"Todavía no está en Fénix.","hero.buscarTodos":"Buscar «{q}» en todos los libros →",
-      "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
+      "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","bib.cuenta":"{n} libros","bib.cuenta1":"1 libro","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
       "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
       "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.masCitas":"Ver {n} citas más","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
       "x.edFenix":"Edición Fénix","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
@@ -2300,6 +2304,7 @@ function iniciar(){
       + (sin.length ? `<details class="sin-epub-grupo"${abierto ? " open" : ""}><summary>${esc(t("x.sinEpub").replace("{n}", sin.length))}</summary>${con.length ? "" : cabecera()}<div role="list">${sin.map(fila).join("")}</div></details>` : "");
     $("#catalogo").hidden = !lista.length;
     $("#sinResultados").hidden = lista.length > 0;
+    $("#fCuenta").textContent = !lista.length ? "" : lista.length === 1 ? t("bib.cuenta1") : t("bib.cuenta").replace("{n}", lista.length);
   }
   function pintarRecomendados(){
     // En el inicio solo va lo que tiene EPUB; lo demás sigue en la biblioteca.
