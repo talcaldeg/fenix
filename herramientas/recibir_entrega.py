@@ -82,8 +82,8 @@ def con_credito(f: dict):
     """El nombre del encuadernador, si lo pidió, va al final de lo que hizo Fénix."""
     ed, quien = f.get("editorial"), f.get("credito")
     if ed and quien:
-        ed = {"es": ed["es"].rstrip(".") + f". Edición al cuidado de {quien}.",
-              "en": ed["en"].rstrip(".") + f". Edited by {quien}."}
+        ed = {"es": ed["es"].rstrip(".") + f". Edición al cuidado de {quien.rstrip('.')}.",
+              "en": ed["en"].rstrip(".") + f". Edited by {quien.rstrip('.')}."}
     return ed
 
 
