@@ -3976,6 +3976,29 @@ window.FENIX = {
       delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/niebla"},
       encuadernador: "Juan Ignacio Alcalde G.",
       parecidos: ["pardo-bazan-la-sirena-negra", "pardo-bazan-la-quimera", "cervantes-don-quijote"]
+    },
+    {
+      id: "salgari-los-piratas-de-la-malasia",
+      titulo: "Los piratas de la Malasia",
+      autor: "Emilio Salgari (trad. R. Blanco Belmonte)",
+      anio: "1896",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "El indio Kammamuri naufraga en los mares de la Malasia llevando consigo a Ada, la prometida de su amo Tremal-Naik, que perdió la razón en manos de los thugs. Los recogen los piratas de Mompracem, y Sandokan descubre que Ada es prima de su difunta esposa. Para devolverle a su prometido, condenado a la deportación por el rajá James Brooke, Sandokan y su inseparable Yáñez se internan en Sarawack con disfraces, narcóticos y astucias. Entre prisiones, un barco de forzados amotinado y una batalla final, el Tigre de la Malasia se enfrenta al temible «exterminador de los piratas».", "en": "The Indian Kammamuri is shipwrecked in the seas of Malaysia together with Ada, the fiancée of his master Tremal-Naik, who lost her reason in the hands of the Thugs. They are rescued by the pirates of Mompracem, and Sandokan discovers that Ada is a cousin of his late wife. To give her back her fiancé, sentenced to deportation by Rajah James Brooke, Sandokan and his inseparable Yáñez slip into Sarawak with disguises, narcotics and cunning. Through prisons, a mutiny on a convict ship and a final battle, the Tiger of Malaysia faces the fearsome «exterminator of pirates»."},
+      porque: {"es": "Para lectores jóvenes y adultos que buscan aventura sin respiro: islas, selvas, abordajes y fugas imposibles. Debajo de la acción hay una lealtad a toda prueba entre amigos y un héroe que perdona a su enemigo vencido. Es la segunda novela de Sandokán, y se entiende bien aunque no se haya leído la primera.", "en": "For young and adult readers who want breathless adventure: islands, jungles, boardings and impossible escapes. Beneath the action lies an unshakable loyalty between friends and a hero who spares his defeated enemy. It is the second Sandokan novel, and it reads well even without the first."},
+      imagen: {"src": "img/portadas/salgari-los-piratas-de-la-malasia.jpg", "credito": {"es": "Giuseppe Garuti (Pipein Gamba), ilustración de «I pirati della Malesia», 1902", "en": "Giuseppe Garuti (Pipein Gamba), illustration for «I pirati della Malesia», 1902"}, "url": "https://commons.wikimedia.org/wiki/File:Salgari,_I_pirati_della_Malesia,_illustrazione_(p._241),_1902_-_MuFant.jpg"},
+      citas: [
+        "No eres un prisionero, James Brooke: eres libre",
+        "Me robaste a mi sobrina, pero me devuelves a una mujer tan amada por mí como la otra. Te perdono, ¡abrázame, sobrino, abrázame!...",
+        "James Brooke, algún día volveremos a vernos; mi corazón no me engaña",
+        "Los tigres de Mompracem no temen a los sabuesos del rajá"
+      ],
+      archivos: {"epub": "libros/salgari-los-piratas-de-la-malasia.epub", "pdf": "libros/salgari-los-piratas-de-la-malasia.pdf"},
+      fuente: {"texto": "Versión española de R. Blanco Belmonte, Barcelona, Casa Editorial Maucci, c. 1910; escaneo de la Biblioteca Nacional de España en Wikimedia Commons (dominio público)", "url": "https://commons.wikimedia.org/wiki/File:Los_piratas_de_la_Malasia_-_bdh0000213076.pdf"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/los-piratas-de-malasia"},
+      editorial: {"es": "Edición digital de Proyecto Fénix sobre la versión española de R. Blanco Belmonte (Maucci, c. 1910), con el texto establecido desde el escaneo, ortografía actualizada y diálogos entre comillas. Edición al cuidado de Juan Ignacio Alcalde G.", "en": "Proyecto Fénix digital edition of R. Blanco Belmonte's Spanish version (Maucci, c. 1910), with the text established from the scan, updated spelling and dialogue set in quotation marks. Edited by Juan Ignacio Alcalde G."},
+      parecidos: ["salgari-el-rey-del-mar", "stevenson-isla-del-tesoro", "verne-la-vuelta-al-mundo-en-80-dias"]
     }
   ],
 
