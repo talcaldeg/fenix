@@ -1215,6 +1215,11 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
 
   .grilla{display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:18px}
   @media (max-width:600px){.grilla{grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px} .portada .t{font-size:15px}}
+  /* Portada: 4 tarjetas por fila (2 en pantallas angostas), del mismo ancho siempre.
+     pintarRecomendados deja un múltiplo de 4; si hay menos de 4, la fila va centrada. */
+  .grilla.cuatro{display:flex; flex-wrap:wrap; justify-content:center; --g:18px; gap:var(--g)}
+  .grilla.cuatro > *{flex:0 0 calc((100% - 3 * var(--g)) / 4); min-width:0}
+  @media (max-width:860px){.grilla.cuatro{--g:12px} .grilla.cuatro > *{flex-basis:calc((100% - var(--g)) / 2)}}
   .libro{background:var(--card); border:1px solid var(--line); border-radius:14px; overflow:hidden; display:flex; flex-direction:column; cursor:pointer; transition:transform .15s, box-shadow .15s}
   .libro:hover{transform:translateY(-2px); box-shadow:var(--sombra)}
   .portada{aspect-ratio:2/3; color:#fff8ec; padding:16px 14px; display:flex; flex-direction:column; justify-content:space-between; position:relative; background:var(--c-lectura)}
@@ -1627,13 +1632,13 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
         <p class="eyebrow" data-i18n="sello.eyebrow">Sello Fénix</p>
         <div class="titulo-fila"><h2 data-i18n="sello.titulo">Recomendados por Fénix</h2></div>
         <p class="meta" style="margin:0 0 14px" data-i18n="sello.texto">Los libros que más queremos que leas. Llevan este sello en todo el catálogo.</p>
-        <div class="grilla" id="selloFenix"></div>
+        <div class="grilla cuatro" id="selloFenix"></div>
       </div>
 
-      <div style="margin-top:40px">
-        <p class="eyebrow" data-i18n="rec.eyebrow">Sugerencias</p>
-        <div class="titulo-fila"><h2 data-i18n="rec.titulo">Para empezar</h2><a href="#biblioteca" data-i18n="rec.todos">Ver todo el catálogo →</a></div>
-        <div class="grilla" id="recomendados"></div>
+      <div style="margin-top:40px" id="bloqueEdFenix">
+        <p class="eyebrow" data-i18n="rec.eyebrow">Nuestras ediciones</p>
+        <div class="titulo-fila"><h2 data-i18n="rec.titulo">Editorial Fénix</h2><a href="#editorial" data-i18n="rec.todos">Ver la editorial →</a></div>
+        <div class="grilla cuatro" id="recomendados"></div>
       </div>
 
       <div id="otra-humanidad" style="margin-top:40px">
@@ -2075,7 +2080,7 @@ function iniciar(){
       "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
       "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
-      "rec.eyebrow":"Suggestions","rec.titulo":"Where to begin","rec.todos":"See the whole catalogue →",
+      "rec.eyebrow":"Our editions","rec.titulo":"Fénix editions","rec.todos":"See our editions →",
       "oh.eyebrow":"The idea behind us","oh.titulo":"Being for Christ «like another humanity»",
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
       "oh.p2":"The Jesuit Paul de Jaegher turned it into a prayer at the end of «One with Jesus»: that the soul, fully identified with Jesus, may become for Him «like another humanity». Lending Him our eyes, lips, mind and heart so that He may still look, speak, think and love today.",
@@ -2308,10 +2313,17 @@ function iniciar(){
   }
   function pintarRecomendados(){
     // En el inicio solo va lo que tiene EPUB; lo demás sigue en la biblioteca.
-    const selloF = (D.recomendadosFenix || []).map(porId).filter(l => l && visible(l) && tieneEpub(l));
+    // Cada bloque muestra un múltiplo de 4 para que no quede una fila coja; si tiene menos de 4,
+    // los muestra todos centrados. «Editorial Fénix» trae las ediciones propias que no
+    // salieron en el sello, primero las que tienen sello y después en el orden del catálogo.
+    const filasEnteras = xs => xs.length < 4 ? xs : xs.slice(0, xs.length - xs.length % 4);
+    const todosSello = (D.recomendadosFenix || []).map(porId).filter(l => l && visible(l) && tieneEpub(l));
+    const selloF = filasEnteras(todosSello);
+    const ediciones = filasEnteras(ordenar(libros().filter(l => l.editorial && tieneEpub(l) && !selloF.includes(l))));
     $("#selloFenix").innerHTML = selloF.map(tarjeta).join("");
     $("#bloqueSello").hidden = !selloF.length;
-    $("#recomendados").innerHTML = ordenar(libros().filter(l => l.recomendado && !esFenix(l) && tieneEpub(l))).map(tarjeta).join("");
+    $("#recomendados").innerHTML = ediciones.map(tarjeta).join("");
+    $("#bloqueEdFenix").hidden = !ediciones.length;
   }
   // Portada: cifras del hero y un acceso por categoría (con el cuadro de un libro de esa categoría) más el plan de vida.
   function pintarInicio(){
