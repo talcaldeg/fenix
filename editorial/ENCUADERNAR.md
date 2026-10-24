@@ -26,6 +26,11 @@ Así bajan solo los archivos de la raíz (`datos.js`, `llms.txt`), las herramien
 no los libros. Trabaja en `fenix/entrega/<id>/` (el `<id>` se define en el paso 5). Necesitas
 Python 3; las herramientas que usarás solo usan su biblioteca estándar.
 
+Si tu entorno no tiene `git` (pasa en el sandbox de Codex en Windows), baja el repo como .zip
+desde https://codeload.github.com/talcaldeg/fenix/zip/refs/heads/main y descomprímelo; si no
+encuentras Python, usa el paquete «embeddable» de python.org en la carpeta de trabajo. No gastes
+turnos buscando otra salida.
+
 ## 2. Descarta rápido, antes de gastar
 
 Detente y avísale a tu usuario en cuanto falle uno de estos filtros:
