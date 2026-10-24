@@ -1096,8 +1096,8 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .buscado .acc{display:flex; align-items:center; gap:10px; justify-content:flex-end}
   .buscado .btn{padding:7px 12px; font-size:13px; white-space:nowrap}
   @media (max-width:720px){.buscado{grid-template-columns:1fr; gap:6px} .buscado .acc{justify-content:flex-start}}
-  label.check{display:flex; gap:10px; align-items:flex-start; font-weight:400}
-  label.check input{margin-top:4px}
+  form.formulario label.check, label.check{display:flex; gap:10px; align-items:flex-start; font-weight:400}  /* casilla a la izquierda del texto, como en todos los formularios */
+  form.formulario label.check input{flex:none; width:18px; height:18px; margin:2px 0 0; padding:0; accent-color:var(--acento)}
   header.top{position:sticky; top:0; z-index:20; background:color-mix(in srgb,var(--bg) 90%,transparent); backdrop-filter:blur(8px); border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; gap:12px; min-height:58px}
   .marca{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; font-size:19px; white-space:nowrap}
