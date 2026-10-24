@@ -87,7 +87,7 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
-  luego `portadas.py ... --epub`, `exlibris.py` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
+  luego `portadas.py ... --epub`, `exlibris.py`, `credito_portada.py` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
 - Encuadernadores (`#encuadernadores`, bloque de la vista Editorial): personas que ponen su agente
   de IA (Claude Code, Codex...) a preparar un libro con sus tokens. El sitio les da un prompt para
   copiar, general o con el libro ya puesto, que manda al agente a seguir `editorial/ENCUADERNAR.md`
@@ -115,6 +115,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `herramientas/exlibris.py libros/<archivo>.epub`: todo libro de `libros/` lleva como segunda
   página, después de la portada, el exlibris de Fénix (un timbre estampado sobre papel,
   `img/exlibris-es.jpg` o `-en.jpg` según `dc:language`). Es idempotente; después se rehace el PDF.
+- `herramientas/credito_portada.py libros/<archivo>.epub`: el crédito de la portada (de
+  `imagen.credito` de la ficha) al pie de la portadilla, o en una página propia después del ex
+  libris si el EPUB no tiene portadilla nuestra, y como `dc:contributor` (rol `cov`) en el OPF.
+  Va después de `exlibris.py` y antes de `epub_a_pdf.py`; es idempotente. `revisar_libros.py` no
+  deja publicar un libro con crédito en su ficha que no lo traiga en el EPUB y en el PDF.
 - `herramientas/portadas.py`: cada libro lleva un cuadro de dominio público (Wikimedia Commons)
   relacionado con su tema, guardado sin marco en `img/cuadros/<nombre>.jpg` (2:3, de ahí se
   regenera todo). Sobre él arma la portada con el marco Fénix (`herramientas/marco.py`): códice

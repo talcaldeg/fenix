@@ -16,18 +16,25 @@ estar al día. Cada ERROR es un defecto que ya llegó publicado:
 - PDF: el fondo de las páginas es parejo, salvo portada y ex libris (esquinas a baja resolución).
 - EPUB: notas sin cursiva (ReadEra borra el texto en cursiva de la nota) y ex libris como
   segunda página.
+- EPUB y PDF: el crédito de la portada de su ficha, si la ficha lo trae (el archivo circula sin
+  la ficha; credito_portada.py, 24-oct-2026).
 
 Termina con «Libros listos» o con la lista de errores (código 1).
 """
 import argparse
+import html
 import re
 import subprocess
 import sys
+import unicodedata
 import zipfile
 from collections import Counter
 from pathlib import Path
 
 import fitz  # PyMuPDF
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import credito_portada  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 LIBROS = RAIZ / "libros"
@@ -80,12 +87,33 @@ def sin_cursiva_en_notas(ruta: Path) -> int:
     return n
 
 
-def revisar_epub(ruta: Path) -> list:
+def plano(t: str) -> str:
+    """Sin etiquetas, espacios ni guiones, y con las ligaduras abiertas: el PDF puede cortar una
+    palabra al final de la línea y escribe «Scheﬀer» con la ligadura ff."""
+    t = unicodedata.normalize("NFKC", html.unescape(re.sub(r"<[^>]+>", " ", t)))
+    return re.sub(r"[\s\-‐­]+", "", t)
+
+
+def falta_credito(ruta: Path, texto: str, creditos: dict, idioma: str = None):
+    """El crédito de la ficha, si no está en el texto; None si está o la ficha no lo trae.
+    Sin idioma (PDF) vale cualquiera de los dos."""
+    textos = creditos.get(ruta.stem)
+    if not textos:
+        return None
+    buscados = [textos[idioma][1]] if idioma else [t[1] for t in textos.values()]
+    return None if any(plano(b) in plano(texto) for b in buscados) else buscados[0]
+
+
+def revisar_epub(ruta: Path, creditos: dict) -> list:
     E = []
     with zipfile.ZipFile(ruta) as z:
         nombres = z.namelist()
         opf_ruta = re.search(r'full-path="([^"]+)"', z.read("META-INF/container.xml").decode("utf-8")).group(1)
         opf = z.read(opf_ruta).decode("utf-8")
+        paginas = " ".join(z.read(x).decode("utf-8", "replace") for x in nombres
+                           if x.endswith((".xhtml", ".html", ".htm")) and b"fenix-credito" in z.read(x))
+        if (c := falta_credito(ruta, paginas, creditos, credito_portada.idioma_de(opf))):
+            E.append(f"sin el crédito de la portada «{c}» (correr credito_portada.py)")
         hrefs = {}
         for item in re.findall(r"<item\b[^>]*>", opf):
             a = dict(re.findall(r'(\w[\w-]*)="([^"]*)"', item))
@@ -113,11 +141,13 @@ def revisar_epub(ruta: Path) -> list:
     return E
 
 
-def revisar_pdf(ruta: Path) -> list:
+def revisar_pdf(ruta: Path, creditos: dict) -> list:
     E = []
     d = fitz.open(str(ruta))
     if d.page_count < 3:
         return [f"solo {d.page_count} páginas"]
+    if (c := falta_credito(ruta, " ".join(d[i].get_text() for i in range(min(6, d.page_count))), creditos)):
+        E.append(f"sin el crédito de la portada «{c}» en las primeras páginas (rehacer con epub_a_pdf.py)")
     deformadas = []
     for i, p in enumerate(d):
         area = p.rect.width * p.rect.height
@@ -200,8 +230,9 @@ def main():
             if ruta.suffix == ".epub" and (n := sin_cursiva_en_notas(ruta)):
                 print(f"--arreglar {ruta.name}: {n} notas sin cursiva; rehacer su PDF con epub_a_pdf.py")
     errores = 0
+    creditos = credito_portada.creditos()
     for ruta in sorted(archivos):
-        E = revisar_pdf(ruta) if ruta.suffix == ".pdf" else revisar_epub(ruta)
+        E = revisar_pdf(ruta, creditos) if ruta.suffix == ".pdf" else revisar_epub(ruta, creditos)
         for e in E:
             print(f"ERROR {ruta.name}: {e}")
         errores += len(E)
