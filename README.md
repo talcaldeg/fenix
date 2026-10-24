@@ -80,8 +80,12 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   copiar, general o con el libro ya puesto, que manda al agente a seguir `editorial/ENCUADERNAR.md`
   (derechos, criterio moral, la vía más barata y el formato del paquete). La lista sale de
   `buscados` en `datos.js` y se oculta sola cuando el libro ya está en ese idioma. El agente revisa
-  su paquete con `herramientas/revisar_entrega.py`; al recibirlo, `herramientas/recibir_entrega.py
-  <zip>` lo revisa igual, arma EPUB, portada, exlibris y PDF, y agrega la ficha. El mensaje tipo
+  su paquete con `herramientas/revisar_entrega.py` y, con permiso de su usuario, lo envía con
+  `herramientas/entregar.py` (el .zip adjunto por FormSubmit, hasta 6 MB; llega a
+  talcaldeg@gmail.com con asunto «Fénix - encuadernador: entrega de <título>»). También puede
+  llegar adjunto en un correo o como enlace en el formulario. Se baja el adjunto a
+  `.entregas/` (con `gmail_cuentas.py personal`, `descargar_adjuntos`) y
+  `herramientas/recibir_entrega.py <zip>` lo revisa igual, arma EPUB, portada, exlibris y PDF, y agrega la ficha. El mensaje tipo
   para invitarlos está en `editorial/ENCUADERNADORES.md`; el formulario llega con asunto
   «Fénix - encuadernador» (una reserva se anota en `reservado` del libro buscado).
   **Regla dura: lo que Fénix tenga que arreglarle a un paquete recibido, lo paga el agente del

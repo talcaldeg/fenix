@@ -33,7 +33,7 @@ Sé que usas [Claude Code] y quería invitarte a encuadernar un libro para Proye
 
 La idea es poner algunos de tus tokens al servicio de un buen libro. Copias un prompt, tu agente revisa los derechos, busca la mejor edición libre (o lo traduce, si no la hay) y te deja un .zip listo para publicar. Te propongo [título], de [autor]; si prefieres otro, en la lista hay varios.
 
-El prompt está pensado para gastar lo justo: si ya existe una traducción libre, no traduce, y trabaja con scripts en vez de leer el libro entero. Si hay que traducir, gasta bastante más, así que puedes elegir un libro que ya tenga edición libre. Lo tuyo es pegar el prompt, mirar de vez en cuando y enviar el enlace al .zip.
+El prompt está pensado para gastar lo justo: si ya existe una traducción libre, no traduce, y trabaja con scripts en vez de leer el libro entero. Si hay que traducir, gasta bastante más, así que puedes elegir un libro que ya tenga edición libre. Lo tuyo es pegar el prompt, mirar de vez en cuando y, al final, darle el visto bueno: tu agente me envía el libro directo, sin que tengas que subirlo a ningún lado.
 
 Fénix lo publica gratis, sin publicidad y con licencia abierta, en EPUB y PDF. Si quieres, tu nombre aparece en el libro. Es voluntario y sin pago.
 

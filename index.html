@@ -1820,7 +1820,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
       <div id="encuadernadores" class="editores">
         <p class="eyebrow" data-i18n="enc.eyebrow">Súmate con tu IA</p>
         <h2 data-i18n="enc.titulo">Encuaderna un libro con tu IA</h2>
-        <p class="lede" data-i18n="enc.lede">¿Usas Claude Code, Codex u otro agente de inteligencia artificial? Pon unos cuantos de tus tokens al servicio de un buen libro. Copias un prompt, tu agente busca la mejor edición libre de derechos (o lo traduce, si no la hay) y te deja un paquete listo. Tú nos lo envías y Fénix lo publica gratis.</p>
+        <p class="lede" data-i18n="enc.lede">¿Usas Claude Code, Codex u otro agente de inteligencia artificial? Pon unos cuantos de tus tokens al servicio de un buen libro. Copias un prompt, tu agente busca la mejor edición libre de derechos (o lo traduce, si no la hay) y te deja un paquete listo. Tu agente nos lo envía y Fénix lo publica gratis.</p>
         <div class="dos-col" style="margin-top:22px">
           <div class="caja">
             <h3 data-i18n="enc.comoTitulo">Cómo funciona</h3>
@@ -1828,7 +1828,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
               <li data-i18n="enc.paso1">Elige un libro de la lista y copia su prompt. Si tienes otro en mente, copia el prompt general: tu agente te preguntará el título y el autor.</li>
               <li data-i18n="enc.paso2">Pégalo en tu agente (Claude Code, Codex, Gemini CLI o el que uses). Primero revisa que el libro no esté ya en Fénix, sus derechos de autor y su valoración moral.</li>
               <li data-i18n="enc.paso3">Si hay que traducirlo o transcribir un escaneo, que es lo que más tarda, resérvalo con el formulario de abajo para que nadie lo repita.</li>
-              <li data-i18n="enc.paso4">Al final te deja un .zip. Súbelo a Drive, Dropbox o WeTransfer y mándanos el enlace.</li>
+              <li data-i18n="enc.paso4">Al final te deja un .zip y, con tu permiso, tu agente nos lo envía directo: no tienes que subirlo a ningún lado. Si prefieres, adjúntalo en el formulario de abajo o mándalo por correo a talcaldeg@gmail.com.</li>
             </ol>
           </div>
           <div class="caja">
@@ -1860,7 +1860,8 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
               <option data-i18n="enc.fQue2">Entrego el libro terminado</option>
             </select></label>
           <label><span data-i18n="enc.fLibro">Libro (título y autor)</span><input name="libro" required></label>
-          <label><span data-i18n="enc.fEnlace">Enlace al .zip (si lo entregas)</span><input type="url" name="enlace"></label>
+          <label><span data-i18n="enc.fArchivo">El .zip (si lo entregas; hasta 6 MB)</span><input type="file" name="attachment" accept=".zip,application/zip"></label>
+          <label><span data-i18n="enc.fEnlace">O el enlace al .zip, si pesa más</span><input type="url" name="enlace"></label>
           <label><span data-i18n="enc.fAgente">Agente que usaste</span><input name="agente"></label>
           <label><span data-i18n="edi.fNombre">¿Tu nombre en el libro?</span>
             <select name="credito">
@@ -1871,7 +1872,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
           <label class="check"><input type="checkbox" name="licencia" value="acepto" required><span data-i18n="enc.fLicencia">Acepto que Fénix publique esta edición gratis y con licencia abierta (CC BY-NC-SA 4.0).</span></label>
           <button class="btn prim" type="submit" data-i18n="enc.fEnviar">Enviar</button>
           <div class="estado" role="status"></div>
-          <p class="meta" data-i18n="enc.fNota">Si lo reservas, el libro aparece «En preparación» en la lista. Si lo entregas, lo revisamos y te avisamos por correo cuando esté publicado.</p>
+          <p class="meta" data-i18n="enc.fNota">Si lo reservas, el libro aparece «En preparación» en la lista. Si lo entregas, lo revisamos y te avisamos por correo cuando esté publicado. También puedes mandar el .zip por correo a talcaldeg@gmail.com.</p>
         </form>
       </div>
     </div>
@@ -2079,11 +2080,11 @@ function iniciar(){
       "der.etqLibre":"Public domain","der.etqProtegido":"Copyrighted","der.etqProbable":"Probably copyrighted","der.etqSinDatos":"No data",
       "nav.editores":"Become an editor","edi.eyebrow":"Join us","edi.titulo":"Become the editor of a book","edi.lede":"There are good books that hardly anyone reads because they are not in Spanish, or because their only version is a scan that is hard to read. We invite you to take charge of one: choose the book, set a date and deliver an edition that anyone can read for free on their phone.","edi.cita":"«Reading has made many saints.»","edi.citaRef":"St Josemaría, The Way, 116 (our translation)","edi.porque":"Every Christian is called to proclaim Christ by their life and their word (Catechism, 905). Editing a good book is a concrete way to do it: the text you get ready will be read by people you will never meet, for many years.","edi.comoTitulo":"How it works","edi.paso1":"Choose the book: the one we suggest or one you have in mind, as long as its rights allow it.","edi.paso2":"Set your delivery date. You choose it, according to the time you have.","edi.paso3":"Edit from scratch or on top of a base translation made with artificial intelligence, which you check sentence by sentence against the original.","edi.paso4":"Send your edition. We publish it as EPUB and PDF, with its own page to share and, when the original is in another language, also in a bilingual version.","edi.recibesTitulo":"What Fénix offers","edi.recibe1":"The book is published for free, without ads and under an open licence.","edi.recibe2":"If you wish, your name appears in the book as the editor.","edi.recibe3":"It is volunteer, unpaid work: what you gain is that the book exists.","edi.opcTitulo":"If you would like to contribute more","edi.opc1":"Your favourite quotes from the book.","edi.opc2":"A copyright-free cover or one made by you.","edi.opc3":"A foreword.","edi.formTitulo":"I want to be an editor","edi.fLibro":"Which book?","edi.fLibro1":"The one you suggest","edi.fLibro2":"I have one in mind","edi.fCual":"If you have one in mind, which? (title and author)","edi.fModo":"How would you rather edit?","edi.fModo1":"On the AI base translation","edi.fModo2":"From scratch","edi.fModo3":"Not sure yet","edi.fFecha":"Date you commit to deliver it","edi.fNombre":"Your name in the book?","edi.fNombre1":"Yes, as the editor","edi.fNombre2":"No, I would rather not","edi.fComentario":"Comments (languages you read, experience, questions)","edi.fEnviar":"I commit","edi.fNota":"We will reply by email with the book and the files to get started. The finished edition, quotes, cover or foreword are sent by replying to that email.",
       "ed.eyebrow":"Our own editions","ed.titulo":"Our editions","ed.lede":"Sometimes finding a book is not enough: it has to be translated from its original language, a transcription has to be checked, or an edition has to be made that reads well on a phone. These are the books prepared by Proyecto Fénix.",
-      "nav.encuadernadores":"Bind a book with AI","enc.eyebrow":"Join us with your AI","enc.titulo":"Bind a book with your AI","enc.lede":"Do you use Claude Code, Codex or another AI agent? Put some of your tokens at the service of a good book. You copy a prompt, your agent finds the best copyright-free edition (or translates the book, if there is none) and leaves you a ready-made package. You send it to us and Fénix publishes it for free.",
-      "enc.comoTitulo":"How it works","enc.paso1":"Choose a book from the list and copy its prompt. If you have another one in mind, copy the general prompt: your agent will ask you for the title and author.","enc.paso2":"Paste it into your agent (Claude Code, Codex, Gemini CLI or whichever you use). It first checks that the book is not already in Fénix, its copyright and its moral rating.","enc.paso3":"If it has to be translated or a scan transcribed, which takes the longest, reserve it with the form below so that nobody repeats it.","enc.paso4":"At the end it leaves you a .zip. Upload it to Drive, Dropbox or WeTransfer and send us the link.",
+      "nav.encuadernadores":"Bind a book with AI","enc.eyebrow":"Join us with your AI","enc.titulo":"Bind a book with your AI","enc.lede":"Do you use Claude Code, Codex or another AI agent? Put some of your tokens at the service of a good book. You copy a prompt, your agent finds the best copyright-free edition (or translates the book, if there is none) and leaves you a ready-made package. Your agent sends it to us and Fénix publishes it for free.",
+      "enc.comoTitulo":"How it works","enc.paso1":"Choose a book from the list and copy its prompt. If you have another one in mind, copy the general prompt: your agent will ask you for the title and author.","enc.paso2":"Paste it into your agent (Claude Code, Codex, Gemini CLI or whichever you use). It first checks that the book is not already in Fénix, its copyright and its moral rating.","enc.paso3":"If it has to be translated or a scan transcribed, which takes the longest, reserve it with the form below so that nobody repeats it.","enc.paso4":"At the end it leaves you a .zip and, with your permission, your agent sends it to us directly: you do not have to upload it anywhere. If you prefer, attach it in the form below or email it to talcaldeg@gmail.com.",
       "enc.tokensTitulo":"How it saves your tokens","enc.tokens1":"It does not translate what already exists: if there is a free edition in that language, it takes it or cleans it up.","enc.tokens2":"It works with scripts and does not load the whole book into its memory, except to translate it.","enc.tokens3":"It stops at the first obstacle: if the book is already here, is still under copyright or does not meet the moral criterion.","enc.tokens4":"It checks its package with the same tool Fénix uses on receiving it, so there is no back and forth.",
       "enc.promptTitulo":"General prompt","enc.copiar":"Copy prompt","enc.listaTitulo":"Books we are looking for","enc.criterio":"They are free of copyright in Chile and in the United States, and Delibris rates them 5 or 6 out of 6. If you suggest another one, your agent checks the same; if Delibris has not reviewed it, it must have no sex scenes and nothing contrary to the faith or morals of the Church.",
-      "enc.formTitulo":"Reserve or deliver a book","enc.fQue":"What are you sending us?","enc.fQue1":"I am reserving a book (about to start)","enc.fQue2":"I am delivering the finished book","enc.fLibro":"Book (title and author)","enc.fEnlace":"Link to the .zip (if you are delivering it)","enc.fAgente":"Agent you used","enc.fComentario":"Comments","enc.fLicencia":"I agree that Fénix may publish this edition for free and under an open licence (CC BY-NC-SA 4.0).","enc.fEnviar":"Send","enc.fNota":"If you reserve it, the book shows as «In preparation» in the list. If you deliver it, we review it and email you when it is published.",
+      "enc.formTitulo":"Reserve or deliver a book","enc.fQue":"What are you sending us?","enc.fQue1":"I am reserving a book (about to start)","enc.fQue2":"I am delivering the finished book","enc.fLibro":"Book (title and author)","enc.fArchivo":"The .zip (if you are delivering it; up to 6 MB)","enc.fEnlace":"Or the link to the .zip, if it is larger","enc.pesado":"The .zip is larger than 6 MB: email it to talcaldeg@gmail.com or paste a Drive link.","enc.fAgente":"Agent you used","enc.fComentario":"Comments","enc.fLicencia":"I agree that Fénix may publish this edition for free and under an open licence (CC BY-NC-SA 4.0).","enc.fEnviar":"Send","enc.fNota":"If you reserve it, the book shows as «In preparation» in the list. If you deliver it, we review it and email you when it is published. You can also email the .zip to talcaldeg@gmail.com.",
       "enc.prompt":"I want to prepare a book for Proyecto Fénix, a free library of good books (https://talcaldeg.github.io/fenix/). Read in full and follow to the letter https://raw.githubusercontent.com/talcaldeg/fenix/main/editorial/ENCUADERNAR.md (it is written in Spanish; talk to me in English). If you cannot open links, clone https://github.com/talcaldeg/fenix and read editorial/ENCUADERNAR.md.",
       "enc.promptPregunta":"First, ask me for the book's title and author, and whether I want it in English or in Spanish.",
       "enc.promptLibro":"The book is “{t}”, by {a}, in English.",
@@ -2142,7 +2143,7 @@ function iniciar(){
       "x.ayuda":"¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.",
       "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
-      "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos tu mensaje.","x.fallo":"No se pudo enviar. Inténtalo de nuevo en un momento.","x.verIn":"Ver en",
+      "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos tu mensaje.","x.fallo":"No se pudo enviar. Inténtalo de nuevo en un momento.","enc.pesado":"El .zip pesa más de 6 MB: mándalo por correo a talcaldeg@gmail.com o pega un enlace de Drive.","x.verIn":"Ver en",
       "todos.cuenta":"{n} libros encontrados","todos.cuenta1":"1 libro encontrado","todos.cuentaAprox":"Cerca de {n} libros","todos.masEd1":"y 1 edición más","todos.masEd":"y {n} ediciones más","todos.vacio":"No encontramos libros. Prueba con una sola palabra del título o con el apellido del autor.","todos.error":"El catálogo no respondió. Inténtalo de nuevo en un momento.","todos.buscando":"Buscando…","todos.edicion":"Edición",
       "todos.enFenix":"En Fénix","todos.derechos":"Derechos de autor","todos.calculando":"Revisando…","todos.verOL":"Ver en Open Library","todos.verFicha":"Ver su ficha en Fénix","todos.buscarDelibris":"Buscar en delibris.org","todos.noEncontrada":"No la encontramos en Delibris","todos.indice":"Nuestro índice de Delibris: {n} libros, al {f}.",
       "todos.solicitar":"Solicitar este libro","todos.solicitarNota":"Todavía no está en Fénix. Pídelo: lo buscamos, revisamos sus derechos y, si se puede, lo publicamos o te decimos dónde leerlo.","todos.solicitarEnviar":"Enviar solicitud",
@@ -2853,8 +2854,22 @@ function iniciar(){
     datos._template = "table";
     datos._captcha = "false";
     datos.idioma_pagina = lang;
+    // El .zip de un encuadernador va adjunto: FormSubmit solo acepta archivos en su endpoint sin
+    // /ajax/, que no responde JSON ni CORS, así que se envía no-cors y se da por recibido si no
+    // falla la red. Pasado el límite (6 MB, ver herramientas/entregar.py) se pide correo o enlace.
+    const zip = datos.attachment;
+    delete datos.attachment;
+    if (zip && zip.size > 6e6){ estado.className = "estado err"; estado.textContent = t("enc.pesado"); return; }
     estado.className = "estado"; estado.textContent = t("x.enviando"); boton.disabled = true;
     try{
+      if (zip && zip.size){
+        const fd = new FormData();
+        Object.entries(datos).forEach(([k, v]) => fd.append(k, v));
+        fd.append("attachment", zip, zip.name);
+        await fetch(D.contacto.formularios.replace("/ajax/", "/"), { method:"POST", mode:"no-cors", body: fd });
+        estado.className = "estado ok"; estado.textContent = t("x.enviado"); f.reset();
+        return;
+      }
       const r = await fetch(D.contacto.formularios, { method:"POST", headers:{ "Content-Type":"application/json", "Accept":"application/json" }, body: JSON.stringify(datos) });
       const j = await r.json().catch(() => ({}));
       if (!r.ok || j.success === "false" || j.success === false) throw new Error(j.message || r.status);

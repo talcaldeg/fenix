@@ -170,7 +170,9 @@ va en los dos idiomas, aunque el libro sea de uno solo.
   profundas o las que enseñan algo). La revisión automática las busca en el texto.
 - `imagen`: un cuadro de dominio público de Wikimedia Commons relacionado con la obra (su
   escena, su autor, su época). Guárdalo como `cuadro.jpg`, vertical si se puede y de al menos
-  1.200 px de ancho. `cx` y `cy` (0 a 1) dicen dónde centrar el recorte a 2:3.
+  1.200 px de ancho. Baja la miniatura grande, no el original, que puede pesar decenas de MB y
+  no cabría en el envío: `https://commons.wikimedia.org/wiki/Special:FilePath/<archivo>?width=1600`.
+  `cx` y `cy` (0 a 1) dicen dónde centrar el recorte a 2:3.
 - `gutenberg`: el número del libro si vas por la vía A (entonces no hay `texto/` ni `epub`).
 - `delibris`: `null` si no está reseñado; entonces explica tu estimación en el INFORME.
 - `editorial`: qué hizo Fénix (vías B, C y D); `null` en la vía A.
@@ -196,16 +198,28 @@ de la ficha) y después revisa. Corrige todo lo que marque como ERROR y los AVIS
 correrlo hasta que diga «Entrega lista». Si cambiaste el texto, vuelve a armar `prueba.epub`.
 Luego comprime la carpeta (sin `prueba.epub`) en `<id>.zip`.
 
-## 7. Mensaje final a tu usuario
+## 7. Entrega: la haces tú, con su permiso
 
-En no más de 10 líneas: la ruta del `.zip`, la vía elegida, cuántas palabras tiene el libro y
-estos pasos para entregarlo:
+Tu usuario no tiene que subir nada. En un solo mensaje de no más de 10 líneas dale la ruta del
+`.zip`, la vía elegida y cuántas palabras tiene el libro, y pídele:
 
-1. Abrir `prueba.epub` (da su ruta completa) en su lector (Apple Books, Google Play Libros,
-   Calibre o Thorium) y hojear el primer capítulo, uno del medio con diálogos y el final. Si ve
-   algo raro, que te lo diga antes de entregar. Es una vista previa: sin portada, que la pone
-   Fénix.
-2. Subir el `.zip` a Google Drive, Dropbox, OneDrive o WeTransfer, con enlace que cualquiera
-   pueda abrir.
-3. Enviar el enlace en https://talcaldeg.github.io/fenix/#encuadernadores (opción «Entrego el
-   libro terminado»).
+1. Que abra `prueba.epub` (da su ruta completa) en su lector (Apple Books, Google Play Libros,
+   Calibre o Thorium) y hojee el primer capítulo, uno del medio con diálogos y el final. Es una
+   vista previa: sin portada, que la pone Fénix. Si ve algo raro, lo corriges antes de enviar.
+2. Su nombre y su correo (para avisarle cuando esté publicado; el nombre con que quiere aparecer
+   en el libro ya está en `credito`).
+3. Si acepta que Fénix publique esta edición gratis y con licencia abierta (CC BY-NC-SA 4.0) y
+   si te autoriza a enviarla ahora.
+
+Con su sí, envíala tú:
+
+```bash
+python herramientas/entregar.py entrega/<id>.zip --nombre "..." --correo "..." --agente "<tu nombre de agente>" --acepto-licencia
+```
+
+Manda el `.zip` adjunto por el formulario del sitio y llega como correo a Fénix. Cuando diga
+«Enviado», díselo a tu usuario y termina. Si el `.zip` pesa más de 6 MB (casi siempre por
+`cuadro.jpg`: bájalo a 1.600 px y vuelve a comprimir) o el envío falla, el script imprime las
+alternativas para tu usuario: adjuntar el `.zip` en un correo a talcaldeg@gmail.com (asunto
+«Fénix - encuadernador») o, si pasa de 25 MB, subirlo a Drive y mandar el enlace en
+https://talcaldeg.github.io/fenix/#encuadernadores (opción «Entrego el libro terminado»).
