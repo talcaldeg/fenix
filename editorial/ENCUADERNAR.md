@@ -77,6 +77,10 @@ secciones de libros concretos son ejemplos de cómo armar el glosario del tuyo.
   revisar formato; usa el mejor modelo disponible para traducir y para la revisión de sentido.
 - Si el trabajo va a ser largo (vía C o D), dile a tu usuario que, si quiere que nadie lo
   repita, puede reservarlo con un correo a talcaldeg@gmail.com antes de que empieces.
+- Si tu usuario usa un plan gratuito, su cupo alcanza para las vías A y B, pero una vía C o D
+  puede agotarlo a medio camino: díselo antes de empezar. Deja el trabajo listo para retomarlo
+  en otra sesión u otro día: anota en `entrega/<id>.avance.md` (fuera de la carpeta del paquete)
+  la vía, las fuentes y qué tramos están listos y cuál sigue, y al volver léelo antes que nada.
 
 ## 5. Arma el paquete
 
