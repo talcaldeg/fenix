@@ -74,7 +74,15 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   ancla colgada al final del capítulo anterior (defecto de algunos EPUB de Gutenberg). La hoja
   es A5, salvo los libros de `HOJAS` (la página de su original) o con `--hoja ANCHOxALTO` en mm.
   Un dibujo con `{width=N%}` que no cabe en lo que queda de la página pasa a la siguiente (MuPDF
-  lo achicaría y no respeta `break-before`); solo en el PDF.
+  lo achicaría y no respeta `break-before`); solo en el PDF. Si el índice es el de `indice.py`,
+  le dibuja a cada entrada su número de página con puntos guía, sobre el PDF ya diagramado (no
+  cambia la paginación).
+- `herramientas/indice.py`: el índice (`nav.xhtml`) con diseño de libro y no de página web:
+  tinta heredada sin azul ni subrayado (sirve en modo oscuro), sin la numeración de la lista,
+  «Capítulo I» en versalitas con el título debajo, «I. Título» con sangría francesa, y
+  preliminares y finales separados del cuerpo. `md_a_epub.py` ya lo arma así; `indice.py
+  libros/<archivo>.epub` rehace el de un EPUB armado (conserva enlaces y anidado), antes de
+  `epub_a_pdf.py`.
 - `herramientas/revisar_libros.py`: guardia de los EPUB y PDF de `libros/`. `sesion.py publicar`
   la corre sobre los libros que cambiaron respecto de `main` (los dos formatos de cada uno) y no
   sube si hay un ERROR; `--todos` da el informe del catálogo y `<archivos> --arreglar` quita la
@@ -82,7 +90,9 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   entera tengan la proporción de su imagen (2 %; MuPDF las estiraba un 9 % en A5), que el índice
   enlazado y los marcadores no apunten todos a la página 1 y que el fondo sea parejo desde la
   página 3 (esquinas a baja resolución); en el EPUB, notas sin cursiva (ReadEra borra ese texto)
-  y el ex libris como segunda página. Lo que se le corrija a un libro y se pueda medir se suma
+  y el ex libris como segunda página; si el índice se lee como página, que sea el de `indice.py`
+  (sin enlaces azules ni subrayados, sin color fijo), y en su PDF, que cada entrada lleve el
+  número de la página a la que lleva su enlace. Lo que se le corrija a un libro y se pueda medir se suma
   aquí.
 - `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con

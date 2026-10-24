@@ -6,7 +6,8 @@
 - Lee, en orden de nombre, los .md de la carpeta (menos nota.md). Cada `## ` abre un capítulo; el
   texto de un archivo sin encabezado sigue el capítulo anterior (tramos de un mismo capítulo).
   `### ` es un subtítulo dentro del capítulo y `#### `, uno de tercer nivel.
-- nota.md (si existe) va como «Nota de esta edición», después del índice.
+- nota.md (si existe) va como «Nota de esta edición», después del índice. El índice lo arma
+  indice.py, con diseño de libro.
 - Notas `[^n]` (o `[^ed1]`, del editor) con su `[^n]: texto` al final del tramo: se renumeran por
   capítulo y van al pie
   del capítulo. Párrafo en cursiva justo después del título: sumario del capítulo.
@@ -24,8 +25,12 @@ import argparse
 import html
 import re
 import uuid
+import sys
 import zipfile
 from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import indice  # noqa: E402
 
 CSS = """@charset "utf-8";
 body { font-family: Georgia, serif; line-height: 1.5; margin: 0 4%; }
@@ -262,9 +267,9 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
         spine.append(nombre)
         toc.append((f"{nombre}.xhtml", re.sub(r"\*", "", c.titulo)))
 
-    lis = "".join(f'<li><a href="{h}">{html.escape(t)}</a></li>' for h, t in toc)
-    archivos["OEBPS/nav.xhtml"] = pagina(et["indice"], f'<nav epub:type="toc" id="toc"><h1>{et["indice"]}</h1><ol>{lis}</ol></nav>',
-                                         "frontmatter").encode("utf-8")
+    # Índice con diseño de libro (rótulo en versalitas, preliminares y finales aparte): indice.py
+    archivos["OEBPS/nav.xhtml"] = indice.nav_xhtml([(h, t, []) for h, t in toc], idioma).encode("utf-8")
+    archivos["OEBPS/indice.css"] = indice.CSS.encode("utf-8")
     uid = f"urn:uuid:{uuid.uuid5(uuid.NAMESPACE_URL, 'fenix/' + salida.stem)}"
     puntos = "".join(f'<navPoint id="p{i}" playOrder="{i}"><navLabel><text>{html.escape(t)}</text></navLabel>'
                      f'<content src="{h}"/></navPoint>' for i, (h, t) in enumerate(toc, 1))
@@ -273,7 +278,8 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
                                  f'<docTitle><text>{html.escape(titulo)}</text></docTitle><navMap>{puntos}</navMap></ncx>\n').encode("utf-8")
     items = ['<item id="nav" href="nav.xhtml" media-type="application/xhtml+xml" properties="nav"/>',
              '<item id="ncx" href="toc.ncx" media-type="application/x-dtbncx+xml"/>',
-             '<item id="css" href="estilo.css" media-type="text/css"/>']
+             '<item id="css" href="estilo.css" media-type="text/css"/>',
+             '<item id="indice-css" href="indice.css" media-type="text/css"/>']
     items += [f'<item id="{s}" href="{s}.xhtml" media-type="application/xhtml+xml"/>' for s in spine if s != "nav"]
     tipos = {".jpg": "image/jpeg", ".jpeg": "image/jpeg", ".png": "image/png", ".gif": "image/gif"}
     for i, (nombre, ruta) in enumerate(sorted(imagenes.items()), 1):

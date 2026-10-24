@@ -6,6 +6,7 @@
 La hoja es A5 salvo para los libros de HOJAS, que copian la página de su original; --hoja (en
 milímetros) manda sobre las dos. Si MuPDF achica un dibujo con {width=N%} porque no cabe en lo
 que queda de la página, ese dibujo pasa a la página siguiente (solo en el PDF, el EPUB no cambia).
+En el índice de indice.py dibuja el número de página de cada entrada, con puntos guía.
 """
 import argparse
 import io
@@ -85,6 +86,74 @@ def paginas_de_imagen(z: zipfile.ZipFile, doc, pdf) -> None:
         pag.draw_rect(r, color=None, fill=color)
         pag.insert_image(fitz.Rect((r.width - w) / 2, (r.height - h) / 2,
                                    (r.width + w) / 2, (r.height + h) / 2), stream=datos)
+
+
+def paginas_del_indice(z: zipfile.ZipFile, doc) -> list:
+    """Números (desde 0) de las páginas que diagrama el nav.xhtml, si está en el spine."""
+    base, xhtmls = spine(z)
+    opf = z.read(next(n for n in z.namelist() if n.endswith(".opf"))).decode("utf-8")
+    item = re.search(r'<item\b[^>]*properties="[^"]*\bnav\b[^"]*"[^>]*>', opf)
+    if not item:
+        return []
+    nav = base + re.search(r'href="([^"]+)"', item.group(0)).group(1)
+    if nav not in xhtmls:
+        return []
+    k = xhtmls.index(nav)
+    return [i for i in range(doc.page_count) if doc.location_from_page_number(i)[0] == k]
+
+
+def numerar_indice(z: zipfile.ZipFile, doc, pdf) -> int:
+    """Número de página con puntos guía en cada entrada del índice, alineado a la derecha de la
+    caja de texto (indice.py le deja ese margen). Se dibuja sobre el PDF ya diagramado, así que no
+    cambia la paginación; el número es el de la página del PDF a la que lleva el enlace. Los puntos
+    caen en una grilla fija para que queden en columna de una línea a otra."""
+    paginas = paginas_del_indice(z, doc)
+    if not paginas:
+        return 0
+    letra = None
+    for x in pdf[paginas[0]].get_fonts():
+        buf = pdf.extract_font(x[0])[3]
+        if buf:
+            f = fitz.Font(fontbuffer=buf)
+            if all(f.has_glyph(ord(c)) for c in "0123456789."):
+                letra = f
+                break
+    letra = letra or fitz.Font("tiro")
+    n = 0
+    for i in paginas:
+        lineas = [l for b in doc[i].get_text("dict")["blocks"] for l in b.get("lines", [])]
+        margen = min(l["bbox"][0] for l in lineas)
+        derecha = doc[i].rect.width - margen
+        # MuPDF da un enlace por línea: las líneas seguidas con el mismo destino son una entrada
+        # (el rótulo y su título); de cada entrada vale la última.
+        entradas = []  # [destino, rect de su última línea]
+        enlaces = sorted((l for l in doc[i].get_links() if l["kind"] == fitz.LINK_GOTO and l.get("page", -1) >= 0),
+                         key=lambda l: l["from"].y0)
+        for l in enlaces:
+            r = l["from"]
+            if entradas and entradas[-1][0] == l["page"] and r.y0 - entradas[-1][1].y1 < 0.45 * LETRA:
+                entradas[-1][1] = r
+            else:
+                entradas.append([l["page"], r])
+        tw = fitz.TextWriter(pdf[i].rect)
+        for destino, r in entradas:
+            linea = max((l for l in lineas if fitz.Rect(l["bbox"]).intersects(r)),
+                        key=lambda l: l["bbox"][3], default=None)
+            if not linea:
+                continue
+            tam = max(s["size"] for s in linea["spans"])
+            y = linea["spans"][-1]["origin"][1]
+            num = str(destino + 1)
+            x_num = derecha - letra.text_length(num, tam)
+            paso = tam * 0.55
+            x = (int((linea["bbox"][2] + tam * 0.6 - margen) / paso) + 1) * paso + margen
+            while x + letra.text_length(".", tam) < x_num - tam * 0.5:
+                tw.append((x, y), ".", font=letra, fontsize=tam)
+                x += paso
+            tw.append((x_num, y), num, font=letra, fontsize=tam)
+            n += 1
+        tw.write_text(pdf[i])
+    return n
 
 
 def dibujos_con_ancho(z: zipfile.ZipFile) -> list:
@@ -176,6 +245,7 @@ def convertir(epub: Path, hoja: tuple | None = None) -> Path:
     pdf = fitz.open("pdf", doc.convert_to_pdf())
     paginas_de_imagen(zipfile.ZipFile(epub), doc, pdf)
     rehacer_enlaces(doc, pdf)
+    numerar_indice(zipfile.ZipFile(epub), doc, pdf)
     meta = doc.metadata or {}
     pdf.set_metadata({"title": meta.get("title", ""), "author": meta.get("author", ""),
                       "subject": "Proyecto Fénix", "creator": "Proyecto Fénix"})

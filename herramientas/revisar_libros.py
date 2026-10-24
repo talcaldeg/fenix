@@ -16,6 +16,9 @@ estar al día. Cada ERROR es un defecto que ya llegó publicado:
 - PDF: el fondo de las páginas es parejo, salvo portada y ex libris (esquinas a baja resolución).
 - EPUB: notas sin cursiva (ReadEra borra el texto en cursiva de la nota) y ex libris como
   segunda página.
+- EPUB: el índice que se lee como página tiene diseño de libro (indice.py): enlaces en tinta
+  heredada, sin subrayado ni numeración de lista ni color fijo (era una lista web, 24-oct-2026).
+- PDF: con ese índice, cada entrada lleva el número de la página a la que lleva su enlace.
 - EPUB y PDF: el crédito de la portada de su ficha, si la ficha lo trae (el archivo circula sin
   la ficha; credito_portada.py, 24-oct-2026).
 
@@ -104,6 +107,45 @@ def falta_credito(ruta: Path, texto: str, creditos: dict, idioma: str = None):
     return None if any(plano(b) in plano(texto) for b in buscados) else buscados[0]
 
 
+def nav_del_epub(z: zipfile.ZipFile, opf_ruta: str, opf: str):
+    """(ruta del nav.xhtml, su texto) o (None, "")."""
+    item = re.search(r'<item\b[^>]*properties="[^"]*\bnav\b[^"]*"[^>]*>', opf)
+    if not item:
+        return None, ""
+    base = opf_ruta.rpartition("/")[0] + "/" if "/" in opf_ruta else ""
+    ruta = base + re.search(r'href="([^"]+)"', item.group(0)).group(1)
+    return ruta, z.read(ruta).decode("utf-8", "replace") if ruta in z.namelist() else ""
+
+
+def revisar_nav(z: zipfile.ZipFile, opf_ruta: str, opf: str, hrefs: dict, spine: list) -> list:
+    """El índice que se lee como página (nav en el spine) tiene diseño de libro: enlaces en tinta
+    heredada y sin subrayado, sin la lista numerada y sin color fijo (modo oscuro). Lo arma
+    indice.py; antes era una lista web azul, subrayada y numerada 1-9 (24-oct-2026)."""
+    ruta, t = nav_del_epub(z, opf_ruta, opf)
+    if not ruta or ruta.rpartition("/")[2] not in [s.rpartition("/")[2] for s in spine]:
+        return []
+    carpeta = ruta.rpartition("/")[0] + "/" if "/" in ruta else ""
+    css = " ".join(z.read(carpeta + h).decode("utf-8", "replace") for h in re.findall(r'<link\b[^>]*href="([^"]+\.css)"', t)
+                   if carpeta + h in z.namelist())
+    css += " ".join(re.findall(r"<style\b[^>]*>(.*?)</style>", t, re.S))
+    reglas = re.findall(r"([^{}]+)\{([^}]*)\}", re.sub(r"/\*.*?\*/", "", css, flags=re.S))
+    E = []
+    if not re.search(r'<nav\b[^>]*class="[^"]*\bindice\b', t):
+        return ["el índice es una lista web (enlaces azules, subrayados y numerados): correr indice.py"]
+    def hay(selector, propiedad):
+        return any(re.search(selector, s) and re.search(propiedad, c) for s, c in reglas)
+    if not hay(r"nav\.indice\s+a\b", r"text-decoration:\s*none"):
+        E.append("los enlaces del índice van subrayados")
+    if not hay(r"nav\.indice\s+a\b", r"color:\s*(?:inherit|currentColor)"):
+        E.append("los enlaces del índice no van en el color del texto (quedan azules)")
+    if not hay(r"nav\.indice\s+ol\b", r"list-style:\s*none"):
+        E.append("el índice lleva la numeración de la lista (1, 2, 3...)")
+    fijos = [s.strip() for s, c in reglas if "indice" in s and re.search(r"(?<!-)color:(?!\s*(?:inherit|currentColor))", c)]
+    if fijos:
+        E.append(f"el índice fija un color (no sigue el modo oscuro del lector): {', '.join(fijos)[:80]}")
+    return E
+
+
 def revisar_epub(ruta: Path, creditos: dict) -> list:
     E = []
     with zipfile.ZipFile(ruta) as z:
@@ -134,11 +176,68 @@ def revisar_epub(ruta: Path, creditos: dict) -> list:
         css = " ".join(z.read(x).decode("utf-8", "replace") for x in nombres if x.endswith(".css"))
         reglas = [s.strip() for s, cuerpo in re.findall(r"([^{}]+)\{([^}]*)\}", css)
                   if re.search(r"footnote|\.notas\b", s) and re.search(r"font-style:\s*italic", cuerpo)]
+        E += revisar_nav(z, opf_ruta, opf, hrefs, spine)
     if n:
         E.append(f"{n} notas con cursiva (ReadEra borra ese texto), p. ej. «{ej}»")
     if reglas:
         E.append(f"el CSS pone en cursiva las notas: {', '.join(reglas)[:80]}")
     return E
+
+
+def numeros_del_indice(ruta: Path, d) -> list:
+    """Si el EPUB hermano trae el índice de indice.py, en el PDF cada entrada del índice lleva a
+    la derecha el número de la página a la que lleva su enlace (epub_a_pdf.py los dibuja)."""
+    epub = ruta.with_suffix(".epub")
+    if not epub.exists():
+        return []
+    with zipfile.ZipFile(epub) as z:
+        opf_ruta = re.search(r'full-path="([^"]+)"', z.read("META-INF/container.xml").decode("utf-8")).group(1)
+        opf = z.read(opf_ruta).decode("utf-8")
+        nav, t = nav_del_epub(z, opf_ruta, opf)
+    id_nav = re.search(r'<item\b[^>]*properties="[^"]*\bnav\b[^>]*>', opf)
+    id_nav = re.search(r'\bid="([^"]+)"', id_nav.group(0)).group(1) if id_nav else None
+    en_spine = id_nav and re.search(rf'<itemref\b[^>]*idref="{re.escape(id_nav)}"', opf)
+    if not nav or not en_spine or not re.search(r'<nav\b[^>]*class="[^"]*\bindice\b', t):
+        return []
+    titulo = re.search(r"<h1>([^<]+)</h1>", t)
+    titulo = titulo.group(1).strip() if titulo else "Índice"
+    paginas = [p for p in d.pages(0, min(20, d.page_count))
+               if p.get_text().lstrip().startswith(titulo) and p.get_links()]
+    if not paginas:
+        return [f"no se encontró la página «{titulo}» del índice en el PDF"]
+    def de_indice(p) -> bool:
+        """Casi todas sus líneas son enlaces (una página de texto con notas tiene pocos)."""
+        rects = [l["from"] for l in p.get_links() if l["kind"] == fitz.LINK_GOTO]
+        lineas = [fitz.Rect(l["bbox"]) for b in p.get_text("dict")["blocks"] for l in b.get("lines", [])]
+        en_enlace = [any(x.y0 < (r.y0 + r.y1) / 2 < x.y1 for x in rects) for r in lineas]  # números y puntos incluidos
+        return len(rects) > 2 and sum(en_enlace) >= 0.7 * len(lineas)
+    paginas = paginas[:1]
+    k = paginas[0].number + 1
+    while k < d.page_count and de_indice(d[k]):
+        paginas.append(d[k])
+        k += 1
+    malos, total = [], 0
+    for p in paginas:
+        palabras = p.get_text("words")
+        enlaces = sorted((l for l in p.get_links() if l["kind"] == fitz.LINK_GOTO), key=lambda l: l["from"].y0)
+        entradas = []
+        for l in enlaces:
+            if entradas and entradas[-1][0] == l["page"] and l["from"].y0 - entradas[-1][1].y1 < 5:
+                entradas[-1][1] = l["from"]
+            else:
+                entradas.append([l["page"], l["from"]])
+        for destino, r in entradas:
+            total += 1
+            medio = (r.y0 + r.y1) / 2
+            nums = [w for w in palabras if w[0] > r.x1 and w[1] < medio < w[3] and w[4].isdigit()]
+            num = int(max(nums, key=lambda w: w[2])[4]) if nums else None
+            if num != destino + 1:
+                linea = " ".join(w[4] for w in palabras if w[1] < medio < w[3] and w[2] <= r.x1 + 1)[:40]
+                malos.append(f"«{linea}» {'sin número' if num is None else f'dice {num}'}, lleva a la {destino + 1}")
+    if malos:
+        return [f"{len(malos)} de {total} entradas del índice sin su número de página correcto (rehacer con "
+                f"epub_a_pdf.py): " + "; ".join(malos[:4])]
+    return []
 
 
 def revisar_pdf(ruta: Path, creditos: dict) -> list:
@@ -178,6 +277,7 @@ def revisar_pdf(ruta: Path, creditos: dict) -> list:
     destinos = [l.get("page") for p in d for l in p.get_links() if l["kind"] == fitz.LINK_GOTO]
     if len(destinos) > 1 and set(destinos) == {0}:
         E.append(f"los {len(destinos)} enlaces del índice apuntan a la página 1")
+    E += numeros_del_indice(ruta, d)
 
     esquinas = {}
     for p in d.pages(2):
