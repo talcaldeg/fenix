@@ -3,6 +3,10 @@
 Biblioteca gratuita en https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`). Cómo
 agregar un libro y la estructura: `README.md`. Criterios editoriales: memoria `proyecto_fenix`.
 
+**Regla dura:** cada corrección que él haga a un libro se escribe en el mismo turno como criterio
+en `proyecto_fenix` (la clase de error, no solo el caso) y se le recomienda auditar los demás
+libros publicados por ese mismo error, nombrándolos. Memoria `feedback_correccion_actualiza_memoria`.
+
 ## Varias sesiones a la vez (regla dura)
 
 Nunca se edita la carpeta principal `fenix\`: cada sesión trabaja en su propia copia y publica
