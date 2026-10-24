@@ -8,6 +8,7 @@ Revisa, en ventanas de escritorio y de celular:
   - inicio: el hero completo (hasta las cifras) cabe en la primera pantalla;
   - todas las vistas y una página de libro: sin scroll horizontal y sin errores de JavaScript;
   - la barra de arriba cabe en una línea en escritorio;
+  - cada enlace del menú lleva al principio de su vista, también si ya se está en ella más abajo;
   - la barra del sistema del celular (theme-color) es del color de la cabecera, en claro y en oscuro.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
@@ -108,6 +109,30 @@ def revisar(raiz, capturas=None):
                         fallas.append(f"barra del celular {esquema} {vista} {paso}: theme-color {r['barra'] or 'ausente'} "
                                       f"y la cabecera es {r['bg']} (se ve un corte de color arriba)")
             pg.close()
+        # Un enlace del menú lleva al principio de su vista aunque ya se esté en ella, abajo (el hash no
+        # cambia y no hay hashchange), o en una sección de la misma vista (#editores -> Editorial).
+        pg = nav.new_page(viewport={"width": 1280, "height": 720})
+        pg.goto(f"{base}#inicio")
+        pg.wait_for_load_state("networkidle")
+        for desde, destino in [(v, v) for v in VISTAS] + [("editores", "editorial"), ("encuadernadores", "editorial")]:
+            pg.goto(f"{base}#{desde}")
+            pg.wait_for_timeout(300)
+            pg.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)")
+            pg.wait_for_timeout(100)
+            if pg.evaluate("scrollY") < 50:
+                continue  # la vista cabe entera: no hay a dónde volver
+            # La cabecera incluye la marca (#inicio); una vista sin enlace arriba (Oraciones) no se mide.
+            if not pg.evaluate(f"""() => {{ const a = document.querySelector('header a[href="#{destino}"]');
+                                          if (a) a.click(); return !!a; }}"""):
+                continue
+            try:  # el desplazamiento es suave (scroll-behavior: smooth): se le da hasta 2 s
+                pg.wait_for_function("scrollY <= 5", timeout=2000)
+            except Exception:
+                pass
+            y = pg.evaluate("scrollY")
+            if y > 5:
+                fallas.append(f"menú: desde #{desde} abajo, el enlace a #{destino} deja la página en {round(y)}px y no arriba")
+        pg.close()
         nav.close()
     srv.shutdown()
     return fallas

@@ -2872,6 +2872,8 @@ function iniciar(){
   // pega en WhatsApp trae la vista previa del libro, y Atrás cierra la ficha.
   const VISTAS = ["inicio","biblioteca","todos","editorial","oraciones","citas","salvar","error","dona","contacto"];
   let ultimaVista = null;
+  // Último hash de vista (sin fichas ni obras): si cambia, aunque sea dentro de la misma vista (#editores a #editorial), se sube al principio.
+  let hashVista = null;
   const RAIZ = new URL(document.baseURI).pathname;
   const esRaiz = p => p === RAIZ || p === RAIZ + "index.html";
   function idDeRuta(p){
@@ -2908,10 +2910,10 @@ function iniciar(){
       abrirObra(h.slice(5)); return;
     }
     if ($("#dlgLibro").open) $("#dlgLibro").close();
-    if (h === "otra-humanidad"){ mostrar("inicio"); setTimeout(() => $("#otra-humanidad").scrollIntoView(), 0); return; }
+    if (h === "otra-humanidad"){ hashVista = h; mostrar("inicio"); setTimeout(() => $("#otra-humanidad").scrollIntoView(), 0); return; }
     if (h === "editores" || h === "encuadernadores"){
       const bajar = () => $("#" + h).scrollIntoView();
-      mostrar("editorial"); setTimeout(bajar, 0);
+      hashVista = h; mostrar("editorial"); setTimeout(bajar, 0);
       if (document.readyState !== "complete") window.addEventListener("load", () => setTimeout(bajar, 0), { once: true });
       $$("nav.menu a").forEach(a => a.classList.toggle("on", a.getAttribute("href") === "#" + h));
       $("#menuMas").classList.toggle("on", true);
@@ -2920,7 +2922,8 @@ function iniciar(){
     // Enlace viejo #plan (la vista Plan de vida se retiró el 24-oct-2026): lleva a la portada.
     if (h === "plan"){ history.replaceState(null, "", "#inicio"); urlVista = location.href; h = "inicio"; }
     // Cerrar una ficha devuelve a la misma vista: solo se sube al principio si la vista cambia.
-    const v = VISTAS.includes(h) ? h : "inicio", cambia = v !== ultimaVista;
+    const v = VISTAS.includes(h) ? h : "inicio", cambia = h !== hashVista;
+    hashVista = h;
     mostrar(v);
     if (cambia) window.scrollTo(0, 0);
   }
@@ -2938,6 +2941,14 @@ function iniciar(){
   // popstate (Atrás y Adelante) y hashchange pueden llegar los dos por el mismo cambio: alNavegar lo atiende una vez.
   window.addEventListener("popstate", alNavegar);
   window.addEventListener("hashchange", alNavegar);
+  // Un enlace al hash en que ya se está no dispara hashchange: se rehace la ruta para volver al principio de la vista (o a su sección).
+  document.addEventListener("click", e => {
+    const a = e.target.closest && e.target.closest('a[href^="#"]');
+    if (!a || e.defaultPrevented || e.button || e.ctrlKey || e.metaKey || e.shiftKey || e.altKey) return;
+    const href = a.getAttribute("href");
+    if (href.length < 2 || href.startsWith("#obra/") || href !== location.hash || idDeRuta(location.pathname)) return;
+    e.preventDefault(); hashVista = null; ruta();
+  });
 
   $("#fechaCatalogo").textContent = D.actualizado || "";
   // Al cambiar de idioma, los resultados del catálogo mundial eran del otro idioma: se rehace la búsqueda.
