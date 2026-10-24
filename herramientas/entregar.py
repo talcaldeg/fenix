@@ -1,8 +1,11 @@
 # -*- coding: utf-8 -*-
 """Envía a Fénix el paquete de un encuadernador, sin subirlo a ningún lado.
 
-    python herramientas/entregar.py entrega/<id>.zip --nombre "..." --correo "..." --acepto-licencia
-        [--agente "Claude Code"] [--comentario "..."]
+    python herramientas/entregar.py entrega/<id>.zip --acepto-licencia
+        [--nombre "..."] [--correo "..."] [--agente "Claude Code"] [--comentario "..."]
+
+Nombre y correo son opcionales: se puede entregar sin identificarse (el correo solo sirve para
+avisar cuando el libro esté publicado).
 
 Manda el .zip adjunto, con los datos del formulario de #encuadernadores, por el mismo servicio de
 formularios del sitio (FormSubmit, destino en `contacto.formularios` de datos.js). Llega como
@@ -69,8 +72,8 @@ No se envió. Dos formas de entregarlo:
 def main():
     p = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     p.add_argument("zip", type=Path)
-    p.add_argument("--nombre", required=True)
-    p.add_argument("--correo", required=True, help="para avisarle cuando esté publicado")
+    p.add_argument("--nombre", default="", help="opcional")
+    p.add_argument("--correo", default="", help="opcional: para avisarle cuando esté publicado")
     p.add_argument("--agente", default="")
     p.add_argument("--comentario", default="")
     p.add_argument("--acepto-licencia", action="store_true",
@@ -91,7 +94,7 @@ def main():
         "_subject": f"Fénix - encuadernador: entrega de {f.get('titulo') or a.zip.stem}",
         "_captcha": "false",
         "_template": "table",
-        "nombre": a.nombre,
+        "nombre": a.nombre or "(anónimo)",
         "email": a.correo,
         "tipo": "Entrego el libro terminado (enviado por su agente)",
         "libro": libro,
@@ -111,7 +114,8 @@ def main():
         plan_b(f"El servicio de envío respondió con un error ({e}).")
     if "submitted successfully" not in html:
         plan_b("El servicio de envío no confirmó la recepción.")
-    print(f"Enviado: {libro} ({mb:.1f} MB) a Proyecto Fénix. Tomás avisará a {a.correo} cuando esté publicado.")
+    aviso = f"Tomás avisará a {a.correo} cuando esté publicado." if a.correo else "Sin correo, no habrá aviso: el libro aparecerá en el sitio."
+    print(f"Enviado: {libro} ({mb:.1f} MB) a Proyecto Fénix. {aviso}")
 
 
 if __name__ == "__main__":

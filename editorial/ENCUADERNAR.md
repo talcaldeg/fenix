@@ -206,15 +206,16 @@ Tu usuario no tiene que subir nada. En un solo mensaje de no más de 10 líneas 
 1. Que abra `prueba.epub` (da su ruta completa) en su lector (Apple Books, Google Play Libros,
    Calibre o Thorium) y hojee el primer capítulo, uno del medio con diálogos y el final. Es una
    vista previa: sin portada, que la pone Fénix. Si ve algo raro, lo corriges antes de enviar.
-2. Su nombre y su correo (para avisarle cuando esté publicado; el nombre con que quiere aparecer
-   en el libro ya está en `credito`).
+2. Si quiere dar su nombre y su correo: los dos son opcionales y puede entregar sin
+   identificarse. El correo solo sirve para avisarle cuando esté publicado. Si no quiere
+   aparecer en el libro, `credito` va en `null`.
 3. Si acepta que Fénix publique esta edición gratis y con licencia abierta (CC BY-NC-SA 4.0) y
    si te autoriza a enviarla ahora.
 
 Con su sí, envíala tú:
 
 ```bash
-python herramientas/entregar.py entrega/<id>.zip --nombre "..." --correo "..." --agente "<tu nombre de agente>" --acepto-licencia
+python herramientas/entregar.py entrega/<id>.zip --agente "<tu nombre de agente>" --acepto-licencia [--nombre "..."] [--correo "..."]
 ```
 
 Manda el `.zip` adjunto por el formulario del sitio y llega como correo a Fénix. Cuando diga

@@ -35,7 +35,7 @@ La idea es poner algunos de tus tokens al servicio de un buen libro. Copias un p
 
 El prompt está pensado para gastar lo justo: si ya existe una traducción libre, no traduce, y trabaja con scripts en vez de leer el libro entero. Si hay que traducir, gasta bastante más, así que puedes elegir un libro que ya tenga edición libre. Lo tuyo es pegar el prompt, mirar de vez en cuando y, al final, darle el visto bueno: tu agente me envía el libro directo, sin que tengas que subirlo a ningún lado.
 
-Fénix lo publica gratis, sin publicidad y con licencia abierta, en EPUB y PDF. Si quieres, tu nombre aparece en el libro. Es voluntario y sin pago.
+Fénix lo publica gratis, sin publicidad y con licencia abierta, en EPUB y PDF. Si quieres, tu nombre aparece en el libro. Es voluntario y sin pago, y si prefieres no dar tu nombre, no hace falta.
 
 El prompt para copiar y la lista de libros están aquí: https://talcaldeg.github.io/fenix/#encuadernadores
 
