@@ -24,3 +24,14 @@ python herramientas/sesion.py cerrar <tema>                # al terminar
   `index.html`), se detiene: se resuelve el choque en la copia y se vuelve a publicar.
 - No se borra `.git/index.lock` ni se hace `git add -A` en la carpeta principal.
 - Vista previa de una copia: `python -m http.server <puerto> -d .sesiones/<tema>`.
+
+## Guardia de diseño (regla dura)
+
+`publicar` corre `herramientas/revisar_diseno.py` (Chromium en 7 ventanas, de 360 px a 1920 px):
+el hero completo, cifras incluidas, cabe en la primera pantalla; ninguna vista tiene scroll
+horizontal ni errores de JavaScript; el menú cabe en una línea. Si falla, no sube.
+
+- Se arregla el diseño, nunca se afloja la guardia ni se saca una ventana.
+- Lo nuevo que tenga que verse sí o sí (una sección, un botón, un bloque arriba) se suma como
+  revisión a `revisar_diseno.py` en el mismo cambio, así el siguiente cambio no lo rompe.
+- Para mirar: `python herramientas/revisar_diseno.py --capturas <carpeta>`.

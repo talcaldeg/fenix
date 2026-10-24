@@ -9,7 +9,8 @@ Uso (desde cualquier carpeta):
   python herramientas/sesion.py nueva <tema>       crea .sesiones/<tema> desde origin/main e imprime la ruta
   python herramientas/sesion.py publicar <tema> -m "mensaje"
                                                    commitea lo pendiente, se pone al día con main,
-                                                   regenera las páginas y sube a main (GitHub Pages)
+                                                   regenera las páginas, corre la guardia de diseño
+                                                   (revisar_diseno.py) y sube a main (GitHub Pages)
   python herramientas/sesion.py cerrar <tema>      borra la copia y su rama (solo si ya se publicó)
   python herramientas/sesion.py lista              copias abiertas y si tienen algo sin publicar
 
@@ -59,6 +60,15 @@ def generar(ruta):
     print(r.stdout.strip())
 
 
+def revisar_diseno(ruta):
+    """Si el sitio quedó con la maqueta rota (hero que no cabe, scroll horizontal, error de JS), no se sube."""
+    r = subprocess.run([sys.executable, os.path.join("herramientas", "revisar_diseno.py"), ruta], cwd=ruta,
+                       capture_output=True, text=True, encoding="utf-8")
+    if r.returncode != 0:
+        sys.exit(f"{r.stdout}{r.stderr}\nNo se publicó: arreglar el diseño en {ruta} y volver a publicar.")
+    print(r.stdout.strip())
+
+
 def integrar(ruta):
     """Rebase sobre origin/main. Choques en archivos generados: se toma main y se regenera después."""
     git("fetch", "-q", "origin", cwd=ruta)
@@ -94,6 +104,7 @@ def publicar(tema, mensaje):
     for intento in range(3):
         integrar(ruta)
         generar(ruta)
+        revisar_diseno(ruta)
         # El generador escribe LF y la copia tiene CRLF: puede "cambiar" sin cambiar el contenido en git.
         git("add", "-A", cwd=ruta)
         if git("diff", "--cached", "--quiet", cwd=ruta, check=False).returncode != 0:

@@ -1155,19 +1155,19 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .eyebrow{font:700 12px system-ui,sans-serif; letter-spacing:1.6px; text-transform:uppercase; color:var(--oro); margin:0 0 8px}
 
   /* Portada: siempre oscura, para empalmar con la noche del fénix (img/inicio-fenix.webp, que saca herramientas/miniaturas.py del JPG). */
-  .hero{position:relative; overflow:hidden; background:#0f0d10; color:#f6ecd9; border-bottom:1px solid var(--line); min-height:min(80vh,660px); display:flex; align-items:center; padding:64px 0}
+  .hero{position:relative; overflow:hidden; background:#0f0d10; color:#f6ecd9; border-bottom:1px solid var(--line); min-height:min(80vh,660px); display:flex; align-items:center; padding:clamp(20px,5vh,64px) 0}
   .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#0f0d10 url(img/inicio-fenix.webp) center top/cover no-repeat; animation:acercar 2.8s ease-out both}
   .hero .fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,#0f0d10 0%,rgba(15,13,16,.8) 18%,rgba(15,13,16,0) 52%), linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 28%)}
   .hero .wrap{position:relative; width:100%}
-  .hero .txt{max-width:560px; animation:subir 1.1s .2s ease-out both}
-  .hero h1{font-size:clamp(38px,6.6vw,68px); line-height:1.04; letter-spacing:-.5px; margin-bottom:16px; text-wrap:balance; text-shadow:0 2px 20px rgba(0,0,0,.65)}
+  .hero .txt{max-width:640px; animation:subir 1.1s .2s ease-out both}
+  .hero h1{font-size:clamp(34px,min(6.6vw,9vh),64px); line-height:1.04; letter-spacing:-.5px; margin-bottom:clamp(8px,1.8vh,16px); text-wrap:balance; text-shadow:0 2px 20px rgba(0,0,0,.65)}
   .hero .eyebrow{color:#e8b04a}
-  .hero .lede{color:#dccdb7}
+  .hero .lede{color:#dccdb7; margin:0}
 .hero .legal{margin:12px 0 0; max-width:520px; padding:2px 0 2px 12px; border-left:3px solid #e8b04a; font:600 15px/1.45 system-ui,sans-serif; color:#f6ecd9}
   .hero .btn{background:rgba(255,248,236,.06); color:#f6ecd9; border-color:rgba(255,240,210,.35)}
   .hero .btn.prim{background:#e8b04a; color:#1d1206; border-color:transparent}
   .hero .btn:hover{border-color:#e8b04a}
-  .hero .cifras{display:flex; gap:28px; flex-wrap:wrap; margin-top:30px; font:13px/1.35 system-ui,sans-serif; color:#c9b9a2}
+  .hero .cifras{display:flex; gap:28px; flex-wrap:wrap; margin-top:clamp(14px,3.5vh,30px); font:13px/1.35 system-ui,sans-serif; color:#c9b9a2}
   .hero .cifras b{display:block; font:700 30px/1.1 Georgia,serif; color:#f6ecd9}
   .hero .credito{position:absolute; right:12px; bottom:8px; font:11px system-ui,sans-serif; color:rgba(246,236,217,.55); text-decoration:none}
   .hero .credito:hover{color:#f6ecd9}
@@ -1187,7 +1187,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   @media (max-width:480px){.hero .fondo{background-image:url(img/inicio-fenix-movil.webp)}}
   .hero .acciones{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px}
   /* Buscador del inicio: la portada es oscura en los dos temas; la lista sale con los colores del tema. */
-  .hero-buscar{position:relative; display:flex; gap:8px; margin-top:24px; max-width:520px}
+  .hero-buscar{position:relative; display:flex; gap:8px; margin-top:clamp(14px,3vh,24px); max-width:520px}
   .hero-buscar .combo{flex:1 1 auto; min-width:0}
   .hero-buscar input{width:100%; padding:12px 14px; border:1px solid rgba(255,240,210,.35); border-radius:10px; background:rgba(255,248,236,.08); color:#f6ecd9; font:16px/1.3 system-ui,sans-serif}
   .hero-buscar input{color-scheme:dark}
@@ -1196,7 +1196,10 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
   .hero-buscar .combo-lista{max-height:340px}
   .combo-lista li.todos{border-top:1px solid var(--line); margin-top:4px; padding-top:10px; color:var(--vino); font-weight:600}
   .combo-lista li.vacio + li.todos{border-top:0; margin-top:0}
-  .hero-buscar + .acciones{margin-top:14px}
+  .hero-buscar + .acciones{margin-top:10px}
+  .hero .ir{font:600 15px system-ui,sans-serif; color:#e8b04a; text-decoration:none}
+  .hero .ir::after{content:" →"}
+  .hero .ir:hover{text-decoration:underline}
 
   .accesos{display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:14px}
   @media (max-width:760px){.accesos{grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px}}
@@ -1626,7 +1629,7 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
             <ul class="combo-lista" id="hLista" role="listbox" hidden></ul>
           </form>
           <div class="acciones">
-            <a class="btn prim" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
+            <a class="ir" href="#biblioteca" data-i18n="hero.ver">Ver la biblioteca</a>
           </div>
           <div class="cifras">
             <div><b id="cLibros"></b><span data-i18n="hero.cLibros">libros en el catálogo</span></div>
