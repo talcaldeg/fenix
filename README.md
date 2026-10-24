@@ -90,7 +90,7 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `.entregas/` (con `gmail_cuentas.py personal`, `descargar_adjuntos`) y
   `herramientas/recibir_entrega.py <zip>` lo revisa igual, arma EPUB, portada, exlibris y PDF, y agrega la ficha. El mensaje tipo
   para invitarlos está en `editorial/ENCUADERNADORES.md`; el formulario llega con asunto
-  «Fénix - encuadernador» (una reserva se anota en `reservado` del libro buscado).
+  «Fénix - encuadernador» (ya no reserva: quien quiera reservar escribe a talcaldeg@gmail.com y se anota en `reservado` del libro buscado).
   **Regla dura: lo que Fénix tenga que arreglarle a un paquete recibido, lo paga el agente del
   encuadernador la próxima vez.** El arreglo se vuelve un ERROR en `revisar_entrega.py` (y parte
   de `--arreglar` si es mecánico) y, si es criterio, va en `editorial/ENCUADERNAR.md`. El prompt

@@ -75,9 +75,8 @@ secciones de libros concretos son ejemplos de cómo armar el glosario del tuyo.
   rayas largas o comillas rectas).
 - Si tu herramienta permite subagentes o modelos más baratos, úsalos para descargar, convertir y
   revisar formato; usa el mejor modelo disponible para traducir y para la revisión de sentido.
-- Si el trabajo va a ser largo (vía C o D), dile a tu usuario que lo reserve en
-  https://talcaldeg.github.io/fenix/#encuadernadores (opción «Reservo este libro») antes de que
-  empieces, para que nadie lo repita.
+- Si el trabajo va a ser largo (vía C o D), dile a tu usuario que, si quiere que nadie lo
+  repita, puede reservarlo con un correo a talcaldeg@gmail.com antes de que empieces.
 
 ## 5. Arma el paquete
 
@@ -183,7 +182,7 @@ va en los dos idiomas, aunque el libro sea de uno solo.
 
 ### INFORME.md (máximo 40 líneas)
 
-Vía elegida y por qué no una más barata; fuentes con su URL; derechos (año de muerte del autor
+Agente y modelo que usaste (por ejemplo «Claude Code, Claude Opus»); vía elegida y por qué no una más barata; fuentes con su URL; derechos (año de muerte del autor
 y del traductor, año de publicación); valoración de Delibris o tu estimación razonada; qué
 cambiaste en el texto; palabras del libro; dudas que quedaron (cita corta y cómo la resolviste).
 
@@ -206,16 +205,15 @@ Tu usuario no tiene que subir nada. En un solo mensaje de no más de 10 líneas 
 1. Que abra `prueba.epub` (da su ruta completa) en su lector (Apple Books, Google Play Libros,
    Calibre o Thorium) y hojee el primer capítulo, uno del medio con diálogos y el final. Es una
    vista previa: sin portada, que la pone Fénix. Si ve algo raro, lo corriges antes de enviar.
-2. Si quiere dar su nombre y su correo: los dos son opcionales y puede entregar sin
-   identificarse. El correo solo sirve para avisarle cuando esté publicado. Si no quiere
-   aparecer en el libro, `credito` va en `null`.
+2. Si quiere dejar su correo para que le avisen cuando esté publicado (es opcional). Su nombre
+   solo va si quiere aparecer en el libro, en `credito`; si no, `credito` va en `null`.
 3. Si acepta que Fénix publique esta edición gratis y con licencia abierta (CC BY-NC-SA 4.0) y
    si te autoriza a enviarla ahora.
 
 Con su sí, envíala tú:
 
 ```bash
-python herramientas/entregar.py entrega/<id>.zip --agente "<tu nombre de agente>" --acepto-licencia [--nombre "..."] [--correo "..."]
+python herramientas/entregar.py entrega/<id>.zip --acepto-licencia [--correo "..."]
 ```
 
 Manda el `.zip` adjunto por el formulario del sitio y llega como correo a Fénix. Cuando diga
@@ -223,4 +221,4 @@ Manda el `.zip` adjunto por el formulario del sitio y llega como correo a Fénix
 `cuadro.jpg`: bájalo a 1.600 px y vuelve a comprimir) o el envío falla, el script imprime las
 alternativas para tu usuario: adjuntar el `.zip` en un correo a talcaldeg@gmail.com (asunto
 «Fénix - encuadernador») o, si pasa de 25 MB, subirlo a Drive y mandar el enlace en
-https://talcaldeg.github.io/fenix/#encuadernadores (opción «Entrego el libro terminado»).
+https://talcaldeg.github.io/fenix/#encuadernadores.
