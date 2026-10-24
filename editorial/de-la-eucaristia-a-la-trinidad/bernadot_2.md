@@ -20,25 +20,21 @@ No, puesto que el Maestro mismo hace nacer y alienta estos extraordinarios deseo
 
 \*
 
-Oh Dios, oh Dios mío, te busco desde la aurora:
+> Oh Dios, oh Dios mío, te busco desde la aurora:
+>
+> Mi alma tiene sed de Ti,
+>
+> Tras de Ti languidece mi carne
+>
+> En este desierto árido, reseco, sin agua.
+>
+> Así vengo a tu santuario
+>
+> A contemplar tu poder y tu gloria.
+>
+> Mi alma se aferra a Ti[^cita4].
 
-Mi alma tiene sed de Ti,
-
-Tras de Ti languidece mi carne
-
-En este desierto árido, reseco, sin agua.
-
-Así vengo a tu santuario
-
-A contemplar tu poder y tu gloria.
-
-Mi alma se aferra a Ti.
-
-Salmo 62
-
-Oh Dios de amor, Salvador mío, Tú eres dulzura y encanto por la eternidad. Eres la sed de mi corazón, la saciedad de mi espíritu. Y, sin embargo, mientras más te gusto, más crece mi hambre; mientras más bebo de tu fuente, más sediento me siento. Ven, Señor Jesús, ven.
-
-Santa Gertrudis[^ed12]
+> Oh Dios de amor, Salvador mío, Tú eres dulzura y encanto por la eternidad. Eres la sed de mi corazón, la saciedad de mi espíritu. Y, sin embargo, mientras más te gusto, más crece mi hambre; mientras más bebo de tu fuente, más sediento me siento. Ven, Señor Jesús, ven[^ed12].
 
 ### I. Nuestra unión con la santa Humanidad
 
@@ -70,23 +66,21 @@ En todo instante me ama. ¡Y con qué amor! Ciertamente el amor increado del Ver
 
 \*
 
-Yahvé es mi pastor, nada me falta.
-
-Me hace reposar en verdes pastos,
-
-Me conduce junto a aguas refrescantes,
-
-Reconforta mi alma…
-
-Aunque caminara por un valle de sombra de muerte, no temería mal alguno,
-
-Porque Tú estás conmigo.
-
-Tu cayado y tu bastón me tranquilizan.
-
-Pones ante mí una mesa frente a mis enemigos. Mi copa rebosa.
-
-Salmo 22
+> Yahvé es mi pastor, nada me falta.
+>
+> Me hace reposar en verdes pastos,
+>
+> Me conduce junto a aguas refrescantes,
+>
+> Reconforta mi alma…
+>
+> Aunque caminara por un valle de sombra de muerte, no temería mal alguno,
+>
+> Porque Tú estás conmigo.
+>
+> Tu cayado y tu bastón me tranquilizan.
+>
+> Pones ante mí una mesa frente a mis enemigos. Mi copa rebosa[^cita3].
 
 #### 2. La unión en virtud de su acción vital.
 
@@ -104,23 +98,21 @@ El Apóstol lo había dicho en una palabra: *Christus vita vestra*: Cristo es la
 
 \*
 
-Oh Trinidad eterna, Dios todopoderoso, somos árboles de muerte y Tú eres el árbol de vida. Dios infinito, ¡qué espectáculo ver en tu luz el árbol de tu criatura! Pureza suprema, Tú habías dado a este árbol por ramas las potencias del alma, que son la inteligencia, la memoria y la voluntad. ¿Y qué frutos debían dar esas ramas? La memoria debía retenerte, la inteligencia comprenderte, la voluntad amarte. Oh árbol, ¡en qué feliz estado te había plantado el jardinero divino!
-
-¡Ay! Oh Dios mío, este árbol cayó. Árbol de vida, se convirtió en árbol de muerte, y ya no podía dar sino frutos envenenados.
-
-Pero, Trinidad eterna, te apasionaste hasta la locura por tu criatura. Cuando viste que este árbol ya no daría sino frutos de muerte, porque estaba separado de Ti, que eres la Vida, lo salvaste por ese mismo amor que te había movido a crearlo: injertaste tu divinidad en el árbol perdido de nuestra humanidad. Injerto bueno y bienhechor, mezclaste tu dulzura con nuestra amargura, el esplendor con las tinieblas, la sabiduría y la locura, la vida con la muerte, lo infinito con lo finito.
-
-Después de la injuria que tu criatura te había hecho, ¿quién pudo forzarte a esta unión que nos devuelve la vida? Es el amor, solo el amor. Y este injerto maravilloso venció la muerte.
-
-Pero esto no bastaba a los ardores de tu caridad, oh Verbo eterno: quisiste regar este árbol con tu propia Sangre. Esta Sangre, por su calor, hace fructificar el árbol en cuanto el hombre consiente en unirse y vivir en Ti. Su corazón y sus afectos deben estar ligados al injerto celestial por los lazos de la caridad y de la obediencia. En cuanto estamos unidos a Ti, las ramas dan sus frutos.
-
-Oh amor infinito, ¡qué maravillas obras en tus criaturas! ¿Por qué los hombres no vienen a la fuente donde está la Sangre que debe regar su árbol? La vida eterna corre para nosotros, pobres criaturas que la ignoramos y no la aprovechamos,
-
-He pecado, Señor, ten piedad de mí.
-
-¡Jesús Amor! ¡Jesús Amor!
-
-Santa Catalina de Siena[^ed13]
+> Oh Trinidad eterna, Dios todopoderoso, somos árboles de muerte y Tú eres el árbol de vida. Dios infinito, ¡qué espectáculo ver en tu luz el árbol de tu criatura! Pureza suprema, Tú habías dado a este árbol por ramas las potencias del alma, que son la inteligencia, la memoria y la voluntad. ¿Y qué frutos debían dar esas ramas? La memoria debía retenerte, la inteligencia comprenderte, la voluntad amarte. Oh árbol, ¡en qué feliz estado te había plantado el jardinero divino!
+>
+> ¡Ay! Oh Dios mío, este árbol cayó. Árbol de vida, se convirtió en árbol de muerte, y ya no podía dar sino frutos envenenados.
+>
+> Pero, Trinidad eterna, te apasionaste hasta la locura por tu criatura. Cuando viste que este árbol ya no daría sino frutos de muerte, porque estaba separado de Ti, que eres la Vida, lo salvaste por ese mismo amor que te había movido a crearlo: injertaste tu divinidad en el árbol perdido de nuestra humanidad. Injerto bueno y bienhechor, mezclaste tu dulzura con nuestra amargura, el esplendor con las tinieblas, la sabiduría y la locura, la vida con la muerte, lo infinito con lo finito.
+>
+> Después de la injuria que tu criatura te había hecho, ¿quién pudo forzarte a esta unión que nos devuelve la vida? Es el amor, solo el amor. Y este injerto maravilloso venció la muerte.
+>
+> Pero esto no bastaba a los ardores de tu caridad, oh Verbo eterno: quisiste regar este árbol con tu propia Sangre. Esta Sangre, por su calor, hace fructificar el árbol en cuanto el hombre consiente en unirse y vivir en Ti. Su corazón y sus afectos deben estar ligados al injerto celestial por los lazos de la caridad y de la obediencia. En cuanto estamos unidos a Ti, las ramas dan sus frutos.
+>
+> Oh amor infinito, ¡qué maravillas obras en tus criaturas! ¿Por qué los hombres no vienen a la fuente donde está la Sangre que debe regar su árbol? La vida eterna corre para nosotros, pobres criaturas que la ignoramos y no la aprovechamos,
+>
+> He pecado, Señor, ten piedad de mí.
+>
+> ¡Jesús Amor! ¡Jesús Amor![^ed13]
 
 #### 3. Nuestra unión con la Humanidad en la Eucaristía
 
@@ -132,17 +124,15 @@ Es en el momento de la Comunión ante todo cuando esta vida se derrama en mí. P
 
 \*
 
-Señor, tu vida todopoderosa no es para nuestra destrucción, sino para nuestra vivificación. Permaneces siempre uno y siempre el mismo en Ti; pero de Ti salen continuamente un poder y una virtud que, por su contacto, son nuestra fuerza y nuestro bien…
-
-El Dios vivo es el Dios vivificante. Tú eres la Fuente y el Centro, a la vez que la Sede de todo bien.
-
-Hazme semejante a Ti, oh Dios mío, ya que, a pesar de los obstáculos que hay en mí mismo, puedes hacerme tal y tal puedo ser hecho.
-
-Señor, te pido a Ti mismo; no pido nada más que a Ti, oh Dios mío, que te has dado enteramente a nosotros. Entra en mi corazón personal y sustancialmente, y llénalo de fervor llenándolo de Ti. Solo Tú puedes llenar el alma del hombre, y has prometido hacerlo.
-
-Tú eres la Llama viva y ardes siempre de amor por los hombres: entra en mí y, para que yo me parezca a Ti, ¡inflámame con tu fuego!
-
-San John Henry Newman[^ed14]
+> Señor, tu vida todopoderosa no es para nuestra destrucción, sino para nuestra vivificación. Permaneces siempre uno y siempre el mismo en Ti; pero de Ti salen continuamente un poder y una virtud que, por su contacto, son nuestra fuerza y nuestro bien…
+>
+> El Dios vivo es el Dios vivificante. Tú eres la Fuente y el Centro, a la vez que la Sede de todo bien.
+>
+> Hazme semejante a Ti, oh Dios mío, ya que, a pesar de los obstáculos que hay en mí mismo, puedes hacerme tal y tal puedo ser hecho.
+>
+> Señor, te pido a Ti mismo; no pido nada más que a Ti, oh Dios mío, que te has dado enteramente a nosotros. Entra en mi corazón personal y sustancialmente, y llénalo de fervor llenándolo de Ti. Solo Tú puedes llenar el alma del hombre, y has prometido hacerlo.
+>
+> Tú eres la Llama viva y ardes siempre de amor por los hombres: entra en mí y, para que yo me parezca a Ti, ¡inflámame con tu fuego![^ed14]
 
 #### 4. Intimidad de esta unión
 
@@ -158,15 +148,13 @@ Esta gracia es verdaderamente mi vida, mi verdadera vida, mucho más que la vida
 
 \*
 
-Oh Señor Jesús, oh mar inmenso, ¿por qué tardas en recibir esta débil gota de agua en tu plenitud? Todo el deseo de mi alma, deseo tan ardiente como dulce, es salir ahora de mí misma y entrar en Ti.
-
-¡Oh! Ábreme, como asilo de salvación, tu Corazón tan amado. En cuanto al mío, ya no lo tengo. Eres Tú, oh mi querido tesoro, quien ya lo tomó y lo guarda en Ti mismo. De Ti vive únicamente, y lo has transformado, por mísero que sea, en tu divina esencia. En sus ardores, mi alma, fundida en Ti, ya no vive sino para Ti.
-
-¡Qué inefable es esta unión! ¡Qué superior a cualquier otro modo de vivir es esta íntima familiaridad contigo! ¡Qué embriagador es tu perfume! ¡Qué delicia respirar la paz divina, la misericordia generosa que hay en Ti! Eres el rico y sobreabundante tesoro de las diversas consolaciones.
-
-¡Oh! ¡Pueda yo obtener desde aquí abajo lo que deseo! ¡Pueda obtener aquello a lo que aspiro, obtener que mi alma se vuelva por fin hacia Ti y que me devuelvas la vida por el beso tan dulce de tu misericordia! Oh mi bien más querido, déjame asirte en lo más íntimo de mi ser. Déjame darte también mi humilde beso para que, unida a Ti, permanezca ligada a Ti de manera indisoluble.
-
-Santa Gertrudis[^ed15]
+> Oh Señor Jesús, oh mar inmenso, ¿por qué tardas en recibir esta débil gota de agua en tu plenitud? Todo el deseo de mi alma, deseo tan ardiente como dulce, es salir ahora de mí misma y entrar en Ti.
+>
+> ¡Oh! Ábreme, como asilo de salvación, tu Corazón tan amado. En cuanto al mío, ya no lo tengo. Eres Tú, oh mi querido tesoro, quien ya lo tomó y lo guarda en Ti mismo. De Ti vive únicamente, y lo has transformado, por mísero que sea, en tu divina esencia. En sus ardores, mi alma, fundida en Ti, ya no vive sino para Ti.
+>
+> ¡Qué inefable es esta unión! ¡Qué superior a cualquier otro modo de vivir es esta íntima familiaridad contigo! ¡Qué embriagador es tu perfume! ¡Qué delicia respirar la paz divina, la misericordia generosa que hay en Ti! Eres el rico y sobreabundante tesoro de las diversas consolaciones.
+>
+> ¡Oh! ¡Pueda yo obtener desde aquí abajo lo que deseo! ¡Pueda obtener aquello a lo que aspiro, obtener que mi alma se vuelva por fin hacia Ti y que me devuelvas la vida por el beso tan dulce de tu misericordia! Oh mi bien más querido, déjame asirte en lo más íntimo de mi ser. Déjame darte también mi humilde beso para que, unida a Ti, permanezca ligada a Ti de manera indisoluble[^ed15].
 
 ### II. Nuestra unión con la santísima Trinidad.
 
@@ -188,11 +176,9 @@ El Espíritu Santo, como fuente de amor: Amor del Padre y del Hijo, su Beso mutu
 
 \*
 
-Oh Trinidad eterna, Dios único, Dios uno en esencia y trino en personas, permíteme compararte a una vid que tiene tres ramas. Hiciste al hombre a tu imagen y semejanza. Por las tres potencias de su alma, se parece a tu Trinidad y a tu Unidad. Y para añadir a esta semejanza, por la memoria se parece y se une al Padre, a quien se atribuye el poder; por la inteligencia se parece y se une al Hijo, a quien se atribuye la sabiduría; por la voluntad se parece y se une al Espíritu Santo, a quien se atribuye la clemencia, y que es el amor del Padre y del Hijo…
-
-Oh Dios eterno, Tú eres el océano tranquilo donde viven y se alimentan las almas; allí encuentran su descanso en la unión del amor.
-
-Santa Catalina de Siena[^ed16]
+> Oh Trinidad eterna, Dios único, Dios uno en esencia y trino en personas, permíteme compararte a una vid que tiene tres ramas. Hiciste al hombre a tu imagen y semejanza. Por las tres potencias de su alma, se parece a tu Trinidad y a tu Unidad. Y para añadir a esta semejanza, por la memoria se parece y se une al Padre, a quien se atribuye el poder; por la inteligencia se parece y se une al Hijo, a quien se atribuye la sabiduría; por la voluntad se parece y se une al Espíritu Santo, a quien se atribuye la clemencia, y que es el amor del Padre y del Hijo…
+>
+> Oh Dios eterno, Tú eres el océano tranquilo donde viven y se alimentan las almas; allí encuentran su descanso en la unión del amor[^ed16].
 
 #### 2. La circuminsesión divina en nuestra alma
 
@@ -214,13 +200,11 @@ Así podemos decir con san Agustín: «Los santos llevan a Dios; su alma es un c
 
 \*
 
-Padre santo, recíbeme en tu paternidad tiernísima, para que, después de haber terminado el estadio en el que, por tu amor, comencé a correr, yo te reciba como premio de mi carrera en herencia eterna.
-
-Amabilísimo Jesús, recíbeme en tu dulcísima fraternidad. Lleva conmigo el peso del día y del calor. Sé mi consuelo en todos mis trabajos, mi compañero y mi guía en todo el curso de mi viaje.
-
-Espíritu Santo, Dios Amor, recíbeme en tu misericordiosa caridad. Sé el maestro y el instructor de mi vida entera y el tierno amigo de mi alma.
-
-Santa Gertrudis
+> Padre santo, recíbeme en tu paternidad tiernísima, para que, después de haber terminado el estadio en el que, por tu amor, comencé a correr, yo te reciba como premio de mi carrera en herencia eterna.
+>
+> Amabilísimo Jesús, recíbeme en tu dulcísima fraternidad. Lleva conmigo el peso del día y del calor. Sé mi consuelo en todos mis trabajos, mi compañero y mi guía en todo el curso de mi viaje.
+>
+> Espíritu Santo, Dios Amor, recíbeme en tu misericordiosa caridad. Sé el maestro y el instructor de mi vida entera y el tierno amigo de mi alma[^cita2].
 
 [^35]: Himno del Santo Nombre de Jesús, en Laudes.
 
@@ -272,12 +256,18 @@ Santa Gertrudis
 
 [^ed6]: N. del E.: circuminsesión (en griego, pericóresis) es el nombre que da la teología a la presencia de cada una de las tres divinas Personas en las otras dos: «A causa de esta unidad, el Padre está todo en el Hijo, todo en el Espíritu Santo; el Hijo está todo en el Padre, todo en el Espíritu Santo; el Espíritu Santo está todo en el Padre, todo en el Hijo» (Concilio de Florencia, en el Catecismo, n. 255).
 
-[^ed12]: N. del E.: santa Gertrudis, Ejercicios espirituales, quinto ejercicio.
+[^ed12]: Santa Gertrudis. N. del E.: Ejercicios espirituales, quinto ejercicio.
 
-[^ed13]: N. del E.: santa Catalina de Siena, Oraciones, n.º 10 de la edición de Gigli, del 3 de marzo de 1379.
+[^ed13]: Santa Catalina de Siena. N. del E.: Oraciones, n.º 10 de la edición de Gigli, del 3 de marzo de 1379.
 
-[^ed14]: N. del E.: san John Henry Newman, Meditaciones y devociones (Meditations and Devotions), parte III, meditación 22, «Dios comunicado a nosotros».
+[^ed14]: San John Henry Newman. N. del E.: Meditaciones y devociones (Meditations and Devotions), parte III, meditación 22, «Dios comunicado a nosotros».
 
-[^ed15]: N. del E.: santa Gertrudis, Ejercicios espirituales, quinto ejercicio.
+[^ed15]: Santa Gertrudis. N. del E.: Ejercicios espirituales, quinto ejercicio.
 
-[^ed16]: N. del E.: santa Catalina de Siena, Oraciones, n.º 23 de la edición de Gigli, en la fiesta de la Conversión de san Pablo.
+[^ed16]: Santa Catalina de Siena. N. del E.: Oraciones, n.º 23 de la edición de Gigli, en la fiesta de la Conversión de san Pablo.
+
+[^cita4]: Salmo 62.
+
+[^cita3]: Salmo 22.
+
+[^cita2]: Santa Gertrudis.

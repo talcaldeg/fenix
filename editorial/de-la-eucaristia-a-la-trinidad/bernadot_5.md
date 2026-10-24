@@ -38,23 +38,21 @@ El cristiano es un sembrador de alegría, y por eso hace grandes cosas. La alegr
 
 \*
 
-¡Alegría y regocijo sean para Ti, en mi nombre, oh Dios de mi vida, por la soberanía de tu Trinidad, por la esencial unidad de tu sustancia, por la propiedad de tus Personas, por su unión y sus íntimas relaciones, fuente de tu inefable dicha!
-
-Alegría y regocijo sean para Ti, por tu incomprensible grandeza, por tu inmutable eternidad, por tu suprema santidad, que excluye toda mancha y es la fuente de toda pureza, y por tu gloriosa y perfecta felicidad.
-
-¡Alegría y regocijo sean para Ti, por la Carne purísima de tu Humanidad, con la cual me purificaste; por tu augustísima alma; por tu divino Corazón, que el amor traspasó por mí hasta la muerte!
-
-¡Alegría y regocijo sean para Ti en ese Corazón amantísimo, lleno de tierna solicitud hacia mí, tan sediento en su amor por mí que jamás reposará hasta que me haya recibido en sí mismo por la eternidad!
-
-¡Alegría y regocijo sean para Ti, por el Corazón y el alma dignísima de la gloriosa Virgen María, tu Madre, que me diste por madre a mí mismo en las necesidades de mi salvación, abriéndome para siempre el tesoro de su bondad maternal!
-
-¡Alegría y regocijo sean para Ti de parte de todas tus criaturas que llenan el cielo, la tierra y los abismos! ¡Que te den esa alabanza eterna que sale de Ti y vuelve a Ti como a su principio!
-
-¡Alegría y regocijo sean para Ti de parte de mi corazón y de mi alma, de parte de mi espíritu y de mi carne, de parte de todos los seres del universo!
-
-¡A Ti, de quien son todas las cosas, por quien son todas las cosas, en quien son todas las cosas, a Ti solo honor y gloria por los siglos! ¡Amén!
-
-Santa Gertrudis[^ed21]
+> ¡Alegría y regocijo sean para Ti, en mi nombre, oh Dios de mi vida, por la soberanía de tu Trinidad, por la esencial unidad de tu sustancia, por la propiedad de tus Personas, por su unión y sus íntimas relaciones, fuente de tu inefable dicha!
+>
+> Alegría y regocijo sean para Ti, por tu incomprensible grandeza, por tu inmutable eternidad, por tu suprema santidad, que excluye toda mancha y es la fuente de toda pureza, y por tu gloriosa y perfecta felicidad.
+>
+> ¡Alegría y regocijo sean para Ti, por la Carne purísima de tu Humanidad, con la cual me purificaste; por tu augustísima alma; por tu divino Corazón, que el amor traspasó por mí hasta la muerte!
+>
+> ¡Alegría y regocijo sean para Ti en ese Corazón amantísimo, lleno de tierna solicitud hacia mí, tan sediento en su amor por mí que jamás reposará hasta que me haya recibido en sí mismo por la eternidad!
+>
+> ¡Alegría y regocijo sean para Ti, por el Corazón y el alma dignísima de la gloriosa Virgen María, tu Madre, que me diste por madre a mí mismo en las necesidades de mi salvación, abriéndome para siempre el tesoro de su bondad maternal!
+>
+> ¡Alegría y regocijo sean para Ti de parte de todas tus criaturas que llenan el cielo, la tierra y los abismos! ¡Que te den esa alabanza eterna que sale de Ti y vuelve a Ti como a su principio!
+>
+> ¡Alegría y regocijo sean para Ti de parte de mi corazón y de mi alma, de parte de mi espíritu y de mi carne, de parte de todos los seres del universo!
+>
+> ¡A Ti, de quien son todas las cosas, por quien son todas las cosas, en quien son todas las cosas, a Ti solo honor y gloria por los siglos! ¡Amén![^ed21]
 
 ### II. Perfeccionar la unión
 
@@ -90,19 +88,17 @@ Sin duda, desear los favores extraordinarios que la teología llama gracias grat
 
 El Espíritu Santo. Él es quien dirige nuestra alma hacia Dios. Pues lo que debemos desear, no lo sabemos. Pero el Espíritu ora por nosotros con gemidos inenarrables, y es Él quien clama en nosotros: ¡Padre! ¡Padre[^131]! Por eso es un medio excelente, para expresar y animar nuestros deseos, invocarlo en nuestra ayuda y tomar prestadas las palabras de la Escritura con que Él ha hecho expresar tantas veces la necesidad de Dios:
 
-Como el ciervo suspira por las fuentes de agua, así mi alma suspira por Ti, oh Dios.
-
-Mi alma tiene sed de Dios, del Dios vivo…
-
-Dios mío, a Ti te busco,
-
-Tiene sed de Ti, mi alma,
-
-Se consume por Ti, mi carne,
-
-Como una tierra sedienta donde todo languidece, por falta de agua.
-
-Salmos 41 y 62
+> Como el ciervo suspira por las fuentes de agua, así mi alma suspira por Ti, oh Dios.
+>
+> Mi alma tiene sed de Dios, del Dios vivo…
+>
+> Dios mío, a Ti te busco,
+>
+> Tiene sed de Ti, mi alma,
+>
+> Se consume por Ti, mi carne,
+>
+> Como una tierra sedienta donde todo languidece, por falta de agua[^cita12].
 
 #### 2. Repetición de los actos de amor
 
@@ -128,15 +124,13 @@ El que comulga procurará vivir como Jesús: primero amará a Dios. Lo amará co
 
 \*
 
-¡Dios mío! ¡Amor mío! Tú eres todo mío y yo soy todo tuyo. Dilátame en el amor, para que aprenda a gustar en el fondo de mi corazón cuán dulce es amar, y fundirse y perderse en el amor.
-
-Que el amor me arrebate y me eleve por encima de mí mismo por la viveza de sus transportes.
-
-Que cante el cántico del amor. Que te siga, oh mi Amado, hasta las alturas de tu gloria. Que todas las fuerzas de mi alma se agoten en alabarte, y que ella desfallezca de alegría y de amor.
-
-Que te ame más que a mí. Que no me ame a mí mismo sino por Ti. Y que ame en Ti a todos los que te aman de verdad, como lo ordena la ley de amor, que descubrimos en tu luz.
-
-Imitación, libro III, cap. V
+> ¡Dios mío! ¡Amor mío! Tú eres todo mío y yo soy todo tuyo. Dilátame en el amor, para que aprenda a gustar en el fondo de mi corazón cuán dulce es amar, y fundirse y perderse en el amor.
+>
+> Que el amor me arrebate y me eleve por encima de mí mismo por la viveza de sus transportes.
+>
+> Que cante el cántico del amor. Que te siga, oh mi Amado, hasta las alturas de tu gloria. Que todas las fuerzas de mi alma se agoten en alabarte, y que ella desfallezca de alegría y de amor.
+>
+> Que te ame más que a mí. Que no me ame a mí mismo sino por Ti. Y que ame en Ti a todos los que te aman de verdad, como lo ordena la ley de amor, que descubrimos en tu luz[^cita11].
 
 #### 3. Las misiones divinas invisibles
 
@@ -154,27 +148,25 @@ Oh cristiano, *¡si supieras el don de Dios!*
 
 \*
 
-¡Oh Trinidad! Dios altísimo, clementísimo, beneficentísimo, Padre, Hijo y Espíritu Santo, Dios uno, en Ti espero.
-
-Instrúyeme, dirígeme, sostenme.
-
-¡Oh Padre! Por tu infinito poder, fija en Ti mi memoria y llénala de pensamientos santos y divinos.
-
-¡Oh Hijo! Por tu eterna sabiduría, ilumina mi entendimiento, concédele el conocimiento de tu soberana verdad y de mi propia bajeza.
-
-¡Oh Espíritu Santo, que eres el amor del Padre y del Hijo! Por tu incomprensible bondad, transporta mi voluntad a Ti e inflámala con el fuego inextinguible de tu caridad.
-
-¡Oh Señor mío y Dios mío! ¡Oh principio mío y fin mío, oh esencia soberanamente simple, soberanamente tranquila y soberanamente amable! ¡Oh abismo de dulzura y de delicias! ¡Oh mi amable luz y soberana dicha de mi alma! ¡Océano de alegrías inexpresables! Plenitud perfecta de todo bien, Dios mío y mi Todo, ¿qué me falta aún cuando te poseo?
-
-Tú eres mi bien único e inmutable.
-
-No debo buscar sino a Ti.
-
-No busco ni deseo sino a Ti.
-
-Señor, atráeme tras de Ti. Llamo, Señor: ábreme. Abre a un huérfano que te implora. Sumérgeme en el abismo de tu divinidad. Hazme un solo espíritu contigo, para que pueda, dentro de mí, poseer tus delicias.
-
-Beato Alberto Magno
+> ¡Oh Trinidad! Dios altísimo, clementísimo, beneficentísimo, Padre, Hijo y Espíritu Santo, Dios uno, en Ti espero.
+>
+> Instrúyeme, dirígeme, sostenme.
+>
+> ¡Oh Padre! Por tu infinito poder, fija en Ti mi memoria y llénala de pensamientos santos y divinos.
+>
+> ¡Oh Hijo! Por tu eterna sabiduría, ilumina mi entendimiento, concédele el conocimiento de tu soberana verdad y de mi propia bajeza.
+>
+> ¡Oh Espíritu Santo, que eres el amor del Padre y del Hijo! Por tu incomprensible bondad, transporta mi voluntad a Ti e inflámala con el fuego inextinguible de tu caridad.
+>
+> ¡Oh Señor mío y Dios mío! ¡Oh principio mío y fin mío, oh esencia soberanamente simple, soberanamente tranquila y soberanamente amable! ¡Oh abismo de dulzura y de delicias! ¡Oh mi amable luz y soberana dicha de mi alma! ¡Océano de alegrías inexpresables! Plenitud perfecta de todo bien, Dios mío y mi Todo, ¿qué me falta aún cuando te poseo?
+>
+> Tú eres mi bien único e inmutable.
+>
+> No debo buscar sino a Ti.
+>
+> No busco ni deseo sino a Ti.
+>
+> Señor, atráeme tras de Ti. Llamo, Señor: ábreme. Abre a un huérfano que te implora. Sumérgeme en el abismo de tu divinidad. Hazme un solo espíritu contigo, para que pueda, dentro de mí, poseer tus delicias[^cita10].
 
 [^110]: Flp 2, 5.
 
@@ -228,4 +220,10 @@ Beato Alberto Magno
 
 [^135]: *Máximas espirituales*. N. del E.: la misma idea está en *Llama de amor viva*, canción 1, 34.
 
-[^ed21]: N. del E.: santa Gertrudis, Ejercicios espirituales, sexto ejercicio.
+[^ed21]: Santa Gertrudis. N. del E.: Ejercicios espirituales, sexto ejercicio.
+
+[^cita12]: Salmos 41 y 62.
+
+[^cita11]: Imitación, libro III, cap. V.
+
+[^cita10]: Beato Alberto Magno.

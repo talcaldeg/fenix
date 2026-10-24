@@ -20,19 +20,15 @@ b) luego, a perfeccionar esta unión.
 
 *
 
-Enséñame, Señor, el camino de tus preceptos, para que lo guarde hasta el fin de mi vida.
+> Enséñame, Señor, el camino de tus preceptos, para que lo guarde hasta el fin de mi vida.
+>
+> Dame inteligencia para que guarde tu ley y la observe de todo corazón.
+>
+> Inclina mi corazón hacia tu enseñanza. Hazme vivir en tu camino.
+>
+> Deseo ardientemente practicar tus ordenanzas: por tu justicia, hazme vivir[^cita7].
 
-Dame inteligencia para que guarde tu ley y la observe de todo corazón.
-
-Inclina mi corazón hacia tu enseñanza. Hazme vivir en tu camino.
-
-Deseo ardientemente practicar tus ordenanzas: por tu justicia, hazme vivir.
-
-Sal 118
-
-¡Conocimiento de Dios! ¡Oh gozo de los gozos, Señor! Es él quien va primero; el amor viene después: el amor transformador. Quien conoce en la verdad, ese ama en el fuego.
-
-Beata Ángela de Foligno[^ed17]
+> ¡Conocimiento de Dios! ¡Oh gozo de los gozos, Señor! Es él quien va primero; el amor viene después: el amor transformador. Quien conoce en la verdad, ese ama en el fuego[^ed17].
 
 ### I. Mantener la unión
 
@@ -52,9 +48,7 @@ Tal es el primer modelo del alma cristiana.
 
 *
 
-Oh Jesús, que vives en María, ven y vive en tus siervos, por tu Espíritu de santidad, en la plenitud de tu poder, en la realidad de tus virtudes, en la perfección de tus caminos, en la comunión de tus misterios, y domina todo poder enemigo por tu Espíritu, para gloria del Padre.
-
-M. Olier
+> Oh Jesús, que vives en María, ven y vive en tus siervos, por tu Espíritu de santidad, en la plenitud de tu poder, en la realidad de tus virtudes, en la perfección de tus caminos, en la comunión de tus misterios, y domina todo poder enemigo por tu Espíritu, para gloria del Padre[^cita6].
 
 #### 2. Una condición principal de la vida de unión: el recogimiento
 
@@ -82,21 +76,19 @@ Siga, pues, el cristiano el consejo de santa Catalina de Siena, que gustaba de r
 
 *
 
-Oh Dios mío, Trinidad a quien adoro, ayúdame a olvidarme enteramente de mí para establecerme en Ti, inmóvil y apacible como si ya mi alma estuviera en la eternidad. Que nada pueda turbar mi paz ni hacerme salir de Ti, oh mi Inmutable, sino que cada minuto me lleve más lejos en la profundidad de tu misterio.
-
-Pacifica mi alma. Haz de ella tu cielo, tu morada amada y el lugar de tu descanso. Que jamás te deje allí solo, sino que esté allí toda entera, toda despierta en mi fe, toda adorante, toda entregada a tu acción creadora.
-
-Oh mi Cristo amado, crucificado por amor, quisiera ser una esposa para tu Corazón. Quisiera cubrirte de gloria, quisiera amarte hasta morir. Pero siento mi impotencia y te pido que me revistas de Ti mismo, que identifiques mi alma con todos los movimientos de tu alma, que me sumerjas, que me invadas, que te sustituyas a mí, a fin de que mi vida no sea sino un irradiar de tu Vida. Ven a mí como Adorador, como Reparador y como Salvador.
-
-Oh Verbo eterno, Palabra de mi Dios, quiero pasar mi vida escuchándote. Quiero hacerme enteramente enseñable a fin de aprenderlo todo de Ti. Luego, a través de todas las noches, de todos los vacíos, de todas las impotencias, quiero fijar en Ti la mirada siempre y permanecer bajo tu gran luz. Oh mi Astro amado, fascíname para que ya no pueda salir de tu resplandor.
-
-Oh Fuego consumidor, Espíritu de amor, desciende sobre mí a fin de que se haga en mi alma como una encarnación del Verbo; que yo sea para Él una humanidad de añadidura en la cual renueve todo su misterio.
-
-Y Tú, oh Padre, inclínate sobre tu pequeña criatura, no veas en ella sino al Amado en quien has puesto todas tus complacencias.
-
-Oh mis Tres, mi todo, mi bienaventuranza, Soledad infinita, inmensidad en que me pierdo, me entrego a Ti como una presa; sepúltate en mí para que yo me sepulte en Ti, mientras espero ir a contemplar en tu luz el abismo de tus grandezas.
-
-Sor Isabel de la Trinidad[^ed18]
+> Oh Dios mío, Trinidad a quien adoro, ayúdame a olvidarme enteramente de mí para establecerme en Ti, inmóvil y apacible como si ya mi alma estuviera en la eternidad. Que nada pueda turbar mi paz ni hacerme salir de Ti, oh mi Inmutable, sino que cada minuto me lleve más lejos en la profundidad de tu misterio.
+>
+> Pacifica mi alma. Haz de ella tu cielo, tu morada amada y el lugar de tu descanso. Que jamás te deje allí solo, sino que esté allí toda entera, toda despierta en mi fe, toda adorante, toda entregada a tu acción creadora.
+>
+> Oh mi Cristo amado, crucificado por amor, quisiera ser una esposa para tu Corazón. Quisiera cubrirte de gloria, quisiera amarte hasta morir. Pero siento mi impotencia y te pido que me revistas de Ti mismo, que identifiques mi alma con todos los movimientos de tu alma, que me sumerjas, que me invadas, que te sustituyas a mí, a fin de que mi vida no sea sino un irradiar de tu Vida. Ven a mí como Adorador, como Reparador y como Salvador.
+>
+> Oh Verbo eterno, Palabra de mi Dios, quiero pasar mi vida escuchándote. Quiero hacerme enteramente enseñable a fin de aprenderlo todo de Ti. Luego, a través de todas las noches, de todos los vacíos, de todas las impotencias, quiero fijar en Ti la mirada siempre y permanecer bajo tu gran luz. Oh mi Astro amado, fascíname para que ya no pueda salir de tu resplandor.
+>
+> Oh Fuego consumidor, Espíritu de amor, desciende sobre mí a fin de que se haga en mi alma como una encarnación del Verbo; que yo sea para Él una humanidad de añadidura en la cual renueve todo su misterio.
+>
+> Y Tú, oh Padre, inclínate sobre tu pequeña criatura, no veas en ella sino al Amado en quien has puesto todas tus complacencias.
+>
+> Oh mis Tres, mi todo, mi bienaventuranza, Soledad infinita, inmensidad en que me pierdo, me entrego a Ti como una presa; sepúltate en mí para que yo me sepulte en Ti, mientras espero ir a contemplar en tu luz el abismo de tus grandezas[^ed18].
 
 #### 3. En el trabajo
 
@@ -126,13 +118,11 @@ En la Iglesia, la acción es necesaria, pero la contemplación lo es mucho más.
 
 *
 
-¡Padre santo! Por ese amor con que has hecho reflejar sobre mí la luz de tu rostro, concédeme avanzar en Ti por toda suerte de santidad y de virtud.
-
-¡Oh Cristo! ¡Oh Jesús! Por ese amor que te llevó a rescatarme con tu propia Sangre, revísteme de la pureza de tu vida santísima.
-
-¡Oh divino Paráclito! Tú, cuyo poder iguala a tu santidad, por ese amor que te llevó a encadenarme a Ti cuando me impusiste un nombre enteramente espiritual, concédeme amarte con todo mi corazón, adherirme a Ti con toda mi alma, agotar todas mis fuerzas amándote y sirviéndote, vivir según tu intención y, dispuesto por Ti, ser admitido a la hora de mi muerte, con un vestido sin mancha, a las bodas divinas que Tú preparas.
-
-Santa Gertrudis[^ed19]
+> ¡Padre santo! Por ese amor con que has hecho reflejar sobre mí la luz de tu rostro, concédeme avanzar en Ti por toda suerte de santidad y de virtud.
+>
+> ¡Oh Cristo! ¡Oh Jesús! Por ese amor que te llevó a rescatarme con tu propia Sangre, revísteme de la pureza de tu vida santísima.
+>
+> ¡Oh divino Paráclito! Tú, cuyo poder iguala a tu santidad, por ese amor que te llevó a encadenarme a Ti cuando me impusiste un nombre enteramente espiritual, concédeme amarte con todo mi corazón, adherirme a Ti con toda mi alma, agotar todas mis fuerzas amándote y sirviéndote, vivir según tu intención y, dispuesto por Ti, ser admitido a la hora de mi muerte, con un vestido sin mancha, a las bodas divinas que Tú preparas[^ed19].
 
 #### 4. En la tentación
 
@@ -154,35 +144,33 @@ La unión confiada con nuestros Huéspedes interiores es, pues, la salvación en
 
 *
 
-Yahvé es mi luz y mi salvación:
-
-¿A quién temeré?
-
-Yahvé es el baluarte de mi vida:
-
-¿De quién tendré miedo?
-
-Cuando los malvados se han lanzado contra mí para devorar mi carne,
-
-Cuando mis enemigos se han lanzado,
-
-Ellos son los que han vacilado y han caído…
-
-Yahvé me abriga en su morada en el día de la adversidad.
-
-Me oculta en el secreto de su tienda,
-
-Me establece sobre una roca…
-
-… Sí, alma mía, abandónate en paz a Dios,
-
-Pues de Él viene mi esperanza.
-
-Sí, Él es mi fuerza y mi salvación,
-
-Él es mi fortaleza: no vacilaré.
-
-Sal 26 y 61
+> Yahvé es mi luz y mi salvación:
+>
+> ¿A quién temeré?
+>
+> Yahvé es el baluarte de mi vida:
+>
+> ¿De quién tendré miedo?
+>
+> Cuando los malvados se han lanzado contra mí para devorar mi carne,
+>
+> Cuando mis enemigos se han lanzado,
+>
+> Ellos son los que han vacilado y han caído…
+>
+> Yahvé me abriga en su morada en el día de la adversidad.
+>
+> Me oculta en el secreto de su tienda,
+>
+> Me establece sobre una roca…
+>
+> … Sí, alma mía, abandónate en paz a Dios,
+>
+> Pues de Él viene mi esperanza.
+>
+> Sí, Él es mi fuerza y mi salvación,
+>
+> Él es mi fortaleza: no vacilaré[^cita5].
 
 [^59]: Jn 14, 10.
 
@@ -234,8 +222,14 @@ Sal 26 y 61
 
 [^83]: Rm 8, 35-39.
 
-[^ed17]: N. del E.: beata Ángela de Foligno, Libro de las visiones e instrucciones, cap. 57 (numeración de la traducción francesa de Ernest Hello).
+[^ed17]: Beata Ángela de Foligno. N. del E.: Libro de las visiones e instrucciones, cap. 57 (numeración de la traducción francesa de Ernest Hello).
 
-[^ed18]: N. del E.: santa Isabel de la Trinidad, elevación «Oh Dios mío, Trinidad que adoro», 21 de noviembre de 1904.
+[^ed18]: Sor Isabel de la Trinidad. N. del E.: santa Isabel de la Trinidad, elevación «Oh Dios mío, Trinidad que adoro», 21 de noviembre de 1904.
 
-[^ed19]: N. del E.: santa Gertrudis, Ejercicios espirituales, segundo ejercicio.
+[^ed19]: Santa Gertrudis. N. del E.: Ejercicios espirituales, segundo ejercicio.
+
+[^cita7]: Sal 118.
+
+[^cita6]: M. Olier.
+
+[^cita5]: Sal 26 y 61.

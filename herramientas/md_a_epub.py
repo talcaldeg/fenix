@@ -10,6 +10,8 @@
 - Notas `[^n]` (o `[^ed1]`, del editor) con su `[^n]: texto` al final del tramo: se renumeran por
   capítulo y van al pie
   del capítulo. Párrafo en cursiva justo después del título: sumario del capítulo.
+- Líneas que empiezan con `> `: cita en bloque; una línea `>` sola separa sus párrafos. La fuente
+  de la cita (autor, salmo) va como nota al pie al final de la cita, no como párrafo aparte.
 - Marcadores `libro.capítulo.párrafo` en su propia línea (Confesiones): el cambio de capítulo
   pone su número romano como subtítulo; el marcador no se imprime.
 - `![pie](dibujos/x.png)` en su propio párrafo: imagen centrada (ruta relativa a la carpeta), con
@@ -43,6 +45,10 @@ h1 + p, h2 + p, h3 + p, h4 + p, p.subtitulo + p, p.separador + p, p.verso + p { 
 p.subtitulo { text-align: center; text-indent: 0; font-style: italic; margin: 0 1em 2em; }
 p.separador { text-align: center; text-indent: 0; margin: 1em 0; letter-spacing: 0.5em; }
 p.verso { text-indent: 0; text-align: left; margin: 0.8em 2em; }
+/* Cita en bloque (`> ` en el Markdown): sangrada a ambos lados, sin comillas; la fuente va al pie. */
+blockquote.cita { margin: 1em 1.6em; font-size: 0.95em; }
+blockquote.cita p { text-indent: 0; margin: 0 0 0.4em; }
+blockquote.cita + p { text-indent: 0; }
 sup { font-size: 0.7em; line-height: 0; }
 a.ref { text-decoration: none; }
 aside.notas { margin-top: 2.5em; border-top: 1px solid #999; padding-top: 0.6em; font-size: 0.85em; }
@@ -169,6 +175,18 @@ def leer(carpeta: Path, imagenes: dict = None):
                 k = c.orden.index(n) + 1
                 return f'<a class="ref" epub:type="noteref" href="#n{k}" id="r{k}"><sup>{k}</sup></a>'
             lineas = b.split("\n")
+            if all(l.startswith(">") for l in lineas):
+                # Cita en bloque: una línea `>` sola separa párrafos; las demás seguidas son versos.
+                partes = [[]]
+                for l in lineas:
+                    if l[1:].strip():
+                        partes[-1].append(enlinea(l[1:].strip()))
+                    elif partes[-1]:
+                        partes.append([])
+                ps = [re.sub(r"\s*\[\^(\w+)\]", llamada, "<br/>".join(p)) for p in partes if p]
+                c.html.append('<blockquote class="cita">' + "".join(f"<p>{p}</p>" for p in ps) + "</blockquote>")
+                recien_titulo = False
+                continue
             cuerpo = "<br/>".join(enlinea(l.strip()) for l in lineas)
             # La llamada va pegada a la palabra: un espacio antes («criatura ¹») la deja suelta y
             # puede quedar sola al comienzo de la línea siguiente.

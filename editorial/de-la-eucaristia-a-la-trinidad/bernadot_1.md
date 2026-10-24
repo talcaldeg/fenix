@@ -54,15 +54,13 @@ Todo el misterio de Cristo desemboca, pues, en definitiva, por la Encarnación y
 
 *
 
-Demos gracias a Dios Padre, que nos ha hecho capaces de tener parte en la herencia de los santos en la luz, librándonos del poder de las tinieblas para trasladarnos al reino de su Hijo amado…
-
-Él es la imagen del Dios invisible, nacido antes de toda criatura; porque en Él fueron creadas todas las cosas, las que están en los cielos y las que están sobre la tierra, las visibles y las invisibles… Todo fue creado por Él y para Él. Él existe antes de todas las cosas, y todas las cosas subsisten en Él.
-
-Él es la cabeza del cuerpo que es la Iglesia, Él que es el principio, el primogénito de entre los muertos, para que en todo tenga Él el primer lugar. Pues Dios quiso que toda su plenitud habitara en Él. Y quiso reconciliar por Él todas las cosas consigo mismo, las que están sobre la tierra y las que están en los cielos, haciendo la paz por la sangre de su cruz.
-
-Ustedes también, que estaban en otro tiempo lejos de Él y eran enemigos por sus pensamientos y por sus malas obras, Él los ha reconciliado ahora por la muerte de su Hijo para hacerlos comparecer ante Él santos, sin mancha y sin reproche, si al menos permanecen fundados y afirmados en la fe e inconmovibles en la esperanza.
-
-San Pablo, Col 1, 12-23
+> Demos gracias a Dios Padre, que nos ha hecho capaces de tener parte en la herencia de los santos en la luz, librándonos del poder de las tinieblas para trasladarnos al reino de su Hijo amado…
+>
+> Él es la imagen del Dios invisible, nacido antes de toda criatura; porque en Él fueron creadas todas las cosas, las que están en los cielos y las que están sobre la tierra, las visibles y las invisibles… Todo fue creado por Él y para Él. Él existe antes de todas las cosas, y todas las cosas subsisten en Él.
+>
+> Él es la cabeza del cuerpo que es la Iglesia, Él que es el principio, el primogénito de entre los muertos, para que en todo tenga Él el primer lugar. Pues Dios quiso que toda su plenitud habitara en Él. Y quiso reconciliar por Él todas las cosas consigo mismo, las que están sobre la tierra y las que están en los cielos, haciendo la paz por la sangre de su cruz.
+>
+> Ustedes también, que estaban en otro tiempo lejos de Él y eran enemigos por sus pensamientos y por sus malas obras, Él los ha reconciliado ahora por la muerte de su Hijo para hacerlos comparecer ante Él santos, sin mancha y sin reproche, si al menos permanecen fundados y afirmados en la fe e inconmovibles en la esperanza[^cita1].
 
 ## I. La unión eucarística
 
@@ -78,9 +76,7 @@ Para darnos una idea de esta unificación de Cristo y del hombre[^15], los Padre
 
 En efecto, en el momento de la Comunión, Jesús entra de tal modo en nuestro corazón y en nuestra alma que nuestros afectos y nuestros pensamientos pueden llamarse sus afectos y sus pensamientos. Él los tiene primero. Luego nos los comunica según la medida actual de nuestro amor. Si un alma tiene poco amor, Jesús se ve forzado a ceñirse a las angostas dimensiones de esa alma y a restringir sus dones. Pero al que comulga desprendido de las criaturas y de sí mismo y que se entrega sin reserva, al alma pura que se abre toda entera a la influencia de la Hostia, Jesús a cambio se da como solo Dios puede hacerlo. Se establece una circulación de vida, una comunicación de bienes, una unidad de amor que desafía toda expresión humana. El alma, penetrada por Jesús, se vuelve como un suelo fértil que hace germinar flores y frutos. Concibe pensamientos luminosos y forma actos de amor. ¿Son nuestros? Sí, pues nacen de nuestra inteligencia y de nuestro corazón, pero de nuestra inteligencia unida a la inteligencia de Jesús, de nuestro corazón unido a su Corazón, de modo que son suyos tanto como nuestros. Juntos adoramos, juntos amamos y damos gracias, juntos nos entregamos a nuestro Padre de los cielos. Su amor y nuestro amor, su pensamiento y nuestro pensamiento se elevan mezclados el uno con el otro, como dos granos de incienso quemados en el mismo incensario y que no exhalan hacia el Cielo sino un único perfume.
 
-«Así como tu Padre se insinúa en Ti desde toda la eternidad, Verbo divino, de modo que te llena por completo y es todo en Ti, así, oh Jesús mío, Tú te insinúas en mí y haces una misma cosa conmigo, por una íntima penetración de todo mi ser».
-
-M. Olier[^ed7]
+> Así como tu Padre se insinúa en Ti desde toda la eternidad, Verbo divino, de modo que te llena por completo y es todo en Ti, así, oh Jesús mío, Tú te insinúas en mí y haces una misma cosa conmigo, por una íntima penetración de todo mi ser[^ed7].
 
 ### 2. La Comunión nos da a Jesús entero
 
@@ -100,9 +96,7 @@ Ahora bien, Él mismo nos lo dice: *Yo vivo de mi Padre*[^18]. Desde toda la ete
 
 Esa es la vida que recibimos.
 
-¡Oh Dios increado! ¡Oh Dios dulcemente encarnado! El hombre ha comido tu Carne, ha bebido tu Sangre: ¡que no sea ya sino uno contigo por los siglos de los siglos!
-
-Beata Ángela de Foligno[^ed8]
+> ¡Oh Dios increado! ¡Oh Dios dulcemente encarnado! El hombre ha comido tu Carne, ha bebido tu Sangre: ¡que no sea ya sino uno contigo por los siglos de los siglos![^ed8]
 
 ### 3. La Comunión nos da las tres divinas Personas
 
@@ -126,11 +120,9 @@ El alma del que comulga se convierte como en el cielo de la Trinidad. En mi alma
 
 *
 
-¡Oh Dios eterno, Padre todopoderoso, Llama ardiente de caridad, Dios mío, Dios mío! Lo que muestra tu bondad y tu grandeza es el presente que has hecho al hombre. Ese presente eres Tú todo entero, Tú, la infinita, la eterna Trinidad. Y el lugar donde te has dignado descender para darte es el establo de nuestra humanidad, que se había convertido en guarida de los animales, es decir, de los pecados mortales…
-
-Trinidad eterna, dulce amor mío, Tú, la Luz verdadera, danos la luz; Tú, la Sabiduría, danos la sabiduría; Tú, la Fuerza infinita, danos la fuerza. Disipa, te lo suplico, nuestras tinieblas para que podamos conocerte perfectamente y seguir tu verdad en la sencillez y la sinceridad de nuestro corazón.
-
-Santa Catalina de Siena[^ed9]
+> ¡Oh Dios eterno, Padre todopoderoso, Llama ardiente de caridad, Dios mío, Dios mío! Lo que muestra tu bondad y tu grandeza es el presente que has hecho al hombre. Ese presente eres Tú todo entero, Tú, la infinita, la eterna Trinidad. Y el lugar donde te has dignado descender para darte es el establo de nuestra humanidad, que se había convertido en guarida de los animales, es decir, de los pecados mortales…
+>
+> Trinidad eterna, dulce amor mío, Tú, la Luz verdadera, danos la luz; Tú, la Sabiduría, danos la sabiduría; Tú, la Fuerza infinita, danos la fuerza. Disipa, te lo suplico, nuestras tinieblas para que podamos conocerte perfectamente y seguir tu verdad en la sencillez y la sinceridad de nuestro corazón[^ed9].
 
 ### 4. La Comunión nos asocia a la vida íntima de la Trinidad
 
@@ -150,9 +142,7 @@ El Señor decía a la beata Ángela de Foligno: «Si alguien quiere poseerme en 
 
 *
 
-¡Oh Trinidad! ¡Trinidad eterna! ¡Oh Fuego, oh abismo de amor! ¡Llama de amor! ¿No bastaba crearnos a tu imagen y semejanza, hacernos renacer a la gracia en la Sangre de tu Hijo? ¡Y aún era preciso darnos toda la Trinidad en alimento! Es tu amor el que lo quiso, ¡oh Trinidad eterna! No solo diste a tu Verbo en la Redención y en la Eucaristía, sino que te has dado toda entera por amor a tu criatura. Sí, el alma te posee porque eres la Bondad suprema.
-
-Santa Catalina de Siena[^ed10]
+> ¡Oh Trinidad! ¡Trinidad eterna! ¡Oh Fuego, oh abismo de amor! ¡Llama de amor! ¿No bastaba crearnos a tu imagen y semejanza, hacernos renacer a la gracia en la Sangre de tu Hijo? ¡Y aún era preciso darnos toda la Trinidad en alimento! Es tu amor el que lo quiso, ¡oh Trinidad eterna! No solo diste a tu Verbo en la Redención y en la Eucaristía, sino que te has dado toda entera por amor a tu criatura. Sí, el alma te posee porque eres la Bondad suprema[^ed10].
 
 *
 
@@ -164,9 +154,7 @@ El Señor Jesús nos lo dijo: *El que come este pan tiene la vida eterna*[^32]. 
 
 *
 
-¡Oh Jesucristo creador! ¡Oh Jesucristo criatura! ¡Oh verdadero Dios y verdadero hombre! ¡Oh verdadera Carne! ¡Oh verdadera Sangre! ¡Oh verdaderos miembros de un verdadero Cuerpo! ¡Oh unión inefable! ¡Oh encuentro de Inmensidades! ¡Oh Señor, voy de tu Humanidad a tu Divinidad, de tu Divinidad a tu Humanidad, voy y vuelvo! El alma, en su contemplación, encuentra la Divinidad inefable que lleva en sí los tesoros de riqueza y de ciencia. ¡Oh tesoros imperecederos! ¡Oh Divinidad! ¡De Ti saco las delicias que alimentan, y todo lo que digo y todo lo que no puedo decir! Veo el alma preciosísima de Jesús, con todas las virtudes, todos los dones del Espíritu Santo y la oblación santísima, santísima y sin mancha. Veo este Cuerpo, el precio de nuestra Redención. Veo la Sangre de la que saco la salvación y la vida. Y luego veo lo que no puedo decir. He aquí verdaderamente, bajo estos velos, a Aquel a quien adoran las Dominaciones, ante quien tiemblan los Espíritus y las Potestades temibles. ¡Oh! ¡Si nuestros ojos se abrieran como los suyos, qué prodigios harían en nosotros, al acercarnos al misterio, el respeto y la humildad!
-
-Beata Ángela de Foligno[^ed11]
+> ¡Oh Jesucristo creador! ¡Oh Jesucristo criatura! ¡Oh verdadero Dios y verdadero hombre! ¡Oh verdadera Carne! ¡Oh verdadera Sangre! ¡Oh verdaderos miembros de un verdadero Cuerpo! ¡Oh unión inefable! ¡Oh encuentro de Inmensidades! ¡Oh Señor, voy de tu Humanidad a tu Divinidad, de tu Divinidad a tu Humanidad, voy y vuelvo! El alma, en su contemplación, encuentra la Divinidad inefable que lleva en sí los tesoros de riqueza y de ciencia. ¡Oh tesoros imperecederos! ¡Oh Divinidad! ¡De Ti saco las delicias que alimentan, y todo lo que digo y todo lo que no puedo decir! Veo el alma preciosísima de Jesús, con todas las virtudes, todos los dones del Espíritu Santo y la oblación santísima, santísima y sin mancha. Veo este Cuerpo, el precio de nuestra Redención. Veo la Sangre de la que saco la salvación y la vida. Y luego veo lo que no puedo decir. He aquí verdaderamente, bajo estos velos, a Aquel a quien adoran las Dominaciones, ante quien tiemblan los Espíritus y las Potestades temibles. ¡Oh! ¡Si nuestros ojos se abrieran como los suyos, qué prodigios harían en nosotros, al acercarnos al misterio, el respeto y la humildad![^ed11]
 
 [^1]: Col 1, 15.
 
@@ -238,14 +226,16 @@ Beata Ángela de Foligno[^ed11]
 
 [^ed1]: N. del E.: no se trata de una generación nueva del Hijo en el alma. La generación del Hijo y la procesión del Espíritu Santo son eternas; el autor dice que esa vida íntima de la Trinidad se hace presente en el alma en gracia, porque las tres Personas vienen a habitar en ella (Jn 14, 23; Catecismo, n. 260).
 
-[^ed7]: N. del E.: Jean-Jacques Olier, La Journée chrétienne, primera parte, «Durante la santa Comunión y después».
+[^ed7]: M. Olier. N. del E.: Jean-Jacques Olier, La Journée chrétienne, primera parte, «Durante la santa Comunión y después».
 
-[^ed8]: N. del E.: beata Ángela de Foligno, Libro de las visiones e instrucciones, cap. 67 (numeración de la traducción francesa de Ernest Hello).
+[^ed8]: Beata Ángela de Foligno. N. del E.: Libro de las visiones e instrucciones, cap. 67 (numeración de la traducción francesa de Ernest Hello).
 
-[^ed9]: N. del E.: santa Catalina de Siena, Oraciones, n.º 24 de la edición de Gigli, sobre el sacramento de la Eucaristía.
+[^ed9]: Santa Catalina de Siena. N. del E.: Oraciones, n.º 24 de la edición de Gigli, sobre el sacramento de la Eucaristía.
 
-[^ed10]: N. del E.: santa Catalina de Siena, oración del 14 de febrero de 1379, después de comulgar.
+[^ed10]: Santa Catalina de Siena. N. del E.: oración del 14 de febrero de 1379, después de comulgar.
 
-[^ed11]: N. del E.: beata Ángela de Foligno, Libro de las visiones e instrucciones, cap. 67 (numeración de la traducción francesa de Ernest Hello).
+[^ed11]: Beata Ángela de Foligno. N. del E.: Libro de las visiones e instrucciones, cap. 67 (numeración de la traducción francesa de Ernest Hello).
 
 [^cir]: N. del E.: la comparación de la cera es de san Cirilo de Alejandría, Comentario al Evangelio de san Juan, libro IV, sobre Jn 6, 56. La frase final, «Tenemos un mismo cuerpo y una misma sangre», sí es de san Cirilo de Jerusalén, Catequesis mistagógicas, IV, 3.
+
+[^cita1]: San Pablo, Col 1, 12-23.

@@ -93,6 +93,12 @@ uno.
 8. **Cursiva en las notas al pie** (Bernadot, nota 23 del cap. II). Un lector de Android que
    muestra las notas al pie de cada página borraba el texto en cursiva («San Agustín, .»).
    `md_a_epub.py` ya saca la cursiva de las notas; no hace falta evitarla en el Markdown.
+9. **Firma de la cita como párrafo suelto** (Bernadot, cap. III, «Sal 118» y «Beata Ángela de
+   Foligno»). Una oración, salmo o texto ajeno que el autor transcribe entero va como cita en
+   bloque (cada línea con `> `, una línea `>` sola entre párrafos, sin comillas), y su firma
+   (autor, salmo, obra) no queda como párrafo aparte: va como nota al pie al final de la cita,
+   antes del punto final. Si ya tenía «N. del E.» con la obra, la nota queda «Firma. N. del E.:
+   obra».
 
 ## Glosario
 

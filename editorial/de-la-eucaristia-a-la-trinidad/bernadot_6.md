@@ -40,17 +40,15 @@ Entonces el hombre redimido y santificado puede presentarse con confianza ante e
 
 \*
 
-¡Oh Trinidad eterna! Tú eres un mar sin fondo en el que cuanto más me sumerjo, más te encuentro, y cuanto más te encuentro, más te busco todavía. De Ti nunca se puede decir: ¡basta! El alma que se sacia en tus profundidades te desea sin cesar, porque siempre está hambrienta de Ti, Trinidad eterna. Siempre anhela ver tu luz en tu luz. Como el ciervo suspira por el agua de las fuentes, así mi alma desea salir de la prisión tenebrosa del cuerpo para verte en verdad…
-
-¡Oh Divinidad eterna! ¡Océano sin fondo! ¿Podías darme más que darte a Ti mismo? Tú eres el fuego que arde siempre y nunca se apaga. Tú eres el fuego que consume en sí mismo todo amor propio del alma; Tú eres el fuego que derrite todo hielo y que alumbra; a su luz me has dado a conocer la verdad. Tú eres la luz por encima de toda luz…
-
-Tú eres el bien supremo e infinito. ¡Bien por encima de todo bien! ¡Bien que hace la felicidad! ¡Bien incomprensible! ¡Bien inestimable! Belleza que supera toda belleza, Sabiduría por encima de toda sabiduría, más aún, ¡la Sabiduría misma! Tú, el pan de los ángeles, en el ardor de tu amor te has dado a los hombres. Tú eres el vestido que cubre toda desnudez, el alimento que con su dulzura alegra a todos los que tienen hambre. ¡Pues Tú eres dulce, sin sombra de amargura!
-
-Oh Trinidad eterna, Tú me muestras la vía de la gran perfección, para que te sirva en la luz y no en las tinieblas, para que sea un espejo de vida pura y santa y renuncie por fin a esta existencia miserable en la que, hasta ahora y por mi culpa, te he servido en las tinieblas.
-
-Revísteme, Trinidad eterna, revísteme de Ti mismo, para que pase de esta vida mortal a la verdadera obediencia y a la luz de la santísima fe con la que has embriagado mi alma.
-
-Santa Catalina de Siena[^ed22]
+> ¡Oh Trinidad eterna! Tú eres un mar sin fondo en el que cuanto más me sumerjo, más te encuentro, y cuanto más te encuentro, más te busco todavía. De Ti nunca se puede decir: ¡basta! El alma que se sacia en tus profundidades te desea sin cesar, porque siempre está hambrienta de Ti, Trinidad eterna. Siempre anhela ver tu luz en tu luz. Como el ciervo suspira por el agua de las fuentes, así mi alma desea salir de la prisión tenebrosa del cuerpo para verte en verdad…
+>
+> ¡Oh Divinidad eterna! ¡Océano sin fondo! ¿Podías darme más que darte a Ti mismo? Tú eres el fuego que arde siempre y nunca se apaga. Tú eres el fuego que consume en sí mismo todo amor propio del alma; Tú eres el fuego que derrite todo hielo y que alumbra; a su luz me has dado a conocer la verdad. Tú eres la luz por encima de toda luz…
+>
+> Tú eres el bien supremo e infinito. ¡Bien por encima de todo bien! ¡Bien que hace la felicidad! ¡Bien incomprensible! ¡Bien inestimable! Belleza que supera toda belleza, Sabiduría por encima de toda sabiduría, más aún, ¡la Sabiduría misma! Tú, el pan de los ángeles, en el ardor de tu amor te has dado a los hombres. Tú eres el vestido que cubre toda desnudez, el alimento que con su dulzura alegra a todos los que tienen hambre. ¡Pues Tú eres dulce, sin sombra de amargura!
+>
+> Oh Trinidad eterna, Tú me muestras la vía de la gran perfección, para que te sirva en la luz y no en las tinieblas, para que sea un espejo de vida pura y santa y renuncie por fin a esta existencia miserable en la que, hasta ahora y por mi culpa, te he servido en las tinieblas.
+>
+> Revísteme, Trinidad eterna, revísteme de Ti mismo, para que pase de esta vida mortal a la verdadera obediencia y a la luz de la santísima fe con la que has embriagado mi alma[^ed22].
 
 #### 2. La Comunión y nuestra vocación sobrenatural
 
@@ -74,19 +72,17 @@ En suma, la Comunión tiene por fin hacer otros Cristos, otros hijos de Dios.
 
 \*
 
-¡Oh poderosa y eterna Trinidad! ¡Oh dulcísima e inefable Caridad! ¿Quién no se inflamaría ante tanto amor? ¿Qué corazón podría defenderse de consumirse por Ti?
-
-¡Oh abismo de caridad! ¡Tú estás, pues, tan perdidamente prendado de tus criaturas que parece que no pudieras vivir sin ellas! ¡Y sin embargo Tú eres nuestro Dios! No tienes ninguna necesidad de nosotros. Nuestro bien no añade nada a tu grandeza, puesto que eres inmutable. Nuestro mal no podría causarte ningún daño, ¡a Ti, que eres la soberana y eterna Bondad!
-
-¿Quién, pues, te arrastra a tanta misericordia? El amor. Porque no tienes ninguna obligación para con nosotros, no tienes de nosotros ninguna necesidad.
-
-¿Quién te lleva, a Ti, Dios infinito, hacia mí, pequeña criatura? Nadie sino Tú mismo, ¡oh Fuego de amor! El Amor, siempre, el Amor solo te ha impulsado y te impulsa todavía a tener misericordia de tus criaturas colmándolas de gracias infinitas y de dones sin medida.
-
-¡Oh Bondad por encima de toda bondad, solo Tú eres soberanamente bueno! Nos diste el Verbo, tu Hijo único, para que viviera con nosotros, en contacto con nuestro ser de corrupción y de tinieblas. De ese don, ¿cuál es la causa? El Amor. Porque Tú nos amaste antes de que existiéramos.
-
-¡Oh grandeza eterna! ¡Oh Grandeza de bondad! Te has abajado; te has hecho pequeña para hacer grande al hombre. Hacia cualquier lado que me vuelva, no encuentro sino abismo y fuego de tu caridad.
-
-Santa Catalina de Siena[^ed23]
+> ¡Oh poderosa y eterna Trinidad! ¡Oh dulcísima e inefable Caridad! ¿Quién no se inflamaría ante tanto amor? ¿Qué corazón podría defenderse de consumirse por Ti?
+>
+> ¡Oh abismo de caridad! ¡Tú estás, pues, tan perdidamente prendado de tus criaturas que parece que no pudieras vivir sin ellas! ¡Y sin embargo Tú eres nuestro Dios! No tienes ninguna necesidad de nosotros. Nuestro bien no añade nada a tu grandeza, puesto que eres inmutable. Nuestro mal no podría causarte ningún daño, ¡a Ti, que eres la soberana y eterna Bondad!
+>
+> ¿Quién, pues, te arrastra a tanta misericordia? El amor. Porque no tienes ninguna obligación para con nosotros, no tienes de nosotros ninguna necesidad.
+>
+> ¿Quién te lleva, a Ti, Dios infinito, hacia mí, pequeña criatura? Nadie sino Tú mismo, ¡oh Fuego de amor! El Amor, siempre, el Amor solo te ha impulsado y te impulsa todavía a tener misericordia de tus criaturas colmándolas de gracias infinitas y de dones sin medida.
+>
+> ¡Oh Bondad por encima de toda bondad, solo Tú eres soberanamente bueno! Nos diste el Verbo, tu Hijo único, para que viviera con nosotros, en contacto con nuestro ser de corrupción y de tinieblas. De ese don, ¿cuál es la causa? El Amor. Porque Tú nos amaste antes de que existiéramos.
+>
+> ¡Oh grandeza eterna! ¡Oh Grandeza de bondad! Te has abajado; te has hecho pequeña para hacer grande al hombre. Hacia cualquier lado que me vuelva, no encuentro sino abismo y fuego de tu caridad[^ed23].
 
 ### II. La gloria de la santísima Trinidad
 
@@ -114,15 +110,13 @@ Su vida y su muerte tienen un fin que domina a todos los demás: ante todo, dar 
 
 \*
 
-¡Bendito sea Dios, el Padre de Nuestro Señor Jesucristo, que nos ha bendecido en Cristo con toda clase de bendiciones espirituales en los cielos! En Él nos ha elegido antes de la creación del mundo, para que fuéramos santos e irreprochables ante Él, y, en su amor, nos ha predestinado a ser sus hijos adoptivos por Jesucristo, según su libre voluntad, haciendo así resplandecer la gloria de su gracia…
-
-También en Cristo hemos sido elegidos, habiendo sido predestinados por decreto de Aquel que lo hace todo según el consejo de su voluntad, para que sirvamos para alabanza de su gloria…
-
-Por eso doblo la rodilla ante el Padre… para que les conceda, según los tesoros de su gloria, ser poderosamente fortalecidos por su Espíritu en orden al hombre interior, y que Cristo habite en sus corazones por la fe; de modo que, arraigados y fundados en la caridad, lleguen a ser capaces de comprender con todos los santos cuál es la anchura y la longitud, la profundidad y la altura, y de conocer el amor de Cristo, que supera todo conocimiento, a fin de que estén llenos de toda la plenitud de Dios.
-
-¡A Aquel que puede hacer, por el poder que actúa en nosotros, infinitamente más de lo que pedimos y concebimos, a Él sea la gloria en la Iglesia y en Jesucristo, en todas las edades, por los siglos de los siglos! ¡Amén!
-
-San Pablo (Ef 1, 3-6, 11-12; 3, 14-21)
+> ¡Bendito sea Dios, el Padre de Nuestro Señor Jesucristo, que nos ha bendecido en Cristo con toda clase de bendiciones espirituales en los cielos! En Él nos ha elegido antes de la creación del mundo, para que fuéramos santos e irreprochables ante Él, y, en su amor, nos ha predestinado a ser sus hijos adoptivos por Jesucristo, según su libre voluntad, haciendo así resplandecer la gloria de su gracia…
+>
+> También en Cristo hemos sido elegidos, habiendo sido predestinados por decreto de Aquel que lo hace todo según el consejo de su voluntad, para que sirvamos para alabanza de su gloria…
+>
+> Por eso doblo la rodilla ante el Padre… para que les conceda, según los tesoros de su gloria, ser poderosamente fortalecidos por su Espíritu en orden al hombre interior, y que Cristo habite en sus corazones por la fe; de modo que, arraigados y fundados en la caridad, lleguen a ser capaces de comprender con todos los santos cuál es la anchura y la longitud, la profundidad y la altura, y de conocer el amor de Cristo, que supera todo conocimiento, a fin de que estén llenos de toda la plenitud de Dios.
+>
+> ¡A Aquel que puede hacer, por el poder que actúa en nosotros, infinitamente más de lo que pedimos y concebimos, a Él sea la gloria en la Iglesia y en Jesucristo, en todas las edades, por los siglos de los siglos! ¡Amén![^cita13]
 
 #### 2. La única liturgia
 
@@ -160,21 +154,19 @@ A proporción que se desarrolla en nosotros, avanza la santificación del que la
 
 \*
 
-¡Santa Trinidad, en cuyo seno resplandecen con eterno esplendor la Divinidad viva, el Amor y la Sabiduría!
-
-¡Oh Padre, fuente única del poder que es tu naturaleza; Tú, a quien la Sabiduría es esencial, en quien la bondad brota sin cesar, la caridad ardiente como el fuego, la santidad inclinada a extenderse sobre todos los seres, la bondad dispuesta a derramarse sobre todo lo que has creado: a Ti, alabanza, honor y gloria! A Ti, acción de gracias, poder y luz: es el deseo de mi corazón lleno de reconocimiento.
-
-Oh Verbo, Tú que eres el alto cedro del Líbano y extiendes muy por encima de los querubines las ramas de tu Divinidad con una majestad soberana, te has complacido en buscar hasta el fondo de este valle de miseria un humilde tallo de hisopo para unirlo a Ti con una estrecha alianza y hacer de él tu esposa en un amor infinito.
-
-Oh Espíritu Santo, Dios amor, lazo de la santa Trinidad por el amor, Tú reposas y te deleitas entre los hijos de los hombres, en la santa castidad que, por la influencia de tu fuerza y de tus encantos, florece aquí abajo como la rosa entre las espinas.
-
-¡Espíritu Santo! ¡Amor! ¡Amor! Dime qué camino conduce a una morada tan deliciosa, dónde está el sendero de la vida que lleva a esas praderas fecundadas por el rocío divino, donde apagan su sed los corazones sedientos. Oh Amor, solo Tú conoces ese camino que lleva a la vida y a la verdad. En Ti se cumple la alianza llena de delicias que une entre sí a las divinas Personas de la Trinidad santa. Por Ti, oh Espíritu Santo, se derraman sobre nosotros los más preciosos dones. De Ti proceden las semillas fecundas que producen los frutos de la vida. De Ti emana la miel tan dulce de las delicias que solo están en Dios. Por Ti descienden sobre nosotros las aguas fertilizantes de las bendiciones divinas, los dones tan queridos del Espíritu pero tan raros, ¡ay!, en nuestra región.
-
-¡Oh Hijo de Dios! Amor, amor, prepárame el sendero que lleva a Ti, el sendero del bello amor. Atraído hacia Ti por un casto afecto, te seguiré en adelante dondequiera que vayas, hasta esas alturas donde reinas y mandas en la majestad soberana de tu divina esencia, hasta esa morada donde, derramando los tesoros de tu ternura siempre viva y alimentando las llamas del divino Amor que te consume, conduces en los cielos a los coros resplandecientes de esos miles y miles de vírgenes adornadas con vestiduras blancas como la nieve y repitiendo con embriaguez el dulce cántico de las bodas eternas.
-
-Mientras tanto, oh Jesús, oh Amor, guárdame en este valle de miserias a la sombra de tu caridad. Y después de este largo destierro, preservado de toda mancha, condúceme y hazme entrar en tu santuario; dame un lugar en las filas de ese enjambre virginal. Allí apagaré mi sed en las aguas que brotan de tu ternura divina. Allí me saciaré en el goce de tu amor tan dulce. ¡Amén! ¡Amén! ¡Que ese sea el grito de todos los seres!
-
-Santa Gertrudis[^ed24]
+> ¡Santa Trinidad, en cuyo seno resplandecen con eterno esplendor la Divinidad viva, el Amor y la Sabiduría!
+>
+> ¡Oh Padre, fuente única del poder que es tu naturaleza; Tú, a quien la Sabiduría es esencial, en quien la bondad brota sin cesar, la caridad ardiente como el fuego, la santidad inclinada a extenderse sobre todos los seres, la bondad dispuesta a derramarse sobre todo lo que has creado: a Ti, alabanza, honor y gloria! A Ti, acción de gracias, poder y luz: es el deseo de mi corazón lleno de reconocimiento.
+>
+> Oh Verbo, Tú que eres el alto cedro del Líbano y extiendes muy por encima de los querubines las ramas de tu Divinidad con una majestad soberana, te has complacido en buscar hasta el fondo de este valle de miseria un humilde tallo de hisopo para unirlo a Ti con una estrecha alianza y hacer de él tu esposa en un amor infinito.
+>
+> Oh Espíritu Santo, Dios amor, lazo de la santa Trinidad por el amor, Tú reposas y te deleitas entre los hijos de los hombres, en la santa castidad que, por la influencia de tu fuerza y de tus encantos, florece aquí abajo como la rosa entre las espinas.
+>
+> ¡Espíritu Santo! ¡Amor! ¡Amor! Dime qué camino conduce a una morada tan deliciosa, dónde está el sendero de la vida que lleva a esas praderas fecundadas por el rocío divino, donde apagan su sed los corazones sedientos. Oh Amor, solo Tú conoces ese camino que lleva a la vida y a la verdad. En Ti se cumple la alianza llena de delicias que une entre sí a las divinas Personas de la Trinidad santa. Por Ti, oh Espíritu Santo, se derraman sobre nosotros los más preciosos dones. De Ti proceden las semillas fecundas que producen los frutos de la vida. De Ti emana la miel tan dulce de las delicias que solo están en Dios. Por Ti descienden sobre nosotros las aguas fertilizantes de las bendiciones divinas, los dones tan queridos del Espíritu pero tan raros, ¡ay!, en nuestra región.
+>
+> ¡Oh Hijo de Dios! Amor, amor, prepárame el sendero que lleva a Ti, el sendero del bello amor. Atraído hacia Ti por un casto afecto, te seguiré en adelante dondequiera que vayas, hasta esas alturas donde reinas y mandas en la majestad soberana de tu divina esencia, hasta esa morada donde, derramando los tesoros de tu ternura siempre viva y alimentando las llamas del divino Amor que te consume, conduces en los cielos a los coros resplandecientes de esos miles y miles de vírgenes adornadas con vestiduras blancas como la nieve y repitiendo con embriaguez el dulce cántico de las bodas eternas.
+>
+> Mientras tanto, oh Jesús, oh Amor, guárdame en este valle de miserias a la sombra de tu caridad. Y después de este largo destierro, preservado de toda mancha, condúceme y hazme entrar en tu santuario; dame un lugar en las filas de ese enjambre virginal. Allí apagaré mi sed en las aguas que brotan de tu ternura divina. Allí me saciaré en el goce de tu amor tan dulce. ¡Amén! ¡Amén! ¡Que ese sea el grito de todos los seres![^ed24]
 
 [^136]: Ef 1, 3-4.
 
@@ -242,8 +234,10 @@ Santa Gertrudis[^ed24]
 
 [^ed5]: N. del E.: la presencia sacramental de Cristo «dura todo el tiempo que subsistan las especies eucarísticas» (Catecismo, n. 1377). Lo que permanece después es la unión con Cristo por la gracia y la inhabitación de la Trinidad en el alma (Jn 14, 23; Catecismo, n. 260).
 
-[^ed22]: N. del E.: santa Catalina de Siena, El diálogo, 167.
+[^ed22]: Santa Catalina de Siena. N. del E.: El diálogo, 167.
 
-[^ed23]: N. del E.: santa Catalina de Siena, El diálogo, 25 y 134.
+[^ed23]: Santa Catalina de Siena. N. del E.: El diálogo, 25 y 134.
 
-[^ed24]: N. del E.: santa Gertrudis, Ejercicios espirituales, tercer ejercicio.
+[^ed24]: Santa Gertrudis. N. del E.: Ejercicios espirituales, tercer ejercicio.
+
+[^cita13]: San Pablo (Ef 1, 3-6, 11-12; 3, 14-21).

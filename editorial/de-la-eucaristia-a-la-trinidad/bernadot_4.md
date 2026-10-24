@@ -50,15 +50,13 @@ Cada sufrimiento, en efecto, es una semilla de eternidad.
 
 *
 
-Oh Señor mío Jesús, creo y, por tu gracia, quiero creer y profesar siempre, y sé que es verdad y que será verdad hasta el fin del mundo, que nada grande se hace sin sufrimiento, sin humillación, y que todas las cosas son posibles por estos medios. Creo, oh Dios mío, que la pobreza vale más que las riquezas, la pena más que el placer, la oscuridad y el desprecio más que la fama, y la ignominia más que los honores.
-
-Señor mío, no te pido que me infligas estas pruebas, pues no sé si podría soportarlas. Pero al menos, oh Señor, ya esté en la prosperidad o en la adversidad, quiero creer lo que he dicho. No quiero poner mi fe en las riquezas, el rango, el poder y la reputación. No quiero asentar mi corazón en los éxitos de este mundo, ni en sus ventajas. No quiero desear lo que los hombres llaman los bienes de la vida. Por tu gracia, quiero, por el contrario, estimar mucho a los que se descuida o desdeña, honrar a los pobres, reverenciar a los que sufren, admirar y venerar a tus confesores y a tus santos, y escoger mi parte entre ellos a pesar del mundo.
-
-Y por último, oh mi querido Señor, aunque soy tan débil que no puedo pedirte el sufrimiento como un don, y no tengo la fuerza para hacerlo, te pediré al menos la gracia de acogerlo bien cuando, en tu sabiduría y en tu amor, me lo envíes.
-
-Deseo humillarme en todas las cosas, no responder a las malas palabras sino con el silencio y guardar la paciencia cuando la pena o el sufrimiento se prolonguen, y todo esto por amor a Ti y a tu Cruz, sabiendo que, de esta manera, mereceré las promesas de esta vida y de la vida eterna.
-
-San John Henry Newman[^ed20]
+> Oh Señor mío Jesús, creo y, por tu gracia, quiero creer y profesar siempre, y sé que es verdad y que será verdad hasta el fin del mundo, que nada grande se hace sin sufrimiento, sin humillación, y que todas las cosas son posibles por estos medios. Creo, oh Dios mío, que la pobreza vale más que las riquezas, la pena más que el placer, la oscuridad y el desprecio más que la fama, y la ignominia más que los honores.
+>
+> Señor mío, no te pido que me infligas estas pruebas, pues no sé si podría soportarlas. Pero al menos, oh Señor, ya esté en la prosperidad o en la adversidad, quiero creer lo que he dicho. No quiero poner mi fe en las riquezas, el rango, el poder y la reputación. No quiero asentar mi corazón en los éxitos de este mundo, ni en sus ventajas. No quiero desear lo que los hombres llaman los bienes de la vida. Por tu gracia, quiero, por el contrario, estimar mucho a los que se descuida o desdeña, honrar a los pobres, reverenciar a los que sufren, admirar y venerar a tus confesores y a tus santos, y escoger mi parte entre ellos a pesar del mundo.
+>
+> Y por último, oh mi querido Señor, aunque soy tan débil que no puedo pedirte el sufrimiento como un don, y no tengo la fuerza para hacerlo, te pediré al menos la gracia de acogerlo bien cuando, en tu sabiduría y en tu amor, me lo envíes.
+>
+> Deseo humillarme en todas las cosas, no responder a las malas palabras sino con el silencio y guardar la paciencia cuando la pena o el sufrimiento se prolonguen, y todo esto por amor a Ti y a tu Cruz, sabiendo que, de esta manera, mereceré las promesas de esta vida y de la vida eterna[^ed20].
 
 #### 6. En el dolor del corazón
 
@@ -72,27 +70,25 @@ Al que cree le resulta entonces bastante fácil permanecer en Dios, pues, en cua
 
 *
 
-¡Aleluya!
-
-Mi corazón está dispuesto, Señor.
-
-Cantaré, haré resonar la alabanza: esa es mi gloria.
-
-¡En pie, lira mía!
-
-¡Despierta, arpa mía!
-
-Quiero alabarte, oh Señor, porque tu bondad se eleva por encima de los cielos y tu fidelidad hasta las nubes…
-
-Ven en nuestra ayuda en la tribulación.
-
-El socorro del hombre no es sino vanidad: pero con Dios haremos grandes cosas.
-
-Quiero cantar eternamente las misericordias del Señor.
-
-¡Aleluya!
-
-Salmos
+> ¡Aleluya!
+>
+> Mi corazón está dispuesto, Señor.
+>
+> Cantaré, haré resonar la alabanza: esa es mi gloria.
+>
+> ¡En pie, lira mía!
+>
+> ¡Despierta, arpa mía!
+>
+> Quiero alabarte, oh Señor, porque tu bondad se eleva por encima de los cielos y tu fidelidad hasta las nubes…
+>
+> Ven en nuestra ayuda en la tribulación.
+>
+> El socorro del hombre no es sino vanidad: pero con Dios haremos grandes cosas.
+>
+> Quiero cantar eternamente las misericordias del Señor.
+>
+> ¡Aleluya![^cita9]
 
 #### 7. En las desolaciones del alma
 
@@ -126,33 +122,31 @@ Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *
 
 *
 
-Oh Dios, sálvame, pues las aguas suben hasta mi alma.
-
-Me hundo en el barro del abismo y no hay donde asentar el pie.
-
-He caído en un pozo de agua y las aguas me sumergen.
-
-Me agoto de gritar. Mi garganta está en llamas. Mis ojos se consumen esperando a mi Dios…
-
-¡Oh Dios, tus caminos son santos!…
-
-¡Bendice, alma mía, al Señor!
-
-¡Que todo lo que hay en mí bendiga su santo nombre!
-
-¡Bendice, alma mía, a Yahvé!
-
-Es Él quien perdona todas las culpas y sana todas las dolencias.
-
-Por Él, tu juventud renovada toma el vigor del águila.
-
-Su bondad es eterna.
-
-¡Dichoso el que confía en el Señor!
-
-¡Aleluya!
-
-Salmos
+> Oh Dios, sálvame, pues las aguas suben hasta mi alma.
+>
+> Me hundo en el barro del abismo y no hay donde asentar el pie.
+>
+> He caído en un pozo de agua y las aguas me sumergen.
+>
+> Me agoto de gritar. Mi garganta está en llamas. Mis ojos se consumen esperando a mi Dios…
+>
+> ¡Oh Dios, tus caminos son santos!…
+>
+> ¡Bendice, alma mía, al Señor!
+>
+> ¡Que todo lo que hay en mí bendiga su santo nombre!
+>
+> ¡Bendice, alma mía, a Yahvé!
+>
+> Es Él quien perdona todas las culpas y sana todas las dolencias.
+>
+> Por Él, tu juventud renovada toma el vigor del águila.
+>
+> Su bondad es eterna.
+>
+> ¡Dichoso el que confía en el Señor!
+>
+> ¡Aleluya![^cita8]
 
 [^84]: Lc 24, 26.
 
@@ -208,4 +202,8 @@ Salmos
 
 [^ed3]: N. del E.: el abandono de Cristo en la Cruz no significa que el Padre lo rechazara ni lo castigara como a un pecador: «Jesús no conoció la reprobación como si él mismo hubiese pecado», pero, «en el amor redentor que le unía siempre al Padre», asumió nuestro alejamiento de Dios (Catecismo, n. 603).
 
-[^ed20]: N. del E.: san John Henry Newman, Meditaciones y devociones (Meditations and Devotions), parte III, meditación 5, «El poder de la Cruz», 2.
+[^ed20]: San John Henry Newman. N. del E.: Meditaciones y devociones (Meditations and Devotions), parte III, meditación 5, «El poder de la Cruz», 2.
+
+[^cita9]: Salmos.
+
+[^cita8]: Salmos.
