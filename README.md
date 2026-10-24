@@ -70,7 +70,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `herramientas/epub_a_pdf.py`: saca el PDF de un EPUB de `libros/`, con el índice y sus enlaces
   al capítulo (PyMuPDF los deja todos en la portada si no se reponen) y el índice lateral del
   lector de PDF. Antes corre `herramientas/anclas.py`, que corrige en el EPUB los enlaces a un
-  ancla colgada al final del capítulo anterior (defecto de algunos EPUB de Gutenberg).
+  ancla colgada al final del capítulo anterior (defecto de algunos EPUB de Gutenberg). La hoja
+  es A5, salvo los libros de `HOJAS` (la página de su original) o con `--hoja ANCHOxALTO` en mm.
+  Un dibujo con `{width=N%}` que no cabe en lo que queda de la página pasa a la siguiente (MuPDF
+  lo achicaría y no respeta `break-before`); solo en el PDF.
 - `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
