@@ -74,6 +74,15 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   es A5, salvo los libros de `HOJAS` (la página de su original) o con `--hoja ANCHOxALTO` en mm.
   Un dibujo con `{width=N%}` que no cabe en lo que queda de la página pasa a la siguiente (MuPDF
   lo achicaría y no respeta `break-before`); solo en el PDF.
+- `herramientas/revisar_libros.py`: guardia de los EPUB y PDF de `libros/`. `sesion.py publicar`
+  la corre sobre los libros que cambiaron respecto de `main` (los dos formatos de cada uno) y no
+  sube si hay un ERROR; `--todos` da el informe del catálogo y `<archivos> --arreglar` quita la
+  cursiva de las notas del EPUB. Revisa en el PDF que portada, ex libris y cada imagen de página
+  entera tengan la proporción de su imagen (2 %; MuPDF las estiraba un 9 % en A5), que el índice
+  enlazado y los marcadores no apunten todos a la página 1 y que el fondo sea parejo desde la
+  página 3 (esquinas a baja resolución); en el EPUB, notas sin cursiva (ReadEra borra ese texto)
+  y el ex libris como segunda página. Lo que se le corrija a un libro y se pueda medir se suma
+  aquí.
 - `editorial/<id>/`: traducciones propias de Fénix en Markdown, un archivo por tramo, con su
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,

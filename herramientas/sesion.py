@@ -9,6 +9,7 @@ Uso (desde cualquier carpeta):
   python herramientas/sesion.py nueva <tema>       crea .sesiones/<tema> desde origin/main e imprime la ruta
   python herramientas/sesion.py publicar <tema> -m "mensaje"
                                                    commitea lo pendiente, se pone al día con main,
+                                                   revisa los libros que cambiaron (revisar_libros.py),
                                                    regenera las páginas, corre la guardia de diseño
                                                    (revisar_diseno.py) y sube a main (GitHub Pages)
   python herramientas/sesion.py cerrar <tema>      borra la copia y su rama (solo si ya se publicó)
@@ -69,6 +70,16 @@ def revisar_diseno(ruta):
     print(r.stdout.strip())
 
 
+def revisar_libros(ruta):
+    """Solo los libros que esta sesión cambió respecto de main: si alguno quedó con la portada
+    deformada, el índice en la página 1 o notas en cursiva, no se sube."""
+    r = subprocess.run([sys.executable, os.path.join("herramientas", "revisar_libros.py"), "--desde", "origin/main"],
+                       cwd=ruta, capture_output=True, text=True, encoding="utf-8")
+    if r.returncode != 0:
+        sys.exit(f"{r.stdout}{r.stderr}\nNo se publicó: rehacer esos libros en {ruta} y volver a publicar.")
+    print(r.stdout.strip())
+
+
 def integrar(ruta):
     """Rebase sobre origin/main. Choques en archivos generados: se toma main y se regenera después."""
     git("fetch", "-q", "origin", cwd=ruta)
@@ -103,6 +114,7 @@ def publicar(tema, mensaje):
             git("commit", "-q", "-m", mensaje + "\n\nCo-Authored-By: Claude <noreply@anthropic.com>", cwd=ruta)
     for intento in range(3):
         integrar(ruta)
+        revisar_libros(ruta)
         generar(ruta)
         revisar_diseno(ruta)
         # El generador escribe LF y la copia tiene CRLF: puede "cambiar" sin cambiar el contenido en git.

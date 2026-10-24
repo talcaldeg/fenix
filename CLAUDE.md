@@ -25,6 +25,12 @@ python herramientas/sesion.py cerrar <tema>                # al terminar
 - No se borra `.git/index.lock` ni se hace `git add -A` en la carpeta principal.
 - Vista previa de una copia: `python -m http.server <puerto> -d .sesiones/<tema>`.
 
+## Guardia de libros (regla dura)
+
+`publicar` corre `herramientas/revisar_libros.py` sobre los EPUB y PDF que cambiaron: portada y
+láminas sin deformar, índice del PDF que no lleve a la portada, fondo parejo, notas sin cursiva y
+ex libris como segunda página. Si falla, se rehace el libro; la guardia no se afloja.
+
 ## Guardia de diseño (regla dura)
 
 `publicar` corre `herramientas/revisar_diseno.py` (Chromium en 7 ventanas, de 360 px a 1920 px):
