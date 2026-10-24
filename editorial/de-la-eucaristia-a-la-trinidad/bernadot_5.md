@@ -218,7 +218,7 @@ Oh cristiano, *¡si supieras el don de Dios!*
 
 [^134]: 1 Jn 4, 16.
 
-[^135]: *Máximas espirituales*. N. del E.: la misma idea está en *Llama de amor viva*, canción 1, 34.
+[^135]: *Máximas espirituales*. N. del E.: con estas palabras no está en los escritos del santo; la máxima francesa glosa la misma frase de la *Llama* citada arriba, «no se detenga mucho acá o allá sin ver a Dios». Cf. *Llama de amor viva*, canción 1, n. 34.
 
 [^ed21]: Santa Gertrudis. N. del E.: Ejercicios espirituales, sexto ejercicio.
 
