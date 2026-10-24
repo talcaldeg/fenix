@@ -50,7 +50,7 @@ Oh Trinidad eterna, Tú me muestras la vía de la gran perfección, para que te 
 
 Revísteme, Trinidad eterna, revísteme de Ti mismo, para que pase de esta vida mortal a la verdadera obediencia y a la luz de la santísima fe con la que has embriagado mi alma.
 
-Santa Catalina de Siena
+Santa Catalina de Siena[^ed22]
 
 #### 2. La Comunión y nuestra vocación sobrenatural
 
@@ -86,7 +86,7 @@ En suma, la Comunión tiene por fin hacer otros Cristos, otros hijos de Dios.
 
 ¡Oh grandeza eterna! ¡Oh Grandeza de bondad! Te has abajado; te has hecho pequeña para hacer grande al hombre. Hacia cualquier lado que me vuelva, no encuentro sino abismo y fuego de tu caridad.
 
-Santa Catalina de Siena
+Santa Catalina de Siena[^ed23]
 
 ### II. La gloria de la santísima Trinidad
 
@@ -174,7 +174,7 @@ Oh Espíritu Santo, Dios amor, lazo de la santa Trinidad por el amor, Tú reposa
 
 Mientras tanto, oh Jesús, oh Amor, guárdame en este valle de miserias a la sombra de tu caridad. Y después de este largo destierro, preservado de toda mancha, condúceme y hazme entrar en tu santuario; dame un lugar en las filas de ese enjambre virginal. Allí apagaré mi sed en las aguas que brotan de tu ternura divina. Allí me saciaré en el goce de tu amor tan dulce. ¡Amén! ¡Amén! ¡Que ese sea el grito de todos los seres!
 
-Santa Gertrudis
+Santa Gertrudis[^ed24]
 
 [^136]: Ef 1, 3-4.
 
@@ -241,3 +241,9 @@ Santa Gertrudis
 [^ed4]: N. del E.: el sacrificio de la Cruz fue único y bastó para la Redención. La Eucaristía no lo repite ni lo completa: lo hace presente, de modo que ambos son «un único sacrificio» (Catecismo, nn. 1366-1367). El autor habla del amor de Cristo, que quiso seguir dándose.
 
 [^ed5]: N. del E.: la presencia sacramental de Cristo «dura todo el tiempo que subsistan las especies eucarísticas» (Catecismo, n. 1377). Lo que permanece después es la unión con Cristo por la gracia y la inhabitación de la Trinidad en el alma (Jn 14, 23; Catecismo, n. 260).
+
+[^ed22]: N. del E.: santa Catalina de Siena, El diálogo, 167.
+
+[^ed23]: N. del E.: santa Catalina de Siena, El diálogo, 25 y 134.
+
+[^ed24]: N. del E.: santa Gertrudis, Ejercicios espirituales, tercer ejercicio.

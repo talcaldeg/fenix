@@ -58,7 +58,7 @@ Y por último, oh mi querido Señor, aunque soy tan débil que no puedo pedirte 
 
 Deseo humillarme en todas las cosas, no responder a las malas palabras sino con el silencio y guardar la paciencia cuando la pena o el sufrimiento se prolonguen, y todo esto por amor a Ti y a tu Cruz, sabiendo que, de esta manera, mereceré las promesas de esta vida y de la vida eterna.
 
-San John Henry Newman
+San John Henry Newman[^ed20]
 
 #### 6. En el dolor del corazón
 
@@ -186,7 +186,7 @@ Salmos
 
 [^99]: Mt 26, 38; 27, 46.
 
-[^100]: Bossuet.
+[^100]: Bossuet. N. del E.: *Cuarto sermón para el Viernes Santo*.
 
 [^101]: Lm 2, 13.
 
@@ -207,3 +207,5 @@ Salmos
 [^109]: Ga 2, 19-20.
 
 [^ed3]: N. del E.: el abandono de Cristo en la Cruz no significa que el Padre lo rechazara ni lo castigara como a un pecador: «Jesús no conoció la reprobación como si él mismo hubiese pecado», pero, «en el amor redentor que le unía siempre al Padre», asumió nuestro alejamiento de Dios (Catecismo, n. 603).
+
+[^ed20]: N. del E.: san John Henry Newman, Meditaciones y devociones (Meditations and Devotions), parte III, meditación 5, «El poder de la Cruz», 2.

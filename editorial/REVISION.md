@@ -19,7 +19,8 @@ Corrija directamente en `salida\<nombre>.md` (con Edit):
 - normas de la guía: ¿ ¡ de apertura, sin raya larga ni semirraya, comillas «», mayúsculas en
   pronombres que se refieren a Dios (Tú, Ti, Te, Tu, Él, Su, Le, Lo) y minúscula en los enclíticos
   pegados al verbo (alabarte, buscarlo), ortografía RAE actual;
-- consistencia de nombres y términos con el glosario.
+- consistencia de nombres y términos con el glosario;
+- cada punto de «Errores ya reportados» de `GUIA.md`, uno por uno.
 No reescriba lo que está bien: corrija lo que haga falta. Conserve marcadores (`1.2.3`),
 encabezados `##`, sumarios en cursiva y notas `[^n]`.
 

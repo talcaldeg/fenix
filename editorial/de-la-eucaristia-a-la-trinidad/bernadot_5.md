@@ -54,7 +54,7 @@ Alegría y regocijo sean para Ti, por tu incomprensible grandeza, por tu inmutab
 
 ¡A Ti, de quien son todas las cosas, por quien son todas las cosas, en quien son todas las cosas, a Ti solo honor y gloria por los siglos! ¡Amén!
 
-Santa Gertrudis
+Santa Gertrudis[^ed21]
 
 ### II. Perfeccionar la unión
 
@@ -226,4 +226,6 @@ Beato Alberto Magno
 
 [^134]: 1 Jn 4, 16.
 
-[^135]: *Máximas espirituales*.
+[^135]: *Máximas espirituales*. N. del E.: la misma idea está en *Llama de amor viva*, canción 1, 34.
+
+[^ed21]: N. del E.: santa Gertrudis, Ejercicios espirituales, sexto ejercicio.

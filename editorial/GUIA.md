@@ -23,12 +23,15 @@ La traducción es propia de Fénix: no se copia ninguna traducción española ex
 - Agustín habla a Dios de «tú» todo el libro. Prosa de oración: ritmo, paralelismos, preguntas
   retóricas; respételos, pero que la frase castellana sea natural.
 
-## Pronombres que se refieren a Dios: con mayúscula (norma de Fénix)
+## Pronombres que se refieren a Dios: el uso de opusdei.org (norma de Fénix desde el 20-oct-2026)
 
-Cuando se refieren a Dios, a Cristo o al Espíritu Santo: Tú, Ti, Te, Tu, Tus, Él, Su, Sus, Le, Lo,
-Contigo, Suyo/Suya. Ejemplos: «Grande eres, Señor», «nos hiciste para Ti», «Tu misericordia»,
-«Él me llamó», «lo que Le agrada». Los enclíticos van en minúscula, pegados al verbo:
-«alabarte», «buscarlo», «amarle». Para la Virgen y los santos, minúscula.
+Con mayúscula solo los tónicos Él, Tú y Ti. En minúscula los posesivos (su, sus, tu, tus, suyo),
+los átonos (le, lo, te), los enclíticos (alabarte, buscarlo), contigo y sí mismo. Ejemplos:
+«nos hiciste para Ti», «tu misericordia», «Él me llamó», «lo que le agrada». Con mayúscula
+también los sacramentos (Bautismo, Comunión), la Cruz, el Corazón, el Cuerpo y la Sangre del
+Señor y el Cielo; dentro de los versículos de la Escritura esos sustantivos van en minúscula.
+Para la Virgen y los santos, minúscula. Los libros publicados antes de esa fecha pueden traer
+la regla vieja (Su, Le): no se copia de ellos.
 
 ## Ortografía y puntuación (obligatorias)
 
@@ -56,6 +59,40 @@ Contigo, Suyo/Suya. Ejemplos: «Grande eres, Señor», «nos hiciste para Ti», 
   conserva tal cual en su propia línea, sin cambio: sirve para cotejar y para armar el libro.
 - Ilustraciones u otros restos de Gutenberg (`[Illustration]`, números de página): se omiten.
 - El archivo contiene solo la traducción. Ningún comentario del traductor dentro.
+
+## Errores ya reportados (no repetir en ningún libro)
+
+Cada error que un lector o Tomás reporta en un libro publicado se agrega acá, con el libro de
+origen, para que no se repita en los siguientes. El revisor (`REVISION.md`) los comprueba uno por
+uno.
+
+1. **Comas que el original no lleva** (Bernadot, cap. I). No se encadenan incisos con comas si el
+   original no las pone: «au communiant détaché des créatures et de soi-même qui se livre sans
+   réserve» no es «al que comulga, desprendido de las criaturas y de sí mismo, que se entrega sin
+   reserva,», sino «al que comulga desprendido de las criaturas y de sí mismo y que se entrega sin
+   reserva,».
+2. **Citas sin fuente** (Bernadot). Una oración o cita firmada solo con el autor («M. Olier»,
+   «Santa Gertrudis») o una nota del autor que dice solo el nombre («Bossuet.») lleva nota al pie
+   «N. del E.» con la obra exacta y su ubicación, verificada en un texto de esa obra. Si no se
+   halla, no se inventa: se deja como está.
+3. **Subtítulos que vienen como párrafo** (Bernadot, cap. I). La fuente digital a veces trae un
+   subtítulo como párrafo corto («Jésus est en nous comme homme.» / «Jésus vient en nous comme
+   Dieu.»). Todo párrafo de una línea se revisa: si anuncia la parte que sigue, va como
+   encabezado del nivel que le toca, sin punto final.
+4. **Calcos de giros** (Bernadot, cap. II). Un giro francés no se traduce palabra por palabra si
+   en castellano no existe: «dans son dedans le plus intime» → «en su interior más íntimo», no
+   «en su dentro más íntimo».
+5. **Términos técnicos sin explicar** (Bernadot, cap. II). Un término de teología que el lector
+   común no conoce (circuminsesión, espiración, apropiación, misiones invisibles) se define en una
+   «N. del E.» en su primera aparición en el texto, con el Catecismo.
+6. **Notas del editor categóricas** (Bernadot, nota 20 del cap. II). La «N. del E.» explica qué
+   quiere decir el autor y lo apoya en el Catecismo; no lo corrige ni zanja («es lenguaje
+   oratorio»). Si una lectura puede confundir, se dice cuál es la buena sin desautorizarlo.
+7. **Saltos de párrafo de la fuente** (Bernadot, cap. II). Si una cita completa la oración
+   anterior («Y con san Juan:»), va en el mismo párrafo aunque la fuente digital la corte.
+8. **Cursiva en las notas al pie** (Bernadot, nota 23 del cap. II). Un lector de Android que
+   muestra las notas al pie de cada página borraba el texto en cursiva («San Agustín, .»).
+   `md_a_epub.py` ya saca la cursiva de las notas; no hace falta evitarla en el Markdown.
 
 ## Glosario
 
@@ -89,8 +126,8 @@ Tratado espiritual del dominico Marie-Vincent Bernadot (1919). Las reglas de arr
 registro, mayúsculas divinas, ortografía, puntuación) rigen igual; esto es lo propio del libro.
 
 - **Tratamiento.** Bernadot habla a Dios, a Cristo y al Espíritu Santo de «vous», a la francesa:
-  en castellano va de «tú», con mayúscula (Tú, Te, Ti, Tu, Tus): «Padre santo, inclínate sobre Tu
-  pequeña criatura». Cristo hablando a Sus discípulos (vous plural): «ustedes». Al lector, si lo
+  en castellano va de «tú», con la regla de mayúsculas de arriba: «Padre santo, inclínate sobre tu
+  pequeña criatura». Cristo hablando a sus discípulos (vous plural): «ustedes». Al lector, si lo
   interpela en singular, «tú». La oración de santa Gertrudis a la Trinidad, también de «tú».
 - **Encabezados.** `## Avant-propos` → `## Prólogo`; `## I. L'union eucharistique` → `## I. La
   unión eucarística` (y así II, III, IV). `###` y `####` se conservan con su numeración. Una

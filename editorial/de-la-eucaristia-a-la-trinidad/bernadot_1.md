@@ -74,23 +74,23 @@ En ese momento se establece una unión prodigiosa. Las de la tierra, aun las má
 
 Ciertamente, la vida de Jesús y la nuestra siguen siendo distintas, como su naturaleza y nuestra naturaleza, como su alma y nuestra alma. Se establece sin embargo una incomparable unidad de amor.
 
-Para darnos una idea de esta unificación de Cristo y del hombre[^15], los Padres de la Iglesia recurren a comparaciones encantadoras: «Echen una cera derretida en otra cera, dice san Cirilo de Jerusalén: una y otra se penetran totalmente. Así, cuando alguien recibe el Cuerpo y la Sangre del Señor, la unión es tal que Cristo pasa a él y él a Cristo… Tenemos un mismo cuerpo y una misma sangre». San Cipriano añade: «Nuestra unión con Él unifica los afectos y las voluntades».
+Para darnos una idea de esta unificación de Cristo y del hombre[^15], los Padres de la Iglesia recurren a comparaciones encantadoras: «Echen una cera derretida en otra cera, dice san Cirilo de Jerusalén[^cir]: una y otra se penetran totalmente. Así, cuando alguien recibe el Cuerpo y la Sangre del Señor, la unión es tal que Cristo pasa a él y él a Cristo… Tenemos un mismo cuerpo y una misma sangre». San Cipriano añade: «Nuestra unión con Él unifica los afectos y las voluntades».
 
-En efecto, en el momento de la Comunión, Jesús entra de tal modo en nuestro corazón y en nuestra alma que nuestros afectos y nuestros pensamientos pueden llamarse sus afectos y sus pensamientos. Él los tiene primero. Luego nos los comunica según la medida actual de nuestro amor. Si un alma tiene poco amor, Jesús se ve forzado a ceñirse a las angostas dimensiones de esa alma y a restringir sus dones. Pero al que comulga, desprendido de las criaturas y de sí mismo, que se entrega sin reserva, al alma pura que se abre toda entera a la influencia de la Hostia, Jesús a cambio se da como solo Dios puede hacerlo. Se establece una circulación de vida, una comunicación de bienes, una unidad de amor que desafía toda expresión humana. El alma, penetrada por Jesús, se vuelve como un suelo fértil que hace germinar flores y frutos. Concibe pensamientos luminosos y forma actos de amor. ¿Son nuestros? Sí, pues nacen de nuestra inteligencia y de nuestro corazón, pero de nuestra inteligencia unida a la inteligencia de Jesús, de nuestro corazón unido a su Corazón, de modo que son suyos tanto como nuestros. Juntos adoramos, juntos amamos y damos gracias, juntos nos entregamos a nuestro Padre de los cielos. Su amor y nuestro amor, su pensamiento y nuestro pensamiento se elevan mezclados el uno con el otro, como dos granos de incienso quemados en el mismo incensario y que no exhalan hacia el Cielo sino un único perfume.
+En efecto, en el momento de la Comunión, Jesús entra de tal modo en nuestro corazón y en nuestra alma que nuestros afectos y nuestros pensamientos pueden llamarse sus afectos y sus pensamientos. Él los tiene primero. Luego nos los comunica según la medida actual de nuestro amor. Si un alma tiene poco amor, Jesús se ve forzado a ceñirse a las angostas dimensiones de esa alma y a restringir sus dones. Pero al que comulga desprendido de las criaturas y de sí mismo y que se entrega sin reserva, al alma pura que se abre toda entera a la influencia de la Hostia, Jesús a cambio se da como solo Dios puede hacerlo. Se establece una circulación de vida, una comunicación de bienes, una unidad de amor que desafía toda expresión humana. El alma, penetrada por Jesús, se vuelve como un suelo fértil que hace germinar flores y frutos. Concibe pensamientos luminosos y forma actos de amor. ¿Son nuestros? Sí, pues nacen de nuestra inteligencia y de nuestro corazón, pero de nuestra inteligencia unida a la inteligencia de Jesús, de nuestro corazón unido a su Corazón, de modo que son suyos tanto como nuestros. Juntos adoramos, juntos amamos y damos gracias, juntos nos entregamos a nuestro Padre de los cielos. Su amor y nuestro amor, su pensamiento y nuestro pensamiento se elevan mezclados el uno con el otro, como dos granos de incienso quemados en el mismo incensario y que no exhalan hacia el Cielo sino un único perfume.
 
 «Así como tu Padre se insinúa en Ti desde toda la eternidad, Verbo divino, de modo que te llena por completo y es todo en Ti, así, oh Jesús mío, Tú te insinúas en mí y haces una misma cosa conmigo, por una íntima penetración de todo mi ser».
 
-M. Olier
+M. Olier[^ed7]
 
 ### 2. La Comunión nos da a Jesús entero
 
 En el momento de la Comunión estamos realmente en posesión de la vida. Tenemos al Verbo encarnado entero, con todo lo que es y todo lo que hace, Jesús hombre y Dios, todas las gracias de su Humanidad y todos los tesoros de su Divinidad, o, para hablar como san Pablo, *la riqueza incomprensible de Cristo*[^16].
 
-Jesús está en nosotros como hombre.
+#### Jesús está en nosotros como hombre
 
 La Comunión derrama, pues, en nosotros la vida actual, celeste y toda glorificada de su Humanidad, de su Corazón y de su alma. En el Cielo los ángeles son inundados de dicha por la irradiación de esa vida. En la tierra, algunos santos han tenido la visión del Cuerpo glorificado de Jesús: «Era una belleza capaz de hacer morir la palabra humana», cuenta la beata Ángela de Foligno, que conservó de su visión «una alegría inmensa, una luz sublime, una delectación indecible y continua, una delectación deslumbrante más allá de todos los deslumbramientos». Pues bien, este Cuerpo glorificado, animado por un Corazón que es un abismo de amor y por un alma inefablemente bella, santa, deslumbrante de luz, inundada de vida, de gracia, de paz y de alegría, santuario y paraíso de Dios, se convierte en nuestro festín.
 
-Jesús viene a nosotros como Dios.
+#### Jesús viene a nosotros como Dios
 
 Es el colmo de la generosidad divina. *Habiendo amado a los suyos que estaban en este mundo, los amó hasta el fin*[^17], hasta las últimas exigencias y las últimas posibilidades del amor.
 
@@ -102,7 +102,7 @@ Esa es la vida que recibimos.
 
 ¡Oh Dios increado! ¡Oh Dios dulcemente encarnado! El hombre ha comido tu Carne, ha bebido tu Sangre: ¡que no sea ya sino uno contigo por los siglos de los siglos!
 
-Beata Ángela de Foligno
+Beata Ángela de Foligno[^ed8]
 
 ### 3. La Comunión nos da las tres divinas Personas
 
@@ -130,7 +130,7 @@ El alma del que comulga se convierte como en el cielo de la Trinidad. En mi alma
 
 Trinidad eterna, dulce amor mío, Tú, la Luz verdadera, danos la luz; Tú, la Sabiduría, danos la sabiduría; Tú, la Fuerza infinita, danos la fuerza. Disipa, te lo suplico, nuestras tinieblas para que podamos conocerte perfectamente y seguir tu verdad en la sencillez y la sinceridad de nuestro corazón.
 
-Santa Catalina de Siena
+Santa Catalina de Siena[^ed9]
 
 ### 4. La Comunión nos asocia a la vida íntima de la Trinidad
 
@@ -152,7 +152,7 @@ El Señor decía a la beata Ángela de Foligno: «Si alguien quiere poseerme en 
 
 ¡Oh Trinidad! ¡Trinidad eterna! ¡Oh Fuego, oh abismo de amor! ¡Llama de amor! ¿No bastaba crearnos a tu imagen y semejanza, hacernos renacer a la gracia en la Sangre de tu Hijo? ¡Y aún era preciso darnos toda la Trinidad en alimento! Es tu amor el que lo quiso, ¡oh Trinidad eterna! No solo diste a tu Verbo en la Redención y en la Eucaristía, sino que te has dado toda entera por amor a tu criatura. Sí, el alma te posee porque eres la Bondad suprema.
 
-Santa Catalina de Siena
+Santa Catalina de Siena[^ed10]
 
 *
 
@@ -166,7 +166,7 @@ El Señor Jesús nos lo dijo: *El que come este pan tiene la vida eterna*[^32]. 
 
 ¡Oh Jesucristo creador! ¡Oh Jesucristo criatura! ¡Oh verdadero Dios y verdadero hombre! ¡Oh verdadera Carne! ¡Oh verdadera Sangre! ¡Oh verdaderos miembros de un verdadero Cuerpo! ¡Oh unión inefable! ¡Oh encuentro de Inmensidades! ¡Oh Señor, voy de tu Humanidad a tu Divinidad, de tu Divinidad a tu Humanidad, voy y vuelvo! El alma, en su contemplación, encuentra la Divinidad inefable que lleva en sí los tesoros de riqueza y de ciencia. ¡Oh tesoros imperecederos! ¡Oh Divinidad! ¡De Ti saco las delicias que alimentan, y todo lo que digo y todo lo que no puedo decir! Veo el alma preciosísima de Jesús, con todas las virtudes, todos los dones del Espíritu Santo y la oblación santísima, santísima y sin mancha. Veo este Cuerpo, el precio de nuestra Redención. Veo la Sangre de la que saco la salvación y la vida. Y luego veo lo que no puedo decir. He aquí verdaderamente, bajo estos velos, a Aquel a quien adoran las Dominaciones, ante quien tiemblan los Espíritus y las Potestades temibles. ¡Oh! ¡Si nuestros ojos se abrieran como los suyos, qué prodigios harían en nosotros, al acercarnos al misterio, el respeto y la humildad!
 
-Beata Ángela de Foligno
+Beata Ángela de Foligno[^ed11]
 
 [^1]: Col 1, 15.
 
@@ -196,7 +196,7 @@ Beata Ángela de Foligno
 
 [^14]: Jn 6, 51.
 
-[^15]: Concilio de Florencia.
+[^15]: Concilio de Florencia. N. del E.: Decreto para los armenios, 1439 (DS 1322).
 
 [^16]: Ef 3, 8.
 
@@ -237,3 +237,15 @@ Beata Ángela de Foligno
 [^34]: Ct 5, 1.
 
 [^ed1]: N. del E.: no se trata de una generación nueva del Hijo en el alma. La generación del Hijo y la procesión del Espíritu Santo son eternas; el autor dice que esa vida íntima de la Trinidad se hace presente en el alma en gracia, porque las tres Personas vienen a habitar en ella (Jn 14, 23; Catecismo, n. 260).
+
+[^ed7]: N. del E.: Jean-Jacques Olier, La Journée chrétienne, primera parte, «Durante la santa Comunión y después».
+
+[^ed8]: N. del E.: beata Ángela de Foligno, Libro de las visiones e instrucciones, cap. 67 (numeración de la traducción francesa de Ernest Hello).
+
+[^ed9]: N. del E.: santa Catalina de Siena, Oraciones, n.º 24 de la edición de Gigli, sobre el sacramento de la Eucaristía.
+
+[^ed10]: N. del E.: santa Catalina de Siena, oración del 14 de febrero de 1379, después de comulgar.
+
+[^ed11]: N. del E.: beata Ángela de Foligno, Libro de las visiones e instrucciones, cap. 67 (numeración de la traducción francesa de Ernest Hello).
+
+[^cir]: N. del E.: la comparación de la cera es de san Cirilo de Alejandría, Comentario al Evangelio de san Juan, libro IV, sobre Jn 6, 56. La frase final, «Tenemos un mismo cuerpo y una misma sangre», sí es de san Cirilo de Jerusalén, Catequesis mistagógicas, IV, 3.

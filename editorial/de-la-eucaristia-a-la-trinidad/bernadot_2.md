@@ -38,7 +38,7 @@ Salmo 62
 
 Oh Dios de amor, Salvador mío, Tú eres dulzura y encanto por la eternidad. Eres la sed de mi corazón, la saciedad de mi espíritu. Y, sin embargo, mientras más te gusto, más crece mi hambre; mientras más bebo de tu fuente, más sediento me siento. Ven, Señor Jesús, ven.
 
-Santa Gertrudis
+Santa Gertrudis[^ed12]
 
 ### I. Nuestra unión con la santa Humanidad
 
@@ -120,7 +120,7 @@ He pecado, Señor, ten piedad de mí.
 
 ¡Jesús Amor! ¡Jesús Amor!
 
-Santa Catalina de Siena
+Santa Catalina de Siena[^ed13]
 
 #### 3. Nuestra unión con la Humanidad en la Eucaristía
 
@@ -142,7 +142,7 @@ Señor, te pido a Ti mismo; no pido nada más que a Ti, oh Dios mío, que te has
 
 Tú eres la Llama viva y ardes siempre de amor por los hombres: entra en mí y, para que yo me parezca a Ti, ¡inflámame con tu fuego!
 
-San John Henry Newman
+San John Henry Newman[^ed14]
 
 #### 4. Intimidad de esta unión
 
@@ -152,7 +152,7 @@ Pero la santa Humanidad ha recibido comunicación de este poder divino; de modo 
 
 La unión del esposo y la esposa, la unión misma del alma con el cuerpo no es tan íntima como la unión de mi alma con la santa Humanidad. Pues la gracia que ella me comunica, fruto de su sacrificio, penetra la esencia misma de mi alma. Como el perfume penetra la sustancia del vaso que lo contiene; como el rayo invade el cristal para darle su pureza y su brillo; como el fuego penetra el hierro, lo calienta, lo ilumina, lo transforma y lo hace fuego: así la gracia que me llega de la Eucaristía, derramándose en mi alma, se apodera de ella para regirla, penetrarla y, según la palabra de santo Tomás, *transformarla en Dios y embriagarla de Dios*[^46].
 
-Esta gracia es verdaderamente mi vida, mi verdadera vida, mucho más que la vida de mi cuerpo, o incluso que la vida natural de mi espíritu. Es el yo de mi yo, *el alma de mi alma*, dice Contenson. De modo que, en su último fondo, en su centro más interior, en su dentro más íntimo, mi vida es la gracia que me viene a cada minuto de la Hostia. El Señor decía a la beata Ángela de Foligno: *Yo soy más íntimo a tu alma que ella misma*.
+Esta gracia es verdaderamente mi vida, mi verdadera vida, mucho más que la vida de mi cuerpo, o incluso que la vida natural de mi espíritu. Es el yo de mi yo, *el alma de mi alma*, dice Contenson. De modo que, en su último fondo, en su centro más interior, en su interior más íntimo, mi vida es la gracia que me viene a cada minuto de la Hostia. El Señor decía a la beata Ángela de Foligno: *Yo soy más íntimo a tu alma que ella misma*.
 
 *Para mí, vivir es Cristo*[^47], exclamaba san Pablo. Con la misma verdad y la misma alegría interior, puedo decir: la vida, para mí, es la Eucaristía. Y no hago más que repetir lo que dijo primero el Maestro mismo: *El que me come vivirá por mí*[^48].
 
@@ -166,7 +166,7 @@ Oh Señor Jesús, oh mar inmenso, ¿por qué tardas en recibir esta débil gota 
 
 ¡Oh! ¡Pueda yo obtener desde aquí abajo lo que deseo! ¡Pueda obtener aquello a lo que aspiro, obtener que mi alma se vuelva por fin hacia Ti y que me devuelvas la vida por el beso tan dulce de tu misericordia! Oh mi bien más querido, déjame asirte en lo más íntimo de mi ser. Déjame darte también mi humilde beso para que, unida a Ti, permanezca ligada a Ti de manera indisoluble.
 
-Santa Gertrudis
+Santa Gertrudis[^ed15]
 
 ### II. Nuestra unión con la santísima Trinidad.
 
@@ -192,11 +192,11 @@ Oh Trinidad eterna, Dios único, Dios uno en esencia y trino en personas, permí
 
 Oh Dios eterno, Tú eres el océano tranquilo donde viven y se alimentan las almas; allí encuentran su descanso en la unión del amor.
 
-Santa Catalina de Siena
+Santa Catalina de Siena[^ed16]
 
 #### 2. La circuminsesión divina en nuestra alma
 
-Se produce en el alma del que comulga una admirable imitación de la circuminsesión de las divinas Personas.
+Se produce en el alma del que comulga una admirable imitación de la circuminsesión[^ed6] de las divinas Personas.
 
 En Dios no hay inmovilidad, sino un movimiento eterno, una eterna circulación de amor, pues la ley del amor es lanzarse hacia fuera, darse. El Padre no sería Dios si permaneciera en sí mismo: se derrama, se precipita en su Hijo, al que no cesa de engendrar. El Hijo no sería Dios si no irrumpiera en su Padre. Entre ellos hay un impulso inmenso, un atractivo irresistible, un peso de amor que los precipita el uno en el otro y consuma su vida en la unidad. Y el término de este movimiento eterno de la vida divina, término eternamente subsistente, es el Espíritu Santo.[^ed2]
 
@@ -210,9 +210,7 @@ Jesús nos lo ha dado a entender: *Nadie va a mi Padre sino por mí*[^55]*… Na
 
 El alma que ama a las tres divinas Personas es, pues, un alma arrastrada por el Espíritu Santo en ese movimiento circular de visión y de amor que hace la dicha del mismo Dios, dicha plenamente comunicada a los ángeles y a los bienaventurados.
 
-Así podemos decir con san Agustín: «Los santos llevan a Dios; su alma es un cielo, pues Dios la habita[^57]». Y con san Juan:
-
-*Vivimos en sociedad con el Padre y con su Hijo Jesucristo*[^58]. Entre los Tres y nosotros hay una sociedad, una familiaridad, la vida en común.
+Así podemos decir con san Agustín: «Los santos llevan a Dios; su alma es un cielo, pues Dios la habita[^57]». Y con san Juan: *Vivimos en sociedad con el Padre y con su Hijo Jesucristo*[^58]. Entre los Tres y nosotros hay una sociedad, una familiaridad, la vida en común.
 
 \*
 
@@ -270,4 +268,16 @@ Santa Gertrudis
 
 [^58]: 1 Jn 1, 3.
 
-[^ed2]: N. del E.: es lenguaje oratorio. La vida de la Trinidad no es un movimiento que Dios necesite para llegar a ser Dios: Dios «es una eterna comunicación de amor: Padre, Hijo y Espíritu Santo» (Catecismo, n. 221), y en Él no hay cambio ni sucesión.
+[^ed2]: N. del E.: el autor parte de que «Dios es Amor» (1 Jn 4, 8): el Padre se da por entero al Hijo, y el Hijo al Padre, y por eso dice que no sería Dios si no se diera. El movimiento del que habla es ese amor eterno, no un cambio en Dios: «el ser mismo de Dios es Amor [...]; Él mismo es una eterna comunicación de amor: Padre, Hijo y Espíritu Santo» (Catecismo, n. 221).
+
+[^ed6]: N. del E.: circuminsesión (en griego, pericóresis) es el nombre que da la teología a la presencia de cada una de las tres divinas Personas en las otras dos: «A causa de esta unidad, el Padre está todo en el Hijo, todo en el Espíritu Santo; el Hijo está todo en el Padre, todo en el Espíritu Santo; el Espíritu Santo está todo en el Padre, todo en el Hijo» (Concilio de Florencia, en el Catecismo, n. 255).
+
+[^ed12]: N. del E.: santa Gertrudis, Ejercicios espirituales, quinto ejercicio.
+
+[^ed13]: N. del E.: santa Catalina de Siena, Oraciones, n.º 10 de la edición de Gigli, del 3 de marzo de 1379.
+
+[^ed14]: N. del E.: san John Henry Newman, Meditaciones y devociones (Meditations and Devotions), parte III, meditación 22, «Dios comunicado a nosotros».
+
+[^ed15]: N. del E.: santa Gertrudis, Ejercicios espirituales, quinto ejercicio.
+
+[^ed16]: N. del E.: santa Catalina de Siena, Oraciones, n.º 23 de la edición de Gigli, en la fiesta de la Conversión de san Pablo.

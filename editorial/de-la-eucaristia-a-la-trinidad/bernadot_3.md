@@ -32,7 +32,7 @@ Sal 118
 
 ¡Conocimiento de Dios! ¡Oh gozo de los gozos, Señor! Es él quien va primero; el amor viene después: el amor transformador. Quien conoce en la verdad, ese ama en el fuego.
 
-Beata Ángela de Foligno
+Beata Ángela de Foligno[^ed17]
 
 ### I. Mantener la unión
 
@@ -96,7 +96,7 @@ Y Tú, oh Padre, inclínate sobre tu pequeña criatura, no veas en ella sino al 
 
 Oh mis Tres, mi todo, mi bienaventuranza, Soledad infinita, inmensidad en que me pierdo, me entrego a Ti como una presa; sepúltate en mí para que yo me sepulte en Ti, mientras espero ir a contemplar en tu luz el abismo de tus grandezas.
 
-Sor Isabel de la Trinidad
+Sor Isabel de la Trinidad[^ed18]
 
 #### 3. En el trabajo
 
@@ -132,7 +132,7 @@ En la Iglesia, la acción es necesaria, pero la contemplación lo es mucho más.
 
 ¡Oh divino Paráclito! Tú, cuyo poder iguala a tu santidad, por ese amor que te llevó a encadenarme a Ti cuando me impusiste un nombre enteramente espiritual, concédeme amarte con todo mi corazón, adherirme a Ti con toda mi alma, agotar todas mis fuerzas amándote y sirviéndote, vivir según tu intención y, dispuesto por Ti, ser admitido a la hora de mi muerte, con un vestido sin mancha, a las bodas divinas que Tú preparas.
 
-Santa Gertrudis
+Santa Gertrudis[^ed19]
 
 #### 4. En la tentación
 
@@ -198,7 +198,7 @@ Sal 26 y 61
 
 [^65]: Sal 44, 11-12.
 
-[^66]: San Juan de la Cruz, *Máximas espirituales*.
+[^66]: San Juan de la Cruz, *Máximas espirituales*. N. del E.: en las ediciones castellanas, *Dichos de luz y amor*.
 
 [^67]: Lc 10, 42.
 
@@ -233,3 +233,9 @@ Sal 26 y 61
 [^82]: Sal 26, 3 y 5. Santa Gertrudis exclamaba: «Doy gracias a tu protección, adorable e incomprensible Trinidad, que no permites que seamos tentados por encima de nuestras fuerzas, aunque sufras a veces que seamos tentados para hacernos avanzar en la virtud. Y cuando ves que toda nuestra esperanza no se apoya sino en tu socorro, te encargas de nuestras propias querellas, de modo que, por una generosidad sin igual, reservándote la pena del combate, nos das el premio de la victoria.» (Insinuat., lib. II, cap. XI.)
 
 [^83]: Rm 8, 35-39.
+
+[^ed17]: N. del E.: beata Ángela de Foligno, Libro de las visiones e instrucciones, cap. 57 (numeración de la traducción francesa de Ernest Hello).
+
+[^ed18]: N. del E.: santa Isabel de la Trinidad, elevación «Oh Dios mío, Trinidad que adoro», 21 de noviembre de 1904.
+
+[^ed19]: N. del E.: santa Gertrudis, Ejercicios espirituales, segundo ejercicio.

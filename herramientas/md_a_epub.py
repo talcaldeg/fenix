@@ -224,8 +224,12 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
         nombre = f"c{i:02d}"
         cuerpo = f"<section><h2>{enlinea(c.titulo)}</h2>\n" + "\n".join(c.html)
         if c.orden:
+            # Nota sin cursivas: el lector de Android que muestra la nota al pie de cada página (por la
+            # captura, ReadEra) borra el texto que
+            # va dentro de <em> («San Agustín, .» en vez del título de la obra; Bernadot, 23-oct-2026).
             cuerpo += '\n<aside class="notas" epub:type="footnotes">' + "".join(
-                f'<p id="n{k}" epub:type="footnote"><a href="#r{k}">{k}</a>. {enlinea(c.notas.get(n, ""))}</p>'
+                f'<p id="n{k}" epub:type="footnote"><a href="#r{k}">{k}</a>. '
+                f'{re.sub(r"</?em>", "", enlinea(c.notas.get(n, "")))}</p>'
                 for k, n in enumerate(c.orden, 1)) + "</aside>"
             faltan = [n for n in c.orden if n not in c.notas]
             if faltan:
