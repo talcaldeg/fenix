@@ -46,8 +46,8 @@ def rehacer_enlaces(doc, pdf) -> None:
     pdf.set_toc(doc.get_toc())
 
 
-def dibujos_con_ancho(z: zipfile.ZipFile) -> list:
-    """(xhtml, posición del <img>, ancho pedido, tamaño en píxeles), en el orden del spine."""
+def spine(z: zipfile.ZipFile) -> tuple:
+    """(carpeta del OPF, rutas de los xhtml en el orden del spine)."""
     opf = next(n for n in z.namelist() if n.endswith(".opf"))
     base = opf.rpartition("/")[0] + "/" if "/" in opf else ""
     texto = z.read(opf).decode("utf-8")
@@ -55,9 +55,43 @@ def dibujos_con_ancho(z: zipfile.ZipFile) -> list:
     for item in re.findall(r"<item\b[^>]*>", texto):
         attrs = dict(re.findall(r'(\w[\w-]*)="([^"]*)"', item))
         hrefs[attrs.get("id")] = attrs.get("href")
+    return base, [base + hrefs[i] for i in re.findall(r'<itemref idref="([^"]+)"', texto)]
+
+
+def paginas_de_imagen(z: zipfile.ZipFile, doc, pdf) -> None:
+    """La portada y el ex libris van en una envoltura SVG con preserveAspectRatio="meet", pero
+    MuPDF la rasteriza en 816 x 1056 (carta) y estira eso a la caja de la página: la imagen sale
+    deformada (un 9 % en A5, un 31 % en la hoja de El principito). Esas páginas se rehacen: el
+    color de fondo de la envoltura de canto a canto y la imagen entera, sin deformar, al centro."""
+    base, xhtmls = spine(z)
+    for i in range(doc.page_count):
+        cap, sub = doc.location_from_page_number(i)
+        if sub or cap >= len(xhtmls):
+            continue
+        xhtml = z.read(xhtmls[cap]).decode("utf-8")
+        img = re.search(r'<image\b[^>]*xlink:href="([^"]+)"', xhtml)
+        if "<svg" not in xhtml or not img or re.search(r"<p\b", xhtml):
+            continue
+        fondo = re.search(r'<rect\b[^>]*fill="#([0-9a-fA-F]{6})"', xhtml)
+        color = tuple(int(fondo.group(1)[k:k + 2], 16) / 255 for k in (0, 2, 4)) if fondo else (1, 1, 1)
+        datos = z.read(xhtmls[cap].rpartition("/")[0] + "/" + img.group(1) if "/" in xhtmls[cap]
+                       else img.group(1))
+        pm = fitz.Pixmap(datos)
+        r = pdf[i].rect
+        esc = min(r.width / pm.width, r.height / pm.height)
+        w, h = pm.width * esc, pm.height * esc
+        pdf.delete_page(i)
+        pag = pdf.new_page(i, width=r.width, height=r.height)
+        pag.draw_rect(r, color=None, fill=color)
+        pag.insert_image(fitz.Rect((r.width - w) / 2, (r.height - h) / 2,
+                                   (r.width + w) / 2, (r.height + h) / 2), stream=datos)
+
+
+def dibujos_con_ancho(z: zipfile.ZipFile) -> list:
+    """(xhtml, posición del <img>, ancho pedido, tamaño en píxeles), en el orden del spine."""
+    base, xhtmls = spine(z)
     dibujos = []
-    for idref in re.findall(r'<itemref idref="([^"]+)"', texto):
-        nombre = base + hrefs[idref]
+    for nombre in xhtmls:
         xhtml = z.read(nombre).decode("utf-8")
         for m in IMG_ANCHO.finditer(xhtml):
             pm = fitz.Pixmap(z.read(base + m.group(1)))
@@ -140,6 +174,7 @@ def convertir(epub: Path, hoja: tuple | None = None) -> Path:
     arreglar(epub)
     doc = maquetar(epub, hoja or HOJAS.get(epub.stem, A5))
     pdf = fitz.open("pdf", doc.convert_to_pdf())
+    paginas_de_imagen(zipfile.ZipFile(epub), doc, pdf)
     rehacer_enlaces(doc, pdf)
     meta = doc.metadata or {}
     pdf.set_metadata({"title": meta.get("title", ""), "author": meta.get("author", ""),
