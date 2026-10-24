@@ -36,7 +36,7 @@ window.FENIX = {
   },
   // Sello «Recomendados por Fénix»: van primero en la portada y en el catálogo, en este orden.
   // Cada sitio muestra solo los de su idioma (One with Jesus no tiene versión en español).
-  recomendadosFenix: ["apologia-de-socrates", "saint-exupery-el-principito", "one-with-jesus", "imitacion-de-cristo", "historia-de-un-alma", "confesiones"],
+  recomendadosFenix: ["one-with-jesus", "apologia-de-socrates", "saint-exupery-el-principito", "imitacion-de-cristo", "historia-de-un-alma", "confesiones"],
 
   libros: [
     {
