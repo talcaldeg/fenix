@@ -8,7 +8,12 @@
 <!-- PWA:inicio - Instalable como app en el celular (manifest, íconos de herramientas/logo.py y sw.js). Las rutas son relativas a la
      carpeta del sitio: herramientas/gen_estaticos.js copia el bloque en cada ficha y les antepone su base. -->
 <link rel="manifest" href="../../manifest.webmanifest">
-<meta name="theme-color" content="#6b1d24">
+<!-- La barra del sistema (hora, batería) toma el color de fondo de la cabecera, en claro y en oscuro, y lo sigue si se
+     fuerza el tema con ◐; revisar_diseno.py lo exige. -->
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf6ef">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16110f">
+<script>(function(){var r=document.documentElement,m=document.querySelectorAll('meta[name="theme-color"]'),orig=[].map.call(m,function(x){return x.content;});
+new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getPropertyValue("--bg").trim();m.forEach(function(x,i){x.content=bg||orig[i];});}).observe(r,{attributes:true,attributeFilter:["data-theme"]});})();</script>
 <link rel="apple-touch-icon" href="../../img/icono-apple-180.png">
 <meta name="apple-mobile-web-app-title" content="Fénix">
 <meta name="mobile-web-app-capable" content="yes">

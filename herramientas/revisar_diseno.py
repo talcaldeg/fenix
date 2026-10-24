@@ -7,7 +7,8 @@ de subir y no publica si falla.
 Revisa, en ventanas de escritorio y de celular:
   - inicio: el hero completo (hasta las cifras) cabe en la primera pantalla;
   - todas las vistas y una página de libro: sin scroll horizontal y sin errores de JavaScript;
-  - la barra de arriba cabe en una línea en escritorio.
+  - la barra de arriba cabe en una línea en escritorio;
+  - la barra del sistema del celular (theme-color) es del color de la cabecera, en claro y en oscuro.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
      --capturas <carpeta>  guarda una captura del inicio por ventana, para mirarlas
@@ -78,6 +79,27 @@ def revisar(raiz, capturas=None):
                     fallas.append(f"{donde}: la barra de arriba mide {round(r['barra'])}px (el menú no cabe en una línea)")
                 if capturas:
                     pg.screenshot(path=os.path.join(capturas, f"inicio_{w}x{h}.png"))
+            pg.close()
+        # La barra del sistema del celular (y de la app instalada) se pinta con el theme-color: si no es el
+        # fondo de la cabecera, arriba se ve un corte de color. Se mira en claro, en oscuro y tras el botón ◐.
+        for esquema in ("light", "dark"):
+            pg = nav.new_page(viewport={"width": 390, "height": 844}, color_scheme=esquema)
+            for vista in ("inicio", LIBRO):
+                pg.goto(base + LIBRO if vista == LIBRO else f"{base}#{vista}")
+                pg.wait_for_load_state("networkidle")
+                pasos = [esquema] + (["◐"] if vista == "inicio" else [])
+                for paso in pasos:
+                    if paso == "◐":
+                        pg.evaluate("document.querySelector('#btnTema').click()")  # en el celular va dentro del menú
+                        pg.wait_for_timeout(100)
+                    r = pg.evaluate("""() => {
+                        const m = [...document.querySelectorAll('meta[name="theme-color"]')]
+                            .find(x => !x.media || matchMedia(x.media).matches);
+                        return {barra: (m || {}).content || '', bg: getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()};
+                    }""")
+                    if r["barra"].lower() != r["bg"].lower():
+                        fallas.append(f"barra del celular {esquema} {vista} {paso}: theme-color {r['barra'] or 'ausente'} "
+                                      f"y la cabecera es {r['bg']} (se ve un corte de color arriba)")
             pg.close()
         nav.close()
     srv.shutdown()
