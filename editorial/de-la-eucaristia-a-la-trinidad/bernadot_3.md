@@ -68,7 +68,7 @@ El cristiano debe velar con celoso cuidado para no abandonar jamás, ni por un i
 
 ¿Quieren ustedes oír a Dios? Hagan callar a todas las criaturas y vuélvanse hacia Él. «El Padre ha pronunciado una Palabra. Es su Verbo y su Hijo. Lo pronuncia eternamente y en un eterno silencio. Y es en ese silencio donde el alma lo oye[^66]».
 
-«La ley de la oración, dice la Beata Ángela de Foligno, es la unidad. Dios exige la totalidad del hombre y no una parte de él. La oración pide el corazón entero y, si se le da una parte del corazón, no se obtiene nada… Sepan que nada les es necesario, nada, excepto Dios. Encontrar a Dios, recoger en Él sus potencias, eso es lo único necesario. Para este recogimiento hay que cortar todo hábito superfluo, toda curiosidad superflua, toda ocupación y operación superflua. En una palabra, es menester que el hombre se separe de todo lo que divide.»
+«La ley de la oración, dice la Beata Ángela de Foligno, es la unidad. Dios exige la totalidad del hombre y no una parte de él. La oración pide el corazón entero y, si se le da una parte del corazón, no se obtiene nada… Sepan que nada les es necesario, nada, excepto Dios. Encontrar a Dios, recoger en Él sus potencias, eso es lo único necesario. Para este recogimiento hay que cortar todo hábito superfluo, toda curiosidad superflua, toda ocupación y operación superflua. En una palabra, es menester que el hombre se separe de todo lo que divide[^fx7].»
 
 Siga, pues, el cristiano el consejo de santa Catalina de Siena, que gustaba de recomendar a sus discípulos que se construyeran una celda interior, donde vivirían con Dios solo, ocupados de *lo único necesario*[^67]. Allí, que mantenga siempre su alma entre sus manos. Que diga, como la esposa del Cantar en busca del Amado: *Nescivi*: ya no sé nada[^68]; lo he olvidado todo, salvo Dios y las cosas de Dios. O como san Pablo: por su amor lo he perdido todo, para ganarlo a Él, a Cristo mi Señor, y hallarme en Él[^69].
 
@@ -132,13 +132,13 @@ No, si sabemos mantenernos en la fe y recordar que Dios a veces *se oculta en la
 
 Hay en la vida de santa Catalina de Siena un hecho fecundo en luz. Catalina acababa de ser sometida a tentaciones contra la pureza sumamente humillantes y de una violencia inaudita. Pasada la tormenta, Nuestro Señor aparece: «Señor, exclama ella, ¿dónde estabas Tú, pues, cuando mi corazón era atormentado por tantas impurezas?». «Yo estaba en tu corazón». «¡Ah, Señor! Tú eres la verdad misma y me inclino ante tu Majestad. Pero ¿cómo puedo creer que estabas en mi corazón cuando estaba lleno de pensamientos tan detestables?». «Esos pensamientos y esas tentaciones, ¿te causaban alegría o tristeza, placer o pena?».
 
-«Una gran tristeza y una gran pena». «Sabe, hija mía, que sufrías porque yo estaba oculto en medio de tu corazón. Si hubiera estado ausente, esos pensamientos te habrían penetrado y alegrado, pero mi presencia te los hacía insoportables. Yo actuaba en ti; defendía tu corazón contra el enemigo. Jamás he estado más cerca de ti.»
+«Una gran tristeza y una gran pena». «Sabe, hija mía, que sufrías porque yo estaba oculto en medio de tu corazón. Si hubiera estado ausente, esos pensamientos te habrían penetrado y alegrado, pero mi presencia te los hacía insoportables. Yo actuaba en ti; defendía tu corazón contra el enemigo. Jamás he estado más cerca de ti[^fx8].»
 
 Estas divinas palabras nos trazan la línea de conducta que hay que seguir en la tentación: mantenerse estrechamente unido a Jesús. Cuando el demonio ataca nuestra vida sobrenatural, ¿a quién ataca en definitiva, sino a Dios mismo? Es a Cristo en nosotros a quien persigue todavía y a quien querría crucificar de nuevo. Es la vida de Cristo en nosotros lo que quiere apagar. El secreto de la victoria no está en agitarnos, en rechazar directamente las sugestiones del Maligno o discutir sus artificios, sino en adherirnos con toda nuestra voluntad a Aquel que ya lo ha vencido y que está más empeñado que nosotros mismos en salvar la vida que nos comunica. Es más que nunca el momento de practicar el consejo de san Pablo: *Caminen en Jesucristo, arraigados en Él, edificados sobre Él, afianzados en la fe*[^80].
 
 Quien, sin turbarse, permanece unido a Cristo, se hunde en Él y confía en Él, no puede ser vencido por el demonio. *Porque Aquel que está en ustedes es más grande que el que está en el mundo*[^81]*… Aunque un ejército acampe contra mí, mi corazón no temerá. Aunque se entable contra mí el combate, aun entonces tendré confianza: Yahvé me ocultará en el secreto de su tienda*[^82].
 
-Después de haber pedido la gracia de permanecer siempre unida a Dios, santa Teresa añade: «Entonces no tendré sino desdén y desprecio para todos los demonios, y serán ellos los que tendrán miedo de mí. No comprendo esos temores que hacen gritar: ¡el demonio! ¡El demonio!, cuando podemos decir: ¡Dios! ¡Dios!»
+Después de haber pedido la gracia de permanecer siempre unida a Dios, santa Teresa añade: «Entonces no tendré sino desdén y desprecio para todos los demonios, y serán ellos los que tendrán miedo de mí. No comprendo esos temores que hacen gritar: ¡el demonio! ¡El demonio!, cuando podemos decir: ¡Dios! ¡Dios![^fx9]»
 
 La unión confiada con nuestros Huéspedes interiores es, pues, la salvación en la tentación, pues ningún poder es capaz de arrancar a Dios un alma sin que esta lo quiera: ¿quién nos separará del amor de Cristo?… En todas las pruebas, somos más que vencedores por Aquel que nos ha amado. Pues tengo la seguridad de que ni la muerte ni la vida, ni los ángeles, ni los principados… ni ninguna otra criatura podrá separarnos del amor de Dios en Jesucristo Nuestro Señor[^83].
 
@@ -228,8 +228,14 @@ La unión confiada con nuestros Huéspedes interiores es, pues, la salvación en
 
 [^ed19]: Santa Gertrudis. N. del E.: Ejercicios espirituales, segundo ejercicio.
 
-[^cita7]: Sal 118.
+[^cita7]: Sal 118, 33-34, 36-37 y 40.
 
-[^cita6]: M. Olier.
+[^cita6]: M. Olier. N. del E.: Jean-Jacques Olier, La Journée chrétienne, final de la primera parte.
 
-[^cita5]: Sal 26 y 61.
+[^cita5]: Sal 26, 5-6; 61, 6-7.
+
+[^fx7]: N. del E.: Libro de las visiones e instrucciones, cap. 62 (numeración de la traducción francesa de Ernest Hello).
+
+[^fx8]: N. del E.: Raimundo de Capua, Vida de santa Catalina de Siena, I, cap. 10.
+
+[^fx9]: N. del E.: santa Teresa de Jesús, Libro de la vida, cap. 25, n. 22.

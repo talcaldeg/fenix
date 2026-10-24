@@ -30,7 +30,7 @@ El dolor mismo debe convertirse y resolverse en alegría. El alma santa de Crist
 
 Nuestra alma puede estar así desolada y gozosa: desolada en esa parte inferior que se aproxima a los sentidos; gozosa en esas cumbres que gobierna solo la voluntad. Aun en las horas más duras, el dolor no habita solo en nosotros: tenemos también a Aquel que consuela: *Rogaré al Padre y les dará otro Consolador para que permanezca siempre con ustedes. Es el Espíritu de verdad… Estará en ustedes*[^120].
 
-Permanezcamos en la alegría: será permanecer en el Espíritu Santo. Recordemos que la Comunión nos ha sumergido en Aquel a quien santa Catalina de Siena gustaba llamar el océano de la paz: «Oh Dios eterno, exclamaba ella, Tú eres un océano tranquilo donde viven y se alimentan las almas. Ellas hallan allí su reposo en la unión del amor».
+Permanezcamos en la alegría: será permanecer en el Espíritu Santo. Recordemos que la Comunión nos ha sumergido en Aquel a quien santa Catalina de Siena gustaba llamar el océano de la paz: «Oh Dios eterno, exclamaba ella, Tú eres un océano tranquilo donde viven y se alimentan las almas. Ellas hallan allí su reposo en la unión del amor[^fx12]».
 
 La alegría es un culto que debemos rendir a Dios. Es el barómetro del alma: su grado indica el grado del amor. En la prueba y la persecución perpetuas, la Iglesia, tipo sublime del alma, no deja de alegrarse. Su liturgia es una fiesta que renace cada día. Cuenta sus días por sus fiestas; camina en el dolor, pero con los ojos levantados al cielo, cantando las perfecciones y el amor del Esposo. Vive en alegría: alegría libre, fuerte y serena, fruto del amor.
 
@@ -66,13 +66,13 @@ El deseo aparta los obstáculos; abre la puerta del alma para la cual se realiza
 
 El deseo dilata el alma y la adapta al objeto deseado: la ajusta, por así decir, a Dios. El Padre celestial se dignó asegurárselo a santa Catalina de Siena: «Ninguna virtud puede merecerte la vida eterna si me sirves de manera finita, pues yo, el Dios infinito, quiero ser servido de manera infinita: ahora bien, tú no tienes de infinito sino el deseo y el impulso de tu alma». Pero, decía además, «este deseo, como todas las demás virtudes, solo vale por Cristo crucificado, mi Hijo único[^123]».
 
-Será muy bueno excitar en el alma el deseo de la Comunión. «El perfecto ejercicio del amor, dice Bossuet, es desear sin cesar recibir a Jesucristo. La mesa está preparada: faltan los invitados; pero, oh Jesús, Tú los llamas».
+Será muy bueno excitar en el alma el deseo de la Comunión. «El perfecto ejercicio del amor, dice Bossuet, es desear sin cesar recibir a Jesucristo. La mesa está preparada: faltan los invitados; pero, oh Jesús, Tú los llamas[^fx13]».
 
 La vida de muchos santos fue una larga y ardiente aspiración de su alma hacia la unión eucarística. San Ignacio Mártir escribía a los romanos: «No tengo gusto por un alimento corruptible, ni por los placeres de este mundo. Quiero el pan de Dios, que es la Carne de Jesucristo, del linaje de David. Quiero como bebida su Sangre, que es caridad incorruptible[^124]».
 
-Santa Catalina de Siena suspiraba noche y día por la Comunión. Apenas llegaba el alba, corría a la iglesia, literalmente llevada por su deseo, cuyo ardor devolvía el movimiento a su cuerpo desvencijado. «Padre mío, tengo mucha hambre», decía a menudo al beato Raimundo para expresarle su necesidad de comulgar: «Por amor de Dios, dé a mi alma su alimento».
+Santa Catalina de Siena suspiraba noche y día por la Comunión. Apenas llegaba el alba, corría a la iglesia, literalmente llevada por su deseo, cuyo ardor devolvía el movimiento a su cuerpo desvencijado. «Padre mío, tengo mucha hambre», decía a menudo al beato Raimundo para expresarle su necesidad de comulgar: «Por amor de Dios, dé a mi alma su alimento[^fx14]».
 
-Santa Margarita María decía: «Mi corazón se siente consumido por el deseo de amar a mi Dios, y eso me da un deseo insaciable de la Comunión y del sufrimiento… Un día de Viernes Santo, cuenta, hallándome en un deseo ardiente de recibir a Nuestro Señor, le dije con muchas lágrimas: “Amable Jesús, quiero consumirme deseándote y, no pudiendo poseerte en este día, no cesaré de desearte”. Vino a consolarme con su dulce presencia y me dijo: “Hija mía, tu deseo ha penetrado tan adentro en mi Corazón que, si no hubiera instituido este sacramento de amor, lo haría ahora para hacerme tu alimento. Me complazco tanto en ser allí deseado que, cuantas veces el corazón forma este deseo, tantas veces lo miro con amor para atraerlo hacia mí”».
+Santa Margarita María decía: «Mi corazón se siente consumido por el deseo de amar a mi Dios, y eso me da un deseo insaciable de la Comunión y del sufrimiento… Un día de Viernes Santo, cuenta, hallándome en un deseo ardiente de recibir a Nuestro Señor, le dije con muchas lágrimas: “Amable Jesús, quiero consumirme deseándote y, no pudiendo poseerte en este día, no cesaré de desearte”. Vino a consolarme con su dulce presencia y me dijo: “Hija mía, tu deseo ha penetrado tan adentro en mi Corazón que, si no hubiera instituido este sacramento de amor, lo haría ahora para hacerme tu alimento. Me complazco tanto en ser allí deseado que, cuantas veces el corazón forma este deseo, tantas veces lo miro con amor para atraerlo hacia mí”[^fy3]».
 
 En el tabernáculo, Jesús parece estar, como antaño bajo los pórticos del Templo, de pie y clamando a la muchedumbre: ¡Si alguien tiene sed, que venga a mí y beba[^125]! o renovando la invitación de la divina Sabiduría: Vengan a mí, todos los que me desean, y sáciense[^126].
 
@@ -112,13 +112,13 @@ Es el mismo amor el que lo hizo pan y lo retiene en el secreto del tabernáculo.
 
 El que comulga procurará vivir como Jesús: primero amará a Dios. Lo amará como lo exige el primer mandamiento, que contiene todos los demás: con todo su corazón, con todo su espíritu, con todas sus fuerzas. Sin duda, no es posible a la flaqueza humana hacer continuamente actos formales de amor. Al menos, con la gracia de Dios, podemos multiplicarlos de tal modo que gobiernen muy de cerca los actos de las demás virtudes y ejerzan sobre nuestra vida una influencia cada vez más estrecha, cada vez más penetrante.
 
-¡Es tan fácil hacer un acto de caridad! Basta un impulso del corazón. La más humilde acción, el menor sacrificio, pueden transformarse en amor. «Todo lo que se hace por amor es amor, dice san Francisco de Sales; el trabajo, la fatiga y la muerte son amor cuando se los sufre por amor». Y sin embargo, dice el padre Lacordaire, «el amor de Dios es el acto supremo del alma y la obra maestra del hombre». «El más pequeño acto de puro amor, añade san Juan de la Cruz, vale más a los ojos de Dios y es más provechoso para la Iglesia que todas las demás obras juntas».
+¡Es tan fácil hacer un acto de caridad! Basta un impulso del corazón. La más humilde acción, el menor sacrificio, pueden transformarse en amor. «Todo lo que se hace por amor es amor, dice san Francisco de Sales; el trabajo, la fatiga y la muerte son amor cuando se los sufre por amor[^fx15]». Y sin embargo, dice el padre Lacordaire, «el amor de Dios es el acto supremo del alma y la obra maestra del hombre[^fy4]». «El más pequeño acto de puro amor, añade san Juan de la Cruz, vale más a los ojos de Dios y es más provechoso para la Iglesia que todas las demás obras juntas[^fx17]».
 
-«No hay nada en el mundo tan real y tan sustancial como el amor de Dios. En comparación con esta gran realidad, todo lo demás no es sino pura quimera; todo lo demás carece de sentido y pronto se desvanece. Un acto de amor es una obra completa: sus efectos son más poderosos, sus consecuencias más importantes que los efectos y las consecuencias de cualquier otro acto. La muerte por sí misma no podría igualar su grandeza. Y sin embargo, ¿qué hace falta para constituir un acto de amor? Una mirada del corazón que, con la rapidez del relámpago, penetra en los cielos. Tales actos pueden multiplicarse más allá de todo cálculo, e incluso en medio de las ocupaciones en apariencia más propias para distraer. Lejos de debilitarse, extraen de la repetición una nueva intensidad, una potencia desconocida. Sin embargo, no exigen ningún esfuerzo; es incluso un placer para nosotros formularlos». (Faber.)
+«No hay nada en el mundo tan real y tan sustancial como el amor de Dios. En comparación con esta gran realidad, todo lo demás no es sino pura quimera; todo lo demás carece de sentido y pronto se desvanece. Un acto de amor es una obra completa: sus efectos son más poderosos, sus consecuencias más importantes que los efectos y las consecuencias de cualquier otro acto. La muerte por sí misma no podría igualar su grandeza. Y sin embargo, ¿qué hace falta para constituir un acto de amor? Una mirada del corazón que, con la rapidez del relámpago, penetra en los cielos. Tales actos pueden multiplicarse más allá de todo cálculo, e incluso en medio de las ocupaciones en apariencia más propias para distraer. Lejos de debilitarse, extraen de la repetición una nueva intensidad, una potencia desconocida. Sin embargo, no exigen ningún esfuerzo; es incluso un placer para nosotros formularlos». (Faber.)[^fx18]
 
-«El que desea ardientemente el amor, dice san Francisco de Sales, amará pronto con ardor». No cesemos, pues, jamás de amar. «¡Ah! Si tuviera mil corazones para amarlo, exclamaba santa Margarita María, ¡no sería demasiado!». San Pablo nos dice que el amor es no solo *el fin de los mandamientos, sino también la plenitud de la ley*[^133]. Se entiende, pues así como el amor entregó Dios a la criatura, entrega la criatura a Dios y consuma su unión. El amor los hace uno: después de haberlos arrojado el uno en el otro, el amor los hace permanecer allí: *El que permanece en el amor permanece en Dios, y Dios permanece en él*[^134].
+«El que desea ardientemente el amor, dice san Francisco de Sales, amará pronto con ardor[^fx19]». No cesemos, pues, jamás de amar. «¡Ah! Si tuviera mil corazones para amarlo, exclamaba santa Margarita María, ¡no sería demasiado![^fy5]». San Pablo nos dice que el amor es no solo *el fin de los mandamientos, sino también la plenitud de la ley*[^133]. Se entiende, pues así como el amor entregó Dios a la criatura, entrega la criatura a Dios y consuma su unión. El amor los hace uno: después de haberlos arrojado el uno en el otro, el amor los hace permanecer allí: *El que permanece en el amor permanece en Dios, y Dios permanece en él*[^134].
 
-«Es de la mayor importancia, dice san Juan de la Cruz, que el alma se ejercite mucho en el amor, para que, consumándose rápidamente, no se detenga aquí abajo, sino que llegue pronto a ver a su Dios cara a cara».
+«Es de la mayor importancia, dice san Juan de la Cruz, que el alma se ejercite mucho en el amor, para que, consumándose rápidamente, no se detenga aquí abajo, sino que llegue pronto a ver a su Dios cara a cara[^fx21]».
 
 «Es una gran cosa, dice también, el ejercicio asiduo del santo amor. El alma llegada a la perfección y a la consumación del amor no puede permanecer mucho tiempo, ya en esta vida, ya en la otra, sin ver el rostro de Dios[^135]».
 
@@ -222,8 +222,30 @@ Oh cristiano, *¡si supieras el don de Dios!*
 
 [^ed21]: Santa Gertrudis. N. del E.: Ejercicios espirituales, sexto ejercicio.
 
-[^cita12]: Salmos 41 y 62.
+[^cita12]: Sal 41, 2-3; 62, 2-3.
 
 [^cita11]: Imitación, libro III, cap. V.
 
-[^cita10]: Beato Alberto Magno.
+[^cita10]: Beato Alberto Magno. N. del E.: la oración es de Luis de Blois (Blosio), Institución espiritual, cap. XI.
+
+[^fx12]: N. del E.: santa Catalina de Siena, Oraciones, n.º 2 de las ediciones modernas.
+
+[^fx13]: N. del E.: Bossuet, Meditaciones sobre el Evangelio, Sermón de la montaña, día 25.
+
+[^fx14]: N. del E.: Raimundo de Capua, Vida de santa Catalina de Siena, II, cap. 11.
+
+[^fx15]: N. del E.: lo recoge santa Juana Francisca de Chantal en su deposición para la canonización de san Francisco de Sales, art. 37.
+
+[^fx17]: N. del E.: san Juan de la Cruz, Cántico espiritual, canción 29, n. 2.
+
+[^fx18]: N. del E.: Frederick William Faber, Todo por Jesús, cap. VIII.
+
+[^fx19]: N. del E.: san Francisco de Sales, Tratado del amor de Dios, libro XII, cap. 2.
+
+[^fx21]: N. del E.: san Juan de la Cruz, Llama de amor viva, canción 1, n. 34.
+
+[^fy3]: N. del E.: la primera frase es de su Autobiografía, n.º 12; el relato del Viernes Santo, de su carta a la madre de Saumaise de comienzos de abril de 1687.
+
+[^fy4]: N. del E.: Lacordaire, Conferencias de Notre-Dame de París, «De lo que puede la vida moral para llevar al hombre a su fin», donde dice «el amor es el acto supremo del alma y la obra maestra del hombre».
+
+[^fy5]: N. del E.: cf. su carta a la madre de Saumaise de marzo de 1686: «quisiera tener mil cuerpos para sufrir y millones de corazones para amarlo».

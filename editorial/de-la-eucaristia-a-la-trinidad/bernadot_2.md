@@ -2,7 +2,7 @@
 
 Pero esta unión eucarística, ¿dura? La Comunión es un acto, y todo acto es pasajero. ¿Estamos, pues, privados de la presencia del Señor en cuanto las santas especies se consumen, y esta inefable unión sacramental no es más que de unos pocos minutos?
 
-Sin embargo, la Iglesia nos lleva a desear su permanencia cuando pone en nuestros labios, en el momento de la Comunión, esta admirable oración: «Señor Jesucristo, Hijo del Dios vivo, que, por voluntad del Padre y con la cooperación del Espíritu Santo, moriste para dar la vida al mundo, líbrame de todas mis iniquidades y de los males de toda clase por tu santísimo Cuerpo y tu santísima Sangre. Haz que me adhiera siempre a tus voluntades sobre mí y no permitas que jamás me separe de Ti, oh Dios que, con el mismo Dios Padre y el Espíritu Santo, vives y reinas por los siglos de los siglos».
+Sin embargo, la Iglesia nos lleva a desear su permanencia cuando pone en nuestros labios, en el momento de la Comunión, esta admirable oración: «Señor Jesucristo, Hijo del Dios vivo, que, por voluntad del Padre y con la cooperación del Espíritu Santo, moriste para dar la vida al mundo, líbrame de todas mis iniquidades y de los males de toda clase por tu santísimo Cuerpo y tu santísima Sangre. Haz que me adhiera siempre a tus voluntades sobre mí y no permitas que jamás me separe de Ti, oh Dios que, con el mismo Dios Padre y el Espíritu Santo, vives y reinas por los siglos de los siglos[^fx6]».
 
 *¡Que jamás me vea separado de Ti!* Es la oración de toda alma que ama. Pues el amor quiere lo que dura. Todo don que pasa, por grande que sea, lo deja insatisfecho. El alma que ha comulgado con fervor y ha entrado en la intimidad del misterio eucarístico siente encenderse en ella un hambre insaciable de la Hostia. Aunque la Comunión de cada mañana le trae alegrías arrebatadoras, ya no basta a su deseo: lo que ella anhela es la comunión perpetua, la unión incesante con el misterio eucarístico.
 
@@ -266,8 +266,10 @@ Así podemos decir con san Agustín: «Los santos llevan a Dios; su alma es un c
 
 [^ed16]: Santa Catalina de Siena. N. del E.: Oraciones, n.º 23 de la edición de Gigli, en la fiesta de la Conversión de san Pablo.
 
-[^cita4]: Salmo 62.
+[^cita4]: Sal 62, 2-3 y 9.
 
-[^cita3]: Salmo 22.
+[^cita3]: Sal 22, 2-5.
 
-[^cita2]: Santa Gertrudis.
+[^cita2]: Santa Gertrudis. N. del E.: Ejercicios espirituales, cuarto ejercicio, oración para recibir el yugo de la santa Regla.
+
+[^fx6]: N. del E.: Misal Romano, Ordinario de la Misa, oración del sacerdote antes de la Comunión («Domine Iesu Christe, Fili Dei vivi»).

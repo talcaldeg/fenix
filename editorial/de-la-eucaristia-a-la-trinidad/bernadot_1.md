@@ -72,7 +72,7 @@ En ese momento se establece una unión prodigiosa. Las de la tierra, aun las má
 
 Ciertamente, la vida de Jesús y la nuestra siguen siendo distintas, como su naturaleza y nuestra naturaleza, como su alma y nuestra alma. Se establece sin embargo una incomparable unidad de amor.
 
-Para darnos una idea de esta unificación de Cristo y del hombre[^15], los Padres de la Iglesia recurren a comparaciones encantadoras: «Echen una cera derretida en otra cera, dice san Cirilo de Jerusalén[^cir]: una y otra se penetran totalmente. Así, cuando alguien recibe el Cuerpo y la Sangre del Señor, la unión es tal que Cristo pasa a él y él a Cristo… Tenemos un mismo cuerpo y una misma sangre». San Cipriano añade: «Nuestra unión con Él unifica los afectos y las voluntades».
+Para darnos una idea de esta unificación de Cristo y del hombre[^15], los Padres de la Iglesia recurren a comparaciones encantadoras: «Echen una cera derretida en otra cera, dice san Cirilo de Jerusalén[^cir]: una y otra se penetran totalmente. Así, cuando alguien recibe el Cuerpo y la Sangre del Señor, la unión es tal que Cristo pasa a él y él a Cristo… Tenemos un mismo cuerpo y una misma sangre». San Cipriano añade: «Nuestra unión con Él unifica los afectos y las voluntades[^fy1]».
 
 En efecto, en el momento de la Comunión, Jesús entra de tal modo en nuestro corazón y en nuestra alma que nuestros afectos y nuestros pensamientos pueden llamarse sus afectos y sus pensamientos. Él los tiene primero. Luego nos los comunica según la medida actual de nuestro amor. Si un alma tiene poco amor, Jesús se ve forzado a ceñirse a las angostas dimensiones de esa alma y a restringir sus dones. Pero al que comulga desprendido de las criaturas y de sí mismo y que se entrega sin reserva, al alma pura que se abre toda entera a la influencia de la Hostia, Jesús a cambio se da como solo Dios puede hacerlo. Se establece una circulación de vida, una comunicación de bienes, una unidad de amor que desafía toda expresión humana. El alma, penetrada por Jesús, se vuelve como un suelo fértil que hace germinar flores y frutos. Concibe pensamientos luminosos y forma actos de amor. ¿Son nuestros? Sí, pues nacen de nuestra inteligencia y de nuestro corazón, pero de nuestra inteligencia unida a la inteligencia de Jesús, de nuestro corazón unido a su Corazón, de modo que son suyos tanto como nuestros. Juntos adoramos, juntos amamos y damos gracias, juntos nos entregamos a nuestro Padre de los cielos. Su amor y nuestro amor, su pensamiento y nuestro pensamiento se elevan mezclados el uno con el otro, como dos granos de incienso quemados en el mismo incensario y que no exhalan hacia el Cielo sino un único perfume.
 
@@ -84,7 +84,7 @@ En el momento de la Comunión estamos realmente en posesión de la vida. Tenemos
 
 #### Jesús está en nosotros como hombre
 
-La Comunión derrama, pues, en nosotros la vida actual, celeste y toda glorificada de su Humanidad, de su Corazón y de su alma. En el Cielo los ángeles son inundados de dicha por la irradiación de esa vida. En la tierra, algunos santos han tenido la visión del Cuerpo glorificado de Jesús: «Era una belleza capaz de hacer morir la palabra humana», cuenta la beata Ángela de Foligno, que conservó de su visión «una alegría inmensa, una luz sublime, una delectación indecible y continua, una delectación deslumbrante más allá de todos los deslumbramientos». Pues bien, este Cuerpo glorificado, animado por un Corazón que es un abismo de amor y por un alma inefablemente bella, santa, deslumbrante de luz, inundada de vida, de gracia, de paz y de alegría, santuario y paraíso de Dios, se convierte en nuestro festín.
+La Comunión derrama, pues, en nosotros la vida actual, celeste y toda glorificada de su Humanidad, de su Corazón y de su alma. En el Cielo los ángeles son inundados de dicha por la irradiación de esa vida. En la tierra, algunos santos han tenido la visión del Cuerpo glorificado de Jesús: «Era una belleza capaz de hacer morir la palabra humana[^fx1]», cuenta la beata Ángela de Foligno, que conservó de su visión «una alegría inmensa, una luz sublime, una delectación indecible y continua, una delectación deslumbrante más allá de todos los deslumbramientos[^fx2]». Pues bien, este Cuerpo glorificado, animado por un Corazón que es un abismo de amor y por un alma inefablemente bella, santa, deslumbrante de luz, inundada de vida, de gracia, de paz y de alegría, santuario y paraíso de Dios, se convierte en nuestro festín.
 
 #### Jesús viene a nosotros como Dios
 
@@ -110,7 +110,7 @@ Es el gran misterio, aquel cuya contemplación inunda a los ángeles de gloria, 
 
 Tal es el misterio que nos trae la Comunión.
 
-Es cierto que en todo tiempo *somos templos del Dios vivo*[^22], puesto que «por la gracia, dice santo Tomás, la Trinidad entera es huésped del alma».
+Es cierto que en todo tiempo *somos templos del Dios vivo*[^22], puesto que «por la gracia, dice santo Tomás, la Trinidad entera es huésped del alma[^fx4]».
 
 Sin embargo, lo somos más aún en el momento de la Comunión, porque en ese momento Jesús viene a nosotros como pan de vida, expresamente para comunicar esa vida que recibe del Padre: Quien come de este pan tendrá la vida.
 
@@ -138,7 +138,7 @@ En el Espíritu Santo, oh Padre, me llevas a Jesús. En el Espíritu Santo, oh J
 
 *Padre santo, ruego por todos los que creerán en mí: que sean uno, como Tú, Padre mío, estás en mí y yo en Ti. Ellos también, que sean uno en nosotros… Yo les he dado la gloria que Tú me has dado, para que sean uno como nosotros somos uno; yo en ellos y Tú en mí, que sean consumados en uno y que el mundo conozca… que Tú los has amado como me has amado a mí*[^31].
 
-El Señor decía a la beata Ángela de Foligno: «Si alguien quiere poseerme en su alma, no me sustraeré a él. Si alguien quiere verme, le daré con arrobo la visión de mi rostro. Si alguien quiere hablarme, conversaremos juntos con inmensas alegrías».
+El Señor decía a la beata Ángela de Foligno: «Si alguien quiere poseerme en su alma, no me sustraeré a él. Si alguien quiere verme, le daré con arrobo la visión de mi rostro. Si alguien quiere hablarme, conversaremos juntos con inmensas alegrías[^fx3]».
 
 *
 
@@ -146,7 +146,7 @@ El Señor decía a la beata Ángela de Foligno: «Si alguien quiere poseerme en 
 
 *
 
-Así, lo que santo Tomás escribía de la unión por la gracia puede decirse con mayor razón de la unión eucarística: «Es el comienzo de la bienaventuranza eterna».
+Así, lo que santo Tomás escribía de la unión por la gracia puede decirse con mayor razón de la unión eucarística: «Es el comienzo de la bienaventuranza eterna[^fx5]».
 
 El Señor Jesús nos lo dijo: *El que come este pan tiene la vida eterna*[^32]. Recibiendo al mismo Dios, los bienaventurados en el Cielo y los cristianos en la tierra tienen una misma vida. Es verdad que los elegidos poseen a Dios por la visión, mientras que nosotros lo poseemos en la fe. Pero la Comunión, como la visión, nos lo da inmediatamente, por completo, sin otro intermediario ni otro obstáculo que el de nuestros pecados o nuestra tibieza. Si nuestra fe fuera lo bastante viva para eliminar esa tibieza y hacerle amplio lugar, si nuestro amor tuviera el ardor suficiente para apartar todo obstáculo y preparar a la Hostia la recepción que la purificación del purgatorio prepara a la visión eterna, los efectos serían casi los mismos. Saturados de vida eucarística, los cristianos peregrinos serían transformados en Dios por la Comunión como los elegidos por la gloria.
 
@@ -239,3 +239,15 @@ El Señor Jesús nos lo dijo: *El que come este pan tiene la vida eterna*[^32]. 
 [^cir]: N. del E.: la comparación de la cera es de san Cirilo de Alejandría, Comentario al Evangelio de san Juan, libro IV, sobre Jn 6, 56. La frase final, «Tenemos un mismo cuerpo y una misma sangre», sí es de san Cirilo de Jerusalén, Catequesis mistagógicas, IV, 3.
 
 [^cita1]: San Pablo, Col 1, 12-23.
+
+[^fx1]: N. del E.: Libro de las visiones e instrucciones, cap. 32 (numeración de la traducción francesa de Ernest Hello).
+
+[^fx2]: N. del E.: Libro de las visiones e instrucciones, cap. 36 (numeración de la traducción francesa de Ernest Hello).
+
+[^fx3]: N. del E.: Libro de las visiones e instrucciones, cap. 33 (numeración de la traducción francesa de Ernest Hello).
+
+[^fx4]: N. del E.: cf. santo Tomás de Aquino, Suma teológica, I, q. 43, a. 5.
+
+[^fx5]: N. del E.: cf. santo Tomás de Aquino, Suma teológica, II-II, q. 24, a. 3, ad 2: «la gracia no es otra cosa que un comienzo de la gloria en nosotros».
+
+[^fy1]: N. del E.: el autor no indica la obra y no se ha podido ubicar en los textos consultados.

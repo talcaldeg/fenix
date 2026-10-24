@@ -36,11 +36,11 @@ Porque venía con miras al Calvario, el Espíritu Santo dispuso especialmente su
 
 Mantenerse estrechamente unido a Aquel que tanto sufrió.
 
-Es a la vez lo más fácil y lo más consolador. Recordaremos que somos los miembros de Cristo y que debemos continuar su Pasión, participando primero en los sufrimientos y en las llagas de su divino Cuerpo. Hoy, su gloria tan caramente comprada lo pone en la imposibilidad de sufrir. Pero lo que no puede soportar en su Humanidad personal, quiere soportarlo en «su humanidad de añadidura», en nosotros mismos, y continuar así su Pasión.
+Es a la vez lo más fácil y lo más consolador. Recordaremos que somos los miembros de Cristo y que debemos continuar su Pasión, participando primero en los sufrimientos y en las llagas de su divino Cuerpo. Hoy, su gloria tan caramente comprada lo pone en la imposibilidad de sufrir. Pero lo que no puede soportar en su Humanidad personal, quiere soportarlo en «su humanidad de añadidura[^fx10]», en nosotros mismos, y continuar así su Pasión.
 
 Más aún, ¿no parece que quiere extender hoy la humillación de esa bendita Pasión más allá de los límites que su perfección le impedía franquear en otro tiempo? Pues, si soportó durante su vida mortal sufrimientos que nosotros nunca soportaremos, hay otros que no pudo conocer por experiencia, por ejemplo la enfermedad. Lo que no pudo soportar Él mismo, lo soportará en nosotros, entra en nuestra vida, nos incorpora a sí mismo a fin de que podamos sufrir, no solo por Él, sino verdaderamente con Él y en Él. En verdad podemos decir: *Con Cristo estoy clavado en la cruz*[^89].
 
-Todo sufrimiento bien llevado apresura la obra de Dios en nosotros. Nada santifica más. Acaba nuestra semejanza íntima con Jesús. Realiza la obra maravillosa de que habla san Pablo: *la formación de Cristo en nosotros*[^90]… *Mientras nuestro hombre exterior se va deshaciendo, nuestro hombre interior se renueva de día en día*[^91]. «Cada dolor, dice monseñor Gay, es como un beso que el crucifijo nos da y un nuevo rasgo de semejanza que tenemos con Jesús.»
+Todo sufrimiento bien llevado apresura la obra de Dios en nosotros. Nada santifica más. Acaba nuestra semejanza íntima con Jesús. Realiza la obra maravillosa de que habla san Pablo: *la formación de Cristo en nosotros*[^90]… *Mientras nuestro hombre exterior se va deshaciendo, nuestro hombre interior se renueva de día en día*[^91]. «Cada dolor, dice monseñor Gay, es como un beso que el crucifijo nos da y un nuevo rasgo de semejanza que tenemos con Jesús[^fx11].»
 
 Apoyado en tales certezas, ¿quién no soportaría, no solo con paciencia, sino con santa alegría del alma, las peores pruebas? *Sobreabundo de gozo en mis tribulaciones*, decía san Pablo… *Estoy lleno de gozo en mis sufrimientos, pues completo en mi propia carne lo que falta a la Pasión de Cristo, por su cuerpo, que es la Iglesia*[^92]. Por eso felicitaba a los cristianos a quienes Dios probaba: *Es una gracia que Dios les concede, por consideración a Cristo, no solo creer en Él, sino también sufrir por Él*[^93].
 
@@ -108,7 +108,7 @@ La unión con Cristo Jesús y con su Pasión es más útil que nunca. Por grande
 
 Pero hay que decirse bien que incluso la unión con Jesús, de ordinario tan dulce y tan consoladora, está entonces como helada, muda y dolorosa. El corazón no la siente. Es en la fe donde ella calla. Es en la fe donde el alma debe mantenerse unida y en cierto modo aferrada a Dios. La fe es el único refugio, *el reino inconmovible*[^102] de que habla san Pablo: *Es en la fe donde nos mantenemos en pie.*
 
-Más que nunca, la pobre alma desamparada debe creer en el gran amor con que Dios nos ha amado[^103] y, como Moisés, permanecer inquebrantable en su fe como si viera lo invisible[^104]. Debe creer que nunca Dios la ha amado tanto como en esos momentos en que parece rechazarla, y que nunca ha estado tan presente en ella: «Cuanto más te creas abandonada, decía Nuestro Señor a la beata Ángela de Foligno, más eres amada y estrechada contra Él… Oh amada mía, sabe que en este estado, Dios y tú son más íntimos el uno para el otro que nunca.» Retomemos entonces la palabra de san Juan: *Nosotros, por nuestra parte, creemos en el amor de Dios*[^105].
+Más que nunca, la pobre alma desamparada debe creer en el gran amor con que Dios nos ha amado[^103] y, como Moisés, permanecer inquebrantable en su fe como si viera lo invisible[^104]. Debe creer que nunca Dios la ha amado tanto como en esos momentos en que parece rechazarla, y que nunca ha estado tan presente en ella: «Cuanto más te creas abandonada, decía Nuestro Señor a la beata Ángela de Foligno, más eres amada y estrechada contra Él… Oh amada mía, sabe que en este estado, Dios y tú son más íntimos el uno para el otro que nunca[^fx11b].» Retomemos entonces la palabra de san Juan: *Nosotros, por nuestra parte, creemos en el amor de Dios*[^105].
 
 En estas horas benditas de desolación interior o, por mejor decir, de purificación sobrenatural, se cumplen grandes cosas: el Amor consuma la unión del alma con su Dios, según lo que Él prometió: *En la fe te desposaré con una unión eterna*[^106]. Así, cumplida la obra de purificación, la esposa aparece revestida de pureza, de alegría y de fuerza: *¿Quién es esta que sube del desierto? Va rebosante de delicias y apoyada en su Amado*[^107].
 
@@ -116,7 +116,7 @@ En resumen, cuando está en la prueba, el alma no tiene más que mantenerse estr
 
 El alma sacrificada es un holocausto, una hostia. Que consienta en ello: no solo su holocausto se une al holocausto de Jesús, sino que se funde en el suyo: llega a ser para Dios, con Jesús, un único holocausto gloriosísimo. Toda la Trinidad pone en ella sus complacencias: el Padre, reconociendo en ella los rasgos de su Hijo amado, le derrama su inefable ternura; el Verbo, viéndola proseguir su Pasión redentora, la atrae como a una esposa escogida; el Espíritu Santo ama en ella un instrumento perfecto de su gracia para la santificación de la Iglesia y se hace su inspirador y su gobernante.
 
-No nos quejemos, pues, de sufrir. Vayamos a la cruz con la espontaneidad de Jesús, que se ofreció a sí mismo como una hostia de suave olor[^108]. «Si los celos pudieran penetrar en el reino del amor eterno, dice san Francisco de Sales, los ángeles envidiarían los sufrimientos de un Dios por el hombre y los del hombre por Dios.»
+No nos quejemos, pues, de sufrir. Vayamos a la cruz con la espontaneidad de Jesús, que se ofreció a sí mismo como una hostia de suave olor[^108]. «Si los celos pudieran penetrar en el reino del amor eterno, dice san Francisco de Sales, los ángeles envidiarían los sufrimientos de un Dios por el hombre y los del hombre por Dios[^fy2].»
 
 Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *He sido crucificado con Cristo y, si vivo, ya no soy yo quien vive, es Cristo quien vive en mí. Lo que vivo ahora en la carne, lo vivo en la fe en el Hijo de Dios, que me amó y se entregó a sí mismo por mí*[^109].
 
@@ -170,7 +170,7 @@ Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *
 
 [^94]: 2 Co 4, 8-17.
 
-[^95]: Beata Ángela de Foligno.
+[^95]: Beata Ángela de Foligno. N. del E.: cf. Libro de las visiones e instrucciones, cap. 61 (numeración de la traducción francesa de Ernest Hello).
 
 [^96]: Flp 3, 10.
 
@@ -204,6 +204,14 @@ Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *
 
 [^ed20]: San John Henry Newman. N. del E.: Meditaciones y devociones (Meditations and Devotions), parte III, meditación 5, «El poder de la Cruz», 2.
 
-[^cita9]: Salmos.
+[^cita9]: Sal 107, 3-5 y 13-14; 88, 2.
 
-[^cita8]: Salmos.
+[^cita8]: Sal 102, 1-5 y 17; el verso «¡Dichoso el que confía en el Señor!», cf. Sal 33, 9.
+
+[^fx10]: N. del E.: santa Isabel de la Trinidad, elevación «Oh Dios mío, Trinidad que adoro», del 21 de noviembre de 1904.
+
+[^fx11]: N. del E.: monseñor Charles Gay, De la vida y de las virtudes cristianas consideradas en el estado religioso, t. II, tratado del dolor cristiano.
+
+[^fx11b]: N. del E.: Libro de las visiones e instrucciones, cap. 50 (numeración de la traducción francesa de Ernest Hello).
+
+[^fy2]: N. del E.: el autor no indica la obra y no se ha podido ubicar el pasaje; el índice de las Obras completas de san Francisco de Sales (edición de Béthune) registra la misma idea en el t. VIII, p. 194.

@@ -73,8 +73,12 @@ uno.
    reserva,».
 2. **Citas sin fuente** (Bernadot). Una oración o cita firmada solo con el autor («M. Olier»,
    «Santa Gertrudis») o una nota del autor que dice solo el nombre («Bossuet.») lleva nota al pie
-   «N. del E.» con la obra exacta y su ubicación, verificada en un texto de esa obra. Si no se
-   halla, no se inventa: se deja como está.
+   «N. del E.» con la obra exacta y su ubicación, verificada en un texto de esa obra. Vale para
+   toda cita, también la que va entre comillas dentro del párrafo con solo «dice san X» (Bernadot
+   dejó 33 así; reporte de Tomás del 24-oct). Una conversación seguida (un diálogo, una anécdota)
+   lleva una sola nota al final. Si Bernadot parafrasea, «cf.»; si no se halla, no se inventa: la
+   nota dice «el autor no indica la obra y no se ha podido ubicar en los textos consultados».
+   Antes de dar un libro por listo, ninguna cita «...» ni bloque `> ` queda sin nota.
 3. **Subtítulos que vienen como párrafo** (Bernadot, cap. I). La fuente digital a veces trae un
    subtítulo como párrafo corto («Jésus est en nous comme homme.» / «Jésus vient en nous comme
    Dieu.»). Todo párrafo de una línea se revisa: si anuncia la parte que sigue, va como
