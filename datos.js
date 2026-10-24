@@ -4102,13 +4102,6 @@ window.FENIX = {
     { obra: "Rebelión en la granja", autor: "George Orwell (m. 1950)", via: "esperar", libre: "2041", titular: "libre en Chile desde 2021; en EE.UU. protegido hasta el 31-dic-2040 (publicado en 1945)", contacto: null, fuente: "https://www.delibris.org/es/rebelion-en-la-granja", estado: "en espera" }
   ],
 
-  // Plan de vida: libros para el rato de oración (categoria "oracion") y para la lectura espiritual
-  // (categoria "lectura"), ids de `libros`. Cada sitio muestra solo los de su idioma.
-  plan: {
-    oracion: ["escriva-camino", "escriva-surco", "escriva-forja", "conocerle-y-conocerte", "presencia-de-dios"],
-    lectura: ["marmion-vida-del-alma", "escriva-es-cristo-que-pasa", "escriva-amigos-de-dios", "imitacion-de-cristo", "one-with-jesus", "confesiones", "ortodoxia"]
-  },
-
   // Ids de fichas que se fusionaron en otra: el enlace viejo (libro/<id>/ o #libro/<id>) lleva a la
   // ficha nueva, en la versión del idioma indicado. Leídos y favoritos guardados con el id viejo se conservan.
   alias: {

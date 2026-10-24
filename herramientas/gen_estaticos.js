@@ -597,7 +597,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 ${ORDEN.map(c => { const xs = PAGINAS.filter(l => l.categoria === c); return xs.length ? `## ${TX.es.cat[c]}\n\n${xs.map(linea).join("\n")}\n` : ""; }).filter(Boolean).join("\n")}
 ## Sitio
 
-- [Portada y buscador del catálogo](${SITIO}) - biblioteca completa con filtros por categoría y formato, plan de vida (libros para la oración y la lectura espiritual de cada día), oraciones, formularios para proponer un libro o avisar un error, una invitación a ser editor de un libro (#editores) y la lista de libros que Fénix busca, para prepararlos con un agente de IA (#encuadernadores).
+- [Portada y buscador del catálogo](${SITIO}) - biblioteca completa con filtros por categoría y formato, ediciones propias de la Editorial Fénix, una cita del día, oraciones, formularios para proponer un libro o avisar un error, una invitación a ser editor de un libro (#editores) y la lista de libros que Fénix busca, para prepararlos con un agente de IA (#encuadernadores).
 - [Instrucciones para el agente de IA que prepara un libro para Fénix](https://raw.githubusercontent.com/talcaldeg/fenix/main/editorial/ENCUADERNAR.md) - derechos, criterio moral, vía más barata (Gutenberg, texto limpio, escaneo o traducción) y formato del paquete de entrega.
 - [Mapa del sitio](${SITIO}sitemap.xml)
 `;

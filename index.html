@@ -1218,8 +1218,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .acceso b{font-size:19px; line-height:1.2}
   .acceso span{font:13px/1.35 system-ui,sans-serif; opacity:.88}
   .acceso:hover, .acceso:focus-visible{transform:translateY(-2px)}
-  /* Seis categorías y el plan: el plan ocupa dos columnas y la grilla queda sin hueco (4 + 4 y, en el celular, 2 + 2 + 2 + 2). */
-  .acceso[href="#plan"]{grid-column:span 2}
+  /* Seis categorías y un acceso ancho (Editorial, o Citas si el sitio no tiene ediciones propias): ocupa dos columnas y la grilla queda sin hueco (4 + 4 y, en el celular, 2 + 2 + 2 + 2). */
+  .acceso.ancho{grid-column:span 2}
   .titulo-fila{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap}
   .titulo-fila a{font:600 14px system-ui,sans-serif; text-decoration:none}
   .banda{display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-top:44px}
@@ -1341,8 +1341,6 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .libro.sin-epub .portada, .fila.sin-epub .mini{filter:grayscale(.8); opacity:.5}
   .libro.sin-epub .pie, .fila.sin-epub .tt{color:var(--muted)}
   .libro.sin-epub:hover .portada, .fila.sin-epub:hover .mini{opacity:1; filter:none}
-  /* En el plan de vida no se atenúa nada: Camino, Surco y Forja se leen en línea y son el centro del plan. */
-  #v-plan .fila.sin-epub .mini{opacity:1; filter:none} #v-plan .fila.sin-epub .tt{color:var(--ink)}
   /* En «Recomendados por Fénix» el sello sobra: lo dice el título de la sección y el borde dorado. */
   #selloFenix .etq.sello{display:none}
   /* Mientras carga la miniatura, el color de su categoría (antes teatro, poesía y ensayo caían en el de lectura). */
@@ -1409,7 +1407,6 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
       <a href="#biblioteca" data-i18n="nav.biblioteca">Biblioteca</a>
       <a href="#todos" data-i18n="nav.todos">Todos los libros</a>
       <a href="#editorial" data-i18n="nav.editorial" id="navEditorial">Editorial</a>
-      <a href="#plan" data-i18n="nav.plan">Plan de vida</a>
       <a href="#citas" data-i18n="nav.citas">Citas</a>
       <details class="mas" id="menuMas">
         <summary data-i18n="nav.colaborar">Colaborar</summary>
@@ -1876,21 +1873,10 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     </div>
   </section>
 
-  <!-- PLAN DE VIDA -->
-  <section class="vista" id="v-plan">
+  <!-- ORACIONES: vista sin entrada en el menú; la abre el botón «Rezar la oración» (#oraciones) -->
+  <section class="vista" id="v-oraciones">
     <div class="wrap">
-      <p class="eyebrow" data-i18n="plan.eyebrow">Para tratar a Dios cada día</p>
-      <h2 data-i18n="plan.titulo">Plan de vida</h2>
-      <p class="lede" data-i18n="plan.lede">Un plan de vida son unos pocos momentos fijos para tratar a Dios cada día: un rato de oración personal, unos minutos de lectura espiritual y otras prácticas de piedad. Estos libros ayudan en los dos primeros.</p>
-      <blockquote style="margin:16px 0 26px"><span data-i18n="plan.cita">«En dos palabras: conocerle y conocerte: “¡tratarse!”»</span><cite data-i18n="plan.citaRef">San Josemaría, Camino, 91</cite></blockquote>
-      <h3 data-i18n="plan.oracion">Para la oración</h3>
-      <p class="meta" data-i18n="plan.oracionNota">Para el rato de oración personal: leer un punto o un párrafo despacio y conversar con Dios sobre lo leído.</p>
-      <div class="lista" id="planOracion" role="list" style="margin:12px 0 30px"></div>
-      <h3 data-i18n="plan.lectura">Para la lectura espiritual</h3>
-      <p class="meta" data-i18n="plan.lecturaNota">Para leer unos minutos cada día, con orden, de principio a fin.</p>
-      <div class="lista" id="planLectura" role="list" style="margin:12px 0 30px"></div>
-      <!-- ORACIONES: bloque de Plan de vida; #oraciones abre esta vista y baja hasta aquí -->
-      <h3 id="oraciones" data-i18n="or.titulo">Oraciones</h3>
+      <h2 id="oraciones" data-i18n="or.titulo">Oraciones</h2>
       <div id="listaOraciones" style="margin-top:12px"></div>
     </div>
   </section>
@@ -2097,7 +2083,7 @@ function iniciar(){
       "hero.ver":"Browse the library","hero.buscarPh":"Search for a title or an author","hero.buscarAria":"Search for a book","hero.sinFenix":"Not in Fénix yet.","hero.buscarTodos":"Search all books for “{q}” →",
       "hero.cLibros":"books in the catalogue","hero.cCitas":"hand-picked quotes","hero.cPublicidad":"No ads, no sign-up",
       "hero.imagen":"A phoenix rising from its ashes",
-      "acc.eyebrow":"Explore","acc.plan":"A time of prayer and reading each day","x.libros":"books","x.libro":"book",
+      "acc.eyebrow":"Explore","acc.editorial":"Books we translate and edit","acc.citas":"A sentence from each book","x.libros":"books","x.libro":"book",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
       "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
       "rec.eyebrow":"Our editions","rec.titulo":"Fénix editions","rec.todos":"See our editions →",
@@ -2110,12 +2096,7 @@ function iniciar(){
       "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","pie.instalar":"Install as an app","pie.iphone":"On iPhone, install Fénix with Share › Add to Home Screen","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":" (a review site; not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks» and the fewer the circles, the more caution the reading calls for. Each book's level is explained on its page.",
       "l.libro":"Book","l.datos":"Category · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","x.portada":"Cover","x.dominioPublico":"public domain, Wikimedia Commons","bib.nota":"Read marks and favourites are stored only in this browser.",
       "cat.lectura":"Spiritual reading","cat.oracion":"Prayer","cat.novela":"Novels","cat.teatro":"Drama","cat.poesia":"Poetry","cat.ensayo":"Essays and history","idioma.es":"Spanish","idioma.en":"English","idioma.otro":"Other",
-      "or.titulo":"Prayers","nav.plan":"Plan of life",
-      "plan.eyebrow":"To be with God every day","plan.titulo":"Plan of life",
-      "plan.lede":"A plan of life is a few fixed moments to be with God each day: a time of personal prayer, a few minutes of spiritual reading and other practices of piety. These books help with the first two.",
-      "plan.cita":"«In two words: to know Him and to know yourself: “to be on intimate terms!”»","plan.citaRef":"Saint Josemaría, The Way, 91 (our translation)",
-      "plan.oracion":"For prayer","plan.oracionNota":"For your time of personal prayer: read a point or a paragraph slowly and talk with God about it.",
-      "plan.lectura":"For spiritual reading","plan.lecturaNota":"To read for a few minutes each day, in order, from beginning to end.",
+      "or.titulo":"Prayers",
       "sal.titulo":"Which book would you like to save?","sal.lede":"Fénix exists so that good books are not lost. Tell us which one you would like to see here: we will look for it, check its rights and, if possible, publish it.",
       "err.titulo":"Did you find an error?","err.lede":"A typo, a missing chapter, a file that will not open or a misplaced quote. Thank you for letting us know: the book will be better for the next reader.",
       "don.titulo":"Donate","don.lede":"Fénix is free and ad-free. Your gift helps us digitise, proofread and translate books that would otherwise be lost.","don.boton":"Donate","don.usoTitulo":"How we will use your gift","don.uso1":"To buy our own domain, so that Fénix has an address that is easy to remember and share.","don.uso2":"To obtain original books. Some works we want to translate are not digitised anywhere, and working from the author's own text means buying a printed copy. That happened with De Jaegher's book: since the French original is not online, we had to translate it from the English version.",
@@ -2139,7 +2120,7 @@ function iniciar(){
       "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.masCitas":"Ver {n} citas más","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
       "x.edFenix":"Edición Fénix","x.preparado":"Preparado por","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
       "x.ayuda":"¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.",
-      "acc.plan":"Un rato de oración y de lectura cada día","x.libros":"libros","x.libro":"libro",
+      "acc.editorial":"Libros que traducimos y editamos","acc.citas":"Una frase de cada libro","x.libros":"libros","x.libro":"libro",
       "l.libro":"Libro","l.datos":"Categoría · formato","l.moral":"Valoración moral (Delibris)","x.moral":"Valoración moral","x.sinDelibris":"Sin valoración en Delibris","x.de":"de","x.portada":"Portada","x.dominioPublico":"dominio público, Wikimedia Commons",
       "x.fuente":"Fuente","x.enviando":"Enviando…","x.enviado":"¡Gracias! Recibimos tu mensaje.","x.fallo":"No se pudo enviar. Inténtalo de nuevo en un momento.","enc.pesado":"El .zip pesa más de 6 MB: mándalo por correo a talcaldeg@gmail.com o pega un enlace de Drive.","enc.faltaZip":"Adjunta el .zip o pega el enlace.","x.verIn":"Ver en",
       "todos.cuenta":"{n} libros encontrados","todos.cuenta1":"1 libro encontrado","todos.cuentaAprox":"Cerca de {n} libros","todos.masEd1":"y 1 edición más","todos.masEd":"y {n} ediciones más","todos.vacio":"No encontramos libros. Prueba con una sola palabra del título o con el apellido del autor.","todos.error":"El catálogo no respondió. Inténtalo de nuevo en un momento.","todos.buscando":"Buscando…","todos.edicion":"Edición",
@@ -2363,8 +2344,10 @@ function iniciar(){
       if (!xs.length) return "";
       return `<a class="acceso ${c}" href="#biblioteca" data-cat="${c}"${fondo(conImagen(xs))}><b>${esc(categoria(c))}</b><span>${xs.length} ${esc(t(xs.length === 1 ? "x.libro" : "x.libros"))}</span></a>`;
     });
-    const plan = [...((D.plan || {}).lectura || []), ...((D.plan || {}).oracion || [])].map(porId).filter(l => l && visible(l));
-    cats.push(`<a class="acceso oracion" href="#plan"${fondo(conImagen(plan))}><b>${esc(t("nav.plan"))}</b><span>${esc(t("acc.plan"))}</span></a>`);
+    const propias = ls.filter(l => l.editorial);
+    cats.push(propias.length
+      ? `<a class="acceso oracion ancho" href="#editorial"${fondo(conImagen(propias))}><b>${esc(t("nav.editorial"))}</b><span>${esc(t("acc.editorial"))}</span></a>`
+      : `<a class="acceso oracion ancho" href="#citas"${fondo(conImagen(ls.filter(l => (l.citas || []).length)))}><b>${esc(t("nav.citas"))}</b><span>${esc(t("acc.citas"))}</span></a>`);
     $("#accesos").innerHTML = cats.join("");
   }
   // Un acceso de categoría abre la biblioteca ya filtrada.
@@ -2731,15 +2714,24 @@ function iniciar(){
   }
 
   // ---------- citas ----------
-  // Cita del día: cambia a medianoche (hora del visitante) y recorre todas antes de repetir; el paso
-  // primo con el total evita que dos días seguidos salgan citas del mismo libro.
+  // Cita del día: cambia a medianoche (hora del visitante). Nueve de cada diez días sale de un libro
+  // de la Editorial Fénix y el décimo, del resto; cada grupo se recorre entero antes de repetir,
+  // intercalado por libro (la 1.ª cita de cada libro, luego la 2.ª...) para que dos días seguidos no
+  // salgan del mismo libro.
   function pintarCitaDia(){
-    const cs = citas().filter(({ l }) => tieneEpub(l)), el = $("#citaDia");
-    el.hidden = !cs.length; if (!cs.length) return;
+    const todas = citas().filter(({ l }) => tieneEpub(l)), el = $("#citaDia");
+    el.hidden = !todas.length; if (!todas.length) return;
     const hoy = new Date(), dia = Math.floor(Date.UTC(hoy.getFullYear(), hoy.getMonth(), hoy.getDate()) / 864e5);
-    const mcd = (a, b) => b ? mcd(b, a % b) : a;
-    const paso = [37, 41, 43, 47, 53, 59, 61, 67].find(p => mcd(p, cs.length) === 1) || 1;
-    const { c, l } = cs[(dia * paso) % cs.length];
+    const intercalar = xs => {
+      const g = new Map(); xs.forEach(x => { if (!g.has(x.l)) g.set(x.l, []); g.get(x.l).push(x); });
+      const gs = [...g.values()], r = [];
+      for (let k = 0; r.length < xs.length; k++) gs.forEach(a => { if (a[k]) r.push(a[k]); });
+      return r;
+    };
+    const propias = intercalar(todas.filter(({ l }) => l.editorial)), otras = intercalar(todas.filter(({ l }) => !l.editorial));
+    const deOtras = !propias.length || (otras.length && dia % 10 === 0);
+    const cs = deOtras ? otras : propias, n = deOtras ? Math.floor(dia / 10) : dia - Math.floor(dia / 10);
+    const { c, l } = cs[n % cs.length];
     el.href = rutaLibro(l);
     el.innerHTML = `<p class="eyebrow" style="margin:0">${esc(t("cit.dia"))}</p><p class="txt">${esc(c)}</p>
       <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline"><span class="de">${esc(l.autor)}, <i>${esc(l.titulo)}</i></span><span class="ir">${esc(t("cit.verLibro"))}</span></div>`;
@@ -2796,15 +2788,6 @@ function iniciar(){
     const b = e.target.closest("[data-buscado]");
     if (b) copiar(promptEnc(buscadosVisibles()[+b.dataset.buscado]), b);
   });
-
-  // ---------- plan de vida ----------
-  function pintarPlan(){
-    const plan = D.plan || {};
-    [["#planOracion", plan.oracion], ["#planLectura", plan.lectura]].forEach(([sel, ids]) => {
-      const lista = (ids || []).map(porId).filter(l => l && visible(l));
-      $(sel).innerHTML = lista.length ? cabecera() + lista.map(fila).join("") : "";
-    });
-  }
 
   // ---------- formularios ----------
   // Buscador de libros del formulario de errores: filtra por título o autor sin importar tildes.
@@ -2887,7 +2870,7 @@ function iniciar(){
   // Las vistas van por #hash; la ficha de un libro, por la ruta de su página estática (libro/<id>/ o
   // libro/<id>/<idioma>/, ver rutaLibro) puesta con history.pushState: lo que se copia de la barra y se
   // pega en WhatsApp trae la vista previa del libro, y Atrás cierra la ficha.
-  const VISTAS = ["inicio","biblioteca","todos","editorial","plan","citas","salvar","error","dona","contacto"];
+  const VISTAS = ["inicio","biblioteca","todos","editorial","oraciones","citas","salvar","error","dona","contacto"];
   let ultimaVista = null;
   const RAIZ = new URL(document.baseURI).pathname;
   const esRaiz = p => p === RAIZ || p === RAIZ + "index.html";
@@ -2934,14 +2917,8 @@ function iniciar(){
       $("#menuMas").classList.toggle("on", true);
       return;
     }
-    if (h === "oraciones"){
-      // Al abrir el enlace directo, las portadas de arriba cargan después y el navegador repone el
-      // scroll: se baja otra vez al terminar la carga.
-      const bajar = () => $("#oraciones").scrollIntoView();
-      mostrar("plan"); setTimeout(bajar, 0);
-      if (document.readyState !== "complete") window.addEventListener("load", () => setTimeout(bajar, 0), { once: true });
-      return;
-    }
+    // Enlace viejo #plan (la vista Plan de vida se retiró el 24-oct-2026): lleva a la portada.
+    if (h === "plan"){ history.replaceState(null, "", "#inicio"); urlVista = location.href; h = "inicio"; }
     // Cerrar una ficha devuelve a la misma vista: solo se sube al principio si la vista cambia.
     const v = VISTAS.includes(h) ? h : "inicio", cambia = v !== ultimaVista;
     mostrar(v);
@@ -2969,7 +2946,7 @@ function iniciar(){
   // miles de elementos y bajaba las imágenes de vistas que nadie abrió.
   const PINTORES = {
     inicio: [pintarInicio, pintarRecomendados, pintarCitaDia], biblioteca: [pintarCatalogo], todos: [pintarTodos],
-    editorial: [pintarEditorial, pintarBuscados], plan: [pintarPlan, pintarOraciones], citas: [pintarCitas], error: [llenarSelectLibros]
+    editorial: [pintarEditorial, pintarBuscados], oraciones: [pintarOraciones], citas: [pintarCitas], error: [llenarSelectLibros]
   };
   let pintadas = new Set();
   function pintarVista(v){ if (pintadas.has(v)) return; pintadas.add(v); (PINTORES[v] || []).forEach(f => f()); }

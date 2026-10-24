@@ -33,10 +33,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   700 px en `muestras/img/<archivo>/`, con `loading="lazy"`: solo se bajan al llegar a ellas.
 - **Regla fija del menú: máximo 6 entradas de primer nivel, contando Colaborar.** Una sección
   nueva entra en una vista que ya existe o en el submenú, nunca como entrada suelta. Inicio no
-  va en el menú (lo lleva la marca) y Oraciones es un bloque de Plan de vida (`#oraciones` abre
-  esa vista y baja hasta él). `gen_estaticos.js` no genera nada si el menú pasa de 6.
-- Plan de vida (`plan` de `datos.js`): «Para la oración» solo con fichas de categoría `oracion`
-  y «Para la lectura espiritual» solo con `lectura`, para que la sección y la etiqueta coincidan.
+  va en el menú (lo lleva la marca) y Oraciones es una vista sin entrada en el menú (la abre el
+  botón «Rezar la oración», `#oraciones`). `gen_estaticos.js` no genera nada si el menú pasa de 6.
+  Plan de vida se retiró el 24-oct-2026; el enlace viejo `#plan` lleva a la portada.
+- Cita del día (portada): nueve de cada diez días sale de un libro con `editorial` (Editorial
+  Fénix) y el décimo, del resto; si el sitio no tiene ediciones propias, de todas.
 - Todo libro lleva `imagen`. escriva.org no publica portadas, así que las obras de san Josemaría
   llevan un cuadro de dominio público como las demás.
 - `datos.js`: catálogo y oraciones. Un libro nuevo es una ficha más; sus campos están

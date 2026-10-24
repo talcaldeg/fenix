@@ -22,7 +22,7 @@ import threading
 
 # Ventanas reales: notebook con barra de favoritos (1366x600, 1536x650), escritorio y celular.
 VENTANAS = [(1366, 600), (1536, 650), (1280, 720), (1920, 950), (1024, 600), (390, 844), (360, 740)]
-VISTAS = ["inicio", "biblioteca", "todos", "editorial", "plan", "citas", "salvar", "dona", "contacto"]
+VISTAS = ["inicio", "biblioteca", "todos", "editorial", "oraciones", "citas", "salvar", "dona", "contacto"]
 LIBRO = "libro/one-with-jesus/"
 ALTO_BARRA = 80  # px: más que esto es que el menú se partió en dos líneas
 
@@ -68,8 +68,15 @@ def revisar(raiz, capturas=None):
                     const q = s => document.querySelector(s);
                     return {cifras: q('.hero .cifras').getBoundingClientRect().bottom,
                             barra: q('header').getBoundingClientRect().height,
-                            numeros: [...document.querySelectorAll('.hero .cifras b')].map(b => b.textContent.trim())};
+                            numeros: [...document.querySelectorAll('.hero .cifras b')].map(b => b.textContent.trim()),
+                            celdas: [...document.querySelectorAll('#accesos .acceso')].reduce((n, a) => n + (a.classList.contains('ancho') ? 2 : 1), 0),
+                            columnas: getComputedStyle(q('#accesos')).gridTemplateColumns.split(' ').length,
+                            citaDia: !q('#citaDia').hidden && q('#citaDia').textContent.trim().length > 0};
                 }""")
+                if r["celdas"] % r["columnas"]:
+                    fallas.append(f"{donde}: la grilla de accesos queda con hueco ({r['celdas']} celdas en {r['columnas']} columnas)")
+                if not r["citaDia"]:
+                    fallas.append(f"{donde}: la cita del día no se ve")
                 if r["cifras"] > h:
                     fallas.append(f"{donde}: las cifras del hero quedan bajo la primera pantalla "
                                   f"(terminan en {round(r['cifras'])}px, la ventana mide {h}px)")
