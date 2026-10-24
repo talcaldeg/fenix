@@ -91,7 +91,10 @@ class Imagenes:
             self.dir.mkdir(parents=True, exist_ok=True)
             im.save(self.dir / nombre, "WEBP", quality=80, method=6)
             url = f"{RAIZ_IMG}muestras/img/{self.dir.name}/{nombre}"
-            self.hechas[ruta] = (f'<img src="{html.escape(url)}" alt="{html.escape(el.get("alt") or "")}" '
+            # El ancho relativo a la caja de texto (style="width: N%" de md_a_epub) pasa tal cual.
+            ancho = re.search(r"width:\s*(\d+%)", el.get("style") or "")
+            ancho = f' style="width:{ancho.group(1)}"' if ancho else ""
+            self.hechas[ruta] = (f'<img src="{html.escape(url)}"{ancho} alt="{html.escape(el.get("alt") or "")}" '
                                  f'width="{im.width}" height="{im.height}" loading="lazy" decoding="async">')
         return self.hechas[ruta]
 

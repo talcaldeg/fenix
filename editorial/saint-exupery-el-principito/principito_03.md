@@ -6,21 +6,21 @@ Eso no podía asombrarme mucho. Sabía bien que, aparte de los planetas grandes 
 
 Tengo serias razones para creer que el planeta del que venía el principito es el asteroide B 612.
 
-![](dibujos/dibujo10.png)
+![](dibujos/dibujo10.png){width=100%}
 
 Este asteroide solo ha sido divisado una vez con el telescopio, en 1909, por un astrónomo turco.
 
-![](dibujos/dibujo11.png)
+![](dibujos/dibujo11.png){width=75%}
 
 El astrónomo hizo entonces una gran demostración de su descubrimiento en un Congreso Internacional de Astronomía.
 
 Pero nadie le creyó por culpa de su traje. Así son las personas mayores.
 
-![](dibujos/dibujo12.png)
+![](dibujos/dibujo12.png){width=67%}
 
 Por suerte para la reputación del asteroide B 612, un dictador turco obligó a su pueblo, bajo pena de muerte, a vestirse a la europea. El astrónomo repitió su demostración en 1920, con un traje muy elegante. Y esta vez todo el mundo le dio la razón.
 
-![](dibujos/dibujo13.png)
+![](dibujos/dibujo13.png){width=73%}
 
 Si les he contado estos detalles sobre el asteroide B 612 y si les he confiado su número, es por las personas mayores. A las personas mayores les gustan las cifras. Cuando ustedes les hablan de un nuevo amigo, nunca les preguntan por lo esencial. Nunca les dicen: «¿Cómo es su voz? ¿Cuáles son sus juegos preferidos? ¿Colecciona mariposas?». Les preguntan: «¿Cuántos años tiene? ¿Cuántos hermanos tiene? ¿Cuánto pesa? ¿Cuánto gana su padre?». Solo entonces creen conocerlo. Si ustedes les dicen a las personas mayores: «He visto una casa preciosa de ladrillos rosados, con geranios en las ventanas y palomas en el techo...», no logran imaginarse esa casa. Hay que decirles: «He visto una casa de cien mil francos». Entonces exclaman: «¡Qué bonita es!».
 

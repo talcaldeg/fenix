@@ -2,7 +2,7 @@
 
 El segundo planeta estaba habitado por un vanidoso:
 
-![](dibujos/dibujo27.png)
+![](dibujos/dibujo27.png){width=70%}
 
 «¡Ah! ¡Ah! ¡Aquí viene a visitarme un admirador!», exclamó de lejos el vanidoso apenas vio al principito.
 

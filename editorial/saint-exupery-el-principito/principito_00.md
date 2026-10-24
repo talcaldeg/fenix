@@ -12,13 +12,13 @@ CUANDO ERA NIÑO
 
 Cuando yo tenía seis años vi una vez una imagen magnífica en un libro sobre la selva virgen que se llamaba *Historias vividas*. Mostraba una serpiente boa que se tragaba a una fiera. Esta es la copia del dibujo.
 
-![](dibujos/dibujo01.png)
+![](dibujos/dibujo01.png){width=84%}
 
 En el libro decía: «Las serpientes boas se tragan a su presa entera, sin masticarla. Después ya no pueden moverse y duermen durante los seis meses que dura su digestión».
 
 Me puse entonces a pensar mucho en las aventuras de la jungla y, a mi vez, logré trazar con un lápiz de color mi primer dibujo. Mi dibujo número 1. Era así:
 
-![](dibujos/dibujo02.png)
+![](dibujos/dibujo02.png){width=65%}
 
 Les mostré mi obra maestra a las personas mayores y les pregunté si mi dibujo les daba miedo.
 
@@ -26,7 +26,7 @@ Me contestaron: «¿Por qué habría de dar miedo un sombrero?».
 
 Mi dibujo no era un sombrero. Era una serpiente boa que digería un elefante. Dibujé entonces el interior de la serpiente boa, para que las personas mayores pudieran entender. Siempre necesitan explicaciones. Mi dibujo número 2 era así:
 
-![](dibujos/dibujo03.png)
+![](dibujos/dibujo03.png){width=66%}
 
 Las personas mayores me aconsejaron dejar a un lado los dibujos de serpientes boas abiertas o cerradas y ocuparme más bien de la geografía, la historia, el cálculo y la gramática. Así fue como abandoné, a los seis años, una magnífica carrera de pintor. Me había desanimado el fracaso de mi dibujo número 1 y de mi dibujo número 2. Las personas mayores nunca entienden nada por sí solas, y es cansador para los niños tener que darles explicaciones una y otra vez.
 

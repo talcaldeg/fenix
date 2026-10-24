@@ -10,7 +10,7 @@ El principito atravesó el desierto y no encontró más que una flor. Una flor d
 
 La flor, un día, había visto pasar una caravana:
 
-![](dibujos/dibujo35.png)
+![](dibujos/dibujo35.png){width=100%}
 
 «¿Los hombres? Existen, creo, seis o siete. Los divisé hace años. Pero nunca se sabe dónde encontrarlos. El viento los lleva de un lado a otro. Les faltan raíces, y eso les molesta mucho».
 

@@ -12,7 +12,7 @@ La primera noche me dormí, pues, sobre la arena, a mil millas de cualquier tier
 
 Me puse de pie de un salto, como si me hubiera caído un rayo. Me froté bien los ojos. Miré bien. Y vi a un hombrecito del todo extraordinario que me observaba con seriedad. Este es el mejor retrato que, más tarde, logré hacer de él. Pero mi dibujo, claro está, es mucho menos encantador que el modelo. No es culpa mía. Las personas mayores me habían desanimado de mi carrera de pintor a los seis años, y no había aprendido a dibujar nada, salvo boas cerradas y boas abiertas.
 
-![](dibujos/dibujo04.png)
+![](dibujos/dibujo04.png){width=91%}
 
 Miré, pues, aquella aparición con los ojos redondos de asombro. No olviden que me encontraba a mil millas de cualquier región habitada. Y sin embargo mi hombrecito no parecía ni perdido, ni muerto de cansancio, ni muerto de hambre, ni muerto de sed, ni muerto de miedo. No tenía en absoluto el aspecto de un niño perdido en medio del desierto, a mil millas de cualquier región habitada. Cuando por fin logré hablar, le dije:
 
@@ -34,13 +34,13 @@ Entonces dibujé.
 
 Miró con atención, y luego:
 
-![](dibujos/dibujo05.png)
+![](dibujos/dibujo05.png){width=34%}
 
 «¡No! Este ya está muy enfermo. Hazme otro».
 
 Dibujé:
 
-![](dibujos/dibujo06.png)
+![](dibujos/dibujo06.png){width=27%}
 
 Mi amigo sonrió con amabilidad, con indulgencia:
 
@@ -48,7 +48,7 @@ Mi amigo sonrió con amabilidad, con indulgencia:
 
 Rehíce, pues, una vez más mi dibujo, pero lo rechazó, como los anteriores:
 
-![](dibujos/dibujo07.png)
+![](dibujos/dibujo07.png){width=28%}
 
 «Este es demasiado viejo. Quiero un cordero que viva mucho tiempo».
 
@@ -58,7 +58,7 @@ Y le solté:
 
 «Esta es la caja. El cordero que quieres está adentro».
 
-![](dibujos/dibujo08.png)
+![](dibujos/dibujo08.png){width=47%}
 
 Pero me sorprendió mucho ver cómo se iluminaba la cara de mi joven juez:
 

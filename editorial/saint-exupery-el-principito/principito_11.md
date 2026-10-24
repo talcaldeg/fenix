@@ -2,7 +2,7 @@
 
 El planeta siguiente estaba habitado por un bebedor. Esta visita fue muy corta, pero sumió al principito en una gran melancolía:
 
-![](dibujos/dibujo28.png)
+![](dibujos/dibujo28.png){width=100%}
 
 «¿Qué haces ahí?», le dijo al bebedor, al que encontró sentado en silencio frente a una colección de botellas vacías y una colección de botellas llenas.
 

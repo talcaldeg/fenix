@@ -2,13 +2,13 @@
 
 El cuarto planeta era el del hombre de negocios. Este hombre estaba tan ocupado que ni siquiera levantó la cabeza cuando llegó el principito.
 
-![](dibujos/dibujo29.png)
+![](dibujos/dibujo29.png){width=100%}
 
 «Buenos días», le dijo el principito. «Su cigarrillo está apagado».
 
 «Tres y dos son cinco. Cinco y siete, doce. Doce y tres, quince. Buenos días. Quince y siete, veintidós. Veintidós y seis, veintiocho. No tengo tiempo de volver a encenderlo. Veintiséis y cinco, treinta y uno. ¡Uf! Esto da, entonces, quinientos un millones seiscientos veintidós mil setecientos treinta y uno».
 
-![](dibujos/dibujo30.png)
+![](dibujos/dibujo30.png){width=100%}
 
 «¿Quinientos millones de qué?».
 

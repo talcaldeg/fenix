@@ -16,6 +16,6 @@ El principito subió a una montaña alta. Las únicas montañas que había conoc
 
 «¡Qué planeta tan raro!», pensó entonces. «Es todo seco, todo puntiagudo y todo salado.
 
-![](dibujos/dibujo36.png)
+![](dibujos/dibujo36.png){width=96%}
 
 Y a los hombres les falta imaginación. Repiten lo que se les dice... En mi casa tenía una flor: siempre hablaba primero...».

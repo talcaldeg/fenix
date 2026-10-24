@@ -1,6 +1,6 @@
 ## III
 
-![](dibujos/dibujo09.png)
+![](dibujos/dibujo09.png){width=45%}
 
 Me costó mucho tiempo entender de dónde venía. El principito, que me hacía muchas preguntas, nunca parecía oír las mías. Fueron palabras dichas por casualidad las que, poco a poco, me lo revelaron todo. Así, cuando vio por primera vez mi avión (no voy a dibujar mi avión, es un dibujo demasiado complicado para mí), me preguntó:
 

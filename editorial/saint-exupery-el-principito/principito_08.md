@@ -1,12 +1,12 @@
 ## IX
 
-![](dibujos/dibujo24.png)
+![](dibujos/dibujo24.png){width=100%}
 
 Creo que, para escaparse, aprovechó una migración de pájaros silvestres. La mañana de la partida dejó su planeta bien ordenado. Deshollinó con cuidado sus volcanes en actividad. Tenía dos volcanes en actividad. Y eran muy prácticos para calentar el desayuno por la mañana. Tenía también un volcán apagado. Pero, como él decía: «¡Nunca se sabe!». Así que deshollinó también el volcán apagado. Si están bien deshollinados, los volcanes arden despacio y con regularidad, sin erupciones. Las erupciones volcánicas son como los incendios de chimenea. Es evidente que en nuestra tierra somos demasiado pequeños para deshollinar nuestros volcanes. Por eso nos causan montones de problemas.
 
 El principito arrancó también, con un poco de melancolía, los últimos brotes de baobab. Creía que no iba a volver nunca. Pero todas esas tareas de siempre le parecieron, aquella mañana, extremadamente dulces. Y cuando regó por última vez la flor y se dispuso a ponerla al abrigo bajo su globo, descubrió que tenía ganas de llorar.
 
-![](dibujos/dibujo25.png)
+![](dibujos/dibujo25.png){width=100%}
 
 «Adiós», le dijo a la flor.
 

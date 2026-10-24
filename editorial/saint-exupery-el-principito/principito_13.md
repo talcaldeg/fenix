@@ -4,7 +4,7 @@ El quinto planeta era muy curioso. Era el más pequeño de todos. Tenía el espa
 
 «Puede que este hombre sea absurdo. Sin embargo, es menos absurdo que el rey, que el vanidoso, que el hombre de negocios y que el bebedor. Al menos su trabajo tiene sentido. Cuando enciende su farol, es como si hiciera nacer una estrella más, o una flor. Cuando apaga su farol, hace dormir a la flor o a la estrella. Es una ocupación muy linda. Es verdaderamente útil, puesto que es linda».
 
-![](dibujos/dibujo31.png)
+![](dibujos/dibujo31.png){width=100%}
 
 Cuando llegó al planeta, saludó con respeto al farolero:
 

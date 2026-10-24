@@ -13,7 +13,8 @@
 - Marcadores `libro.capítulo.párrafo` en su propia línea (Confesiones): el cambio de capítulo
   pone su número romano como subtítulo; el marcador no se imprime.
 - `![pie](dibujos/x.png)` en su propio párrafo: imagen centrada (ruta relativa a la carpeta), con
-  el pie debajo si lo trae (los dibujos de El principito).
+  el pie debajo si lo trae (los dibujos de El principito). `{width=N%}` pegado detrás fija su ancho
+  como % de la caja de texto, para que guarde la proporción con el texto que tiene en el original.
 - Después: herramientas/portadas.py <id> ... --epub para la portada, herramientas/exlibris.py y
   herramientas/epub_a_pdf.py.
 """
@@ -55,6 +56,9 @@ aside.notas p { text-indent: 0; margin: 0 0 0.4em; }
 .nota p { text-indent: 0; margin: 0 0 0.9em; }
 figure.dibujo { margin: 1.2em 0; text-align: center; break-inside: avoid; page-break-inside: avoid; }
 figure.dibujo img { max-width: 80%; max-height: 60vh; }
+/* Con {width=N%} el dibujo ocupa lo mismo que en la página del original, medido contra su caja de
+   texto; object-fit evita que el tope de alto lo deforme. */
+figure.dibujo img[style] { max-width: 100%; height: auto; max-height: 85vh; object-fit: contain; }
 figure.dibujo figcaption { font-size: 0.85em; font-style: italic; margin-top: 0.3em; }
 @media (prefers-color-scheme: dark) { figure.dibujo img { background: #fff; padding: 0.4em; } }
 figure.dibujo + p { text-indent: 0; }
@@ -133,14 +137,15 @@ def leer(carpeta: Path, imagenes: dict = None):
                 c.html.append(f"<h4>{enlinea(b[5:].strip())}</h4>")
                 recien_titulo = False
                 continue
-            img = re.fullmatch(r"!\[([^\]]*)\]\(([^)]+)\)", b.strip())
+            img = re.fullmatch(r"!\[([^\]]*)\]\(([^)]+)\)(?:\{width=(\d+)%\})?", b.strip())
             if img:
                 ruta = carpeta / img.group(2)
                 if not ruta.exists():
                     raise SystemExit(f"falta la imagen {ruta}")
                 imagenes[ruta.name] = ruta
                 pie = f"<figcaption>{enlinea(img.group(1))}</figcaption>" if img.group(1) else ""
-                c.html.append(f'<figure class="dibujo"><img src="img/{ruta.name}" '
+                ancho = f' style="width: {img.group(3)}%"' if img.group(3) else ""
+                c.html.append(f'<figure class="dibujo"><img src="img/{ruta.name}"{ancho} '
                               f'alt="{html.escape(img.group(1) or "Dibujo")}"/>{pie}</figure>')
                 recien_titulo = False
                 continue

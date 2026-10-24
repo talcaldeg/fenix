@@ -12,7 +12,7 @@ El pozo al que habíamos llegado no se parecía a los otros pozos del Sahara. Lo
 
 Se rio, tocó la cuerda, hizo andar la polea. Y la polea gimió como una vieja veleta cuando el viento ha dormido mucho tiempo.
 
-![](dibujos/dibujo42.png)
+![](dibujos/dibujo42.png){width=100%}
 
 «¿Oyes?», dijo el principito. «Despertamos este pozo y canta...».
 
