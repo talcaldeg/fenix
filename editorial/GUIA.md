@@ -103,6 +103,12 @@ uno.
    (autor, salmo, obra) no queda como párrafo aparte: va como nota al pie al final de la cita,
    antes del punto final. Si ya tenía «N. del E.» con la obra, la nota queda «Firma. N. del E.:
    obra».
+10. **Autor castellano retraducido** (Bernadot, santa Teresa y san Juan de la Cruz; reporte de
+    Tomás del 24-oct). Si el autor citado escribió en castellano, la cita no se traduce del
+    francés del libro: se pone su texto original, copiado del texto de esa obra (Cántico y Llama
+    en su segunda redacción), sin cambiarle palabras ni orden. Si el inciso «dice san X» rompería
+    la frase original, va fuera de las comillas («San Juan de la Cruz añade que «...»»). Una
+    palabra de época que hoy no se entiende («una higa») se aclara en la misma nota.
 
 ## Glosario
 

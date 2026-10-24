@@ -138,7 +138,7 @@ Estas divinas palabras nos trazan la línea de conducta que hay que seguir en la
 
 Quien, sin turbarse, permanece unido a Cristo, se hunde en Él y confía en Él, no puede ser vencido por el demonio. *Porque Aquel que está en ustedes es más grande que el que está en el mundo*[^81]*… Aunque un ejército acampe contra mí, mi corazón no temerá. Aunque se entable contra mí el combate, aun entonces tendré confianza: Yahvé me ocultará en el secreto de su tienda*[^82].
 
-Después de haber pedido la gracia de permanecer siempre unida a Dios, santa Teresa añade: «Entonces no tendré sino desdén y desprecio para todos los demonios, y serán ellos los que tendrán miedo de mí. No comprendo esos temores que hacen gritar: ¡el demonio! ¡El demonio!, cuando podemos decir: ¡Dios! ¡Dios![^fx9]»
+Después de haber pedido la gracia de permanecer siempre unida a Dios, santa Teresa añade: «Y una higa para todos los demonios, que ellos me temerán a mí. No entiendo estos miedos: ¡demonio!, ¡demonio!, donde podemos decir ¡Dios!, ¡Dios!, y hacerle temblar[^fx9]».
 
 La unión confiada con nuestros Huéspedes interiores es, pues, la salvación en la tentación, pues ningún poder es capaz de arrancar a Dios un alma sin que esta lo quiera: ¿quién nos separará del amor de Cristo?… En todas las pruebas, somos más que vencedores por Aquel que nos ha amado. Pues tengo la seguridad de que ni la muerte ni la vida, ni los ángeles, ni los principados… ni ninguna otra criatura podrá separarnos del amor de Dios en Jesucristo Nuestro Señor[^83].
 
@@ -238,4 +238,4 @@ La unión confiada con nuestros Huéspedes interiores es, pues, la salvación en
 
 [^fx8]: N. del E.: Raimundo de Capua, Vida de santa Catalina de Siena, I, cap. 10.
 
-[^fx9]: N. del E.: santa Teresa de Jesús, Libro de la vida, cap. 25, n. 22.
+[^fx9]: N. del E.: santa Teresa de Jesús, Libro de la vida, cap. 25, n. 22. «Una higa»: un gesto de desprecio.
