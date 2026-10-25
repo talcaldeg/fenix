@@ -42,6 +42,12 @@ desde https://codeload.github.com/talcaldeg/fenix/zip/refs/heads/main y descompr
 encuentras Python, usa el paquete «embeddable» de python.org en la carpeta de trabajo. No gastes
 turnos buscando otra salida.
 
+Prueba una vez la red: `curl -sI https://commons.wikimedia.org https://formsubmit.co`. Si no
+responden (Claude Code en la web, con el acceso a red «Trusted» de fábrica, solo deja GitHub y
+los repositorios de paquetes), no se lo pidas a tu usuario a medio camino: sigue, deja el cuadro
+pendiente (paso 5) y, al final, usa el plan B del envío (paso 7). En ese caso agrega al mensaje
+final una línea: «La próxima vez, si pones el acceso a red del entorno en Full, lo envío yo».
+
 ## 2. Descarta rápido, antes de gastar
 
 Detente y avísale a tu usuario en cuanto falle uno de estos filtros:
