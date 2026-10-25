@@ -133,6 +133,28 @@ def revisar(raiz, capturas=None):
             if y > 5:
                 fallas.append(f"menú: desde #{desde} abajo, el enlace a #{destino} deja la página en {round(y)}px y no arriba")
         pg.close()
+        # Con la ficha abierta la URL ya es libro/<id>/: el enlace que se comparte y los de la ficha
+        # (parecidos, página del libro) no pueden repetir libro/<id>/ (un enlace a WhatsApp salía así).
+        pg = nav.new_page(viewport={"width": 390, "height": 844})
+        pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
+        pg.goto(f"{base}#biblioteca")
+        pg.wait_for_load_state("networkidle")
+        for paso in ("ficha", "parecido"):
+            sel = "#dlgLibro a.parecido" if paso == "parecido" else ".libro, .fila[data-id], .ed[data-id]"
+            if not pg.evaluate(f"() => {{ const a = document.querySelector('{sel}'); if (a) a.click(); return !!a; }}"):
+                fallas.append(f"compartir: no hay {paso} que abrir")
+                break
+            pg.wait_for_timeout(500)
+            pg.evaluate("document.querySelector('#btnCompartir').click()")
+            pg.wait_for_timeout(200)
+            urls = pg.evaluate("""() => [location.href, window.__compartido || '',
+                ...[...document.querySelectorAll('#dlgLibro a[href*="libro/"]')].map(a => a.href)]""")
+            if not urls[1]:
+                fallas.append(f"compartir ({paso}): el botón no entregó enlace")
+            for u in urls:
+                if u.count("/libro/") > 1:
+                    fallas.append(f"compartir ({paso}): enlace con la ruta repetida {u}")
+        pg.close()
         nav.close()
     srv.shutdown()
     return fallas

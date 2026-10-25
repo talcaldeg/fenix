@@ -2230,7 +2230,10 @@ function iniciar(){
   // En tarjetas y filas va la versión corta, que cabe a 390 px; la ficha lleva el sello entero.
   const sello = (l, entero) => esFenix(l) ? `<span class="etq sello" title="${esc(t("x.sello"))}">✦ ${esc(t(entero ? "x.sello" : "x.selloCorto"))}</span>` : "";
   // Página estática del libro; la versión en otro idioma tiene la suya en libro/<id>/<idioma>/ (gen_estaticos.js).
-  const rutaLibro = l => { const o = D.libros.find(x => x.id === l.id); return "libro/" + l.id + "/" + (o && o.idioma !== lang && (o.versiones || {})[lang] ? lang + "/" : ""); };
+  // Desde la raíz del sitio, fijada al cargar: con la ficha abierta la URL ya es libro/<id>/ (pushState)
+  // y una ruta relativa se duplicaba (libro/<id>/libro/<id>/) al compartir y en los enlaces de la ficha.
+  const RAIZ_SITIO = new URL(".", document.baseURI).pathname;
+  const rutaLibro = l => { const o = D.libros.find(x => x.id === l.id); return RAIZ_SITIO + "libro/" + l.id + "/" + (o && o.idioma !== lang && (o.versiones || {})[lang] ? lang + "/" : ""); };
   // Citas en el idioma de la página: las de un libro en otro idioma no se muestran.
   const citas = () => libros().filter(l => l.idioma === lang).flatMap(l => (l.citas || []).map(c => ({ c, l })));
 
@@ -2433,7 +2436,7 @@ function iniciar(){
     // Compartir: el menú del sistema en el celular; en el computador, copia el enlace de la página
     // estática del libro (que trae la vista previa para WhatsApp y redes).
     $("#btnCompartir").onclick = async () => {
-      const url = new URL(rutaLibro(l), location.href).href;
+      const url = new URL(rutaLibro(l), location.origin).href;
       if (navigator.share){ try{ await navigator.share({ title: l.titulo, text: `${l.titulo} - ${l.autor}`, url }); }catch(e){} return; }
       try{ await navigator.clipboard.writeText(url); $("#avisoFicha").textContent = t("x.copiado"); }
       catch(e){ prompt(t("x.copiaEnlace"), url); }
