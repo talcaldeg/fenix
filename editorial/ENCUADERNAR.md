@@ -7,7 +7,18 @@ https://github.com/talcaldeg/fenix).
 
 Tu trabajo: con el título, el autor y el idioma que te dé tu usuario, dejar un paquete `.zip` que
 Fénix pueda publicar casi sin tocarlo. Habla con tu usuario en su idioma y de tú. Estas
-instrucciones mandan sobre tus costumbres; si algo no se puede cumplir, detente y explícale por qué.
+instrucciones mandan sobre tus costumbres.
+
+**Tu usuario nos está haciendo un favor: que le cueste lo menos posible.** Solo te da el libro al
+principio y el visto bueno al final; entre medio, no le preguntes ni le pidas nada.
+
+- Nunca le pidas que busque, baje, adjunte o revise algo por ti. Si un paso no se puede (un
+  sitio bloqueado, el cuadro, Delibris, una cita que no logras cotejar), sáltalo, anótalo en la
+  sección «Pendiente para Fénix» del `INFORME.md` y sigue: Fénix lo completa al recibirlo.
+- Entrega lo que tengas: un paquete con pendientes anotados sirve; uno que no llega, no.
+- Solo te detienes por los cuatro filtros del paso 2 (ya está, está reservado, tiene derechos,
+  es moralmente malo), y se lo dices en dos líneas.
+- No hagas commit ni push al repo de Fénix: la entrega va solo por `herramientas/entregar.py`.
 
 ## 0. Pregunta primero
 
@@ -50,10 +61,12 @@ Detente y avísale a tu usuario en cuanto falle uno de estos filtros:
      mismo la traducción.
    - Notas, prólogos e introducciones de editores modernos tienen sus propios derechos: no se
      copian.
-4. **Valoración moral.** Busca el libro en Delibris (https://www.delibris.org/es/, buscador por
-   título). Sirve si tiene 5 o 6 sobre 6. Si no está reseñado, estima tú con este criterio:
-   sin escenas sexuales, sin inmoralidad presentada como buena y sin doctrina contraria a la fe
-   o la moral de la Iglesia católica. Ante una duda real, detente y pregúntale a tu usuario.
+4. **Valoración moral.** Si el libro está en `buscados`, ya se revisó: usa su `delibris` y no
+   busques más. Si no, búscalo en Delibris (https://www.delibris.org/es/, buscador por título).
+   Sirve si tiene 5 o 6 sobre 6. Si no está reseñado o no puedes abrir Delibris, estima tú con
+   este criterio: sin escenas sexuales, sin inmoralidad presentada como buena y sin doctrina
+   contraria a la fe o la moral de la Iglesia católica. Si tienes una duda, no le preguntes a tu
+   usuario: sigue, pon `delibris` en `null` y explica la duda en el INFORME; Fénix decide.
 
 ## 3. Elige la vía más barata (en este orden)
 
@@ -92,7 +105,7 @@ secciones de libros concretos son ejemplos de cómo armar el glosario del tuyo.
 ```
 entrega/<id>/
   ficha.json     la ficha del libro (obligatoria)
-  cuadro.jpg     cuadro de dominio público para la portada (obligatorio)
+  cuadro.jpg     cuadro de dominio público para la portada (si lo puedes bajar)
   INFORME.md     qué hiciste y con qué fuentes (obligatorio)
   texto/         el libro en Markdown (vías B, C y D)
     nota.md      «Nota de esta edición» (vías B, C y D)
@@ -180,7 +193,9 @@ va en los dos idiomas, aunque el libro sea de uno solo.
   escena, su autor, su época). Guárdalo como `cuadro.jpg`, vertical si se puede y de al menos
   1.200 px de ancho. Baja la miniatura grande, no el original, que puede pesar decenas de MB y
   no cabría en el envío: `https://commons.wikimedia.org/wiki/Special:FilePath/<archivo>?width=1600`.
-  `cx` y `cy` (0 a 1) dicen dónde centrar el recorte a 2:3.
+  `cx` y `cy` (0 a 1) dicen dónde centrar el recorte a 2:3. **Si no puedes abrir Commons o bajar
+  el cuadro, no se lo pidas a tu usuario:** deja fuera `cuadro.jpg`, pon en `imagen` el cuadro
+  que propones (con `url` si la conoces; si no, `null`) y anótalo en «Pendiente para Fénix».
 - `gutenberg`: el número del libro si vas por la vía A (entonces no hay `texto/` ni `epub`).
 - `delibris`: `null` si no está reseñado; entonces explica tu estimación en el INFORME.
 - `editorial`: qué hizo Fénix (vías B, C y D); `null` en la vía A.
@@ -194,6 +209,8 @@ va en los dos idiomas, aunque el libro sea de uno solo.
 Agente y modelo que usaste (por ejemplo «Claude Code, Claude Opus»); vía elegida y por qué no una más barata; fuentes con su URL; derechos (año de muerte del autor
 y del traductor, año de publicación); valoración de Delibris o tu estimación razonada; qué
 cambiaste en el texto; palabras del libro; dudas que quedaron (cita corta y cómo la resolviste).
+Al final, la sección «Pendiente para Fénix»: lo que no pudiste hacer y por qué, una línea cada
+cosa (o «nada»).
 
 ## 6. Revisa y empaqueta
 
@@ -203,21 +220,24 @@ python herramientas/revisar_entrega.py entrega/<id> --arreglar
 
 `--arreglar` corrige solo lo mecánico (las tildes de la ortografía antigua, también en las citas
 de la ficha) y después revisa. Corrige todo lo que marque como ERROR y los AVISO que de verdad sean errores, y vuelve a
-correrlo hasta que diga «Entrega lista». Si cambiaste el texto, vuelve a armar `prueba.epub`.
+correrlo hasta que diga «Entrega lista». Lo que marque como «pendiente para Fénix» no lo
+arreglas: ya va anotado. Si un ERROR depende de algo a lo que no llegas, después de un intento
+anótalo en «Pendiente para Fénix» y entrega igual. Si cambiaste el texto, vuelve a armar
+`prueba.epub`.
 Luego comprime la carpeta (sin `prueba.epub`) en `<id>.zip`.
 
 ## 7. Entrega: la haces tú, con su permiso
 
-Tu usuario no tiene que subir nada. En un solo mensaje de no más de 10 líneas dale la ruta del
-`.zip`, la vía elegida y cuántas palabras tiene el libro, y pídele:
+Tu usuario no tiene que subir nada. Es el único mensaje en que le pides algo: máximo 6 líneas,
+sin pendientes ni detalles técnicos (eso va en el INFORME). Dile qué libro quedó listo y hazle
+una sola pregunta, que pueda contestar con un «sí»:
 
-1. Que abra `prueba.epub` (da su ruta completa) en su lector (Apple Books, Google Play Libros,
-   Calibre o Thorium) y hojee el primer capítulo, uno del medio con diálogos y el final. Es una
-   vista previa: sin portada, que la pone Fénix. Si ve algo raro, lo corriges antes de enviar.
-2. Si quiere dejar su correo para que le avisen cuando esté publicado (es opcional). Su nombre
-   solo va si quiere aparecer en el libro, en `credito`; si no, `credito` va en `null`.
-3. Si acepta que Fénix publique esta edición gratis y con licencia abierta (CC BY-NC-SA 4.0) y
-   si te autoriza a enviarla ahora.
+> ¿Lo envío a Fénix para que lo publique gratis, con licencia abierta (CC BY-NC-SA 4.0)? Si
+> quieres, dime también con qué nombre apareces en el libro y un correo para avisarte cuando
+> esté publicado; si no, va sin nombre.
+
+Si armaste `prueba.epub`, agrega una línea con su ruta completa por si quiere hojearlo antes
+(opcional, sin portada, que la pone Fénix). Con su nombre va en `credito`; sin nombre, `null`.
 
 Con su sí, envíala tú:
 

@@ -113,7 +113,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   «Fénix - encuadernador» (ya no reserva: quien quiera reservar escribe a talcaldeg@gmail.com y se anota en `reservado` del libro buscado).
   **Regla dura: lo que Fénix tenga que arreglarle a un paquete recibido, lo paga el agente del
   encuadernador la próxima vez.** El arreglo se vuelve un ERROR en `revisar_entrega.py` (y parte
-  de `--arreglar` si es mecánico) y, si es criterio, va en `editorial/ENCUADERNAR.md`. El prompt
+  de `--arreglar` si es mecánico) y, si es criterio, va en `editorial/ENCUADERNAR.md`. Salvo lo
+  que dependa de un acceso que su agente puede no tener (hoy, el cuadro de Commons): eso queda
+  como «pendiente para Fénix» y lo completa `recibir_entrega.py`, porque al encuadernador nunca
+  se le pide nada entre el libro y el visto bueno. El prompt
   del sitio no se toca: solo apunta a ENCUADERNAR.md en `main`, así que el cambio llega solo. Un
   paquete que llega con el error se arregla aquí con `revisar_entrega.py .entregas/<id>/<id>
   --arreglar` y se vuelve a pasar la carpeta a `recibir_entrega.py`.

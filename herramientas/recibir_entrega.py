@@ -138,6 +138,25 @@ def agregar_a_datos(f: dict, epub: Path):
     ruta.write_text("\n".join(lineas), encoding="utf-8")
 
 
+def asegurar_cuadro(c: Path, f: dict) -> dict:
+    """El cuadro es lo único que el encuadernador puede dejar pendiente: se baja de imagen.url o,
+    sin cuadro elegido, se detiene antes de tocar datos.js para completarlo en la carpeta."""
+    im = f.get("imagen") or {}
+    cuadro = c / "cuadro.jpg"
+    url = im.get("url") or ""
+    if not cuadro.exists() and "commons.wikimedia.org" in url and "File:" in url:
+        archivo = url.split("File:", 1)[1].split("#")[0]
+        baja = f"https://commons.wikimedia.org/wiki/Special:FilePath/{archivo}?width=1600"
+        print("Bajando el cuadro", baja)
+        req = urllib.request.Request(baja, headers={"User-Agent": "Proyecto Fenix"})
+        cuadro.write_bytes(urllib.request.urlopen(req, timeout=120).read())
+    falta = [k for k in ("credito", "url") if not im.get(k)]
+    if not cuadro.exists() or falta:
+        sys.exit(f"Falta el cuadro de la portada ({', '.join(falta) or 'cuadro.jpg'}): elígelo, "
+                 f"completa «imagen» en {c / 'ficha.json'} (y cuadro.jpg) y vuelve a correr con {c}")
+    return im
+
+
 def main():
     if len(sys.argv) != 2:
         sys.exit(__doc__)
@@ -149,7 +168,7 @@ def main():
         for e in E:
             print("ERROR:", e)
         sys.exit("La entrega tiene errores: se le devuelve al encuadernador con esta lista.")
-    im = f["imagen"]
+    im = asegurar_cuadro(c, f)
     if f.get("versionDe"):
         nombre = f["id"]
         epub = armar_epub(c, f, nombre)

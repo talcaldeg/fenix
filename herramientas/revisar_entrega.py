@@ -152,21 +152,23 @@ def revisar(carpeta: Path):
                 if p not in ids and p not in lote:
                     E.append(f"ficha: el parecido {p} no existe en datos.js ni en el lote")
 
+    # El cuadro depende de llegar a Wikimedia Commons, que algunos agentes tienen bloqueado: lo que
+    # falte no frena la entrega, queda como pendiente y lo completa recibir_entrega.py.
     im = f.get("imagen") or {}
     if not isinstance(im.get("credito"), dict) or not all(im["credito"].get(k) for k in ("es", "en")):
-        E.append("ficha: «imagen.credito» necesita es y en")
+        A.append("pendiente para Fénix: «imagen.credito» (es y en)")
     if "commons.wikimedia.org" not in (im.get("url") or ""):
-        E.append("ficha: «imagen.url» debe ser la página del cuadro en Wikimedia Commons")
+        A.append("pendiente para Fénix: «imagen.url», la página del cuadro en Wikimedia Commons")
     for k in ("cx", "cy"):
         if not isinstance(im.get(k, 0.5), (int, float)) or not 0 <= im.get(k, 0.5) <= 1:
             E.append(f"ficha: «imagen.{k}» va de 0 a 1")
     cuadro = carpeta / "cuadro.jpg"
     if not cuadro.exists():
-        E.append("falta cuadro.jpg")
+        A.append("pendiente para Fénix: cuadro.jpg")
     else:
         m = medidas_jpeg(cuadro)
         if not m:
-            E.append("cuadro.jpg no es un JPEG")
+            A.append("pendiente para Fénix: cuadro.jpg no es un JPEG")
         elif m[0] < 1200 and m[1] < 1800:
             A.append(f"cuadro.jpg mide {m[0]}x{m[1]}; mejor desde 1200 px de ancho")
     fu = f.get("fuente") or {}
