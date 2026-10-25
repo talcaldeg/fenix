@@ -8,7 +8,8 @@
 2. Arma el EPUB en libros/<id>.epub: vía A, baja el de Project Gutenberg; vías B, C y D, copia
    texto/ a editorial/<id>/ y lo arma con md_a_epub.py.
 3. Agrega la ficha al final de `libros` en datos.js, saca el libro de `buscados` y pone la fecha.
-4. Portada con el cuadro (portadas.py --epub), exlibris, PDF y revisión de duplicados.
+4. Portada con el cuadro (portadas.py --epub), exlibris, crédito de la portada, PDF y revisión
+   de duplicados.
 
 Una versión en otro idioma (`versionDe`) arma el EPUB y el cuadro, e imprime el bloque para pegar
 en `versiones` de esa ficha. Lo que queda a mano: auditar-teologia sobre resumen y «por qué
@@ -180,13 +181,16 @@ def main():
         print(f"«por qué leerlo» de esta versión, si cambia: {js(f['porque'])}")
         print(f"Después: python herramientas/portadas.py {nombre} --cuadro {c / 'cuadro.jpg'} "
               f"--cx {im.get('cx', 0.5)} --cy {im.get('cy', 0.5)} --epub; exlibris.py {epub.relative_to(RAIZ)}; "
-              f"epub_a_pdf.py {epub.relative_to(RAIZ)}")
+              f"credito_portada.py {epub.relative_to(RAIZ)}; epub_a_pdf.py {epub.relative_to(RAIZ)}")
         return
     epub = armar_epub(c, f, f["id"])
     agregar_a_datos(f, epub)
     correr(PY, "herramientas/portadas.py", f["id"], "--cuadro", c / "cuadro.jpg",
            "--cx", im.get("cx", 0.5), "--cy", im.get("cy", 0.5), "--epub")
     correr(PY, "herramientas/exlibris.py", epub.relative_to(RAIZ))
+    correr(PY, "herramientas/credito_portada.py", epub.relative_to(RAIZ))
+    # El EPUB de Gutenberg puede traer notas en cursiva (Ligorio, 25-oct-2026).
+    correr(PY, "herramientas/revisar_libros.py", "--arreglar", epub.relative_to(RAIZ))
     correr(PY, "herramientas/epub_a_pdf.py", epub.relative_to(RAIZ))
     correr("node", "herramientas/revisar_duplicados.js")
     print(f"\nListo: {f['titulo']}. Falta: auditar-teologia sobre resumen y porque si es de fe, "

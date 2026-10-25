@@ -194,14 +194,20 @@ va en los dos idiomas, aunque el libro sea de uno solo.
   y qué gana el lector, sin repetir el resumen; puedes tomar ideas de la reseña de Delibris, con
   tus palabras. Descriptivo: no afirmes doctrina por tu cuenta.
 - `citas`: 3 a 5, textuales y **copiadas del texto que entregas** (las célebres, las más
-  profundas o las que enseñan algo). La revisión automática las busca en el texto.
+  profundas o las que enseñan algo). La revisión automática las busca en el texto. En la vía A,
+  cópialas del EPUB de Gutenberg (`https://www.gutenberg.org/ebooks/<n>.epub3.images`), no de la
+  página HTML: la revisión las coteja con ese EPUB, comillas incluidas. Elige palabras del autor:
+  no una frase que él atribuye a otro santo, porque esa atribución suele no poder cotejarse.
 - `imagen`: un cuadro de dominio público de Wikimedia Commons relacionado con la obra (su
   escena, su autor, su época). Guárdalo como `cuadro.jpg`, vertical si se puede y de al menos
   1.200 px de ancho. Baja la miniatura grande, no el original, que puede pesar decenas de MB y
   no cabría en el envío: `https://commons.wikimedia.org/wiki/Special:FilePath/<archivo>?width=1600`.
-  `cx` y `cy` (0 a 1) dicen dónde centrar el recorte a 2:3. **Si no puedes abrir Commons o bajar
-  el cuadro, no se lo pidas a tu usuario:** deja fuera `cuadro.jpg`, pon en `imagen` el cuadro
-  que propones (con `url` si la conoces; si no, `null`) y anótalo en «Pendiente para Fénix».
+  `cx` y `cy` (0 a 1) dicen dónde centrar el recorte a 2:3. El marco de la portada tapa además
+  cerca de un 15 % arriba y abajo de ese recorte: si el rostro o la figura principal queda en esa
+  franja (un cuadro casi 2:3 con la cabeza pegada al borde), elige otro. **Si no puedes abrir
+  Commons o bajar el cuadro, no se lo pidas a tu usuario:** deja fuera `cuadro.jpg`, pon en
+  `imagen` el cuadro que propones (con `url` si la conoces; si no, `null`) y anótalo en
+  «Pendiente para Fénix».
 - `gutenberg`: el número del libro si vas por la vía A (entonces no hay `texto/` ni `epub`).
 - `delibris`: `null` si no está reseñado; entonces explica tu estimación en el INFORME.
 - `editorial`: qué hizo Fénix (vías B, C y D); `null` en la vía A.

@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "23-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "25-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3999,6 +3999,27 @@ window.FENIX = {
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/los-piratas-de-malasia"},
       editorial: {"es": "Edición digital de Proyecto Fénix sobre la versión española de R. Blanco Belmonte (Maucci, c. 1910), con el texto establecido desde el escaneo, ortografía actualizada y diálogos entre comillas. Edición al cuidado de Juan Ignacio Alcalde G.", "en": "Proyecto Fénix digital edition of R. Blanco Belmonte's Spanish version (Maucci, c. 1910), with the text established from the scan, updated spelling and dialogue set in quotation marks. Edited by Juan Ignacio Alcalde G."},
       parecidos: ["salgari-el-rey-del-mar", "stevenson-isla-del-tesoro", "verne-la-vuelta-al-mundo-en-80-dias"]
+    },
+    {
+      id: "ligorio-the-glories-of-mary",
+      titulo: "The Glories of Mary",
+      autor: "St. Alphonsus Liguori",
+      anio: "1750",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "La gran obra mariana de san Alfonso María de Ligorio, Doctor de la Iglesia, publicada por primera vez en 1750. La primera parte comenta la Salve Regina frase por frase: María como Reina de misericordia, nuestra Madre, nuestra vida y nuestra esperanza, abogada de los pecadores, y la dulzura de su nombre. La segunda reúne discursos sobre sus fiestas y sus dolores, y un estudio de sus virtudes. El libro termina con prácticas de devoción, ejemplos y oraciones para cada día de la semana. Esta edición reproduce la traducción inglesa anónima de Nueva York, 1852.", "en": "The great Marian work of Saint Alphonsus Liguori, Doctor of the Church, first published in 1750. The first part comments on the Salve Regina phrase by phrase: Mary as Queen of Mercy, our Mother, our life and our hope, advocate of sinners, and the sweetness of her name. The second gathers discourses on her feasts and her sorrows, and a study of her virtues. The book closes with devotional practices, examples and prayers for each day of the week. This edition reproduces the anonymous English translation printed in New York in 1852."},
+      porque: {"es": "Para quien quiere entender a fondo la devoción a la Virgen en la tradición católica: san Alfonso comenta la Salve Regina palabra por palabra y apoya su comentario en la Escritura, los Padres de la Iglesia y los santos. Sirve para el mes de mayo, para preparar las fiestas marianas y como lectura pausada, una sección cada vez. Quien lo lee aprende a rezar la Salve con más atención y se lleva ejemplos y oraciones para volver a ellos.", "en": "For anyone who wants to understand devotion to the Virgin in the Catholic tradition in depth: Saint Alphonsus comments on the Salve Regina word by word and supports his commentary with Scripture, the Fathers of the Church and the saints. It suits the month of May, the preparation of Marian feasts, and slow reading, one section at a time. The reader learns to pray the Salve with more attention and takes away examples and prayers to return to."},
+      imagen: {"src": "img/portadas/ligorio-the-glories-of-mary.jpg", "credito": {"es": "Bartolomé Esteban Murillo, «La Inmaculada Concepción de los Venerables», h. 1678", "en": "Bartolomé Esteban Murillo, «The Immaculate Conception of Los Venerables», c. 1678"}, "url": "https://commons.wikimedia.org/wiki/File:Murillo_-_Inmaculada_Concepci%C3%B3n_de_los_Venerables_o_de_Soult_(Museo_del_Prado,_1678).jpg"},
+      citas: [
+        "Oh, blessed is he who clings with love and confidence to those two anchors of salvation, Jesus and Mary!",
+        "Oh, happy those who live under the protection of a mother so loving and so powerful!",
+        "Hear, then, our mother who calls us, and says to us: “Whosoever is a little one, let him come to me.”"
+      ],
+      archivos: {"epub": "libros/ligorio-the-glories-of-mary.epub", "pdf": "libros/ligorio-the-glories-of-mary.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 72411: traducción inglesa anónima, 2.ª edición americana, Nueva York, Edward Dunigan and Brother, 1852 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/72411"},
+      delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/las-glorias-de-maria"},
+      parecidos: ["preparacion-para-la-muerte", "escriva-santo-rosario", "presencia-de-dios"]
     }
   ],
 
@@ -4024,7 +4045,7 @@ window.FENIX = {
     { titulo: {"es": "La esfera y la cruz"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/la-esfera-y-la-cruz"} },
     { titulo: {"es": "El Napoleón de Notting Hill"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-napoleon-de-notting-hill"} },
     { titulo: {"es": "Lo que está mal en el mundo"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/lo-que-esta-mal-en-el-mundo"} },
-    { titulo: {"es": "Las glorias de María", "en": "The Glories of Mary"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/las-glorias-de-maria"} },
+    { titulo: {"es": "Las glorias de María"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/las-glorias-de-maria"} },
     { titulo: {"es": "Visitas al Santísimo Sacramento y a María Santísima", "en": "Visits to the Most Blessed Sacrament and to the Blessed Virgin Mary"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/visitas-al-santisimo-sacramento-y-maria-santisima-para-todos-los-dias"} },
     { titulo: {"es": "Práctica del amor a Jesucristo", "en": "The Practice of the Love of Jesus Christ"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/practica-del-amor-jesucristo"} },
     { titulo: {"es": "Meditaciones sobre la Pasión de Jesucristo", "en": "The Passion and the Death of Jesus Christ"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/meditaciones-sobre-la-pasion-de-jesucristo"} },

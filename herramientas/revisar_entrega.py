@@ -14,6 +14,8 @@ import html
 import json
 import re
 import sys
+import tempfile
+import urllib.request
 import zipfile
 from pathlib import Path
 
@@ -191,6 +193,22 @@ def revisar(carpeta: Path):
             E.append("ficha: «gutenberg» es el número del libro (entero)")
         if tdir.exists():
             A.append("vía A (Gutenberg): la carpeta texto/ sobra")
+        # Las citas se cotejan con el EPUB que bajará Fénix, no con el HTML que leyó el agente
+        # (Ligorio, 25-oct-2026: una comilla de cierre fuera de lugar frenó la recepción).
+        if isinstance(gutenberg, int):
+            try:
+                req = urllib.request.Request(f"https://www.gutenberg.org/ebooks/{gutenberg}.epub3.images",
+                                             headers={"User-Agent": "Proyecto Fenix"})
+                with tempfile.TemporaryDirectory() as tmp:
+                    ep = Path(tmp) / "g.epub"
+                    ep.write_bytes(urllib.request.urlopen(req, timeout=120).read())
+                    base = plano(texto_epub(ep))
+                for c in citas:
+                    if plano(c) not in base:
+                        E.append(f"cita que no está en el EPUB de Gutenberg: «{c[:70]}...»")
+            except OSError as e:
+                A.append(f"no se pudo bajar el EPUB de Gutenberg ({e}); las citas no se cotejaron:"
+                         " cópialas del EPUB, no del HTML")
         return E, A, f
 
     ep = f.get("epub") or {}
