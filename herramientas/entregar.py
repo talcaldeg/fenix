@@ -10,17 +10,22 @@ Manda el .zip adjunto, con los datos del formulario de #encuadernadores, por el 
 formularios del sitio (FormSubmit, destino en `contacto.formularios` de datos.js). Llega como
 correo a Tomás. Solo biblioteca estándar.
 
-Si el .zip pasa del límite del servicio o el envío falla, imprime la alternativa: mandarlo por
-correo a talcaldeg@gmail.com o subirlo a Drive y enviar el enlace en el formulario.
+Antes de enviar deja ACEPTACION.txt dentro del .zip. Si el .zip pasa del límite del servicio o el
+envío falla (hay agentes con la red cerrada a formsubmit.co), abre un correo ya dirigido y la
+carpeta del .zip, e imprime el único paso que le queda al usuario: adjuntarlo y enviarlo.
 """
 import argparse
 import json
 import re
+import subprocess
 import sys
 import urllib.request
 import uuid
+import webbrowser
 import zipfile
+from datetime import date
 from pathlib import Path
+from urllib.parse import quote
 
 RAIZ = Path(__file__).resolve().parent.parent
 CORREO = "talcaldeg@gmail.com"
@@ -58,14 +63,38 @@ def multipart(campos: dict, archivo: Path):
     return b"".join(partes), f"multipart/form-data; boundary={borde}"
 
 
-def plan_b(motivo: str):
+def anotar_aceptacion(zip_: Path, correo: str):
+    """Deja la aceptación de la licencia dentro del .zip, así el correo del plan B no necesita texto."""
+    with zipfile.ZipFile(zip_) as z:
+        if "ACEPTACION.txt" in z.namelist():
+            return
+    with zipfile.ZipFile(zip_, "a") as z:
+        z.writestr("ACEPTACION.txt", f"Acepto que Proyecto Fénix publique esta edición gratis con licencia "
+                   f"CC BY-NC-SA 4.0 ({date.today().isoformat()}).\nCorreo para avisar: {correo or 'ninguno'}\n")
+
+
+def abrir_correo(zip_: Path, asunto: str):
+    """Plan B lo más corto posible para el usuario: deja abiertos un correo ya dirigido y la carpeta
+    del .zip, para que solo lo arrastre y envíe. Si el entorno no tiene ventanas, no pasa nada."""
+    try:
+        webbrowser.open(f"mailto:{CORREO}?subject={quote(asunto)}")
+        if sys.platform.startswith("win"):
+            subprocess.Popen(["explorer", "/select,", str(zip_.resolve())])
+        else:
+            subprocess.Popen(["open" if sys.platform == "darwin" else "xdg-open", str(zip_.resolve().parent)])
+    except Exception:  # noqa: BLE001 - abrir ventanas es una ayuda, no un requisito
+        pass
+
+
+def plan_b(motivo: str, zip_: Path, asunto: str):
+    abrir_correo(zip_, asunto)
     sys.exit(f"""{motivo}
 
-No se envió. Dos formas de entregarlo:
-1. Por correo: adjunta el .zip en un correo a {CORREO} (asunto «Fénix - encuadernador»); no hace
-   falta escribir nada más. Gmail acepta hasta 25 MB.
-2. Si pesa más: súbelo a Google Drive, Dropbox o WeTransfer, con enlace que cualquiera pueda
-   abrir, y manda el enlace en {SITIO}#encuadernadores.""")
+No se envió, pero queda a un paso para tu usuario (la licencia ya va aceptada dentro del .zip):
+dile en un solo mensaje corto que adjunte {zip_.resolve()} en un correo a {CORREO} con asunto
+«{asunto}» y lo envíe, sin escribir nada más (intenté dejarle abiertos el correo y la carpeta).
+Gmail acepta hasta 25 MB; si pesa más, que lo suba a Google Drive con enlace abierto y lo mande
+en {SITIO}#encuadernadores. No intentes otros servicios de envío.""")
 
 
 def main():
@@ -82,13 +111,16 @@ def main():
     if not a.zip.is_file() or a.zip.suffix.lower() != ".zip":
         sys.exit(f"No encuentro el .zip: {a.zip}")
     f = leer_ficha(a.zip)
+    anotar_aceptacion(a.zip, a.correo)
+    asunto = f"Fénix - encuadernador: entrega de {f.get('titulo') or a.zip.stem}"
     mb = a.zip.stat().st_size / 1e6
     if mb > LIMITE_MB:
         plan_b(f"El .zip pesa {mb:.1f} MB y el envío directo acepta hasta {LIMITE_MB} MB "
-               "(lo más pesado suele ser cuadro.jpg: bájalo a 1.600 px de ancho y vuelve a comprimir).")
+               "(lo más pesado suele ser cuadro.jpg: bájalo a 1.600 px de ancho, vuelve a comprimir y "
+               "a correr este script antes de pedirle nada a tu usuario).", a.zip, asunto)
     libro = f"{f.get('titulo', '')} - {f.get('autor', '')}"
     campos = {
-        "_subject": f"Fénix - encuadernador: entrega de {f.get('titulo') or a.zip.stem}",
+        "_subject": asunto,
         "_captcha": "false",
         "_template": "table",
         "email": a.correo,
@@ -106,9 +138,9 @@ def main():
         with urllib.request.urlopen(req, timeout=180) as r:
             html = r.read().decode("utf-8", "replace")
     except Exception as e:  # noqa: BLE001 - cualquier falla de red o del servicio lleva al plan B
-        plan_b(f"El servicio de envío respondió con un error ({e}).")
+        plan_b(f"El servicio de envío respondió con un error ({e}).", a.zip, asunto)
     if "submitted successfully" not in html:
-        plan_b("El servicio de envío no confirmó la recepción.")
+        plan_b("El servicio de envío no confirmó la recepción.", a.zip, asunto)
     aviso = f"Tomás avisará a {a.correo} cuando esté publicado." if a.correo else "Sin correo, no habrá aviso: el libro aparecerá en el sitio."
     print(f"Enviado: {libro} ({mb:.1f} MB) a Proyecto Fénix. {aviso}")
 
