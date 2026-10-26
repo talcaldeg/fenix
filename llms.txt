@@ -123,6 +123,8 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [El principito - Antoine de Saint-Exupéry (1943)](https://talcaldeg.github.io/fenix/libro/saint-exupery-el-principito/) - Un aviador cae con su avión en el desierto del Sahara, a mil millas de cualquier lugar habitado, y al amanecer lo despierta un niño que le pide que le dibuje un cordero. Descarga gratuita en EPUB y PDF.
 - [Niebla - Miguel de Unamuno (1914)](https://talcaldeg.github.io/fenix/libro/unamuno-niebla/) - Augusto Pérez, un joven rico y ocioso que vive sin rumbo tras la muerte de su madre, se enamora de pronto de Eugenia, una pianista que no lo quiere. Descarga gratuita en EPUB y PDF.
 - [Los piratas de la Malasia - Emilio Salgari (trad. R. Blanco Belmonte) (1896)](https://talcaldeg.github.io/fenix/libro/salgari-los-piratas-de-la-malasia/) - El indio Kammamuri naufraga en los mares de la Malasia llevando consigo a Ada, la prometida de su amo Tremal-Naik, que perdió la razón en manos de los thugs. Descarga gratuita en EPUB y PDF.
+- [Lord of the World - Robert Hugh Benson (1907)](https://talcaldeg.github.io/fenix/libro/benson-lord-of-the-world/) - Early in the twenty-first century a godless humanitarianism rules the world: euthanasia is routine, the Church is cornered, and Europe, America and the East are heading for war. Descarga gratuita en EPUB y PDF.
+- [Ben-Hur: A Tale of the Christ - Lew Wallace (1880)](https://talcaldeg.github.io/fenix/libro/wallace-ben-hur/) - Judah Ben-Hur, a young Jewish prince of Jerusalem, is betrayed by his childhood friend, the Roman Messala: one accident is enough to send him to the galleys and make his mother and sister disappear. Descarga gratuita en EPUB y PDF.
 
 ## Teatro
 

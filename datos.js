@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "25-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "26-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -4020,6 +4020,52 @@ window.FENIX = {
       fuente: {"texto": "Project Gutenberg, libro n.º 72411: traducción inglesa anónima, 2.ª edición americana, Nueva York, Edward Dunigan and Brother, 1852 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/72411"},
       delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/las-glorias-de-maria"},
       parecidos: ["preparacion-para-la-muerte", "escriva-santo-rosario", "presencia-de-dios"]
+    },
+    {
+      id: "benson-lord-of-the-world",
+      titulo: "Lord of the World",
+      autor: "Robert Hugh Benson",
+      anio: "1907",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "A comienzos del siglo XXI, un humanitarismo sin Dios gobierna el mundo: la eutanasia es rutina, la Iglesia está acorralada y Europa, América y Oriente se encaminan a la guerra. Entonces aparece Julian Felsenburgh, un político norteamericano carismático que trae la paz universal y es aclamado como salvador y luego como dios. Frente a él, el joven sacerdote inglés Percy Franklin, cuyo rostro es idéntico al de Felsenburgh, sostiene la fe de una Iglesia cada vez más pequeña. Una novela de anticipación sobre el Anticristo y el fin de los tiempos.", "en": "Early in the twenty-first century a godless humanitarianism rules the world: euthanasia is routine, the Church is cornered, and Europe, America and the East are heading for war. Then Julian Felsenburgh appears, a charismatic American politician who brings universal peace and is hailed as saviour and then as god. Against him, the young English priest Percy Franklin, whose face is identical to Felsenburgh's, upholds the faith of an ever smaller Church. A novel of anticipation about the Antichrist and the end of time."},
+      porque: {"es": "Para lectores adultos que quieren pensar el mundo de hoy con la fe: escrita en 1907, anticipa con asombrosa precisión la religión de la humanidad, la eutanasia y la soledad de los creyentes. Joseph Ratzinger la citó en 1992, antes de ser Benedicto XVI, y el papa Francisco la recomendó más de una vez. Su tono es grave y su final, apocalíptico, pero deja una esperanza firme.", "en": "For adult readers who want to think about today's world in the light of faith: written in 1907, it foresees with astonishing accuracy the religion of humanity, euthanasia and the loneliness of believers. Joseph Ratzinger cited it in 1992, before becoming Benedict XVI, and Pope Francis recommended it more than once. Its tone is grave and its ending apocalyptic, but it leaves a firm hope."},
+      imagen: {"src": "img/portadas/benson-lord-of-the-world.jpg", "credito": {"es": "Alberto Durero, «Los cuatro jinetes del Apocalipsis», 1498", "en": "Albrecht Dürer, «The Four Horsemen», 1498"}, "url": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer,_The_Four_Horsemen,_1498,_NGA_142352.jpg"},
+      citas: [
+        "I am perfectly aware that this is a terribly sensational book",
+        "Men do recognise at last that a supernatural Religion involves an absolute authority, and that Private Judgment in matters of faith is nothing else than the beginning of disintegration.",
+        "It was, in fact, the Catholic idea with the supernatural left out",
+        "Then this world passed, and the glory of it."
+      ],
+      archivos: {"epub": "libros/benson-lord-of-the-world.epub", "pdf": "libros/benson-lord-of-the-world.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 14021 (dominio público)", "url": "https://www.gutenberg.org/ebooks/14021"},
+      delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/senor-del-mundo"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["chesterton-the-ball-and-the-cross", "chesterton-the-napoleon-of-notting-hill", "quo-vadis"]
+    },
+    {
+      id: "wallace-ben-hur",
+      titulo: "Ben-Hur: A Tale of the Christ",
+      autor: "Lew Wallace",
+      anio: "1880",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Judá Ben-Hur, joven príncipe judío de Jerusalén, es traicionado por su amigo de infancia, el romano Mesala: un accidente le basta para condenarlo a galeras y hacer desaparecer a su madre y a su hermana. Sobrevive al remo, salva la vida de un tribuno en una batalla naval y vuelve a Oriente rico y adoptado como romano, decidido a vengarse, lo que culmina en la célebre carrera de cuadrigas de Antioquía. Mientras busca a los suyos, su historia se cruza una y otra vez con la de Jesús de Nazaret, desde la llegada de los Magos hasta el Calvario.", "en": "Judah Ben-Hur, a young Jewish prince of Jerusalem, is betrayed by his childhood friend, the Roman Messala: one accident is enough to send him to the galleys and make his mother and sister disappear. He survives the oar, saves a tribune's life in a sea battle and returns to the East rich and adopted as a Roman, bent on revenge, which climaxes in the famous chariot race at Antioch. As he searches for his family, his story crosses again and again with that of Jesus of Nazareth, from the coming of the Wise Men to Calvary."},
+      porque: {"es": "Es una de las grandes novelas de aventuras, y a la vez una historia de conversión: Ben-Hur aprende que el reino que espera no es de este mundo y que el perdón vale más que la venganza. Sirve a lectores jóvenes y adultos, y a quien quiera acercarse a la vida de Cristo desde la mirada de sus contemporáneos. Su prosa es amplia y algo solemne, pero la acción no da respiro.", "en": "It is one of the great adventure novels and, at the same time, a story of conversion: Ben-Hur learns that the kingdom he awaits is not of this world, and that forgiveness is worth more than revenge. It suits young and adult readers, and anyone who wants to approach the life of Christ through the eyes of his contemporaries. Its prose is broad and somewhat solemn, but the action never lets up."},
+      imagen: {"src": "img/portadas/wallace-ben-hur.jpg", "credito": {"es": "Bartolomé Esteban Murillo, «La adoración de los Magos», h. 1655-1660", "en": "Bartolomé Esteban Murillo, «Adoration of the Magi», c. 1655-1660"}, "url": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Murillo_-_Adoration_of_the_Magi_-_Google_Art_Project.jpg"},
+      citas: [
+        "There is a kingdom on the earth, though it is not of it—a kingdom of wider bounds than the earth",
+        "nor shall any man see it until he hath first known his own soul; for the kingdom is not for him, but for his soul.",
+        "His habit is to move in mystery, yet sometimes he permits us to think we see and understand him.",
+        "Out of that vast tomb Christianity issued to supersede the Cæsars."
+      ],
+      archivos: {"epub": "libros/wallace-ben-hur.epub", "pdf": "libros/wallace-ben-hur.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 2145 (dominio público)", "url": "https://www.gutenberg.org/ebooks/2145"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["quo-vadis", "chesterton-the-ball-and-the-cross", "chesterton-the-innocence-of-father-brown"]
     }
   ],
 
@@ -4061,13 +4107,13 @@ window.FENIX = {
     { titulo: {"es": "Apologia pro vita sua", "en": "Apologia pro Vita Sua"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"} },
     { titulo: {"es": "Perder y ganar", "en": "Loss and Gain"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"} },
     { titulo: {"es": "El sueño de Geroncio", "en": "The Dream of Gerontius"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"} },
-    { titulo: {"es": "Señor del mundo", "en": "Lord of the World"}, autor: "Robert Hugh Benson", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/senor-del-mundo"} },
+    { titulo: {"es": "Señor del mundo"}, autor: "Robert Hugh Benson", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/senor-del-mundo"} },
     { titulo: {"es": "La amistad de Cristo", "en": "The Friendship of Christ"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/la-amistad-de-cristo"} },
     { titulo: {"es": "¿Con qué autoridad?", "en": "By What Authority?"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/con-que-autoridad"} },
     { titulo: {"es": "Confesiones de un converso", "en": "Confessions of a Convert"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/confesiones-de-un-converso"} },
     { titulo: {"es": "Europa y la fe", "en": "Europe and the Faith"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/europe-and-faith"} },
     { titulo: {"es": "Fabiola o la Iglesia de las catacumbas", "en": "Fabiola, or the Church of the Catacombs"}, autor: "Cardenal Nicholas Wiseman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fabiola-o-la-iglesia-de-las-catacumbas"} },
-    { titulo: {"es": "Ben-Hur", "en": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
+    { titulo: {"es": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
     { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },
     { titulo: {"es": "El jardín secreto"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-jardin-secreto"} },

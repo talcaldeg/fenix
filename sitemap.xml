@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-10-25</lastmod>
+    <lastmod>2026-10-26</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/</loc>
@@ -677,6 +677,14 @@
     <lastmod>2026-10-25</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/benson-lord-of-the-world/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/wallace-ben-hur/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/muestra/</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
@@ -811,5 +819,13 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/ligorio-the-glories-of-mary/muestra/</loc>
     <lastmod>2026-10-25</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/benson-lord-of-the-world/muestra/</loc>
+    <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/wallace-ben-hur/muestra/</loc>
+    <lastmod>2026-10-26</lastmod>
   </url>
 </urlset>
