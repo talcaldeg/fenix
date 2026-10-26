@@ -17,13 +17,13 @@
   var r = document.documentElement;
   if (location.pathname.indexOf("/fenix/") !== 0) return;
   r.classList.add("fenix");
-  // Mismo origen que Fénix: se respetan el tema y el idioma que el visitante eligió allá.
+  // Mismo origen que Fénix: se respeta el tema que el visitante eligió allá; el idioma, siempre español
+  // salvo una ruta /en (como index.html).
   try{
     var tema = JSON.parse(localStorage.getItem("fenix:tema"));
     if (tema === "light" || tema === "dark") r.dataset.theme = tema;
-    var idioma = JSON.parse(localStorage.getItem("fenix:idioma"));
   }catch(e){}
-  var en = /\/en\/?$/.test(location.pathname) || idioma === "en";  // sin elección guardada, español (como index.html)
+  var en = /\/en\/?$/.test(location.pathname);
   if (en) r.lang = "en";
 })();
 </script>

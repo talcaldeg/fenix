@@ -2049,10 +2049,11 @@ function iniciar(){
   let favoritos = almacen.leer("favoritos", {});
   // Fichas fusionadas: lo marcado con el id viejo pasa al id de la ficha que lo reemplazó.
   for (const [viejo, a] of Object.entries(D.alias || {})) [leidos, favoritos].forEach(m => { if (m[viejo]){ m[a.id] = m[a.id] || m[viejo]; delete m[viejo]; } });
-  // ?l=en o ?l=es lo fija el enlace (las páginas de cada libro lo usan); si no, lo elegido con el botón o español.
-  // No se sigue el idioma del navegador: con el celular en inglés no veían que existe la versión en español (26-oct).
+  // ?l=en o ?l=es lo fija el enlace (las páginas de cada libro lo usan); si no, siempre español.
+  // Ni el idioma del navegador ni el inglés elegido en otra visita: con el celular en inglés no veían
+  // que existe la versión en español (26-oct). El botón cambia el idioma solo mientras dura la visita.
   const langUrl = new URLSearchParams(location.search).get("l");
-  let lang = ["es","en"].includes(langUrl) ? langUrl : almacen.leer("idioma", "es");
+  let lang = ["es","en"].includes(langUrl) ? langUrl : "es";
 
   // ---------- textos de la interfaz ----------
   const T = {
@@ -2169,7 +2170,7 @@ function iniciar(){
     raiz.dataset.theme = oscuroAhora ? "light" : "dark";
     almacen.guardar("tema", raiz.dataset.theme);
   });
-  $("#btnIdioma").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; almacen.guardar("idioma", lang); aplicarIdioma(); });
+  $("#btnIdioma").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; aplicarIdioma(); });
   $("#btnMenu").addEventListener("click", () => $("#btnMenu").setAttribute("aria-expanded", $("#menu").classList.toggle("abierto")));
   const cerrarMenu = () => { $("#menu").classList.remove("abierto"); $("#btnMenu").setAttribute("aria-expanded", "false"); };
   document.addEventListener("click", e => { if (!e.target.closest("#menuMas")) $("#menuMas").open = false; });
