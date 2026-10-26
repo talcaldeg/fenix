@@ -111,22 +111,37 @@ def revisar(raiz, capturas=None):
             pg.close()
         # Un enlace del menú lleva al principio de su vista aunque ya se esté en ella, abajo (el hash no
         # cambia y no hay hashchange), o en una sección de la misma vista (#editores -> Editorial).
+        # Con el equipo cargado, el desplazamiento suave (scroll-behavior: smooth) tarda segundos y se
+        # medía a medio camino (26-oct-2026: «#encuadernadores -> #editorial deja la página en 10056px»,
+        # y la página sí llegaba arriba): antes del clic se espera a que la página quede quieta (posición
+        # y alto, que crece con las imágenes diferidas), y después se le da hasta 15 s para llegar arriba.
+        # Un salto roto igual falla, solo que más tarde. Sin networkidle: con carga a veces no llega nunca.
+        def quieta():
+            pg.evaluate("delete window.__quieta")
+            try:
+                pg.wait_for_function("""() => { const y = scrollY + ':' + document.documentElement.scrollHeight,
+                                                      t = performance.now(), q = window.__quieta;
+                                                if (!q || q.y !== y) { window.__quieta = {y, t}; return false; }
+                                                return t - q.t > 500; }""", timeout=15000)
+            except Exception:
+                pass  # si nunca se aquieta, se mide igual: la falla, si la hay, la dice el salto
         pg = nav.new_page(viewport={"width": 1280, "height": 720})
         pg.goto(f"{base}#inicio")
         pg.wait_for_load_state("networkidle")
         for desde, destino in [(v, v) for v in VISTAS] + [("editores", "editorial"), ("encuadernadores", "editorial")]:
             pg.goto(f"{base}#{desde}")
             pg.wait_for_timeout(300)
-            pg.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)")
-            pg.wait_for_timeout(100)
+            quieta()  # que termine la bajada a #editores o #encuadernadores
+            pg.evaluate("window.scrollTo({top: document.documentElement.scrollHeight, behavior: 'instant'})")
+            quieta()
             if pg.evaluate("scrollY") < 50:
                 continue  # la vista cabe entera: no hay a dónde volver
             # La cabecera incluye la marca (#inicio); una vista sin enlace arriba (Oraciones) no se mide.
             if not pg.evaluate(f"""() => {{ const a = document.querySelector('header a[href="#{destino}"]');
                                           if (a) a.click(); return !!a; }}"""):
                 continue
-            try:  # el desplazamiento es suave (scroll-behavior: smooth): se le da hasta 2 s
-                pg.wait_for_function("scrollY <= 5", timeout=2000)
+            try:
+                pg.wait_for_function("scrollY <= 5", timeout=15000)
             except Exception:
                 pass
             y = pg.evaluate("scrollY")
