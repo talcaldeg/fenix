@@ -23,7 +23,7 @@
     if (tema === "light" || tema === "dark") r.dataset.theme = tema;
     var idioma = JSON.parse(localStorage.getItem("fenix:idioma"));
   }catch(e){}
-  var en = /\/en\/?$/.test(location.pathname) || (idioma ? idioma === "en" : (navigator.language || "es").indexOf("en") === 0);
+  var en = /\/en\/?$/.test(location.pathname) || idioma === "en";  // sin elección guardada, español (como index.html)
   if (en) r.lang = "en";
 })();
 </script>
