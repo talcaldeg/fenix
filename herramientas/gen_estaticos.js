@@ -9,7 +9,8 @@
 //     en el navegador (el texto sale de herramientas/muestras.py, que este script corre).
 //   - sitemap.xml: la portada y cada libro; lastmod cambia solo si la página cambió.
 //   - llms.txt: el catálogo en texto plano para los sistemas de IA (llmstxt.org).
-//   - index.html: el bloque JSON-LD entre las marcas JSONLD:inicio y JSONLD:fin.
+//   - index.html: el bloque JSON-LD entre las marcas JSONLD:inicio y JSONLD:fin, y entre
+//     DESCARGAS:inicio y DESCARGAS:fin el nombre con huella con que se guarda cada EPUB.
 //   - sw.js: su VERSION, para que la app instalada se renueve al publicar.
 //
 // Uso (desde la carpeta fenix):  node herramientas/gen_estaticos.js
@@ -35,6 +36,14 @@ const escribirSiCambia = (f, txt) => {
 global.window = {};
 eval(leer("datos.js"));
 const D = window.FENIX;
+
+// Nombre con que se guarda el EPUB en el teléfono: lleva la huella del archivo. Si el libro se
+// rearma, el nombre cambia y Chrome lo baja sin preguntar «¿Descargar de nuevo?»; si es el mismo
+// archivo, el aviso sigue saliendo (ya lo tiene). La URL no cambia, así no se rompen los enlaces.
+const nombresDescarga = {};
+const nombreDescarga = u => nombresDescarga[u] || (nombresDescarga[u] = path.basename(u).replace(/(\.[^.]+)$/,
+  "-" + require("crypto").createHash("sha1").update(fs.readFileSync(path.join(RAIZ, u))).digest("hex").slice(0, 6) + "$1"));
+const attrArchivo = (f, u) => f === "pdf" ? `target="_blank" rel="noopener"` : `download="${esc(nombreDescarga(u))}"`;
 
 // Regla dura: una obra, una ficha. Si hay un posible duplicado, no se genera nada.
 const { revisarDuplicados } = require("./revisar_duplicados.js");
@@ -288,7 +297,7 @@ function paginaLibro(l){
   const otra = raizL ? [raizL, ...Object.keys(raizL.versiones || {}).map(k => vista(raizL, k))].find(p => p.idioma !== lang) : null;
   const otraUrl = otra ? B + (otra._ruta || "libro/" + otra.id + "/") : null;
   const botones = [
-    ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${f === "pdf" ? `target="_blank" rel="noopener"` : "download"}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
+    ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${attrArchivo(f, u)}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
     ...(muestraDe(l) ? [`<a class="btn" href="muestra/">${esc(x.hojear)}</a>`] : []),
     ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
@@ -409,7 +418,7 @@ function paginaMuestra(l, m){
   const descripcion = x.dMuestra(l.titulo, autorCorto(l.autor));
   const og = l.imagen && l.imagen.src.replace(/^img\/portadas\//, "img/portadas/og/");
   const imagen = !l.imagen ? SITIO + "img/compartir.jpg" : og !== l.imagen.src && fs.existsSync(path.join(RAIZ, og)) ? SITIO + og : abs(l.imagen.src);
-  const descargas = Object.entries(l.archivos || {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${f === "pdf" ? `target="_blank" rel="noopener"` : "download"}>${esc(x.descargar)} ${f.toUpperCase()}</a>`);
+  const descargas = Object.entries(l.archivos || {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${attrArchivo(f, u)}>${esc(x.descargar)} ${f.toUpperCase()}</a>`);
   return `<!doctype html>
 <html lang="${lang}">
 <head>
@@ -551,8 +560,16 @@ const conCatalogo = INDEX.includes("<!-- CATALOGO:inicio")
   ? INDEX.replace(/<!-- CATALOGO:inicio[\s\S]*?<!-- CATALOGO:fin -->/, catalogo)
   : INDEX.replace("<main>\n", `<main>\n  ${catalogo}\n`);
 if (!conCatalogo.includes("<!-- CATALOGO:inicio")) throw new Error("index.html no tiene <main> para el catálogo");
-const indexNuevo = conCatalogo.replace(/<!-- JSONLD:inicio[\s\S]*?<!-- JSONLD:fin -->/, bloque);
-if (indexNuevo === conCatalogo && !INDEX.includes("<!-- JSONLD:inicio")) throw new Error("index.html no tiene las marcas JSONLD:inicio y JSONLD:fin");
+const conJsonld = conCatalogo.replace(/<!-- JSONLD:inicio[\s\S]*?<!-- JSONLD:fin -->/, bloque);
+if (conJsonld === conCatalogo && !INDEX.includes("<!-- JSONLD:inicio")) throw new Error("index.html no tiene las marcas JSONLD:inicio y JSONLD:fin");
+// Nombres con huella de cada EPUB (nombreDescarga), para el botón de descarga de la portada.
+const epubs = [...new Set(JSON.stringify(D).match(/libros\/[^"]+\.epub/g) || [])].filter(u => fs.existsSync(path.join(RAIZ, u))).sort();
+const descargas = `<!-- DESCARGAS:inicio - lo genera herramientas/gen_estaticos.js; no editar a mano -->
+<script>window.DESCARGAS = ${JSON.stringify(Object.fromEntries(epubs.map(u => [u, nombreDescarga(u)])))};</script>
+<!-- DESCARGAS:fin -->`;
+const indexNuevo = conJsonld.includes("<!-- DESCARGAS:inicio")
+  ? conJsonld.replace(/<!-- DESCARGAS:inicio[\s\S]*?<!-- DESCARGAS:fin -->/, descargas)
+  : conJsonld.replace("<!-- JSONLD:fin -->", "<!-- JSONLD:fin -->\n" + descargas);
 if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
 
 // ---------- sw.js ----------
