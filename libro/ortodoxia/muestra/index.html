@@ -159,7 +159,8 @@ document.getElementById("volver").onclick=function(e){try{if(document.referrer&&
 </script>
 <!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
 <style>
-.aviso-epub{position:fixed; left:16px; right:16px; bottom:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 system-ui,sans-serif}
+/* Arriba: abajo lo tapa el mensaje «Descarga completa · Abrir» de Chrome, que es justo el que hay que tocar. */
+.aviso-epub{position:fixed; left:16px; right:16px; top:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 system-ui,sans-serif}
 .aviso-epub p{margin:0; flex:1}
 .aviso-epub a{color:var(--vino); font-weight:600}
 .aviso-epub button{flex:none; width:40px; height:40px; border:0; background:none; color:var(--muted); font-size:24px; line-height:1; cursor:pointer}
@@ -172,8 +173,8 @@ document.addEventListener("click", function(e){
   if (!android && !ios) return;
   var en = /^en/.test(document.documentElement.lang), play = "https://play.google.com/store/apps/details?id=com.google.android.apps.books";
   var html = android
-    ? (en ? 'The book is saved in <b>Downloads</b>. To read it, tap the download notice and choose <b>Google Play Books</b>. Don\'t have it? <a href="' + play + '" target="_blank" rel="noopener">Install it for free</a>. The PDF, instead, opens straight away.'
-          : 'El libro queda en <b>Descargas</b>. Para leerlo, toca el aviso de la descarga y elige <b>Google Play Libros</b>. ¿No la tienes? <a href="' + play + '" target="_blank" rel="noopener">Instálala gratis</a>. El PDF, en cambio, se abre directo.')
+    ? (en ? 'It does not open by itself: when it finishes, tap <b>Open</b> in the message at the bottom and choose <b>Play Books</b> or your reading app. Missed it? It is in <b>Files › Downloads</b>. No app? <a href="' + play + '" target="_blank" rel="noopener">Install Play Books for free</a>.'
+          : 'No se abre solo: cuando termine de bajar, toca <b>Abrir</b> en el mensaje de abajo y elige <b>Play Libros</b> o tu app de lectura. ¿Se te pasó? Está en <b>Archivos › Descargas</b>. ¿Sin app? <a href="' + play + '" target="_blank" rel="noopener">Instala Play Libros gratis</a>.')
     : (en ? 'Tap <b>Download</b>. Then open it from Safari\'s downloads (the ↓ arrow), tap Share and choose <b>Books</b>. The PDF, instead, opens straight away.'
           : 'Toca <b>Descargar</b>. Después ábrelo desde las descargas de Safari (la flecha ↓), toca Compartir y elige <b>Libros</b>. El PDF, en cambio, se abre directo.');
   var v = document.querySelector(".aviso-epub");
