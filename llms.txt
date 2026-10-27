@@ -39,6 +39,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [St. Francis of Assisi - G. K. Chesterton (1923)](https://talcaldeg.github.io/fenix/libro/chesterton-st-francis-of-assisi/) - A short and unconventional biography of Francis of Assisi, written through Chesterton's eyes: more interested in understanding why Francis did what he did than in piling up facts. Descarga gratuita en EPUB y PDF.
 - [The Everlasting Man - G. K. Chesterton (1925)](https://talcaldeg.github.io/fenix/libro/chesterton-the-everlasting-man/) - Chesterton tells the story of humanity «from the outside», as it might look to someone who took nothing for granted: prehistoric man, pagan myths, the Roman world and, at the end, Christianity. Descarga gratuita en EPUB y PDF.
 - [The Glories of Mary - St. Alphonsus Liguori (1750)](https://talcaldeg.github.io/fenix/libro/ligorio-the-glories-of-mary/) - The great Marian work of Saint Alphonsus Liguori, Doctor of the Church, first published in 1750. Descarga gratuita en EPUB y PDF.
+- [The Holy Bible (Douay-Rheims, Challoner revision) - Douay-Rheims translation, revised by Bishop Richard Challoner (1582-1610; rev. 1749-1752)](https://talcaldeg.github.io/fenix/libro/douay-rheims-bible/) - The classic Catholic Bible in English, translated from St. Descarga gratuita en EPUB y PDF.
 
 ## Oración
 
@@ -125,6 +126,8 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [Los piratas de la Malasia - Emilio Salgari (trad. R. Blanco Belmonte) (1896)](https://talcaldeg.github.io/fenix/libro/salgari-los-piratas-de-la-malasia/) - El indio Kammamuri naufraga en los mares de la Malasia llevando consigo a Ada, la prometida de su amo Tremal-Naik, que perdió la razón en manos de los thugs. Descarga gratuita en EPUB y PDF.
 - [Lord of the World - Robert Hugh Benson (1907)](https://talcaldeg.github.io/fenix/libro/benson-lord-of-the-world/) - Early in the twenty-first century a godless humanitarianism rules the world: euthanasia is routine, the Church is cornered, and Europe, America and the East are heading for war. Descarga gratuita en EPUB y PDF.
 - [Ben-Hur: A Tale of the Christ - Lew Wallace (1880)](https://talcaldeg.github.io/fenix/libro/wallace-ben-hur/) - Judah Ben-Hur, a young Jewish prince of Jerusalem, is betrayed by his childhood friend, the Roman Messala: one accident is enough to send him to the galleys and make his mother and sister disappear. Descarga gratuita en EPUB y PDF.
+- [Loss and Gain: The Story of a Convert - Saint John Henry Newman (1848)](https://talcaldeg.github.io/fenix/libro/newman-loss-and-gain/) - Charles Reding, son of an Anglican clergyman, goes up to Oxford in the midst of the Oxford Movement. Descarga gratuita en EPUB y PDF.
+- [Fabiola, or the Church of the Catacombs - Cardinal Nicholas Wiseman (1854)](https://talcaldeg.github.io/fenix/libro/wiseman-fabiola/) - Rome, AD 302, on the eve of Diocletian's great persecution. Descarga gratuita en EPUB y PDF.
 
 ## Teatro
 
@@ -179,6 +182,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [La gatomaquia - Lope de Vega (1634)](https://talcaldeg.github.io/fenix/libro/lope-la-gatomaquia/) - Poema épico burlesco en siete silvas que cuenta, con el tono grave de la épica clásica, los amores y rivalidades de un grupo de gatos. Se lee gratis en el sitio del titular.
 - [Martín Fierro - José Hernández (1872)](https://talcaldeg.github.io/fenix/libro/hernandez-martin-fierro/) - Poema narrativo en dos partes, «El gaucho Martín Fierro» (1872) y «La vuelta de Martín Fierro» (1879), sobre la vida de un paisano de la pampa argentina. Se lee gratis en el sitio del titular.
 - [Cantos de vida y esperanza, Los cisnes y otros poemas - Rubén Darío (1905)](https://talcaldeg.github.io/fenix/libro/dario-cantos-de-vida-y-esperanza/) - Colección de poemas de madurez del poeta nicaragüense, en la que su estilo modernista se une a una reflexión sobre el paso del tiempo, la muerte, la fe y la incertidumbre ante el futuro. Se lee gratis en el sitio del titular.
+- [The Dream of Gerontius - Saint John Henry Newman (1865)](https://talcaldeg.github.io/fenix/libro/newman-the-dream-of-gerontius/) - A dramatic poem on the death of a Christian and the journey of his soul. Descarga gratuita en EPUB y PDF.
 
 ## Ensayo e historia
 

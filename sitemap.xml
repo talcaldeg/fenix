@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-10-26</lastmod>
+    <lastmod>2026-10-27</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/</loc>
@@ -685,6 +685,22 @@
     <lastmod>2026-10-26</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/douay-rheims-bible/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/newman-loss-and-gain/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/wiseman-fabiola/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/newman-the-dream-of-gerontius/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/muestra/</loc>
     <lastmod>2026-10-24</lastmod>
   </url>
@@ -827,5 +843,21 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/wallace-ben-hur/muestra/</loc>
     <lastmod>2026-10-26</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/douay-rheims-bible/muestra/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/newman-loss-and-gain/muestra/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/wiseman-fabiola/muestra/</loc>
+    <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/newman-the-dream-of-gerontius/muestra/</loc>
+    <lastmod>2026-10-27</lastmod>
   </url>
 </urlset>

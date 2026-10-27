@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "26-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "27-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -4066,6 +4066,99 @@ window.FENIX = {
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"},
       encuadernador: "Juan Ignacio Alcalde G.",
       parecidos: ["quo-vadis", "chesterton-the-ball-and-the-cross", "chesterton-the-innocence-of-father-brown"]
+    },
+    {
+      id: "douay-rheims-bible",
+      titulo: "The Holy Bible (Douay-Rheims, Challoner revision)",
+      autor: "Douay-Rheims translation, revised by Bishop Richard Challoner",
+      anio: "1582-1610; rev. 1749-1752",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "La Biblia católica clásica en lengua inglesa, traducida de la Vulgata latina de san Jerónimo y cotejada con los textos hebreo y griego. El Nuevo Testamento se publicó en Reims en 1582 y el Antiguo en Douai en 1609-1610, obra de los católicos ingleses exiliados del Colegio Inglés; el obispo Richard Challoner la revisó entre 1749 y 1752. Contiene los 73 libros del canon católico, con los argumentos de cada capítulo y las notas de Challoner que explican los pasajes difíciles según la doctrina de la Iglesia.", "en": "The classic Catholic Bible in English, translated from St. Jerome's Latin Vulgate and compared with the Hebrew and Greek texts. The New Testament was published at Rheims in 1582 and the Old at Douai in 1609-1610, the work of English Catholic exiles at the English College; Bishop Richard Challoner revised it between 1749 and 1752. It contains the 73 books of the Catholic canon, with the argument of each chapter and Challoner's notes explaining difficult passages according to the teaching of the Church."},
+      porque: {"es": "Para leer y rezar la Sagrada Escritura completa en una traducción católica de lengua inglesa venerable, la que usaron generaciones de católicos de habla inglesa hasta el siglo XX. Sus breves notas ayudan a entender el texto sin salir de la página. Su inglés es antiguo y cercano al latín, pero de una dignidad que se presta a la oración.", "en": "For reading and praying the whole of Sacred Scripture in a venerable Catholic English translation, the one used by generations of English-speaking Catholics into the twentieth century. Its brief notes help one understand the text without leaving the page. Its English is old and close to the Latin, but has a dignity well suited to prayer."},
+      imagen: {"src": "img/portadas/douay-rheims-bible.jpg", "credito": {"es": "Antonello da Messina, «San Jerónimo en su estudio», h. 1475", "en": "Antonello da Messina, «Saint Jerome in his Study», c. 1475"}, "url": "https://commons.wikimedia.org/wiki/File:Antonello_da_Messina_-_St_Jerome_in_his_study_-_National_Gallery_London.jpg"},
+      citas: [
+        "In the beginning God created heaven, and earth.",
+        "The Lord ruleth me: and I shall want nothing.",
+        "In the beginning was the Word: and the Word was with God: and the Word was God.",
+        "For God so loved the world, as to give his only begotten Son: that whosoever believeth in him may not perish, but may have life everlasting.",
+        "I am the way, and the truth, and the life."
+      ],
+      archivos: {"epub": "libros/douay-rheims-bible.epub", "pdf": "libros/douay-rheims-bible.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 1581 (dominio público): Douay-Rheims con la revisión de Challoner", "url": "https://www.gutenberg.org/ebooks/1581"},
+      delibris: null,
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["santos-evangelios-navarra", "imitacion-de-cristo", "fray-luis-de-leon-de-los-nombres-de-cristo"]
+    },
+    {
+      id: "newman-loss-and-gain",
+      titulo: "Loss and Gain: The Story of a Convert",
+      autor: "Saint John Henry Newman",
+      anio: "1848",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Charles Reding, hijo de un clérigo anglicano, llega a estudiar a Oxford en plena agitación del Movimiento de Oxford. Entre conversaciones con compañeros, tutores y profesores de todas las tendencias, empieza a preguntarse dónde está la verdadera Iglesia, y sus dudas lo enfrentan a su familia, a sus amigos y a su propio porvenir. La novela sigue paso a paso, con humor y finura, el camino intelectual y espiritual que lo lleva a hacerse católico. Newman la escribió poco después de su propia conversión.", "en": "Charles Reding, son of an Anglican clergyman, goes up to Oxford in the midst of the Oxford Movement. Through conversations with fellow students, tutors and dons of every party, he begins to ask where the true Church is, and his doubts set him against his family, his friends and his own prospects. The novel follows, step by step and with humour and finesse, the intellectual and spiritual path that leads him to become a Catholic. Newman wrote it shortly after his own conversion."},
+      porque: {"es": "Para quien busca la verdad con honestidad intelectual y quiere ver cómo razón y fe se encuentran en una vida concreta. Es una ventana a la conversión del propio Newman, contada con ironía sobre las modas religiosas de su tiempo. Los diálogos teológicos piden atención, pero el retrato de un joven que lo arriesga todo por la verdad conmueve a cualquier lector.", "en": "For anyone who seeks the truth with intellectual honesty and wants to see how reason and faith meet in a real life. It is a window onto Newman's own conversion, told with irony about the religious fashions of his day. The theological dialogues ask for attention, but the portrait of a young man who risks everything for the truth moves any reader."},
+      imagen: {"src": "img/portadas/newman-loss-and-gain.jpg", "credito": {"es": "William Turner of Oxford, «Oxford desde el río, con Christ Church en primer plano», h. 1820", "en": "William Turner of Oxford, «Oxford from the River with Christ Church in the Foreground», c. 1820"}, "url": "https://commons.wikimedia.org/wiki/File:William_Turner_of_Oxford_-_Oxford_from_the_River_with_Christ_Church_in_the_Foreground_-_Google_Art_Project.jpg"},
+      citas: [
+        "It is not a mere form of words,--it is a great action, the greatest action that can be on earth.",
+        "the Catholic Church is the only true Church. I may be wrong in many things; I cannot be wrong in this.",
+        "Too late have I known Thee, O Thou ancient Truth; too late have I found Thee, First and only Fair.",
+        "so happy in the Present, that he had no thoughts either for the Past or the Future."
+      ],
+      archivos: {"epub": "libros/newman-loss-and-gain.epub", "pdf": "libros/newman-loss-and-gain.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 24574 (dominio público), sobre la 8.ª edición: Londres, Burns and Oates, 1881", "url": "https://www.gutenberg.org/ebooks/24574"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["chesterton-the-ball-and-the-cross", "quo-vadis", "benson-lord-of-the-world"]
+    },
+    {
+      id: "wiseman-fabiola",
+      titulo: "Fabiola, or the Church of the Catacombs",
+      autor: "Cardinal Nicholas Wiseman",
+      anio: "1854",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Roma, año 302, en vísperas de la gran persecución de Diocleciano. Fabiola, una joven patricia rica, culta y orgullosa, desprecia a los cristianos sin conocerlos, mientras a su alrededor viven en secreto la niña Inés, el soldado Sebastián y el joven Pancracio. A través de su amistad con ellos y del encuentro con una esclava ciega, Fabiola descubre la caridad, el perdón y la fe que los lleva a dar la vida. La novela recorre las catacumbas, los tribunales y el anfiteatro, con los mártires romanos como protagonistas.", "en": "Rome, AD 302, on the eve of Diocletian's great persecution. Fabiola, a young patrician, rich, cultured and proud, despises the Christians without knowing them, while around her the girl Agnes, the soldier Sebastian and the youth Pancratius live their faith in secret. Through her friendship with them and her meeting with a blind slave girl, Fabiola discovers the charity, forgiveness and faith that lead them to give their lives. The novel moves through the catacombs, the courts and the amphitheatre, with the Roman martyrs as its heroes."},
+      porque: {"es": "Para lectores jóvenes y adultos que quieran conocer cómo vivían y morían los primeros cristianos: Wiseman, gran arqueólogo de las catacumbas, mezcla la novela con la historia y las actas de los mártires. Muestra con fuerza que la caridad cristiana era una novedad en el mundo antiguo. Es lenta en algunos pasajes de erudición, pero sus escenas de martirio y conversión son inolvidables.", "en": "For young and adult readers who want to know how the first Christians lived and died: Wiseman, a great archaeologist of the catacombs, blends fiction with history and the acts of the martyrs. It shows powerfully that Christian charity was something new in the ancient world. Some learned passages are slow, but its scenes of martyrdom and conversion are unforgettable."},
+      imagen: {"src": "img/portadas/wiseman-fabiola.jpg", "credito": {"es": "Jean-Jacques Henner, «Fabiola», 1893", "en": "Jean-Jacques Henner, «Fabiola», 1893"}, "url": "https://commons.wikimedia.org/wiki/File:HENNER_Jean-Jacques_Fabiola_Huile_sur_toile.jpg"},
+      citas: [
+        "May God forgive you, as I freely and fully do; and may He bless you abundantly.",
+        "she had never imagined that there was such a thing as disinterested love on earth between strangers; as to charity, it was a word unknown to Greece or Rome.",
+        "a poor slave can only do so by finding some one still poorer, and helpless, like me. That thought makes her food by far the sweetest.",
+        "what truth can they possess, and what inducements can they have, to die for any of their vain opinions?"
+      ],
+      archivos: {"epub": "libros/wiseman-fabiola.epub", "pdf": "libros/wiseman-fabiola.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 62254 (dominio público), sobre la edición ilustrada de Benziger Brothers, Nueva York, 1886", "url": "https://www.gutenberg.org/ebooks/62254"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fabiola-o-la-iglesia-de-las-catacumbas"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["quo-vadis", "wallace-ben-hur", "chesterton-the-ball-and-the-cross"]
+    },
+    {
+      id: "newman-the-dream-of-gerontius",
+      titulo: "The Dream of Gerontius",
+      autor: "Saint John Henry Newman",
+      anio: "1865",
+      idioma: "en",
+      categoria: "poesia",
+      recomendado: false,
+      resumen: {"es": "Poema dramático sobre la muerte de un cristiano y el viaje de su alma. Gerontius agoniza rodeado de amigos que rezan por él y del sacerdote que lo encomienda a Dios; luego despierta, ya sin cuerpo, en manos de su Ángel de la Guarda, que lo conduce ante el juicio entre los gritos de los demonios y los coros de los ángeles. Tras ver un instante a Dios, el alma pide ella misma ir al purgatorio, donde espera en paz su purificación. Esta edición incluye la introducción y las notas de Maurice Francis Egan.", "en": "A dramatic poem on the death of a Christian and the journey of his soul. Gerontius lies dying, surrounded by friends who pray for him and by the priest who commends him to God; then he wakes, now without his body, in the hands of his Guardian Angel, who leads him to judgment amid the cries of demons and the choirs of angels. After a glimpse of God, the soul itself asks to be taken to purgatory, where it awaits its purification in peace. This edition includes Maurice Francis Egan's introduction and notes."},
+      porque: {"es": "Es una meditación sobre la muerte, el juicio y el purgatorio llena de esperanza, escrita por un santo y doctor de la Iglesia. Sirve para rezar por los difuntos, para prepararse a la propia muerte y para entender la doctrina católica sobre lo que viene después. Sus himnos, como «Praise to the Holiest», se cantan todavía en las iglesias de habla inglesa.", "en": "It is a meditation on death, judgment and purgatory full of hope, written by a saint and Doctor of the Church. It helps one pray for the dead, prepare for one's own death and understand Catholic teaching on what comes after. Its hymns, such as «Praise to the Holiest», are still sung in English-speaking churches."},
+      imagen: {"src": "img/portadas/newman-the-dream-of-gerontius.jpg", "credito": {"es": "El Bosco, «Ascenso al Empíreo», h. 1500-1504", "en": "Hieronymus Bosch, «Ascent of the Blessed», c. 1500-1504"}, "url": "https://commons.wikimedia.org/wiki/File:Hieronymus_Bosch_013.jpg"},
+      citas: [
+        "Jesu, Maria--I am near to death, / And Thou art calling me; I know it now--",
+        "Firmly I believe and truly / God is Three, and God is One; / And I next acknowledge duly / Manhood taken by the Son.",
+        "Praise to the Holiest in the height, / And in the depth be praise: / In all His words most wonderful; / Most sure in all His ways!",
+        "Take me away, and in the lowest deep / There let me be, / And there in hope the lone night-watches keep, / Told out for me."
+      ],
+      archivos: {"epub": "libros/newman-the-dream-of-gerontius.epub", "pdf": "libros/newman-the-dream-of-gerontius.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 48927 (dominio público), sobre la edición de Longmans, Green, and Co., Nueva York, 1910, con introducción y notas de Maurice Francis Egan", "url": "https://www.gutenberg.org/ebooks/48927"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["newman-loss-and-gain", "imitacion-de-cristo", "fray-luis-de-leon-de-los-nombres-de-cristo"]
     }
   ],
 
@@ -4105,14 +4198,14 @@ window.FENIX = {
     { titulo: {"es": "Progreso del alma en la vida espiritual", "en": "Growth in Holiness"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/progreso-del-alma-en-la-vida-espiritual"} },
     { titulo: {"es": "El alma de todo apostolado", "en": "The Soul of the Apostolate"}, autor: "Jean-Baptiste Chautard", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-alma-de-todo-apostolado"} },
     { titulo: {"es": "Apologia pro vita sua", "en": "Apologia pro Vita Sua"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"} },
-    { titulo: {"es": "Perder y ganar", "en": "Loss and Gain"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"} },
-    { titulo: {"es": "El sueño de Geroncio", "en": "The Dream of Gerontius"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"} },
+    { titulo: {"es": "Perder y ganar"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"} },
+    { titulo: {"es": "El sueño de Geroncio"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"} },
     { titulo: {"es": "Señor del mundo"}, autor: "Robert Hugh Benson", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/senor-del-mundo"} },
     { titulo: {"es": "La amistad de Cristo", "en": "The Friendship of Christ"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/la-amistad-de-cristo"} },
     { titulo: {"es": "¿Con qué autoridad?", "en": "By What Authority?"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/con-que-autoridad"} },
     { titulo: {"es": "Confesiones de un converso", "en": "Confessions of a Convert"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/confesiones-de-un-converso"} },
     { titulo: {"es": "Europa y la fe", "en": "Europe and the Faith"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/europe-and-faith"} },
-    { titulo: {"es": "Fabiola o la Iglesia de las catacumbas", "en": "Fabiola, or the Church of the Catacombs"}, autor: "Cardenal Nicholas Wiseman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fabiola-o-la-iglesia-de-las-catacumbas"} },
+    { titulo: {"es": "Fabiola o la Iglesia de las catacumbas"}, autor: "Cardenal Nicholas Wiseman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fabiola-o-la-iglesia-de-las-catacumbas"} },
     { titulo: {"es": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
     { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },

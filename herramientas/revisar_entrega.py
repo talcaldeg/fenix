@@ -14,7 +14,6 @@ import html
 import json
 import re
 import sys
-import tempfile
 import urllib.request
 import zipfile
 from pathlib import Path
@@ -31,10 +30,16 @@ SIN_TILDE = str.maketrans("áéíóúÁÉÍÓÚ", "aeiouAEIOU")
 
 
 def arreglar(carpeta: Path):
-    """Quita las tildes antiguas del texto (solo en español) y de las citas de la ficha."""
+    """Quita las tildes antiguas del texto (solo en español) y de las citas de la ficha; en inglés,
+    pasa a «Saint» el autor que llegó como «San»/«Santa»."""
     fp = carpeta / "ficha.json"
     f = json.loads(fp.read_text(encoding="utf-8"))
     if f.get("idioma") != "es":
+        autor = re.sub(r"^Sant[ao]? ", "Saint ", f.get("autor") or "")
+        if autor != f.get("autor"):
+            f["autor"] = autor
+            fp.write_text(json.dumps(f, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+            print("--arreglar: autor ->", autor)
         return
     quitar = lambda s: ANTIGUAS.sub(lambda m: m.group(0).translate(SIN_TILDE), s)  # noqa: E731
     n = 0
@@ -66,7 +71,31 @@ def plano(s):
     s = re.sub(r"[*_#>]", "", s)
     s = re.sub(r"[«»“”\"]", '"', s).replace("’", "'").replace("‘", "'")
     s = re.sub(r"\s*(--|—|–)\s*", "—", s)  # Gutenberg escribe -- en el .txt y — en el EPUB
+    s = re.sub(r"\s/\s", " ", s)  # un verso citado en una línea: «... in the height, / And in ...»
+    # Llamadas de nota y números de verso que el EPUB intercala: «lowest deep[33] 860 there» (Geroncio).
+    s = re.sub(r"\[\d+\]|(?<!\S)\d+(?!\S)", " ", s)
     return re.sub(r"\s+", " ", s).strip().lower()
+
+
+def epub_gutenberg(numero: int) -> Path:
+    """El EPUB de Gutenberg, bajado una vez por recepción (revisar y armar usan el mismo) y con
+    reintentos: Fabiola (33 MB) se cortó a la mitad el 27-oct-2026."""
+    ruta = Path(__file__).resolve().parent.parent / ".entregas" / "_gutenberg" / f"{numero}.epub"
+    if ruta.exists() and zipfile.is_zipfile(ruta):
+        return ruta
+    ruta.parent.mkdir(parents=True, exist_ok=True)
+    url = f"https://www.gutenberg.org/ebooks/{numero}.epub3.images"
+    for intento in range(3):
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": "Proyecto Fenix"})
+            ruta.write_bytes(urllib.request.urlopen(req, timeout=300).read())
+            if zipfile.is_zipfile(ruta):
+                return ruta
+        except OSError as e:
+            if intento == 2:
+                raise
+            print(f"Reintento {intento + 1} de {url} ({e})")
+    raise OSError(f"{url} no trajo un EPUB válido")
 
 
 def texto_epub(ruta):
@@ -118,6 +147,11 @@ def revisar(carpeta: Path):
         if re.search(r"[—–]", v.get("es") or ""):
             E.append(f"ficha: «{campo}.es» tiene raya larga o semirraya")
 
+    # El autor va en el idioma del libro: la lista de buscados lo trae en español y en inglés se
+    # copió «San John Henry Newman» a la portada (27-oct-2026). --arreglar lo pasa a «Saint».
+    if f.get("idioma") == "en" and re.match(r"Sant[ao]? ", f.get("autor") or ""):
+        E.append(f"ficha: autor «{f['autor']}» en español en un libro en inglés (Saint ...); se arregla con --arreglar")
+
     version = f.get("versionDe")
     gutenberg = f.get("gutenberg")
     ids = ids_fenix()
@@ -149,7 +183,10 @@ def revisar(carpeta: Path):
             A.append("ficha: «parecidos» debería traer tres ids de Fénix")
         if ids is not None:
             # Un lote de entregas puede citarse entre sí: valen los id de las carpetas hermanas.
-            lote = {p.name for p in carpeta.resolve().parent.iterdir() if p.is_dir()}
+            # recibir_entrega deja cada zip en .entregas/<zip>/<id>/: valen también los primos.
+            padre = carpeta.resolve().parent
+            lote = {p.name for d in (padre, *padre.parent.iterdir()) if d.is_dir()
+                    for p in d.iterdir() if p.is_dir()}
             for p in par:
                 if p not in ids and p not in lote:
                     E.append(f"ficha: el parecido {p} no existe en datos.js ni en el lote")
@@ -197,12 +234,7 @@ def revisar(carpeta: Path):
         # (Ligorio, 25-oct-2026: una comilla de cierre fuera de lugar frenó la recepción).
         if isinstance(gutenberg, int):
             try:
-                req = urllib.request.Request(f"https://www.gutenberg.org/ebooks/{gutenberg}.epub3.images",
-                                             headers={"User-Agent": "Proyecto Fenix"})
-                with tempfile.TemporaryDirectory() as tmp:
-                    ep = Path(tmp) / "g.epub"
-                    ep.write_bytes(urllib.request.urlopen(req, timeout=120).read())
-                    base = plano(texto_epub(ep))
+                base = plano(texto_epub(epub_gutenberg(gutenberg)))
                 for c in citas:
                     if plano(c) not in base:
                         E.append(f"cita que no está en el EPUB de Gutenberg: «{c[:70]}...»")
