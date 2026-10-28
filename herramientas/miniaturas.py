@@ -25,6 +25,11 @@ TRABAJOS = [  # (carpeta fuente, subcarpeta destino, ancho)
     (IMG / "cuadros", "medio", 360),
     (IMG / "portadas", "medio", 360),
 ]
+# Recorte a mano de la miniatura (x0, y0, x1, y1 sobre el cuadro de 600x900, en 2:3) cuando el
+# recorte automático deja la figura chica: a 44x66 solo se reconoce un personaje si llena el cuadro.
+MINI_RECORTE = {
+    "saint-exupery-el-principito": (300, 285, 450, 510),  # el príncipe, sin el asteroide entero
+}
 
 
 def recortar_al_dibujo(im: Image.Image) -> Image.Image:
@@ -50,7 +55,7 @@ def hacer(origen: Path, destino: Path, ancho: int | None, todas: bool, recortar:
         return False
     im = Image.open(origen).convert("RGB")
     if recortar:
-        im = recortar_al_dibujo(im)
+        im = im.crop(MINI_RECORTE[origen.stem]) if origen.stem in MINI_RECORTE else recortar_al_dibujo(im)
     if ancho:
         im = im.resize((ancho, round(im.height * ancho / im.width)), Image.LANCZOS)
     destino.parent.mkdir(parents=True, exist_ok=True)
