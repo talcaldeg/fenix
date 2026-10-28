@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "27-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "28-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3709,7 +3709,10 @@ window.FENIX = {
       archivos: {"epub": "libros/austen-sense-and-sensibility.epub", "pdf": "libros/austen-sense-and-sensibility.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 161 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/161"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sentido-y-sensibilidad"},
-      parecidos: ["austen-pride-and-prejudice", "austen-persuasion", "austen-mansfield-park"]
+      parecidos: ["austen-pride-and-prejudice", "austen-persuasion", "austen-mansfield-park"],
+      versiones: {
+        es: {"titulo": "Sentido y sensibilidad", "autor": "Jane Austen", "anio": "1811", "resumen": {"es": "A la muerte de su padre, las hermanas Dashwood quedan casi sin fortuna, porque su medio hermano John, convencido por su mujer, no cumple la promesa de ayudarlas. Con su madre y la pequeña Margaret dejan Norland y se van a vivir a una casita en Devonshire. Elinor, juiciosa y reservada, guarda en silencio su afecto por Edward Ferrars aun cuando se entera de un secreto que lo cambia todo; Marianne, apasionada y sin disimulo, se entrega por entero al encantador Willoughby. Entre visitas, bailes y una temporada en Londres, las dos aprenden lo que vale el juicio y lo que vale el corazón.", "en": "When their father dies, the Dashwood sisters are left almost without fortune, because their half-brother John, persuaded by his wife, breaks his promise to help them. With their mother and young Margaret they leave Norland and move to a cottage in Devonshire. Elinor, sensible and reserved, keeps her affection for Edward Ferrars to herself even after she learns a secret that changes everything; Marianne, passionate and open, gives herself entirely to the charming Willoughby. Through visits, balls and a season in London, both learn what judgment is worth and what the heart is worth."}, "porque": {"es": "Para quien se pregunta cómo querer con hondura sin perder el juicio, y cómo sufrir sin cargar a los demás con el propio dolor. Elinor es un retrato admirable de dominio de sí, de lealtad y de delicadeza con los que quiere, y Marianne enseña, por contraste, lo que cuesta dejarse llevar solo por el sentimiento. Una novela amable, llena de ironía, que deja pensando en la templanza.", "en": "For anyone wondering how to love deeply without losing judgment, and how to suffer without burdening others with one's own grief. Elinor is an admirable portrait of self-command, loyalty and tact with those she loves, and Marianne shows, by contrast, what it costs to be led by feeling alone. A gentle, ironic novel that leaves you thinking about temperance."}, "citas": ["cuanto más conozco el mundo, más me convenzo de que nunca veré a un hombre a quien pueda amar de verdad", "No son el tiempo ni la ocasión los que deciden la intimidad; es solo el carácter.", "Reconozca su propia felicidad. No le falta más que paciencia; o, para darle un nombre más seductor, llámela esperanza.", "Marianne nunca supo amar a medias; y todo su corazón llegó, con el tiempo, a estar tan entregado a su marido como una vez lo había estado a Willoughby."], "fuente": {"texto": "Traducción de Proyecto Fénix desde el inglés de Sense and Sensibility (1811), según el texto de Project Gutenberg, libro n.º 161; licencia CC BY-NC-SA 4.0", "url": "https://www.gutenberg.org/ebooks/161"}, "imagen": {"src": "img/portadas/austen-sense-and-sensibility-es.jpg", "credito": {"es": "Thomas Gainsborough, «Las hijas del pintor con un gato», h. 1760-1761", "en": "Thomas Gainsborough, «The Painter's Daughters with a Cat», c. 1760-1761"}, "url": "https://commons.wikimedia.org/wiki/File:The_Painter%27s_Daughters_with_a_Cat,_by_Thomas_Gainsborough_017.jpg"}, "archivos": {"epub": "libros/austen-sense-and-sensibility-es.epub", "pdf": "libros/austen-sense-and-sensibility-es.pdf"}, "editorial": {"es": "Traducción nueva de Proyecto Fénix, completa, hecha directamente del inglés de la edición de Project Gutenberg, con los diálogos entre comillas.", "en": "New Proyecto Fénix translation, complete, made directly from the English text of the Project Gutenberg edition, with dialogue set in quotation marks."}}
+      }
     },
     {
       id: "chesterton-heretics",
@@ -4170,7 +4173,6 @@ window.FENIX = {
   // `estimada` { valor, genero } si Delibris no la reseña. reservado: "dd-mmm-aaaa" cuando alguien la
   // toma (formulario «Fénix - encuadernador»). El sitio oculta sola la que ya está en ese idioma.
   buscados: [
-    { titulo: {"es": "Sentido y sensibilidad"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sentido-y-sensibilidad"} },
     { titulo: {"es": "Emma"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"} },
     { titulo: {"es": "Persuasión"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },
     { titulo: {"es": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
