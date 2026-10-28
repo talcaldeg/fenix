@@ -588,10 +588,16 @@ const indexNuevo = conJsonld.includes("<!-- DESCARGAS:inicio")
 if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
 
 // ---------- sw.js ----------
-// La VERSION sale de index.html y datos.js: si cambian, el navegador instala el service worker
+// La VERSION sale de index.html, datos.js e img/: si cambian, el navegador instala el service worker
 // nuevo y este borra la caché vieja, así la app instalada no se queda con el catálogo anterior.
+// img/ entra porque una imagen rehecha con el mismo nombre (la miniatura de El principito) seguía
+// saliendo de la caché vieja: el service worker sirve las imágenes guardadas primero.
 {
-  const huella = require("crypto").createHash("sha1").update(indexNuevo + leer("datos.js").replace(/\r\n/g, "\n")).digest("hex").slice(0, 10);
+  const sha = require("crypto").createHash("sha1").update(indexNuevo + leer("datos.js").replace(/\r\n/g, "\n"));
+  const imagenes = dir => fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name < b.name ? -1 : 1)
+    .flatMap(d => d.isDirectory() ? imagenes(path.join(dir, d.name)) : [path.join(dir, d.name)]);
+  for (const f of imagenes(path.join(RAIZ, "img"))) sha.update(path.relative(RAIZ, f).replace(/\\/g, "/")).update(fs.readFileSync(f));
+  const huella = sha.digest("hex").slice(0, 10);
   const sw = leer("sw.js").replace(/\r\n/g, "\n");
   if (!/const VERSION = "fenix-[^"]*";/.test(sw)) throw new Error('sw.js no tiene const VERSION = "fenix-...";');
   escribirSiCambia("sw.js", sw.replace(/const VERSION = "fenix-[^"]*";/, `const VERSION = "fenix-${huella}";`));

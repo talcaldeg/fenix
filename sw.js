@@ -5,9 +5,9 @@
 // - Imágenes: lo guardado al tiro y se refresca por detrás.
 // - libros/ (EPUB y PDF) no se guarda: se descarga al teléfono, y duplicarlo llenaría la memoria.
 // - Lo de otros sitios (Open Library, GoatCounter, Delibris) pasa directo.
-// VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html o datos.js: el
+// VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html, datos.js o img/: el
 // navegador ve un sw.js distinto, instala el nuevo y este borra las cachés viejas.
-const VERSION = "fenix-347d598ef7";
+const VERSION = "fenix-101336d69b";
 const BASICO = ["./", "datos.js", "manifest.webmanifest", "img/favicon.svg", "img/icono-192.png"];
 
 self.addEventListener("install", e => {
@@ -48,7 +48,9 @@ async function redPrimero(req, cache){
 
 async function guardadoPrimero(req, cache){
   const g = await cache.match(req);
-  const red = fetch(req).then(r => { if (r.ok) cache.put(req, r.clone()); return r; }).catch(() => g);
+  // "no-cache", como en redPrimero: sin eso el refresco por detrás traía la misma imagen vieja
+  // de la caché HTTP del navegador (max-age=600) y la nueva no llegaba nunca a guardarse.
+  const red = fetch(req, { cache: "no-cache" }).then(r => { if (r.ok) cache.put(req, r.clone()); return r; }).catch(() => g);
   return g || red;
 }
 
