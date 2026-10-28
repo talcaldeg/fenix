@@ -123,6 +123,10 @@ uno.
 14. **Nota doctrinal de más** (Bernadot, nota 57 sobre el abandono de Cristo; él la sacó el
     28-oct). Una «N. del E.» que aclara doctrina no se pone si el pasaje cita la Escritura o a un
     Padre y se entiende en su contexto; las que se agreguen se le muestran antes de publicar.
+15. **Palabras poco conocidas** (De Jaegher, cap. I, «opúsculos» y «abstruso»; reporte del
+    28-oct). Si el original usa un cultismo y hay una palabra común que dice lo mismo, va la
+    común: «opúsculo» → «librito», «abstruso» → «complicado». Los términos de teología no
+    entran acá (error 5).
 
 ## Glosario
 
