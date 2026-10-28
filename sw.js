@@ -30,7 +30,9 @@ const SIN_SENAL = `<!doctype html><html lang="es"><meta charset="utf-8"><meta na
 // Respuesta de la red con plazo; si falla o tarda, lo guardado. Lo bueno de la red se guarda.
 async function redPrimero(req, cache){
   const guardado = cache.match(req, { ignoreSearch: req.mode === "navigate" && new URL(req.url).pathname.endsWith("/") });
-  const red = fetch(req).then(r => { if (r.ok) cache.put(req, r.clone()); return r; });
+  // GitHub Pages manda max-age=600: sin "no-cache", la red devolvía hasta 10 minutos la versión
+  // anterior del navegador. "no-cache" revalida con el servidor (barato: responde 304 si no cambió).
+  const red = fetch(req, { cache: "no-cache" }).then(r => { if (r.ok) cache.put(req, r.clone()); return r; });
   const plazo = new Promise(ok => setTimeout(ok, 4000)).then(() => guardado);
   try {
     const r = await Promise.race([red, plazo]);
