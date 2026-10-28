@@ -1279,6 +1279,28 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   blockquote{margin:0 0 14px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic}
   blockquote cite{display:block; font:normal 13px system-ui,sans-serif; color:var(--muted); margin-top:4px}
   .precision{font:14px/1.55 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:12px 14px; margin-top:12px}
+  /* Línea de investigación: el versículo como título y las obras numeradas en el orden en que se investigaron. */
+  .linea-titulo{font-style:italic; margin-bottom:4px}
+  .linea-ref{font:14px system-ui,sans-serif; color:var(--muted); margin:0 0 18px}
+  .linea-intro{max-width:820px}
+  .linea-intro > p{margin-top:0}
+  /* Flex y no grid: con 5 obras, la última fila queda centrada en vez de dejar un hueco. */
+  .linea-obras{list-style:none; padding:0; margin:26px 0 0; display:flex; flex-wrap:wrap; justify-content:center; --g:18px; gap:var(--g)}
+  .obra{flex:1 1 300px; max-width:calc((100% - 2 * var(--g)) / 3); display:flex; gap:14px; background:var(--card); border:1px solid var(--line); border-radius:14px; padding:18px; box-shadow:var(--sombra)}
+  @media (max-width:980px){.obra{max-width:calc((100% - var(--g)) / 2)}}
+  @media (max-width:640px){.obra{max-width:none}}
+  html[lang="en"] .obra .solo-es{display:none}
+  .obra > div{min-width:0}
+  .obra-n{flex:0 0 auto; width:30px; height:30px; border-radius:50%; display:grid; place-items:center; font:700 14px system-ui,sans-serif; background:var(--oro); color:var(--bg)}
+  .obra-meta{font:13px system-ui,sans-serif; color:var(--muted); margin:4px 0 6px; display:flex; flex-wrap:wrap; gap:6px 10px; align-items:center}
+  .obra-estado{font:600 11px system-ui,sans-serif; letter-spacing:.04em; text-transform:uppercase; padding:3px 8px; border-radius:999px; background:var(--chip); color:var(--ink)}
+  .obra-estado.inv{background:transparent; border:1px dashed var(--oro)}
+  .obra h3{margin:0 0 10px; font-size:19px}
+  .obra blockquote{margin-bottom:10px}
+  .obra blockquote:empty{display:none}
+  .obra-nota{font:13.5px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 8px}
+  .obra-acc{margin:0; display:flex; flex-wrap:wrap; gap:6px 16px; font:600 14px system-ui,sans-serif}
+  .obra-acc a{text-decoration:none}
 
   .grilla{display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:18px}
   @media (max-width:600px){.grilla{grid-template-columns:repeat(2,minmax(0,1fr)); gap:12px} .portada .t{font-size:15px}}
@@ -1718,25 +1740,64 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
       </div>
 
       <div id="otra-humanidad" style="margin-top:40px">
-        <p class="eyebrow" data-i18n="oh.eyebrow">La idea que nos mueve</p>
-        <h2 data-i18n="oh.titulo">Ser para Cristo «como otra humanidad»</h2>
-        <div class="teologia">
-          <div class="caja">
-            <p data-i18n="oh.p1">El Hijo de Dios se hizo hombre una sola vez, en el seno de la Virgen María. Pero quiere seguir amando al Padre y a los hombres en la tierra a través de los que Le pertenecen por la gracia. A esto apunta una expresión de santa Isabel de la Trinidad, que en 1904 pidió al Espíritu Santo ser para Cristo «una humanidad de añadidura» en la que Él renueve todo Su misterio.</p>
-            <p data-i18n="oh.p2">El jesuita Paul de Jaegher la hizo oración en 1927, al final de «La vida de identificación con Cristo Jesús»: que el alma, plenamente identificada con Jesús, llegue a ser para Él «como otra humanidad». Prestarle los ojos, los labios, la mente y el corazón para que Él siga mirando, hablando, pensando y amando hoy.</p>
-            <div class="precision" data-i18n="oh.precision">Una precisión: no se trata de una nueva encarnación ni de que la persona deje de ser ella misma. Es la vida de la gracia, que nos une a Cristo como miembros de Su Cuerpo. La expresión pertenece a la teología espiritual; su fundamento sí es doctrina de la Iglesia (Catecismo, nn. 521 y 1997).</div>
-            <div class="acciones" style="margin-top:14px; display:flex; gap:10px; flex-wrap:wrap">
-              <a class="btn prim" href="#oraciones" data-i18n="oh.rezar">Rezar la oración</a>
-              <a class="btn" href="libro/one-with-jesus/" data-i18n="oh.libro">Ver el libro</a>
-            </div>
-          </div>
-          <div>
-            <blockquote>«Vivo yo, mas no yo, sino Cristo vive en mí».<cite>San Pablo, Gálatas 2,20</cite></blockquote>
-            <blockquote>«Estamos llamados a no ser más que una sola cosa con Él; nos hace comulgar, en cuanto miembros de su Cuerpo, en lo que Él vivió en su carne por nosotros y como modelo nuestro».<cite>Catecismo, n. 521</cite></blockquote>
-            <blockquote>«La gracia es una participación en la vida de Dios».<cite>Catecismo, n. 1997</cite></blockquote>
-            <blockquote><span data-i18n="oh.citaDJ">«Que yo, plenamente identificado Contigo, llegue a ser para Ti como otra humanidad».</span><cite data-i18n="oh.citaDJRef">Paul de Jaegher, S.J., La vida de identificación con Cristo Jesús (traducción de Proyecto Fénix)</cite></blockquote>
-          </div>
+        <p class="eyebrow" data-i18n="oh.eyebrow">Línea de investigación</p>
+        <h2 class="linea-titulo" data-i18n="oh.titulo">«Ya no vivo yo, sino que Cristo vive en mí»</h2>
+        <p class="linea-ref" data-i18n="oh.tituloRef">Gálatas 2,20 (Biblia de Navarra)</p>
+        <div class="linea-intro">
+          <p data-i18n="oh.p1">El Hijo de Dios se hizo hombre una sola vez, en el seno de la Virgen María, pero quiere seguir amando al Padre y a los hombres a través de los que le pertenecen por la gracia: ser para Cristo «como otra humanidad». Seguimos esta idea de libro en libro, en los autores que la formularon y en los que la citan, y publicamos lo que encontramos.</p>
+          <div class="precision" data-i18n="oh.precision">Una precisión: no se trata de una nueva encarnación ni de que la persona deje de ser ella misma. Es la vida de la gracia, que nos une a Cristo como miembros de su Cuerpo. La expresión pertenece a la teología espiritual; su fundamento sí es doctrina de la Iglesia (Catecismo, nn. 521 y 1997).</div>
         </div>
+        <ol class="linea-obras" id="lineaInv">
+          <li class="obra">
+            <span class="obra-n">1</span>
+            <div>
+              <p class="obra-meta"><span data-i18n="oh.o1meta">Paul de Jaegher, S.J. · 1927</span> <span class="obra-estado" data-i18n="oh.estadoPub">Traducción de Proyecto Fénix</span></p>
+              <h3 data-i18n="oh.o1titulo">La vida de identificación con Cristo Jesús</h3>
+              <blockquote data-i18n="oh.o1cita">«Anhelas tener millones de vidas, millones de corazones con que seguir amándolo hasta el fin de los tiempos».</blockquote>
+              <p class="obra-nota" data-i18n="oh.o1nota">De su oración final, que pide llegar a ser para Jesús «como otra humanidad».</p>
+              <p class="obra-acc"><a href="libro/one-with-jesus/" data-i18n="oh.verLibro">Ver el libro →</a> <a href="#oraciones" data-i18n="oh.rezar">Rezar la oración →</a></p>
+            </div>
+          </li>
+          <li class="obra">
+            <span class="obra-n">2</span>
+            <div>
+              <p class="obra-meta"><span data-i18n="oh.o2meta">Marie-Vincent Bernadot, O.P. · 1919</span> <span class="obra-estado" data-i18n="oh.estadoPub2">Traducción de Proyecto Fénix</span></p>
+              <h3 data-i18n="oh.o2titulo">De la Eucaristía a la Trinidad</h3>
+              <blockquote data-i18n="oh.o2cita">«Para el cristiano, la alegría fundamental es saber que Dios es. ¡Dios existe!».</blockquote>
+              <p class="obra-nota" data-i18n="oh.o2nota">De Jaegher remite a este pasaje cuando habla de la alegría del alma unida a Dios: «¡Dios es Dios!».</p>
+              <p class="obra-acc"><a href="libro/de-la-eucaristia-a-la-trinidad/" data-i18n="oh.verLibro2">Ver el libro →</a></p>
+            </div>
+          </li>
+          <li class="obra">
+            <span class="obra-n">3</span>
+            <div>
+              <p class="obra-meta"><span data-i18n="oh.o3meta">Santa Isabel de la Trinidad · 1904</span> <span class="obra-estado" data-i18n="oh.estadoOra">Oración en la biblioteca</span></p>
+              <h3 data-i18n="oh.o3titulo">Oh Dios mío, Trinidad que adoro</h3>
+              <blockquote data-i18n="oh.o3cita">«Que yo sea para Él una humanidad de añadidura en la que renueve todo su misterio».</blockquote>
+              <p class="obra-nota" data-i18n="oh.o3nota">La fuente de la expresión: «une humanité de surcroît», en la oración del 21 de noviembre de 1904.</p>
+              <p class="obra-acc"><a href="#oraciones" data-i18n="oh.verOracion">Leer la oración →</a></p>
+            </div>
+          </li>
+          <li class="obra">
+            <span class="obra-n">4</span>
+            <div>
+              <p class="obra-meta"><span data-i18n="oh.o4meta">San Juan Eudes · 1637</span> <span class="obra-estado inv" data-i18n="oh.estadoInv">En investigación</span></p>
+              <h3 data-i18n="oh.o4titulo">Vida y reino de Jesús en las almas cristianas</h3>
+              <blockquote data-i18n="oh.o4cita">«Debemos continuar y cumplir en nosotros los estados y misterios de Jesús».</blockquote>
+              <p class="obra-nota" data-i18n="oh.o4nota">El Catecismo lo cita en el n. 521. Está en nuestro plan de traducción.</p>
+            </div>
+          </li>
+          <li class="obra">
+            <span class="obra-n">5</span>
+            <div>
+              <p class="obra-meta"><span data-i18n="oh.o5meta">Beato Columba Marmion, O.S.B. · 1917</span> <span class="obra-estado inv" data-i18n="oh.estadoInv2">En investigación</span></p>
+              <h3 data-i18n="oh.o5titulo">Jesucristo, vida del alma</h3>
+              <blockquote class="solo-es" data-i18n="oh.o5cita">«Toda nuestra santidad se reduce a participar, por medio de la gracia, de la filiación divina de Jesucristo».</blockquote>
+              <p class="obra-nota" data-i18n="oh.o5nota">Ya está en la biblioteca; estudiamos cómo se relaciona con los anteriores.</p>
+              <p class="obra-acc"><a href="libro/marmion-vida-del-alma/" data-i18n="oh.verLibro3">Ver el libro →</a></p>
+            </div>
+          </li>
+        </ol>
       </div>
 
       <div class="caja banda">
@@ -2142,11 +2203,16 @@ function iniciar(){
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
       "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
       "rec.eyebrow":"Our editions","rec.titulo":"Fénix editions","rec.todos":"See our editions →",
-      "oh.eyebrow":"The idea behind us","oh.titulo":"Being for Christ «like another humanity»",
-      "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary. Yet He wants to go on loving the Father and mankind on earth through those who belong to Him by grace. This is the meaning of an expression of Saint Elizabeth of the Trinity, who in 1904 asked the Holy Spirit that she might be for Christ «an additional humanity» in which He could renew His whole mystery.",
-      "oh.p2":"The Jesuit Paul de Jaegher turned it into a prayer in 1927, at the end of «One with Jesus»: that the soul, fully identified with Jesus, may become for Him «like another humanity». Lending Him our eyes, lips, mind and heart so that He may still look, speak, think and love today.",
+      "oh.eyebrow":"Line of research","oh.titulo":"«It is no longer I who live, but Christ who lives in me»","oh.tituloRef":"Galatians 2:20 (RSV)",
+      "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary, yet He wants to go on loving the Father and mankind through those who belong to Him by grace: to be for Christ «like another humanity». We follow this idea from book to book, in the authors who formulated it and in those who quote them, and we publish what we find.",
       "oh.precision":"A clarification: this is not a new incarnation, nor does the person cease to be himself. It is the life of grace, which unites us to Christ as members of His Body. The expression belongs to spiritual theology; its foundation is the Church's doctrine (Catechism, nos. 521 and 1997).",
-      "oh.rezar":"Pray the prayer","oh.libro":"See «One with Jesus»","oh.citaDJ":"«May I, fully identified with You, become like another humanity to You».","oh.citaDJRef":"Paul de Jaegher, S.J., One with Jesus",
+      "oh.estadoPub":"Proyecto Fénix translation","oh.estadoPub2":"Proyecto Fénix translation","oh.estadoOra":"Prayer in the library","oh.estadoInv":"Under research","oh.estadoInv2":"Under research",
+      "oh.o1meta":"Paul de Jaegher, S.J. · 1927","oh.o1titulo":"One with Jesus","oh.o1cita":"«You long to have millions of lives, millions of hearts to go on loving Him with, to the end of time».","oh.o1nota":"From its closing prayer, which asks to become for Jesus «like another humanity».",
+      "oh.o2meta":"Marie-Vincent Bernadot, O.P. · 1919","oh.o2titulo":"From the Eucharist to the Trinity","oh.o2cita":"«For the Christian, the fundamental joy is to know that God is. God exists!» (our translation)","oh.o2nota":"De Jaegher refers to this passage when he speaks of the joy of the soul united to God.",
+      "oh.o3meta":"Saint Elizabeth of the Trinity · 1904","oh.o3titulo":"O my God, Trinity whom I adore","oh.o3cita":"«That I may be for Him an additional humanity in which He renews all His mystery» (our translation)","oh.o3nota":"The source of the phrase: «une humanité de surcroît», in the prayer of 21 November 1904.",
+      "oh.o4meta":"Saint John Eudes · 1637","oh.o4titulo":"The Life and Kingdom of Jesus in Christian Souls","oh.o4cita":"«We must continue to accomplish in ourselves the stages of Jesus' life and his mysteries».","oh.o4nota":"The Catechism quotes it in no. 521. It is on our translation plan.",
+      "oh.o5meta":"Blessed Columba Marmion, O.S.B. · 1917","oh.o5titulo":"Christ, the Life of the Soul","oh.o5nota":"Already in the library in Spanish; we are studying how it relates to the books above.",
+      "oh.rezar":"Pray the prayer →","oh.verLibro":"See the book →","oh.verLibro2":"See the book →","oh.verLibro3":"See the book →","oh.verOracion":"Read the prayer →",
       "bib.titulo":"Library","bib.buscar":"Search title or author","bib.todas":"All categories","bib.idiomas":"All languages","bib.formatos":"Any format","bib.soloComprar":"Purchase only","bib.enLinea":"Read online",
       "bib.noLeidos":"Not read","bib.limpiar":"Clear filters","pie2":"Catalogue updated on","pie.instalar":"Install as an app","pie.iphone":"On iPhone, install Fénix with Share › Add to Home Screen","bib.favoritos":"Favourites","bib.vacio":"No books match those filters.","bib.leyendaMoral":"Moral rating taken from","bib.leyendaMoral2":" (a review site; not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks» and the fewer the circles, the more caution the reading calls for. Each book's level is explained on its page.",
       "l.libro":"Book","l.datos":"Category · format","l.moral":"Moral rating (Delibris)","x.moral":"Moral rating","x.sinDelibris":"Not rated by Delibris","x.de":"of","x.portada":"Cover","x.dominioPublico":"public domain, Wikimedia Commons","bib.nota":"Read marks and favourites are stored only in this browser.",

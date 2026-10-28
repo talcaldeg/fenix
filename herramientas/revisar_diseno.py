@@ -72,12 +72,17 @@ def revisar(raiz, capturas=None):
                             numeros: [...document.querySelectorAll('.hero .cifras b')].map(b => b.textContent.trim()),
                             celdas: [...document.querySelectorAll('#accesos .acceso')].reduce((n, a) => n + (a.classList.contains('ancho') ? 2 : 1), 0),
                             columnas: getComputedStyle(q('#accesos')).gridTemplateColumns.split(' ').length,
-                            citaDia: !q('#citaDia').hidden && q('#citaDia').textContent.trim().length > 0};
+                            citaDia: !q('#citaDia').hidden && q('#citaDia').textContent.trim().length > 0,
+                            // Línea de investigación: cada obra con su título visible y sin desbordar su tarjeta.
+                            obras: [...document.querySelectorAll('#lineaInv .obra')].map(o =>
+                                o.querySelector('h3').textContent.trim().length > 0 && o.scrollWidth <= o.clientWidth + 1)};
                 }""")
                 if r["celdas"] % r["columnas"]:
                     fallas.append(f"{donde}: la grilla de accesos queda con hueco ({r['celdas']} celdas en {r['columnas']} columnas)")
                 if not r["citaDia"]:
                     fallas.append(f"{donde}: la cita del día no se ve")
+                if len(r["obras"]) < 3 or not all(r["obras"]):
+                    fallas.append(f"{donde}: la línea de investigación no muestra bien sus obras {r['obras']}")
                 if r["cifras"] > h:
                     fallas.append(f"{donde}: las cifras del hero quedan bajo la primera pantalla "
                                   f"(terminan en {round(r['cifras'])}px, la ventana mide {h}px)")
