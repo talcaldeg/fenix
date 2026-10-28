@@ -1,6 +1,6 @@
 ## Práctica. Propósitos
 
-Muchos de nuestros lectores no se contentarán con una ojeada rápida a este librito: querrán asimilar sus pensamientos y detenerse a meditarlos. Estamos seguros de que a ellos no les costará resumir su contenido en unos pocos propósitos prácticos que den fruto en la vida de cada día.
+Muchos de nuestros lectores no se contentarán con una ojeada rápida a este libro: querrán asimilar sus pensamientos y detenerse a meditarlos. Estamos seguros de que a ellos no les costará resumir su contenido en unos pocos propósitos prácticos que den fruto en la vida de cada día.
 
 Con todo, hemos juzgado oportuno, atendiendo al deseo que algunos lectores nos han expresado, simplificarles esa tarea proponiéndoles algunos propósitos de carácter general. A cada propósito se añade el pensamiento que lo anima.
 

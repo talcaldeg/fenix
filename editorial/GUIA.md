@@ -125,8 +125,9 @@ uno.
     Padre y se entiende en su contexto; las que se agreguen se le muestran antes de publicar.
 15. **Palabras poco conocidas** (De Jaegher, cap. I, «opúsculos» y «abstruso»; reporte del
     28-oct). Si el original usa un cultismo y hay una palabra común que dice lo mismo, va la
-    común: «opúsculo» → «librito», «abstruso» → «complicado». Los términos de teología no
-    entran acá (error 5).
+    común: «opúsculos» → «obras breves», «abstruso» → «complicado». Ni diminutivo que suene
+    menor («librito», rechazado) ni palabra con carga peyorativa («panfleto» es propaganda o
+    libelo; «folleto», unas pocas hojas). Los términos de teología no entran acá (error 5).
 
 ## Glosario
 
