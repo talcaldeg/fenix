@@ -104,7 +104,7 @@ En estas horas, todo es doloroso, incluso el recuerdo de las gracias recibidas e
 
 ¿Qué hacer entonces? Entregarse a la acción divina. Resistirle sería dañino y, además, la mayoría de las veces, imposible. Puesto que es el Espíritu Santo mismo quien actúa, permanecer en este dolor purificador es todavía permanecer en Dios.
 
-La unión con Cristo Jesús y con su Pasión es más útil que nunca. Por grande que sea la desolación del alma, nunca se acercará al absoluto abandono de la santa alma de Cristo en las horas espantosas en que se le oía gemir: *Mi alma está triste hasta la muerte… Dios mío, Dios mío, ¿por qué me has abandonado?*[^99], y en que se veía a Dios Padre «soltando contra este Hijo amado todo el poder de los infiernos y pareciendo retirar al mismo tiempo toda la protección del Cielo[^100]». *Su dolor*, dice el Profeta, *es inmenso como el mar*[^101].[^ed3]
+La unión con Cristo Jesús y con su Pasión es más útil que nunca. Por grande que sea la desolación del alma, nunca se acercará al absoluto abandono de la santa alma de Cristo en las horas espantosas en que se le oía gemir: *Mi alma está triste hasta la muerte… Dios mío, Dios mío, ¿por qué me has abandonado?*[^99], y en que se veía a Dios Padre «soltando contra este Hijo amado todo el poder de los infiernos y pareciendo retirar al mismo tiempo toda la protección del Cielo[^100]». *Su dolor*, dice el Profeta, *es inmenso como el mar*[^101].
 
 Pero hay que decirse bien que incluso la unión con Jesús, de ordinario tan dulce y tan consoladora, está entonces como helada, muda y dolorosa. El corazón no la siente. Es en la fe donde ella calla. Es en la fe donde el alma debe mantenerse unida y en cierto modo aferrada a Dios. La fe es el único refugio, *el reino inconmovible*[^102] de que habla san Pablo: *Es en la fe donde nos mantenemos en pie.*
 
@@ -200,7 +200,6 @@ Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *
 
 [^109]: Ga 2, 19-20.
 
-[^ed3]: N. del E.: el abandono de Cristo en la Cruz no significa que el Padre lo rechazara ni lo castigara como a un pecador: «Jesús no conoció la reprobación como si él mismo hubiese pecado», pero, «en el amor redentor que le unía siempre al Padre», asumió nuestro alejamiento de Dios (Catecismo, n. 603).
 
 [^ed20]: San John Henry Newman. N. del E.: Meditaciones y devociones (Meditations and Devotions), parte III, meditación 5, «El poder de la Cruz», 2.
 
@@ -214,4 +213,4 @@ Bienaventurado dolor, bienaventurada muerte que permite decir con el Apóstol: *
 
 [^fx11b]: N. del E.: Libro de las visiones e instrucciones, cap. 50 (numeración de la traducción francesa de Ernest Hello).
 
-[^fy2]: N. del E.: el autor no indica la obra y no se ha podido ubicar el pasaje; el índice de las Obras completas de san Francisco de Sales (edición de Béthune) registra la misma idea en el t. VIII, p. 194.
+[^fy2]: N. del E.: cf. san Francisco de Sales, carta a Madame de Granieu, Annecy, 24 de noviembre de 1620 (Obras, edición de Annecy, t. XIX, carta 1731), que el autor resume: «si la envidia pudiera reinar en el reino del amor eterno, los ángeles envidiarían a los hombres dos excelencias que consisten en dos sufrimientos [...]: el sufrimiento de Dios por el hombre, el sufrimiento del hombre por Dios».

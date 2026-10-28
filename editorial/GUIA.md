@@ -109,6 +109,20 @@ uno.
     en su segunda redacción), sin cambiarle palabras ni orden. Si el inciso «dice san X» rompería
     la frase original, va fuera de las comillas («San Juan de la Cruz añade que «...»»). Una
     palabra de época que hoy no se entiende («una higa») se aclara en la misma nota.
+11. **Fuente dada por buena sin buscar en cartas y sermones** (Bernadot, san Francisco de Sales;
+    reporte de Tomás del 28-oct). Antes de escribir que una cita no se ubicó, se busca también en
+    las cartas, sermones y opúsculos del autor, no solo en sus tratados: la frase de los ángeles
+    que envidiarían los sufrimientos estaba en una carta de 1620 (Obras de Annecy, t. XIX). Lo que
+    diga un buscador o una IA sobre la obra («Tratado, libro V») no vale sin el texto de esa obra.
+12. **Firma repetida** (Bernadot, «(Faber.)»; reporte del 28-oct). Si la nota al pie ya da el
+    autor de la cita, la firma entre paréntesis que el autor dejó tras las comillas se quita del
+    texto.
+13. **Nota sin hallazgo dicha como certeza** (Bernadot, nota 107; reporte del 28-oct). Lo que no
+    se encontró se dice así: «no la hemos hallado con estas palabras en los escritos de X», nunca
+    «no está» o «no existe».
+14. **Nota doctrinal de más** (Bernadot, nota 57 sobre el abandono de Cristo; él la sacó el
+    28-oct). Una «N. del E.» que aclara doctrina no se pone si el pasaje cita la Escritura o a un
+    Padre y se entiende en su contexto; las que se agreguen se le muestran antes de publicar.
 
 ## Glosario
 
