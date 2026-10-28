@@ -3779,6 +3779,28 @@ window.FENIX = {
       parecidos: ["chesterton-the-man-who-was-thursday", "chesterton-the-napoleon-of-notting-hill", "ortodoxia"]
     },
     {
+      id: "chesterton-manalive",
+      titulo: "Hombre vivo",
+      autor: "G. K. Chesterton",
+      anio: "1912",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Un gran viento sopla sobre Beacon House, una pensión de Londres, y trae a Innocent Smith, un hombre desbordante de vida que en pocas horas saca a todos los huéspedes de su rutina. Cuando llegan acusaciones de asesinato, robo, abandono y poligamia, los residentes arman su propio tribunal en la casa, y cada cargo resulta tener una explicación inesperada. Una novela cómica en que Chesterton defiende la alegría de estar vivo y la fidelidad a lo que uno ya tiene.", "en": "A great wind blows over Beacon House, a London boarding house, and brings Innocent Smith, a man overflowing with life who within hours shakes every lodger out of their routine. When charges of murder, burglary, desertion and polygamy arrive, the residents set up their own court in the house, and each charge turns out to have an unexpected explanation. A comic novel in which Chesterton defends the joy of being alive and faithfulness to what one already has."},
+      porque: {"es": "Para quien se ha acostumbrado a su propia vida y necesita volver a mirarla con asombro. Smith asusta a la gente con una pistola para que valore su vida y se va de casa solo para volver a enamorarse de su mujer: Chesterton usa el disparate para defender el matrimonio, el hogar y la gratitud. Es una de sus novelas más luminosas y se lee con una sonrisa.", "en": "For anyone who has grown used to their own life and needs to look at it again with wonder. Smith frightens people with a pistol so they will value their lives, and leaves home only to fall in love with his wife all over again: Chesterton uses nonsense to defend marriage, home and gratitude. It is one of his most luminous novels and is read with a smile."},
+      imagen: {"src": "img/portadas/chesterton-manalive.jpg", "credito": {"es": "John Constable, «Vista de Hampstead con tiempo tormentoso», h. 1830", "en": "John Constable, «A View at Hampstead with Stormy Weather», c. 1830"}, "url": "https://commons.wikimedia.org/wiki/File:John_Constable_-_A_View_at_Hampstead_with_Stormy_Weather_-_Google_Art_Project.jpg"},
+      citas: [
+        "Solo digo que en ciertas épocas extrañas es necesario tener otra clase de sacerdotes, llamados poetas, que recuerden efectivamente a los hombres que todavía no están muertos.",
+        "Ustedes son firmes como los árboles porque no creen. Yo soy inconstante como la tempestad porque creo.",
+        "Creo en mi propia casa, que volveré a encontrar."
+      ],
+      archivos: {"epub": "libros/chesterton-manalive.epub", "pdf": "libros/chesterton-manalive.pdf"},
+      fuente: {"texto": "Traducción de Proyecto Fénix desde Manalive (1912), Project Gutenberg, libro n.º 1718 (dominio público)", "url": "https://www.gutenberg.org/ebooks/1718"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/manalive-hombre-vivo"},
+      editorial: {"es": "Traducción nueva de Proyecto Fénix, hecha directamente del inglés de Manalive (1912), con las dos partes y sus diez capítulos; preparada con ayuda de inteligencia artificial y revisada contra el original, con nota de la edición y portada nueva. Edición al cuidado de Tomás Alcalde.", "en": "A new Proyecto Fénix translation, made directly from the English of Manalive (1912), with both parts and their ten chapters; prepared with the help of artificial intelligence and checked against the original, with an edition note and a new cover. Edited by Tomás Alcalde."},
+      parecidos: ["ortodoxia", "saint-exupery-el-principito", "austen-pride-and-prejudice"]
+    },
+    {
       id: "chesterton-the-everlasting-man",
       titulo: "The Everlasting Man",
       autor: "G. K. Chesterton",

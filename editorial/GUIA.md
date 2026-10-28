@@ -196,3 +196,38 @@ registro, mayúsculas divinas, ortografía, puntuación) rigen igual; esto es lo
   les membres → los miembros; mérites → méritos; le Sacré-Cœur → el Sagrado Corazón.
 - Términos técnicos sin cambiar de grado: «nature», «personne», «substance», «grâce»,
   «participation», «mérite», «présence réelle» se traducen por su equivalente exacto.
+
+## Hombre vivo (Chesterton, *Manalive*, 1912, desde el inglés)
+
+Original: Project Gutenberg n.º 1718, partido en tramos en
+`fenix_fuentes/manalive/tramos/NN_pXcY.txt`; la salida va en `editorial/chesterton-manalive/NN_pXcY.md`
+(mismo nombre). Es una novela cómica y filosófica: la prosa de Chesterton vive de la paradoja, la
+imagen inesperada y el ritmo; que el chiste y la paradoja funcionen en castellano sin dejar de
+ser fieles. Las frases muy largas con incisos se pueden ordenar, nunca recortar.
+
+- Encabezados: el tramo que abre una parte empieza con `## Primera parte. Los enigmas de Innocent Smith`
+  (o `## Segunda parte. Las explicaciones de Innocent Smith`) y, en párrafo aparte, el capítulo.
+  Capítulos: `## I. Cómo llegó el gran viento a Beacon House`, `## II. El equipaje de un optimista`,
+  `## III. La bandera de Beacon`, `## IV. El jardín del dios`, `## V. El bromista alegórico`; segunda
+  parte: `## I. El ojo de la muerte, o la acusación de asesinato`, `## II. Los dos coadjutores, o la
+  acusación de robo`, `## III. El camino redondo, o la acusación de abandono`, `## IV. Las bodas
+  locas, o la acusación de poligamia`, `## V. Cómo se fue el gran viento de Beacon House`. Un tramo
+  que es la segunda mitad de un capítulo (sufijo `b`) no lleva encabezado.
+- Nombres sin traducir: Innocent Smith, Michael Moon, Arthur Inglewood, Rosamund Hunt, Mary Gray,
+  Diana Duke, la señora Duke, el doctor Herbert Warner, Cyrus Pym, Moses Gould, Beacon House,
+  Croydon, Highbury, Hampstead y demás lugares. Mr./Mrs./Miss → señor, señora, señorita; Dr. →
+  doctor. El «High Court of Beacon» → el Alto Tribunal de Beacon. «curate» (clérigo anglicano) →
+  coadjutor. «Man alive!» → «¡Hombre vivo!» (da título al libro: siempre igual).
+- Tratamiento: «usted» entre adultos por defecto; «tú» entre amigos de juventud o íntimos
+  (Michael y Arthur; Smith con ellos), entre enamorados y esposos, y a niños. Plural: «ustedes».
+  Una vez fijado entre dos personajes no cambia, salvo que el original marque el paso a la
+  intimidad.
+- Cyrus Pym habla un inglés norteamericano pomposo y Moses Gould uno popular de Londres: se
+  marca con el léxico y la sintaxis (afectación en Pym, desparpajo en Gould), nunca con faltas de
+  ortografía ni dialecto fonético.
+- Las cartas y documentos que se leen en el juicio (segunda parte) van como párrafos normales
+  entre comillas, o en bloque `> ` si el original los aparta como texto largo.
+- Referencias literarias y bíblicas: se traducen del inglés que trae el libro; versos citados, en
+  verso libre castellano que conserve el sentido y la imagen, cada verso en su línea dentro de `> `.
+- Cursiva del original (`_texto_`) → `*texto*`. Las rayas largas del original (incisos y frases
+  cortadas) pasan a comas, paréntesis o puntos suspensivos.
