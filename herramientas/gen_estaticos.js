@@ -124,6 +124,7 @@ const TX = {
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
     de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", preparado: "Preparado por", sello: "Recomendado por Fénix",
     y: "y", ebook: "ebook", menu: "Menú", otroIdioma: "English", tambien: "También en inglés",
+    compartir: "Compartir", copiado: "Enlace copiado. Pégalo donde quieras.", copiaEnlace: "Copia este enlace:",
     hojear: "Hojear las primeras páginas", primeras: "primeras páginas", volver: "Volver a la ficha del libro",
     finMuestra: "Hasta aquí las primeras páginas. Para seguir leyendo, descarga el libro completo, gratis:",
     dMuestra: (t, a) => `Lee gratis en línea las primeras páginas de «${t}» de ${a}, sin descargar nada.`,
@@ -145,6 +146,7 @@ const TX = {
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
     de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", preparado: "Prepared by", sello: "Recommended by Fénix",
     y: "and", ebook: "ebook", menu: "Menu", otroIdioma: "Español", tambien: "Also in Spanish",
+    compartir: "Share", copiado: "Link copied. Paste it wherever you like.", copiaEnlace: "Copy this link:",
     hojear: "Look inside: the first pages", primeras: "first pages", volver: "Back to the book page",
     finMuestra: "That is the end of the first pages. To keep reading, download the whole book, free:",
     dMuestra: (t, a) => `Read the first pages of «${t}» by ${a} online, free and without downloading anything.`,
@@ -234,6 +236,8 @@ const ESTILO = `
   .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px system-ui,sans-serif; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
   .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
+  .aviso{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:6px 0 0}
+  .aviso:empty{display:none}
   .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
   blockquote{margin:0 0 20px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic; line-height:1.6}
   details.citas summary{cursor:pointer; font:600 15px system-ui,sans-serif; color:var(--vino); margin-bottom:14px}
@@ -270,6 +274,15 @@ if(b){b.addEventListener("toggle",function(){if(b.open){cm();setTimeout(function
 document.addEventListener("click",function(e){if(b&&b.open&&!b.contains(e.target))b.open=false;if(s&&s.open&&!s.contains(e.target))s.open=false;if(n&&n.classList.contains("abierto")&&!n.contains(e.target)&&!m.contains(e.target))cm()});
 document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(b)b.open=false;cm()}});
 document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
+</script>`;
+
+// Compartir en la página estática del libro: igual que la ficha de index.html (menú del sistema en el
+// celular; en el computador, copia el enlace de esta página).
+const SCRIPT_COMPARTIR = `<script>
+(function(){var b=document.getElementById("btnCompartir");if(!b)return;
+b.onclick=async function(){var d=b.dataset,u=d.url;
+if(navigator.share){try{await navigator.share({title:d.titulo,text:d.texto,url:u})}catch(e){}return}
+try{await navigator.clipboard.writeText(u);document.getElementById("avisoCompartir").textContent=d.copiado}catch(e){prompt(d.copia,u)}};})();
 </script>`;
 
 // La medición (GoatCounter) se copia tal cual del bloque MEDICION de index.html, para que haya una sola versión.
@@ -372,7 +385,8 @@ ${JSON.stringify(ld, null, 2)}
 <main class="wrap">
   <div class="ficha">
     <div class="lado">${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}
-      <div class="botones">${botones.join("\n        ")}</div>
+      <div class="botones">${botones.join("\n        ")}<button class="btn" type="button" id="btnCompartir" data-titulo="${esc(l.titulo)}" data-texto="${esc(l.titulo + " - " + l.autor)}" data-url="${urlLibro(l)}" data-copiado="${esc(x.copiado)}" data-copia="${esc(x.copiaEnlace)}">↗ ${esc(x.compartir)}</button></div>
+      <p class="aviso" id="avisoCompartir" role="status"></p>
       ${tieneArchivos && l.idioma === lang ? `<p class="ayuda">${esc(x.ayuda)}</p>` : ""}
     </div>
     <div class="cabeza">
@@ -400,6 +414,7 @@ ${JSON.stringify(ld, null, 2)}
 </main>
 <footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${inicio}#${v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div></footer>
 ${SCRIPT_TEMA}
+${SCRIPT_COMPARTIR}
 ${AVISO_EPUB}
 ${MEDICION}
 </body>

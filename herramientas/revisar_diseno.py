@@ -170,6 +170,18 @@ def revisar(raiz, capturas=None):
                 if u.count("/libro/") > 1:
                     fallas.append(f"compartir ({paso}): enlace con la ruta repetida {u}")
         pg.close()
+        # La página estática del libro (la que se abre desde WhatsApp) también lleva Compartir.
+        pg = nav.new_page(viewport={"width": 390, "height": 844})
+        pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
+        pg.goto(f"{base}libro/ligorio-the-glories-of-mary/")
+        pg.wait_for_load_state("networkidle")
+        if not pg.evaluate("() => { const b = document.querySelector('#btnCompartir'); if (b) b.click(); return !!b; }"):
+            fallas.append("compartir (página del libro): falta el botón Compartir")
+        else:
+            pg.wait_for_timeout(200)
+            if not pg.evaluate("window.__compartido || ''").endswith("/libro/ligorio-the-glories-of-mary/"):
+                fallas.append("compartir (página del libro): el botón no entregó el enlace de la página")
+        pg.close()
         nav.close()
     srv.shutdown()
     return fallas
