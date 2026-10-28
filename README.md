@@ -98,6 +98,21 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `nota.md` («Nota de esta edición»). Se corrigen ahí y se rearma el libro con
   `herramientas/md_a_epub.py editorial/<id> libros/<archivo>.epub --titulo ... --autor ...`,
   luego `portadas.py ... --epub`, `exlibris.py`, `credito_portada.py` y `epub_a_pdf.py`. Licencia de estas traducciones: CC BY-NC-SA 4.0.
+- `herramientas/bilingue.py <id> --original <txt> --idioma en --tramo <archivo.md>:<desde>-<hasta>
+  ... --fuente "<edición del original>"`: edición bilingüe de cotejo de una traducción propia, de
+  uso personal. Limpia el OCR del original (cabezas de página con `--cabecera`, notas al pie por
+  ancho de línea, `--ancho-pie`, 72 por defecto), alinea sus párrafos con los de `editorial/<id>/`
+  por largo (tipo Gale-Church) y pone cada uno, en letra menor y con línea al margen, después de
+  su párrafo en español, dentro del EPUB publicado (portadilla con «Edición bilingüe
+  español-<idioma>» y una línea en la nota). Un `--tramo` por archivo .md, con las líneas del
+  original que le tocan. Saca EPUB, PDF y un `_pares.tsv` para revisar los pares dudosos, siempre en
+  `fenix_fuentes/` (fuera del repo, nunca en `libros/`). Idiomas: en, fr, it, de, la. Ejemplo,
+  De Jaegher (157 pares):
+  `bilingue.py la-vida-de-identificacion --original ../fenix_borradores/de-jaegher/fuente/one_with_jesus_1953_djvu.txt
+  --idioma en --cabecera "One With Jesus" --fuente "*One with Jesus* (Newman Press, 1953)"
+  --tramo 00_prefacio.md:40-155 --tramo 01_capitulo_1.md:190-563 --tramo 02_capitulo_2.md:564-818
+  --tramo 03_capitulo_3.md:819-1345 --tramo 04_capitulo_4.md:1346-1976 --tramo 05_practica.md:1977-2316
+  --tramo 06_conclusion.md:2317-2665 --tramo 07_oracion.md:2666-2702`.
 - Encuadernadores (`#encuadernadores`, bloque de la vista Editorial): personas que ponen su agente
   de IA (Claude Code, Codex...) a preparar un libro con sus tokens. El sitio les da un prompt para
   copiar, general o con el libro ya puesto, que manda al agente a seguir `editorial/ENCUADERNAR.md`
