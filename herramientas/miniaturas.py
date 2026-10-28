@@ -16,7 +16,7 @@ La fuente sigue siendo el JPG; portadas.py llama a este script al terminar.
 import argparse
 from pathlib import Path
 
-from PIL import Image, ImageDraw, ImageEnhance, ImageFilter
+from PIL import Image, ImageChops, ImageDraw, ImageEnhance, ImageFilter
 
 RAIZ = Path(__file__).resolve().parent.parent
 IMG = RAIZ / "img"
@@ -27,10 +27,30 @@ TRABAJOS = [  # (carpeta fuente, subcarpeta destino, ancho)
 ]
 
 
-def hacer(origen: Path, destino: Path, ancho: int | None, todas: bool) -> bool:
+def recortar_al_dibujo(im: Image.Image) -> Image.Image:
+    """Un dibujo chico sobre fondo liso (El principito) quedaba como una mancha en 44x66: si lo
+    dibujado ocupa menos del 60 % del cuadro, se recorta a lo dibujado, con aire y en 2:3."""
+    esq = [im.getpixel(xy) for xy in ((2, 2), (im.width - 3, 2), (2, im.height - 3), (im.width - 3, im.height - 3))]
+    if max(max(abs(a - b) for a, b in zip(esq[0], e)) for e in esq) > 12:
+        return im
+    bb = ImageChops.difference(im, Image.new("RGB", im.size, esq[0])).convert("L").point(lambda v: 255 if v > 40 else 0).getbbox()
+    if not bb or (bb[2] - bb[0]) * (bb[3] - bb[1]) >= 0.6 * im.width * im.height:
+        return im
+    w, h = (bb[2] - bb[0]) * 1.12, (bb[3] - bb[1]) * 1.08
+    w, h = max(w, h * 2 / 3), max(h, w * 3 / 2)
+    w, h = min(w, im.width), min(h, im.height)
+    cx, cy = (bb[0] + bb[2]) / 2, (bb[1] + bb[3]) / 2
+    x = min(max(cx - w / 2, 0), im.width - w)
+    y = min(max(cy - h / 2, 0), im.height - h)
+    return im.crop((round(x), round(y), round(x + w), round(y + h)))
+
+
+def hacer(origen: Path, destino: Path, ancho: int | None, todas: bool, recortar: bool = False) -> bool:
     if not todas and destino.exists() and destino.stat().st_mtime >= origen.stat().st_mtime:
         return False
     im = Image.open(origen).convert("RGB")
+    if recortar:
+        im = recortar_al_dibujo(im)
     if ancho:
         im = im.resize((ancho, round(im.height * ancho / im.width)), Image.LANCZOS)
     destino.parent.mkdir(parents=True, exist_ok=True)
@@ -67,7 +87,7 @@ def generar(nombres=None, todas=False) -> int:
         jpgs = {p.stem: p for p in fuente.glob("*.jpg")}
         for n, p in jpgs.items():
             if nombres is None or n in nombres:
-                hechas += hacer(p, fuente / sub / f"{n}.webp", ancho, todas)
+                hechas += hacer(p, fuente / sub / f"{n}.webp", ancho, todas, recortar=sub == "mini")
         for w in (fuente / sub).glob("*.webp"):
             if w.stem not in jpgs:
                 w.unlink()
