@@ -4222,6 +4222,7 @@ window.FENIX = {
     { titulo: {"es": "Todo por Jesús", "en": "All for Jesus"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/todo-por-jesus"} },
     { titulo: {"es": "Progreso del alma en la vida espiritual", "en": "Growth in Holiness"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/progreso-del-alma-en-la-vida-espiritual"} },
     { titulo: {"es": "El alma de todo apostolado", "en": "The Soul of the Apostolate"}, autor: "Jean-Baptiste Chautard", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-alma-de-todo-apostolado"} },
+    { titulo: {"es": "El arte de aprovechar nuestras faltas", "en": "The Art of Profiting by Our Faults"}, autor: "Joseph Tissot", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-arte-de-aprovechar-nuestras-faltas"} },
     { titulo: {"es": "Apologia pro vita sua", "en": "Apologia pro Vita Sua"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"} },
     { titulo: {"es": "Perder y ganar"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"} },
     { titulo: {"es": "El sueño de Geroncio"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"} },
