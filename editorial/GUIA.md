@@ -128,6 +128,12 @@ uno.
     común: «opúsculos» → «obras breves», «abstruso» → «complicado». Ni diminutivo que suene
     menor («librito», rechazado) ni palabra con carga peyorativa («panfleto» es propaganda o
     libelo; «folleto», unas pocas hojas). Los términos de teología no entran acá (error 5).
+16. **Alusión sin nota** (De Jaegher, cap. I, «como santa Catalina de Siena, retirarnos dentro de
+    nosotros mismos»; reporte del 29-oct). Lo que el autor atribuye a un santo o a un autor sin
+    comillas (un episodio, una enseñanza, «como san X», «según X») también lleva nota «cf.» con la
+    obra y el lugar donde consta, verificados en su texto: aquí, Raimundo de Capua, *Legenda
+    maior*, I, 4. Antes de dar un libro por listo, se buscan los nombres propios de santos y
+    autores en el cuerpo, no solo las comillas.
 
 ## Glosario
 
