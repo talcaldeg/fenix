@@ -18,6 +18,8 @@
 - `![pie](dibujos/x.png)` en su propio párrafo: imagen centrada (ruta relativa a la carpeta), con
   el pie debajo si lo trae (los dibujos de El principito). `{width=N%}` pegado detrás fija su ancho
   como % de la caja de texto, para que guarde la proporción con el texto que tiene en el original.
+- dedicatoria.png (si existe): dedicatoria manuscrita en página propia, después de la portadilla y
+  fuera del índice. Tinta sobre fondo transparente (De la Eucaristía a la Trinidad: la del abuelo).
 - Después: herramientas/portadas.py <id> ... --epub para la portada, herramientas/exlibris.py y
   herramientas/epub_a_pdf.py.
 """
@@ -72,6 +74,7 @@ figure.dibujo img { max-width: 80%; max-height: 60vh; }
 figure.dibujo img[style] { max-width: 100%; height: auto; max-height: 85vh; object-fit: contain; }
 figure.dibujo figcaption { font-size: 0.85em; font-style: italic; margin-top: 0.3em; }
 @media (prefers-color-scheme: dark) { figure.dibujo img { background: #fff; padding: 0.4em; } }
+section.dedicatoria { padding-top: 25%; }
 figure.dibujo + p { text-indent: 0; }
 """
 ROMANOS = [(1000, "M"), (900, "CM"), (500, "D"), (400, "CD"), (100, "C"), (90, "XC"), (50, "L"),
@@ -237,7 +240,16 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
              f'<p class="t2">{html.escape(autor)}</p><p class="t3">{html.escape(subtitulo)}</p>'
              f'<p class="t4">{html.escape(cuidado)}</p><p>Proyecto Fénix</p></section>')
     archivos["OEBPS/portadilla.xhtml"] = pagina(titulo, porta, "frontmatter").encode("utf-8")
-    spine += ["portadilla", "nav"]
+    spine.append("portadilla")
+    dedicatoria = carpeta / "dedicatoria.png"
+    if dedicatoria.exists():
+        imagenes[dedicatoria.name] = dedicatoria
+        archivos["OEBPS/dedicatoria.xhtml"] = pagina(
+            "Dedicatoria", '<section class="dedicatoria" epub:type="dedication"><figure class="dibujo">'
+            '<img src="img/dedicatoria.png" style="width: 100%" alt="Dedicatoria manuscrita"/></figure>'
+            "</section>", "frontmatter").encode("utf-8")
+        spine.append("dedicatoria")
+    spine.append("nav")
 
     nota = carpeta / "nota.md"
     if nota.exists():
