@@ -7,7 +7,7 @@
 // - Lo de otros sitios (Open Library, GoatCounter, Delibris) pasa directo.
 // VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html, datos.js o img/: el
 // navegador ve un sw.js distinto, instala el nuevo y este borra las cachés viejas.
-const VERSION = "fenix-6756de8e0d";
+const VERSION = "fenix-34df66fc9d";
 const BASICO = ["./", "datos.js", "manifest.webmanifest", "img/favicon.svg", "img/icono-192.png"];
 
 self.addEventListener("install", e => {
