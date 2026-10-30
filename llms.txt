@@ -130,6 +130,8 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [Ben-Hur: A Tale of the Christ - Lew Wallace (1880)](https://talcaldeg.github.io/fenix/libro/wallace-ben-hur/) - Judah Ben-Hur, a young Jewish prince of Jerusalem, is betrayed by his childhood friend, the Roman Messala: one accident is enough to send him to the galleys and make his mother and sister disappear. Descarga gratuita en EPUB y PDF.
 - [Loss and Gain: The Story of a Convert - Saint John Henry Newman (1848)](https://talcaldeg.github.io/fenix/libro/newman-loss-and-gain/) - Charles Reding, son of an Anglican clergyman, goes up to Oxford in the midst of the Oxford Movement. Descarga gratuita en EPUB y PDF.
 - [Fabiola, or the Church of the Catacombs - Cardinal Nicholas Wiseman (1854)](https://talcaldeg.github.io/fenix/libro/wiseman-fabiola/) - Rome, AD 302, on the eve of Diocletian's great persecution. Descarga gratuita en EPUB y PDF.
+- [Cuentos de la selva - Horacio Quiroga (1918)](https://talcaldeg.github.io/fenix/libro/quiroga-cuentos-de-la-selva/) - Ocho cuentos para niños ambientados en la selva de Misiones, donde los animales hablan y se las arreglan con astucia, valor y lealtad. Descarga gratuita en EPUB y PDF.
+- [Pequeñeces - Luis Coloma (1891)](https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/) - Retrato de la alta sociedad madrileña entre la revolución de 1868 y la Restauración. Descarga gratuita en EPUB y PDF.
 
 ## Teatro
 

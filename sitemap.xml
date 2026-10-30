@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/</loc>
@@ -709,6 +709,14 @@
     <lastmod>2026-10-27</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/quiroga-cuentos-de-la-selva/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/muestra/</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
@@ -875,5 +883,13 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/newman-the-dream-of-gerontius/muestra/</loc>
     <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/quiroga-cuentos-de-la-selva/muestra/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/muestra/</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>

@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "28-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "30-oct-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -4185,6 +4185,52 @@ window.FENIX = {
       delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"},
       encuadernador: "Juan Ignacio Alcalde G.",
       parecidos: ["newman-loss-and-gain", "imitacion-de-cristo", "fray-luis-de-leon-de-los-nombres-de-cristo"]
+    },
+    {
+      id: "quiroga-cuentos-de-la-selva",
+      titulo: "Cuentos de la selva",
+      autor: "Horacio Quiroga",
+      anio: "1918",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Ocho cuentos para niños ambientados en la selva de Misiones, donde los animales hablan y se las arreglan con astucia, valor y lealtad. Una tortuga gigante carga a su amigo enfermo durante trescientas leguas hasta Buenos Aires; los flamencos se ganan sus patas rojas en un baile de víboras; un loro se venga del tigre que le arrancó las plumas; los yacarés defienden su río de un barco de guerra; las rayas cierran el paso del Yabebirí a los tigres para salvar a un hombre. Quiroga los escribió «para los niños», y son hoy un clásico de la literatura infantil hispanoamericana.", "en": "Eight stories for children set in the jungle of Misiones, where animals talk and get by with cunning, courage and loyalty. A giant tortoise carries her sick friend three hundred leagues to Buenos Aires; the flamingos earn their red legs at a snakes' ball; a parrot takes revenge on the tiger who tore out his feathers; the caimans defend their river against a warship; the stingrays block the Yabebirí crossing to the tigers to save a man. Quiroga wrote them «for children», and they are now a classic of Spanish-American children's literature."},
+      porque: {"es": "Para leer en voz alta a los niños o para que los lean solos desde los ocho o nueve años: son breves, rápidos, con humor y algo de peligro. Enseñan la gratitud, la amistad entre los débiles y el valor de cumplir con el deber, y muestran la naturaleza con respeto. Algunos cuentos tienen escenas duras de la vida salvaje, contadas con sencillez.", "en": "For reading aloud to children, or for them to read alone from about eight or nine: they are short and fast, with humour and a touch of danger. They teach gratitude, friendship among the weak and the worth of doing one's duty, and they show nature with respect. Some stories have harsh scenes of wild life, told simply."},
+      imagen: {"src": "img/portadas/quiroga-cuentos-de-la-selva.jpg", "credito": {"es": "Henri Rousseau, «La jungla ecuatorial», 1909", "en": "Henri Rousseau, «The Equatorial Jungle», 1909"}, "url": "https://commons.wikimedia.org/wiki/File:Henri_Rousseau,_The_Equatorial_Jungle,_1909,_NGA_46688.jpg"},
+      citas: [
+        "La tortuga, cargada así, caminó, caminó y caminó de día y de noche.",
+        "Coaticitos: hay una sola cosa a la cual deben tener un gran miedo. Son los perros.",
+        "No es justo que usted me coma porque es más fuerte que yo.",
+        "Trabajen, compañeras, pensando que el fin a que tienden nuestros esfuerzos, la felicidad de todos, es muy superior a la fatiga de cada uno."
+      ],
+      archivos: {"epub": "libros/quiroga-cuentos-de-la-selva.epub", "pdf": "libros/quiroga-cuentos-de-la-selva.pdf"},
+      fuente: {"texto": "Primera edición, Buenos Aires, Cooperativa Editorial «Buenos Aires», 1918, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Cuentos_de_la_selva"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cuentos-de-la-selva"},
+      editorial: {"es": "Edición digital de Proyecto Fénix sobre la primera edición (Buenos Aires, 1918), con ortografía actualizada, diálogos entre comillas y pasajes dudosos revisados contra el escaneo. Edición al cuidado de Juan Ignacio Alcalde G.", "en": "Proyecto Fénix digital edition based on the first edition (Buenos Aires, 1918), with updated spelling, dialogue in quotation marks and doubtful passages checked against the scan. Edited by Juan Ignacio Alcalde G."},
+      parecidos: ["saint-exupery-el-principito", "irving-cuentos-de-la-alhambra", "swift-los-viajes-de-gulliver"]
+    },
+    {
+      id: "coloma-pequeneces",
+      titulo: "Pequeñeces",
+      autor: "Luis Coloma",
+      anio: "1891",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Retrato de la alta sociedad madrileña entre la revolución de 1868 y la Restauración. Currita Albornoz, condesa frívola, hermosa y ambiciosa, vive entre bailes, tertulias e intrigas políticas a favor de la vuelta de Alfonso XII, y en una relación culpable con Jacobo Téllez-Ponce, marido de su prima, la marquesa de Sabadell. Las que el mundo llama «pequeñeces» van dejando a su paso familias rotas y una tragedia. El jesuita padre Cifuentes y la virtuosa Sabadell son el contrapunto de una novela que causó escándalo en su tiempo por lo reconocible de sus personajes.", "en": "A portrait of Madrid high society between the 1868 revolution and the Restoration. Currita Albornoz, a frivolous, beautiful and ambitious countess, lives amid balls, salons and political intrigues for the return of Alfonso XII, and in a guilty affair with Jacobo Téllez-Ponce, husband of her cousin, the Marchioness of Sabadell. What the world calls «trifles» leave broken families and a tragedy in their wake. The Jesuit Father Cifuentes and the virtuous Sabadell are the counterpoint in a novel that caused a scandal in its day because its characters were so recognisable."},
+      porque: {"es": "Para lectores adultos que disfrutan de la gran novela realista y quieren ver, con humor e ironía, cómo la vanidad y el egoísmo «pequeños» hacen grandes daños. Su autor, un jesuita, la escribió para lectores de una revista piadosa, y advierte en el prólogo que no ahorra la verdad de las miserias humanas, pero tampoco la presenta como buena. El final, de misericordia y no de condena, es inolvidable.", "en": "For adult readers who enjoy the great realist novel and want to see, with humour and irony, how «small» vanity and selfishness do great harm. Its author, a Jesuit, wrote it for the readers of a devout magazine, and warns in his preface that he does not spare the truth about human wretchedness, though he never presents it as good. The ending, one of mercy rather than condemnation, is unforgettable."},
+      imagen: {"src": "img/portadas/coloma-pequeneces.jpg", "credito": {"es": "Federico de Madrazo, «Amalia de Llano y Dotres, condesa de Vilches», 1853", "en": "Federico de Madrazo, «Amalia de Llano y Dotres, Countess of Vilches», 1853"}, "url": "https://commons.wikimedia.org/wiki/File:Amalia_de_Llano_y_Dotres,_condesa_de_Vilches_(Federico_de_Madrazo).jpg"},
+      citas: [
+        "Lector amigo: Si eres hombre corrido y poco asustadizo, conocedor de las miserias humanas y amante de la verdad, aunque esta amargue, éntrate sin miedo por las páginas de este libro",
+        "muy superior a la caridad que consiste en dar es la que consiste en comprender y soportar las humanas flaquezas.",
+        "¡Como si la caridad se rebajara alguna vez, por mucho que descienda!...",
+        "una mera pequeñez, de esas que asombran a los hombres y regocijan a los ángeles"
+      ],
+      archivos: {"epub": "libros/coloma-pequeneces.epub", "pdf": "libros/coloma-pequeneces.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 20011 (dominio público), sobre la 6.ª edición: Bilbao, Administración de «El Mensajero del Corazón de Jesús», 1898", "url": "https://www.gutenberg.org/ebooks/20011"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/pequeneces"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["fernan-caballero-la-gaviota", "pardo-bazan-la-quimera", "pereda-pedro-sanchez"]
     }
   ],
 
