@@ -4238,8 +4238,7 @@ window.FENIX = {
   // (autor, y traductor si lo hay, muerto antes de 1956; obra anterior a 1931) y bien valorados en
   // Delibris (5 o 6). Una línea por obra (recibir_entrega.py la saca así). titulo: en cada idioma que
   // se pide; sin "en", no aparece en el sitio en inglés. delibris como en las fichas, o null con
-  // `estimada` { valor, genero } si Delibris no la reseña. reservado: "dd-mmm-aaaa" cuando alguien la
-  // toma (formulario «Fénix - encuadernador»). El sitio oculta sola la que ya está en ese idioma.
+  // `estimada` { valor, genero } si Delibris no la reseña. El sitio oculta sola la que ya está en ese idioma.
   buscados: [
     { titulo: {"es": "Emma"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"} },
     { titulo: {"es": "Persuasión"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },

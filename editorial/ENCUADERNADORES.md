@@ -9,8 +9,7 @@ está en `editorial/ENCUADERNAR.md`.
 Criterios:
 
 - De tú, en primera persona de Tomás o impersonal; sin «nosotros» que sugiera un equipo.
-- El libro que se propone sale de `buscados` en `datos.js` (derechos y Delibris ya revisados) y no
-  tiene `reservado`. Si la persona elige otro, su agente revisa lo mismo.
+- El libro que se propone sale de `buscados` en `datos.js` (derechos y Delibris ya revisados). Si la persona elige otro, su agente revisa lo mismo.
 - Se dice claro que es voluntario y sin pago, y que gasta sus tokens; no se promete cuántos.
 - No se promete alojar «para siempre»: se ofrece publicarlo gratis, sin publicidad y con
   licencia abierta.

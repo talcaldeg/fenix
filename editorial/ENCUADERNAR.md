@@ -16,8 +16,8 @@ principio y el visto bueno al final; entre medio, no le preguntes ni le pidas na
   sitio bloqueado, el cuadro, Delibris, una cita que no logras cotejar), sáltalo, anótalo en la
   sección «Pendiente para Fénix» del `INFORME.md` y sigue: Fénix lo completa al recibirlo.
 - Entrega lo que tengas: un paquete con pendientes anotados sirve; uno que no llega, no.
-- Solo te detienes por los cuatro filtros del paso 2 (ya está, está reservado, tiene derechos,
-  es moralmente malo), y se lo dices en dos líneas.
+- Solo te detienes por los tres filtros del paso 2 (ya está, tiene derechos, es moralmente
+  malo), y se lo dices en dos líneas.
 - No hagas commit ni push al repo de Fénix: la entrega va solo por `herramientas/entregar.py`.
 
 ## 0. Pregunta primero
@@ -55,9 +55,7 @@ Detente y avísale a tu usuario en cuanto falle uno de estos filtros:
 1. **¿Ya está en Fénix en ese idioma?** Busca título y autor en `datos.js` (campo `titulo`,
    `autor` y las `versiones` de cada ficha). Si la obra está, pero solo en el otro idioma, sí
    sirve: entregarás una versión (ver paso 5).
-2. **¿Alguien lo está haciendo?** En `datos.js`, la lista `buscados`: si el libro tiene
-   `reservado`, otra persona lo tomó.
-3. **Derechos de autor.** Un libro **en español** basta con que sea libre en Chile:
+2. **Derechos de autor.** Un libro **en español** basta con que sea libre en Chile:
    - el autor murió hace más de 70 años (en 2026: antes de 1956).
    - Si usas una traducción ajena, el **traductor** también murió antes de 1956 (una
      traducción anónima vale si se publicó hace más de 70 años). Si no hay traducción libre,
@@ -67,7 +65,7 @@ Detente y avísale a tu usuario en cuanto falle uno de estos filtros:
      mismo la traducción.
    - Notas, prólogos e introducciones de editores modernos tienen sus propios derechos: no se
      copian.
-4. **Valoración moral.** Si el libro está en `buscados`, ya se revisó: usa su `delibris` y no
+3. **Valoración moral.** Si el libro está en `buscados`, ya se revisó: usa su `delibris` y no
    busques más. Si no, búscalo en Delibris (https://www.delibris.org/es/, buscador por título).
    Sirve si tiene 5 o 6 sobre 6. Si no está reseñado o no puedes abrir Delibris, estima tú con
    este criterio: sin escenas sexuales, sin inmoralidad presentada como buena y sin doctrina
@@ -99,8 +97,6 @@ secciones de libros concretos son ejemplos de cómo armar el glosario del tuyo.
   rayas largas o comillas rectas).
 - Si tu herramienta permite subagentes o modelos más baratos, úsalos para descargar, convertir y
   revisar formato; usa el mejor modelo disponible para traducir y para la revisión de sentido.
-- Si el trabajo va a ser largo (vía C o D), dile a tu usuario que, si quiere que nadie lo
-  repita, puede reservarlo con un correo a talcaldeg@gmail.com antes de que empieces.
 - Si tu usuario usa un plan gratuito, su cupo alcanza para las vías A y B, pero una vía C o D
   puede agotarlo a medio camino: díselo antes de empezar. Deja el trabajo listo para retomarlo
   en otra sesión u otro día: anota en `entrega/<id>.avance.md` (fuera de la carpeta del paquete)

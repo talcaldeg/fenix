@@ -127,7 +127,7 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   arma EPUB, portada, exlibris y PDF, agrega la ficha (o la versión en `versiones`), corre
   `gen_estaticos.js` y cierra con una línea por libro; calla la salida de lo que sale bien. El mensaje tipo
   para invitarlos está en `editorial/ENCUADERNADORES.md`; el formulario llega con asunto
-  «Fénix - encuadernador» (ya no reserva: quien quiera reservar escribe a talcaldeg@gmail.com y se anota en `reservado` del libro buscado).
+  «Fénix - encuadernador».
   **Regla dura: lo que Fénix tenga que arreglarle a un paquete recibido, lo paga el agente del
   encuadernador la próxima vez.** El arreglo se vuelve un ERROR en `revisar_entrega.py` (y parte
   de `--arreglar` si es mecánico) y, si es criterio, va en `editorial/ENCUADERNAR.md`. Salvo lo
