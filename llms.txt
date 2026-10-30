@@ -132,6 +132,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [Fabiola, or the Church of the Catacombs - Cardinal Nicholas Wiseman (1854)](https://talcaldeg.github.io/fenix/libro/wiseman-fabiola/) - Rome, AD 302, on the eve of Diocletian's great persecution. Descarga gratuita en EPUB y PDF.
 - [Cuentos de la selva - Horacio Quiroga (1918)](https://talcaldeg.github.io/fenix/libro/quiroga-cuentos-de-la-selva/) - Ocho cuentos para niños ambientados en la selva de Misiones, donde los animales hablan y se las arreglan con astucia, valor y lealtad. Descarga gratuita en EPUB y PDF.
 - [Pequeñeces - Luis Coloma (1891)](https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/) - Retrato de la alta sociedad madrileña entre la revolución de 1868 y la Restauración. Descarga gratuita en EPUB y PDF.
+- [Los pescadores de Trépang - Emilio Salgari (trad. anónima) (1896)](https://talcaldeg.github.io/fenix/libro/salgari-los-pescadores-de-trepang/) - En 1850, el capitán holandés Van-Stael navega en un junco chino por la costa norte de Australia, con sus sobrinos Hans y Cornelio y el viejo piloto Van-Horn, para pescar trépang, el codiciado pepino de mar. Descarga gratuita en EPUB y PDF.
 
 ## Teatro
 
@@ -203,6 +204,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [Una excursión a los indios ranqueles - Lucio V. Mansilla (1870)](https://talcaldeg.github.io/fenix/libro/mansilla-excursion-a-los-indios-ranqueles/) - En 1870 el coronel Lucio V. Se lee gratis en el sitio del titular.
 - [Heretics - G. K. Chesterton (1905)](https://talcaldeg.github.io/fenix/libro/chesterton-heretics/) - A collection of essays in which Chesterton examines the celebrated thinkers and writers of his day (Kipling, Shaw, Wells, Whistler and others) and argues that the most important thing about a person is his view of the universe. Descarga gratuita en EPUB y PDF.
 - [What's Wrong with the World - G. K. Chesterton (1910)](https://talcaldeg.github.io/fenix/libro/chesterton-whats-wrong-with-the-world/) - Chesterton surveys the social ills of the early twentieth century (poverty, education, the place of women, the home) and proposes that the remedy is not some new engineering but giving ordinary people back property, family and the freedom of their own house. Descarga gratuita en EPUB y PDF.
+- [Lo que está mal en el mundo - G. K. Chesterton (1910)](https://talcaldeg.github.io/fenix/libro/chesterton-whats-wrong-with-the-world/es/) - Chesterton sostiene que el error de la sociología moderna es describir la enfermedad social sin saber qué sería la salud: lo que está mal es que no preguntamos qué está bien. Descarga gratuita en EPUB y PDF.
 
 ## Sitio
 

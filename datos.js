@@ -3904,7 +3904,10 @@ window.FENIX = {
       archivos: {"epub": "libros/chesterton-whats-wrong-with-the-world.epub", "pdf": "libros/chesterton-whats-wrong-with-the-world.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 1717 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/1717"},
       delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/lo-que-esta-mal-en-el-mundo"},
-      parecidos: ["ortodoxia", "chesterton-heretics", "chesterton-the-everlasting-man"]
+      parecidos: ["ortodoxia", "chesterton-heretics", "chesterton-the-everlasting-man"],
+      versiones: {
+        es: {"titulo": "Lo que está mal en el mundo", "autor": "G. K. Chesterton", "anio": "1910", "resumen": {"es": "Chesterton sostiene que el error de la sociología moderna es describir la enfermedad social sin saber qué sería la salud: lo que está mal es que no preguntamos qué está bien. Toma como piedra de toque el hogar, la casa propia de una familia libre, y examina desde ahí el imperialismo, el feminismo de su tiempo y la educación. Denuncia que ricos y reformadores, conservadores y socialistas, coinciden en dejar sin hogar al hombre común, y termina proponiendo repartir la propiedad para salvar la familia.", "en": "Chesterton argues that the mistake of modern sociology is to describe the social disease without knowing what health would be: what is wrong is that we do not ask what is right. He takes the home, the family's own house, as his touchstone, and from there examines imperialism, the feminism of his day and education. He charges that the rich and the reformers, Conservatives and Socialists alike, agree in leaving the common man homeless, and ends by proposing to distribute property in order to save the family."}, "porque": {"es": "Para quien sospecha que muchas reformas sociales tratan a la persona como una pieza que hay que ajustar al sistema, y no al revés. Chesterton defiende con humor y paradojas la familia, la casa propia y el sentido común de la gente sencilla, y obliga a preguntarse primero qué es bueno para el hombre. Algunas de sus opiniones sobre la mujer son de su época, pero la pregunta de fondo sigue siendo actual.", "en": "For readers who suspect that many social reforms treat the person as a part to be fitted to the system, rather than the other way round. With humour and paradox Chesterton defends the family, the home of one's own and the common sense of ordinary people, and forces us to ask first what is good for man. Some of his views on women belong to his time, but the underlying question is still current."}, "citas": ["Lo que está mal es que no preguntamos qué está bien.", "El ideal cristiano no ha sido probado y hallado deficiente. Ha sido hallado difícil, y se ha dejado sin probar.", "para el moderadamente pobre, el hogar es el único lugar de libertad. Más aún: es el único lugar de anarquía.", "La coacción es una especie de aliento; y la anarquía (o lo que algunos llaman libertad) es esencialmente opresiva, porque es esencialmente desalentadora.", "si vale la pena hacer una cosa, vale la pena hacerla mal."], "fuente": {"texto": "Traducción de Proyecto Fénix desde What's Wrong with the World (1910), Project Gutenberg, libro n.º 1717 (dominio público)", "url": "https://www.gutenberg.org/ebooks/1717"}, "imagen": {"src": "img/portadas/chesterton-whats-wrong-with-the-world-es.jpg", "credito": {"es": "Ford Madox Brown, «El trabajo», 1852-1865", "en": "Ford Madox Brown, «Work», 1852-1865"}, "url": "https://commons.wikimedia.org/wiki/File:Ford_Madox_Brown_-_Work_-_Google_Art_Project.jpg"}, "archivos": {"epub": "libros/chesterton-whats-wrong-with-the-world-es.epub", "pdf": "libros/chesterton-whats-wrong-with-the-world-es.pdf"}, "editorial": {"es": "Traducción nueva de Proyecto Fénix, hecha directamente del inglés de What's Wrong with the World (1910), completa, con la dedicatoria, las cinco partes y las tres notas del autor; preparada con ayuda de inteligencia artificial y revisada contra el original, con nota de la edición.", "en": "A new Proyecto Fénix translation, made directly from the English of What's Wrong with the World (1910), complete, with the dedication, the five parts and the author's three notes; prepared with the help of artificial intelligence and checked against the original, with an edition note."}}
+      }
     },
     {
       id: "austen-pride-and-prejudice",
@@ -4231,6 +4234,29 @@ window.FENIX = {
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/pequeneces"},
       encuadernador: "Juan Ignacio Alcalde G.",
       parecidos: ["fernan-caballero-la-gaviota", "pardo-bazan-la-quimera", "pereda-pedro-sanchez"]
+    },
+    {
+      id: "salgari-los-pescadores-de-trepang",
+      titulo: "Los pescadores de Trépang",
+      autor: "Emilio Salgari (trad. anónima)",
+      anio: "1896",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "En 1850, el capitán holandés Van-Stael navega en un junco chino por la costa norte de Australia, con sus sobrinos Hans y Cornelio y el viejo piloto Van-Horn, para pescar trépang, el codiciado pepino de mar. Los asaltos de los nativos, la borrachera de su tripulación y un huracán en el golfo de Carpentaria los dejan náufragos. Desde una isla de coral cruzan el estrecho de Torres hasta Nueva Guinea, donde los esperan piratas papúes, cocodrilos, emboscadas y el cautiverio, hasta llegar a la aldea del jefe Uri-Utanate.", "en": "In 1850 the Dutch captain Van-Stael sails a Chinese junk along the north coast of Australia, with his nephews Hans and Cornelius and the old pilot Van-Horn, to fish for trepang, the prized sea cucumber. Attacks by the natives, his crew's drunken revel and a hurricane in the Gulf of Carpentaria leave them shipwrecked. From a coral island they cross the Torres Strait to New Guinea, where Papuan pirates, crocodiles, ambushes and captivity await them, until they reach the village of chief Uri-Utanate."},
+      porque: {"es": "Para lectores jóvenes que quieren aventura sin pausa: naufragios, islas, selvas y animales salvajes, con dos muchachos valientes que aprenden de su tío a no rendirse. Los personajes se encomiendan a Dios en el peligro y se cuidan unos a otros. Conviene leerla sabiendo que repite la mirada europea del siglo XIX sobre los pueblos nativos («salvajes», «antropófagos») y que tiene la violencia propia del género.", "en": "For young readers who want nonstop adventure: shipwrecks, islands, jungles and wild animals, with two brave boys who learn from their uncle never to give up. The characters commend themselves to God in danger and look after one another. It is best read knowing that it repeats the nineteenth-century European view of native peoples («savages», «cannibals») and has the violence typical of the genre."},
+      imagen: {"src": "img/portadas/salgari-los-pescadores-de-trepang.jpg", "credito": {"es": "Escuela china, siglo XIX, «Un junco mercante en el mar»", "en": "Chinese School, 19th century, «A trading junk at sea»"}, "url": "https://commons.wikimedia.org/wiki/File:A_trading_junk_at_sea_RMG_BHC1181.tiff"},
+      citas: [
+        "A principios de abril de 1850 iba costeando la región occidental de la tierra de Carpentaria, perteneciente al continente de Australia, una de las esbeltas naves chinas llamadas juncos.",
+        "Tenemos la chalupa y nos encomendaremos a Dios y a las olas.",
+        "Con ayuda de Dios, esperemos vencer en esta terrible prueba.",
+        "Has demostrado demasiado valor para tu edad, pobre muchacho; pero esta es la última prueba."
+      ],
+      archivos: {"epub": "libros/salgari-los-pescadores-de-trepang.epub", "pdf": "libros/salgari-los-pescadores-de-trepang.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 36546 (dominio público), sobre la «versión directa del italiano» de la Casa Editorial Calleja, Madrid, 1916", "url": "https://www.gutenberg.org/ebooks/36546"},
+      delibris: null,
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["salgari-el-rey-del-mar", "salgari-los-piratas-de-la-malasia", "stevenson-isla-del-tesoro"]
     }
   ],
 
@@ -4253,7 +4279,6 @@ window.FENIX = {
     { titulo: {"es": "El hombre que fue jueves"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-hombre-que-fue-jueves"} },
     { titulo: {"es": "La esfera y la cruz"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/la-esfera-y-la-cruz"} },
     { titulo: {"es": "El Napoleón de Notting Hill"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-napoleon-de-notting-hill"} },
-    { titulo: {"es": "Lo que está mal en el mundo"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/lo-que-esta-mal-en-el-mundo"} },
     { titulo: {"es": "Las glorias de María"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/las-glorias-de-maria"} },
     { titulo: {"es": "Visitas al Santísimo Sacramento y a María Santísima", "en": "Visits to the Most Blessed Sacrament and to the Blessed Virgin Mary"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/visitas-al-santisimo-sacramento-y-maria-santisima-para-todos-los-dias"} },
     { titulo: {"es": "Práctica del amor a Jesucristo", "en": "The Practice of the Love of Jesus Christ"}, autor: "San Alfonso María de Ligorio", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/practica-del-amor-jesucristo"} },

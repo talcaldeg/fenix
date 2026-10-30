@@ -654,7 +654,11 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/chesterton-whats-wrong-with-the-world/</loc>
-    <lastmod>2026-10-27</lastmod>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/chesterton-whats-wrong-with-the-world/es/</loc>
+    <lastmod>2026-10-30</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/</loc>
@@ -714,6 +718,10 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/salgari-los-pescadores-de-trepang/</loc>
     <lastmod>2026-10-30</lastmod>
   </url>
   <url>
@@ -833,6 +841,10 @@
     <lastmod>2026-10-27</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/chesterton-whats-wrong-with-the-world/es/muestra/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/muestra/</loc>
     <lastmod>2026-10-27</lastmod>
   </url>
@@ -890,6 +902,10 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/muestra/</loc>
+    <lastmod>2026-10-30</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/salgari-los-pescadores-de-trepang/muestra/</loc>
     <lastmod>2026-10-30</lastmod>
   </url>
 </urlset>
