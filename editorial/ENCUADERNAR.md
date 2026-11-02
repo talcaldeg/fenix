@@ -79,7 +79,7 @@ sirva:
 
 | Vía | Cuándo | Qué haces | Costo |
 |---|---|---|---|
-| **A. Gutenberg** | Project Gutenberg tiene la obra en el idioma pedido y su traductor cumple el paso 2 | Nada con el texto: anotas el número del libro | mínimo |
+| **A. Gutenberg** | Project Gutenberg tiene la obra en el idioma pedido y su traductor cumple el paso 2 | Nada con el texto: anotas el número del libro (Fénix le quita el encabezado, la licencia y el nombre de Gutenberg al armarlo) | mínimo |
 | **B. Texto limpio** | Hay una edición libre en ese idioma como texto (Wikisource, Biblioteca Virtual Miguel de Cervantes, CCEL, Fadedpage) | La pasas a Markdown con un script | bajo |
 | **C. Escaneo** | Solo hay escaneos libres (Internet Archive, Google Books, Biblioteca Digital Hispánica, Gallica) | Bajas el texto OCR, lo limpias con scripts y revisas solo los pasajes dudosos contra la imagen | medio |
 | **D. Traducción** | No existe traducción libre al idioma pedido, o la que hay es ilegible | Traduces desde el original libre siguiendo `editorial/GUIA.md` | alto |
@@ -129,7 +129,8 @@ Lo lee `herramientas/md_a_epub.py` (mira su encabezado). Lo esencial:
 - Cursiva `*así*`. Notas: llamada `[^3]` en el texto, pegada a la palabra (`gracia[^3]`, no `gracia [^3]`; igual el armador la pega), y `[^3]: texto de la nota.` al final del
   mismo archivo. Solo las notas del autor; nada de comentarios tuyos dentro del texto.
 - Sin números de página, encabezados repetidos, guiones de corte de línea ni restos del OCR o de
-  Gutenberg (licencias, `[Illustration]`).
+  Gutenberg (encabezado, licencia, «Project Gutenberg» en cualquier parte, `[Illustration]`): el
+  libro sale como texto de dominio público, sin la marca de nadie.
 - En español: comillas «», nunca raya larga (—) ni semirraya (–) (los diálogos van con «»),
   signos ¿ ¡ de apertura y ortografía de la RAE actual. En una edición antigua (vías B y C) se
   actualizan tildes y ortografía («á» → «a», «fué» → «fue», «volvióse» → «volviose») sin

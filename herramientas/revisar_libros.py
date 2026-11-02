@@ -21,6 +21,8 @@ estar al día. Cada ERROR es un defecto que ya llegó publicado:
 - PDF: con ese índice, cada entrada lleva el número de la página a la que lleva su enlace.
 - EPUB y PDF: el crédito de la portada de su ficha, si la ficha lo trae (el archivo circula sin
   la ficha; credito_portada.py, 24-oct-2026).
+- EPUB y PDF: sin el encabezado, la licencia ni los metadatos de Gutenberg (sin_gutenberg.py;
+  Niebla abría con una página legal en inglés, 2-nov-2026).
 
 Termina con «Libros listos» o con la lista de errores (código 1).
 """
@@ -48,6 +50,10 @@ DIF_FONDO = 12  # por canal, 0-255
 EXLIBRIS = "fenix-exlibris.xhtml"
 NOTA = re.compile(r'<(\w+)\b[^>]*(?:epub:type="(?:footnote|endnote|rearnote)"|class="(?:[^"]* )?footnote(?: [^"]*)?")[^>]*>')
 CURSIVA = re.compile(r"<(?:em|i|cite)\b|font-style:\s*italic")
+# Lo que deja Gutenberg en sus EPUB (sin_gutenberg.py lo quita). Citarlo como fuente en la nota de
+# una traducción propia («Se tradujo desde el texto de Project Gutenberg») no cae acá.
+MARCA_PG = re.compile(r"Project Gutenberg(?:™|-tm)? (?:e-?Book|E-?text|License|Literary Archive)|GUTENBERG™"
+                      r"|<(?:header|footer)\b[^>]*id=\"pg-(?:header|footer)\"|by Project Gutenberg|www\.gutenberg\.org/\d|gutenberg\.org/ebooks", re.I)
 
 
 def elemento(t: str, m) -> str:
@@ -177,6 +183,10 @@ def revisar_epub(ruta: Path, creditos: dict) -> list:
         reglas = [s.strip() for s, cuerpo in re.findall(r"([^{}]+)\{([^}]*)\}", css)
                   if re.search(r"footnote|\.notas\b", s) and re.search(r"font-style:\s*italic", cuerpo)]
         E += revisar_nav(z, opf_ruta, opf, hrefs, spine)
+        pg = [x.rpartition("/")[2] for x in nombres if x.endswith((".xhtml", ".html", ".htm", ".opf", ".ncx"))
+              and MARCA_PG.search(z.read(x).decode("utf-8", "replace"))]
+    if pg:
+        E.append(f"encabezado, licencia o marca de Gutenberg en {', '.join(pg[:3])} (correr sin_gutenberg.py)")
     if n:
         E.append(f"{n} notas con cursiva (ReadEra borra ese texto), p. ej. «{ej}»")
     if reglas:
@@ -247,6 +257,9 @@ def revisar_pdf(ruta: Path, creditos: dict) -> list:
         return [f"solo {d.page_count} páginas"]
     if (c := falta_credito(ruta, " ".join(d[i].get_text() for i in range(min(6, d.page_count))), creditos)):
         E.append(f"sin el crédito de la portada «{c}» en las primeras páginas (rehacer con epub_a_pdf.py)")
+    paginas = [i + 1 for i in range(d.page_count) if MARCA_PG.search(d[i].get_text())]
+    if paginas:
+        E.append(f"encabezado o licencia de Gutenberg en las páginas {paginas[:5]} (rehacer con epub_a_pdf.py)")
     deformadas = []
     for i, p in enumerate(d):
         area = p.rect.width * p.rect.height

@@ -14,7 +14,8 @@ sesion.py publicar.
 
 1. Descomprime en .entregas/<nombre>/ y corre herramientas/revisar_entrega.py (se detiene si hay
    errores).
-2. Arma el EPUB en libros/<id>.epub: vía A, baja el de Project Gutenberg; vías B, C y D, copia
+2. Arma el EPUB en libros/<id>.epub: vía A, baja el de Project Gutenberg y le quita encabezado,
+   licencia y marca (sin_gutenberg.py); vías B, C y D, copia
    texto/ a editorial/<id>/ y lo arma con md_a_epub.py.
 3. Agrega la ficha al final de `libros` en datos.js, saca el libro de `buscados` y pone la fecha.
 4. Portada con el cuadro (portadas.py --epub), exlibris, crédito de la portada, PDF y revisión
@@ -37,6 +38,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from revisar_entrega import epub_gutenberg, plano, revisar, texto_epub  # noqa: E402
+import sin_gutenberg  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 PY = sys.executable
@@ -69,6 +71,8 @@ def armar_epub(c: Path, f: dict, nombre: str) -> Path:
     epub = RAIZ / "libros" / f"{nombre}.epub"
     if f.get("gutenberg"):
         shutil.copyfile(epub_gutenberg(f["gutenberg"]), epub)
+        if (quedan := sin_gutenberg.limpiar(epub)):
+            sys.exit(f"Quedan menciones a Gutenberg en el EPUB: {quedan[:3]}")
         base = plano(texto_epub(epub))
         faltan = [x for x in f["citas"] if plano(x) not in base]
         if faltan:

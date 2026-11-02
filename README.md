@@ -158,8 +158,14 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   regenera el catálogo entero. Una versión en otro idioma lleva su propia `imagen` (el título
   va impreso). El sitio muestra la portada con marco en tarjetas y ficha, y el cuadro solo en
   miniaturas y fondos. La portada oficial (URL externa) se deja como está. El crédito va en
-  `imagen` de la ficha. Las obras de Project Gutenberg se alojan en `libros/` con esa portada
-  (el texto y la licencia de Gutenberg quedan intactos).
+  `imagen` de la ficha. Las obras de Project Gutenberg se alojan en `libros/` con esa portada.
+- `herramientas/sin_gutenberg.py libros/<archivo>.epub`: a un EPUB de Gutenberg le quita el
+  encabezado, la licencia y toda mención a la marca (títulos, metadatos, índice), y agrega al
+  final un colofón con los voluntarios que lo transcribieron. Su licencia lo permite: sin sus
+  referencias queda un texto de dominio público (desde el 2-nov-2026; antes se dejaban
+  intactos). Va primero, antes de `portadas.py`; `recibir_entrega.py` lo corre solo en la vía A
+  y `revisar_libros.py` no deja publicar un EPUB o PDF con restos. Citar Gutenberg como fuente
+  en la nota de una traducción propia sí se puede.
 - App instalable (PWA): `manifest.webmanifest`, íconos `img/icono-*.png` (salen de
   `herramientas/logo.py`) y `sw.js`. El bloque `PWA` del `<head>` de `index.html` lo copia
   `gen_estaticos.js` en cada ficha, y el mismo script renueva `VERSION` de `sw.js` cuando cambian
