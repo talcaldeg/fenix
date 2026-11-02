@@ -14,6 +14,7 @@ import html
 import json
 import re
 import sys
+import urllib.request
 import zipfile
 from pathlib import Path
 
@@ -73,6 +74,48 @@ def texto_epub(ruta):
     # Las etiquetas de bloque separan palabras; las de línea (versalitas, cursiva) no: «I<span>t is</span>».
     t = re.sub(r"</?(p|div|h\d|li|br|tr|td|blockquote)\b[^>]*>", " ", " ".join(partes))
     return html.unescape(re.sub(r"<[^>]+>", "", t))
+
+
+def bajar(url, timeout=120):
+    req = urllib.request.Request(url, headers={"User-Agent": "Proyecto Fenix"})
+    return urllib.request.urlopen(req, timeout=timeout).read()
+
+
+def texto_gutenberg(n, carpeta: Path):
+    """Cuerpo del EPUB de Gutenberg (sin su licencia), bajado una vez junto al paquete, fuera del .zip."""
+    cache = carpeta.resolve().parent / f".gutenberg-{n}.epub"
+    if not cache.exists():
+        cache.write_bytes(bajar(f"https://www.gutenberg.org/ebooks/{n}.epub3.images"))
+    t = plano(texto_epub(cache))  # plano() ya quitó los asteriscos de «*** START OF ...»
+    ini = max(t.find("start of the project gutenberg ebook"), 0)
+    fin = t.find("end of the project gutenberg ebook", ini)
+    return t[ini:fin if fin > ini else len(t)]
+
+
+def valor_delibris(url):
+    """Círculos de «Valoración moral» en la página de Delibris (el «?» de al lado es el botón de la leyenda)."""
+    h = bajar(url, 60).decode("utf-8", "replace")
+    m = re.search(r"field-libro-valutazione.*?field-item val-(\d)", h, re.S)
+    return int(m.group(1)) if m else None
+
+
+def revisar_citas(citas, base, categoria, E, A):
+    """Textuales y sin comillas que el texto no tiene (ERROR). Las del comienzo o del final del libro
+    son AVISO: pueden ser del prefacio o revelar el desenlace, pero también el primer verso famoso."""
+    for c in citas:
+        p = plano(c)
+        i = base.find(p)
+        if i < 0:
+            sin = plano(c.strip().strip("“”\"«»‘’'"))
+            if sin == p or sin not in base:
+                E.append(f"cita que no está en el texto: «{c[:70]}...»")
+                continue
+            E.append(f"cita con comillas que el texto no tiene (no es un diálogo): «{c[:60]}...»; van sin comillas")
+            p, i = sin, base.find(sin)
+        if i < 0.02 * len(base):
+            A.append(f"cita del comienzo del libro: «{c[:60]}...»; si es del prefacio, la dedicatoria o una nota del autor, cámbiala por una del cuerpo de la obra")
+        elif categoria in ("novela", "teatro") and i + len(p) > 0.98 * len(base):
+            A.append(f"cita del final del libro: «{c[:60]}...»; si revela el desenlace, cámbiala")
 
 
 def medidas_jpeg(ruta):
@@ -142,6 +185,13 @@ def revisar(carpeta: Path):
                 E.append("ficha: «delibris» debe ser null o {valor 1-6, genero Literatura/Pensamiento/Espiritualidad, url}")
             elif d["valor"] < 5:
                 E.append(f"ficha: Delibris lo valora {d['valor']}/6; Fénix solo publica 5 o 6")
+            else:
+                try:
+                    v = valor_delibris(d["url"])
+                    if v != d["valor"]:
+                        E.append(f"ficha: la página de Delibris muestra {v if v else 'sin valoración'} y la ficha dice {d['valor']}; deja el valor de la página (cuenta los círculos)")
+                except Exception as e:  # noqa: BLE001
+                    A.append(f"no se pudo abrir la página de Delibris para comprobar el valor ({e})")
         par = f.get("parecidos") or []
         if len(par) < 3:
             A.append("ficha: «parecidos» debería traer tres ids de Fénix")
@@ -155,6 +205,8 @@ def revisar(carpeta: Path):
     im = f.get("imagen") or {}
     if not isinstance(im.get("credito"), dict) or not all(im["credito"].get(k) for k in ("es", "en")):
         E.append("ficha: «imagen.credito» necesita es y en")
+    elif im["credito"]["es"].strip() == im["credito"]["en"].strip():
+        E.append("ficha: «imagen.credito» es igual en es y en; en es va el título del cuadro en castellano (y «h.» por «c.»)")
     if "commons.wikimedia.org" not in (im.get("url") or ""):
         E.append("ficha: «imagen.url» debe ser la página del cuadro en Wikimedia Commons")
     for k in ("cx", "cy"):
@@ -189,6 +241,10 @@ def revisar(carpeta: Path):
             E.append("ficha: «gutenberg» es el número del libro (entero)")
         if tdir.exists():
             A.append("vía A (Gutenberg): la carpeta texto/ sobra")
+        try:
+            revisar_citas(citas, texto_gutenberg(gutenberg, carpeta), f.get("categoria"), E, A)
+        except Exception as e:  # noqa: BLE001
+            E.append(f"no se pudo bajar el EPUB de Gutenberg {gutenberg} para cotejar las citas ({e})")
         return E, A, f
 
     ep = f.get("epub") or {}
@@ -234,10 +290,7 @@ def revisar(carpeta: Path):
                  " hoy: fue, dio, solo, este, volviose. Se quitan solas con --arreglar")
     if not re.search(r"^## ", todo, re.M):
         E.append("texto/: ningún capítulo empieza con «## »")
-    base = plano(todo)
-    for c in citas:
-        if plano(c) not in base:
-            E.append(f"cita que no está en el texto: «{c[:70]}...»")
+    revisar_citas(citas, plano(todo), f.get("categoria"), E, A)
     palabras = len(re.sub(r"[#*>\[\]^]", " ", todo).split())
     A.append(f"texto: {len(mds)} archivos, {palabras} palabras")
     return E, A, f
