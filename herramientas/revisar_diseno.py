@@ -206,6 +206,26 @@ def revisar(raiz, capturas=None):
             if not r["boton"] or not pg.evaluate("window.__compartido || ''").endswith("/" + destino):
                 fallas.append(f"donar ({destino}): Compartir no entregó el enlace de la página")
         pg.close()
+        # Encuadernar: Compartir entrega la puerta encuadernar/ (con su imagen), y la puerta lleva a la sección.
+        pg = nav.new_page(viewport={"width": 390, "height": 844})
+        pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
+        for idioma, puerta, img in (("", "encuadernar/", "compartir-encuadernar.jpg"), ("?l=en", "encuadernar/en/", "compartir-encuadernar-en.jpg")):
+            pg.goto(f"{base}{idioma}#encuadernadores")
+            pg.wait_for_load_state("networkidle")
+            if not pg.evaluate("() => { const b = document.querySelector('#compartirEnc'); if (b) b.click(); return !!b; }"):
+                fallas.append("encuadernar: falta el botón Compartir")
+                break
+            pg.wait_for_timeout(200)
+            if not pg.evaluate("window.__compartido || ''").endswith("/" + puerta):
+                fallas.append(f"encuadernar{idioma}: Compartir no entregó {puerta}")
+            pg.goto(base + puerta)
+            pg.wait_for_load_state("networkidle")
+            if "#encuadernadores" not in pg.url:
+                fallas.append(f"encuadernar: {puerta} no lleva a la sección (queda en {pg.url})")
+            with open(os.path.join(raiz, puerta.replace("/", os.sep), "index.html"), encoding="utf-8") as f:
+                if f"/img/{img}\"" not in f.read():
+                    fallas.append(f"encuadernar: {puerta} no declara og:image img/{img}")
+        pg.close()
         nav.close()
     srv.shutdown()
     return fallas

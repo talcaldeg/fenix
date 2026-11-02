@@ -82,8 +82,60 @@ def dona():
         print(f"{salida.relative_to(RAIZ)}: {salida.stat().st_size // 1024} KB")
 
 
+# Encuadernar (encuadernar/ y encuadernar/en/, gen_estaticos.js): a la derecha, el prompt en una
+# terminal y una portada, para que se lea «tu agente de IA prepara un libro».
+ENCUADERNAR = {
+    "es": ("SÚMATE CON TU IA", ["Encuaderna", "un libro con tu IA"], ["Copias un prompt, tu agente", "prepara el libro y Fénix", "lo publica gratis."],
+           ["> Quiero preparar un libro", "  para Proyecto Fénix, una", "  biblioteca gratuita de", "  buenos libros..."]),
+    "en": ("JOIN US WITH YOUR AI", ["Bind a book", "with your AI"], ["You copy a prompt, your agent", "prepares the book and Fénix", "publishes it for free."],
+           ["> I want to prepare a book", "  for Proyecto Fénix, a free", "  library of good books..."]),
+}
+
+
+def encuadernar():
+    w, h = 1200, 630
+    f_tit = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 58)
+    f_sub = ImageFont.truetype(str(FUENTES / "georgia.ttf"), 30)
+    f_eti = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 22)
+    f_mono = ImageFont.truetype(str(FUENTES / "consola.ttf"), 26)
+    portada = Image.open(RAIZ / "img" / "portadas" / f"{PORTADAS[0]}.jpg").convert("RGB").resize((200, 300), Image.LANCZOS)
+    for lang, (eti, titulo, lineas, prompt) in ENCUADERNAR.items():
+        im = Image.new("RGB", (w, h), GRANATE)
+        d = ImageDraw.Draw(im)
+        # Terminal con el comienzo del prompt.
+        x, y, ancho, alto = 620, 110, 500, 300
+        sombra = Image.new("L", (ancho + 40, alto + 40), 0)
+        ImageDraw.Draw(sombra).rounded_rectangle((20, 20, ancho + 20, alto + 20), 16, fill=150)
+        im.paste((20, 6, 8), (x - 14, y - 6), sombra.filter(ImageFilter.GaussianBlur(10)))
+        d.rounded_rectangle((x, y, x + ancho, y + alto), 16, fill=(29, 18, 6), outline=(90, 60, 30), width=2)
+        for i, c in enumerate([(210, 90, 80), (232, 176, 74), (120, 160, 90)]):
+            d.ellipse((x + 22 + i * 26, y + 20, x + 38 + i * 26, y + 36), fill=c)
+        for i, l in enumerate(prompt):
+            d.text((x + 28, y + 66 + i * 38), l, font=f_mono, fill=ORO if i == 0 else (240, 222, 196))
+        # La portada que sale de la terminal: el libro que queda listo.
+        px, py = 960, 300
+        sombra = Image.new("L", (240, 340), 0)
+        ImageDraw.Draw(sombra).rectangle((20, 20, 220, 320), fill=150)
+        im.paste((20, 6, 8), (px - 14, py - 6), sombra.filter(ImageFilter.GaussianBlur(10)))
+        im.paste(portada, (px, py))
+        d.rectangle((px, py, px + 199, py + 299), outline=CREMA, width=2)
+        d.text((70, 130), eti, font=f_eti, fill=ORO)
+        for i, l in enumerate(titulo):
+            d.text((70, 166 + i * 66), l, font=f_tit, fill=CREMA)
+        for i, l in enumerate(lineas):
+            d.text((70, 330 + i * 44), l, font=f_sub, fill=(240, 222, 196))
+        d.rectangle((70, 486, 190, 490), fill=ORO)
+        salida = RAIZ / "img" / ("compartir-encuadernar.jpg" if lang == "es" else f"compartir-encuadernar-{lang}.jpg")
+        im.save(salida, "JPEG", quality=85, optimize=True, progressive=True)
+        print(f"{salida.relative_to(RAIZ)}: {salida.stat().st_size // 1024} KB")
+
+
 if __name__ == "__main__":
-    # --dona: solo las de la página de donaciones (las portadas no cambiaron).
-    if "--dona" not in sys.argv:
+    # --dona o --encuadernar: solo esas (las portadas no cambiaron).
+    solo = [a for a in ("--dona", "--encuadernar") if a in sys.argv]
+    if not solo:
         main()
-    dona()
+    if not solo or "--dona" in solo:
+        dona()
+    if not solo or "--encuadernar" in solo:
+        encuadernar()

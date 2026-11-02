@@ -1994,6 +1994,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
         <p class="eyebrow" data-i18n="enc.eyebrow">Súmate con tu IA</p>
         <h2 data-i18n="enc.titulo">Encuaderna un libro con tu IA</h2>
         <p class="lede" data-i18n="enc.lede">¿Usas Claude Code, Codex u otro agente de inteligencia artificial? Pon unos cuantos de tus tokens al servicio de un buen libro. Copias un prompt, tu agente busca la mejor edición libre de derechos (o lo traduce, si no la hay) y te deja un paquete listo. Tu agente nos lo envía y Fénix lo publica gratis.</p>
+        <!-- Comparte encuadernar/ y no #encuadernadores: un #hash sale en WhatsApp con la tarjeta de la portada. -->
+        <p><button class="btn" type="button" id="compartirEnc">↗ <span data-i18n="enc.compartir">Compartir</span></button> <span class="meta" id="avisoEnc" role="status"></span></p>
         <div class="dos-col" style="margin-top:22px">
           <div class="caja">
             <h3 data-i18n="enc.comoTitulo">Cómo funciona</h3>
@@ -2225,6 +2227,7 @@ function iniciar(){
       "enc.prompt":"I want to prepare a book for Proyecto Fénix, a free library of good books (https://talcaldeg.github.io/fenix/). Read in full and follow to the letter https://raw.githubusercontent.com/talcaldeg/fenix/main/editorial/ENCUADERNAR.md (it is written in Spanish; talk to me in English). If you cannot open links, clone https://github.com/talcaldeg/fenix and read editorial/ENCUADERNAR.md.",
       "enc.promptPregunta":"First, ask me for the book's title and author, and whether I want it in English or in Spanish.",
       "enc.promptLibro":"The book is “{t}”, by {a}, in English.",
+      "enc.compartir":"Share","enc.enlaceCopiado":"Link copied. Paste it wherever you like.",
       "enc.copiado":"Copied","enc.copiarLibro":"Copy prompt","enc.estimada":"Not reviewed by Delibris; rating estimated by Fénix",
       "enc.copiarError":"Could not copy: select the text and copy it by hand.",
       "ed.proximo":"We are working on new translations. If you would like to help, further down we explain how to join as an editor, or how to bind a book with your AI.","x.edFenix":"Fénix edition","x.preparado":"Prepared by","x.queHicimos":"What we did","x.verLibro":"See the book",
@@ -2290,6 +2293,7 @@ function iniciar(){
       "enc.prompt":"Quiero preparar un libro para Proyecto Fénix, una biblioteca gratuita de buenos libros (https://talcaldeg.github.io/fenix/). Lee entero y sigue al pie de la letra https://raw.githubusercontent.com/talcaldeg/fenix/main/editorial/ENCUADERNAR.md (si no puedes abrir enlaces, clona https://github.com/talcaldeg/fenix y lee editorial/ENCUADERNAR.md).",
       "enc.promptPregunta":"Lo primero es preguntarme el título y el autor del libro, y si lo quiero en español o en inglés.",
       "enc.promptLibro":"El libro es «{t}», de {a}, en español.",
+      "enc.enlaceCopiado":"Enlace copiado. Pégalo donde quieras.",
       "enc.copiado":"Copiado","enc.copiarLibro":"Copiar prompt","enc.estimada":"Sin reseña en Delibris; valoración estimada por Fénix",
       "enc.copiarError":"No se pudo copiar: selecciona el texto y cópialo a mano."
     }
@@ -3033,6 +3037,12 @@ function iniciar(){
   let hashVista = null;
   const RAIZ = new URL(document.baseURI).pathname;
   const esRaiz = p => p === RAIZ || p === RAIZ + "index.html";
+  // Compartir Encuadernar: la puerta encuadernar/ (gen_estaticos.js) trae su propia vista previa y lleva a #encuadernadores.
+  $("#compartirEnc").onclick = async () => {
+    const u = location.origin + RAIZ + (lang === "en" ? "encuadernar/en/" : "encuadernar/");
+    if (navigator.share){ try { await navigator.share({ title: t("enc.titulo"), url: u }); } catch(e){} return; }
+    try { await navigator.clipboard.writeText(u); $("#avisoEnc").textContent = t("enc.enlaceCopiado"); } catch(e){ prompt(u, u); }
+  };
   function idDeRuta(p){
     const m = p.startsWith(RAIZ) && p.slice(RAIZ.length).match(/^libro\/([^/]+)\/(?:(?:es|en)\/)?(?:index\.html)?$/);
     return m ? decodeURIComponent(m[1]) : null;

@@ -203,6 +203,10 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - Donar es página aparte, `dona/` y `dona/en/` (la arma `gen_estaticos.js`; `#dona` lleva ahí), para
   que al compartirla por WhatsApp salga su imagen (`img/compartir-dona*.jpg`, de
   `imagen_compartir.py --dona`) y no la de la portada. Sus textos van en `DONA_TX`.
+- Encuadernar se comparte por la puerta `encuadernar/` (y `encuadernar/en/`): página mínima con su
+  imagen (`imagen_compartir.py --encuadernar`) que lleva a `#encuadernadores`; la sección tiene un
+  botón Compartir que entrega esa puerta. Regla: toda sección que se quiera compartir con vista
+  previa propia necesita una URL sin `#`.
 
 Citas y oraciones se cotejan con el texto del libro antes de publicarse; lo teológico pasa por
 la skill `auditar-teologia`.

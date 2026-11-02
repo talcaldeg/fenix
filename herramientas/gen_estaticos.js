@@ -591,6 +591,51 @@ ${MEDICION}
 // ---------- páginas de libro ----------
 const cambiadas = new Set();
 for (const lang of ["es", "en"]) if (escribirSiCambia(urlDona(lang, "") + "index.html", paginaDona(lang))) cambiadas.add(SITIO + urlDona(lang, ""));
+
+// Encuadernar: la sección #encuadernadores (prompts y formulario) vive en index.html, pero un #hash no
+// cambia la vista previa de WhatsApp. encuadernar/ (y encuadernar/en/) es la puerta para compartirla: trae
+// su imagen (img/compartir-encuadernar*.jpg, de imagen_compartir.py) y su texto, y lleva al visitante a
+// la sección con JavaScript, que los rastreadores de vista previa no corren. Los textos son los de index.html.
+const ENC_TX = {
+  es: { og: "Encuaderna un libro con tu IA", lede: (INDEX.match(/data-i18n="enc\.lede">([^<]*)</) || [])[1], ir: "Ir a Encuadernar" },
+  en: { og: "Bind a book with your AI", lede: (INDEX.match(/"enc\.lede":"([^"]*)"/) || [])[1], ir: "Go to Bind a book" }
+};
+const urlEnc = lang => `encuadernar/${lang === "en" ? "en/" : ""}`;
+for (const lang of ["es", "en"]){
+  const t = ENC_TX[lang];
+  if (!t.lede){ console.error(`Falta enc.lede en ${lang} (index.html).`); process.exit(1); }
+  const url = SITIO + urlEnc(lang), destino = (lang === "en" ? "../../?l=en" : "../") + "#encuadernadores";
+  const imagen = SITIO + (lang === "en" ? "img/compartir-encuadernar-en.jpg" : "img/compartir-encuadernar.jpg");
+  escribirSiCambia(urlEnc(lang) + "index.html", `<!doctype html>
+<html lang="${lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>${esc(t.og)} | Proyecto Fénix</title>
+${FAVICON}
+<meta name="description" content="${esc(t.lede)}">
+<link rel="canonical" href="${SITIO}">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Proyecto Fénix">
+<meta property="og:title" content="${esc(t.og)}">
+<meta property="og:description" content="${esc(t.lede)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${imagen}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="${lang === "en" ? "en_US" : "es_CL"}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(t.og)}">
+<meta name="twitter:description" content="${esc(t.lede)}">
+<meta name="twitter:image" content="${imagen}">
+<!-- Generada por herramientas/gen_estaticos.js. No editar a mano. -->
+<script>location.replace("${destino}")</script>
+</head>
+<body><p><a href="${destino}">${esc(t.ir)}</a></p></body>
+</html>
+`);
+}
 for (const l of PAGINAS) if (escribirSiCambia((l._ruta || `libro/${l.id}/`) + "index.html", paginaLibro(l))) cambiadas.add(urlLibro(l));
 // Hojear: una página de primeras páginas por cada libro con EPUB propio; la de un libro que ya no lo tiene se borra.
 const conMuestra = new Set();
