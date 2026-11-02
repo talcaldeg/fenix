@@ -2,12 +2,15 @@
 """Recibe el paquete de un encuadernador y deja el libro listo para publicar.
 
     python herramientas/recibir_entrega.py <paquete.zip | carpeta> [...]
+    python herramientas/recibir_entrega.py --gmail
     python herramientas/recibir_entrega.py --gmail "from:jialcalde newer_than:3d"
 
 Recibe varios paquetes de una vez. Con --gmail baja a .entregas/ los .zip de los correos de
-talcaldeg@gmail.com que calcen con la búsqueda. Salta los que ya están publicados, no se detiene
-si uno falla, calla la salida de los pasos que salen bien y cierra con una línea por libro y
-gen_estaticos.js: lo que queda es auditar-teologia y sesion.py publicar.
+talcaldeg@gmail.com que calcen con la búsqueda (sola: las entregas de los últimos 14 días). Salta
+los que ya están publicados, no se detiene si uno falla, calla la salida de los pasos que salen
+bien y cierra con una línea por libro, gen_estaticos.js, el resumen y porque de cada libro listo
+y una hoja de contacto de sus primeras páginas: lo que queda es mirarla, auditar-teologia y
+sesion.py publicar.
 
 1. Descomprime en .entregas/<nombre>/ y corre herramientas/revisar_entrega.py (se detiene si hay
    errores).
@@ -198,8 +201,8 @@ def asegurar_cuadro(c: Path, f: dict) -> dict:
     return im
 
 
-def recibir(c: Path) -> str:
-    """Procesa un paquete ya desempacado y devuelve su línea del resumen."""
+def recibir(c: Path, listos: list) -> str:
+    """Procesa un paquete ya desempacado, suma su ficha a `listos` y devuelve su línea del resumen."""
     previa = json.loads((c / "ficha.json").read_text(encoding="utf-8")) if (c / "ficha.json").exists() else {}
     if previa.get("id") and ya_publicado(previa):
         return f"ya estaba publicado ({previa.get('versionDe') or previa['id']}, {previa.get('idioma')})"
@@ -226,6 +229,7 @@ def recibir(c: Path) -> str:
     # El EPUB de Gutenberg puede traer notas en cursiva (Ligorio, 25-oct-2026).
     correr(PY, "herramientas/revisar_libros.py", "--arreglar", epub.relative_to(RAIZ))
     correr(PY, "herramientas/epub_a_pdf.py", epub.relative_to(RAIZ))
+    listos.append(f)
     donde = f"versión {f['idioma']} de {f['versionDe']}" if v else "ficha nueva"
     return f"listo ({donde}): libros/{epub.name}; categoría {f.get('categoria', '-')}"
 
@@ -244,21 +248,45 @@ def bajar_de_gmail(query: str) -> list[Path]:
     return rutas
 
 
+def para_revisar(listos: list):
+    """Lo único que queda a ojo, sin abrir fichas ni PDF: resumen y porque de cada libro (para
+    auditar-teologia) y una sola hoja de contacto con las 3 primeras páginas de cada PDF."""
+    for f in listos:
+        print(f"\n[{f['id']}] {f.get('categoria', '-')}\n  resumen: {f['resumen']['es']}\n  porque: {f['porque']['es']}")
+    lab = next((p / "Laboral" / "lib" for p in RAIZ.parents if (p / "Laboral" / "lib" / "hoja_contacto.py").exists()), None)
+    if not lab:
+        return
+    import fitz
+    sys.path.insert(0, str(lab))
+    from hoja_contacto import armar  # noqa: E402
+    carpeta = RAIZ / ".entregas" / "_primeras"
+    shutil.rmtree(carpeta, ignore_errors=True)
+    carpeta.mkdir(parents=True)
+    for f in listos:
+        with fitz.open(RAIZ / "libros" / f"{f['id']}.pdf") as d:
+            for n in range(min(3, len(d))):
+                d[n].get_pixmap(dpi=60).save(carpeta / f"{f['id']}_{n + 1}.png")
+    print("\nHoja de contacto (3 primeras páginas de cada PDF):", ", ".join(map(str, armar(carpeta)["hojas"])))
+
+
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("paquetes", nargs="*", help=".zip o carpeta de cada entrega")
-    ap.add_argument("--gmail", help="búsqueda de Gmail (talcaldeg@gmail.com) cuyos .zip se reciben")
+    # Sin búsqueda, toma todas las entregas recientes: las ya publicadas se saltan solas, así que
+    # no hace falta buscar antes quién mandó qué.
+    ap.add_argument("--gmail", nargs="?", const='subject:"Fénix - encuadernador" newer_than:14d',
+                    help="búsqueda de Gmail (talcaldeg@gmail.com) cuyos .zip se reciben; sola, las de los últimos 14 días")
     a = ap.parse_args()
     origenes = [Path(p).resolve() for p in a.paquetes] + (bajar_de_gmail(a.gmail) if a.gmail else [])
     if not origenes:
         ap.error("falta un paquete o --gmail")
     # Se desempacan todos antes de revisar: un paquete puede citar a otro del lote en «parecidos».
     carpetas = [desempacar(o) for o in origenes]
-    resumen = []
+    resumen, listos = [], []
     for c in carpetas:
         print(f"\n== {c.name}")
         try:
-            r = recibir(c)
+            r = recibir(c, listos)
         except (Exception, SystemExit) as e:  # uno que falla no frena a los demás
             r = f"FALLÓ: {e}"
         resumen.append((c.name, r))
@@ -268,7 +296,9 @@ def main():
     print("\nResumen:")
     for n, r in resumen:
         print(f"- {n}: {r}")
-    print("Falta: auditar-teologia sobre resumen y porque de los de fe, y sesion.py publicar.")
+    if listos:
+        para_revisar(listos)
+        print("Falta: mirar esa hoja, auditar-teologia sobre lo de arriba (los de fe) y sesion.py publicar.")
 
 
 if __name__ == "__main__":
