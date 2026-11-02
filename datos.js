@@ -4229,6 +4229,28 @@ window.FENIX = {
       parecidos: ["saint-exupery-el-principito", "irving-cuentos-de-la-alhambra", "swift-los-viajes-de-gulliver"]
     },
     {
+      id: "burnett-el-jardin-secreto",
+      titulo: "El jardín secreto",
+      autor: "Frances Hodgson Burnett",
+      anio: "1911",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Mary Lennox, una niña flaca, malcriada y sola, queda huérfana en la India y la mandan a vivir a una mansión enorme y silenciosa en los páramos de Yorkshire. Allí oye hablar de un jardín cerrado hace diez años, encuentra la llave y, con la ayuda de un petirrojo y de Dickon, un muchacho del páramo que se entiende con los animales, lo devuelve a la vida. En la casa descubre también a Colin, su primo enfermizo, encerrado en su cuarto y convencido de que va a morir. Una novela sobre cómo el aire libre, el trabajo con las manos y la amistad sanan a dos niños que nadie había querido.", "en": "Mary Lennox, a thin, spoiled and lonely girl, is orphaned in India and sent to live in a huge, silent manor on the Yorkshire moors. There she hears of a garden locked up for ten years, finds the key and, with the help of a robin and of Dickon, a moor boy who gets along with animals, brings it back to life. In the house she also discovers Colin, her sickly cousin, shut away in his room and convinced he is going to die. A novel about how fresh air, work with one's hands and friendship heal two children nobody had loved."},
+      porque: {"es": "Para quien ha visto a alguien encerrado en sí mismo, en una pena o en una enfermedad, y quiere creer que puede volver a la vida. Mary y Colin empiezan egoístas y amargados, y terminan pensando en los demás, agradecidos y alegres. Lo que Colin llama «Magia», eso que hace crecer las cosas y que lo sana, el lector cristiano puede reconocerlo en el Creador que sostiene todo lo que vive y en la gracia que cambia el corazón; una nota de la edición lo explica. Se lee con gusto a cualquier edad.", "en": "For anyone who has seen someone shut up in themselves, in grief or in illness, and wants to believe they can come back to life. Mary and Colin begin selfish and bitter, and end up thinking of others, grateful and glad. What Colin calls «Magic», the thing that makes things grow and that heals him, the Christian reader can recognize in the Creator who sustains all that lives and in the grace that changes the heart; an edition note explains it. It is a pleasure to read at any age."},
+      imagen: {"src": "img/portadas/burnett-el-jardin-secreto.jpg", "credito": {"es": "Maria Louise Kirk, ilustración para «The Secret Garden», 1911", "en": "Maria Louise Kirk, illustration for «The Secret Garden», 1911"}, "url": "https://commons.wikimedia.org/wiki/File:Secret_Garden-Kirk-001.jpg"},
+      citas: [
+        "Es un jardín secreto, y yo soy la única persona en el mundo que quiere que esté vivo.",
+        "Una de las cosas extrañas de vivir en este mundo es que solo de vez en cuando se está del todo seguro de que se va a vivir para siempre, y siempre, y siempre.",
+        "Donde cuidas una rosa, muchacho, no puede crecer un cardo."
+      ],
+      archivos: {"epub": "libros/burnett-el-jardin-secreto.epub", "pdf": "libros/burnett-el-jardin-secreto.pdf"},
+      fuente: {"texto": "Traducción de Proyecto Fénix desde The Secret Garden (1911), Project Gutenberg, libro n.º 113 (dominio público)", "url": "https://www.gutenberg.org/ebooks/113"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-jardin-secreto"},
+      editorial: {"es": "Traducción nueva de Proyecto Fénix, hecha directamente del inglés de The Secret Garden (1911), con sus veintisiete capítulos; preparada con ayuda de inteligencia artificial y revisada contra el original, con nota de la edición, notas del editor y la ilustración de Maria Louise Kirk para la primera edición norteamericana. Edición al cuidado de Tomás Alcalde.", "en": "A new Proyecto Fénix translation, made directly from the English of The Secret Garden (1911), with its twenty-seven chapters; prepared with the help of artificial intelligence and checked against the original, with an edition note, editor's notes and Maria Louise Kirk's illustration for the first American edition. Edited by Tomás Alcalde."},
+      parecidos: ["quiroga-cuentos-de-la-selva", "saint-exupery-el-principito", "chesterton-manalive"]
+    },
+    {
       id: "coloma-pequeneces",
       titulo: "Pequeñeces",
       autor: "Luis Coloma",
@@ -4321,7 +4343,6 @@ window.FENIX = {
     { titulo: {"es": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
     { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },
-    { titulo: {"es": "El jardín secreto"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-jardin-secreto"} },
     { titulo: {"es": "El pequeño Lord Fauntleroy"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-pequeno-lord"} },
     { titulo: {"es": "Ética a Nicómaco"}, autor: "Aristóteles", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/etica-nicomaco"} },
     { titulo: {"es": "Estudio en escarlata"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/estudio-en-escarlata"} },

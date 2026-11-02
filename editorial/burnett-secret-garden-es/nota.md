@@ -1,0 +1,7 @@
+Frances Hodgson Burnett publicó *The Secret Garden* en 1911, primero por entregas en la revista *The American Magazine* y ese mismo año como libro, en Nueva York (Frederick A. Stokes) y en Londres (William Heinemann). Esta es una traducción nueva de Proyecto Fénix, hecha directamente del inglés según el texto de Project Gutenberg (libro n.º 113), que reproduce la novela completa en sus veintisiete capítulos.
+
+Se tradujo cada oración del original, sin resumir ni añadir nada. Los nombres de personas y lugares se dejan en inglés, salvo los de los animales de Dickon, y los diálogos van entre comillas. Martha, Dickon, Ben Weatherstaff y la señora Sowerby hablan el dialecto de Yorkshire, que en el libro es parte de la historia: tutean a todos, también a los niños de la casa, y Mary y Colin terminan aprendiéndolo como señal de cariño. En castellano ese modo de hablar se marca con el tuteo, con giros de campo y con unas pocas formas como «pa'» y «na'», sin imitar el dialecto de ningún país.
+
+La traducción se preparó con ayuda de inteligencia artificial y se revisó contra el original inglés. Si encuentras un error, puedes avisarlo desde el sitio de Proyecto Fénix.
+
+El texto de Frances Hodgson Burnett es de dominio público. La ilustración de la portada es de Maria Louise Kirk para la primera edición norteamericana (1911). Traducción de Proyecto Fénix, 2026, con licencia CC BY-NC-SA 4.0: se puede copiar y difundir gratis, con crédito y sin fines de lucro.

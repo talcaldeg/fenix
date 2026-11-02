@@ -274,3 +274,74 @@ recortar.
 - Cursiva del original (`_texto_`) → `*texto*`; las mayúsculas de énfasis del original
   (palabras enteras en mayúscula al abrir un capítulo) van en minúscula normal. Las rayas largas
   del original pasan a comas, paréntesis o puntos suspensivos.
+
+## El jardín secreto (Burnett, *The Secret Garden*, 1911, desde el inglés)
+
+Original: Project Gutenberg n.º 113, partido en tramos en
+`fenix_fuentes/jardin-secreto/tramos/NN_cX.txt`; la salida va en
+`editorial/burnett-secret-garden-es/NN_cX.md` (mismo nombre). Es una novela para niños y
+grandes, de prosa sencilla y cálida: frases claras, sin cultismos (error 15), que un niño de
+diez años pueda leer en voz alta. Las rayas largas del original pasan a comas, paréntesis o
+puntos suspensivos; cursiva (`_texto_`) → `*texto*`.
+
+- Encabezados: un tramo con varios capítulos lleva el encabezado de cada uno donde empieza,
+  `## I. No queda nadie`. Títulos fijos: I. No queda nadie; II. La señorita Mary, siempre
+  contraria; III. Al otro lado del páramo; IV. Martha; V. El llanto en el pasillo;
+  VI. «¡Había alguien llorando, sí que había!»; VII. La llave del jardín; VIII. El petirrojo que
+  mostró el camino; IX. La casa más extraña en que haya vivido nadie; X. Dickon; XI. El nido del
+  zorzal charlo; XII. «¿Podría tener un pedacito de tierra?»; XIII. «Soy Colin»; XIV. Un joven
+  rajá; XV. Haciendo nidos; XVI. «¡No quiero!», dijo Mary; XVII. Una pataleta; XVIII. «No hay
+  que perder ni un rato»; XIX. «¡Ha llegado!»; XX. «¡Viviré para siempre, y siempre, y
+  siempre!»; XXI. Ben Weatherstaff; XXII. Cuando se puso el sol; XXIII. Magia; XXIV. «Que se
+  rían»; XXV. La cortina; XXVI. «¡Es la madre!»; XXVII. En el jardín.
+- Nombres sin traducir: Mary Lennox, Colin Craven, Archibald Craven (el señor Craven), el
+  doctor Craven, la señora Medlock, Martha, Dickon, Susan Sowerby (la señora Sowerby), Ben
+  Weatherstaff, John, Pitcher, Misselthwaite (la mansión de Misselthwaite), Thwaite, Yorkshire,
+  la India. Mr./Mrs./Miss → señor, señora, señorita; Master Colin → el señorito Colin.
+  Ayah → el aya (Aya, con mayúscula, cuando la nombran así); Mem Sahib → Mem Sahib; Rajah →
+  rajá.
+- Glosario: moor → páramo; heather → brezo; gorse → aulaga; broom → retama; robin → petirrojo;
+  missel thrush → zorzal charlo; crocus → azafrán; snowdrop → campanilla de invierno;
+  daffodil y narcissus → narciso; jonquil → junquillo; daffydowndilly (palabra de campo de
+  Martha y Dickon) → trompón, siempre, para no chocar con narcissus en la misma lista;
+  wutherin' / wuthering (el viento) → «ulular», entre comillas donde el original la marca;
+  bulb → bulbo; seeds → semillas; trowel → pala de jardín; spade → pala;
+  rake → rastrillo; fork (de jardín) → horquilla; the Magic → la Magia (con mayúscula cuando
+  Colin la nombra así); scientific experiment → experimento científico; tantrum → pataleta;
+  hunchback / a lump on his back → jorobado / un bulto en la espalda; nurse → enfermera
+  (cuando cuida a Colin) o niñera (a un niño sano).
+- La rima infantil, siempre igual: «Señorita Mary, siempre contraria, / ¿cómo crece tu jardín? /
+  Con campanillas de plata y conchitas de mar, / y caléndulas todas en fila». «Contrary»
+  aplicado a Mary → «contraria» en todo el libro.
+- El himno del capítulo XXVI, en bloque `> `: «Alaben a Dios, de quien mana todo bien; /
+  alábenlo, criaturas de la tierra; / alábenlo en lo alto, ejércitos del cielo; / alaben al
+  Padre, al Hijo y al Espíritu Santo. / Amén.» Cuando lo citan después: «Alaben a Dios, de quien
+  mana todo bien». Mayúsculas de Dios con la regla de arriba.
+- **El habla de Yorkshire** (Martha, Dickon, Ben Weatherstaff, la señora Sowerby, y Mary y Colin
+  cuando juegan a hablarla) es parte de la trama: el libro hace notar que Martha tutea a Mary y
+  más adelante los niños la aprenden como señal de cariño. Se marca así, igual en todos los
+  tramos:
+  1. **Tuteo**: quien habla de Yorkshire (tha, thee, thy) trata de «tú» a todos, también a
+     Mary, a Colin y a los mayores. Quien habla inglés corriente sigue el tratamiento normal.
+  2. **Léxico y sintaxis de campo**, sin regionalismos de un país: «nada de nada», «algo»,
+     «no has de», «tienes que», «es lo que digo yo», «allá arriba en el páramo», diminutivos
+     cariñosos, frases cortas y repetidas, «no, pues», «sí que sí».
+  3. **Solo estas tres formas fonéticas**, nunca otras: «pa'» (para), «na'» (nada) y «'tá»
+     (está), y con mesura (no más de una o dos por parlamento).
+  4. «wick» (vivo, en Dickon) se deja como *wick* en cursiva cuando el texto lo explica o lo
+     usa como palabra suya; si no, «vivo». Yorkshire, «nowt», «summat», «munnot» no se dejan en
+     inglés: se traducen.
+- Tratamiento fuera del habla de Yorkshire: la señora Medlock y las demás criadas que hablan
+  inglés corriente, y la enfermera de Colin, tratan de «usted» a Mary y a Colin («señorita Mary»,
+  «señorito Colin»), y Martha también cuando le habla a Colin en inglés corriente («sir»); los
+  niños tratan de «usted» a los mayores; los mayores tutean a los niños; Mary y Colin se tutean
+  entre sí. Plural: «ustedes». Mary tutea a Martha (la trata como a una criada, y después como
+  amiga) y a Dickon.
+- Animales de Dickon: Captain → Capitán (el zorro), Soot → Hollín (el cuervo), Jump → Salto
+  (el poni), Nut y Shell → Nuez y Cáscara (las ardillas); «caw-caw» → *cra, cra*. Delphiniums → espuelas de caballero (delfinios cuando
+  Colin deletrea la palabra científica).
+- Diálogo con verbo de decir después: coma tras el cierre de comillas, también tras ? o ! (RAE):
+  «¿Vienes?», preguntó; «¡Ay!», dijo Martha. Sin verbo de decir, punto: «¿Vienes?». Ella...
+  El punto final va siempre fuera de la comilla de cierre, también al final del párrafo:
+  «La mía es negra». / «¿Vienes?».
+- Notas al pie: no se agregan; el revisor las pone después, si hacen falta.
