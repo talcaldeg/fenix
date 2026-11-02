@@ -237,3 +237,40 @@ ser fieles. Las frases muy largas con incisos se pueden ordenar, nunca recortar.
   verso libre castellano que conserve el sentido y la imagen, cada verso en su línea dentro de `> `.
 - Cursiva del original (`_texto_`) → `*texto*`. Las rayas largas del original (incisos y frases
   cortadas) pasan a comas, paréntesis o puntos suspensivos.
+
+## Ortodoxia (Chesterton, *Orthodoxy*, 1908, desde el inglés)
+
+Original: Project Gutenberg n.º 130, partido en tramos en `fenix_fuentes/ortodoxia/tramos/NN_cX.txt`;
+la salida va en `editorial/chesterton-orthodoxy-es/NN_cX.md` (mismo nombre). Es un ensayo de
+apologética en primera persona, conversador y lleno de paradojas: que cada paradoja y cada imagen
+funcionen en castellano sin dejar de ser fieles. Las frases muy largas se pueden ordenar, nunca
+recortar.
+
+- Encabezados: `## Prefacio`, `## I. Introducción en defensa de todo lo demás`, `## II. El
+  maníaco`, `## III. El suicidio del pensamiento`, `## IV. La ética del país de los elfos`,
+  `## V. La bandera del mundo`, `## VI. Las paradojas del cristianismo`, `## VII. La revolución
+  eterna`, `## VIII. El romance de la ortodoxia`, `## IX. La autoridad y el aventurero`. Un
+  tramo que es la segunda mitad de un capítulo (sufijo `b`) no lleva encabezado. La firma del
+  prefacio («Gilbert K. Chesterton.») queda como párrafo propio al final.
+- Tratamiento: el «you» genérico va impersonal o con «uno»; si interpela al lector, «usted»;
+  plural, «ustedes». A Dios y a Cristo, «tú», con la regla de mayúsculas de arriba.
+- Nombres propios como en castellano se conocen: Tolstói, Nietzsche, Bernard Shaw, H. G. Wells,
+  Ibsen, Haeckel, Swinburne, Walt Whitman, Juana de Arco, san Francisco, Tomás Becket; los que no
+  tienen forma castellana, sin traducir. Mr. → el señor (Mr. McCabe → el señor McCabe).
+- Glosario: orthodoxy → ortodoxia; Elfland → el país de los elfos; fairyland → el país de las
+  hadas; fairy tales → cuentos de hadas; the Doctrine of Conditional Joy → la Doctrina de la
+  Alegría Condicional; the Church → la Iglesia; Christendom → la cristiandad; creed → credo;
+  the Fall → la Caída; original sin → pecado original; the Incarnation → la Encarnación;
+  free will → libre albedrío; materialist → materialista; determinist → determinista;
+  rationalist → racionalista; progress → progreso; sanity → cordura; madman / maniac → loco /
+  maníaco; mystic → místico; romance (aventura, novela) → según el contexto, «aventura» o
+  «romance», nunca «romance» en el sentido de amorío; patriotism → patriotismo; the
+  cosmos → el cosmos; Mr. Blatchford → el señor Blatchford.
+- Citas bíblicas: se traducen del inglés que trae el libro, en cursiva si él las destaca;
+  referencias al estilo castellano si las da.
+- Versos citados: en verso libre castellano que conserve el sentido y la imagen, cada verso en su
+  línea dentro de `> `. Las citas en prosa van entre comillas «...» en el párrafo. No se agregan
+  notas al pie en la traducción: el revisor las pone después, verificadas.
+- Cursiva del original (`_texto_`) → `*texto*`; las mayúsculas de énfasis del original
+  (palabras enteras en mayúscula al abrir un capítulo) van en minúscula normal. Las rayas largas
+  del original pasan a comas, paréntesis o puntos suspensivos.

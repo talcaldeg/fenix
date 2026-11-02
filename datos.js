@@ -392,6 +392,22 @@ window.FENIX = {
       archivos: { epub: "libros/chesterton-orthodoxy.epub", pdf: "libros/chesterton-orthodoxy.pdf" },
       fuente: { texto: "Project Gutenberg, libro n.º 130 (dominio público); portada de Proyecto Fénix", url: "https://www.gutenberg.org/ebooks/130" },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/ortodoxia" },
+      versiones: {
+        es: {
+          titulo: "Ortodoxia",
+          imagen: { src: "img/portadas/ortodoxia-es.jpg", credito: { es: "John Constable, «El muelle de cadenas, Brighton», 1826-1827", en: "John Constable, «Chain Pier, Brighton», 1826-1827" }, url: "https://commons.wikimedia.org/wiki/File:John_Constable_-_Chain_Pier,_Brighton.jpg" },
+          citas: [
+            "Los ángeles pueden volar porque pueden tomarse a sí mismos a la ligera.",
+            "Tradición significa dar el voto a la más oscura de todas las clases, nuestros antepasados. Es la democracia de los muertos.",
+            "El loco no es el hombre que ha perdido la razón. El loco es el hombre que lo ha perdido todo excepto la razón.",
+            "La prueba de toda felicidad es la gratitud; y yo me sentía agradecido, aunque apenas sabía a quién.",
+            "La alegría, que fue la pequeña publicidad del pagano, es el secreto gigantesco del cristiano."
+          ],
+          archivos: { epub: "libros/chesterton-orthodoxy-es.epub", pdf: "libros/chesterton-orthodoxy-es.pdf" },
+          fuente: { texto: "Traducción de Proyecto Fénix desde Orthodoxy (1908), Project Gutenberg, libro n.º 130 (dominio público)", url: "https://www.gutenberg.org/ebooks/130" },
+          editorial: { es: "Traducción nueva de Proyecto Fénix, hecha directamente del inglés de Orthodoxy (1908), con el prefacio y los nueve capítulos, y notas del editor que ubican las citas del autor; revisada en sus pasajes doctrinales contra el Catecismo, preparada con ayuda de inteligencia artificial y revisada contra el original, con nota de la edición y portada nueva. Edición al cuidado de Tomás Alcalde.", en: "A new Proyecto Fénix translation, made directly from the English of Orthodoxy (1908), with the preface and the nine chapters, and editor's notes locating the author's quotations; reviewed in its doctrinal passages against the Catechism, prepared with the help of artificial intelligence and checked against the original, with an edition note and a new cover. Edited by Tomás Alcalde." }
+        }
+      },
       parecidos: ["confesiones", "quo-vadis", "imitacion-de-cristo"]
     },
     {

@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-10-30</lastmod>
+    <lastmod>2026-11-02</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/dona/</loc>
@@ -66,6 +66,10 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/ortodoxia/</loc>
+    <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/ortodoxia/es/</loc>
     <lastmod>2026-11-02</lastmod>
   </url>
   <url>
@@ -775,6 +779,10 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/ortodoxia/muestra/</loc>
     <lastmod>2026-10-27</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/ortodoxia/es/muestra/</loc>
+    <lastmod>2026-11-02</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/quo-vadis/muestra/</loc>
