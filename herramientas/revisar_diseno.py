@@ -23,8 +23,9 @@ import threading
 
 # Ventanas reales: notebook con barra de favoritos (1366x600, 1536x650), escritorio y celular.
 VENTANAS = [(1366, 600), (1536, 650), (1280, 720), (1920, 950), (1024, 600), (390, 844), (360, 740)]
-VISTAS = ["inicio", "biblioteca", "todos", "editorial", "oraciones", "citas", "salvar", "dona", "contacto"]
+VISTAS = ["inicio", "biblioteca", "todos", "editorial", "oraciones", "citas", "salvar", "contacto"]
 LIBRO = "libro/one-with-jesus/"
+DONA = "dona/"  # página aparte (gen_estaticos.js), para que al compartirla salga su propia imagen
 ALTO_BARRA = 80  # px: más que esto es que el menú se partió en dos líneas
 
 
@@ -51,8 +52,8 @@ def revisar(raiz, capturas=None):
             pg = nav.new_page(viewport={"width": w, "height": h})
             errores = []
             pg.on("pageerror", lambda e: errores.append(str(e)))
-            for vista in VISTAS + [LIBRO]:
-                url = base + LIBRO if vista == LIBRO else f"{base}#{vista}"
+            for vista in VISTAS + [LIBRO, DONA]:
+                url = base + vista if vista in (LIBRO, DONA) else f"{base}#{vista}"
                 errores.clear()
                 pg.goto(url)
                 pg.wait_for_load_state("networkidle")
@@ -187,6 +188,24 @@ def revisar(raiz, capturas=None):
             if not pg.evaluate("window.__compartido || ''").endswith("/libro/ligorio-the-glories-of-mary/"):
                 fallas.append("compartir (página del libro): el botón no entregó el enlace de la página")
         pg.close()
+        # Donar: #dona (menú del sitio, enlaces viejos) lleva a la página aparte del idioma, y esa página
+        # se comparte con su propia imagen; con #dona como vista, WhatsApp mostraba la tarjeta de la portada.
+        pg = nav.new_page(viewport={"width": 390, "height": 844})
+        pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
+        for desde, destino, img in (("#dona", "dona/", "compartir-dona.jpg"), ("?l=en#dona", "dona/en/", "compartir-dona-en.jpg")):
+            pg.goto(base + desde)
+            pg.wait_for_load_state("networkidle")
+            if not pg.url.endswith("/" + destino):
+                fallas.append(f"donar: {desde} lleva a {pg.url} y no a {destino}")
+                continue
+            r = pg.evaluate("""() => { const b = document.querySelector('#btnCompartir'); if (b) b.click();
+                return {boton: !!b, og: (document.querySelector('meta[property="og:image"]') || {}).content || ''}; }""")
+            pg.wait_for_timeout(200)
+            if not r["og"].endswith("/img/" + img):
+                fallas.append(f"donar ({destino}): og:image es {r['og'] or 'ausente'} y no img/{img}")
+            if not r["boton"] or not pg.evaluate("window.__compartido || ''").endswith("/" + destino):
+                fallas.append(f"donar ({destino}): Compartir no entregó el enlace de la página")
+        pg.close()
         nav.close()
     srv.shutdown()
     return fallas
@@ -201,7 +220,7 @@ def main():
     if fallas:
         print("Diseño roto:\n  " + "\n  ".join(fallas))
         sys.exit(1)
-    print(f"Diseño OK ({len(VENTANAS)} ventanas, {len(VISTAS) + 1} páginas).")
+    print(f"Diseño OK ({len(VENTANAS)} ventanas, {len(VISTAS) + 2} páginas).")
 
 
 if __name__ == "__main__":

@@ -7,7 +7,8 @@
 //     descargas, valoración moral, parecidos y datos estructurados (schema.org Book).
 //   - libro/<id>/muestra/index.html: las primeras páginas de cada libro con EPUB propio, para «Hojear»
 //     en el navegador (el texto sale de herramientas/muestras.py, que este script corre).
-//   - sitemap.xml: la portada y cada libro; lastmod cambia solo si la página cambió.
+//   - dona/index.html y dona/en/index.html: la página de donaciones, con su propia vista previa al compartir.
+//   - sitemap.xml: la portada, donar y cada libro; lastmod cambia solo si la página cambió.
 //   - llms.txt: el catálogo en texto plano para los sistemas de IA (llmstxt.org).
 //   - index.html: el bloque JSON-LD entre las marcas JSONLD:inicio y JSONLD:fin, y entre
 //     DESCARGAS:inicio y DESCARGAS:fin el nombre con huella con que se guarda cada EPUB.
@@ -106,8 +107,10 @@ const textoNav = (k, lang) => {
   if (!s){ console.error(`Falta el texto de ${k} en ${lang} (index.html).`); process.exit(1); }
   return s;
 };
+// Donar es página aparte (dona/ y dona/en/, ver paginaDona): se enlaza directo, sin pasar por index.html.
+const urlDona = (lang, B) => `${B}dona/${lang === "en" ? "en/" : ""}`;
 const navFicha = (lang, B) => NAV_INDEX
-  .replace(/href="#([^"]*)"/g, (_, v) => `href="${B}${lang === "en" ? "?l=en" : ""}#${v}"`)
+  .replace(/href="#([^"]*)"/g, (_, v) => `href="${v === "dona" ? urlDona(lang, B) : `${B}${lang === "en" ? "?l=en" : ""}#${v}`}"`)
   .replace(/(data-i18n="(nav\.\w+)"[^>]*>)[^<]*</g, (_, a, k) => `${a}${esc(textoNav(k, lang))}<`)
   // Como en index.html, Editorial sale solo si ese idioma tiene alguna edición Fénix.
   .replace(/\s*<a [^>]*id="navEditorial"[^>]*>[^<]*<\/a>/, m => D.libros.map(l => vista(l, lang)).some(p => visibleEn(p, lang) && p.editorial) ? m.replace(' id="navEditorial"', "") : "");
@@ -412,7 +415,7 @@ ${JSON.stringify(ld, null, 2)}
     </div>
   </div>
 </main>
-<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${inicio}#${v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div></footer>
+<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div></footer>
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${AVISO_EPUB}
@@ -500,8 +503,94 @@ ${MEDICION}
 `;
 }
 
+// Donar: página aparte y no vista de index.html, para que el enlace compartido por WhatsApp traiga su
+// propia imagen (img/compartir-dona*.jpg, de herramientas/imagen_compartir.py) y su texto; un #hash no
+// cambia la vista previa, que siempre era la de la portada. index.html lleva #dona hasta acá.
+const DONA_TX = {
+  es: {
+    titulo: "Donar", og: "Dona a Proyecto Fénix", lede: "Fénix es gratuito y sin publicidad. Tu aporte ayuda a digitalizar, corregir y traducir libros que de otro modo se perderían.",
+    usoTitulo: "En qué usaremos tu aporte",
+    usos: ["En un dominio propio, para que Fénix tenga una dirección fácil de recordar y de compartir.",
+      "En conseguir libros originales. Algunas obras que queremos traducir no están digitalizadas en ninguna parte, y para trabajar sobre el texto del autor hay que comprar un ejemplar impreso. Nos pasó con «La vida de identificación con Cristo Jesús»: como el original francés no está en internet, tuvimos que traducirla desde la versión inglesa."],
+    boton: "Donar", pendiente: "Los medios de donación están en preparación. Mientras tanto, la mejor ayuda es compartirlo.",
+    alt: "Un fénix que renace del fuego, junto a la invitación a donar a Proyecto Fénix"
+  },
+  en: {
+    titulo: "Donate", og: "Donate to Proyecto Fénix", lede: "Fénix is free and ad-free. Your gift helps us digitise, proofread and translate books that would otherwise be lost.",
+    usoTitulo: "How we will use your gift",
+    usos: ["To buy our own domain, so that Fénix has an address that is easy to remember and share.",
+      "To obtain original books. Some works we want to translate are not digitised anywhere, and working from the author's own text means buying a printed copy. That happened with De Jaegher's book: since the French original is not online, we had to translate it from the English version."],
+    boton: "Donate", pendiente: "Donation options are being set up. Meanwhile, the best help is to pray for this project and share it.",
+    alt: "A phoenix rising from the fire, next to the invitation to donate to Proyecto Fénix"
+  }
+};
+function paginaDona(lang){
+  const x = TX[lang], t = DONA_TX[lang];
+  const B = lang === "en" ? "../../" : "../";
+  const inicio = B + (lang === "en" ? "?l=en" : "");
+  const url = SITIO + urlDona(lang, "");
+  const otraUrl = urlDona(lang === "en" ? "es" : "en", B);
+  const imagen = SITIO + (lang === "en" ? "img/compartir-dona-en.jpg" : "img/compartir-dona.jpg");
+  const donar = (D.contacto || {}).donar;
+  return `<!doctype html>
+<html lang="${lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(t.titulo)} | Proyecto Fénix</title>
+${FAVICON}
+${pwaEn(B)}
+<meta name="description" content="${esc(t.lede)}">
+<meta name="color-scheme" content="light dark">
+<link rel="canonical" href="${url}">
+<link rel="alternate" hreflang="es" href="${SITIO}dona/">
+<link rel="alternate" hreflang="en" href="${SITIO}dona/en/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Proyecto Fénix">
+<meta property="og:title" content="${esc(t.og)}">
+<meta property="og:description" content="${esc(t.lede)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${imagen}">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="${esc(t.alt)}">
+<meta property="og:locale" content="${lang === "en" ? "en_US" : "es_CL"}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="${esc(t.og)}">
+<meta name="twitter:description" content="${esc(t.lede)}">
+<meta name="twitter:image" content="${imagen}">
+<!-- Generada por herramientas/gen_estaticos.js. No editar a mano. -->
+<style>${ESTILO}
+  .dona{max-width:720px}
+  .dona .lede{font-size:19px}
+  .dona ul{padding-left:22px} .dona li{margin:8px 0}
+</style>
+</head>
+<body>
+<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><nav class="menu" id="menu" aria-label="${lang === "en" ? "Main menu" : "Menú principal"}">${navFicha(lang, B)}<div class="ajustes-nav"><a class="pildora" href="${otraUrl}" hreflang="${lang === "en" ? "es" : "en"}" lang="${lang === "en" ? "es" : "en"}">${esc(x.otroIdioma)}</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></nav><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="${esc(x.buscar)}" title="${esc(x.buscar)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="${B}" method="get" role="search">${lang === "en" ? `<input type="hidden" name="l" value="en">` : ""}<input type="search" name="q" required aria-label="${esc(x.buscar)}" placeholder="${esc(x.buscarPh)}"><button class="btn prim" type="submit">${esc(x.buscarBtn)}</button></form></details><button class="pildora" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu">☰ ${esc(x.menu)}</button></div></div></header>
+<main class="wrap"><div class="dona">
+  <h1>${esc(t.titulo)}</h1>
+  <p class="lede">${esc(t.lede)}</p>
+  <h2>${esc(t.usoTitulo)}</h2>
+  <ul>${t.usos.map(u => `\n    <li>${esc(u)}</li>`).join("")}
+  </ul>
+  <div class="botones">${donar ? `<a class="btn prim" href="${esc(donar)}" target="_blank" rel="noopener">${esc(t.boton)}</a>` : ""}<button class="btn" type="button" id="btnCompartir" data-titulo="${esc(t.og)}" data-texto="${esc(t.og + ": " + t.lede)}" data-url="${url}" data-copiado="${esc(x.copiado)}" data-copia="${esc(x.copiaEnlace)}">↗ ${esc(x.compartir)}</button></div>
+  <p class="aviso" id="avisoCompartir" role="status"></p>
+  ${donar ? "" : `<p class="meta">${esc(t.pendiente)}</p>`}
+  <div class="botones"><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
+</div></main>
+<footer><div class="wrap">${esc(x.pie)}</div></footer>
+${SCRIPT_TEMA}
+${SCRIPT_COMPARTIR}
+${MEDICION}
+</body>
+</html>
+`;
+}
+
 // ---------- páginas de libro ----------
 const cambiadas = new Set();
+for (const lang of ["es", "en"]) if (escribirSiCambia(urlDona(lang, "") + "index.html", paginaDona(lang))) cambiadas.add(SITIO + urlDona(lang, ""));
 for (const l of PAGINAS) if (escribirSiCambia((l._ruta || `libro/${l.id}/`) + "index.html", paginaLibro(l))) cambiadas.add(urlLibro(l));
 // Hojear: una página de primeras páginas por cada libro con EPUB propio; la de un libro que ya no lo tiene se borra.
 const conMuestra = new Set();
@@ -608,7 +697,7 @@ const hoy = new Date().toISOString().slice(0, 10);
 const previo = fs.existsSync(path.join(RAIZ, "sitemap.xml")) ? leer("sitemap.xml") : "";
 const lastmodPrevio = {};
 for (const m of previo.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) lastmodPrevio[m[1]] = m[2];
-const urls = [SITIO, ...PAGINAS.map(urlLibro), ...conMuestra];
+const urls = [SITIO, SITIO + "dona/", SITIO + "dona/en/", ...PAGINAS.map(urlLibro), ...conMuestra];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>

@@ -2124,22 +2124,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     </div>
   </section>
 
-  <!-- DONA -->
-  <section class="vista" id="v-dona">
-    <div class="wrap" style="max-width:720px">
-      <h2 data-i18n="don.titulo">Donar</h2>
-      <p class="lede" data-i18n="don.lede">Fénix es gratuito y sin publicidad. Tu aporte ayuda a digitalizar, corregir y traducir libros que de otro modo se perderían.</p>
-      <h3 style="margin-top:20px" data-i18n="don.usoTitulo">En qué usaremos tu aporte</h3>
-      <ul>
-        <li data-i18n="don.uso1">En un dominio propio, para que Fénix tenga una dirección fácil de recordar y de compartir.</li>
-        <li data-i18n="don.uso2">En conseguir libros originales. Algunas obras que queremos traducir no están digitalizadas en ninguna parte, y para trabajar sobre el texto del autor hay que comprar un ejemplar impreso. Nos pasó con «La vida de identificación con Cristo Jesús»: como el original francés no está en internet, tuvimos que traducirla desde la versión inglesa.</li>
-      </ul>
-      <div class="caja" style="margin-top:16px">
-        <a class="btn prim" id="btnDonar" href="#" target="_blank" rel="noopener" data-i18n="don.boton">Donar</a>
-        <p class="meta" id="donarPendiente" style="margin-top:12px" data-i18n="don.pendiente">Los medios de donación están en preparación. Mientras tanto, la mejor ayuda es compartirlo.</p>
-      </div>
-    </div>
-  </section>
+  <!-- DONA: es la página aparte dona/ (y dona/en/), que arma herramientas/gen_estaticos.js con su
+       propia vista previa al compartir; #dona lleva ahí (ver ruta()). -->
 
   <!-- CONTACTO -->
   <section class="vista" id="v-contacto">
@@ -2272,8 +2258,6 @@ function iniciar(){
       "or.titulo":"Prayers",
       "sal.titulo":"Which book would you like to save?","sal.lede":"Fénix exists so that good books are not lost. Tell us which one you would like to see here: we will look for it, check its rights and, if possible, publish it.",
       "err.titulo":"Did you find an error?","err.lede":"A typo, a missing chapter, a file that will not open or a misplaced quote. Thank you for letting us know: the book will be better for the next reader.",
-      "don.titulo":"Donate","don.lede":"Fénix is free and ad-free. Your gift helps us digitise, proofread and translate books that would otherwise be lost.","don.boton":"Donate","don.usoTitulo":"How we will use your gift","don.uso1":"To buy our own domain, so that Fénix has an address that is easy to remember and share.","don.uso2":"To obtain original books. Some works we want to translate are not digitised anywhere, and working from the author's own text means buying a printed copy. That happened with De Jaegher's book: since the French original is not online, we had to translate it from the English version.",
-      "don.pendiente":"Donation options are being set up. Meanwhile, the best help is to pray for this project and share it.",
       "con.titulo":"Contact","con.lede":"Questions, suggestions or a wish to help proofread and translate. We will reply by email.","con.quien":"Proyecto Fénix is a personal project by Tomás Alcalde.",
       "f.tituloLibro":"Book title","f.autor":"Author","f.idioma":"Language","f.porque":"Why is it worth saving?","f.correoOpc":"Your email (optional, so we can let you know)",
       "f.enviar":"Send","f.libro":"Book","f.libroPh":"Type the title or the author","f.libroVacio":"No matching book. You can send it as written.","f.tipo":"Type of error","f.t1":"Typo or spelling","f.t2":"File will not open or download","f.t3":"Missing or jumbled text","f.t4":"Error in the review or a quote","f.t5":"Doctrinal error","f.t6":"Other",
@@ -3039,15 +3023,11 @@ function iniciar(){
     }finally{ boton.disabled = false; }
   }
 
-  // ---------- donar ----------
-  if (D.contacto.donar){ $("#btnDonar").href = D.contacto.donar; $("#donarPendiente").hidden = true; }
-  else $("#btnDonar").hidden = true; // un botón que no hace nada confunde: sin enlace, solo el aviso
-
   // ---------- rutas ----------
   // Las vistas van por #hash; la ficha de un libro, por la ruta de su página estática (libro/<id>/ o
   // libro/<id>/<idioma>/, ver rutaLibro) puesta con history.pushState: lo que se copia de la barra y se
   // pega en WhatsApp trae la vista previa del libro, y Atrás cierra la ficha.
-  const VISTAS = ["inicio","biblioteca","todos","editorial","oraciones","citas","salvar","error","dona","contacto"];
+  const VISTAS = ["inicio","biblioteca","todos","editorial","oraciones","citas","salvar","error","contacto"];
   let ultimaVista = null;
   // Último hash de vista (sin fichas ni obras): si cambia, aunque sea dentro de la misma vista (#editores a #editorial), se sube al principio.
   let hashVista = null;
@@ -3087,6 +3067,9 @@ function iniciar(){
       abrirObra(h.slice(5)); return;
     }
     if ($("#dlgLibro").open) $("#dlgLibro").close();
+    // Donar es una página aparte (dona/, en inglés dona/en/): con su URL, lo que se comparte por WhatsApp
+    // trae su propia imagen y texto en vez de la tarjeta de la portada. replace: Atrás vuelve a donde se estaba.
+    if (h === "dona"){ location.replace(RAIZ + (lang === "en" ? "dona/en/" : "dona/")); return; }
     if (h === "otra-humanidad"){ hashVista = h; mostrar("inicio"); setTimeout(() => $("#otra-humanidad").scrollIntoView(), 0); return; }
     if (h === "editores" || h === "encuadernadores"){
       const bajar = () => $("#" + h).scrollIntoView();

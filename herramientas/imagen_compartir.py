@@ -1,11 +1,13 @@
 # -*- coding: utf-8 -*-
 """Imagen para la vista previa al compartir el enlace (WhatsApp, redes): img/compartir.jpg, 1200x630.
 
-    python herramientas/imagen_compartir.py
+    python herramientas/imagen_compartir.py [--dona]
 
+También deja img/compartir-dona.jpg y img/compartir-dona-en.jpg, para la página de donaciones.
 Toma cuatro portadas de img/portadas/ y les pone al lado el nombre y una línea de qué es el sitio.
 Se vuelve a correr si cambian las portadas; index.html la declara en og:image.
 """
+import sys
 from pathlib import Path
 
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
@@ -45,5 +47,43 @@ def main():
     print(f"{salida.relative_to(RAIZ)}: {salida.stat().st_size // 1024} KB")
 
 
+# Página de donaciones (dona/ y dona/en/, gen_estaticos.js): el fénix del inicio a la derecha y el
+# llamado a la izquierda, para que el enlace compartido no salga con la tarjeta de la portada.
+DONA = {
+    "es": ("APOYA LA BIBLIOTECA", "Dona a Fénix", ["Tu aporte ayuda a digitalizar,", "corregir y traducir libros que", "de otro modo se perderían."]),
+    "en": ("SUPPORT THE LIBRARY", "Donate to Fénix", ["Your gift helps us digitise,", "proofread and translate books", "that would otherwise be lost."]),
+}
+
+
+def dona():
+    w, h = 1200, 630
+    fenix = Image.open(RAIZ / "img" / "inicio-fenix.jpg").convert("RGB")
+    ancho = round(fenix.width * h / fenix.height)
+    fenix = fenix.resize((ancho, h), Image.LANCZOS)
+    # Degradado del granate al cuadro, para que el texto no quede sobre el fuego.
+    mascara = Image.new("L", (ancho, h), 255)
+    dm = ImageDraw.Draw(mascara)
+    for i in range(220):
+        dm.line((i, 0, i, h), fill=round(255 * i / 220))
+    f_tit = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 64)
+    f_sub = ImageFont.truetype(str(FUENTES / "georgia.ttf"), 30)
+    f_eti = ImageFont.truetype(str(FUENTES / "georgiab.ttf"), 22)
+    for lang, (eti, tit, lineas) in DONA.items():
+        im = Image.new("RGB", (w, h), GRANATE)
+        im.paste(fenix, (w - ancho + 40, 0), mascara)  # el ala derecha se corta un poco; el cuerpo queda entero
+        d = ImageDraw.Draw(im)
+        d.text((70, 170), eti, font=f_eti, fill=ORO)
+        d.text((70, 208), tit, font=f_tit, fill=CREMA)
+        for i, l in enumerate(lineas):
+            d.text((70, 320 + i * 44), l, font=f_sub, fill=(240, 222, 196))
+        d.rectangle((70, 476, 190, 480), fill=ORO)
+        salida = RAIZ / "img" / ("compartir-dona.jpg" if lang == "es" else f"compartir-dona-{lang}.jpg")
+        im.save(salida, "JPEG", quality=85, optimize=True, progressive=True)
+        print(f"{salida.relative_to(RAIZ)}: {salida.stat().st_size // 1024} KB")
+
+
 if __name__ == "__main__":
-    main()
+    # --dona: solo las de la página de donaciones (las portadas no cambiaron).
+    if "--dona" not in sys.argv:
+        main()
+    dona()

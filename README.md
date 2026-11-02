@@ -200,6 +200,9 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   «Solicitar una corrección» abre el formulario de errores con ese libro ya elegido.
 - Formularios (salvar un libro, error, contacto): FormSubmit, destino en
   `FENIX.contacto.formularios`. El enlace de donación va en `FENIX.contacto.donar`.
+- Donar es página aparte, `dona/` y `dona/en/` (la arma `gen_estaticos.js`; `#dona` lleva ahí), para
+  que al compartirla por WhatsApp salga su imagen (`img/compartir-dona*.jpg`, de
+  `imagen_compartir.py --dona`) y no la de la portada. Sus textos van en `DONA_TX`.
 
 Citas y oraciones se cotejan con el texto del libro antes de publicarse; lo teológico pasa por
 la skill `auditar-teologia`.
