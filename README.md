@@ -142,6 +142,13 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `libro/`, la viñeta y el sello de `marco.py` y el timbre de `exlibris.py`. Si cambia el dibujo:
   `python herramientas/logo.py`, reemplazar el data URI en las páginas, `exlibris.py` y
   `portadas.py --todos --epub`.
+- `herramientas/agregar_libro.py libros/<archivo>.epub [--forzar] [--estaticos]`: arma o rearma un
+  libro en una llamada: `sin_gutenberg.py`, `portadas.py <imagen> --epub`, `exlibris.py`,
+  `credito_portada.py`, `epub_a_pdf.py` y `revisar_libros.py`. Salta cada paso que el libro ya
+  tiene (rearmar uno publicado no cambia ningún archivo), se detiene en el primer error mostrando
+  solo ese y escribe una línea por libro. `--forzar` corre todos los pasos; `--estaticos` suma
+  `gen_estaticos.js`. Necesita la ficha en `datos.js` y el cuadro en `img/cuadros/`. No incluye
+  `md_a_epub.py`, la ficha ni `sesion.py publicar`.
 - `herramientas/exlibris.py libros/<archivo>.epub`: todo libro de `libros/` lleva como segunda
   página, después de la portada, el exlibris de Fénix (un timbre estampado sobre papel,
   `img/exlibris-es.jpg` o `-en.jpg` según `dc:language`). Es idempotente; después se rehace el PDF.
