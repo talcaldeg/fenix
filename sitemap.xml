@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/dona/</loc>
@@ -733,6 +733,10 @@
     <lastmod>2026-11-02</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/burnett-el-pequeno-lord-fauntleroy/</loc>
+    <lastmod>2026-11-03</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/</loc>
     <lastmod>2026-11-02</lastmod>
   </url>
@@ -923,6 +927,10 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/burnett-el-jardin-secreto/muestra/</loc>
     <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/burnett-el-pequeno-lord-fauntleroy/muestra/</loc>
+    <lastmod>2026-11-03</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/muestra/</loc>

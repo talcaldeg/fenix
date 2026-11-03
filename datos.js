@@ -4251,6 +4251,28 @@ window.FENIX = {
       parecidos: ["quiroga-cuentos-de-la-selva", "saint-exupery-el-principito", "chesterton-manalive"]
     },
     {
+      id: "burnett-el-pequeno-lord-fauntleroy",
+      titulo: "El pequeño Lord Fauntleroy",
+      autor: "Frances Hodgson Burnett",
+      anio: "1886",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Cedric Errol tiene entre siete y ocho años, vive con su madre viuda en una calle modesta de Nueva York y sus mejores amigos son un almacenero y un lustrabotas. Un día llega un abogado inglés con una noticia: Cedric es el heredero de su abuelo, el conde de Dorincourt, un anciano rico, amargado y temido por todos, que nunca perdonó a su hijo por casarse con una americana. El niño cruza el mar, se instala en el castillo y, sin saberlo, con su confianza y su cariño, empieza a cambiar al conde y a la vida de sus arrendatarios, hasta que aparece otro pretendiente al título.", "en": "Cedric Errol is between seven and eight years old, lives with his widowed mother on a modest New York street, and his best friends are a grocer and a bootblack. One day an English lawyer arrives with news: Cedric is the heir of his grandfather, the Earl of Dorincourt, a rich, bitter old man feared by everyone, who never forgave his son for marrying an American. The boy crosses the sea, settles in the castle and, without knowing it, through his trust and his affection, begins to change the Earl and the lives of his tenants, until another claimant to the title appears."},
+      porque: {"es": "Para quien quiere creer que la bondad sencilla puede ablandar un corazón endurecido. Cedric no sermonea a nadie: cree que su abuelo es bueno, y a fuerza de tratarlo así, el anciano empieza a serlo. Detrás está su madre, que le enseñó a pensar siempre en los demás, y que en el libro es tan protagonista como él. Se lee en voz alta con niños y se disfruta a cualquier edad.", "en": "For anyone who wants to believe that simple goodness can soften a hardened heart. Cedric preaches at no one: he believes his grandfather is good, and by treating him that way, the old man begins to become so. Behind him is his mother, who taught him always to think of others and who is as much the heart of the book as he is. It reads aloud well with children and is a pleasure at any age."},
+      imagen: {"src": "img/portadas/burnett-el-pequeno-lord-fauntleroy.jpg", "credito": {"es": "Cartel anónimo para la obra de teatro «Little Lord Fauntleroy», 1888", "en": "Anonymous poster for the play «Little Lord Fauntleroy», 1888"}, "url": "https://commons.wikimedia.org/wiki/File:Little_Lord_Fauntleroy_LCCN2014635963.jpg"},
+      citas: [
+        "Es algo muy pequeño, quizá, pero es lo mejor de todo.",
+        "Ser así es como haber nacido rey.",
+        "Sí, serás mi niño mientras yo viva; y, ¡caramba!, a veces siento como si fueras el único niño que he tenido."
+      ],
+      archivos: {"epub": "libros/burnett-el-pequeno-lord-fauntleroy.epub", "pdf": "libros/burnett-el-pequeno-lord-fauntleroy.pdf"},
+      fuente: {"texto": "Traducción de Proyecto Fénix desde Little Lord Fauntleroy (1886), Project Gutenberg, libro n.º 479 (dominio público)", "url": "https://www.gutenberg.org/ebooks/479"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-pequeno-lord"},
+      editorial: {"es": "Traducción nueva de Proyecto Fénix, hecha directamente del inglés de Little Lord Fauntleroy (1886), con sus quince capítulos; preparada con ayuda de inteligencia artificial y revisada contra el original, con nota de la edición y un cartel teatral de 1888 en la portada. Edición al cuidado de Tomás Alcalde.", "en": "A new Proyecto Fénix translation, made directly from the English of Little Lord Fauntleroy (1886), with its fifteen chapters; prepared with the help of artificial intelligence and checked against the original, with an edition note and an 1888 theatre poster on the cover. Edited by Tomás Alcalde."},
+      parecidos: ["burnett-el-jardin-secreto", "dickens-el-cantico-de-navidad", "saint-exupery-el-principito"]
+    },
+    {
       id: "coloma-pequeneces",
       titulo: "Pequeñeces",
       autor: "Luis Coloma",
@@ -4343,7 +4365,6 @@ window.FENIX = {
     { titulo: {"es": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
     { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },
-    { titulo: {"es": "El pequeño Lord Fauntleroy"}, autor: "Frances Hodgson Burnett", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-pequeno-lord"} },
     { titulo: {"es": "Ética a Nicómaco"}, autor: "Aristóteles", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/etica-nicomaco"} },
     { titulo: {"es": "Estudio en escarlata"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/estudio-en-escarlata"} },
     { titulo: {"es": "El signo de los cuatro"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-signo-de-los-cuatro"} },

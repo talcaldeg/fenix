@@ -1,0 +1,7 @@
+Frances Hodgson Burnett publicó *Little Lord Fauntleroy* primero por entregas en la revista infantil *St. Nicholas*, entre noviembre de 1885 y octubre de 1886, y en 1886 como libro, en Nueva York (Charles Scribner's Sons). Esta es una traducción nueva de Proyecto Fénix, hecha directamente del inglés según el texto de Project Gutenberg (libro n.º 479), que reproduce la novela completa en sus quince capítulos.
+
+Se tradujo cada oración del original, sin resumir ni añadir nada. Los nombres de personas y lugares se dejan en inglés, y Cedric llama a su madre «Querida», como un nombre, igual que en el original la llama *Dearest*. El señor Hobbs, Dick, Mary y los campesinos hablan de modo popular, que en castellano se marca con frases llanas y unas pocas formas como «pa'» y «na'», sin imitar el habla de ningún país; Cedric, en cambio, habla con la formalidad un poco solemne de un niño. Las cartas que escribe Cedric conservan algunas faltas de ortografía, como en el original.
+
+La traducción se preparó con ayuda de inteligencia artificial y se revisó contra el original inglés. Si encuentras un error, puedes avisarlo desde el sitio de Proyecto Fénix.
+
+El texto de Frances Hodgson Burnett es de dominio público. La ilustración de la portada es un cartel anónimo en litografía a color para la obra de teatro *Little Lord Fauntleroy* (1888), que conserva la Biblioteca del Congreso de los Estados Unidos. Traducción de Proyecto Fénix, 2026, con licencia CC BY-NC-SA 4.0: se puede copiar y difundir gratis, con crédito y sin fines de lucro.

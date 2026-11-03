@@ -345,3 +345,49 @@ puntos suspensivos; cursiva (`_texto_`) → `*texto*`.
   El punto final va siempre fuera de la comilla de cierre, también al final del párrafo:
   «La mía es negra». / «¿Vienes?».
 - Notas al pie: no se agregan; el revisor las pone después, si hacen falta.
+
+## El pequeño Lord Fauntleroy (Burnett, *Little Lord Fauntleroy*, 1886, desde el inglés)
+
+Original: Project Gutenberg n.º 479, partido en tramos en
+`fenix_fuentes/fauntleroy/tramos/NN_cX.txt`; la salida va en
+`editorial/burnett-little-lord-fauntleroy-es/NN_cX.md` (mismo nombre). Novela para niños y
+grandes, de prosa sencilla y cálida, como *El jardín secreto*: frases claras, sin cultismos
+(error 15), que un niño de diez años pueda leer en voz alta. Las rayas («--») del original pasan
+a comas, paréntesis o puntos suspensivos; cursiva (`_texto_`) → `*texto*`.
+
+- Encabezados: los capítulos no tienen título; la línea con el número romano («I», «II») pasa a
+  `## Capítulo I`. Un tramo que empieza a mitad de capítulo (los «b»: 03, 06, 08, 12) no lleva
+  encabezado; un tramo con dos capítulos lleva el de cada uno donde empieza.
+- Nombres sin traducir: Cedric Errol, Ceddie (así lo llaman en Nueva York), el capitán Cedric
+  Errol (su padre), la señora Errol, el señor Havisham, el señor Hobbs, Dick Tipton (Dick), Jake,
+  Ben, Minna, Tom, Mary (la criada), Bridget, Dawson, Wilkins, Thomas, Higgins, Newick, el señor
+  Mordaunt, Michael, Jerry, Billy Williams, Molyneux, Bevis, Lady Lorridaile, Sir Harry
+  Lorridaile, la señorita Vivian Herbert, Dougal (el perro), Court Lodge, Earl's Court (el barrio
+  del pueblo), Erleboro. Traducidos: the Earl of Dorincourt → el conde de Dorincourt (el conde);
+  Dorincourt Castle → el castillo de Dorincourt; New York → Nueva York; England → Inglaterra.
+  Mr./Mrs./Miss → señor, señora, señorita; Lord y Lady se quedan como título ante el nombre.
+- **Dearest**: Cedric llama así a su madre, como su padre. Se traduce «Querida», con mayúscula,
+  como un nombre, en todo el libro (también cuando el narrador la llama así).
+- Glosario: his/your lordship → su señoría; my lord → milord; earl → conde; earldom → condado;
+  countess → condesa; aristocrat → aristócrata; tyrant → tirano; grocery store → almacén;
+  groceryman → almacenero; boot-black / bootblack → lustrabotas; the Fourth of July → el Cuatro
+  de Julio; the Revolution → la Revolución; Republican → republicano; President → presidente;
+  tenants → arrendatarios; steward → administrador; cottage → casita; pony → poni; vicar →
+  vicario; pew → banco; dollars, pounds, shillings, pence → dólares, libras, chelines, peniques;
+  gal → muchacha (en boca de Dick o Hobbs, «chiquilla» o «mujer», según el tono).
+- Tratamiento: Cedric trata de «usted» a todos los mayores (al conde, al señor Hobbs, al señor
+  Havisham, a los criados) salvo a su madre, a quien tutea; Cedric y Dick se tutean. La madre, el
+  conde, el señor Hobbs, Dick, Mary y los mayores en general tutean a Cedric, salvo el señor
+  Havisham y los criados del castillo, que lo tratan de «usted» («milord», «su señoría»). El
+  conde y la señora Errol, el conde y el señor Havisham, se tratan de «usted». Plural:
+  «ustedes».
+- **Habla popular** (el señor Hobbs, Dick, Mary, Minna, Ben y los campesinos): se marca con
+  léxico y sintaxis sencillos y llanos, frases cortas y alguna exclamación, sin regionalismos de
+  un país ni jerga actual. Fonética solo «pa'» (para) y «na'» (nada), con mesura. Cedric, en
+  cambio, habla con una formalidad ingenua y un poco solemne de niño: se conserva.
+- Himnos, versos o textos bíblicos que aparezcan: bloque `> ` sin comillas, traducción propia
+  desde el inglés del original, mayúsculas de Dios con la regla de arriba.
+- Diálogo con verbo de decir después: coma tras el cierre de comillas, también tras ? o ! (RAE):
+  «¿Vienes?», preguntó. Sin verbo de decir, punto: «¿Vienes?». El punto final va siempre fuera
+  de la comilla de cierre.
+- Notas al pie: no se agregan; el revisor las pone después, si hacen falta.
