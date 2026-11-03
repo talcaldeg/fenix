@@ -1087,6 +1087,33 @@ window.FENIX = {
       }
     },
     {
+      id: "etica-a-nicomaco",
+      titulo: "Ética a Nicómaco",
+      autor: "Aristóteles (trad. Patricio de Azcárate)",
+      anio: "c. 330 a. C.",
+      idioma: "es",
+      categoria: "ensayo",
+      recomendado: false,
+      resumen: {
+        es: "El tratado de ética más influyente de la filosofía antigua. Parte de una pregunta sencilla, cuál es el bien del hombre, y responde que es una vida plena, activa y guiada por la virtud. Estudia las virtudes morales (el valor, la templanza, la generosidad, la justicia) como un justo medio entre el exceso y el defecto, analiza lo voluntario y la deliberación, distingue la prudencia y las demás virtudes del entendimiento, dedica dos libros enteros a la amistad y termina con el placer y la contemplación. Traducción de Patricio de Azcárate (1873), con la ortografía de la época y sus notas.",
+        en: "The most influential work of ethics of the ancient world. It starts from a simple question, what is the good of man, and answers that it is a full life, active and guided by virtue. It studies the moral virtues (courage, temperance, generosity, justice) as a mean between excess and deficiency, analyses the voluntary and deliberation, distinguishes prudence and the other intellectual virtues, devotes two whole books to friendship and ends with pleasure and contemplation. Spanish translation by Patricio de Azcárate (1873), with the spelling of the time and his notes."
+      },
+      porque: {"es":"Para quien quiere pensar qué significa vivir bien y no solo vivir cómodo. Aristóteles no te da una lista de reglas: te enseña a mirar tus hábitos y a ver cuánto de lo que eres lo has ido formando con lo que repites cada día. Los dos libros sobre la amistad valen por sí solos y te ayudan a revisar tus propias amistades. La ortografía de 1873 se vuelve familiar en pocas páginas.","en":"For anyone who wants to think about what it means to live well and not merely to live comfortably. Aristotle does not hand you a list of rules: he teaches you to look at your habits and to see how much of what you are you have built from what you repeat every day. The two books on friendship are worth reading on their own and help you take stock of your own friendships. The older Spanish spelling of this translation stops being an obstacle within a few pages."},
+      imagen: { src: "img/portadas/etica-a-nicomaco.jpg", credito: { es: "Rafael, «La escuela de Atenas» (detalle), 1509-1511", en: "Raphael, «The School of Athens» (detail), 1509-1511" }, url: "https://commons.wikimedia.org/wiki/File:%22The_School_of_Athens%22_by_Raffaello_Sanzio_da_Urbino.jpg" },
+      citas: [
+        "No es pues de poca importancia contraer desde la infancia y lo más pronto posible tales o cuáles hábitos; por el contrario, es este un punto de muchísimo interés, o por mejor decir, es el todo.",
+        "Una sola golondrina no hace verano, como no le hace un sólo día hermoso",
+        "La virtud es un medio entre dos vicios, que pecan, uno por exceso, otro por defecto",
+        "Cuanto más rico es uno y más poder y más autoridad ejerce, tanto más experimenta la necesidad de tener amigos en torno suyo.",
+        "Todo el mundo conviene en que los amigos son el único asilo adonde podemos refugiarnos en la miseria y en los reveses de todos géneros."
+      ],
+      archivos: { epub: "libros/aristoteles-etica-a-nicomaco.epub", pdf: "libros/aristoteles-etica-a-nicomaco.pdf" },
+      fuente: { texto: "Obras de Aristóteles, tomo I (Madrid, 1873), transcritas por Proyecto Filosofía en español (dominio público); edición digital y portada de Proyecto Fénix", url: "https://www.filosofia.org/cla/ari/azc01.htm" },
+      editorial: { es: "Edición digital de Proyecto Fénix sobre la traducción de Patricio de Azcárate (Obras de Aristóteles, Madrid, 1873), transcrita por Proyecto Filosofía en español: conserva la ortografía de la época y las notas del traductor, con portada nueva. Se omiten el estudio preliminar sobre la vida y las obras de Aristóteles y los resúmenes de capítulo del índice, y se corrigieron erratas evidentes de la transcripción.", en: "Proyecto Fénix digital edition of Patricio de Azcárate's translation (Obras de Aristóteles, Madrid, 1873), transcribed by Proyecto Filosofía en español: it keeps the spelling of the time and the translator's notes, with a new cover. The preliminary study on Aristotle's life and works and the chapter summaries of the table of contents are left out, and evident transcription errors were corrected." },
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/etica-nicomaco"},
+      parecidos: ["apologia-de-socrates", "confesiones", "ortodoxia"]
+    },
+    {
       id: "orencio-y-eloisa",
       titulo: "Orencio y Eloísa",
       autor: "Benjamín Franzani",
@@ -4365,7 +4392,6 @@ window.FENIX = {
     { titulo: {"es": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
     { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },
-    { titulo: {"es": "Ética a Nicómaco"}, autor: "Aristóteles", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/etica-nicomaco"} },
     { titulo: {"es": "Estudio en escarlata"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/estudio-en-escarlata"} },
     { titulo: {"es": "El signo de los cuatro"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-signo-de-los-cuatro"} },
     { titulo: {"es": "Las aventuras de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/aventuras-de-sherlock-holmes"} },
