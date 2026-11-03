@@ -732,7 +732,11 @@ if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
     .flatMap(d => d.isDirectory() ? imagenes(path.join(dir, d.name)) : [path.join(dir, d.name)]);
   for (const f of imagenes(path.join(RAIZ, "img"))) sha.update(path.relative(RAIZ, f).replace(/\\/g, "/")).update(fs.readFileSync(f));
   const huella = sha.digest("hex").slice(0, 10);
-  const sw = leer("sw.js").replace(/\r\n/g, "\n");
+  // Un choque de rebase en la VERSION (dos sesiones a la vez) quedó con sus marcas en main y cada
+  // publicación lo arrastraba: como la línea se reescribe igual, se queda la primera y se botan las marcas.
+  const sw = leer("sw.js").replace(/\r\n/g, "\n")
+    .replace(/^<{7} [^\n]*\n(const VERSION = [^\n]*\n)={7}\n(?:const VERSION = [^\n]*\n)>{7} [^\n]*\n/m, "$1");
+  if (/^(<{7} |>{7} )/m.test(sw)) throw new Error("sw.js tiene marcas de choque de git fuera de la VERSION: resolverlas a mano.");
   if (!/const VERSION = "fenix-[^"]*";/.test(sw)) throw new Error('sw.js no tiene const VERSION = "fenix-...";');
   escribirSiCambia("sw.js", sw.replace(/const VERSION = "fenix-[^"]*";/, `const VERSION = "fenix-${huella}";`));
 }

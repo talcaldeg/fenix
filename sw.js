@@ -2,16 +2,12 @@
 //
 // - Páginas, datos.js y demás texto: primero la red (así nadie se queda con una ficha vieja); si no
 //   hay señal o tarda más de 4 s, lo guardado de la última visita.
-// - Imágenes: lo guardado al tiro y se refresca por detrás.
+// - Imágenes e índice de Delibris: lo guardado al tiro y se refresca por detrás.
 // - libros/ (EPUB y PDF) no se guarda: se descarga al teléfono, y duplicarlo llenaría la memoria.
 // - Lo de otros sitios (Open Library, GoatCounter, Delibris) pasa directo.
 // VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html, datos.js o img/: el
 // navegador ve un sw.js distinto, instala el nuevo y este borra las cachés viejas.
-<<<<<<< HEAD
 const VERSION = "fenix-21d90c48d3";
-=======
-const VERSION = "fenix-0e941e5a1c";
->>>>>>> 8617b19 (El sabueso de los Baskerville: EPUB y PDF propios)
 const BASICO = ["./", "datos.js", "manifest.webmanifest", "img/favicon.svg", "img/icono-192.png"];
 
 self.addEventListener("install", e => {
@@ -66,5 +62,8 @@ self.addEventListener("fetch", e => {
   if (url.origin !== raiz.origin || !url.pathname.startsWith(raiz.pathname)) return;
   const ruta = url.pathname.slice(raiz.pathname.length);
   if (ruta.startsWith("libros/") || ruta === "sw.js") return;
-  e.respondWith(caches.open(VERSION).then(c => ruta.startsWith("img/") ? guardadoPrimero(req, c) : redPrimero(req, c)));
+  // El índice de Delibris cambia pocas veces: como las imágenes, lo guardado al tiro (en el catálogo
+  // mundial cada trozo esperaba la revalidación con GitHub, ~0,4 s).
+  const primeroGuardado = ruta.startsWith("img/") || ruta.startsWith("delibris/");
+  e.respondWith(caches.open(VERSION).then(c => primeroGuardado ? guardadoPrimero(req, c) : redPrimero(req, c)));
 });
