@@ -8,7 +8,7 @@
 // VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html, datos.js o img/: el
 // navegador ve un sw.js distinto, instala el nuevo y este borra las cachés viejas.
 <<<<<<< HEAD
-const VERSION = "fenix-ca14defdfb";
+const VERSION = "fenix-fbaeeea452";
 =======
 const VERSION = "fenix-0e941e5a1c";
 >>>>>>> 8617b19 (El sabueso de los Baskerville: EPUB y PDF propios)
