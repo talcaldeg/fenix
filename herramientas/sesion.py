@@ -121,6 +121,10 @@ def publicar(tema, mensaje):
         git("add", "-A", cwd=ruta)
         if git("diff", "--cached", "--quiet", cwd=ruta, check=False).returncode != 0:
             git("commit", "-q", "-m", "Regenera las páginas estáticas", cwd=ruta)
+        # Un sw.js con marcas de choque subió el 3-nov-2026 y dejó la app sin renovarse: no se publica.
+        marcas = git("grep", "-n", "-I", "-E", "^(<{7} |>{7} )", "HEAD", "--", ".", cwd=ruta, check=False).stdout.strip()
+        if marcas:
+            sys.exit("Quedaron marcas de choque de git; resolverlas y volver a publicar:\n" + marcas)
         if git("rev-list", "--count", "origin/main..HEAD", cwd=ruta).stdout.strip() == "0":
             print("Nada nuevo que publicar.")
             break

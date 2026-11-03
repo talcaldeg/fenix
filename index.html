@@ -2676,8 +2676,11 @@ function iniciar(){
   async function valoracionDelibris(o){
     const f = libroFenix(o);
     if (f) return f.delibris || null;
-    for (const ti of new Set([o.titulo, o.original])){
-      const lista = await trozoDelibris(claveDelibris(ti));
+    const titulos = [...new Set([o.titulo, o.original])];
+    // Los trozos de los dos títulos se piden a la vez: de a uno sumaban medio segundo por fila.
+    const listas = await Promise.all(titulos.map(ti => trozoDelibris(claveDelibris(ti))));
+    for (const [i, ti] of titulos.entries()){
+      const lista = listas[i];
       const c = corto(ti);
       const d = lista.find(x => corto(x.t) === c && (!o.autores.length || cruzan(x.a, nombres(o))));
       if (d) return { valor: d.v, genero: d.g, url: d.u };
@@ -2723,6 +2726,18 @@ function iniciar(){
   // Open Library a veces registra el mismo libro como obras distintas: se agrupan por título
   // (sin subtítulo ni artículo) y autor, y la fila dice cuántas ediciones más hay.
   const claveObra = o => corto(o.titulo) + "|" + (norm(o.autores[0] || "").split(" ").sort((a, b) => b.length - a.length)[0] || "");
+  // Open Library tarda de 1 a 5 s y a veces se cuelga: cada respuesta se guarda (volver, cambiar de
+  // idioma o pedir «más» no repite la espera) y una consulta pegada se corta a los 8 s y se reintenta.
+  const respuestasOL = new Map();
+  function pedirOL(url){
+    if (respuestasOL.has(url)) return respuestasOL.get(url);
+    const intento = () => { const c = new AbortController(), plazo = setTimeout(() => c.abort(), 8000);
+      return fetch(url, { signal: c.signal }).then(r => { if (!r.ok) throw new Error(r.status); return r.json(); }).finally(() => clearTimeout(plazo)); };
+    const p = intento().catch(intento);
+    respuestasOL.set(url, p); p.catch(() => respuestasOL.delete(url));
+    return p;
+  }
+  const urlBusqueda = (q, pagina) => `${OL}/search.json?q=${encodeURIComponent(q + " language:" + codigoOL())}&fields=${CAMPOS}&limit=20&page=${pagina}`;
   let busqueda = { q: "", pagina: 1, total: 0, vistos: new Map() };
   async function buscarObras(mas){
     const q = $("#tBuscar").value.trim(); if (!q) return;
@@ -2731,10 +2746,11 @@ function iniciar(){
     $("#tVacio").hidden = true; $("#tMas").hidden = true;
     if (!mas){ $("#tLista").hidden = true; $("#tLista").innerHTML = ""; }
     $("#tCuenta").textContent = t("todos.buscando");
+    // Mientras responde Open Library se bajan el índice de Delibris y el trozo del texto buscado,
+    // que suele ser el del título: antes empezaban recién con la lista a la vista.
+    trozoDelibris(claveDelibris(q));
     try{
-      const url = `${OL}/search.json?q=${encodeURIComponent(q + " language:" + codigoOL())}&fields=${CAMPOS}&limit=20&page=${busqueda.pagina}`;
-      const r = await fetch(url); if (!r.ok) throw new Error(r.status);
-      const j = await r.json();
+      const j = await pedirOL(urlBusqueda(q, busqueda.pagina));
       busqueda.total = j.numFound || 0;
       const nuevas = [];
       for (const o of (j.docs || []).map(datosObra)){
@@ -2755,6 +2771,8 @@ function iniciar(){
       nuevas.forEach(o => { if (o.repetidas){ const el = $(`.fila[data-obra="${o.id}"] .mas-ed`); if (el) el.textContent = t(o.repetidas === 1 ? "todos.masEd1" : "todos.masEd").replace("{n}", o.repetidas); } });
       $("#tLista").hidden = false;
       $("#tMas").hidden = busqueda.pagina * 20 >= busqueda.total;
+      // La página siguiente se adelanta, así «Ver más» responde al tiro.
+      if (!$("#tMas").hidden) pedirOL(urlBusqueda(q, busqueda.pagina + 1)).catch(() => {});
       nuevas.forEach(async o => { const d = await valoracionDelibris(o); const el = $(`.moral-obra[data-obra="${o.id}"]`); if (el) el.innerHTML = moralObra(d); });
     }catch(err){
       $("#tCuenta").textContent = ""; $("#tVacio").textContent = t("todos.error"); $("#tVacio").hidden = false;
@@ -2821,6 +2839,9 @@ function iniciar(){
   $("#tMas").addEventListener("click", () => buscarObras(true));
   document.addEventListener("click", e => { const a = e.target.closest(".fila[data-obra]"); if (a){ e.preventDefault(); location.hash = "obra/" + a.dataset.obra; } });
   document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".fila[data-obra]"); if (a && e.key === "Enter") location.hash = "obra/" + a.dataset.obra; });
+  // Los autores (fechas para los derechos y otros nombres) se piden al acercarse a la fila, no al abrirla.
+  const adelantarAutores = e => { const a = e.target.closest && e.target.closest(".fila[data-obra]"); if (a && obras[a.dataset.obra]) autoresOL(obras[a.dataset.obra]); };
+  ["pointerover", "focusin", "touchstart"].forEach(ev => document.addEventListener(ev, adelantarAutores, { passive: true }));
 
   async function abrirObra(id){
     let o = obras[id];
@@ -2830,12 +2851,16 @@ function iniciar(){
       $("#fichaCuerpo").innerHTML = `<p class="vacio" style="padding:22px">${esc(t("todos.buscando"))}</p>`;
       if (!dlg.open) dlg.showModal();
       try{
-        const j = await fetch(`${OL}/search.json?q=${encodeURIComponent(`key:/works/${id} language:${codigoOL()}`)}&fields=${CAMPOS}`).then(r => r.json());
+        const j = await pedirOL(`${OL}/search.json?q=${encodeURIComponent(`key:/works/${id} language:${codigoOL()}`)}&fields=${CAMPOS}`);
         if (!(j.docs || []).length) throw new Error("sin obra");
         o = obras[id] = datosObra(j.docs[0]);
       }catch(err){ $("#fichaCuerpo").innerHTML = `<p class="vacio" style="padding:22px">${esc(t("todos.error"))}</p>`; return; }
     }
-    await Promise.race([autoresOL(o), new Promise(r => setTimeout(r, 2500))]);
+    // Los otros nombres del autor pueden mostrar que está en Fénix; antes se esperaban hasta 2,5 s
+    // con la ficha en blanco. Ahora se espera poco y, si llegan después y cambian algo, se repinta.
+    const autores = autoresOL(o);
+    const antes = await Promise.race([autores.then(() => false), new Promise(r => setTimeout(() => r(libroFenix(o)), 600))]);
+    if (antes !== false) autores.then(() => { if (libroFenix(o) !== antes && dlg.open && location.hash === "#obra/" + id) abrirObra(id); });
     const f = libroFenix(o);
     const archivos = f ? Object.entries(archivosEn(f)) : [];
     const externos = f ? externosEn(f) : [];
