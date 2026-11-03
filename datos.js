@@ -3476,13 +3476,12 @@ window.FENIX = {
       imagen: {"src": "img/portadas/doyle-el-sabueso-de-los-baskerville.jpg", "credito": {"es": "Sidney Paget, «El perro negro como el carbón», ilustración de 1902", "en": "Sidney Paget, «The coal-black Hound», 1902"}, "url": "https://commons.wikimedia.org/wiki/File:Houn-53_-_The_coal-black_Hound_(Hound_of_Baskervilles).jpg"},
       citas: [
         "Puede ser que usted no sea un astro con luz propia, pero lo cierto es que es buen conductor de la luz. Hay quienes, sin estar dotados de genio precisamente, tienen, sin embargo, notables facultades para estimularlo.",
-        "El mundo está lleno de cosas que saltan a la vista, y que nadie, ni por casualidad, observa nunca.",
-        "Hasta ahora he limitado mis investigaciones a este mundo. En una esfera muy modesta he combatido al mal; pero tomar por mi cuenta nada menos que el Espíritu del Mal en esencia, esto sería, quizá, una empresa demasiado ambiciosa.",
-        "El sabueso primitivo era suficientemente material para destrozarle la garganta a un hombre, y, sin embargo, también era diabólico."
+        "El mundo está lleno de cosas que saltan á la vista, y que nadie, ni por casualidad, observa nunca.",
+        "Hasta ahora he limitado mis investigaciones á este mundo. En una esfera muy modesta he combatido al mal; pero tomar por mi cuenta nada menos que el Espíritu del Mal en esencia, esto sería, quizá, una empresa demasiado ambiciosa.",
+        "El sabueso primitivo era suficientemente material para destrozarle la garganta á un hombre, y, sin embargo, también era diabólico."
       ],
-      archivos: {},
-      externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/El%20sabueso%20de%20los%20Baskerville%20%28Costa%20%C3%81lvarez%20tr.%29"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=El%20sabueso%20de%20los%20Baskerville%20%28Costa%20%C3%81lvarez%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=El%20sabueso%20de%20los%20Baskerville%20%28Costa%20%C3%81lvarez%20tr.%29"}],
-      fuente: {"texto": "Traducción de Arturo Costa Álvarez, Buenos Aires, Biblioteca de La Nación, 1909, transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/El_sabueso_de_los_Baskerville_(Costa_%C3%81lvarez_tr.)"},
+      archivos: {"epub": "libros/doyle-el-sabueso-de-los-baskerville.epub", "pdf": "libros/doyle-el-sabueso-de-los-baskerville.pdf"},
+      fuente: {"texto": "Traducción de Arturo Costa Álvarez, Buenos Aires, Biblioteca de La Nación, 1909, transcrita en es.wikisource.org y corregida por Proyecto Fénix (dominio público)", "url": "https://es.wikisource.org/wiki/El_sabueso_de_los_Baskerville_(Costa_%C3%81lvarez_tr.)"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-sabueso-de-los-baskerville"},
       parecidos: ["galdos-la-campana-del-maestrazgo", "galdos-la-estafeta-romantica", "galdos-luchana"]
     },
