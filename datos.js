@@ -4420,7 +4420,23 @@ window.FENIX = {
     { titulo: {"es": "Jeremías"}, autor: "Stefan Zweig", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeremias"} },
     { titulo: {"es": "Mendel el de los libros"}, autor: "Stefan Zweig", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mendel-el-de-los-libros"} },
     { titulo: {"es": "Carta de una desconocida"}, autor: "Stefan Zweig", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/carta-de-una-desconocida"} },
-    { titulo: {"es": "Veinticuatro horas en la vida de una mujer"}, autor: "Stefan Zweig", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/veinticuatro-horas-en-la-vida-de-una-mujer-y-otros-relatos"} }
+    { titulo: {"es": "Veinticuatro horas en la vida de una mujer"}, autor: "Stefan Zweig", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/veinticuatro-horas-en-la-vida-de-una-mujer-y-otros-relatos"} },
+    { titulo: {"es": "Crimen y castigo"}, autor: "Fiódor Dostoievski", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/crimen-y-castigo"} },
+    { titulo: {"es": "Los hermanos Karamázov"}, autor: "Fiódor Dostoievski", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-hermanos-karamazov"} },
+    { titulo: {"es": "Los miserables"}, autor: "Victor Hugo", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-miserables"} },
+    { titulo: {"es": "La Odisea"}, autor: "Homero", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-odisea"} },
+    { titulo: {"es": "La Ilíada"}, autor: "Homero", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-iliada"} },
+    { titulo: {"es": "Fábulas de Esopo"}, autor: "Esopo", delibris: null, estimada: {"valor": 6, "genero": "Literatura"} },
+    { titulo: {"es": "Azul..."}, autor: "Rubén Darío", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/azul-0"} },
+    { titulo: {"es": "El paraíso perdido"}, autor: "John Milton", delibris: null, estimada: {"valor": 6, "genero": "Literatura"} },
+    { titulo: {"es": "Lazarillo de Tormes"}, autor: "Anónimo", delibris: null, estimada: {"valor": 5, "genero": "Literatura"} },
+    { titulo: {"es": "Jane Eyre"}, autor: "Charlotte Brontë", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jane-eyre"} },
+    { titulo: {"es": "Cumbres borrascosas"}, autor: "Emily Brontë", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cumbres-borrascosas"} },
+    { titulo: {"es": "Mujercitas"}, autor: "Louisa May Alcott", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mujercitas"} },
+    { titulo: {"es": "Moby Dick"}, autor: "Herman Melville", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/moby-dick"} },
+    { titulo: {"es": "Canción de Navidad"}, autor: "Charles Dickens", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cancion-de-navidad"} },
+    { titulo: {"es": "El conde de Montecristo"}, autor: "Alexandre Dumas", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/el-conde-de-montecristo"} },
+    { titulo: {"es": "Robinson Crusoe"}, autor: "Daniel Defoe", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/robinson-crusoe"} }
   ],
 
   // Cola interna de obras con derechos (el sitio no la muestra): via "permiso" = pedirlo al titular
