@@ -50,10 +50,7 @@ DIF_FONDO = 12  # por canal, 0-255
 EXLIBRIS = "fenix-exlibris.xhtml"
 NOTA = re.compile(r'<(\w+)\b[^>]*(?:epub:type="(?:footnote|endnote|rearnote)"|class="(?:[^"]* )?footnote(?: [^"]*)?")[^>]*>')
 CURSIVA = re.compile(r"<(?:em|i|cite)\b|font-style:\s*italic")
-# Lo que deja Gutenberg en sus EPUB (sin_gutenberg.py lo quita). Citarlo como fuente en la nota de
-# una traducción propia («Se tradujo desde el texto de Project Gutenberg») no cae acá.
-MARCA_PG = re.compile(r"Project Gutenberg(?:™|-tm)? (?:e-?Book|E-?text|License|Literary Archive)|GUTENBERG™"
-                      r"|<(?:header|footer)\b[^>]*id=\"pg-(?:header|footer)\"|by Project Gutenberg|www\.gutenberg\.org/\d|gutenberg\.org/ebooks", re.I)
+from sin_gutenberg import RESTO as MARCA_PG  # noqa: E402  (lo que deja Gutenberg; citarlo como fuente no cae)
 
 
 def elemento(t: str, m) -> str:
@@ -162,6 +159,14 @@ def revisar_epub(ruta: Path, creditos: dict) -> list:
                            if x.endswith((".xhtml", ".html", ".htm")) and b"fenix-credito" in z.read(x))
         if (c := falta_credito(ruta, paginas, creditos, credito_portada.idioma_de(opf))):
             E.append(f"sin el crédito de la portada «{c}» (correr credito_portada.py)")
+        # Traducción propia (md_a_epub la firma como contribuidor): conserva su fuente y su
+        # licencia. sin_gutenberg.py le ponía «Dominio público» a Fauntleroy (3-nov-2026).
+        if re.search(r"<dc:contributor>Proyecto Fénix \(", opf):
+            derechos = re.search(r"<dc:rights>([^<]*)</dc:rights>", opf)
+            if not re.search(r"<dc:source>[^<]+</dc:source>", opf):
+                E.append("traducción propia sin dc:source (rearmar con md_a_epub.py --original)")
+            if not derechos or re.fullmatch(r"\s*(?:Dominio público|Public domain)\s*", derechos.group(1), re.I):
+                E.append("traducción propia con licencia «Dominio público» (rearmar con md_a_epub.py --derechos)")
         hrefs = {}
         for item in re.findall(r"<item\b[^>]*>", opf):
             a = dict(re.findall(r'(\w[\w-]*)="([^"]*)"', item))

@@ -33,7 +33,6 @@ from PIL import Image, ImageChops, ImageStat
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 RAIZ = Path(__file__).resolve().parent.parent
 HERR = RAIZ / "herramientas"
-MARCA = re.compile(r"gutenberg", re.I)
 
 
 class Fallo(Exception):
@@ -67,8 +66,9 @@ def idioma_de(opf: str) -> str:
 
 
 def tiene_gutenberg(a: dict) -> bool:
-    return any(n.endswith((".xhtml", ".html", ".htm", ".opf", ".ncx")) and MARCA.search(d.decode("utf-8", "ignore"))
-               for n, d in a.items())
+    """Restos de Gutenberg, no una cita como fuente (una traducción propia la lleva en su nota)."""
+    import sin_gutenberg
+    return sin_gutenberg.tiene_restos(a)
 
 
 def portada_al_dia(a: dict, nombre: str) -> bool:

@@ -13,7 +13,10 @@ legal en inglés). Qué hace:
   generador, y deja dc:rights en «Dominio público» / «Public domain».
 - Agrega al final fenix-colofon.xhtml con los voluntarios que transcribieron el texto (los
   «Credits» del encabezado, sin el nombre de Gutenberg).
-- Idempotente: un EPUB ya limpio solo se revisa. Falla si queda alguna mención.
+- Idempotente: un EPUB sin restos de Gutenberg (RESTO) no se reescribe, solo se revisa. Así una
+  traducción o edición propia que cita Gutenberg como fuente (dc:source, nota.xhtml) conserva su
+  fuente, su licencia y su identificador: correrlo sobre Fauntleroy le ponía «Dominio público» a
+  una traducción CC BY-NC-SA (3-nov-2026). Falla si queda algún resto.
 
 Va antes de portadas.py, exlibris.py y credito_portada.py en un libro nuevo; en uno ya armado
 basta rehacer el PDF con epub_a_pdf.py. recibir_entrega.py lo corre solo en la vía A.
@@ -26,6 +29,11 @@ from pathlib import Path
 
 COLOFON = "fenix-colofon.xhtml"
 MARCA = re.compile(r"gutenberg", re.I)
+# Lo que deja Gutenberg en sus EPUB. Citarlo como fuente en la nota de una traducción propia
+# («Se tradujo desde el texto de Project Gutenberg») no cae acá. revisar_libros.py y
+# agregar_libro.py usan esta misma definición.
+RESTO = re.compile(r"Project Gutenberg(?:™|-tm)? (?:e-?Book|E-?text|License|Literary Archive)|GUTENBERG™"
+                   r"|<(?:header|footer)\b[^>]*id=\"pg-(?:header|footer)\"|by Project Gutenberg|www\.gutenberg\.org/\d|gutenberg\.org/ebooks", re.I)
 CABEZA = re.compile(r'<header\b[^>]*id="pg-header".*?</header>', re.S)
 PIE = re.compile(r'<footer\b[^>]*id="pg-footer".*?</footer>', re.S)
 TEXTO = {"es": ("Colofón", "Transcripción digital hecha por voluntarios: {}.", "Texto de dominio público."),
@@ -77,6 +85,8 @@ def limpiar(epub: Path) -> list:
     """Limpia el EPUB en su lugar. Devuelve las menciones que quedan (vacío = limpio)."""
     with zipfile.ZipFile(epub) as z:
         archivos = {i.filename: z.read(i.filename) for i in z.infolist()}
+    if not tiene_restos(archivos):
+        return []
     opf_ruta = re.search(r'full-path="([^"]+)"', archivos["META-INF/container.xml"].decode("utf-8")).group(1)
     base = opf_ruta.rsplit("/", 1)[0] + "/" if "/" in opf_ruta else ""
     opf = archivos[opf_ruta].decode("utf-8")
@@ -150,14 +160,19 @@ def limpiar(epub: Path) -> list:
     return menciones(epub)
 
 
+def tiene_restos(archivos: dict) -> bool:
+    return any(n.endswith((".xhtml", ".html", ".htm", ".opf", ".ncx")) and RESTO.search(d.decode("utf-8", "ignore"))
+               for n, d in archivos.items())
+
+
 def menciones(epub: Path) -> list:
-    """[(archivo, contexto)] de cada mención a Gutenberg que queda en el texto o los metadatos."""
+    """[(archivo, contexto)] de cada resto de Gutenberg que queda en el texto o los metadatos."""
     out = []
     with zipfile.ZipFile(epub) as z:
         for n in z.namelist():
             if n.endswith((".xhtml", ".html", ".htm", ".opf", ".ncx")):
                 t = z.read(n).decode("utf-8", "ignore")
-                for m in MARCA.finditer(t):
+                for m in RESTO.finditer(t):
                     out.append((n, re.sub(r"\s+", " ", t[max(0, m.start() - 60):m.end() + 40])))
     return out
 

@@ -172,7 +172,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   referencias queda un texto de dominio público (desde el 2-nov-2026; antes se dejaban
   intactos). Va primero, antes de `portadas.py`; `recibir_entrega.py` lo corre solo en la vía A
   y `revisar_libros.py` no deja publicar un EPUB o PDF con restos. Citar Gutenberg como fuente
-  en la nota de una traducción propia sí se puede.
+  en la nota de una traducción propia sí se puede: «resto» es solo lo que define `RESTO` en
+  `sin_gutenberg.py` (la usan también `agregar_libro.py` y `revisar_libros.py`), y un EPUB sin
+  restos no se reescribe, así que `agregar_libro.py --forzar` respeta la fuente, la licencia y el
+  identificador de una traducción propia. `revisar_libros.py` rechaza una traducción propia sin
+  `dc:source` o con licencia «Dominio público» (le pasó a Fauntleroy, 3-nov-2026).
 - App instalable (PWA): `manifest.webmanifest`, íconos `img/icono-*.png` (salen de
   `herramientas/logo.py`) y `sw.js`. El bloque `PWA` del `<head>` de `index.html` lo copia
   `gen_estaticos.js` en cada ficha, y el mismo script renueva `VERSION` de `sw.js` cuando cambian
