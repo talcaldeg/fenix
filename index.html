@@ -1793,6 +1793,16 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
         <div class="accesos" id="accesos"></div>
       </div>
 
+      <!-- Como Netflix: lo tuyo primero. Solo aparece si ya abriste un libro para leer o marcaste favoritos (se guarda en este navegador). -->
+      <div style="margin-top:40px" id="bloqueSeguir" hidden>
+        <div class="titulo-fila"><h2 data-i18n="mios.seguir">Seguir leyendo</h2></div>
+        <div class="grilla cuatro" id="seguirLeyendo"></div>
+      </div>
+      <div style="margin-top:40px" id="bloqueFavs" hidden>
+        <div class="titulo-fila"><h2 data-i18n="mios.favs">Tus favoritos</h2><a href="#biblioteca" id="verFavs" data-i18n="mios.todos">Ver todos →</a></div>
+        <div class="grilla cuatro" id="misFavoritos"></div>
+      </div>
+
       <div style="margin-top:40px" id="bloqueSello">
         <p class="eyebrow" data-i18n="sello.eyebrow">Sello Fénix</p>
         <div class="titulo-fila"><h2 data-i18n="sello.titulo">Recomendados por Fénix</h2></div>
@@ -2226,6 +2236,8 @@ function iniciar(){
   };
   let leidos = almacen.leer("leidos", {});
   let favoritos = almacen.leer("favoritos", {});
+  // Libros que el lector abrió para leer (Descargar, Hojear o leer en línea), el más reciente primero: fila «Seguir leyendo».
+  let abiertos = almacen.leer("abiertos", []);
   // Fichas fusionadas: lo marcado con el id viejo pasa al id de la ficha que lo reemplazó.
   for (const [viejo, a] of Object.entries(D.alias || {})) [leidos, favoritos].forEach(m => { if (m[viejo]){ m[a.id] = m[a.id] || m[viejo]; delete m[viejo]; } });
   // ?l=en o ?l=es lo fija el enlace (las páginas de cada libro lo usan); si no, siempre español.
@@ -2274,7 +2286,7 @@ function iniciar(){
       "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.editorial":"Books we translate and edit","acc.citas":"A sentence from each book","x.libros":"books","x.libro":"book",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
-      "sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
+      "mios.seguir":"Continue reading","mios.favs":"Your favourites","mios.todos":"See all →","sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
       "rec.eyebrow":"Our editions","rec.titulo":"Fénix editions","rec.todos":"See our editions →",
       "oh.eyebrow":"Line of research","oh.titulo":"«It is no longer I who live, but Christ who lives in me»","oh.tituloRef":"Galatians 2:20 (RSV)",
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary, yet He wants to go on loving the Father and mankind through those who belong to Him by grace: to be for Christ «like another humanity». We follow this idea from book to book, in the authors who formulated it and in those who quote them, and we publish what we find.",
@@ -2526,6 +2538,27 @@ function iniciar(){
     $("#recomendados").innerHTML = ediciones.map(tarjeta).join("");
     $("#bloqueEdFenix").hidden = !ediciones.length;
   }
+  // Seguir leyendo (lo abierto y aún no marcado como leído) y Tus favoritos (el último marcado primero): una fila de 4 cada una.
+  function pintarMios(){
+    const vis = ids => ids.map(porId).filter(l => l && visible(l));
+    const seguir = vis(abiertos.filter(id => !leidos[id])).slice(0, 4);
+    const favs = vis(Object.keys(favoritos).reverse());
+    $("#seguirLeyendo").innerHTML = seguir.map(tarjeta).join("");
+    $("#bloqueSeguir").hidden = !seguir.length;
+    $("#misFavoritos").innerHTML = favs.slice(0, 4).map(tarjeta).join("");
+    $("#bloqueFavs").hidden = !favs.length;
+    $("#verFavs").hidden = favs.length <= 4;
+  }
+  $("#verFavs").addEventListener("click", () => {
+    ["#fBuscar","#fCategoria","#fFormato"].forEach(s => $(s).value = "");
+    $("#fNoLeidos").checked = false; $("#fFavoritos").checked = true; pintarCatalogo();
+  });
+  document.addEventListener("click", e => {
+    const a = e.target.closest('#dlgLibro .descargas a'); const id = $("#dlgLibro").dataset.id;
+    if (!a || !id || a.textContent.startsWith(t("x.comprar"))) return;
+    abiertos = [id, ...abiertos.filter(x => x !== id)].slice(0, 20); almacen.guardar("abiertos", abiertos);
+    pintarMios();
+  });
   // Portada: cifras del hero y un acceso por categoría (con el cuadro de un libro de esa categoría) más el plan de vida.
   function pintarInicio(){
     const ls = libros();
@@ -2614,7 +2647,7 @@ function iniciar(){
       ${l.encuadernador && !l.editorial ? `<div class="seccion-ficha"><strong>${esc(t("x.preparado"))}</strong><p style="margin:6px 0 0">${esc(l.encuadernador)}</p></div>` : ""}
       ${(l.citas||[]).length ? `<div class="seccion-ficha"><strong>${esc(t("x.citas"))}</strong><div class="citas-ficha">${l.citas.slice(0, 2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}${l.citas.length > 2 ? `<details><summary>${esc(t("x.masCitas").replace("{n}", l.citas.length - 2))}</summary>${l.citas.slice(2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</details>` : ""}</div></div>` : ""}
       <div class="seccion-ficha"><strong>${esc(t("l.moral"))}</strong><div style="margin-top:8px">${moral(l)}${l.delibris ? `<a class="meta" style="margin:4px 0 0; display:inline-block" href="${esc(l.delibris.url)}" target="_blank" rel="noopener">${esc(t("x.verIn"))} delibris.org</a>` : ""}</div></div>
-      <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p)).map(parecido).join("")}</div></div>
+      <div class="seccion-ficha"><strong>${esc(t("x.parecidos"))}</strong><div class="parecidos">${(l.parecidos||[]).map(porId).filter(p => p && visible(p) && !(history.state && history.state.ficha === id && history.state.de === p.id)).map(parecido).join("")}</div></div>
       <p class="meta" style="margin-top:14px"><a href="${esc(rutaLibro(l))}" data-pagina>${esc(t("x.paginaLibro"))}</a></p>
       ${l.fuente ? `<p class="meta" style="margin-top:6px">${esc(t("x.fuente"))}: <a href="${esc(l.fuente.url)}" target="_blank" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta" style="margin-top:6px">${esc(t("x.portada"))}: <a href="${esc(l.imagen.url)}" target="_blank" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : t("x.dominioPublico"))})</p>` : ""}
@@ -3194,7 +3227,7 @@ function iniciar(){
   // Cada vista se arma recién cuando se abre (y una vez por idioma): pintar todo al cargar dejaba
   // miles de elementos y bajaba las imágenes de vistas que nadie abrió.
   const PINTORES = {
-    inicio: [pintarInicio, pintarRecomendados, pintarCitaDia], biblioteca: [pintarCatalogo], todos: [pintarTodos],
+    inicio: [pintarInicio, pintarMios, pintarRecomendados, pintarCitaDia], biblioteca: [pintarCatalogo], todos: [pintarTodos],
     editorial: [pintarEditorial, pintarBuscados], oraciones: [pintarOraciones], citas: [pintarCitas], error: [llenarSelectLibros]
   };
   let pintadas = new Set();

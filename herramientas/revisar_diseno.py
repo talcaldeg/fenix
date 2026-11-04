@@ -176,6 +176,32 @@ def revisar(raiz, capturas=None):
                 if u.count("/libro/") > 1:
                     fallas.append(f"compartir ({paso}): enlace con la ruta repetida {u}")
         pg.close()
+        # Como Netflix (4-nov-2026): lo abierto para leer va a «Seguir leyendo» y lo marcado a «Tus favoritos»
+        # en la portada; la ficha abierta desde otra no repite en Parecidos el libro del que se vino.
+        pg = nav.new_page(viewport={"width": 390, "height": 844})
+        pg.goto(f"{base}#biblioteca")
+        pg.wait_for_load_state("networkidle")
+        pg.evaluate("document.querySelector('.fila[data-id]').click()")
+        pg.wait_for_timeout(500)
+        origen = pg.evaluate("document.querySelector('#dlgLibro').dataset.id")
+        pg.evaluate("document.querySelector('#dlgLibro a.parecido').click()")
+        pg.wait_for_timeout(500)
+        if pg.evaluate(f"[...document.querySelectorAll('#dlgLibro a.parecido')].some(a => a.getAttribute('href').includes('/libro/{origen}/'))"):
+            fallas.append("parecidos: la ficha repite el libro del que se vino")
+        actual = pg.evaluate("document.querySelector('#dlgLibro').dataset.id")
+        pg.evaluate("""() => { const a = document.querySelector('#dlgLibro .descargas a[data-archivo]');
+            if (a){ a.addEventListener('click', e => e.preventDefault(), { once: true }); a.click(); }
+            document.querySelector('#btnFav').click(); document.querySelector('#cerrarFicha').click(); }""")
+        pg.wait_for_timeout(500)
+        pg.evaluate("location.hash = 'inicio'")
+        pg.wait_for_timeout(800)
+        mios = pg.evaluate("""[[...document.querySelectorAll('#seguirLeyendo [data-id]')].map(e => e.dataset.id),
+            [...document.querySelectorAll('#misFavoritos [data-id]')].map(e => e.dataset.id)]""")
+        if actual not in mios[0]:
+            fallas.append("portada: el libro abierto para leer no aparece en «Seguir leyendo»")
+        if actual not in mios[1]:
+            fallas.append("portada: el favorito no aparece en «Tus favoritos»")
+        pg.close()
         # Parecidos como Netflix (4-nov-2026): la ficha abierta desde otra parte arriba y trae ← que vuelve a
         # la anterior donde se dejó; ← y × siguen a la vista al bajar (antes se iban con el scroll).
         pg = nav.new_page(viewport={"width": 390, "height": 844})
