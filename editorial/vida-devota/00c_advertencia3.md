@@ -1,0 +1,3 @@
+## Advertencia del autor al lector de la tercera edición
+
+Salió de mis manos en el año de 1608 este librito, que en su segunda edición fue aumentado de muchos capítulos, olvidándose por descuido, sin embargo, tres de los que se veían en la primera. Posteriormente ha sido impreso a menudo sin mi conocimiento, y con las impresiones, han crecido los yerros. Helo aquí corregido una vez más; pero siempre sin citas, porque no las necesitan los doctos, y a los legos poco importan. No me sirvo de las palabras de la Escritura para explicarlas en cada caso, sino para que como más suaves y dignas de respeto, me sirvan de explicación. Plegue a Dios que te aprovechen y que seas colmado de bendiciones.

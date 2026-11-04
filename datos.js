@@ -213,6 +213,32 @@ window.FENIX = {
       parecidos: ["imitacion-de-cristo", "marmion-vida-del-alma", "escriva-camino"]
     },
     {
+      id: "introduccion-a-la-vida-devota",
+      titulo: "Introducción a la vida devota",
+      autor: "San Francisco de Sales (trad. Francisco de Quevedo)",
+      anio: "1608",
+      idioma: "es",
+      categoria: "lectura",
+      resumen: {
+        es: "Cartas de dirección espiritual convertidas en libro: san Francisco de Sales, obispo de Ginebra, guía a Filotea, una laica, desde el primer deseo de una vida devota hasta su perseverancia. En cinco partes enseña a purificar el alma, a orar y recibir los sacramentos, a practicar las virtudes, a resistir las tentaciones y a renovar los propósitos cada año. Su tesis, nueva en su tiempo, es que la devoción es para todos: soldados, artesanos, casados y cortesanos. Esta es la traducción castellana de Francisco de Quevedo, de 1634.",
+        en: "Letters of spiritual direction turned into a book: Saint Francis de Sales, Bishop of Geneva, guides Philothea, a lay woman, from her first desire for a devout life to perseverance. In five parts he teaches how to purify the soul, pray and receive the sacraments, practice the virtues, resist temptations and renew one's resolutions every year. His thesis, new in his day, is that devotion is for everyone: soldiers, craftsmen, married people and courtiers. This is the Spanish translation by Francisco de Quevedo, from 1634."
+      },
+      porque: {"es":"Para quien cree que la vida de oración es cosa de monjes y no cabe en una agenda llena de trabajo, hijos y compromisos. Francisco de Sales te dice lo contrario con mucha ternura y con ejemplos de la vida diaria: la devoción se vive donde estás, y se nota en cómo tratas a los demás, no en parecer piadoso. Es un libro para leer de a poco, un capítulo por vez, y para volver a él cuando tengas que decidir cómo vivir tu fe en el trabajo, la familia o la amistad.","en":"For anyone who thinks a life of prayer is for monks and cannot fit into a schedule full of work, children and commitments. Francis de Sales tells you the opposite, with great tenderness and examples from daily life: devotion is lived where you are, and it shows in how you treat others, not in looking pious. It is a book to read slowly, one chapter at a time, and to return to when you must decide how to live your faith at work, in your family or among friends."},
+      imagen: { src: "img/portadas/introduccion-a-la-vida-devota.jpg", credito: { es: "Paul Cézanne, «El lago de Annecy», 1896", en: "Paul Cézanne, «Lake Annecy», 1896" }, url: "https://commons.wikimedia.org/wiki/File:Lac_d%27Annecy,_par_Paul_C%C3%A9zanne.jpg" },
+      citas: [
+        "No solo es error, pero herejía, el querer desterrar la vida devota de la compañía de los soldados, de la tienda de los oficiales, de las cortes de los príncipes, y de la familia de los casados.",
+        "La devoción no es otra cosa sino una agilidad y vivacidad espiritual, por medio de la cual la caridad ejercita sus acciones en nosotros, y nosotros por ella obramos pronta y aficionadamente.",
+        "Mira las abejas sobre el tomillo, que chupando sacan un zumo muy amargo, convirtiéndole después, por propiedad que tienen, en dulcísima miel.",
+        "Mira al Cielo y no le pierdas por la tierra; mira al infierno, no te eches en él por los que son solos momentos.",
+        "La verdadera devoción aun hace más, porque no solamente no daña ninguna suerte de estados ni negocios, sino antes los adorna y hermosea."
+      ],
+      archivos: { epub: "libros/sales-introduccion-a-la-vida-devota.epub", pdf: "libros/sales-introduccion-a-la-vida-devota.pdf" },
+      fuente: { texto: "Traducción de Francisco de Quevedo y Villegas (Madrid, 1634; muerto en 1645), en la edición de Ediciones Dictio (Buenos Aires, 1980) sobre la de N. J. Casas (París, 1908), en Internet Archive; sin las notas de los editores, con nota y portada de Proyecto Fénix", url: "https://archive.org/details/introduccion-a-la-vida-devota_202407" },
+      editorial: { es: "Edición digital de Proyecto Fénix sobre la traducción de Quevedo (1634): texto limpiado del reconocimiento óptico con ayuda de inteligencia artificial, ortografía actualizada sin cambiar palabras, sin las notas de los editores modernos y con portada nueva.", en: "Proyecto Fénix digital edition of Quevedo's translation (1634): text cleaned from optical character recognition with the help of artificial intelligence, modernized spelling without changing any words, without the modern editors' notes and with a new cover." },
+      delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/introduccion-la-vida-devota"},
+      parecidos: ["imitacion-de-cristo", "preparacion-para-la-muerte", "marmion-vida-del-alma", "escriva-camino"]
+    },
+    {
       id: "confesiones",
       titulo: "Confesiones",
       autor: "San Agustín de Hipona",
