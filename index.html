@@ -1436,6 +1436,10 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (max-width:600px){.ficha{grid-template-columns:1fr} .ficha .portada{max-width:160px}}
   .ficha .portada{border-radius:10px}
   .cerrar{position:absolute; right:8px; top:6px; width:44px; height:44px; border:0; border-radius:50%; background:var(--chip); font-size:26px; line-height:1; cursor:pointer; color:var(--ink); z-index:1}
+  /* ← y × quedan a la vista al bajar por la ficha (antes se iban con el scroll y en Parecidos no había salida) */
+  .botones-ficha{position:sticky; top:0; height:0; z-index:2}
+  .cerrar.volver{right:auto; left:8px; font-size:24px}
+  .cerrar[hidden]{display:none}
   .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 12px}
   .descargas{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0}
   .marcas{display:flex; gap:8px; flex-wrap:wrap}
@@ -2178,7 +2182,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   </section>
 </main>
 
-<dialog id="dlgLibro" aria-labelledby="fichaTitulo"><div style="position:relative"><button class="cerrar" id="cerrarFicha" aria-label="Cerrar">×</button><div id="fichaCuerpo"></div></div></dialog>
+<dialog id="dlgLibro" aria-labelledby="fichaTitulo"><div style="position:relative"><div class="botones-ficha"><button class="cerrar volver" id="volverFicha" aria-label="Volver" hidden>←</button><button class="cerrar" id="cerrarFicha" aria-label="Cerrar">×</button></div><div id="fichaCuerpo"></div></div></dialog>
 
 <footer>
   <div class="wrap" data-i18n="pie">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.</div>
@@ -2236,7 +2240,7 @@ function iniciar(){
       "nav.inicio":"Home","nav.biblioteca":"Library","nav.oraciones":"Prayers","nav.salvar":"Save a book","nav.error":"Report an error","nav.dona":"Donate","nav.contacto":"Contact","nav.colaborar":"Get involved","nav.menu":"Menu","nav.editorial":"Our editions","nav.todos":"All books","nav.citas":"Quotes",
       "cit.eyebrow":"From the books in the library","cit.titulo":"Quotes","cit.lede":"Passages chosen from each book, copied exactly from the text. Tap one to see its book.","cit.buscar":"Search a word, a title or an author","cit.vacio":"No quotes match that search.",
       "cit.cuenta":"{n} quotes","cit.cuenta1":"1 quote","bib.cuenta":"{n} books","bib.cuenta1":"1 book","cit.dia":"Quote of the day","cit.verLibro":"See the book →",
-      "x.compartir":"Share","x.copiado":"Link copied. Paste it wherever you like.","x.copiaEnlace":"Copy this link:","x.corregir":"Request a correction",
+      "x.compartir":"Share","x.volverA":"Back to {t}","x.cerrarFicha":"Close","x.copiado":"Link copied. Paste it wherever you like.","x.copiaEnlace":"Copy this link:","x.corregir":"Request a correction",
       "todos.eyebrow":"World catalogue","todos.titulo":"All books in English","todos.lede":"Search for any book published in English. Its page shows the Delibris moral rating, whether it is under copyright and, if it is in Fénix, the button to download it; if it is not, you can ask us to look for it.",
       "todos.buscar":"Title, author or ISBN","todos.buscarBtn":"Search","todos.mas":"More results","todos.fuentes":"Catalogue from","todos.fuentes2":" (Internet Archive). Moral rating from","todos.fuentes3":" (a review site; not an official judgement of the Church), which reviews some 80,000 books, mostly in Spanish; the rest appear unrated. Copyright is estimated from the author's year of death and does not replace a case-by-case review.",
       "todos.cuenta":"{n} books found","todos.cuenta1":"1 book found","todos.cuentaAprox":"About {n} books","todos.masEd1":"and 1 more edition","todos.masEd":"and {n} more editions","todos.vacio":"No books found. Try a single word from the title or the author's surname.","todos.error":"The catalogue did not respond. Please try again in a moment.","todos.buscando":"Searching…","todos.edicion":"Edition",
@@ -2305,7 +2309,7 @@ function iniciar(){
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "hero.buscarAria":"Buscar un libro","hero.sinFenix":"Todavía no está en Fénix.","hero.buscarTodos":"Buscar «{q}» en todos los libros →",
       "cit.cuenta":"{n} citas","cit.cuenta1":"1 cita","bib.cuenta":"{n} libros","bib.cuenta1":"1 libro","cit.dia":"Cita del día","cit.verLibro":"Ver el libro →",
-      "x.compartir":"Compartir","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
+      "x.compartir":"Compartir","x.volverA":"Volver a {t}","x.cerrarFicha":"Cerrar","x.copiado":"Enlace copiado. Pégalo donde quieras.","x.copiaEnlace":"Copia este enlace:","x.corregir":"Solicitar una corrección",
       "x.sello":"Recomendado por Fénix","x.selloCorto":"Recomendado","x.masCitas":"Ver {n} citas más","x.sinEpub":"Ver {n} libros sin EPUB (en línea, PDF o para comprar)",
       "x.edFenix":"Edición Fénix","x.preparado":"Preparado por","x.queHicimos":"Qué hicimos","x.verLibro":"Ver el libro","x.paginaLibro":"Página de este libro (para compartir)",
       "x.ayuda":"¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.",
@@ -2631,9 +2635,18 @@ function iniciar(){
       ir("#error");
       setTimeout(() => $('#v-error textarea[name="descripcion"]').focus(), 0);
     };
-    const dlg = $("#dlgLibro");
+    // Una ficha abierta desde otra (parecidos) muestra ← para volver a la anterior, como Netflix; la X cierra todas.
+    // Una ficha nueva parte arriba; al volver, la anterior queda donde se dejó (scroll guardado en history.state).
+    const dlg = $("#dlgLibro"), s = history.state, anterior = s && s.ficha === id && s.de && porId(s.de);
+    $("#volverFicha").hidden = !anterior;
+    if (anterior){ $("#volverFicha").title = t("x.volverA").replace("{t}", anterior.titulo); $("#volverFicha").setAttribute("aria-label", $("#volverFicha").title); }
+    $("#cerrarFicha").setAttribute("aria-label", t("x.cerrarFicha"));
+    const otra = !dlg.open || dlg.dataset.id !== id; // marcar leído o favorito rehace la misma ficha: no se mueve
+    dlg.dataset.id = id;
     if (!dlg.open) dlg.showModal();
+    if (otra) dlg.scrollTop = (s && s.ficha === id && s.scroll) || 0;
   }
+  $("#volverFicha").onclick = () => history.back();
   // Al cerrar la ficha, la barra vuelve a la vista de antes: se retrocede lo que avanzaron las fichas
   // abiertas (una ficha abierta desde otra suma un paso). Si la cerró el botón Atrás, ya está ahí.
   // La X, el fondo y Escape lo hacen al tiro: el evento close puede llegar tarde (pestaña en segundo plano).
@@ -3108,8 +3121,9 @@ function iniciar(){
   function ir(destino){ history.pushState(null, "", destino); alNavegar(); }
   function irALibro(id){
     const l = porId(id); if (!l) return;
-    const s = history.state, prof = s && s.ficha ? s.prof + 1 : 1;
-    history.pushState({ ficha: l.id, prof }, "", rutaLibro(l));
+    const s = history.state, desde = s && s.ficha && $("#dlgLibro").open, prof = desde ? s.prof + 1 : 1;
+    if (desde) history.replaceState({ ...s, scroll: $("#dlgLibro").scrollTop }, "");
+    history.pushState({ ficha: l.id, prof, de: desde ? s.ficha : null }, "", rutaLibro(l));
     urlVista = location.href;
     abrirFicha(l.id); contar();
   }

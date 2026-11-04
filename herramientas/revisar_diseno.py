@@ -176,6 +176,33 @@ def revisar(raiz, capturas=None):
                 if u.count("/libro/") > 1:
                     fallas.append(f"compartir ({paso}): enlace con la ruta repetida {u}")
         pg.close()
+        # Parecidos como Netflix (4-nov-2026): la ficha abierta desde otra parte arriba y trae ← que vuelve a
+        # la anterior donde se dejó; ← y × siguen a la vista al bajar (antes se iban con el scroll).
+        pg = nav.new_page(viewport={"width": 390, "height": 844})
+        pg.goto(f"{base}#biblioteca")
+        pg.wait_for_load_state("networkidle")
+        pg.evaluate("document.querySelector('.fila[data-id]').click()")
+        pg.wait_for_timeout(500)
+        titulo_a = pg.evaluate("document.querySelector('#fichaTitulo').textContent")
+        pg.evaluate("const d = document.querySelector('#dlgLibro'); d.scrollTop = d.scrollHeight")
+        pg.wait_for_timeout(200)
+        y_a = pg.evaluate("document.querySelector('#dlgLibro').scrollTop")
+        if pg.evaluate("document.querySelector('#cerrarFicha').getBoundingClientRect().top") < 0:
+            fallas.append("parecidos: al bajar por la ficha la × se va con el scroll")
+        pg.evaluate("document.querySelector('#dlgLibro a.parecido').click()")
+        pg.wait_for_timeout(500)
+        if pg.evaluate("document.querySelector('#dlgLibro').scrollTop") > 5:
+            fallas.append("parecidos: la ficha abierta desde otra no parte arriba")
+        if pg.evaluate("(document.querySelector('#volverFicha') || {hidden: true}).hidden"):
+            fallas.append("parecidos: la ficha abierta desde otra no muestra ← para volver")
+        else:
+            pg.evaluate("document.querySelector('#volverFicha').click()")
+            pg.wait_for_timeout(600)
+            if pg.evaluate("document.querySelector('#fichaTitulo').textContent") != titulo_a:
+                fallas.append("parecidos: ← no vuelve al libro anterior")
+            elif abs(pg.evaluate("document.querySelector('#dlgLibro').scrollTop") - y_a) > 5:
+                fallas.append("parecidos: ← vuelve al libro anterior pero no a donde se dejó")
+        pg.close()
         # La página estática del libro (la que se abre desde WhatsApp) también lleva Compartir.
         pg = nav.new_page(viewport={"width": 390, "height": 844})
         pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
