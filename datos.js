@@ -4299,6 +4299,30 @@ window.FENIX = {
       parecidos: ["burnett-el-jardin-secreto", "dickens-el-cantico-de-navidad", "saint-exupery-el-principito"]
     },
     {
+      id: "burroughs-una-princesa-de-marte",
+      titulo: "Una princesa de Marte",
+      autor: "Edgar Rice Burroughs",
+      anio: "1912",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "John Carter, capitán sudista de Virginia, busca oro en los desiertos de Arizona al terminar la guerra civil. Perseguido por apaches, se refugia en una cueva y, sin saber cómo, despierta en Marte, que sus habitantes llaman Barsoom. Allí, con una gravedad menor, sus saltos y su fuerza asombran a los tharks, guerreros verdes de cuatro brazos que lo toman prisionero y acaban por hacerlo uno de sus jefes. Entre ellos conoce a Sola, una marciana verde de corazón distinto, y a Dejah Thoris, princesa de Helium, cautiva de esa horda. Para salvarla tendrá que atravesar un planeta de desiertos, ciudades antiguas y guerras entre dos pueblos, y descubrir qué tiene que ver todo eso con el aire que respiran los marcianos.", "en": "John Carter, a Confederate captain from Virginia, prospects for gold in the Arizona desert after the Civil War. Chased by Apaches, he takes refuge in a cave and, without knowing how, wakes up on Mars, which its inhabitants call Barsoom. There, in lighter gravity, his leaps and strength amaze the Tharks, four-armed green warriors who take him prisoner and end up making him one of their chieftains. Among them he meets Sola, a green Martian with a different heart, and Dejah Thoris, princess of Helium, a captive of that horde. To save her he must cross a planet of deserts, ancient cities and wars between two peoples, and learn what all this has to do with the air the Martians breathe."},
+      porque: {"es": "Para quien quiere una novela de aventuras de las de antes: ritmo de película, duelos, fugas y una imaginación que fundó la fantasía planetaria. Carter es un caballero a la antigua, leal a su palabra y a una dama, y el libro lo pone entre un pueblo que desprecia el afecto y otro que lo ensalza, sin tomarse nunca demasiado en serio. Se lee de un tirón y deja ganas de seguir con Barsoom.", "en": "For anyone who wants an adventure novel of the old kind: a cinematic pace, duels, escapes and an imagination that founded planetary fantasy. Carter is an old-fashioned gentleman, loyal to his word and to a lady, and the book sets him between a people that despises affection and another that exalts it, never taking itself too seriously. It reads in one sitting and leaves you wanting more of Barsoom."},
+      imagen: {"src": "img/portadas/burroughs-una-princesa-de-marte.jpg", "credito": {"es": "Thomas Moran, «Acantilados del alto río Colorado, Territorio de Wyoming», 1882", "en": "Thomas Moran, «Cliffs of the Upper Colorado River, Wyoming Territory», 1882"}, "url": "https://commons.wikimedia.org/wiki/File:Cliffs_of_the_Upper_Colorado_River,_Wyoming_Territory-saam_1936.12.4.jpg"},
+      citas: [
+        "Soy un hombre muy viejo; cuán viejo, no lo sé.",
+        "No sé por qué habría de temer a la muerte, yo que he muerto dos veces y sigo vivo",
+        "pero en Barsoom nadie miente; si no quiere decir la verdad, calla.",
+        "Los hombres de Helium se han enorgullecido de haber mostrado siempre a Barsoom cómo debe vivir una nación de hombres rojos; ahora se nos presenta la ocasión de mostrarles cómo deben morir.",
+        "Vayamos a nuestras obligaciones como si aún tuviéramos por delante mil años de provecho."
+      ],
+      archivos: {"epub": "libros/burroughs-una-princesa-de-marte.epub", "pdf": "libros/burroughs-una-princesa-de-marte.pdf"},
+      fuente: {"texto": "Traducción de Proyecto Fénix desde A Princess of Mars (1912), Project Gutenberg, libro n.º 62 (dominio público)", "url": "https://www.gutenberg.org/ebooks/62"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/una-princesa-de-marte"},
+      editorial: {"es": "Traducción nueva de Proyecto Fénix, hecha directamente del inglés de A Princess of Mars (1912), con sus veintiocho capítulos; preparada con ayuda de inteligencia artificial y revisada contra el original, con nota de la edición y la pintura de Thomas Moran en la portada. Edición al cuidado de Tomás Alcalde.", "en": "A new Proyecto Fénix translation, made directly from the English of A Princess of Mars (1912), with its twenty-eight chapters; prepared with the help of artificial intelligence and checked against the original, with an edition note and Thomas Moran's painting on the cover. Edited by Tomás Alcalde."},
+      parecidos: ["verne-la-vuelta-al-mundo-en-80-dias", "stevenson-isla-del-tesoro", "hope-el-prisionero-de-zenda"]
+    },
+    {
       id: "coloma-pequeneces",
       titulo: "Pequeñeces",
       autor: "Luis Coloma",

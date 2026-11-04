@@ -1,0 +1,7 @@
+Edgar Rice Burroughs publicó *A Princess of Mars* en 1912, por entregas en la revista *The All-Story* (con el título *Under the Moons of Mars*), y como libro en 1917 en Chicago (A. C. McClurg). Esta es una traducción de Proyecto Fénix, hecha directamente del inglés según el texto de Project Gutenberg (libro n.º 62), que reproduce la novela completa en sus veintiocho capítulos, con la dedicatoria y la carta «Al lector de esta obra».
+
+Se tradujo cada oración del original, sin resumir ni añadir nada. Los nombres de personas, pueblos y lugares de Barsoom se dejan como en el original, igual que los términos marcianos (jeddak, thoat, calot). Las medidas inglesas (pies, millas, libras) se pasaron al sistema métrico con redondeo natural. John Carter y Dejah Thoris se tratan de «usted» hasta la mitad de la novela y de «tú» después; los marcianos verdes tutean a todos.
+
+La traducción se preparó con ayuda de inteligencia artificial y se revisó contra el original inglés; la edición está al cuidado de Tomás Alcalde. Si encuentras un error, puedes avisarlo desde el sitio de Proyecto Fénix.
+
+El texto de Edgar Rice Burroughs es de dominio público. La pintura de la portada es «Acantilados del alto río Colorado, Territorio de Wyoming» (1882), de Thomas Moran, que conserva el Smithsonian American Art Museum. Traducción de Proyecto Fénix, 2026, con licencia CC BY-NC-SA 4.0: se puede copiar y difundir gratis, con crédito y sin fines de lucro.

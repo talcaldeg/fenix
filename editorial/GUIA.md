@@ -346,6 +346,45 @@ puntos suspensivos; cursiva (`_texto_`) → `*texto*`.
   «La mía es negra». / «¿Vienes?».
 - Notas al pie: no se agregan; el revisor las pone después, si hacen falta.
 
+## Una princesa de Marte (Burroughs, *A Princess of Mars*, 1912, desde el inglés)
+
+Original: Project Gutenberg n.º 62, partido en tramos en `burroughs-princess-of-mars-es/fuente/NN_cXX-cYY.txt`
+(el primero incluye dedicatoria y «To the Reader of this Work», que van como prólogo); la salida va en
+`editorial/burroughs-princess-of-mars-es/` con el mismo nombre y extensión `.md`.
+
+- Registro: novela de aventuras, narrada en primera persona por John Carter, caballero virginiano
+  y soldado sudista. Prosa ágil, directa, de acción; español neutro, sin arcaísmos ni voseo. Cursiva
+  `_texto_` → `*texto*`; rayas largas → comas, paréntesis o puntos suspensivos. Mr./Captain → señor, capitán.
+- Nombres propios y términos marcianos, sin traducir: John Carter, Dejah Thoris, Tars Tarkas,
+  Sola, Woola, Sarkoja, Lorquas Ptomel, Tal Hajus, Kantos Kan, Than Kosis, Sab Than, Mors Kajak,
+  Tardos Mors, Bar Comas, Dak Kova, Zad, Ptor, Dotar Sojat, Gozava; Barsoom, Helium, Zodanga, Korad,
+  el valle Dor, el río Iss, el mar de Korus. Pueblos: los tharks, los warhoons, los zodanganos,
+  los heliumitas, barsoomianos; Thark, Warhoon, Zodanga como topónimos.
+  Gentilicios: Martian → marciano (verde o rojo, minúscula), Earth → la Tierra, Mars → Marte.
+- Animales y objetos, con género fijo: el thoat (pl. los thoats), el zitidar, el calot (pl. los
+  calots), el sorak (el gatito de una marciana), el apt, el sak (verbo «saltar», solo como palabra
+  explicada). banth, ulsio y Carthoris no aparecen en el texto (verificado).
+- Títulos: jeddak (la minúscula cuando es común: «un jeddak»); **Jeddak** con mayúscula ante nombre
+  («Jeddak Tardos Mors»); jed (jefe menor, pl. jeds), jeddara (esposa del jeddak); princesa Dejah Thoris.
+  Saludo: *kaor* (cursiva, «¡Kaor, Kantos Kan!»).
+- Unidades marcianas (haad, sofad, karad, xat, zode, tal) no aparecen en este libro; si surgen, quedan
+  sin traducir en cursiva. Ciencia: radium → radio (proyectiles de radio); *eighth ray* → octavo
+  rayo; *ninth ray* → noveno rayo.
+- Medidas inglesas (feet, miles, inches, pounds, yards) → métricas con redondeo natural
+  (about 300 feet → unos 90 metros; 10 miles → unos 16 kilómetros), siempre igual en todo el libro;
+  grados Fahrenheit → Celsius solo si el original da cifra exacta.
+- Tratamiento (fijo, porque los tramos se traducen en paralelo): Carter y Dejah Thoris se tratan
+  de «usted» en los capítulos 1 a 12 y de «tú» desde el 13 (cuando ella lo llama «mi jefe»,
+  *my chieftain*, que se traduce siempre así). Los marcianos verdes tutean a todos, y Carter tutea
+  a Tars Tarkas, Sola, Woola y Kantos Kan; a Lorquas Ptomel, Tal Hajus, jeddaks y nobles rojos los
+  trata de «usted». El arcaico *thou/thee* se traduce como «tú», sin vosotros.
+- Criterio *sak*: el verbo marciano va en cursiva, «di un *sak*», nunca «saké» (parece el licor).
+- Criterio milla: una milla es «un kilómetro y medio», no «1,6 kilómetros», en todo el libro.
+- Criterio *flier* / *air craft*: un solo término, «nave aérea» (o «nave» si se repite cerca); no aeronave, volador ni aparato.
+- Criterio *metal*: las insignias y arreos del guerrero son «metal» en todo el libro; «acero» solo en sentido literal (la espada, «dignos de mi acero»).
+- Criterio diálogos de varios párrafos: el párrafo que continúa la misma intervención abre con «»» y solo el último cierra con «»».
+- Notas al pie: no se agregan; el revisor las pone después, si hacen falta.
+
 ## El pequeño Lord Fauntleroy (Burnett, *Little Lord Fauntleroy*, 1886, desde el inglés)
 
 Original: Project Gutenberg n.º 479, partido en tramos en
