@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "30-oct-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "5-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3690,7 +3690,10 @@ window.FENIX = {
       archivos: {"epub": "libros/austen-emma.epub", "pdf": "libros/austen-emma.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 158 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/158"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"},
-      parecidos: ["austen-pride-and-prejudice", "austen-mansfield-park", "austen-northanger-abbey"]
+      parecidos: ["austen-pride-and-prejudice", "austen-mansfield-park", "austen-northanger-abbey"],
+      versiones: {
+        es: {"titulo": "Emma", "autor": "Jane Austen", "anio": "1815", "resumen": {"es": "Emma Woodhouse, hermosa, inteligente y rica, vive con su padre en Hartfield, en el pueblo de Highbury, y está convencida de tener un don para arreglar casamientos. Toma bajo su protección a la joven Harriet Smith y se empeña en buscarle marido, sin ver lo que tiene delante. Entre bailes, paseos, cartas y una excursión a Box Hill, sus errores la llevan a herir a quienes quiere y a descubrir, con la ayuda franca del señor Knightley, cuánto le faltaba conocerse a sí misma.", "en": "Emma Woodhouse, handsome, clever and rich, lives with her father at Hartfield, in the village of Highbury, and is convinced she has a gift for making matches. She takes young Harriet Smith under her wing and sets out to find her a husband, blind to what is right before her eyes. Through balls, walks, letters and an outing to Box Hill, her mistakes lead her to hurt those she loves and to discover, with Mr. Knightley's frank help, how little she knew herself."}, "porque": {"es": "Para quien disfruta de una comedia fina y quiere, de paso, reconocerse en ella: Emma es el retrato de cualquiera que cree saber lo que más conviene a los demás. Enseña con humor el valor de la humildad, de la caridad con los más débiles y de aceptar la corrección de un amigo leal.", "en": "For readers who enjoy a subtle comedy and would like to recognize themselves in it along the way: Emma is the portrait of anyone who thinks they know what is best for others. With humour, it teaches the worth of humility, of charity toward the weak and of accepting correction from a loyal friend."}, "citas": ["Emma Woodhouse, hermosa, inteligente y rica, con un hogar acomodado y un carácter alegre, parecía reunir algunos de los mejores dones de la existencia", "Es muy difícil para los afortunados ser humildes.", "Si te quisiera menos, quizá podría hablar más de ello.", "La mitad del mundo no puede entender los placeres de la otra mitad", "La vanidad obrando sobre una cabeza débil produce toda clase de males."], "fuente": {"texto": "Traducción de Proyecto Fénix desde el inglés de Emma (1815), según el texto de Project Gutenberg, libro n.º 158; licencia CC BY-NC-SA 4.0", "url": "https://www.gutenberg.org/ebooks/158"}, "imagen": {"src": "img/portadas/austen-emma-es.jpg", "credito": {"es": "Thomas Lawrence, «Elizabeth Farren, más tarde condesa de Derby», 1790", "en": "Thomas Lawrence, «Elizabeth Farren, Later Countess of Derby», 1790"}, "url": "https://commons.wikimedia.org/wiki/File:Portrait_of_Elizabeth_Farren,_by_Thomas_Lawrence.jpg"}, "archivos": {"epub": "libros/austen-emma-es.epub", "pdf": "libros/austen-emma-es.pdf"}, "editorial": {"es": "Traducción nueva de Proyecto Fénix, completa, hecha directamente del inglés de la edición de Project Gutenberg, con los diálogos entre comillas.", "en": "New Proyecto Fénix translation, complete, made directly from the English text of the Project Gutenberg edition, with dialogue set in quotation marks."}}
+      }
     },
     {
       id: "austen-mansfield-park",
@@ -4402,7 +4405,6 @@ window.FENIX = {
   // se pide; sin "en", no aparece en el sitio en inglés. delibris como en las fichas, o null con
   // `estimada` { valor, genero } si Delibris no la reseña. El sitio oculta sola la que ya está en ese idioma.
   buscados: [
-    { titulo: {"es": "Emma"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/emma"} },
     { titulo: {"es": "Persuasión"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },
     { titulo: {"es": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
     { titulo: {"es": "La abadía de Northanger"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"} },

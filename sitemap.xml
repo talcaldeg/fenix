@@ -618,7 +618,11 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-emma/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-05</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/austen-emma/es/</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-mansfield-park/</loc>
@@ -686,7 +690,7 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/es/</loc>
-    <lastmod>2026-11-02</lastmod>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/chesterton-the-wisdom-of-father-brown/</loc>
@@ -831,6 +835,10 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-emma/muestra/</loc>
     <lastmod>2026-11-02</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/austen-emma/es/muestra/</loc>
+    <lastmod>2026-11-05</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-mansfield-park/muestra/</loc>
