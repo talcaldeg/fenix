@@ -18,7 +18,7 @@ Tú que conoces mi pequeñez extrema,
 ¡no temes abajarte hasta mí!
 Ven a mi corazón, oh Sacramento que amo;
 ven a mi corazón... suspira por Ti.
-Quiero, Señor, que Tu bondad me deje
+Quiero, Señor, que tu bondad me deje
 morir de amor tras este favor;
 ¡Jesús!, oye el grito de mi ternura,
 ven a mi corazón.
@@ -53,7 +53,7 @@ Un día le trajeron un haz de espigas de trigo. Tomó una tan cargada de granos 
 
 «Madre mía, esta espiga es la imagen de mi alma: *¡el buen Dios me ha cargado de gracias para mí y para muchos otros!*.... ¡Ah! Quiero inclinarme siempre bajo la abundancia de los dones celestiales, reconociendo que todo viene de lo alto.»
 
-No se equivocaba: sí, su alma estaba cargada de gracias... ¡y qué fácil parecía distinguir al Espíritu de Dios alabándose a Sí mismo por esa boca inocente!
+No se equivocaba: sí, su alma estaba cargada de gracias... ¡y qué fácil parecía distinguir al Espíritu de Dios alabándose a sí mismo por esa boca inocente!
 
 ¿No había hecho ya este Espíritu de verdad escribir a la gran Teresa de Ávila:
 
@@ -89,11 +89,11 @@ Una noche, recibió a la Madre Inés de Jesús con una expresión muy particular
 
 «Madre mía, unas notas de un concierto lejano acaban de llegar hasta mí, y he pensado que pronto oiré melodías incomparables; pero esta esperanza no pudo alegrarme más que un instante; una sola espera hace latir mi corazón: *¡es el amor que recibiré y el que podré dar!*
 
-«*Siento que mi misión va a comenzar, mi misión de hacer amar al buen Dios como yo Lo amo... de dar mi caminito a las almas.* QUIERO PASAR MI CIELO HACIENDO EL BIEN SOBRE LA TIERRA. *No es imposible, pues en el seno mismo de la visión beatífica, los ángeles velan por nosotros. ¡No, no podré tomar ningún descanso hasta el fin del mundo! Pero cuando el ángel haya dicho: “¡Ya no habrá más tiempo![^146]” entonces descansaré, podré gozar, porque el número de los elegidos estará completo.*»
+«*Siento que mi misión va a comenzar, mi misión de hacer amar al buen Dios como yo lo amo... de dar mi caminito a las almas.* QUIERO PASAR MI CIELO HACIENDO EL BIEN SOBRE LA TIERRA. *No es imposible, pues en el seno mismo de la visión beatífica, los ángeles velan por nosotros. ¡No, no podré tomar ningún descanso hasta el fin del mundo! Pero cuando el ángel haya dicho: “¡Ya no habrá más tiempo![^146]” entonces descansaré, podré gozar, porque el número de los elegidos estará completo.*»
 
 «¿Qué caminito quiere usted, pues, enseñar a las almas?»
 
-«Madre mía, *es el camino de la infancia espiritual, es el camino de la confianza y del total abandono*. Quiero indicarles los pequeños medios que tan perfectamente me han resultado; decirles que no hay más que una sola cosa que hacer aquí abajo: *arrojar a Jesús las flores de los pequeños sacrificios, ¡ganarlo con caricias! ¡Así es como Lo gané yo, y por eso seré tan bien recibida!*»
+«Madre mía, *es el camino de la infancia espiritual, es el camino de la confianza y del total abandono*. Quiero indicarles los pequeños medios que tan perfectamente me han resultado; decirles que no hay más que una sola cosa que hacer aquí abajo: *arrojar a Jesús las flores de los pequeños sacrificios, ¡ganarlo con caricias! ¡Así es como lo gané yo, y por eso seré tan bien recibida!*»
 
 «Si la induzco a error con mi caminito de amor», decía a una novicia, «no tema que se lo deje seguir mucho tiempo. Pronto me aparecería a usted para decirle que tome otro camino; pero, si no vuelvo, crea en la verdad de mis palabras: *¡nunca se tiene demasiada confianza en el buen Dios, tan poderoso y tan misericordioso! ¡Se obtiene de Él tanto como se espera!...*»
 
@@ -107,7 +107,7 @@ Y Teresa respondió vivamente:
 
 Escribía también a uno de sus hermanos misioneros:
 
-«Lo que me atrae hacia la Patria de los cielos es el llamado del Señor, es la esperanza de amarlo por fin como lo he deseado tanto, y el pensamiento de que podré hacerlo amar *a una multitud de almas* que Lo bendecirán eternamente.»
+«Lo que me atrae hacia la Patria de los cielos es el llamado del Señor, es la esperanza de amarlo por fin como lo he deseado tanto, y el pensamiento de que podré hacerlo amar *a una multitud de almas* que lo bendecirán eternamente.»
 
 Y otra vez:
 
@@ -157,7 +157,7 @@ Viendo su extrema debilidad, ordenaba pociones fortificantes. Teresa se entriste
 
 * * * * *
 
-Conmovido por las atenciones de su pequeña esposa, el Señor, que nunca se deja vencer en generosidad, la rodeaba también de Sus divinas delicadezas: unas veces eran ramos floridos enviados por su familia, otras un pequeño petirrojo que venía a saltar sobre su lecho, mirándola con aire de conocida y haciéndole mil monerías.
+Conmovido por las atenciones de su pequeña esposa, el Señor, que nunca se deja vencer en generosidad, la rodeaba también de sus divinas delicadezas: unas veces eran ramos floridos enviados por su familia, otras un pequeño petirrojo que venía a saltar sobre su lecho, mirándola con aire de conocida y haciéndole mil monerías.
 
 «Madre mía», decía entonces nuestra niña, «estoy profundamente conmovida por las delicadezas del buen Dios hacia mí; por fuera, estoy colmada de ellas... ¡y sin embargo permanezco en las más negras tinieblas!... Sufro mucho... ¡sí, mucho! pero con todo eso, *estoy en una paz asombrosa*: todos mis deseos se han cumplido... estoy llena de confianza.»
 
@@ -167,9 +167,9 @@ Algún tiempo después, contaba este rasgo conmovedor:
 
 «Una noche, a la hora del gran silencio, la enfermera vino a ponerme a los pies una botella de agua caliente y tintura de yodo en el pecho.
 
-«Estaba consumida por la fiebre, una sed ardiente me devoraba. Al someterme a esos remedios, no pude evitar quejarme a Nuestro Señor: “Jesús mío”, Le dije, “Tú eres testigo, ¡ardo y todavía me traen calor y fuego! ¡Ah! Si yo tuviera, en lugar de todo eso, medio vaso de agua, ¡cuánto más aliviada estaría!... ¡Jesús mío! *¡Tu pequeña hija tiene mucha sed!* Pero es feliz de todos modos de encontrar la ocasión de carecer de lo necesario, para parecerse más a Ti y para salvar almas.”
+«Estaba consumida por la fiebre, una sed ardiente me devoraba. Al someterme a esos remedios, no pude evitar quejarme a Nuestro Señor: “Jesús mío”, le dije, “Tú eres testigo, ¡ardo y todavía me traen calor y fuego! ¡Ah! Si yo tuviera, en lugar de todo eso, medio vaso de agua, ¡cuánto más aliviada estaría!... ¡Jesús mío! *¡Tu pequeña hija tiene mucha sed!* Pero es feliz de todos modos de encontrar la ocasión de carecer de lo necesario, para parecerse más a Ti y para salvar almas.”
 
-«Pronto me dejó la enfermera, y yo no contaba con volver a verla hasta la mañana siguiente, cuando, para mi gran sorpresa, volvió unos minutos después, trayendo una bebida refrescante: “Acabo de pensar ahora mismo que usted podría tener sed”, me dijo; “en adelante tomaré la costumbre de ofrecerle este alivio todas las noches.” La miré, atónita, y, cuando estuve sola, rompí a llorar. ¡Oh, qué bueno es nuestro Jesús! ¡Qué dulce y tierno es! ¡Qué fácil de conmover es Su corazón!»
+«Pronto me dejó la enfermera, y yo no contaba con volver a verla hasta la mañana siguiente, cuando, para mi gran sorpresa, volvió unos minutos después, trayendo una bebida refrescante: “Acabo de pensar ahora mismo que usted podría tener sed”, me dijo; “en adelante tomaré la costumbre de ofrecerle este alivio todas las noches.” La miré, atónita, y, cuando estuve sola, rompí a llorar. ¡Oh, qué bueno es nuestro Jesús! ¡Qué dulce y tierno es! ¡Qué fácil de conmover es su corazón!»
 
 * * * * *
 
@@ -189,7 +189,7 @@ Transcribimos aquí esa carta que se creería salida de la pluma y del corazón 
 
 «Un poco más y mi alma dejará la tierra, terminará su destierro, concluirá su combate. ¡Subo al cielo! Voy a entrar en esa morada de los elegidos, a ver bellezas que el ojo del hombre jamás ha visto, a oír armonías que el oído jamás ha oído, a gozar de alegrías que el corazón jamás ha gustado... ¡Heme aquí llegada a esta hora que cada una de nosotras ha deseado tanto! Es bien verdad que el Señor escoge *a los pequeños* para confundir a los grandes de este mundo. No me apoyo en mis propias fuerzas, sino en la fuerza de Aquel que, en la cruz, venció a las potencias del infierno.
 
-«Soy una flor primaveral que el Dueño del jardín corta para Su placer. Todas somos flores plantadas en esta tierra y que Dios corta a Su tiempo: un poco antes, un poco después... ¡Yo, pequeña efímera, me voy la primera! Un día nos reencontraremos en el paraíso y gozaremos de la verdadera felicidad.»
+«Soy una flor primaveral que el Dueño del jardín corta para su placer. Todas somos flores plantadas en esta tierra y que Dios corta a su tiempo: un poco antes, un poco después... ¡Yo, pequeña efímera, me voy la primera! Un día nos reencontraremos en el paraíso y gozaremos de la verdadera felicidad.»
 
 SOR TERESA DEL NIÑO JESÚS,
 
@@ -207,7 +207,7 @@ Sin embargo, la ola del dolor subía cada vez más. La debilidad llegó a ser ta
 
 «¿Y qué le dice a Jesús?»
 
-«No Le digo nada, *¡Lo amo!*»
+«No le digo nada, *¡Lo amo!*»
 
 * * * * *
 
@@ -219,7 +219,7 @@ Un día dijo a su Madre Priora:
 
 Y, por la tarde, le entregó estas líneas, trazadas a lápiz con mano temblorosa:
 
-«¡Oh, Dios mío, qué bueno eres con la pequeña víctima de Tu amor misericordioso! Ahora mismo que unes el sufrimiento exterior a las pruebas de mi alma, no puedo decir: “*Me han cercado las angustias de la muerte.*”[^151] Sino que exclamo, en mi gratitud: “*He bajado al valle de las sombras de la muerte, sin embargo, no temo ningún mal, porque Tú estás conmigo, Señor.*”[^152]»
+«¡Oh, Dios mío, qué bueno eres con la pequeña víctima de tu amor misericordioso! Ahora mismo que unes el sufrimiento exterior a las pruebas de mi alma, no puedo decir: “*Me han cercado las angustias de la muerte.*”[^151] Sino que exclamo, en mi gratitud: “*He bajado al valle de las sombras de la muerte, sin embargo, no temo ningún mal, porque Tú estás conmigo, Señor.*”[^152]»
 
 «Algunas creen que usted tiene miedo de la muerte», le dijo su *Madrecita*.
 
@@ -227,7 +227,7 @@ Y, por la tarde, le entregó estas líneas, trazadas a lápiz con mano tembloros
 
 «El señor Capellán me dijo: “¿Está usted resignada a morir?” Le respondí: “¡Ah! Padre, encuentro que solo hay necesidad de resignación para vivir..... para morir, lo que siento es alegría.”
 
-«No se aflija, Madre mía, si sufro mucho y si no manifiesto ninguna señal de felicidad en el último momento. ¿No murió Nuestro Señor Víctima de amor? Y vea cuál fue Su agonía...»
+«No se aflija, Madre mía, si sufro mucho y si no manifiesto ninguna señal de felicidad en el último momento. ¿No murió Nuestro Señor Víctima de amor? Y vea cuál fue su agonía...»
 
 * * * * *
 
@@ -290,7 +290,7 @@ Esta mirada se prolongó el espacio de un *Credo*, y su alma bienaventurada, hec
 
 * * * * *
 
-Este ángel nos había dicho algunos días antes de dejar este mundo: «*La muerte de amor que deseo es la de Jesús en la cruz.*» Su deseo fue plenamente escuchado: las tinieblas y la angustia acompañaron su agonía. Sin embargo, ¿no podemos aplicarle también la profecía sublime de san Juan de la Cruz acerca de las almas consumadas en la divina caridad?
+Este ángel nos había dicho algunos días antes de dejar este mundo: «*La muerte de amor que deseo es la de Jesús en la cruz.*» su deseo fue plenamente escuchado: las tinieblas y la angustia acompañaron su agonía. Sin embargo, ¿no podemos aplicarle también la profecía sublime de san Juan de la Cruz acerca de las almas consumadas en la divina caridad?
 
 «*Mueren en transportes admirables y asaltos deliciosos que les da el amor, como el cisne cuyo canto es más melodioso cuando está a punto de morir.* Eso es lo que hacía decir a David que “*la muerte de los justos es preciosa ante Dios*”: pues es entonces cuando los ríos del amor se escapan del alma, y se van a perder en el océano del amor divino.»
 

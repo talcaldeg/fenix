@@ -26,11 +26,11 @@ Madre mía, hace mucho tiempo que se cumplió este acto de virtud, y sin embargo
 
 Este contraste impresionó dulcemente mi alma. El Señor la iluminó con los rayos de la verdad, que superan tanto el brillo tenebroso de los placeres de la tierra que, por gozar mil años de esas fiestas mundanas, no habría dado los diez minutos empleados en mi acto de caridad.
 
-¡Ah!, si ya en el sufrimiento, en medio del combate, se pueden saborear semejantes delicias al pensar que Dios nos ha sacado del mundo, ¿qué será allá arriba cuando veamos, en medio de una gloria eterna y de un descanso sin fin, la gracia incomparable que nos ha hecho al escogernos para habitar en Su casa, verdadero pórtico de los cielos?
+¡Ah!, si ya en el sufrimiento, en medio del combate, se pueden saborear semejantes delicias al pensar que Dios nos ha sacado del mundo, ¿qué será allá arriba cuando veamos, en medio de una gloria eterna y de un descanso sin fin, la gracia incomparable que nos ha hecho al escogernos para habitar en su casa, verdadero pórtico de los cielos?
 
 * * * * *
 
-No siempre con estos transportes de alegría he practicado la caridad; pero, al comienzo de mi vida religiosa, Jesús quiso hacerme sentir cuán dulce es verlo en el alma de Sus esposas: por eso, cuando llevaba a sor San Pedro, lo hacía con tanto amor que me habría sido imposible hacerlo mejor si hubiera llevado al mismo Nuestro Señor.
+No siempre con estos transportes de alegría he practicado la caridad; pero, al comienzo de mi vida religiosa, Jesús quiso hacerme sentir cuán dulce es verlo en el alma de sus esposas: por eso, cuando llevaba a sor San Pedro, lo hacía con tanto amor que me habría sido imposible hacerlo mejor si hubiera llevado al mismo Nuestro Señor.
 
 * * * * *
 

@@ -84,7 +84,7 @@ En todo instante me ama. ¡Y con qué amor! Ciertamente el amor increado del Ver
 
 #### 2. La unión en virtud de su acción vital.
 
-Hay una presencia de la santa Humanidad de eficacia aún más íntima: Su misteriosa presencia por su acción vital.
+Hay una presencia de la santa Humanidad de eficacia aún más íntima: su misteriosa presencia por su acción vital.
 
 *Yo soy la Vida*[^42], dice Jesús. Cuando se mostraba a los hombres en los días de su vida mortal, su santa Humanidad dejaba estallar a menudo su poder milagroso; su contacto bastaba para obrar las mayores obras. *Salía de Él una fuerza que los sanaba a todos*[^43]. Lejos de haber disminuido, hoy su eficacia no conoce obstáculo ni intermitencia. Actúa sobre todos y en todo momento. Cada uno de nosotros se encuentra en la feliz imposibilidad de escapar a su acción o, como dicen los teólogos, al contacto de su poder.
 

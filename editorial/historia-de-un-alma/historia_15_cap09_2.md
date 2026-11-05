@@ -1,8 +1,8 @@
 Al meditar estas palabras divinas, vi cuán imperfecto era mi amor por mis hermanas, comprendí que no las amaba como Jesús las ama. ¡Ah!, ahora adivino que la verdadera caridad consiste en soportar todos los defectos del prójimo, en no extrañarse de sus debilidades, en edificarse con sus menores virtudes; pero sobre todo aprendí que la caridad no debe quedar encerrada en el fondo del corazón, pues *nadie enciende una antorcha para ponerla bajo el celemín, sino que se la pone sobre el candelero, para que alumbre a todos los que están en la casa*[^94]. Me parece, Madre mía, que esa antorcha representa la caridad que debe iluminar, alegrar, no solo a los que me son más queridos, sino a *todos los que están en la casa*.
 
-Cuando el Señor, en la antigua ley, ordenaba a Su pueblo amar al prójimo como a sí mismo, todavía no había descendido a la tierra; y, sabiendo bien hasta qué grado se ama uno a sí mismo, no podía pedir más. Pero cuando Jesús da a Sus Apóstoles un mandamiento nuevo, *Su mandamiento*[^95], ya no exige solamente amar al prójimo como a sí mismo, sino como Él lo ama, como lo amará hasta la consumación de los siglos.
+Cuando el Señor, en la antigua ley, ordenaba a su pueblo amar al prójimo como a sí mismo, todavía no había descendido a la tierra; y, sabiendo bien hasta qué grado se ama uno a sí mismo, no podía pedir más. Pero cuando Jesús da a sus Apóstoles un mandamiento nuevo, *su mandamiento*[^95], ya no exige solamente amar al prójimo como a sí mismo, sino como Él lo ama, como lo amará hasta la consumación de los siglos.
 
-¡Oh Jesús mío! Sé que Tú no mandas nada imposible; conoces mejor que yo mi debilidad y mi imperfección, sabes bien que jamás llegaré a amar a mis hermanas como Tú las amas, si Tú mismo, oh mi divino Salvador, no las amas todavía *en mí*. Precisamente porque quieres concederme esta gracia, hiciste un mandamiento *nuevo*. ¡Oh, cómo lo amo!, pues me da la seguridad de que Tu voluntad es *amar en mí* a todos los que Tú me mandas amar.
+¡Oh Jesús mío! Sé que Tú no mandas nada imposible; conoces mejor que yo mi debilidad y mi imperfección, sabes bien que jamás llegaré a amar a mis hermanas como Tú las amas, si Tú mismo, oh mi divino Salvador, no las amas todavía *en mí*. Precisamente porque quieres concederme esta gracia, hiciste un mandamiento *nuevo*. ¡Oh, cómo lo amo!, pues me da la seguridad de que tu voluntad es *amar en mí* a todos los que Tú me mandas amar.
 
 Sí, lo siento, cuando soy caritativa es Jesús solo quien obra en mí; cuanto más unida estoy a Él, más amo también a todas mis hermanas. Si quiero aumentar en mi corazón este amor y el demonio trata de poner ante mis ojos los defectos de tal o cual hermana, me apresuro a buscar sus virtudes, sus buenos deseos; me digo que, si la vi caer una vez, bien puede haber alcanzado un gran número de victorias que oculta por humildad; y que incluso lo que me parece una falta puede muy bien ser, por la intención, un acto de virtud. Me cuesta tanto menos persuadirme de ello cuanto que lo experimenté por mí misma.
 
@@ -10,11 +10,11 @@ Un día, durante el recreo, la portera vino a pedir una hermana para una tarea q
 
 No sabría decir cuánto me aprovechó este pequeño suceso y me hizo indulgente. Todavía me impide tener vanidad cuando me juzgan favorablemente, pues me digo: «Ya que mis pequeños actos de virtud pueden ser tomados por imperfecciones, igualmente se puede uno equivocar llamando virtud a lo que no es más que imperfección»; y repito entonces con san Pablo: «*A mí muy poco me importa ser juzgada por tribunal humano alguno. Ni siquiera me juzgo a mí misma. El que me juzga es el Señor*»[^96].
 
-¡Sí, es el Señor, es Jesús quien me juzga! Y para hacer favorable Su juicio, o más bien para no ser juzgada en absoluto, ya que Él dijo: «*No juzguen y no serán juzgados*[^97]», quiero tener siempre pensamientos caritativos.
+¡Sí, es el Señor, es Jesús quien me juzga! Y para hacer favorable su juicio, o más bien para no ser juzgada en absoluto, ya que Él dijo: «*No juzguen y no serán juzgados*[^97]», quiero tener siempre pensamientos caritativos.
 
 * * * * *
 
-Vuelvo al santo Evangelio, donde el Señor me explica con toda claridad en qué consiste Su *mandamiento nuevo*.
+Vuelvo al santo Evangelio, donde el Señor me explica con toda claridad en qué consiste su *mandamiento nuevo*.
 
 Leo en san Mateo: «*Ustedes han oído que se dijo: “Amarás a tu amigo y odiarás a tu enemigo”. Pero Yo les digo: “Amen a sus enemigos, oren por los que los persiguen”*»[^98].
 
@@ -62,7 +62,7 @@ Pronto ocurrió la desgracia temida, el ruido que hacíamos la hizo abrir los oj
 
 Más adelante, podrá ser que el tiempo en que estoy me parezca lleno todavía de muchas miserias, pero ya no me extraño de nada, no me aflijo al verme la debilidad misma; al contrario, en ella me glorío y espero cada día descubrir en mí nuevas imperfecciones. Lo confieso, estas luces sobre mi nada me hacen más bien que las luces sobre la fe.
 
-Recordando que *la caridad cubre la multitud de los pecados*[^108], me abastezco en esa mina fecunda que el Señor abrió en Su Evangelio sagrado. Excavo en las profundidades de Sus palabras adorables, y exclamo con David: «*He corrido por el camino de Tus mandamientos, desde que dilataste mi corazón*»[^109]. Y solo la caridad puede dilatar mi corazón... ¡Oh Jesús!, desde que esta dulce llama lo consume, corro con delicia por el camino de *Tu mandamiento nuevo*, y quiero correr por él hasta el día bienaventurado en que, uniéndome al cortejo virginal, Te seguiré por los espacios infinitos, cantando Tu *Cántico nuevo*, que debe ser el del AMOR.
+Recordando que *la caridad cubre la multitud de los pecados*[^108], me abastezco en esa mina fecunda que el Señor abrió en su Evangelio sagrado. Excavo en las profundidades de sus palabras adorables, y exclamo con David: «*He corrido por el camino de tus mandamientos, desde que dilataste mi corazón*»[^109]. Y solo la caridad puede dilatar mi corazón... ¡Oh Jesús!, desde que esta dulce llama lo consume, corro con delicia por el camino de *tu mandamiento nuevo*, y quiero correr por él hasta el día bienaventurado en que, uniéndome al cortejo virginal, te seguiré por los espacios infinitos, cantando tu *Cántico nuevo*, que debe ser el del AMOR.
 
 [^94]: Lc 11, 33.
 

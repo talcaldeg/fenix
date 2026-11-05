@@ -42,7 +42,7 @@ Se eligió un domingo para esta solemne visita. Grande fue mi apuro cuando supe 
 
 \* \* \* \* \*
 
-¡Por fin llegó el 2 de octubre! Día de lágrimas y de bendiciones en que Jesús cortó la primera de Sus flores, la flor escogida que debía ser, pocos años después, la Madre de sus hermanas. Mientras mi amado padre, acompañado de mi tío y de María, subía la montaña del Carmelo para ofrecer su primer sacrificio, mi tía me llevó a misa con mis hermanas y mis primas. Nos deshacíamos en lágrimas, tanto que, al vernos entrar en la iglesia, la gente nos miraba con asombro; pero eso no me impedía llorar. ¡Me preguntaba cómo el sol podía seguir brillando sobre la tierra!
+¡Por fin llegó el 2 de octubre! Día de lágrimas y de bendiciones en que Jesús cortó la primera de sus flores, la flor escogida que debía ser, pocos años después, la Madre de sus hermanas. Mientras mi amado padre, acompañado de mi tío y de María, subía la montaña del Carmelo para ofrecer su primer sacrificio, mi tía me llevó a misa con mis hermanas y mis primas. Nos deshacíamos en lágrimas, tanto que, al vernos entrar en la iglesia, la gente nos miraba con asombro; pero eso no me impedía llorar. ¡Me preguntaba cómo el sol podía seguir brillando sobre la tierra!
 
 Quizá encuentre usted, Madre venerada, que exagero un poco mi pena. En efecto, me doy cuenta de que esa partida no habría debido afligirme hasta ese punto; pero, debo confesarlo, mi alma estaba lejos de haber madurado; y tenía que pasar por muchos crisoles antes de alcanzar la orilla de la paz, antes de saborear los frutos deliciosos del abandono total y del perfecto amor.
 
@@ -64,7 +64,7 @@ Se adivina el dolor de mi pobre padre cuando, a su regreso de París, me vio ca�
 
 \* \* \* \* \*
 
-Entretanto se acercaba la toma de hábito de sor Inés de Jesús, y se evitaba hablar de ella delante de mí por temor a darme pena, pensando bien que yo no podría ir. En el fondo del corazón yo creía firmemente que el buen Dios me concedería el consuelo de volver a ver, ese día, a mi querida Paulina. Sí, yo sabía bien que esa fiesta sería sin nubes, sabía que Jesús no probaría a Su prometida con mi ausencia; ella, que ya había sufrido tanto por la enfermedad de su hijita. En efecto, pude abrazar a mi *madre querida*, sentarme en sus rodillas, esconderme bajo su velo y recibir sus dulces caricias; ¡pude contemplarla, tan encantadora en su blanco atavío! Verdaderamente fue un hermoso día en medio de mi sombría prueba; pero ese día, o más bien esa hora, pasó pronto, y enseguida tuve que subir al coche que me llevó lejos del Carmelo.
+Entretanto se acercaba la toma de hábito de sor Inés de Jesús, y se evitaba hablar de ella delante de mí por temor a darme pena, pensando bien que yo no podría ir. En el fondo del corazón yo creía firmemente que el buen Dios me concedería el consuelo de volver a ver, ese día, a mi querida Paulina. Sí, yo sabía bien que esa fiesta sería sin nubes, sabía que Jesús no probaría a su prometida con mi ausencia; ella, que ya había sufrido tanto por la enfermedad de su hijita. En efecto, pude abrazar a mi *madre querida*, sentarme en sus rodillas, esconderme bajo su velo y recibir sus dulces caricias; ¡pude contemplarla, tan encantadora en su blanco atavío! Verdaderamente fue un hermoso día en medio de mi sombría prueba; pero ese día, o más bien esa hora, pasó pronto, y enseguida tuve que subir al coche que me llevó lejos del Carmelo.
 
 Al llegar a los Buissonnets me hicieron acostar, aunque yo no sentía ningún cansancio; pero al día siguiente me atacó de nuevo con violencia, y la enfermedad se volvió tan grave que, según los cálculos humanos, yo no debía sanar jamás.
 
@@ -110,7 +110,7 @@ Al notar que las carmelitas se imaginaban algo muy distinto, creí haber mentido
 
 [^15]: María Guérin entró en el Carmelo de Lisieux el 15 de agosto de 1895 y pronunció sus votos con el nombre de *sor María de la Eucaristía*.
 
-    Se hizo notar por su gran espíritu de pobreza y su paciencia en medio de largos sufrimientos. «*No sé si he sufrido bien*, dirá durante su última enfermedad, *pero me parece que* TERESA *me comunica sus sentimientos y que tengo su mismo abandono*. *¡Oh, si pudiera, como ella, morir de amor! No sería de extrañar, puesto que formo parte de la legión de las pequeñas víctimas que ella pidió al buen Dios. Madre mía, durante mi agonía, si ve que el sufrimiento me impide hacer actos de amor, se lo ruego, recuérdeme mi deseo. Quiero morir diciendo a Jesús que Lo amo.*»
+    Se hizo notar por su gran espíritu de pobreza y su paciencia en medio de largos sufrimientos. «*No sé si he sufrido bien*, dirá durante su última enfermedad, *pero me parece que* TERESA *me comunica sus sentimientos y que tengo su mismo abandono*. *¡Oh, si pudiera, como ella, morir de amor! No sería de extrañar, puesto que formo parte de la legión de las pequeñas víctimas que ella pidió al buen Dios. Madre mía, durante mi agonía, si ve que el sufrimiento me impide hacer actos de amor, se lo ruego, recuérdeme mi deseo. Quiero morir diciendo a Jesús que lo amo.*»
 
     Este deseo se cumplió. La Madre Priora, en una carta circular dirigida a todos los Carmelos, relata así sus últimos momentos:
 
@@ -122,7 +122,7 @@ Al notar que las carmelitas se imaginaban algo muy distinto, creí haber mentido
 
 [^16]: Jn 11, 4.
 
-[^17]: Desde lo alto del cielo, Teresa supo devolverle sus cuidados maternales. Durante su última enfermedad, la protegió visiblemente. Una mañana se la encontró apacible y radiante: «*Sufría mucho*, dijo, *pero mi pequeña Teresa me veló con ternura. Toda la noche la sentí junto a mi cama. Varias veces me acarició, lo cual me dio un valor extraordinario.*» La señora Guérin había vivido y murió como una santa, a la edad de 52 años. Repetía, con la sonrisa en los labios: «*¡Qué contenta estoy de morir! ¡Es tan bueno ir a ver al buen Dios! Jesús mío, Te amo. Te ofrezco mi vida por los sacerdotes, como mi pequeña Teresa del Niño Jesús.*» Era el 13 de febrero de 1900.
+[^17]: Desde lo alto del cielo, Teresa supo devolverle sus cuidados maternales. Durante su última enfermedad, la protegió visiblemente. Una mañana se la encontró apacible y radiante: «*Sufría mucho*, dijo, *pero mi pequeña Teresa me veló con ternura. Toda la noche la sentí junto a mi cama. Varias veces me acarició, lo cual me dio un valor extraordinario.*» la señora Guérin había vivido y murió como una santa, a la edad de 52 años. Repetía, con la sonrisa en los labios: «*¡Qué contenta estoy de morir! ¡Es tan bueno ir a ver al buen Dios! Jesús mío, te amo. Te ofrezco mi vida por los sacerdotes, como mi pequeña Teresa del Niño Jesús.*» Era el 13 de febrero de 1900.
 
     El señor Guérin, después de haber empleado durante muchos años su pluma en la defensa de la Iglesia y su fortuna en el sostén de las buenas obras, murió santamente, terciario del Carmelo, el 28 de septiembre de 1909, en su año sesenta y nueve.
 

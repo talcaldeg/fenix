@@ -8,7 +8,7 @@ San Juan de la Cruz.
 
 «*Muchas páginas de esta historia no se leerán jamás sobre la tierra...*» Sor Teresa del Niño Jesús lo ha dicho; y nosotros lo repetimos forzosamente después de ella. Hay sufrimientos que no está permitido revelar aquí abajo; solo el Señor se ha reservado celosamente el descubrir su mérito y su gloria en la clara visión que rasgará todos los velos...
 
-Él hizo «*desbordar en el alma de su pequeña esposa las olas de infinita ternura encerradas en Su Corazón divino*»: este fue el martirio de amor que su voz melodiosa ha cantado tan suavemente. Pero «*ofrecerse en víctima al amor no es ofrecerse a las dulzuras, a los consuelos*...» Teresa lo experimentó, pues el divino Maestro la condujo por los ásperos senderos del dolor; y solo en su austera cima murió VÍCTIMA DE CARIDAD.
+Él hizo «*desbordar en el alma de su pequeña esposa las olas de infinita ternura encerradas en su Corazón divino*»: este fue el martirio de amor que su voz melodiosa ha cantado tan suavemente. Pero «*ofrecerse en víctima al amor no es ofrecerse a las dulzuras, a los consuelos*...» Teresa lo experimentó, pues el divino Maestro la condujo por los ásperos senderos del dolor; y solo en su austera cima murió VÍCTIMA DE CARIDAD.
 
 * * * * *
 
@@ -64,7 +64,7 @@ Un año, para la fiesta de la Madre Priora, nuestras familias y los obreros del 
 
 Llena de admiración ante tan gran virtud, la hermana fue a acusarse de su imperfección a la Reverenda Madre Priora, alabando en voz alta la paciencia y la humildad de Sor Teresa del Niño Jesús.
 
-Así, cuando la «*Pequeña Reina*» dejó la tierra de destierro por el reino de Su Esposo, esa misma hermana, llena de fe en su poder, acercó su frente a los pies helados de la virginal niña, pidiéndole perdón por su falta de antaño. En el mismo instante se sintió curada de una anemia cerebral que, desde hacía largos años, le impedía todo trabajo intelectual, incluso la lectura y la oración mental.
+Así, cuando la «*Pequeña Reina*» dejó la tierra de destierro por el reino de su Esposo, esa misma hermana, llena de fe en su poder, acercó su frente a los pies helados de la virginal niña, pidiéndole perdón por su falta de antaño. En el mismo instante se sintió curada de una anemia cerebral que, desde hacía largos años, le impedía todo trabajo intelectual, incluso la lectura y la oración mental.
 
 * * * * *
 
@@ -96,7 +96,7 @@ Le gusta decir que no hacía grandes penitencias: es que su fervor tenía por na
 
 * * * * *
 
-«*Las almas más queridas de mi Padre*, decía un día Nuestro Señor a santa Teresa, *son las que Él prueba más; y la grandeza de sus pruebas es la medida de Su amor.*» Teresa era una de esas almas más queridas de Dios; y Él iba a colmar Su amor inmolándola en un cruel martirio.
+«*Las almas más queridas de mi Padre*, decía un día Nuestro Señor a santa Teresa, *son las que Él prueba más; y la grandeza de sus pruebas es la medida de su amor.*» Teresa era una de esas almas más queridas de Dios; y Él iba a colmar su amor inmolándola en un cruel martirio.
 
 Conocemos la llamada del Viernes Santo, 3 de abril de 1896, en que, según su expresión, oyó «*como un lejano murmullo que le anunciaba la llegada del Esposo*.» Largos meses, muy dolorosos, debían transcurrir aún antes de esa hora bendita de la liberación.
 
@@ -166,7 +166,7 @@ Tal confianza debía excitar la furia del demonio que, en los últimos momentos,
 
 «Anoche, decía a la Madre Inés de Jesús, me asaltó una verdadera angustia y mis tinieblas aumentaron. No sé qué voz maldita me decía: “¿Estás segura de ser amada por Dios? ¿Ha venido Él a decírtelo? No es la opinión de algunas criaturas lo que te justificará ante Él.”
 
-«Hacía mucho que sufría con estos pensamientos cuando vinieron a traerme su billete verdaderamente providencial. Usted me recordaba, Madre mía, todos los privilegios de Jesús sobre mi alma; y, como si mi angustia le hubiera sido revelada, me decía que yo era grandemente querida de Dios, y que estaba en vísperas de recibir de Su mano la corona eterna. Ya la calma y la alegría renacían en mi corazón. Sin embargo, me dije aún: “Es el afecto de mi Madrecita por mí lo que le hace escribir esas palabras.” Inmediatamente sentí entonces la inspiración de tomar el santo Evangelio y, abriéndolo al azar, mis ojos cayeron sobre este pasaje que nunca había advertido: “*Aquel a quien Dios ha enviado dice las mismas cosas que Dios, porque no le ha comunicado Su Espíritu con medida.*”[^144]
+«Hacía mucho que sufría con estos pensamientos cuando vinieron a traerme su billete verdaderamente providencial. Usted me recordaba, Madre mía, todos los privilegios de Jesús sobre mi alma; y, como si mi angustia le hubiera sido revelada, me decía que yo era grandemente querida de Dios, y que estaba en vísperas de recibir de su mano la corona eterna. Ya la calma y la alegría renacían en mi corazón. Sin embargo, me dije aún: “Es el afecto de mi Madrecita por mí lo que le hace escribir esas palabras.” Inmediatamente sentí entonces la inspiración de tomar el santo Evangelio y, abriéndolo al azar, mis ojos cayeron sobre este pasaje que nunca había advertido: “*Aquel a quien Dios ha enviado dice las mismas cosas que Dios, porque no le ha comunicado su Espíritu con medida.*”[^144]
 
 «Me dormí después del todo consolada. Es usted, Madre mía, a quien el buen Dios ha enviado para mí, y debo creerle, puesto que usted dice las mismas cosas que Dios.»
 
@@ -198,7 +198,7 @@ Paseando un día por el jardín, sostenida por una de sus hermanas, se detuvo an
 
 Y, en su celda, lloró largo rato sin poder articular una sola palabra. Por fin, mirando a su hermana con una expresión toda celestial, añadió:
 
-«Pensaba en Nuestro Señor, en la amable comparación que Él tomó para hacernos creer en Su ternura. Toda mi vida, eso es lo que ha hecho por mí: *¡me ha ocultado enteramente bajo Sus alas!* No puedo expresar lo que pasó en mi corazón. ¡Ah! El buen Dios hace bien en velarse a mis miradas, en mostrarme raramente y como “*a través de los barrotes*[^145]” los efectos de Su misericordia; siento que no podría soportar su dulzura.»
+«Pensaba en Nuestro Señor, en la amable comparación que Él tomó para hacernos creer en su ternura. Toda mi vida, eso es lo que ha hecho por mí: *¡me ha ocultado enteramente bajo sus alas!* No puedo expresar lo que pasó en mi corazón. ¡Ah! El buen Dios hace bien en velarse a mis miradas, en mostrarme raramente y como “*a través de los barrotes*[^145]” los efectos de su misericordia; siento que no podría soportar su dulzura.»
 
 * * * * *
 

@@ -23,6 +23,8 @@ estar al día. Cada ERROR es un defecto que ya llegó publicado:
   la ficha; credito_portada.py, 24-oct-2026).
 - EPUB y PDF: sin el encabezado, la licencia ni los metadatos de Gutenberg (sin_gutenberg.py;
   Niebla abría con una página legal en inglés, 2-nov-2026).
+- EPUB de una edición de Fénix: los pronombres de Dios con mayúscula solo en Él, Tú y Ti, no en
+  «Su», «Le», «Tus» a media oración (regla de opusdei.org, 5-nov-2026).
 
 Termina con «Libros listos» o con la lista de errores (código 1).
 """
@@ -51,6 +53,12 @@ EXLIBRIS = "fenix-exlibris.xhtml"
 NOTA = re.compile(r'<(\w+)\b[^>]*(?:epub:type="(?:footnote|endnote|rearnote)"|class="(?:[^"]* )?footnote(?: [^"]*)?")[^>]*>')
 CURSIVA = re.compile(r"<(?:em|i|cite)\b|font-style:\s*italic")
 from sin_gutenberg import RESTO as MARCA_PG  # noqa: E402  (lo que deja Gutenberg; citarlo como fuente no cae)
+# posesivos y átonos con mayúscula tras minúscula o coma. No cuentan tras dos puntos (saludo de
+# carta), ante otra mayúscula («Su Majestad», «Le Petit Prince») ni el «Suyo» que firma una carta.
+MAYUSCULA_VIEJA = re.compile(
+    r"(?<=[a-záéíóúüñ,;)] )(?:Su|Sus|Suyo|Suya|Suyos|Suyas|Tu|Tus|Tuyo|Tuya|Tuyos|Tuyas|Le|Lo|Te|Os|"
+    r"Contigo|Vuestro|Vuestra|Vuestros|Vuestras)\b(?!\s+(?:[A-ZÁÉÍÓÚÑ]|respetuo|afectísim|atent))"
+    r"|(?<=[a-záéíóúñ])(?:Le|Lo|Te|Os)\b")
 
 
 def elemento(t: str, m) -> str:
@@ -190,6 +198,20 @@ def revisar_epub(ruta: Path, creditos: dict) -> list:
         E += revisar_nav(z, opf_ruta, opf, hrefs, spine)
         pg = [x.rpartition("/")[2] for x in nombres if x.endswith((".xhtml", ".html", ".htm", ".opf", ".ncx"))
               and MARCA_PG.search(z.read(x).decode("utf-8", "replace"))]
+        # Edición de Fénix (md_a_epub pone su nota): mayúsculas de Dios según opusdei.org, solo
+        # Él, Tú, Ti con mayúscula. Confesiones, Historia de un alma y Preparación seguían con
+        # «Su», «Le», «Tus» a media oración (5-nov-2026).
+        divinas, ej_d = 0, ""
+        nota = next((x for x in nombres if x.endswith("/nota.xhtml")), None)
+        if nota and "Proyecto Fénix" in z.read(nota).decode("utf-8", "replace"):
+            for nombre in nombres:
+                if nombre.endswith((".xhtml", ".html", ".htm")):
+                    t = html.unescape(re.sub(r"<[^>]+>", "", z.read(nombre).decode("utf-8", "replace")))
+                    for m in MAYUSCULA_VIEJA.finditer(t):
+                        divinas += 1
+                        ej_d = ej_d or re.sub(r"\s+", " ", t[max(0, m.start() - 30):m.end() + 15])
+    if divinas:
+        E.append(f"{divinas} pronombres de Dios con mayúscula a media oración (solo Él, Tú, Ti), p. ej. «{ej_d}»")
     if pg:
         E.append(f"encabezado, licencia o marca de Gutenberg en {', '.join(pg[:3])} (correr sin_gutenberg.py)")
     if n:
