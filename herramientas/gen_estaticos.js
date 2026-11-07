@@ -124,6 +124,7 @@ const TX = {
     porque: "Por qué leerlo", resumen: "Resumen", citas: "Citas", masCitas: "Ver {n} citas más", moral: "Valoración moral", sinDelibris: "Sin valoración en Delibris",
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
+    auspicio: "Con el auspicio de",
     pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
     de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", preparado: "Preparado por", sello: "Recomendado por Fénix",
     y: "y", ebook: "ebook", menu: "Menú", otroIdioma: "English", tambien: "También en inglés",
@@ -146,6 +147,7 @@ const TX = {
     porque: "Why read it", resumen: "Summary", citas: "Quotes", masCitas: "See {n} more quotes", moral: "Moral rating", sinDelibris: "Not rated by Delibris",
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
+    auspicio: "Sponsored by",
     pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
     de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", preparado: "Prepared by", sello: "Recommended by Fénix",
     y: "and", ebook: "ebook", menu: "Menu", otroIdioma: "Español", tambien: "Also in Spanish",
@@ -415,7 +417,7 @@ ${JSON.stringify(ld, null, 2)}
     </div>
   </div>
 </main>
-<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div></footer>
+<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${AVISO_EPUB}
@@ -490,7 +492,7 @@ ${m.html.replace(/@@RAIZ@@/g, B)}
     <p class="ayuda">${esc(x.ayuda)}</p>
   </div>
 </article></main>
-<footer><div class="wrap">${esc(x.pie)}</div></footer>
+<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 <script>
 // Si se llegó desde la ficha del sitio, Volver regresa ahí (con la biblioteca detrás) en vez de abrir la página suelta.
@@ -579,7 +581,7 @@ ${pwaEn(B)}
   ${donar ? "" : `<p class="meta">${esc(t.pendiente)}</p>`}
   <div class="botones"><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
 </div></main>
-<footer><div class="wrap">${esc(x.pie)}</div></footer>
+<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${MEDICION}

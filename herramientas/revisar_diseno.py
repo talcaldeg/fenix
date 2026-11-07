@@ -64,6 +64,9 @@ def revisar(raiz, capturas=None):
                     fallas.append(f"{donde}: scroll horizontal ({ancho}px en {w}px)")
                 for e in errores:
                     fallas.append(f"{donde}: error de JavaScript: {e}")
+                # El pie lleva el auspicio de Verum Data con su enlace, en todas las páginas (7-nov-2026).
+                if not pg.evaluate("!!document.querySelector('footer a[href=\"https://verumdata.cl/\"]')"):
+                    fallas.append(f"{donde}: falta en el pie el auspicio de Verum Data con enlace a verumdata.cl")
                 if vista != "inicio":
                     continue
                 r = pg.evaluate("""() => {
