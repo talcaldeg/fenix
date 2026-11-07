@@ -80,6 +80,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   ul.parecidos li{margin:4px 0}
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
   footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
   /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
   nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
   nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
@@ -157,7 +158,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     <p class="ayuda">Which one? The PDF opens straight away in the browser, on any phone or computer. The EPUB is saved in Downloads and is read with a reading app (Google Play Books on Android, Books on iPhone, Kindle or Kobo), which lets you enlarge the text.</p>
   </div>
 </article></main>
-<footer><div class="wrap">Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.</div><div class="wrap" style="margin-top:6px">Sponsored by <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
+<footer><div class="wrap">Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.</div><div class="wrap" style="margin-top:6px">Sponsored by <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="../../../img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
 <script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
 var b=document.querySelector("details.buscar"),n=document.getElementById("menu"),m=document.getElementById("btnMenu"),s=document.getElementById("menuMas");

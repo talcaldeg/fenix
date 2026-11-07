@@ -149,6 +149,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   ul.parecidos li{margin:4px 0}
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
   footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
   /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
   nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
   nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
@@ -218,7 +219,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     </div>
   </div>
 </main>
-<footer><div class="wrap">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.<nav aria-label="Colaborar"><a href="../../#contacto">Contacto</a><a href="../../#error">Avisar un error</a><a href="../../dona/">Donar</a></nav></div><div class="wrap" style="margin-top:6px">Con el auspicio de <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
+<footer><div class="wrap">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.<nav aria-label="Colaborar"><a href="../../#contacto">Contacto</a><a href="../../#error">Avisar un error</a><a href="../../dona/">Donar</a></nav></div><div class="wrap" style="margin-top:6px">Con el auspicio de <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="../../img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
 <script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
 var b=document.querySelector("details.buscar"),n=document.getElementById("menu"),m=document.getElementById("btnMenu"),s=document.getElementById("menuMas");

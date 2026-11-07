@@ -65,8 +65,12 @@ def revisar(raiz, capturas=None):
                 for e in errores:
                     fallas.append(f"{donde}: error de JavaScript: {e}")
                 # El pie lleva el auspicio de Verum Data con su enlace, en todas las páginas (7-nov-2026).
-                if not pg.evaluate("!!document.querySelector('footer a[href=\"https://verumdata.cl/\"]')"):
+                aus = pg.evaluate("""() => { const a = document.querySelector('footer a[href="https://verumdata.cl/"]');
+                    const i = a && a.querySelector('img'); return {a: !!a, img: !!(i && i.complete && i.naturalWidth > 0)}; }""")
+                if not aus["a"]:
                     fallas.append(f"{donde}: falta en el pie el auspicio de Verum Data con enlace a verumdata.cl")
+                elif not aus["img"]:
+                    fallas.append(f"{donde}: el auspicio de Verum Data no muestra su ícono (img/verum-data.svg)")
                 if vista != "inicio":
                     continue
                 r = pg.evaluate("""() => {

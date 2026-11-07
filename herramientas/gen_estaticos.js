@@ -253,6 +253,7 @@ const ESTILO = `
   ul.parecidos li{margin:4px 0}
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
   footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
   /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
   nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
   nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
@@ -417,7 +418,7 @@ ${JSON.stringify(ld, null, 2)}
     </div>
   </div>
 </main>
-<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
+<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${AVISO_EPUB}
@@ -492,7 +493,7 @@ ${m.html.replace(/@@RAIZ@@/g, B)}
     <p class="ayuda">${esc(x.ayuda)}</p>
   </div>
 </article></main>
-<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
+<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 <script>
 // Si se llegó desde la ficha del sitio, Volver regresa ahí (con la biblioteca detrás) en vez de abrir la página suelta.
@@ -581,7 +582,7 @@ ${pwaEn(B)}
   ${donar ? "" : `<p class="meta">${esc(t.pendiente)}</p>`}
   <div class="botones"><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
 </div></main>
-<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div></footer>
+<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${MEDICION}

@@ -1524,6 +1524,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .ficha .aviso{font:13px system-ui,sans-serif; color:var(--ok); align-self:center}
 
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
+  footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
   footer button.enlace{background:none; border:0; padding:0; font:inherit; color:inherit; text-decoration:underline; cursor:pointer}
 </style>
 </head>
@@ -2205,7 +2206,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
 <footer>
   <div class="wrap" data-i18n="pie">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.</div>
   <div class="wrap" style="margin-top:6px"><span data-i18n="pie2">Catálogo actualizado al</span> <span id="fechaCatalogo"></span> · <a href="#contacto" data-i18n="nav.contacto">Contacto</a><span id="instalarApp" hidden> · <button type="button" class="enlace" data-i18n="pie.instalar">Instalar como app</button></span><span id="instalarIos" hidden> · <span data-i18n="pie.iphone">En el iPhone, instala Fénix con Compartir › Agregar a inicio</span></span></div>
-  <div class="wrap" style="margin-top:6px"><span data-i18n="pie.auspicio">Con el auspicio de</span> <a href="https://verumdata.cl/" target="_blank" rel="noopener">Verum Data</a></div>
+  <div class="wrap" style="margin-top:6px"><span data-i18n="pie.auspicio">Con el auspicio de</span> <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div>
 </footer>
 <!-- Botón para instalar como app. Android y Chrome ofrecen el botón (beforeinstallprompt); Safari del iPhone no tiene ese aviso, así que se
      explica en una línea. Ya instalada (pantalla completa), no aparece nada. -->
