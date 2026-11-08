@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-11-05</lastmod>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/dona/</loc>
@@ -685,6 +685,14 @@
     <lastmod>2026-11-07</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/thoreau-walden/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/thoreau-walden/es/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/</loc>
     <lastmod>2026-11-07</lastmod>
   </url>
@@ -899,6 +907,14 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/chesterton-whats-wrong-with-the-world/es/muestra/</loc>
     <lastmod>2026-11-07</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/thoreau-walden/muestra/</loc>
+    <lastmod>2026-11-08</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/thoreau-walden/es/muestra/</loc>
+    <lastmod>2026-11-08</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-pride-and-prejudice/muestra/</loc>

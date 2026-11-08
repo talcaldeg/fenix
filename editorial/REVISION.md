@@ -42,7 +42,21 @@ ejemplo, que un término técnico, «sustancia», «naturaleza», «persona», �
 Si el original dice algo que hoy se lee mal sin contexto (p. ej. una opinión de Agustín que la
 Iglesia no hizo suya), no lo cambie: anótelo en el informe para una posible nota del editor.
 
-## 3. Informe
+## 3. Bitácora e informe (se escriben mientras trabaja, no al final)
+
+El cupo de tokens se puede cortar en cualquier momento y lo que esté solo en su contexto se
+pierde (5-nov-2026: siete revisores de *Walden* trabajaron una hora y seis no dejaron nada).
+Por eso:
+- Cada corrección y cada nota van al `.md` apenas se deciden, con Edit, párrafo a párrafo; nunca
+  se juntan para el final.
+- Al empezar, cree el informe (abajo) con su encabezado. Después de cada párrafo o cita resuelta,
+  agregue una línea: `§<primeras palabras>: <qué hizo o qué falta>`. Esa lista es su punto de
+  retomada: si la tarea dice que hubo un intento anterior, lea primero ese informe y siga desde
+  la última línea, sin rehacer lo anotado.
+- Las fuentes que baje (textos de obras citadas, páginas) van a `fenix_fuentes\<libro>\fuentes\`,
+  que no se borra, y el informe dice cuál usó para cada nota.
+- Un hook le pide guardar si pasan 10 minutos o 15 llamadas sin escribir: cuando aparezca,
+  vuelque lo resuelto y siga.
 
 Escriba `revision\<grupo>.md` (el nombre se lo da la tarea) con:
 1. Lista de correcciones de sentido hechas (marcador o primeras palabras del párrafo, antes y

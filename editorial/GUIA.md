@@ -430,3 +430,51 @@ a comas, paréntesis o puntos suspensivos; cursiva (`_texto_`) → `*texto*`.
   «¿Vienes?», preguntó. Sin verbo de decir, punto: «¿Vienes?». El punto final va siempre fuera
   de la comilla de cierre.
 - Notas al pie: no se agregan; el revisor las pone después, si hacen falta.
+
+## Walden (Thoreau, *Walden; or, Life in the Woods*, 1854, desde el inglés)
+
+Original: Project Gutenberg n.º 205 (solo *Walden*, sin *Civil Disobedience*), partido en tramos en
+`fenix_fuentes/walden/tramos/NN_<capitulo><letra>.txt`; la salida va en
+`editorial/thoreau-walden-es/NN_<capitulo><letra>.md` (mismo nombre, extensión `.md`). Es prosa de
+ensayo en primera persona, irónica, concreta y llena de juegos de palabras, cifras y nombres de
+plantas y animales: que la ironía y la imagen funcionen en castellano sin dejar de ser fieles. Las
+frases muy largas se pueden ordenar, nunca recortar.
+
+- Encabezados (solo en el tramo que abre el capítulo, el sin letra o con `a`; los tramos `b`, `c`...
+  no llevan): `## I. Economía`, `## II. Dónde viví y para qué viví`, `## III. La lectura`,
+  `## IV. Sonidos`, `## V. Soledad`, `## VI. Visitantes`, `## VII. El campo de frijoles`,
+  `## VIII. La aldea`, `## IX. Las lagunas`, `## X. La granja Baker`, `## XI. Leyes superiores`,
+  `## XII. Vecinos irracionales`, `## XIII. Calentar la casa`, `## XIV. Antiguos habitantes y visitas
+  de invierno`, `## XV. Animales de invierno`, `## XVI. La laguna en invierno`, `## XVII. Primavera`,
+  `## XVIII. Conclusión`. El título inglés que trae el tramo en su primera línea se reemplaza por
+  ese encabezado.
+- Tratamiento: el «you» genérico va impersonal o con «uno»; si interpela a sus lectores o vecinos,
+  «ustedes» (plural) o «usted» (uno solo). A Dios, «tú», con la regla de mayúsculas de arriba.
+- Medidas y dinero: se conservan las del original, porque son datos que el autor midió (sondeos de
+  la laguna, cuentas de la casa): feet → pies; inches → pulgadas; miles → millas; rods → varas;
+  acres → acres; pounds → libras; bushels → bushels; dollars y cents → dólares y centavos. Las
+  cuentas en columna se conservan como lista o tabla Markdown, con las cifras tal cual.
+- Nombres propios: los lugares de Concord sin traducir (Walden Pond → la laguna de Walden; Flint's
+  Pond → la laguna de Flint; Fair Haven; Concord; Lincoln; el río Concord); personas como se
+  conocen en castellano (Confucio, Homero, Platón, Zoroastro, Manu, Vishnú, Krishna, Bhagavad Gita,
+  Harivansa) y las que no tienen forma castellana, sin traducir. Mr. → el señor.
+- Glosario: pond → laguna; woods → bosque; beans → frijoles; bean-field → campo de frijoles;
+  hoe → azada; shanty → choza; house → casa; village → aldea; townsmen → vecinos (del pueblo);
+  farmer → granjero; laborer → jornalero; philosopher → filósofo; simplicity → sencillez;
+  economy → economía; higher laws → leyes superiores; woodchuck → marmota; loon → somorgujo;
+  partridge → perdiz; chickadee → carbonero; screech owl → autillo; hooting owl → búho;
+  whip-poor-will → chotacabras; bullfrog → rana toro; pickerel → lucio; perch → perca;
+  pout → bagre; shiner → carpita; chestnut → castaño; pitch pine → pino resinoso; white pine →
+  pino blanco; huckleberry → arándano; johnswort → hipérico; sumach → zumaque; Hindoo → hindú;
+  the Vedas → los Vedas; railroad → ferrocarril; the cars → el tren. Un animal o planta sin nombre
+  castellano claro va con el nombre común más conocido en Latinoamérica; si no hay, el inglés en
+  cursiva.
+- Citas en griego, latín u otra lengua dentro del texto: se dejan en su lengua y se traduce al
+  castellano a continuación, como lo hace el autor; si él no las traduce, quedan tal cual (el
+  revisor pone la nota). Versos: en verso libre castellano que conserve el sentido y la imagen,
+  cada verso en su línea dentro de `> `; la firma del poeta, si la hay, en la última línea del
+  bloque.
+- Citas bíblicas: se traducen del inglés que trae el libro.
+- Cursiva del original (`_texto_`) → `*texto*`. Las rayas largas del original pasan a comas,
+  paréntesis, dos puntos o punto y coma, según el sentido.
+- Notas al pie: no se agregan; el revisor las pone después, verificadas.
