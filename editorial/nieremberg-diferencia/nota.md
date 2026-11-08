@@ -1,0 +1,9 @@
+# Nota de esta edición
+
+El padre Juan Eusebio Nieremberg, de la Compañía de Jesús (1595-1658), publicó en Madrid, en 1640, la *Diferencia entre lo temporal y eterno, crisol de desengaños, con la memoria de la eternidad, postrimerías humanas y principales misterios divinos*. Esta edición reproduce la impresión de Barcelona, de Pablo Riera, 1862, «nuevamente corregida», con el prólogo de su editor y los cinco libros de la obra, de 15, 9, 10, 13 y 9 capítulos. No se incluyen los índices de materias de las impresiones antiguas, que este libro reemplaza por el suyo.
+
+El texto se estableció desde el escaneo de esa edición, conservado en Internet Archive. Como el escaneo es de baja resolución y el reconocimiento óptico de caracteres falla mucho, se pasó a texto limpio con ayuda de inteligencia artificial y se leyó cada página contra su imagen; la integridad de los cinco libros se comprobó contra los capítulos de la edición de Madrid de 1672. Se actualizaron la ortografía y la acentuación a la norma de hoy («a» por «á», «más» por «mas», «después» por «despues») sin cambiar ninguna palabra: el vocabulario y la sintaxis de Nieremberg se respetan tal cual, también sus arcaísmos. Las citas textuales que el impreso pone en cursiva se conservan en cursiva, y las citas marginales del autor (obra y lugar, en latín y abreviadas) van como notas al pie, tal como él las imprime. Siguiendo la costumbre de Fénix, de los pronombres que se refieren a Dios solo los tónicos van con mayúscula («Él», «Tú», «Ti»).
+
+El editor de 1862 advierte en su prólogo que corrigió algunas opiniones filosóficas de la obra; esas correcciones no se han podido distinguir del texto de 1640. Esta edición no ha sido cotejada palabra por palabra con la de 1640. Si encuentra un error, puede avisarlo desde el sitio de Proyecto Fénix.
+
+El texto de Nieremberg es de dominio público. Esta edición digital de Proyecto Fénix, 2026, se puede copiar y difundir libremente.

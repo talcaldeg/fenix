@@ -239,6 +239,30 @@ window.FENIX = {
       parecidos: ["imitacion-de-cristo", "preparacion-para-la-muerte", "marmion-vida-del-alma", "escriva-camino"]
     },
     {
+      id: "diferencia-entre-lo-temporal-y-eterno",
+      titulo: "Diferencia entre lo temporal y eterno",
+      autor: "Juan Eusebio Nieremberg",
+      anio: "1640",
+      idioma: "es",
+      categoria: "lectura",
+      resumen: {
+        es: "Crisol de desengaños: el jesuita Juan Eusebio Nieremberg pone lado a lado lo que pasa y lo que no pasa para enseñar a darle a cada cosa su verdadero precio. En cinco libros recorre qué es la eternidad y qué es el tiempo, el fin de la vida y del mundo, la mudanza y la vanidad de las cosas temporales, la grandeza de los bienes eternos y de los males eternos, y por qué lo eterno es el fin y lo temporal solo el medio. Fue uno de los libros espirituales más leídos del Siglo de Oro. Esta edición reproduce la de Barcelona de 1862.",
+        en: "A crucible of disillusionments: the Jesuit Juan Eusebio Nieremberg sets what passes beside what does not pass, to teach us to give each thing its true price. In five books he examines what eternity and time are, the end of life and of the world, the change and vanity of temporal things, the greatness of eternal goods and of eternal evils, and why the eternal is the end and the temporal only the means. It was one of the most widely read spiritual books of the Spanish Golden Age. This edition reproduces the Barcelona edition of 1862."
+      },
+      porque: {"es":"Para quien siente que la vida se le va entre urgencias y quiere volver a mirar qué es lo que de verdad dura. Nieremberg no te sermonea con una idea: te lleva paso a paso, con ejemplos de santos, filósofos e historias antiguas, a comparar lo que persigues con lo que te espera, y de ahí a elegir mejor. Es un libro para leer de a un capítulo y volver a él en los momentos de duelo, de balance o de decisión. Su lenguaje es el del siglo XVII, y vale la pena la paciencia.","en":"For anyone who feels life slipping away among urgent things and wants to look again at what truly lasts. Nieremberg does not lecture you with a single idea: he leads you step by step, with examples from saints, philosophers and old histories, to compare what you chase with what awaits you, and from there to choose better. It is a book to read one chapter at a time and to return to in times of grief, of taking stock or of decision. Its language is that of the seventeenth century, and it rewards patience."},
+      imagen: { src: "img/portadas/nieremberg-diferencia-temporal-eterno.jpg", credito: { es: "Antonio de Pereda, «Alegoría de la vanidad» (El desengaño del mundo), 1632-1636", en: "Antonio de Pereda, «Allegory of Vanity» (The Disillusion of the World), 1632-1636" }, url: "https://commons.wikimedia.org/wiki/File:Antonio_de_Pereda_-_Allegory_of_Vanity_-_Google_Art_Project.jpg" },
+      citas: [
+        "Despierten y abran los mortales los ojos, y conozcan la diferencia que hay entre lo temporal y eterno, para que den a cada cosa su estimación debida, despreciando todo lo que el tiempo acaba, y estimando todo lo que la eternidad conserva.",
+        "Cada día morimos, cada día se quita alguna parte de la vida; y en el mismo crecer nuestro descaece y mengua la vida, y este mismo día que vivimos lo dividimos con la muerte.",
+        "Aseguremos el cielo, y por lo poco no perdamos lo mucho, ni por lo temporal lo eterno."
+      ],
+      archivos: { epub: "libros/nieremberg-diferencia-entre-lo-temporal-y-eterno.epub", pdf: "libros/nieremberg-diferencia-entre-lo-temporal-y-eterno.pdf" },
+      fuente: { texto: "Edición de Barcelona, Pablo Riera, 1862, «nuevamente corregida», del original de Madrid, 1640, escaneada en Internet Archive (dominio público); edición digital y portada de Proyecto Fénix", url: "https://archive.org/details/diferencia-entre-lo-temporal-y-eterno_202606" },
+      editorial: { es: "Edición digital de Proyecto Fénix sobre la impresión de Barcelona de 1862: texto limpiado del reconocimiento óptico con ayuda de inteligencia artificial y leído contra la imagen de cada página, ortografía actualizada sin cambiar palabras, citas marginales del autor al pie y portada nueva.", en: "Proyecto Fénix digital edition of the 1862 Barcelona printing: text cleaned from optical character recognition with the help of artificial intelligence and read against the image of each page, modernized spelling without changing any words, the author's marginal citations as footnotes and a new cover." },
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/diferencia-entre-lo-temporal-y-lo-eterno"},
+      parecidos: ["preparacion-para-la-muerte", "imitacion-de-cristo", "introduccion-a-la-vida-devota", "escriva-camino"]
+    },
+    {
       id: "confesiones",
       titulo: "Confesiones",
       autor: "San Agustín de Hipona",
