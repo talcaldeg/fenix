@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "5-nov-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "8-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -4422,6 +4422,28 @@ window.FENIX = {
       delibris: null,
       encuadernador: "Juan Ignacio Alcalde G.",
       parecidos: ["salgari-el-rey-del-mar", "salgari-los-piratas-de-la-malasia", "stevenson-isla-del-tesoro"]
+    },
+    {
+      id: "combate-espiritual",
+      titulo: "El combate espiritual",
+      autor: "Lorenzo Scupoli (trad. Damián González Cueto)",
+      anio: "1589",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "Manual de vida espiritual del clérigo teatino Lorenzo Scupoli, el libro que san Francisco de Sales llevó consigo durante años. Parte de una idea sencilla: la perfección cristiana no consiste en las penitencias ni en las prácticas exteriores, que son medios, sino en conocer la bondad de Dios y la propia miseria, amar a Dios y hacerlo todo solo por su gloria. Para alcanzarla propone cuatro armas: desconfiar de uno mismo, confiar en Dios, usar bien el entendimiento y la voluntad, y orar. Después baja a lo concreto: cómo vencer las pasiones, gobernar los sentidos y la lengua, resistir las tentaciones, aprovechar la oración y la Comunión, y prepararse para la hora de la muerte. Esta es la traducción de Damián González Cueto, impresa en Barcelona en 1850.", "en": "A manual of the spiritual life by the Theatine priest Lorenzo Scupoli, the book Saint Francis de Sales carried with him for years. It starts from a simple idea: Christian perfection lies not in penances or outward practices, which are means, but in knowing God's goodness and one's own wretchedness, loving God and doing everything only for His glory. To reach it, it proposes four weapons: distrust of oneself, trust in God, the good use of intellect and will, and prayer. It then comes down to detail: how to overcome the passions, govern the senses and the tongue, resist temptations, make good use of prayer and communion, and prepare for the hour of death. This is the Spanish translation by Damián González Cueto, printed in Barcelona in 1850."},
+      porque: {"es": "Para quien quiere pasar de las buenas intenciones a la práctica diaria de la vida interior. Scupoli no se queda en ideas: te enseña a empezar el día, a pelear una pasión a la vez y a no desanimarte cuando caes. Es un libro para leer de a poco, un capítulo por vez, y para volver a él en los días de sequedad, cuando más cuesta seguir.", "en": "For anyone who wants to move from good intentions to the daily practice of the interior life. Scupoli does not stop at ideas: he teaches you how to begin the day, how to fight one passion at a time and how not to lose heart when you fall. It is a book to read slowly, one chapter at a time, and to come back to on days of dryness, when it is hardest to go on."},
+      imagen: { src: "img/portadas/combate-espiritual.jpg", credito: { es: "Guido Reni, «San Miguel Arcángel», 1635", en: "Guido Reni, «Saint Michael the Archangel», 1635" }, url: "https://commons.wikimedia.org/wiki/File:GuidoReni_MichaelDefeatsSatan.jpg" },
+      citas: [
+        "La desconfianza propia, hija mia, nos es tan necesaria en el combate espiritual, que sin esta virtud no solamente no podrémos triunfar de nuestros enemigos, pero ni aun vencer la menor ó la mas leve de nuestras pasiones.",
+        "Por esta causa es necesario que á la desconfianza propia añadas una entera confianza en Dios, que es el autor de todo nuestro bien, y de quien solamente debemos esperar la victoria.",
+        "Es señal indubitable y cierta de nuestro aprovechamiento, cuando en la sequedad, oscuridad y angustias del alma, y en la privacion de las consolaciones y gustos espirituales, continuamos constantemente los ejercicios de la perfeccion."
+      ],
+      archivos: {"epub": "libros/scupoli-combate-espiritual.epub", "pdf": "libros/scupoli-combate-espiritual.pdf"},
+      fuente: {"texto": "Traducción de Damián González Cueto (Barcelona, Librería Religiosa, 1850, tomo XVII; ya publicada por la misma casa en 1830), en el escaneo de Internet Archive; con nota y portada de Proyecto Fénix", "url": "https://archive.org/details/CombateEspiritual1850"},
+      editorial: {"es": "Edición digital de Proyecto Fénix sobre la traducción de González Cueto (1850): texto limpiado del reconocimiento óptico con ayuda de inteligencia artificial, ortografía de la edición conservada, sin los elogios de los editores y con portada nueva.", "en": "Proyecto Fénix digital edition of González Cueto's translation (1850): text cleaned from optical character recognition with the help of artificial intelligence, the edition's spelling kept, without the editors' praises and with a new cover."},
+      delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/combate-espiritual"},
+      parecidos: ["introduccion-a-la-vida-devota", "imitacion-de-cristo", "preparacion-para-la-muerte", "escriva-camino"]
     }
   ],
 
@@ -4450,7 +4472,7 @@ window.FENIX = {
     { titulo: {"es": "Del gran medio de la oración", "en": "Prayer, the Great Means of Salvation"}, autor: "San Alfonso María de Ligorio", delibris: null, estimada: {"valor": 6, "genero": "Pensamiento"} },
     { titulo: {"es": "Introducción a la vida devota", "en": "Introduction to the Devout Life"}, autor: "San Francisco de Sales", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/introduccion-la-vida-devota"} },
     { titulo: {"es": "Tratado del amor de Dios", "en": "Treatise on the Love of God"}, autor: "San Francisco de Sales", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/tratado-del-amor-de-dios"} },
-    { titulo: {"es": "El combate espiritual", "en": "The Spiritual Combat"}, autor: "Lorenzo Scupoli", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/combate-espiritual"} },
+    { titulo: {"en": "The Spiritual Combat"}, autor: "Lorenzo Scupoli", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/combate-espiritual"} },
     { titulo: {"es": "El abandono en la Providencia divina", "en": "Abandonment to Divine Providence"}, autor: "Jean-Pierre de Caussade", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-abandono-de-si-mismo-en-la-providencia-divina"} },
     { titulo: {"es": "Tratado de la verdadera devoción a la Santísima Virgen", "en": "True Devotion to Mary"}, autor: "San Luis María Grignion de Montfort", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/tratado-de-la-verdadera-devocion-la-santisima-virgen"} },
     { titulo: {"es": "Todo por Jesús", "en": "All for Jesus"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/todo-por-jesus"} },

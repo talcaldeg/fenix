@@ -42,6 +42,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [The Everlasting Man - G. K. Chesterton (1925)](https://talcaldeg.github.io/fenix/libro/chesterton-the-everlasting-man/) - Chesterton tells the story of humanity «from the outside», as it might look to someone who took nothing for granted: prehistoric man, pagan myths, the Roman world and, at the end, Christianity. Descarga gratuita en EPUB y PDF.
 - [The Glories of Mary - St. Alphonsus Liguori (1750)](https://talcaldeg.github.io/fenix/libro/ligorio-the-glories-of-mary/) - The great Marian work of Saint Alphonsus Liguori, Doctor of the Church, first published in 1750. Descarga gratuita en EPUB y PDF.
 - [The Holy Bible (Douay-Rheims, Challoner revision) - Douay-Rheims translation, revised by Bishop Richard Challoner (1582-1610; rev. 1749-1752)](https://talcaldeg.github.io/fenix/libro/douay-rheims-bible/) - The classic Catholic Bible in English, translated from St. Descarga gratuita en EPUB y PDF.
+- [El combate espiritual - Lorenzo Scupoli (trad. Damián González Cueto) (1589)](https://talcaldeg.github.io/fenix/libro/combate-espiritual/) - Manual de vida espiritual del clérigo teatino Lorenzo Scupoli, el libro que san Francisco de Sales llevó consigo durante años. Descarga gratuita en EPUB y PDF.
 
 ## Oración
 

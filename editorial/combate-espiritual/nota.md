@@ -1,0 +1,8 @@
+# Nota de esta edición
+
+Lorenzo Scupoli (hacia 1530-1610), clérigo regular teatino, publicó el *Combattimento spirituale* a fines del siglo XVI, y san Francisco de Sales lo tuvo por libro de cabecera. Esta edición ofrece su versión castellana, hecha por Damián González Cueto, tal como la imprimió en Barcelona la Librería Religiosa en 1850 (tomo XVII de su colección, «nueva edición corregida con esmero», con licencia del Vicario General de 2 de marzo de 1850); la misma Librería ya la había publicado en 1830. Trae la dedicatoria del autor a Jesucristo y los 66 capítulos de la obra.
+
+El texto se tomó del escaneo de esa edición en Internet Archive (https://archive.org/details/CombateEspiritual1850) y se pasó a texto limpio con dos lecturas ópticas distintas y la ayuda de inteligencia artificial; las dudas de lectura se resolvieron mirando la imagen de la página. Se corrigieron solo los errores evidentes de la lectura óptica. Se respeta la ortografía de 1850 («mas», «á», «órden», «oracion», «perfeccion», «asi», «podrémos»), sin tilde en las palabras en -cion, y también las referencias bíblicas tal como están impresas, aunque alguna lleve un número equivocado (por ejemplo, 2 Tim 2, 25 por 2, 5 en el epígrafe, o la palabra «intercessionem» por «internecionem»); donde se advirtió, una nota lo dice. Se omitió el pliego de elogios que los editores de 1850 pusieron antes de la dedicatoria.
+Esta edición no ha sido cotejada con otro ejemplar. Si encuentra un error, puede avisarlo desde el sitio de Proyecto Fénix.
+
+Scupoli murió en 1610 y la traducción se publicó ya en 1830: el texto es de dominio público. Esta edición digital de Proyecto Fénix, 2026, se puede copiar y difundir libremente.
