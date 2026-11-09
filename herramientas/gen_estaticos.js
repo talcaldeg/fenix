@@ -541,12 +541,17 @@ ${MEDICION}
 // Donar: página aparte y no vista de index.html, para que el enlace compartido por WhatsApp traiga su
 // propia imagen (img/compartir-dona*.jpg, de herramientas/imagen_compartir.py) y su texto; un #hash no
 // cambia la vista previa, que siempre era la de la portada. index.html lleva #dona hasta acá.
+// Campaña de Catapultame (preventa de la Colección Fénix impresa). Al pasar la fecha, el bloque se quita
+// en el navegador y desaparece del HTML en la siguiente regeneración. La banda del inicio usa la misma fecha.
+const CAMPANA_URL = "https://catapultame.com/api/lanzamientos/coleccion-fenix/";
+const CAMPANA_HASTA = "2026-12-15T02:59:00Z";
 const DONA_TX = {
   es: {
     titulo: "Donar", og: "Dona a Proyecto Fénix", lede: "Fénix es gratuito y sin publicidad. Tu aporte ayuda a digitalizar, corregir y traducir libros que de otro modo se perderían.",
     usoTitulo: "En qué usaremos tu aporte",
     usos: ["En un dominio propio, para que Fénix tenga una dirección fácil de recordar y de compartir.",
       "En conseguir libros originales. Algunas obras que queremos traducir no están digitalizadas en ninguna parte, y para trabajar sobre el texto del autor hay que comprar un ejemplar impreso. Nos pasó con «La vida de identificación con Cristo Jesús»: como el original francés no está en internet, tuvimos que traducirla desde la versión inglesa."],
+    campana: { titulo: "Colección Fénix en papel", texto: "Hasta el 14 de diciembre, la mejor forma de apoyar a Fénix es reservar la Colección Fénix impresa en Catapultame: Confesiones, Historia de un alma, El principito y la Apología de Sócrates, con despacho incluido a todo Chile.", boton: "Reservar en Catapultame" },
     boton: "Donar", pendiente: "Los medios de donación están en preparación. Mientras tanto, la mejor ayuda es compartirlo.",
     alt: "Un fénix que renace del fuego, junto a la invitación a donar a Proyecto Fénix"
   },
@@ -555,6 +560,7 @@ const DONA_TX = {
     usoTitulo: "How we will use your gift",
     usos: ["To buy our own domain, so that Fénix has an address that is easy to remember and share.",
       "To obtain original books. Some works we want to translate are not digitised anywhere, and working from the author's own text means buying a printed copy. That happened with De Jaegher's book: since the French original is not online, we had to translate it from the English version."],
+    campana: { titulo: "The Fénix Collection in print", texto: "Until 14 December, the best way to support Fénix is to pre-order the printed Fénix Collection on Catapultame: Confessions, Story of a Soul, The Little Prince and Plato's Apology, with free shipping anywhere in Chile.", boton: "Pre-order on Catapultame" },
     boton: "Donate", pendiente: "Donation options are being set up. Meanwhile, the best help is to pray for this project and share it.",
     alt: "A phoenix rising from the fire, next to the invitation to donate to Proyecto Fénix"
   }
@@ -600,6 +606,8 @@ ${FUENTES}
   .dona{max-width:720px}
   .dona .lede{font-size:19px}
   .dona ul{padding-left:22px} .dona li{margin:8px 0}
+  .dona .campana{margin:22px 0; padding:18px 20px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:12px; background:var(--card)}
+  .dona .campana h2{margin-top:0} .dona .campana p{margin:0 0 10px}
 </style>
 </head>
 <body>
@@ -607,6 +615,12 @@ ${FUENTES}
 <main class="wrap"><div class="dona">
   <h1>${esc(t.titulo)}</h1>
   <p class="lede">${esc(t.lede)}</p>
+  ${Date.now() < Date.parse(CAMPANA_HASTA) ? `<div class="campana" id="campana" data-hasta="${CAMPANA_HASTA}">
+    <h2>${esc(t.campana.titulo)}</h2>
+    <p>${esc(t.campana.texto)}</p>
+    <div class="botones"><a class="btn prim" href="${CAMPANA_URL}" target="_blank" rel="noopener">${esc(t.campana.boton)}</a></div>
+  </div>
+  <script>(function(){var c=document.getElementById("campana");if(c&&Date.now()>Date.parse(c.dataset.hasta))c.remove();})();</script>` : ""}
   <h2>${esc(t.usoTitulo)}</h2>
   <ul>${t.usos.map(u => `\n    <li>${esc(u)}</li>`).join("")}
   </ul>

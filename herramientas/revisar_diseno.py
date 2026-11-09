@@ -81,6 +81,10 @@ def revisar(raiz, capturas=None):
                             celdas: [...document.querySelectorAll('#accesos .acceso')].reduce((n, a) => n + (a.classList.contains('ancho') ? 2 : 1), 0),
                             columnas: getComputedStyle(q('#accesos')).gridTemplateColumns.split(' ').length,
                             citaDia: !q('#citaDia').hidden && q('#citaDia').textContent.trim().length > 0,
+                            // Campaña de Catapultame: mientras no pase su data-hasta, se ve entera y su botón cabe.
+                            campana: (() => { const c = q('#campana'); if (!c) return 'fuera';
+                                const b = c.querySelector('a.btn'); return c.offsetHeight > 0 && b && b.href.includes('catapultame.com')
+                                    && c.scrollWidth <= c.clientWidth + 1 ? 'ok' : 'mal'; })(),
                             // Línea de investigación: cada obra con su título visible y sin desbordar su tarjeta.
                             obras: [...document.querySelectorAll('#lineaInv .obra')].map(o =>
                                 o.querySelector('h3').textContent.trim().length > 0 && o.scrollWidth <= o.clientWidth + 1)};
@@ -89,6 +93,8 @@ def revisar(raiz, capturas=None):
                     fallas.append(f"{donde}: la grilla de accesos queda con hueco ({r['celdas']} celdas en {r['columnas']} columnas)")
                 if not r["citaDia"]:
                     fallas.append(f"{donde}: la cita del día no se ve")
+                if r["campana"] == "mal":
+                    fallas.append(f"{donde}: la banda de la campaña de Catapultame no se ve bien o su botón no enlaza a la campaña")
                 if len(r["obras"]) < 3 or not all(r["obras"]):
                     fallas.append(f"{donde}: la línea de investigación no muestra bien sus obras {r['obras']}")
                 if r["cifras"] > h:

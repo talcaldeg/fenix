@@ -1363,6 +1363,10 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .titulo-fila{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap}
   .titulo-fila a{font:600 14px system-ui,sans-serif; text-decoration:none}
   .banda{display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-top:44px}
+  .banda.campana{margin-top:34px; border-left:4px solid var(--oro)}
+  .banda.campana > div:first-child{flex:1 1 420px}
+  .banda.campana h3{margin:4px 0 6px} .banda.campana p{margin:0}
+  .banda.campana .eyebrow{margin:0}
   .banda p{margin:0; color:var(--muted)}
   .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; font:600 14px system-ui,sans-serif; border:1px solid var(--line); background:var(--card); color:var(--ink); text-decoration:none; cursor:pointer}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
@@ -1922,6 +1926,17 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
       </div>
     </div>
     <div class="wrap">
+      <!-- Campaña de Catapultame: se oculta sola al pasar data-hasta (cierre de la campaña, hora de Chile). -->
+      <div class="caja banda campana" id="campana" data-hasta="2026-12-15T02:59:00Z">
+        <div>
+          <p class="eyebrow" data-i18n="cam.eyebrow">Preventa hasta el 14 de diciembre</p>
+          <h3 data-i18n="cam.titulo">Colección Fénix: cuatro clásicos, ahora en papel</h3>
+          <p data-i18n="cam.texto">Confesiones, Historia de un alma, El principito y la Apología de Sócrates en ediciones de Proyecto Fénix, con despacho incluido a todo Chile. Al reservar la tuya ayudas a que la biblioteca siga gratis.</p>
+        </div>
+        <div class="acciones">
+          <a class="btn prim" href="https://catapultame.com/api/lanzamientos/coleccion-fenix/" target="_blank" rel="noopener" data-i18n="cam.boton">Reservar en Catapultame</a>
+        </div>
+      </div>
       <a class="cita-dia" id="citaDia" hidden></a>
 
       <div style="margin-top:34px">
@@ -2422,6 +2437,7 @@ function iniciar(){
       "hero.cLibros":"books in the catalogue","hero.cCitas":"hand-picked quotes","hero.cPublicidad":"No ads, no sign-up",
       "hero.imagen":"A phoenix rising from its ashes",
       "acc.eyebrow":"Explore","acc.editorial":"Books we translate and edit","acc.citas":"A sentence from each book","x.libros":"books","x.libro":"book",
+      "cam.eyebrow":"Pre-order until 14 December","cam.titulo":"The Fénix Collection: four classics, now in print","cam.texto":"Confessions, Story of a Soul, The Little Prince and Plato's Apology in Proyecto Fénix editions, with free shipping anywhere in Chile. Reserving yours helps keep the library free.","cam.boton":"Pre-order on Catapultame",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
       "mios.seguir":"Continue reading","mios.favs":"Your favourites","mios.todos":"See all →","sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
       "rec.eyebrow":"Our editions","rec.titulo":"Fénix editions","rec.todos":"See our editions →",
@@ -2505,6 +2521,7 @@ function iniciar(){
     almacen.guardar("tema", raiz.dataset.theme);
   });
   $("#btnIdioma").addEventListener("click", () => { lang = lang === "es" ? "en" : "es"; aplicarIdioma(); });
+  { const c = $("#campana"); if (c && Date.now() > Date.parse(c.dataset.hasta)) c.remove(); }
   $("#btnMenu").addEventListener("click", () => $("#btnMenu").setAttribute("aria-expanded", $("#menu").classList.toggle("abierto")));
   const cerrarMenu = () => { $("#menu").classList.remove("abierto"); $("#btnMenu").setAttribute("aria-expanded", "false"); };
   document.addEventListener("click", e => { if (!e.target.closest("#menuMas")) $("#menuMas").open = false; });
