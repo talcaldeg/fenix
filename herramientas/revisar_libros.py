@@ -42,6 +42,7 @@ import fitz  # PyMuPDF
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 import credito_portada  # noqa: E402
+import indice  # noqa: E402
 
 RAIZ = Path(__file__).resolve().parent.parent
 LIBROS = RAIZ / "libros"
@@ -133,7 +134,16 @@ def revisar_nav(z: zipfile.ZipFile, opf_ruta: str, opf: str, hrefs: dict, spine:
     heredada y sin subrayado, sin la lista numerada y sin color fijo (modo oscuro). Lo arma
     indice.py; antes era una lista web azul, subrayada y numerada 1-9 (24-oct-2026)."""
     ruta, t = nav_del_epub(z, opf_ruta, opf)
-    if not ruta or ruta.rpartition("/")[2] not in [s.rpartition("/")[2] for s in spine]:
+    if ruta and ruta.rpartition("/")[2] not in [s.rpartition("/")[2] for s in spine]:
+        # Índice propio del libro como página aparte: sale sin números de página en el PDF y con
+        # el diseño que traiga (Marmion: lista web subrayada en azul, 9-nov-2026).
+        base = opf_ruta.rpartition("/")[0] + "/" if "/" in opf_ruta else ""
+        for s in spine:
+            p = z.read(base + s).decode("utf-8", "replace") if base + s in z.namelist() else ""
+            if indice.es_pagina_de_indice(p):
+                return [f"el índice es una página suelta ({s}) y no el nav: correr indice.py"]
+        return []
+    if not ruta:
         return []
     carpeta = ruta.rpartition("/")[0] + "/" if "/" in ruta else ""
     css = " ".join(z.read(carpeta + h).decode("utf-8", "replace") for h in re.findall(r'<link\b[^>]*href="([^"]+\.css)"', t)
@@ -254,16 +264,26 @@ def numeros_del_indice(ruta: Path, d) -> list:
         paginas.append(d[k])
         k += 1
     malos, total = [], 0
+    # Misma entrada = misma página y mismo punto de destino (un capítulo y su primera sección
+    # pueden caer en la misma página y son dos entradas). La que sigue en la página siguiente
+    # lleva el número donde termina (epub_a_pdf.py, 9-nov-2026).
+    por_pagina = []
     for p in paginas:
-        palabras = p.get_text("words")
         enlaces = sorted((l for l in p.get_links() if l["kind"] == fitz.LINK_GOTO), key=lambda l: l["from"].y0)
         entradas = []
         for l in enlaces:
-            if entradas and entradas[-1][0] == l["page"] and l["from"].y0 - entradas[-1][1].y1 < 5:
-                entradas[-1][1] = l["from"]
+            clave = [l["page"], round(l["to"].y) if l.get("to") is not None else None]
+            if entradas and entradas[-1][:2] == clave and l["from"].y0 - entradas[-1][2].y1 < 5:
+                entradas[-1][2] = l["from"]
             else:
-                entradas.append([l["page"], l["from"]])
-        for destino, r in entradas:
+                entradas.append(clave + [l["from"]])
+        por_pagina.append(entradas)
+    for k in range(len(por_pagina) - 1):
+        if por_pagina[k] and por_pagina[k + 1] and por_pagina[k][-1][:2] == por_pagina[k + 1][0][:2]:
+            por_pagina[k].pop()
+    for p, entradas in zip(paginas, por_pagina):
+        palabras = p.get_text("words")
+        for destino, _, r in entradas:
             total += 1
             medio = (r.y0 + r.y1) / 2
             nums = [w for w in palabras if w[0] > r.x1 and w[1] < medio < w[3] and w[4].isdigit()]

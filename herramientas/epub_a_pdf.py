@@ -120,23 +120,36 @@ def numerar_indice(z: zipfile.ZipFile, doc, pdf) -> int:
                 break
     letra = letra or fitz.Font("tiro")
     n = 0
+    por_pagina = {}
     for i in paginas:
-        lineas = [l for b in doc[i].get_text("dict")["blocks"] for l in b.get("lines", [])]
-        margen = min(l["bbox"][0] for l in lineas)
-        derecha = doc[i].rect.width - margen
         # MuPDF da un enlace por línea: las líneas seguidas con el mismo destino son una entrada
-        # (el rótulo y su título); de cada entrada vale la última.
-        entradas = []  # [destino, rect de su última línea]
+        # (el rótulo y su título); de cada entrada vale la última. El mismo destino es la misma
+        # página y el mismo punto: un capítulo y su primera sección caen en la misma página, pero
+        # son dos entradas (Marmion, 9-nov-2026: «Hijo de Irlanda» quedaba sin número).
+        entradas = []  # [destino, punto, rect de su última línea]
         enlaces = sorted((l for l in doc[i].get_links() if l["kind"] == fitz.LINK_GOTO and l.get("page", -1) >= 0),
                          key=lambda l: l["from"].y0)
         for l in enlaces:
             r = l["from"]
-            if entradas and entradas[-1][0] == l["page"] and r.y0 - entradas[-1][1].y1 < 0.45 * LETRA:
-                entradas[-1][1] = r
+            punto = round(l["to"].y) if l.get("to") is not None else None
+            if entradas and entradas[-1][:2] == [l["page"], punto] and r.y0 - entradas[-1][2].y1 < 0.45 * LETRA:
+                entradas[-1][2] = r
             else:
-                entradas.append([l["page"], r])
+                entradas.append([l["page"], punto, r])
+        por_pagina[i] = entradas
+    # Una entrada que sigue en la página siguiente lleva el número donde termina, no en la
+    # primera parte (MuPDF no respeta break-inside: avoid; Marmion, 9-nov-2026).
+    for i in paginas:
+        sig = por_pagina.get(i + 1)
+        if por_pagina[i] and sig and por_pagina[i][-1][:2] == sig[0][:2]:
+            por_pagina[i].pop()
+    for i in paginas:
+        entradas = por_pagina[i]
+        lineas = [l for b in doc[i].get_text("dict")["blocks"] for l in b.get("lines", [])]
+        margen = min(l["bbox"][0] for l in lineas)
+        derecha = doc[i].rect.width - margen
         tw = fitz.TextWriter(pdf[i].rect)
-        for destino, r in entradas:
+        for destino, _, r in entradas:
             linea = max((l for l in lineas if fitz.Rect(l["bbox"]).intersects(r)),
                         key=lambda l: l["bbox"][3], default=None)
             if not linea:
