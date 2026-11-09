@@ -134,6 +134,13 @@ uno.
     obra y el lugar donde consta, verificados en su texto: aquí, Raimundo de Capua, *Legenda
     maior*, I, 4. Antes de dar un libro por listo, se buscan los nombres propios de santos y
     autores en el cuerpo, no solo las comillas.
+17. **Libertades de una traducción ajena** (*Mujercitas*, Albanella 1943, «trabajamos como unas
+    negras» donde Alcott dice "we work hard enough"; reporte del 9-nov). Una traducción antigua
+    de otro traductor no se publica tal cual: se coteja entera contra el original (`bilingue.py`
+    y sus `_pares.tsv`) y se corrige lo que agregó, quitó, censuró o cambió de sentido, con las
+    palabras de la traducción en todo lo demás. Lo que dice el autor se deja, aunque hoy suene
+    mal; lo que puso el traductor, no. La nota de la edición dice cuántos pasajes se corrigieron
+    y contra qué edición del original.
 
 ## Glosario
 

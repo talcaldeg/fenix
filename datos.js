@@ -4490,7 +4490,7 @@ window.FENIX = {
         "Preferiría verlas esposas de hombres pobres si fueran felices, amadas y contentas, que reinas en sus tronos sin propia estimación ni paz."
       ],
       archivos: {"epub": "libros/alcott-mujercitas.epub", "pdf": "libros/alcott-mujercitas.pdf"},
-      fuente: {"texto": "Traducción de Enriqueta S. Albanella (Editorial Molino, Buenos Aires, 1943), en una edición digital; nota y portada de Proyecto Fénix (dominio público)", "url": "https://datos.bne.es/persona/XX1179488.html"},
+      fuente: {"texto": "Traducción de Enriqueta S. Albanella (Editorial Molino, Buenos Aires, 1943), en una edición digital, cotejada con el original de 1868-1869; nota y portada de Proyecto Fénix (dominio público)", "url": "https://datos.bne.es/persona/XX1179488.html"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mujercitas"},
       parecidos: ["austen-sense-and-sensibility", "burnett-el-jardin-secreto", "austen-pride-and-prejudice"]
     }

@@ -332,5 +332,9 @@ if __name__ == "__main__":
     a.add_argument("--sin-traduccion", action="store_true", help="edición de una traducción ajena de dominio público")
     a.add_argument("--derechos", default="Traducción de Proyecto Fénix, CC BY-NC-SA 4.0")
     o = a.parse_args()
+    # Una traduccion ajena nunca lleva la portadilla por defecto (Mujercitas, 9-nov-2026)
+    if o.sin_traduccion and "Proyecto Fénix" in o.subtitulo:
+        a.error("--sin-traduccion exige --subtitulo con el traductor real, p. ej. "
+                "\"Traducción de <nombre>, <editorial>, <año>\" (el del content.opf viejo)")
     armar(o.carpeta, o.salida, o.titulo, o.autor, o.subtitulo, o.original, o.idioma, o.editor,
           not o.sin_traduccion, o.derechos)
