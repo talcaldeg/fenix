@@ -1,4 +1,4 @@
-He observado que las religiosas más santas son las más queridas; se busca su conversación, se les prestan servicios sin que siquiera los pidan; en fin, estas almas, capaces de soportar faltas de consideración y de delicadeza, se ven rodeadas del afecto general. Puede aplicárseles esta palabra de nuestro Padre san Juan de la Cruz: «Todos los bienes me fueron dados cuando ya no los busqué por amor propio.»
+He observado que las religiosas más santas son las más queridas; se busca su conversación, se les prestan servicios sin que siquiera los pidan; en fin, estas almas, capaces de soportar faltas de consideración y de delicadeza, se ven rodeadas del afecto general. Puede aplicárseles esta palabra de nuestro Padre san Juan de la Cruz: «Cuando con propio amor nada quise, dióseme todo sin irme tras de ello.»[^ch5]
 
 Las almas imperfectas, al contrario, son abandonadas; se guardan con ellas los límites de la cortesía religiosa, pero, temiendo quizá decirles alguna palabra desagradable, se evita su compañía. Al decir las almas imperfectas, no entiendo solamente las imperfecciones espirituales, puesto que las más santas no serán perfectas sino en el cielo; entiendo también la falta de juicio, de educación, la susceptibilidad de ciertos caracteres: todas cosas que no hacen la vida agradable. Sé bien que estas enfermedades son crónicas, sin esperanza de curación; pero sé también que mi Madre no dejaría de cuidarme, de intentar aliviarme, si yo permaneciera enferma muchos años.
 
@@ -55,3 +55,5 @@ La respuesta no se hizo esperar; me mostró que Aquel a quien amo nunca se queda
 [^119]: 2 Co 9, 7.
 
 [^120]: Mt 25, 40.
+
+[^ch5]: N. del E.: san Juan de la Cruz, Monte de perfección (el dibujo que acompaña la Subida del Monte Carmelo), leyenda de la cumbre. «Sin irme tras de ello»: sin andar buscándolo.

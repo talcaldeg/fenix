@@ -4,7 +4,7 @@
 
 «Es de la más alta importancia que el alma se ejercite mucho en el AMOR, a fin de que, consumiéndose rápidamente, no se detenga apenas aquí abajo, sino que llegue pronto a ver a su Dios cara a cara.»
 
-San Juan de la Cruz.
+San Juan de la Cruz.[^ch6]
 
 «*Muchas páginas de esta historia no se leerán jamás sobre la tierra...*» Sor Teresa del Niño Jesús lo ha dicho; y nosotros lo repetimos forzosamente después de ella. Hay sufrimientos que no está permitido revelar aquí abajo; solo el Señor se ha reservado celosamente el descubrir su mérito y su gloria en la clara visión que rasgará todos los velos...
 
@@ -96,7 +96,7 @@ Le gusta decir que no hacía grandes penitencias: es que su fervor tenía por na
 
 * * * * *
 
-«*Las almas más queridas de mi Padre*, decía un día Nuestro Señor a santa Teresa, *son las que Él prueba más; y la grandeza de sus pruebas es la medida de su amor.*» Teresa era una de esas almas más queridas de Dios; y Él iba a colmar su amor inmolándola en un cruel martirio.
+Nuestro Señor dijo un día a santa Teresa: «*Cree, hija, que a quien mi Padre más ama, da mayores trabajos, y a éstos responde el amor.*»[^ch4] Teresa era una de esas almas más queridas de Dios; y Él iba a colmar su amor inmolándola en un cruel martirio.
 
 Conocemos la llamada del Viernes Santo, 3 de abril de 1896, en que, según su expresión, oyó «*como un lejano murmullo que le anunciaba la llegada del Esposo*.» Largos meses, muy dolorosos, debían transcurrir aún antes de esa hora bendita de la liberación.
 
@@ -225,3 +225,7 @@ Viendo su celda vacía, y sabiendo que nunca volvería a subir a ella, la Madre 
 [^144]: Jn 3, 34.
 
 [^145]: Ct 2, 9.
+
+[^ch4]: N. del E.: santa Teresa de Jesús, Relaciones espirituales (Cuentas de conciencia), «Mercedes de Dios», n. 36 en la edición de las Obras de santa Teresa de Jesús del P. Silverio de Santa Teresa (Biblioteca Mística Carmelitana, t. II, 1915). El texto francés del libro es una paráfrasis: «las almas más queridas de mi Padre son las que Él prueba más, y la grandeza de sus pruebas es la medida de su amor».
+
+[^ch6]: N. del E.: no la hemos hallado con estas palabras en los escritos de san Juan de la Cruz; se traduce del francés.

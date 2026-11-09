@@ -52,11 +52,11 @@ Celina se había convertido, sobre todo desde Navidad, en la confidente íntima 
 
 En nosotras se cumplieron las palabras de nuestro Padre san Juan de la Cruz, en su Cántico espiritual:
 
-> Siguiendo tus huellas, oh mi Amado,
-> las jóvenes recorren ligeramente el camino.
-> El toque de la chispa,
-> el vino aromado,
-> les hacen producir aspiraciones divinamente perfumadas.
+> A zaga de tu huella
+> las jóvenes discurren al camino,
+> al toque de centella,
+> al adobado vino,
+> emisiones de bálsamo divino.[^ce1]
 
 ¡Sí, con qué ligereza seguíamos las huellas de Jesús! Las chispas ardientes que Él sembraba en nuestras almas, el vino delicioso y fuerte que nos daba a beber hacían desaparecer ante nuestros ojos las cosas pasajeras de aquí abajo; y de nuestros labios salían aspiraciones todas de amor.
 
@@ -70,12 +70,12 @@ Jesús, que veía mi deseo, inspiraba, pues, a mi confesor para que me permitier
 
 Cuando un jardinero rodea de cuidados un fruto que quiere hacer madurar antes de tiempo, nunca es para dejarlo colgado del árbol; es para presentarlo en una mesa ricamente servida. Con una intención semejante, Jesús prodigaba sus gracias a su florecilla. Quería hacer resplandecer en mí su misericordia; Él, que exclamaba en un arrebato de alegría, en los días de su vida mortal: «*Padre, te bendigo porque has ocultado estas cosas a los sabios y a los prudentes, para revelarlas a los más pequeños.*»[^37] Porque yo era pequeña y débil, se abajaba hacia mí y me instruía dulcemente en los secretos de su amor. Como dice san Juan de la Cruz en su Cántico del alma:
 
-> No tenía guía ni luz,
-> excepto la que brillaba en mi corazón.
-> Esa luz me guiaba
-> más seguramente que la del mediodía
-> al lugar donde me esperaba
-> Aquel que me conoce perfectamente.
+> sin otra luz y guía
+> sino la que en el corazón ardía.
+> Aquésta me guiaba
+> más cierto que la luz del mediodía,
+> adonde me esperaba
+> quien yo bien me sabía.[^ce2]
 
 Ese lugar era el Carmelo; pero antes de *reposar a la sombra de Aquel a quien yo deseaba*[^38], debía pasar por muchas pruebas. Y sin embargo la llamada divina se hacía tan apremiante que, aunque hubiera tenido que atravesar las llamas, me habría lanzado a ellas para responder a Nuestro Señor.
 
@@ -144,3 +144,8 @@ Eso me hace recordar que, antaño, entre mis pájaros, yo tenía un canario que 
 [^39]: Mt 18, 6.
 
 [^ed3]: N. del E.: es una hipérbole de la experiencia espiritual. En esta vida «caminamos en la fe y no en la visión» (2 Co 5, 7; CEC 164); solo en el cielo veremos a Dios «cara a cara» (1 Co 13, 12; CEC 163).
+
+
+[^ce1]: N. del E.: san Juan de la Cruz, Cántico espiritual (segunda redacción), canción 25. «A zaga de»: tras, siguiendo; «adobado vino»: vino aderezado con especias.
+
+[^ce2]: N. del E.: san Juan de la Cruz, Noche oscura, estrofa 3 (versos 4-5) y estrofa 4 (versos 1-4); santa Teresa las cita juntas y las llama «Cántico del alma». «Quien yo bien me sabía»: aquel a quien yo bien conocía.

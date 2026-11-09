@@ -74,6 +74,6 @@ Puede sufrir, y sufrir mucho; puede consumirse en un lecho de dolor; puede ver l
 
 [^e]: N. del T.: Gál 4, 19.
 
-[^f]: N. del T.: es el estribillo del poema de santa Teresa de Jesús «Vivo sin vivir en mí».
+[^f]: N. del E.: santa Teresa de Jesús, *Poesías*, «Vivo sin vivir en mí», estribillo de cada copla: «que muero porque no muero».
 
 [^ed1]: N. del E.: el «odio de sí» es lenguaje del Evangelio (Lc 14, 26; Jn 12, 25) y recae sobre el yo desordenado por el amor propio. No contradice el justo amor de sí mismo, que el Catecismo llama «principio fundamental de la moralidad» (n. 2264). El camino de la perfección pasa por la renuncia y conduce «a vivir en la paz y el gozo de las bienaventuranzas» (n. 2015).

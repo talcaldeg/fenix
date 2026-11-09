@@ -1,6 +1,6 @@
 No soy más que una niña impotente y débil; sin embargo, es mi misma debilidad la que me da la audacia de ofrecerme como víctima a tu amor, ¡oh Jesús! Antaño, solo las hostias puras y sin mancha eran aceptadas por el Dios fuerte y poderoso: para satisfacer a la justicia divina hacían falta víctimas perfectas; pero a la ley de temor ha sucedido la ley de amor, y el amor me ha elegido por holocausto a mí, ¡criatura débil e imperfecta! ¿No es esta elección digna del amor? Sí, para que el amor quede plenamente satisfecho, es preciso que se abaje hasta la nada y que transforme en fuego esa nada.
 
-Oh Dios mío, lo sé, *el amor solo se paga con amor*[^135]. Por eso he buscado y he encontrado el modo de aliviar mi corazón devolviéndote amor por amor.
+Oh Dios mío, lo sé, *el amor no se paga sino de sí mismo*[^135]. Por eso he buscado y he encontrado el modo de aliviar mi corazón devolviéndote amor por amor.
 
 «*Empleen las riquezas que hacen injustos para ganarse amigos que los reciban en los Tabernáculos eternos.*»[^136] He ahí, Señor, el consejo que das a tus discípulos, después de haberles dicho que *los hijos de las tinieblas son más hábiles en sus negocios que los hijos de la luz*[^137].
 
@@ -16,7 +16,7 @@ Sí, Amado mío, así se consumirá mi vida efímera delante de Ti. No tengo otr
 
 Pero ¿de qué te servirán, Jesús mío, mis flores y mis cantos? ¡Ah, bien lo sé!, esta lluvia embalsamada, estos pétalos frágiles y sin valor alguno, estos cantos de amor de un corazón tan pequeño te encantarán de todos modos. Sí, estas nadas te darán gusto: harán sonreír a la Iglesia triunfante que, queriendo jugar con su niñita, recogerá estas rosas deshojadas y, haciéndolas pasar por tus manos divinas para revestirlas de un valor infinito, las arrojará sobre la Iglesia purgante para apagar sus llamas; sobre la Iglesia militante para darle la victoria.
 
-¡Oh Jesús mío! Te amo, amo a la Iglesia, mi madre, recuerdo que *el más pequeño movimiento de puro amor le es más útil que todas las demás obras juntas*[^138]. Pero ¿está de veras el puro amor en mi corazón? Mis inmensos deseos, ¿no son un sueño, una locura? ¡Ah! si así es, ilumíname; Tú lo sabes, busco la verdad. Si mis deseos son temerarios, hazlos desaparecer; pues estos deseos son para mí el mayor de los martirios. Sin embargo, lo confieso, si un día no alcanzo esas regiones más elevadas hacia las que aspira mi alma, habré gustado más dulzura en mi martirio, en mi locura, que la que gustaré en el seno de las alegrías eternas; a menos que, por un milagro, me quites el recuerdo de mis esperanzas terrenales. ¡Jesús! ¡Jesús! si es tan delicioso el deseo del amor, ¿qué será entonces poseerlo, gozarlo para siempre?
+¡Oh Jesús mío! Te amo, amo a la Iglesia, mi madre, recuerdo que *es más precioso delante de Dios y del alma un poquito de este puro amor y más provecho hace a la Iglesia, aunque parece que no hace nada, que todas esas otras obras juntas*[^138]. Pero ¿está de veras el puro amor en mi corazón? Mis inmensos deseos, ¿no son un sueño, una locura? ¡Ah! si así es, ilumíname; Tú lo sabes, busco la verdad. Si mis deseos son temerarios, hazlos desaparecer; pues estos deseos son para mí el mayor de los martirios. Sin embargo, lo confieso, si un día no alcanzo esas regiones más elevadas hacia las que aspira mi alma, habré gustado más dulzura en mi martirio, en mi locura, que la que gustaré en el seno de las alegrías eternas; a menos que, por un milagro, me quites el recuerdo de mis esperanzas terrenales. ¡Jesús! ¡Jesús! si es tan delicioso el deseo del amor, ¿qué será entonces poseerlo, gozarlo para siempre?
 
 ¿Cómo puede un alma tan imperfecta como la mía aspirar a la plenitud del amor? ¿Cuál es, pues, este misterio? ¿Por qué no reservas, oh mi único Amigo, estas inmensas aspiraciones a las almas grandes, a las águilas que planean en las alturas? ¡Ay! yo no soy más que un pobre pajarito cubierto apenas de un ligero plumón; no soy un águila, solo tengo sus ojos y su corazón... Sí, a pesar de mi extrema pequeñez, me atrevo a fijar la mirada en el Sol divino del amor, ¡y ardo en deseos de lanzarme hasta Él! Quisiera volar, quisiera imitar a las águilas; pero todo lo que puedo hacer es levantar mis alitas; no está en mi pequeño poder echar a volar.
 
@@ -51,13 +51,13 @@ Tú nos lo has dicho muchas veces:
 
 TERESA DEL NIÑO JESÚS.
 
-[^135]: San Juan de la Cruz.
+[^135]: San Juan de la Cruz. N. del E.: Cántico espiritual (segunda redacción), canción 9, n. 7: «el amor no se paga sino de sí mismo». Santa Teresa cita de memoria; en francés dice «el amor solo se paga con amor».
 
 [^136]: Lc 16, 9.
 
 [^137]: *Ibid.*, 8.
 
-[^138]: San Juan de la Cruz.
+[^138]: San Juan de la Cruz. N. del E.: Cántico espiritual (segunda redacción), anotación antes de la canción 29, n. 2 (CB 29, 2).
 
 [^139]: Is 38, 14.
 

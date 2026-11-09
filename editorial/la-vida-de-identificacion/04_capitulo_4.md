@@ -78,6 +78,6 @@ No, no teme a Jesús. Todavía cree, quizá sin saberlo y como por instinto, en 
 
 [^d]: N. del T.: no la hemos hallado con estas palabras en los textos de santa Margarita María que pudimos consultar. Una muy parecida la dice el Señor a santa Catalina de Siena: «Hija, piensa en mí, y yo pensaré en ti sin cesar» (beato Raimundo de Capua, *Vida de santa Catalina de Siena*, I, 9).
 
-[^e]: N. del T.: *Noche oscura*, II, 12, 1: «así como se purgan los espíritus en la otra vida con fuego tenebroso material, en esta vida se purgan y limpian con fuego amoroso tenebroso espiritual».
+[^e]: N. del E.: san Juan de la Cruz, *Noche oscura*, libro II, cap. 12, n. 1: «así como se purgan los espíritus en la otra vida con fuego tenebroso material, en esta vida se purgan y limpian con fuego amoroso tenebroso espiritual».
 
 [^ed1]: N. del E.: el autor describe lo que el alma siente en la noche del espíritu, en la que se juzga merecedora de ese abandono; no afirma que Dios la abandone. La sequedad es el momento en que la fe es más pura (Catecismo, n. 2731), y el Señor es fiel a sus promesas (n. 2091).

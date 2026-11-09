@@ -42,7 +42,7 @@ Tampoco debo ser servicial para parecerlo, o con la esperanza de que otra vez la
 
 Madre querida, siento que, más que nunca, me he explicado muy mal. No sé qué interés podrá encontrar usted en leer todos estos pensamientos confusos. En fin, no escribo para hacer una obra literaria; si la aburro con esta especie de discurso sobre la caridad, al menos verá que su hija ha dado prueba de buena voluntad.
 
-¡Ay!, estoy lejos, lo confieso, de practicar lo que comprendo; y sin embargo el solo deseo que tengo de ello me da la paz. Si me ocurre caer en alguna falta contraria, me levanto enseguida; desde hace algunos meses ya ni siquiera tengo que combatir, puedo decir con nuestro Padre san Juan de la Cruz: «*Mi morada está enteramente pacificada*», y atribuyo esta paz íntima a cierto combate en el que salí victoriosa. A partir de ese triunfo, la milicia celestial viene en mi ayuda, sin poder soportar verme herida después de haber luchado valientemente en la ocasión que voy a describir.
+¡Ay!, estoy lejos, lo confieso, de practicar lo que comprendo; y sin embargo el solo deseo que tengo de ello me da la paz. Si me ocurre caer en alguna falta contraria, me levanto enseguida; desde hace algunos meses ya ni siquiera tengo que combatir, puedo decir con nuestro Padre san Juan de la Cruz: «*estando ya mi casa sosegada*»[^ch1], y atribuyo esta paz íntima a cierto combate en el que salí victoriosa. A partir de ese triunfo, la milicia celestial viene en mi ayuda, sin poder soportar verme herida después de haber luchado valientemente en la ocasión que voy a describir.
 
 Una santa religiosa de la comunidad tenía antiguamente el talento de desagradarme en todo; el demonio andaba de por medio, pues ciertamente era él quien me hacía ver en ella tantos aspectos desagradables; por eso, no queriendo ceder a la antipatía natural que sentía, me dije que la caridad no debía consistir solo en los sentimientos, sino dejarse ver en las obras. Entonces me apliqué a hacer por esa hermana lo que habría hecho por la persona a quien más quiero. Cada vez que me la encontraba, rogaba al buen Dios por ella, ofreciéndole todas sus virtudes y sus méritos. Sentía bien que eso alegraba grandemente a mi Jesús; pues no hay artista que no guste de recibir alabanzas por sus obras, y el divino Artista de las almas se alegra cuando uno no se detiene en lo exterior, sino que, penetrando hasta el santuario íntimo que Él se ha escogido por morada, admira su belleza.
 
@@ -95,3 +95,5 @@ Recordando que *la caridad cubre la multitud de los pecados*[^108], me abastezco
 [^108]: Pr 10, 12.
 
 [^109]: Sal 118, 32.
+
+[^ch1]: N. del E.: san Juan de la Cruz, Noche oscura, canción 1, verso 5 («En una noche oscura»). «Casa» es el alma, aquí la «morada» del texto francés.

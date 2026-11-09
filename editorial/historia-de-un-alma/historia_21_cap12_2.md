@@ -57,7 +57,7 @@ No se equivocaba: sí, su alma estaba cargada de gracias... ¡y qué fácil pare
 
 ¿No había hecho ya este Espíritu de verdad escribir a la gran Teresa de Ávila:
 
-«*Con una humilde y santa presunción, que las almas llegadas a la unión divina se tengan en alta estima, que tengan sin cesar ante los ojos el recuerdo de los beneficios recibidos y se guarden bien de creer hacer acto de humildad no reconociendo las gracias de Dios. ¿No es claro que un recuerdo fiel de los beneficios aumenta el amor hacia el bienhechor? ¿Cómo podrá el que ignora las riquezas de que es poseedor hacer partícipes de ellas a otros y distribuirlas con liberalidad?*»
+«Y así ruego yo, por amor del Señor, a las almas a quien Su Majestad ha hecho tan gran merced de que lleguen a este estado, que se conozcan y tengan en mucho, con una humilde y santa presunción para no tornar a las ollas de Egipto. (...) No cure de unas humildades que hay (...) que les parece humildad, no entender que el Señor les va dando dones. (...) Es cosa muy clara, que amamos más a una persona, cuando mucho se nos acuerda las buenas obras que nos hace. (...) Pues ¿cómo aprovechará y gastará con largueza, el que no entiende que está rico?»[^ch3]
 
 * * * * *
 
@@ -292,7 +292,7 @@ Esta mirada se prolongó el espacio de un *Credo*, y su alma bienaventurada, hec
 
 Este ángel nos había dicho algunos días antes de dejar este mundo: «*La muerte de amor que deseo es la de Jesús en la cruz.*» su deseo fue plenamente escuchado: las tinieblas y la angustia acompañaron su agonía. Sin embargo, ¿no podemos aplicarle también la profecía sublime de san Juan de la Cruz acerca de las almas consumadas en la divina caridad?
 
-«*Mueren en transportes admirables y asaltos deliciosos que les da el amor, como el cisne cuyo canto es más melodioso cuando está a punto de morir.* Eso es lo que hacía decir a David que “*la muerte de los justos es preciosa ante Dios*”: pues es entonces cuando los ríos del amor se escapan del alma, y se van a perder en el océano del amor divino.»
+«Mueren con más subidos ímpetus y encuentros sabrosos de amor, siendo ellas como el cisne, que canta más suavemente cuando se muere. Que por eso dijo David (Sal 115, 15) que era preciosa la muerte de los santos en el acatamiento de Dios, porque aquí vienen en uno a juntarse todas las riquezas del alma, y van allí a entrar los ríos del amor del alma en la mar.»[^ch2]
 
 * * * * *
 
@@ -311,3 +311,7 @@ Este ángel nos había dicho algunos días antes de dejar este mundo: «*La muer
 [^152]: Sal 22, 4.
 
 [^ed9]: N. del E.: el versículo dice entero, en la Vulgata, «cuando Dios se levantó para el juicio, para salvar a todos los mansos de la tierra» (Sal 75, 10). Teresa subraya la misericordia sin negar el juicio, que revelará que el amor de Dios es más fuerte que la muerte (CEC 1040).
+
+[^ch2]: N. del E.: san Juan de la Cruz, Llama de amor viva (segunda redacción), canción 1, n. 30. «Acatamiento»: presencia, mirada. El texto francés del libro es una paráfrasis de este pasaje.
+
+[^ch3]: N. del E.: santa Teresa de Jesús, Libro de la Vida, cap. 15, n. 3, y cap. 10. El texto francés del libro junta y resume estos pasajes; aquí van las palabras de la santa. «Ollas de Egipto»: cf. Ex 16, 3; «no cure»: no haga caso.

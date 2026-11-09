@@ -140,7 +140,7 @@ A todas mis locuras, ¿qué vas a responder? ¿Hay sobre la tierra un alma más 
 
 Como estas aspiraciones se volvían un verdadero martirio, abrí un día las epístolas de san Pablo, para buscar algún remedio a mi tormento. Los capítulos XII y XIII de la primera epístola a los Corintios cayeron ante mis ojos. Leí en ellos que no todos pueden ser a la vez apóstoles, profetas y doctores, que la Iglesia se compone de diferentes miembros, y que el ojo no podría ser al mismo tiempo la mano.
 
-La respuesta era clara, pero no colmaba mis deseos ni me daba la paz. «*Abajándome entonces hasta lo profundo de mi nada, me elevé tan alto que pude alcanzar mi meta.*»[^133] Sin desanimarme, continué mi lectura y este consejo me alivió: «*Busquen con ardor los dones más perfectos; pero todavía voy a mostrarles un camino más excelente.*»[^134]
+La respuesta era clara, pero no colmaba mis deseos ni me daba la paz. «*y abatíme tanto, tanto, / que fui tan alto, tan alto, / que le di a la caza alcance*»[^133] Sin desanimarme, continué mi lectura y este consejo me alivió: «*Busquen con ardor los dones más perfectos; pero todavía voy a mostrarles un camino más excelente.*»[^134]
 
 Y el Apóstol explica cómo todos los dones más perfectos no son nada sin el *Amor*, que la Caridad es el camino más excelente para ir con seguridad a Dios. ¡Por fin había encontrado el reposo!
 
@@ -172,11 +172,11 @@ Entonces, en el exceso de mi gozo delirante, exclamé: «Oh Jesús, amor mío, �
 
 [^131]: la Venerable Madre Ana de Jesús, en el mundo Ana de Lobera, nació en España en 1545. Entró en la Orden del Carmelo, en el primer monasterio de San José de Ávila, en 1570, y pronto llegó a ser la consejera y coadjutora de santa Teresa, que la llamaba «*su hija y su corona*». San Juan de la Cruz, su director espiritual durante catorce años, gustaba de llamarla «*un serafín encarnado*», y se tenía en tan alta estima su sabiduría y su santidad que los sabios la consultaban en sus dudas y recibían sus respuestas como oráculos. Fiel heredera del espíritu de santa Teresa, había recibido del Cielo la misión de conservar a la Reforma del Carmelo su perfección primitiva. Después de haber fundado tres monasterios de esta reforma en España, la implantó en Francia, luego en Bélgica, donde, ya célebre por los dones sobrenaturales más elevados, particularmente el de la contemplación, murió en olor de santidad en el convento de las carmelitas de Bruselas, el ... de marzo de 1621.
 
-El 3 de mayo de 1878, Su Santidad el Papa León XIII firmó la introducción de la causa de beatificación de esta gran sierva de Dios.
+El 3 de mayo de 1878, Su Santidad el Papa León XIII firmó la introducción de la causa de beatificación de esta gran sierva de Dios. N. del E.: no hemos hallado «su hija y su corona» ni «un serafín encarnado» con estas palabras en los escritos de santa Teresa ni de san Juan de la Cruz; se traducen del francés.
 
 [^132]: Mt 8, 26.
 
-[^133]: San Juan de la Cruz.
+[^133]: San Juan de la Cruz. N. del E.: Poesías, «Tras de un amoroso lance» (otras del mismo a lo divino), estrofa 3, versos 7-9; santa Teresa del Niño Jesús lo cita de memoria en francés. «Caza»: la presa.
 
 [^134]: 1 Co 12, 31.
 

@@ -110,25 +110,25 @@ Habiéndole tocado ese hermoso cielo en herencia, los lazos que retenían en el 
 
 ¡Ahora ya no tengo ningún deseo, si no es el de amar a Jesús hasta la locura! Sí, solo el AMOR me atrae. Ya no deseo ni el sufrimiento ni la muerte, y sin embargo ¡a las dos las quiero! Mucho tiempo las llamé como mensajeras de alegría... ¡Poseí el sufrimiento y creí tocar la orilla del cielo! Creí, desde mi más tierna juventud, que *la florecilla* sería cortada en su primavera; hoy solo me guía el abandono, no tengo otra brújula. Ya no sé pedir nada con ardor, excepto el cumplimiento perfecto de la voluntad de Dios sobre mi alma. Puedo decir estas palabras del cántico de nuestro Padre san Juan de la Cruz:
 
-En la bodega interior
-De mi Amado, bebí... y cuando salí,
-En toda esta llanura
-Ya no conocía nada,
-Y perdí el rebaño que antes seguía.
+> En la interior bodega
+> de mi Amado bebí, y, cuando salía
+> por toda aquesta vega,
+> ya cosa no sabía;
+> y el ganado perdí que antes seguía.[^ce3]
 
-Mi alma se ha empleado
-Con todos sus recursos en su servicio;
-Ya no guardo rebaño,
-Ya no tengo otro oficio,
-Pues ahora *todo mi ejercicio es* AMAR.
+> Mi alma se ha empleado,
+> y todo mi caudal, en su servicio;
+> ya no guardo ganado,
+> ni ya tengo otro oficio,
+> que ya sólo en amar es mi ejercicio.[^ce4]
 
 O también:
 
-Desde que lo he experimentado,
-El *amor* es tan poderoso en obras
-Que sabe sacar provecho de todo,
-Del bien y del mal que halla en mí,
-Y transformar mi alma en sí.
+> Hace tal obra el amor
+> después que le conocí,
+> que, si hay bien o mal en mí,
+> todo lo hace de un sabor,
+> y al alma transforma en sí.[^ce5]
 
 Oh Madre mía, ¡qué dulce es la vía del *amor*! Sin duda se puede caer, se pueden cometer infidelidades; pero el amor, sabiendo *sacar provecho de todo*, ha consumido muy pronto *todo* lo que puede desagradar a Jesús, sin dejar en el fondo del corazón más que una humilde y profunda paz.
 
@@ -151,3 +151,10 @@ Oh Madre mía, ¡qué dulce es la vía del *amor*! Sin duda se puede caer, se pu
 [^69]: Fue el 14 de septiembre de 1894. *Celina* se hizo *Sor Genoveva de Santa Teresa*.
 
 [^ed4]: N. del E.: Teresa se refiere a las faltas de fragilidad, como precisa enseguida («las pequeñas indelicadezas involuntarias de su hijo»). El pecado venial deliberado sí debilita la caridad, aunque no rompe la Alianza con Dios (CEC 1863).
+
+
+[^ce3]: N. del E.: san Juan de la Cruz, Cántico espiritual (segunda redacción), canción 26. «Aquesta»: esta; «vega»: llanura; «ya cosa no sabía»: ya no sabía nada.
+
+[^ce4]: N. del E.: san Juan de la Cruz, Cántico espiritual (segunda redacción), canción 28. «Caudal»: bienes, facultades.
+
+[^ce5]: N. del E.: cf. san Juan de la Cruz, Poesías, «Glosa a lo divino» (Sin arrimo y con arrimo), estrofa 3, versos 1-5. Santa Teresa la cita de memoria, con palabras algo distintas; aquí va el texto original.

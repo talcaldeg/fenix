@@ -42,9 +42,9 @@ Lo que hemos dicho sobre los comienzos de la oración mística vale igualmente p
 
 [^4]: Se nos ha de perdonar que insistamos tanto en estas páginas en la presencia de Dios en nosotros. Recalcamos tanto este aspecto, el más práctico de la doctrina de la gracia santificante, porque es el que más se olvida o se ignora. Cf. R. Plus, S.J., *Dieu en nous*.
 
-[^5]: Cf. *Subida del Monte Carmelo* y *Noche oscura*, passim.
+[^5]: Cf. *Subida del Monte Carmelo* y *Noche oscura*, passim. N. del E.: cf. san Juan de la Cruz, *Subida del Monte Carmelo*, libro II, cap. 14, nn. 2 y 12, donde llama a esta contemplación «noticia amorosa general».
 
-[^6]: El P. Gárate, en *Razón y Fe* de julio de 1908, después de comentar ciertos pasajes de santa Teresa, concluye así: «Todos los que se dan al santo ejercicio de los coloquios afectuosos con Dios obtienen las gracias convenientes para alcanzar la perfección del estado místico».
+[^6]: El P. Gárate, en *Razón y Fe* de julio de 1908, después de comentar ciertos pasajes de santa Teresa, concluye así: «Todos los que se dan al santo ejercicio de los coloquios afectuosos con Dios obtienen las gracias convenientes para alcanzar la perfección del estado místico». N. del E.: no la hemos hallado con estas palabras en los escritos del P. Gárate (Razón y Fe, julio de 1908); se traduce del inglés.
 
 [^7]: La «noche del sentido» es el nombre que da san Juan de la Cruz a la larga prueba que describe tan bien en su obra inmortal, la *Noche oscura*. Por esta prueba Dios desprende al alma de todas las cosas exteriores y lleva a cabo la purificación pasiva del sentido. Durante este período de purificación, el alma sufre una gran aridez y, a pesar de su fervor, que es real aunque no sensible, está convencida de su propia tibieza. Además, se vuelve incapaz de seguir en la meditación un método determinado, como lo hacía antes. Es el paso secreto de la meditación a la contemplación interior y mística. Véase nuestro libro *Confianza* (Londres, Burns Oates, 1932), el capítulo «La confianza en las noches místicas».
 
@@ -56,7 +56,7 @@ Lo que hemos dicho sobre los comienzos de la oración mística vale igualmente p
 
 [^b]: N. del T.: *Libro de la Vida*, 18, 15. En ese pasaje, el letrado le enseña a la santa que Dios está presente en todas las cosas (Catecismo, n. 300); la presencia por la gracia, de la que habla aquí el autor, es la inhabitación de la Trinidad en el alma justa (n. 260).
 
-[^c]: N. del T.: *Camino de perfección*, 28, 2.
+[^c]: N. del E.: cf. santa Teresa de Jesús, *Camino de perfección*, cap. 28, nn. 1-2.
 
 [^d]: N. del T.: cf. beato Raimundo de Capua, *Vida de santa Catalina de Siena* (*Legenda maior*), I, 4. Cuando sus padres le quitaron la habitación para que no tuviera tiempo de orar, la santa se hizo una celda interior en el alma, de la que no salía en medio de los quehaceres de la casa.
 
