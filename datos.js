@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "8-nov-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "9-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3783,7 +3783,10 @@ window.FENIX = {
       archivos: {"epub": "libros/austen-persuasion.epub", "pdf": "libros/austen-persuasion.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 105 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/105"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"},
-      parecidos: ["austen-pride-and-prejudice", "austen-sense-and-sensibility", "austen-emma"]
+      parecidos: ["austen-pride-and-prejudice", "austen-sense-and-sensibility", "austen-emma"],
+      versiones: {
+        es: {"titulo": "Persuasión", "autor": "Jane Austen", "anio": "1817", "resumen": {"es": "A los diecinueve años, Anne Elliot rompió su compromiso con el joven oficial de marina Frederick Wentworth, persuadida por Lady Russell, la amiga que le hacía de madre, de que él no tenía fortuna ni posición. Ocho años después, las deudas de su vanidoso padre, Sir Walter, obligan a la familia a arrendar Kellynch Hall y mudarse a Bath, y los nuevos arrendatarios resultan ser la hermana y el cuñado de Wentworth, que vuelve de la guerra convertido en capitán, rico y con fama. Entre Uppercross, el mar de Lyme y los salones de Bath, Anne lo ve tratarla con fría cortesía y cortejar a otras, mientras ella guarda en silencio un afecto que no ha cambiado. Última novela completa de Jane Austen.", "en": "At nineteen, Anne Elliot broke off her engagement to the young naval officer Frederick Wentworth, persuaded by Lady Russell, the friend who had been a mother to her, that he had neither fortune nor position. Eight years later, the debts of her vain father, Sir Walter, force the family to let Kellynch Hall and move to Bath, and the new tenants turn out to be Wentworth's sister and brother-in-law; he returns from the war a captain, rich and renowned. Between Uppercross, the sea at Lyme and the drawing rooms of Bath, Anne watches him treat her with cold courtesy and court others, while she silently keeps an affection that has not changed. Jane Austen's last completed novel."}, "porque": {"es": "Para quien cree que ya pasó su oportunidad o carga con una decisión que lamenta. Anne no se queja ni se venga: sirve a los suyos, calla con dignidad y conserva intacto su cariño, y la novela premia esa constancia paciente. Es también una reflexión fina sobre cuándo conviene dejarse aconsejar y cuándo seguir el propio juicio.", "en": "For anyone who believes their chance has passed or who carries a decision they regret. Anne neither complains nor takes revenge: she serves her family, keeps a dignified silence and preserves her affection whole, and the novel rewards that patient constancy. It is also a fine reflection on when to accept advice and when to follow one's own judgment."}, "citas": ["Se había visto forzada a la prudencia en su juventud; aprendió el romance a medida que fue haciéndose mayor: la consecuencia natural de un comienzo antinatural.", "Todo el privilegio que reclamo para mi sexo (no es muy envidiable; no tiene por qué codiciarlo) es el de amar más tiempo, cuando ya no queda la existencia o cuando se ha ido la esperanza", "Me traspasa usted el alma. Soy mitad agonía, mitad esperanza.", "No he amado a nadie más que a usted. Injusto puedo haber sido, débil y rencoroso lo he sido, pero nunca inconstante."], "fuente": {"texto": "Traducción de Proyecto Fénix desde el inglés de Persuasion (1817), según el texto de Project Gutenberg, libro n.º 105; licencia CC BY-NC-SA 4.0", "url": "https://www.gutenberg.org/ebooks/105"}, "imagen": {"src": "img/portadas/austen-persuasion-es.jpg", "credito": {"es": "Henry Raeburn, «La señora Robert Scott Moncrieff», h. 1814", "en": "Henry Raeburn, «Mrs Robert Scott Moncrieff», c. 1814"}, "url": "https://commons.wikimedia.org/wiki/File:Mrs._Robert_Scott_Moncrieff_by_Henry_Raeburn.png"}, "archivos": {"epub": "libros/austen-persuasion-es.epub", "pdf": "libros/austen-persuasion-es.pdf"}, "editorial": {"es": "Traducción nueva de Proyecto Fénix, completa, hecha directamente del inglés de la edición de Project Gutenberg, con los diálogos entre comillas.", "en": "New Proyecto Fénix translation, complete, made directly from the English text of the Project Gutenberg edition, with dialogue set in quotation marks."}}
+      }
     },
     {
       id: "austen-sense-and-sensibility",
@@ -4477,7 +4480,6 @@ window.FENIX = {
   // se pide; sin "en", no aparece en el sitio en inglés. delibris como en las fichas, o null con
   // `estimada` { valor, genero } si Delibris no la reseña. El sitio oculta sola la que ya está en ese idioma.
   buscados: [
-    { titulo: {"es": "Persuasión"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/persuasion"} },
     { titulo: {"es": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
     { titulo: {"es": "La abadía de Northanger"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"} },
     { titulo: {"es": "Ortodoxia", "en": "Orthodoxy"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/ortodoxia"} },

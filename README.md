@@ -130,7 +130,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   comando: `herramientas/recibir_entrega.py --gmail "from:<correo> newer_than:3d"` baja los .zip
   a `.entregas/` (también acepta varios <zip> o carpetas), salta lo ya publicado, revisa cada uno,
   arma EPUB, portada, exlibris y PDF, agrega la ficha (o la versión en `versiones`), corre
-  `gen_estaticos.js` y cierra con una línea por libro; calla la salida de lo que sale bien. El mensaje tipo
+  `gen_estaticos.js` y cierra con una línea por libro; calla la salida de lo que sale bien, y dice
+  quién mandó cada correo y si es su primera entrega (lleva bienvenida). El lote entero son dos
+  comandos: `herramientas/lote.py recibir` (copia del día más `recibir_entrega.py --gmail`) y,
+  tras mirar la hoja de contacto, `herramientas/lote.py publicar` (publica, IndexNow, enlaces de
+  Search Console y cierra la copia). El mensaje tipo
   para invitarlos está en `editorial/ENCUADERNADORES.md`; el formulario llega con asunto
   «Fénix - encuadernador».
   **Regla dura: lo que Fénix tenga que arreglarle a un paquete recibido, lo paga el agente del

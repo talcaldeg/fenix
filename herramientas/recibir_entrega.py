@@ -249,6 +249,12 @@ def bajar_de_gmail(query: str) -> list[Path]:
     for _, fila in df.iterrows():
         rutas += [Path(r) for r in g.descargar_adjuntos(fila["id"], str(destino), r"\.zip$")]
     print(f"{len(rutas)} paquetes de {len(df)} correos.")
+    # Quién mandó y si ya se le respondió alguna entrega: así la bienvenida a uno nuevo no parte
+    # buscando el hilo y el correo anterior (5-nov-2026, diez llamadas solo para eso).
+    for de in df["de"].drop_duplicates():
+        correo = re.search(r"[\w.+-]+@[\w.-]+", de)
+        previas = len(g.buscar(f'in:sent to:{correo.group(0)} subject:"Fénix - encuadernador"', maximo=5)) if correo else 0
+        print(f"De: {de} - {'PRIMERA ENTREGA: lleva bienvenida' if not previas else f'{previas} entrega(s) ya respondidas'}")
     return rutas
 
 

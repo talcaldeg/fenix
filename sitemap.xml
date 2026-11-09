@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-11-08</lastmod>
+    <lastmod>2026-11-09</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/dona/</loc>
@@ -641,6 +641,10 @@
     <lastmod>2026-11-09</lastmod>
   </url>
   <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/austen-persuasion/es/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-sense-and-sensibility/</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
@@ -870,6 +874,10 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-persuasion/muestra/</loc>
+    <lastmod>2026-11-09</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/austen-persuasion/es/muestra/</loc>
     <lastmod>2026-11-09</lastmod>
   </url>
   <url>
