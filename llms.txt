@@ -142,6 +142,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [Una princesa de Marte - Edgar Rice Burroughs (1912)](https://talcaldeg.github.io/fenix/libro/burroughs-una-princesa-de-marte/) - John Carter, capitán sudista de Virginia, busca oro en los desiertos de Arizona al terminar la guerra civil. Descarga gratuita en EPUB y PDF.
 - [Pequeñeces - Luis Coloma (1891)](https://talcaldeg.github.io/fenix/libro/coloma-pequeneces/) - Retrato de la alta sociedad madrileña entre la revolución de 1868 y la Restauración. Descarga gratuita en EPUB y PDF.
 - [Los pescadores de Trépang - Emilio Salgari (trad. anónima) (1896)](https://talcaldeg.github.io/fenix/libro/salgari-los-pescadores-de-trepang/) - En 1850, el capitán holandés Van-Stael navega en un junco chino por la costa norte de Australia, con sus sobrinos Hans y Cornelio y el viejo piloto Van-Horn, para pescar trépang, el codiciado pepino de mar. Descarga gratuita en EPUB y PDF.
+- [Mujercitas - Louisa May Alcott (trad. Enriqueta S. Albanella) (1868)](https://talcaldeg.github.io/fenix/libro/alcott-mujercitas/) - En una casa de Nueva Inglaterra, durante la guerra civil, las cuatro hermanas March, Meg, Jo, Beth y Amy, crecen con poco dinero y mucho cariño, mientras su padre está en el frente y su madre, a quien llaman Marmee, les enseña a vencer sus defectos. Descarga gratuita en EPUB y PDF.
 
 ## Teatro
 

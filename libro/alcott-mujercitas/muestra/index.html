@@ -1,0 +1,378 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mujercitas - primeras páginas | Proyecto Fénix</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%236b1d24%22/%3E%3Cg%20fill%3D%22%23e8b04a%22%3E%3Cpath%20d%3D%22M31%2056C24%2052%2015%2051%207%2053L6.5%2046.5%204.5%2045.5%206%2038.5%203.5%2037%205%2029%202.5%2027.5%202.5%207.5C8%2017%2019%2026%2031%2036.5Z%22/%3E%3Cpath%20d%3D%22M33%2056C40%2052%2049%2051%2057%2053L57.5%2046.5%2059.5%2045.5%2058%2038.5%2060.5%2037%2059%2029%2061.5%2027.5%2061.5%207.5C56%2017%2045%2026%2033%2036.5Z%22/%3E%3Cpath%20d%3D%22M32%2038C29.3%2033%2028.9%2027.6%2029.8%2022.8C30.7%2018.4%2033.4%2015.6%2037.2%2016.1L42.6%2018%2037.6%2020.1C36%2023%2035.7%2028%2034.8%2032.8Z%22/%3E%3Cpath%20d%3D%22M31.4%2019.4C28%2017%2026.6%2013.2%2027.7%209.2C28.8%2012.4%2030.6%2014%2033%2015.2Z%22/%3E%3Cpath%20d%3D%22M33.6%2016.4C32.4%2012.8%2033.2%209.4%2035.4%206.8C35.2%2010.2%2036.1%2012.4%2037.5%2014.4Z%22/%3E%3C/g%3E%3Cpath%20d%3D%22M5%2045.2C13%2042.6%2022%2043.4%2030.4%2048.2M4.6%2036.8C11.6%2033.6%2019.6%2034.2%2027.4%2039.2M59%2045.2C51%2042.6%2042%2043.4%2033.6%2048.2M59.4%2036.8C52.4%2033.6%2044.4%2034.2%2036.6%2039.2%22%20fill%3D%22none%22%20stroke%3D%22%236b1d24%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
+<!-- PWA:inicio - Instalable como app en el celular (manifest, íconos de herramientas/logo.py y sw.js). Las rutas son relativas a la
+     carpeta del sitio: herramientas/gen_estaticos.js copia el bloque en cada ficha y les antepone su base. -->
+<link rel="manifest" href="../../../manifest.webmanifest">
+<!-- La barra del sistema (hora, batería) toma el color de fondo de la cabecera, en claro y en oscuro, y lo sigue si se
+     fuerza el tema con ◐; revisar_diseno.py lo exige. -->
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#2f1d12">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e130b">
+<script>(function(){var r=document.documentElement,m=document.querySelectorAll('meta[name="theme-color"]'),orig=[].map.call(m,function(x){return x.content;});
+new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getPropertyValue("--cabecera").trim();m.forEach(function(x,i){x.content=bg||orig[i];});}).observe(r,{attributes:true,attributeFilter:["data-theme"]});})();</script>
+<link rel="apple-touch-icon" href="../../../img/icono-apple-180.png">
+<meta name="apple-mobile-web-app-title" content="Fénix">
+<meta name="mobile-web-app-capable" content="yes">
+<script>if ("serviceWorker" in navigator) addEventListener("load", function(){ navigator.serviceWorker.register(new URL("sw.js", document.querySelector('link[rel="manifest"]').href)).catch(function(){}); });</script>
+<!-- PWA:fin -->
+<meta name="description" content="Lee gratis en línea las primeras páginas de «Mujercitas» de Louisa May Alcott, sin descargar nada.">
+<meta name="color-scheme" content="light dark">
+<!-- FUENTES:inicio --><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&display=swap"><!-- FUENTES:fin -->
+<link rel="canonical" href="https://talcaldeg.github.io/fenix/libro/alcott-mujercitas/muestra/">
+<meta property="og:type" content="book">
+<meta property="og:site_name" content="Proyecto Fénix">
+<meta property="og:title" content="Mujercitas - primeras páginas">
+<meta property="og:description" content="Lee gratis en línea las primeras páginas de «Mujercitas» de Louisa May Alcott, sin descargar nada.">
+<meta property="og:url" content="https://talcaldeg.github.io/fenix/libro/alcott-mujercitas/muestra/">
+<meta property="og:image" content="https://talcaldeg.github.io/fenix/img/portadas/og/alcott-mujercitas.jpg">
+<!-- Generada por herramientas/gen_estaticos.js desde muestras/ (herramientas/muestras.py). No editar a mano. -->
+<style>
+  :root{color-scheme:light dark; --bg:#faf6ef; --card:#fffdf8; --line:#e4d8c4; --ink:#2a1f1a; --muted:#6e5d50; --vino:#6b1d24; --oro:#8a5d14; --acento:#6b1d24; --acento-ink:#fff8ec; --chip:#efe4d2}
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e}}
+  :root[data-theme="dark"]{--bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e}
+  *{box-sizing:border-box}
+  body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+  a{color:var(--vino)}
+  a,button{-webkit-tap-highlight-color:transparent}
+  a:active,button:active{opacity:.7}
+  .wrap{max-width:1040px; margin:0 auto; padding:0 16px}
+  header{border-bottom:1px solid var(--line)}
+  .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
+  .marca{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
+  .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
+  /* Lupa: abre un buscador que lleva a la biblioteca filtrada (index.html lee ?q=). */
+  .ajustes{display:flex; align-items:center; gap:6px}
+  /* El buscador cuelga de la barra y no de la lupa: en el celular no se sale por la izquierda. */
+  .barra{position:relative} details.buscar{position:static}
+  details.buscar summary{list-style:none; display:inline-flex; align-items:center; justify-content:center; padding:6px 11px}
+  details.buscar summary::-webkit-details-marker{display:none}
+  details.buscar summary svg{width:18px; height:18px}
+  details.buscar form{position:absolute; right:16px; top:calc(100% - 4px); z-index:20; display:flex; gap:8px; width:min(380px,calc(100vw - 32px)); padding:10px; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  details.buscar input{flex:1 1 auto; min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font:16px/1.3 system-ui,sans-serif}
+  details.buscar .btn{min-height:0; padding:10px 14px; font-size:15px; cursor:pointer}
+  main.wrap{padding-top:28px; padding-bottom:48px}
+  /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
+  .ficha{display:grid; grid-template-columns:320px minmax(0,1fr); grid-template-areas:"lado cabeza" "lado cuerpo"; column-gap:44px; align-items:start}
+  .ficha .lado{grid-area:lado; position:sticky; top:20px} .ficha .cabeza{grid-area:cabeza} .ficha .cuerpo{grid-area:cuerpo; max-width:640px}
+  .ficha .lado .botones{flex-direction:column} .ficha .lado .btn{justify-content:center}
+  @media (max-width:760px){.ficha{grid-template-columns:1fr; grid-template-areas:"cabeza" "lado" "cuerpo"} .ficha .lado{position:static} .ficha img{max-width:150px} .ficha .lado .botones{flex-direction:row}}
+  .ficha img{width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:var(--chip)}
+  h1{font-size:clamp(28px,5vw,38px); line-height:1.15; margin:0 0 8px}
+  h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 system-ui,sans-serif; color:var(--muted)}
+  h2{font-size:20px; margin:28px 0 8px}
+  .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 14px}
+  .botones{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 8px}
+  .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px system-ui,sans-serif; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
+  .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
+  .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
+  .aviso{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:6px 0 0}
+  .aviso:empty{display:none}
+  .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
+  blockquote{margin:0 0 20px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic; line-height:1.6}
+  details.citas summary{cursor:pointer; font:600 15px system-ui,sans-serif; color:var(--vino); margin-bottom:14px}
+  .circ{display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px}
+  .circ i{width:12px; height:12px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
+  .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
+  ul.parecidos{padding-left:20px}
+  ul.parecidos li{margin:4px 0}
+  footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
+  footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
+  footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
+  /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
+  nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
+  nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a:hover, nav.menu summary:hover{color:var(--ink); background:var(--chip)}
+  .mas{position:relative} .mas summary{list-style:none; cursor:pointer} .mas summary::-webkit-details-marker{display:none} .mas summary::after{content:" ▾"; font-size:12px}
+  .mas .sub{position:absolute; right:0; top:calc(100% + 6px); z-index:30; min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
+  .ajustes-nav{display:flex; gap:6px; margin-left:10px}
+  a.pildora{display:inline-flex; align-items:center; text-decoration:none}
+  #btnMenu{display:none}
+  @media (max-width:960px){
+    #btnMenu{display:inline-block}
+    nav.menu{display:none; position:absolute; left:0; right:0; top:100%; z-index:25; background:var(--bg); border-bottom:1px solid var(--line); padding:8px 16px 12px; flex-direction:column; align-items:stretch}
+    nav.menu.abierto{display:flex}
+    .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
+    .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
+  }
+  /* Ambiente de biblioteca, igual que index.html (9-nov-2026): papel y tinta, cabecera y pie de nogal, EB Garamond.
+     La paleta y las texturas se toman de index.html (PALETA), para no tener dos copias. */
+  
+  :root{
+    color-scheme: light dark;
+    --bg:#f6f0e1; --bg2:#ede4cf; --card:#fbf7ec; --line:#dccfb3; --ink:#1e2230; --muted:#5a4c3e;
+    --vino:#7a1f2b; --oro:#7a5a14; --acento:#7a1f2b; --acento-ink:#fbf3e2; --chip:#ebe0c8;
+    --ok:#2f6b3a; --sombra:0 1px 2px rgba(60,40,20,.12), 0 10px 24px -12px rgba(60,40,20,.35);
+    --c-lectura:#6b1d24; --c-oracion:#2c4a6e; --c-novela:#3f5a2e;
+    --c-teatro:#5a3a6b; --c-poesia:#7a4a1f; --c-ensayo:#3d4a52;
+    --cabecera:#2f1d12; --cabecera-2:#22140b; --en-madera:#d8c6a0; --en-madera-2:#f3e6c4; --laton:#d9a441; --filete:#8a6a2a;
+    --repisa:#6b4226; --repisa-luz:#8f5e39; --repisa-2:#4a2c18; --zocalo:#2f1d12; --zocalo-2:#1f1209;
+    --letra:"EB Garamond",Georgia,"Iowan Old Style","Palatino Linotype",serif;
+    /* Texturas en SVG incrustado (ruido de feTurbulence): grano de papel al ~5 % y veta de madera; no se descarga nada. */
+    --papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    --papel-osc:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9  0 0 0 0 .75  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    /* Nogal: tabla dibujada por herramientas/madera.py (anillos, poros y tono; empalma por los cuatro lados). Se tiñe
+       con --tinte-* según dónde va y el modo. gen_estaticos.js antepone la base de cada página a url("../../../img/. */
+    --veta:url("../../../img/madera/nogal.webp"); --veta-tam:1200px 200px;
+    --tinte-cab:rgba(30,15,6,.50); --tinte-pie:rgba(22,11,4,.60); --tinte-repisa:rgba(40,20,8,.10);
+    /* Cabecera: arriba se funde con --cabecera (el theme-color de la barra del celular, sin corte) y abajo, una moldura. */
+    --madera-cab:linear-gradient(180deg,var(--cabecera) 0,rgba(0,0,0,0) 14px), linear-gradient(0deg,rgba(255,226,180,.10) 0,rgba(255,226,180,0) 3px),
+                 linear-gradient(var(--tinte-cab),var(--tinte-cab)), var(--veta) 0 0/var(--veta-tam), var(--cabecera);
+    --madera-pie:linear-gradient(180deg,rgba(255,226,180,.08) 0,rgba(0,0,0,0) 4px), linear-gradient(var(--tinte-pie),var(--tinte-pie)),
+                 var(--veta) -300px -60px/var(--veta-tam), var(--zocalo);
+    --grano:var(--papel); --luz:linear-gradient(transparent,transparent);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
+      --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+      --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
+      --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+      --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
+      --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
+      --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
+    --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+    --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
+    --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+    --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
+    --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
+    --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
+  }
+  
+  body{font-family:var(--letra); font-size-adjust:.46; font-variant-numeric:oldstyle-nums proportional-nums; font-kerning:normal;
+       background:var(--luz) no-repeat, var(--grano) 0 0/180px 180px repeat, var(--bg)}
+  h1,h2{font-weight:600} h2{font-weight:500}
+  header{background:var(--madera-cab);
+         border-bottom:2px solid var(--filete); box-shadow:0 6px 14px -8px rgba(40,20,5,.55)}
+  header .marca{color:var(--en-madera-2); font-weight:600; font-size:21px}
+  nav.menu a, nav.menu summary{font:500 17px/1.25 var(--letra); font-size-adjust:.46; color:var(--en-madera)}
+  nav.menu a:hover, nav.menu summary:hover{color:#fbf1d8; background:rgba(243,230,196,.10); box-shadow:inset 0 -2px 0 var(--laton)}
+  .mas .sub a{color:var(--muted)} .mas .sub a:hover{color:var(--ink); background:var(--chip); box-shadow:none}
+  header .pildora{font:600 16px/1 var(--letra); font-size-adjust:.46; background:rgba(243,230,196,.06); border-color:rgba(243,230,196,.28); color:var(--en-madera-2)}
+  /* «English» es un enlace dentro de nav.menu: sin esto heredaba el radio de 8 px y la letra de los enlaces del menú
+     y no se veía como la píldora de index.html (9-nov-2026). */
+  header nav.menu a.pildora{border-radius:999px; padding:6px 14px; font:600 16px/1 var(--letra); font-size-adjust:.46; color:var(--en-madera-2)}
+  header nav.menu a.pildora:hover{background:rgba(243,230,196,.06); box-shadow:none; border-color:var(--laton)}
+  header details.buscar summary{color:var(--en-madera-2)}
+  @media (max-width:960px){
+    nav.menu{background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)), var(--madera-cab); border-bottom:2px solid var(--filete)}
+    .mas .sub a{color:var(--en-madera)} .mas .sub a:hover{color:#fbf1d8; background:rgba(243,230,196,.10)}
+    .ajustes-nav{border-top-color:rgba(243,230,196,.2)}
+  }
+  .btn{font:600 17px/1.2 var(--letra); font-size-adjust:.46; border-radius:6px}
+  .ficha img{border-radius:2px 5px 5px 2px; box-shadow:0 1px 1px rgba(30,15,5,.25), 0 12px 18px -10px rgba(30,15,5,.55)}
+  footer{background:var(--madera-pie); color:var(--en-madera); border-top:3px solid var(--filete)}
+  footer a, footer nav a{color:#e9c26a}
+  .lectura{max-width:680px; margin:0 auto}
+  .lectura .volver{display:inline-block; margin:0 0 18px; font:600 15px system-ui,sans-serif; text-decoration:none}
+  .lectura .meta{margin-bottom:28px}
+  .texto{font-size:19px; line-height:1.75; hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word}
+  .texto p{margin:0 0 1em}
+  .texto h2,.texto h3,.texto h4,.texto h5,.texto h6{text-align:center; hyphens:manual; -webkit-hyphens:manual; line-height:1.35; margin:2em 0 1em; font-size:22px}
+  .texto h3,.texto h4,.texto h5,.texto h6{font-size:19px}
+  .texto blockquote{font-style:normal; border-left-color:var(--line)}
+  .texto pre{white-space:pre-wrap; font:inherit}
+  .texto hr{border:0; text-align:center; margin:2em 0} .texto hr::after{content:"⁂"; color:var(--muted)}
+  .texto figure{margin:1.5em 0; text-align:center} .texto figure img{max-width:100%; height:auto; border-radius:6px}
+  .texto figcaption{margin-top:6px; font:italic 15px/1.5 Georgia,serif; color:var(--muted)}
+  /* Los dibujos con fondo transparente (El principito) son negros: en modo oscuro van sobre papel claro. */
+  @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .texto figure img{background:#faf6ef; padding:8px}}
+  :root[data-theme="dark"] .texto figure img{background:#faf6ef; padding:8px}
+  .fin{margin-top:40px; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--card)}
+  .fin p{margin:0; font:16px/1.5 system-ui,sans-serif}
+</style>
+</head>
+<body>
+<header><div class="wrap barra"><a class="marca" href="../../../"><img src="../../../img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><button class="pildora" id="btnTema" type="button" aria-label="Cambiar a modo claro u oscuro" title="Cambiar a modo claro u oscuro">◐</button></div></header>
+<main class="wrap"><article class="lectura">
+  <a class="volver" id="volver" href="../">← Volver a la ficha del libro</a>
+  <h1>Mujercitas<span class="sub">Primeras páginas</span></h1>
+  <p class="meta">Louisa May Alcott (trad. Enriqueta S. Albanella) · 1868</p>
+  <div class="texto">
+<h2>Primera parte</h2>
+<h2>Capítulo 1. El juego del peregrino</h2>
+<p>—Navidad no será Navidad sin regalos —murmuró Jo, tendida sobre la alfombra.</p>
+<p>—¡Es tan triste ser pobre! —suspiró Meg mirando su vestido viejo.</p>
+<p>—No me parece justo que algunas muchachas tengan tantas cosas bonitas, y otras nada —añadió la pequeña Amy con gesto displicente.</p>
+<p>—Tendremos a papá y a mamá y a nosotras mismas —dijo Beth alegremente desde su rincón.</p>
+<p>Las cuatro caras jóvenes, sobre las cuales se reflejaba la luz del fuego de la chimenea, se iluminaron al oír las animosas palabras; pero volvieron a ensombrecerse cuando Jo dijo tristemente:</p>
+<p>—No tenemos aquí a papá, ni lo tendremos por mucho tiempo.</p>
+<p>No dijo "tal vez nunca", pero cada una lo añadió silenciosamente para sí, pensando en el padre, tan lejos, donde se hacía la guerra civil.</p>
+<p>Nadie habló durante un minuto; después dijo Meg con diferente tono:</p>
+<p>—Saben que la razón por la que mamá propuso que no hubiera regalos esta Navidad fue porque el invierno va a ser duro para todo el mundo, y piensa que no debemos gastar dinero en gustos mientras nuestros hombres sufren tanto en el frente. No podemos ayudar mucho, pero sí hacer pequeños sacrificios y debemos hacerlos alegremente. Pero temo que yo no los haga —y Meg sacudió la cabeza al pensar arrepentida en todas las cosas que deseaba.</p>
+<p>—Pero pienso que el poco dinero que gastaríamos no ayudaría mucho. Tenemos un peso cada una, y el ejército no se beneficiaría mucho si le diéramos tan poco dinero. Estoy conforme con no recibir nada ni de mamá ni de ustedes, pero deseo comprar Undine y Sintran para mí. ¡Lo he deseado por tanto tiempo! —dijo Jo, que era un ratón de biblioteca.</p>
+<p>—He decidido gastar el mío en música nueva —dijo Beth suspirando, aunque nadie la oyó excepto la escobilla del fogón y el asa de la caldera.</p>
+<p>—Me compraré una cajita de lápices de dibujo; verdaderamente los necesito —anunció Amy con decisión.</p>
+<p>—Mamá no ha dicho nada de nuestro propio dinero, y no desearía que renunciáramos a todo. Compremos cada una lo que deseamos y tengamos algo de diversión; me parece que trabajamos como unas negras para ganarlo — exclamó Jo examinando los tacones de sus botas con aire resignado.</p>
+<p>—Yo sé que lo hago dando lecciones a esos niños terribles casi todo el día, cuando deseo mucho divertirme en casa —dijo Meg quejosa.</p>
+<p>—No hace la mitad de lo que yo hago —repuso Jo—. ¿Qué te parecería a ti estar encarcelada por horas enteras en compañía de una señora vieja, nerviosa y caprichosa, que te tiene corriendo de acá para allá, no está jamás contenta y te fastidia de tal modo que te entran ganas de saltar por la ventana o darle una bofetada?</p>
+<p>—Es malo quejarse, pero a mí me parece que fregar platos y arreglar la casa es el trabajo más desagradable del mundo. Me irrita y me pone tan ásperas y tiesas las manos que no puedo tocar bien el piano —y Beth las miró con tal suspiro, que cualquiera pudo oír esta vez.</p>
+<p>—No creo que ninguna de ustedes sufra como yo —gritó Amy—; porque no tienen que ir a la escuela con muchachas impertinentes, que las atormentan si no llevan la lección bien preparada, se ríen de nuestros vestidos, difaman a nuestro padre porque no es rico y nos insultan porque no tienen la nariz bonita.</p>
+<p>—Si quieres decir difamar dilo así, aunque mejor sería no usar palabras altisonantes —dijo Jo, riéndose.</p>
+<p>—Yo sé lo que quiero decir, y no hay que criticarme tanto. Es bueno usar palabras escogidas para mejorar el vocabulario —respondió solemnemente Amy.</p>
+<p>—No disputen niñas: ¿no te gustaría que tuviésemos el dinero que perdió papá cuando éramos pequeñas, Jo? ¡Ay de mí!, ¡qué felices y buenas seríamos si no tuviésemos necesidades! —dijo Meg, que podía recordar un tiempo en que la familia había vivido con holgura.</p>
+<p>—Has dicho el otro día que, en tu opinión, éramos más felices que los niños King, porque ellos no hacían más que reñir y quejarse continuamente a pesar de su dinero.</p>
+<p>—Es verdad, Beth; bueno, creo que lo somos, porque, si tenemos que trabajar, nos divertimos al hacerlo, y formamos una cuadrilla muy alegre, según Jo.</p>
+<p>—¡Jo habla en una jerga tan chocante! —observó Amy, echando una mirada crítica hacia la larga figura tendida sobre la alfombra.</p>
+<p>Jo se levantó de un salto, metió las manos en los bolsillos del delantal y se puso a silbar.</p>
+<p>—No hagas eso, Jo, es cosa de chicos.</p>
+<p>—Por eso lo hago.</p>
+<p>—Detesto a las muchachas rudas, de modales ordinarios.</p>
+<p>—Y yo aborrezco a las muchachas afectadas y pedantes.</p>
+<p>—"Pájaros en sus niditos se entienden" —cantó Beth la pacificadora, con una expresión tan cómica que las dos voces agudas se templaron en una risa, y la riña terminó de momento.</p>
+<p>—Realmente, hijas mías, ambas merecen censura —dijo Meg poniéndose a corregir a sus hermanas con el aire propio de hermana mayor—. Tienes ya edad, Jo, de dejar trucos de muchachos y conducirte mejor. No importaba tanto cuando eras una niña pequeña, pero ahora que eres tan alta y te has puesto moño, deberías recordar que eres una señorita.</p>
+<p>—¡No lo soy! ¡Y si el ponerme moño me hace señorita, me arreglaré el pelo en dos trenzas hasta que tenga veinte años! —gritó Jo, quitándose la red del pelo y sacudiendo una espesa melena de color castaño—. Detesto pensar que he de crecer y ser la señorita March, vestirme con faldas largas y ponerme primorosa. Ya es bastante malo ser chica, gustándome tanto los juegos, las maneras y los trabajos de los muchachos. No puedo acostumbrarme a mi desengaño de no ser muchacho, y menos ahora que me muero de ganas de ir a pelear al lado de papá y tengo que permanecer en casa haciendo calceta como una vieja cualquiera —y Jo sacudió el calcetín azul, el color del ejército, hasta sonar todas las agujas, dejando rodar el ovillo hasta el otro lado del cuarto.</p>
+<p>—¡Pobre Jo! Lo siento mucho, pero no podemos remediarlo; tendrás que contentarte con dar a tu nombre forma masculina y jugar a que eres hermano nuestro —contestó Beth acariciando la cabeza tosca puesta sobre sus rodillas, con una mano cuyo suave tacto no habían logrado destruir todo el fregar de platos y todo el trabajo doméstico.</p>
+<p>—En cuanto a ti, Amy —dijo Meg—, eres demasiado afectada y presumida. Ahora tus modales causan gracia, pero llegarás a ser una persona muy tonta si no tienes cuidado. Me gustan mucho tus modales agradables cuando no tratas de ser elegante, pero tus palabras exóticas son tan malas como la jerga de Jo.</p>
+<p>—Si Jo es un muchacho y Amy algo afectada, ¿qué soy yo, si se puede saber? —preguntó Beth dispuesta a recibir su parte de la reprimenda.</p>
+<p>—Tú eres una niña querida, y nada más —respondió Meg calurosamente y nadie la contradijo, porque el "ratoncito" era la favorita de la familia.</p>
+<p>Como nuestros lectores jóvenes querrán formarse una idea del aspecto de nuestras heroínas, aprovecharemos para trazar un dibujo de las cuatro hermanas ocupadas en hacer calceta en un crepúsculo de diciembre, mientras fuera caía silenciosamente la nieve y dentro de la casa chisporroteaba alegremente el fuego. El cuarto era agradable, aunque la alfombra estaba algo descolorida y los muebles eran de una simplicidad severa; buenos cuadros colgaban de las paredes, en los estantes había libros, florecían crisantemos y rosas de Navidad en las ventanas, y por toda la casa flotaba una atmósfera de paz.</p>
+<p>Margaret o Meg, la mayor de las cuatro chicas, tenía dieciséis años; era muy bonita, regordeta y rubia; tenía los ojos grandes, abundante pelo castaño claro, boca delicada y unas manos blancas, de las cuales se vanagloriaba un poco. Jo, que tenía quince años, era muy alta, esbelta y morena, y le recordaba a uno un potro; nunca parecía saber qué hacer con sus largas extremidades, que se le atravesaban en el camino. Tenía la boca decidida, la nariz respingada, ojos grises muy penetrantes, que parecían verlo todo, y se ponían alternativamente feroces, burlones o pensativos. Su única belleza era su cabello, hermoso y largo, pero generalmente lo llevaba descuidadamente recogido en una redecilla para que no le estorbara; los hombros cargados, las manos y los pies grandes y un aire de abandono en su vestido y la tosquedad de una chica que se hacía rápidamente mujer a pesar suyo. Elizabeth o Beth tenía unos trece años; su cara era rosada, el pelo liso y los ojos claros; había cierta timidez en el ademán y en la voz; pero una expresión llena de paz, que rara vez se turbaba. Su padre la llamaba "Pequeña Tranquilidad", y el nombre era muy adecuado, porque parecía vivir en un mundo feliz, su propio reino, del cual no salía sino para encontrar a los pocos a quienes amaba y respetaba. Aunque fuese la más joven, Amy era una persona importantísima, al menos en su propia opinión. Una verdadera virgen de la nieve; los ojos azules, el pelo color de oro, formando bucles sobre las espaldas, pálida y grácil, siempre se comportaba como una señorita cuidadosa de sus maneras.</p>
+<p>El reloj dio las seis, y después de limpiar el polvo de la estufa Beth puso un par de zapatillas delante del fuego para calentarlas.</p>
+<p>De una manera u otra la vista de las viejas zapatillas tuvo buen efecto sobre las chicas porque venía la madre, y todas se dispusieron a brindarle un buen recibimiento. Meg puso fin a su sermón y encendió la lámpara. Amy sacó la butaca espontáneamente, y aun Jo olvidó su cansancio para sentarse más derecha y acercar las zapatillas al fuego.</p>
+<p>—Están muy gastadas; mamá debería tener otro par.</p>
+<p>—Yo pensaba comprárselas con mi dinero —dijo Beth.</p>
+<p>—¡No, yo lo haré! —gritó Amy.</p>
+<p>—Soy la mayor —empezó a decir Meg, pero Jo la Interrumpió con decisión.</p>
+<p>—Soy el hombre de la familia, ahora que papá está fuera, yo me encargaré de las zapatillas, porque me ha dicho que cuidase de mamá mientras él estuviera ausente.</p>
+<p>—¿Saben lo que debemos hacer? —dijo Beth—; que cada una le compre un regalo de Navidad, y no comprar nada para nosotras.</p>
+<p>—¡Tú habías de tener idea tan feliz, querida mía! ¿Qué compraremos? — exclamó Jo.</p>
+<p>Todas reflexionaron un momento; entonces Meg dijo, como si la vista de sus propias manos hermosas le sugiriera la idea:</p>
+<p>—Le regalaré un par de guantes.</p>
+<p>—Zapatillas del ejército, las mejores que haya —gritó Jo.</p>
+<p>—Unos pañuelos bordados —dijo Beth.</p>
+<p>—Yo le compraré un frasco de colonia; le gusta mucho y, como no costará tanto, me sobrará algo para comprarme alguna cosa —añadió Amy.</p>
+<p>—¿Y cómo le daremos las cosas? —exclamó Meg.</p>
+<p>—Las pondremos sobre la mesa y traeremos a mamá para que abra los paquetes.</p>
+<p>—¿No recuerdan lo que hacíamos en los cumpleaños? —respondió Jo.</p>
+<p>—Yo solía asustarme horriblemente cuando me llegaba el turno de sentarme en la silla grande, con una corona en la cabeza y verlas a todas marchando alrededor para darme regalos y besarme, pero me ponía nerviosa que me miraran mientras abría los paquetes —dijo Beth, que estaba tostando el pan para el té y se tostaba al mismo tiempo la cara.</p>
+<p>—Que piense mamá que vamos a comprarnos algunas cosas y así le daremos una sorpresa. Necesitamos salir para hacer compras mañana por la tarde, Meg; hay mucho que hacer para la pieza que representamos la Noche de Navidad —dijo Jo, que andaba de un lado para otro con las manos a la espalda y la nariz levantada.</p>
+<p>—No pienso representar después de esta vez; estoy algo crecida para estas cosas —observó Meg, que era una niña en todo lo que fuera juegos.</p>
+<p>—No dejarás de hacerlo, lo aseguro, mientras puedas presentarte vestida de blanco, con el pelo suelto y adornado con joyas hechas de papel dorado. Eres la mejor actriz que tenemos, y si abandonas el teatro se acabarán nuestras funciones —repuso Jo—. Debemos ensayar la pieza esta tarde. Ven aquí, Amy, y repite la escena donde te desmayas, porque te pones tiesa como una estaca al hacerlo.</p>
+<p>—No es culpa mía; jamás he visto a nadie desmayarse y no me gusta ponerme pálida cayendo de espalda como tú lo haces. Si no puedo hacerlo fácilmente, me dejaré caer con gracia en una silla; no me importa que Hugo se acerque a mí con una pistola —dijo Amy, que no tenía talento dramático, pero a quien habían escogido porque era pequeña y el protagonista podía llevársela en brazos.</p>
+<p>—Hazlo de esta manera; aprieta las manos así, y ve tambaleándote a través del cuarto, gritando locamente: ¡Rodrigo!, ¡sálvame!, ¡sálvame! —y Jo lo hizo, dando un chillido verdaderamente melodramático.</p>
+<p>Amy procuró imitarla, pero extendió las manos con demasiada rigidez, caminó mecánicamente y su exclamación sugirió que la pinchaban con alfileres en lugar de demostrar terror y angustia. Jo suspiró con desesperación, y Meg se rio a carcajadas, mientras Beth dejaba quemar el pan por mirar lo que pasaba.</p>
+<p>—¡Es inútil! Sal lo mejor que puedas cuando llegue el momento, y si el público silba no me eches la culpa. Vamos, Meg.</p>
+<p>Todo lo demás se deslizó sin tropiezo, porque don Pedro desafió al mundo entero en un parlamento de dos páginas sin interrupción. Hagar, la bruja, se encorvó sobre su caldero de efecto mágico. Rodrigo rompió sus cadenas como un valiente, y Hugo murió de remordimiento lanzando exclamaciones incoherentes.</p>
+<p>—Es lo mejor que hemos hecho hasta ahora —dijo Meg, mientras el traidor se incorporaba frotándose los codos.</p>
+<p>—No comprendo cómo puedes escribir y representar cosas tan magníficas, Jo. ¡Eres un verdadero Shakespeare! —dijo Beth.</p>
+<p>—No lo soy —respondió Jo humildemente—. Creo que "La Maldición de la Bruja" está bastante bien; pero me gustaría tratar de representar Macbeth si tuviéramos una trampa para Banquo. Siempre he deseado un papel en el cual tuviera que matar a alguien. ¿Es un puñal eso que veo delante de mí? — murmuró Jo girando los ojos, y con ademán de asir algo en el aire, como lo había visto hacer a un actor famoso.</p>
+<p>—No, son las parrillas con las zapatillas de mamá encima en lugar del pan. ¡Beth está embobada por la escena! —exclamó Meg, y el ensayo terminó con una carcajada general.</p>
+<p>—Me alegro de encontrarlas tan divertidas, hijas —dijo una voz resuelta en la puerta, y actores y espectadores se volvieron para recibir a una señora algo regordeta, maternal, cuyos ojos parecían decir "¿puedo ayudarlo?", con aire verdaderamente encantador. No era una persona de especial hermosura; pero para los hijos las madres son siempre hermosas, y las chicas pensaban que aquella capa gris y aquel sombrero pasado de moda cubrían la mujer más espléndida del mundo.</p>
+<p>—Bueno, queridas mías, ¿cómo lo han pasado hoy? Había tanto que hacer preparando los cajones para enviarlos mañana, que no volví para la comida. ¿Ha venido alguien, Elizabeth? ¿Cómo está tu resfriado, Margaret? Jo, pareces muy fatigada. Ven y dame un beso, niña.</p>
+<p>Mientras hacía estas preguntas maternales, la señora March se ponía las zapatillas calientes, y, sentándose en la butaca, puso a Amy sobre sus rodillas, disponiéndose a gozar de su hora más feliz del día. Las muchachas iban de un lado a otro, tratando de poner todo en orden, cada una a su modo. Meg preparó la mesa para el té; Jo trajo la leña y puso las sillas, dejando caer volcando y haciendo ruido con todo lo que tocaba; Beth iba y venía de la sala a la cocina, y Amy daba consejos a todas mientras estaba sentada con las manos cruzadas.</p>
+<p>Mientras se sentaban a la mesa, la señora March dijo, sonriéndose:</p>
+<p>—Tengo una grata sorpresa para después de la cena.</p>
+<p>Una sonrisa feliz pasó de cara en cara como un rayo de sol. Beth palmoteó, sin hacer caso de la galleta caliente que tenía, y Jo sacudió la servilleta, exclamando:</p>
+<p>—¡Carta! ¡Carta! ¡Tres vivas para papá!</p>
+<p>—Sí, una carta larga. Está bien, y piensa que soportará el frío mejor de lo que pensamos. Envía toda clase de buenos deseos para Navidad, y un mensaje especial para sus hijas —dijo la señora March acariciando el bolsillo como si tuviera en él un tesoro.</p>
+<p>—Coman rápido. No te detengas para dar vueltas al dedo meñique y comer con afectación, Amy —gritó Jo, ahogándose al beber el té y dejando el pedazo de pan, que cayó sobre la alfombra por el lado de la mantequilla; muy excitada por la sorpresa. Beth no comió más, yendo a sentarse en un rincón oscuro para soñar con el placer venidero hasta que las otras estuviesen listas.</p>
+<p>—Creo que papá hizo una cosa magnífica marchando como capellán cuando era demasiado viejo para alistarse y no bastante fuerte para ser soldado —dijo Meg animosa.</p>
+<p>—Yo quisiera ir de tamborcillo, o de cantinero, o de enfermera, para estar cerca y ayudarle —exclamó Jo, suspirando.</p>
+<p>—Debe ser muy desagradable dormir en una tienda de campaña y comer toda clase de cosas que tienen mal gusto y beber en una lata —murmuró Amy.</p>
+<p>—¿Cuándo volverá, mamá? —preguntó Beth, con voz temblorosa.</p>
+<p>—No por mucho tiempo, querida mía, a menos que esté enfermo. Quedará para hacer fielmente su trabajo mientras pueda, y no le pediremos que vuelva un minuto antes de que puedan pasarse sin él. Ahora, oigan lo que dice la carta.</p>
+<p>Todas se acercaron al fuego, la madre en la butaca, Beth a sus pies, Meg y Amy sentadas sobre los brazos de la silla y Jo apoyándose en el respaldo, de manera que nadie pudiera ver ninguna señal de emoción si la carta tenía algo conmovedor.</p>
+<p>En aquel tiempo duro se escribían muy pocas cartas que no conmovieran, especialmente entre las enviadas a casa de los padres. En esta carta se decía poco de las molestias sufridas, de los peligros afrontados o de la nostalgia a la cual había que sobreponerse; era una carta alegre, llena de descripciones de la vida del soldado, de las marchas y de noticias militares; y sólo hacia el final el autor de la carta dejó brotar el amor paternal de su corazón y su deseo de ver a las niñas que había dejado en casa.</p>
+<p>"Mi cariño y un beso a cada una. Diles que pienso en ellas durante el día, y por la noche oro por ellas, y siempre encuentro en su cariño el mejor consuelo. Un año de espera para verlas parece interminable, pero recuérdales que, mientras esperamos, podemos todos trabajar, de manera que estos días tan duros no se desperdicien. Sé que ellas recordarán todo lo que les dije, que serán niñas cariñosas para ti, que cuando vuelva podré enorgullecerme de mis mujercitas más que nunca."</p>
+<p>Todas se conmovían algo al llegar a esta parte, Jo no se avergonzó de la gruesa lágrima que caía sobre el papel blanco, y Amy no se preocupó de que iba a desarreglar sus bucles al esconder la cara en el seno de su madre y dijo sollozando:</p>
+<p>—¡Soy egoísta! Pero trataré de ser mejor para que no se lleve un chasco conmigo.</p>
+<p>—¡Trataremos todas! —exclamó Meg—. Pienso demasiado en mi apariencia y detesto trabajar, pero no lo haré más si puedo remediarlo.</p>
+<p>—Trataré de ser lo que le gusta a él llamarme "una mujercita", y no ser brusca y atolondrada; cumpliré aquí con mi deber en vez de desear estar en otra parte —dijo Jo, pensando que dominarse a sí misma era obra más difícil que hacer frente a unos rebeldes.</p>
+<p>Beth no dijo nada, pero secó sus lágrimas con el calcetín del ejército y se puso a trabajar con todas sus fuerzas, no perdiendo tiempo en hacer lo que tenía más cerca de ella, mientras decidía en su corazón ser como su padre lo deseaba cuando al cabo de un año pudiera regresar felizmente a su casa.</p>
+<p>La señora March rompió el silencio que siguió a las palabras de Jo, diciendo con voz alegre:</p>
+<p>—¿Se acuerdan de cómo representaban "El Peregrino" cuando eran pequeñas? Nada les gustaba tanto como que les pusiera hatillos de trapos a la espalda para representar la carga, les hiciera sombreros, bastones y rollos de papel y las dejara viajar a través de la casa, desde la bodega, que era la Ciudad de Destrucción, hasta la boardilla, donde tenían todas las cosas bonitas que podían encontrar para construir una Ciudad Celestial.</p>
+<p>—¡Qué divertido era, especialmente cuando nos acercábamos a los leones, peleábamos con Apolo y pasábamos por el valle donde estaban los duendes! — dijo Jo.</p>
+<p>—A mí me gustaba el lugar donde las cargas caían y rodaban escalera abajo —murmuró Meg.</p>
+<p>—Mi parte favorita era cuando salíamos a la azotea donde estaban nuestras flores, enramadas y cosas bonitas y nos parábamos y cantábamos de alegría allá arriba al sol —dijo Beth, sonriéndose, como si aquel momento feliz hubiera vuelto.</p>
+<p>—Yo no recuerdo mucho, pero sí que tenía miedo de la bodega y de la entrada oscura, y siempre me gustaban los pastelitos y la leche que tomábamos allá arriba. Si no fuera ya mayor para tales niñerías, me gustaría mucho representarlo otra vez —susurró Amy, que hablaba de renunciar a niñerías a la edad madura de doce años.</p>
+<p>—No somos demasiado mayores para ese juego, querida mía, porque es un entretenimiento al que siempre jugamos de una manera u otra. Nuestras cargas están aquí, nuestro camino está delante de nosotras y el deseo de bondad y felicidad es el guía que nos dirige a través de muchas penas y equivocaciones hasta la paz, que es una verdadera Ciudad Celestial. Ahora, peregrinitas mías, vamos a comenzar de nuevo, no para divertimos, sino de veras, y veremos hasta dónde pueden llegar antes de que vuelva papá.</p>
+<p>—Pero, mamá ¿dónde están nuestras cargas? —preguntó Amy, que tomaba todo al pie de la letra.</p>
+<p>—Cada uno ha dicho hace un momento cuál era su carga, menos Beth; en mi opinión no tiene ninguna —dijo su madre.</p>
+<p>—Sí, la tengo; la mía es sentirme disminuida y envidiar a las que tocan pianos bonitos y tener miedo de la gente.</p>
+<p>La carga de Beth era tan cómica que a todos dio ganas de reír; pero nadie lo hizo, porque se hubiera ofendido mucho.</p>
+<p>—Hagamos esto — dijo Meg, pensativa—. Es solamente otro nombre para tratar de ser buenas, y la historia puede ayudarnos; aunque lo deseamos, ser buenas es algo difícil, nos olvidamos, y no nos esforzamos.</p>
+<p>—Esta noche estábamos en el Pantano del Abatimiento y vino mamá, y nos sacó de él, como en el libro lo hizo el hombre que se llamaba Auxilio. Deberíamos tener nuestro rollo de aviso como Cristiano. ¿Qué haremos para eso? —preguntó Jo, encantada con la idea que prestaba algo de romanticismo a la tarea poco interesante de cumplir con su deber.</p>
+<p>—Busquen debajo de la almohada en la mañana de Navidad, y encontrarán su guía —respondió la señora March.</p>
+<p>Discutieron el proyecto nuevo, mientras la vieja Hanna levantaba la mesa; después salieron las cuatro cestillas de costura, y volaron las agujas mientras las chicas cosían sábanas para la tía March. El trabajo era poco interesante pero esta noche nadie se quejó. Habían adoptado el plan ideado por Jo, de dividir las costuras largas en cuatro partes, que llamaban Europa, Asia, África y América; de esta manera hacían mucho camino, sobre todo cuando hablaban de los países diferentes según cosían a través de ellos. A las nueve dejaron el trabajo y cantaron, como acostumbraban, antes de acostarse. Nadie sino Beth podía sacar música del viejo piano; pero ella tenía una manera especial de tocar las teclas amarillas y componer un acompañamiento para las canciones simples que cantaban. Meg tenía una voz aflautada y ella, con su madre, dirigía el pequeño coro. Amy chirriaba como un grillo. Jo cantaba a su gusto, poniendo alguna corchea o algún silencio donde no hacía falta. Siempre habían cantado por la noche desde el tiempo en que apenas sabían hablar:</p>
+<p>Centellead, centellead, estrellitas y esto se había convertido en una costumbre de familia, porque la madre era cantora por naturaleza. Por la mañana, lo primero que se oía era su voz, mientras andaba por la casa cantando como una alondra; y por la noche, el último sonido era la misma voz alegre, porque las chicas no parecían nunca demasiado mayores para aquella conocida canción de cuna.</p>
+  </div>
+  <div class="fin">
+    <p>Hasta aquí las primeras páginas. Para seguir leyendo, descarga el libro completo, gratis:</p>
+    <div class="botones"><a class="btn prim" href="../../../libros/alcott-mujercitas.epub" data-archivo download="alcott-mujercitas-21c80c.epub">Descargar EPUB</a><a class="btn prim" href="../../../libros/alcott-mujercitas.pdf" data-archivo target="_blank" rel="noopener">Descargar PDF</a></div>
+    <p class="ayuda">¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.</p>
+  </div>
+</article></main>
+<footer><div class="wrap">Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.</div><div class="wrap" style="margin-top:6px">Con el auspicio de <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="../../../img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
+<script>
+(function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
+var b=document.querySelector("details.buscar"),n=document.getElementById("menu"),m=document.getElementById("btnMenu"),s=document.getElementById("menuMas");
+function cm(){if(n){n.classList.remove("abierto");m.setAttribute("aria-expanded","false")}}
+if(m)m.addEventListener("click",function(){if(b)b.open=false;m.setAttribute("aria-expanded",n.classList.toggle("abierto"))});
+if(b){b.addEventListener("toggle",function(){if(b.open){cm();setTimeout(function(){b.querySelector("input[name=q]").focus()},0)}})}
+document.addEventListener("click",function(e){if(b&&b.open&&!b.contains(e.target))b.open=false;if(s&&s.open&&!s.contains(e.target))s.open=false;if(n&&n.classList.contains("abierto")&&!n.contains(e.target)&&!m.contains(e.target))cm()});
+document.addEventListener("keydown",function(e){if(e.key==="Escape"){if(b)b.open=false;cm()}});
+document.getElementById("btnTema").onclick=function(){var o=r.dataset.theme?r.dataset.theme==="dark":matchMedia("(prefers-color-scheme: dark)").matches;r.dataset.theme=o?"light":"dark";try{localStorage.setItem(k,JSON.stringify(r.dataset.theme))}catch(e){}};})();
+</script>
+<script>
+// Si se llegó desde la ficha del sitio, Volver regresa ahí (con la biblioteca detrás) en vez de abrir la página suelta.
+document.getElementById("volver").onclick=function(e){try{if(document.referrer&&new URL(document.referrer).origin===location.origin&&history.length>1){e.preventDefault();history.back()}}catch(err){}};
+</script>
+<!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
+<style>
+/* Arriba: abajo lo tapa el mensaje «Descarga completa · Abrir» de Chrome, que es justo el que hay que tocar. */
+.aviso-epub{position:fixed; left:16px; right:16px; top:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 system-ui,sans-serif}
+.aviso-epub p{margin:0; flex:1}
+.aviso-epub a{color:var(--vino); font-weight:600}
+.aviso-epub button{flex:none; width:40px; height:40px; border:0; background:none; color:var(--muted); font-size:24px; line-height:1; cursor:pointer}
+</style>
+<script>
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest('a[download][href$=".epub"]');
+  if (!a) return;
+  var ua = navigator.userAgent, android = /Android/.test(ua), ios = /iPhone|iPad|iPod/.test(ua) || (/Macintosh/.test(ua) && navigator.maxTouchPoints > 1);
+  if (!android && !ios) return;
+  var en = /^en/.test(document.documentElement.lang), play = "https://play.google.com/store/apps/details?id=com.google.android.apps.books";
+  var html = android
+    ? (en ? 'It does not open by itself: when it finishes, tap <b>Open</b> in the message at the bottom and choose <b>Play Books</b> or your reading app. Missed it? It is in <b>Files › Downloads</b>. No app? <a href="' + play + '" target="_blank" rel="noopener">Install Play Books for free</a>.'
+          : 'No se abre solo: cuando termine de bajar, toca <b>Abrir</b> en el mensaje de abajo y elige <b>Play Libros</b> o tu app de lectura. ¿Se te pasó? Está en <b>Archivos › Descargas</b>. ¿Sin app? <a href="' + play + '" target="_blank" rel="noopener">Instala Play Libros gratis</a>.')
+    : (en ? 'Tap <b>Download</b>. Then open it from Safari\'s downloads (the ↓ arrow), tap Share and choose <b>Books</b>. The PDF, instead, opens straight away.'
+          : 'Toca <b>Descargar</b>. Después ábrelo desde las descargas de Safari (la flecha ↓), toca Compartir y elige <b>Libros</b>. El PDF, en cambio, se abre directo.');
+  var v = document.querySelector(".aviso-epub");
+  if (v) v.remove();
+  v = document.createElement("div");
+  v.className = "aviso-epub"; v.setAttribute("role", "status");
+  v.innerHTML = "<p>" + html + '</p><button type="button" aria-label="' + (en ? "Close" : "Cerrar") + '">×</button>';
+  v.querySelector("button").onclick = function(){ v.remove(); };
+  // Dentro del diálogo abierto (la ficha es modal y tapa todo lo demás).
+  (a.closest("dialog") || document.body).appendChild(v);
+});
+</script>
+<!-- AVISO_EPUB:fin -->
+<!-- MEDICION:inicio - GoatCounter: cuenta visitas y clics de descarga sin cookies ni datos personales. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
+<script>
+window.goatcounter = {path: function(p){ return p + location.hash; }};
+document.addEventListener("click", function(e){
+  var a = e.target.closest && e.target.closest("a.btn[href]");
+  if (!a || !window.goatcounter.count) return;
+  var externo = a.host && a.host !== location.host;
+  if (!a.hasAttribute("download") && !a.hasAttribute("data-archivo") && !externo) return;
+  var libro = (location.hash.match(/libro\/([^/?&]+)/) || location.pathname.match(/libro\/([^/]+)/) || [0, "sin-libro"])[1];
+  goatcounter.count({path: "clic/" + libro + "/" + a.textContent.trim().replace(/\s+/g, " "), title: a.href, event: true});
+});
+</script>
+<script data-goatcounter="https://proyectofenix.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+<!-- MEDICION:fin -->
+</body>
+</html>

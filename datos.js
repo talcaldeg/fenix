@@ -4471,6 +4471,28 @@ window.FENIX = {
       editorial: {"es": "Edición digital de Proyecto Fénix sobre la traducción de González Cueto (1850): texto limpiado del reconocimiento óptico con ayuda de inteligencia artificial, ortografía de la edición conservada, sin los elogios de los editores y con portada nueva.", "en": "Proyecto Fénix digital edition of González Cueto's translation (1850): text cleaned from optical character recognition with the help of artificial intelligence, the edition's spelling kept, without the editors' praises and with a new cover."},
       delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/combate-espiritual"},
       parecidos: ["introduccion-a-la-vida-devota", "imitacion-de-cristo", "preparacion-para-la-muerte", "escriva-camino"]
+    },
+    {
+      id: "alcott-mujercitas",
+      titulo: "Mujercitas",
+      autor: "Louisa May Alcott (trad. Enriqueta S. Albanella)",
+      anio: "1868",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "En una casa de Nueva Inglaterra, durante la guerra civil, las cuatro hermanas March, Meg, Jo, Beth y Amy, crecen con poco dinero y mucho cariño, mientras su padre está en el frente y su madre, a quien llaman Marmee, les enseña a vencer sus defectos. La obra sigue sus juegos, sus penas y sus amores, la amistad con su vecino Laurie, la enfermedad de Beth y los caminos distintos que toma cada una al hacerse mujer, entre ellos el de Jo, que sueña con ser escritora. Esta edición trae las dos partes, con los cuarenta y siete capítulos."},
+      porque: {"es": "Para leerla con una hija, una sobrina o una amiga, o para volver a ella de adulto: sigue siendo una de las historias de familia más queridas. Cada hermana tiene su propio defecto y su propia lucha, y los consejos de la madre sobre el genio vivo, la paciencia y el valor del trabajo y del amor sencillo se leen hoy con la misma frescura. Es larga y se disfruta despacio, un capítulo cada noche.", "en": "To read with a daughter, a niece or a friend, or to return to as an adult: it remains one of the best-loved family stories. Each sister has her own fault and her own struggle, and the mother's counsel about quick tempers, patience and the worth of work and of simple love still reads as freshly as ever. It is long and best enjoyed slowly, a chapter each evening."},
+      imagen: {"src": "img/portadas/alcott-mujercitas.jpg", "credito": {"es": "Winslow Homer, «Muchacha cogiendo flores de manzano», 1879", "en": "Winslow Homer, «Girl Picking Apple Blossoms», 1879"}, "url": "https://commons.wikimedia.org/wiki/File:Girl_Picking_Apple_Blossoms_by_Winslow_Homer.jpg"},
+      citas: [
+        "Navidad no será Navidad sin regalos",
+        "Me enojo casi todos los días de mi vida, Jo; pero he aprendido a no demostrarlo, y todavía tengo la esperanza de aprender a no sentirlo, aunque necesite otros cuarenta años para conseguirlo.",
+        "El dinero es cosa útil y preciosa, y también noble cuando se emplea bien; pero no quiero que lo consideren como el primero o el único premio que ganar.",
+        "Preferiría verlas esposas de hombres pobres si fueran felices, amadas y contentas, que reinas en sus tronos sin propia estimación ni paz."
+      ],
+      archivos: {"epub": "libros/alcott-mujercitas.epub", "pdf": "libros/alcott-mujercitas.pdf"},
+      fuente: {"texto": "Traducción de Enriqueta S. Albanella (Editorial Molino, Buenos Aires, 1943), en una edición digital; nota y portada de Proyecto Fénix (dominio público)", "url": "https://datos.bne.es/persona/XX1179488.html"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mujercitas"},
+      parecidos: ["austen-sense-and-sensibility", "burnett-el-jardin-secreto", "austen-pride-and-prejudice"]
     }
   ],
 
@@ -4558,7 +4580,6 @@ window.FENIX = {
     { titulo: {"es": "Lazarillo de Tormes"}, autor: "Anónimo", delibris: null, estimada: {"valor": 5, "genero": "Literatura"} },
     { titulo: {"es": "Jane Eyre"}, autor: "Charlotte Brontë", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jane-eyre"} },
     { titulo: {"es": "Cumbres borrascosas"}, autor: "Emily Brontë", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cumbres-borrascosas"} },
-    { titulo: {"es": "Mujercitas"}, autor: "Louisa May Alcott", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mujercitas"} },
     { titulo: {"es": "Moby Dick"}, autor: "Herman Melville", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/moby-dick"} },
     { titulo: {"es": "Canción de Navidad"}, autor: "Charles Dickens", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cancion-de-navidad"} },
     { titulo: {"es": "El conde de Montecristo"}, autor: "Alexandre Dumas", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/el-conde-de-montecristo"} },
