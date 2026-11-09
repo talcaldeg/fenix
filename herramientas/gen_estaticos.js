@@ -282,24 +282,29 @@ const ESTILO = `
   body{font-family:var(--letra); font-size-adjust:.46; font-variant-numeric:oldstyle-nums proportional-nums; font-kerning:normal;
        background:var(--luz) no-repeat, var(--grano) 0 0/180px 180px repeat, var(--bg)}
   h1,h2{font-weight:600} h2{font-weight:500}
-  header{background-color:var(--cabecera); background-image:var(--veta), linear-gradient(180deg,var(--cabecera),var(--cabecera-2)); background-size:640px 96px, auto;
+  header{background:var(--madera-cab);
          border-bottom:2px solid var(--filete); box-shadow:0 6px 14px -8px rgba(40,20,5,.55)}
   header .marca{color:var(--en-madera-2); font-weight:600; font-size:21px}
   nav.menu a, nav.menu summary{font:500 17px/1.25 var(--letra); font-size-adjust:.46; color:var(--en-madera)}
   nav.menu a:hover, nav.menu summary:hover{color:#fbf1d8; background:rgba(243,230,196,.10); box-shadow:inset 0 -2px 0 var(--laton)}
   .mas .sub a{color:var(--muted)} .mas .sub a:hover{color:var(--ink); background:var(--chip); box-shadow:none}
   header .pildora{font:600 16px/1 var(--letra); font-size-adjust:.46; background:rgba(243,230,196,.06); border-color:rgba(243,230,196,.28); color:var(--en-madera-2)}
+  /* «English» es un enlace dentro de nav.menu: sin esto heredaba el radio de 8 px y la letra de los enlaces del menú
+     y no se veía como la píldora de index.html (9-nov-2026). */
+  header nav.menu a.pildora{border-radius:999px; padding:6px 14px; font:600 16px/1 var(--letra); font-size-adjust:.46; color:var(--en-madera-2)}
+  header nav.menu a.pildora:hover{background:rgba(243,230,196,.06); box-shadow:none; border-color:var(--laton)}
   header details.buscar summary{color:var(--en-madera-2)}
   @media (max-width:960px){
-    nav.menu{background-color:var(--cabecera-2); background-image:var(--veta); border-bottom:2px solid var(--filete)}
+    nav.menu{background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)), var(--madera-cab); border-bottom:2px solid var(--filete)}
     .mas .sub a{color:var(--en-madera)} .mas .sub a:hover{color:#fbf1d8; background:rgba(243,230,196,.10)}
     .ajustes-nav{border-top-color:rgba(243,230,196,.2)}
   }
   .btn{font:600 17px/1.2 var(--letra); font-size-adjust:.46; border-radius:6px}
   .ficha img{border-radius:2px 5px 5px 2px; box-shadow:0 1px 1px rgba(30,15,5,.25), 0 12px 18px -10px rgba(30,15,5,.55)}
-  footer{background-color:var(--zocalo); background-image:var(--veta), linear-gradient(180deg,var(--zocalo),var(--zocalo-2)); background-size:640px 96px, auto;
-         color:var(--en-madera); border-top:3px solid var(--filete)}
+  footer{background:var(--madera-pie); color:var(--en-madera); border-top:3px solid var(--filete)}
   footer a, footer nav a{color:#e9c26a}`;
+// Las texturas de PALETA (url("img/...")) son relativas a la carpeta del sitio: cada página les antepone su base.
+const estilo = B => ESTILO.replace(/url\("img\//g, `url("${B}img/`);
 
 const SCRIPT_TEMA = `<script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
@@ -414,7 +419,7 @@ ${FUENTES}
 <script type="application/ld+json">
 ${JSON.stringify(ld, null, 2)}
 </script>
-<style>${ESTILO}
+<style>${estilo(B)}
 </style>
 </head>
 <body>
@@ -429,7 +434,7 @@ ${JSON.stringify(ld, null, 2)}
     <div class="cabeza">
       ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
       <h1>${esc(l.titulo)}<span class="sub">${esc(of.sub)}</span></h1>
-      <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(x.cat[l.categoria])}</p>${otra ? `
+      <p class="meta">${esc(l.autor)} · ${esc(l.anio).replace(/ /g, "\u00a0")} · ${esc(x.cat[l.categoria])}</p>${otra ? `
       <p class="meta">${esc(x.tambien)}: <a href="${otraUrl}" hreflang="${otra.idioma}" lang="${otra.idioma}">${esc(otra.titulo)}</a></p>` : ""}
     </div>
     <div class="cuerpo">
@@ -490,7 +495,7 @@ ${FUENTES}
 <meta property="og:url" content="${url}">
 <meta property="og:image" content="${esc(imagen)}">
 <!-- Generada por herramientas/gen_estaticos.js desde muestras/ (herramientas/muestras.py). No editar a mano. -->
-<style>${ESTILO}
+<style>${estilo(B)}
   .lectura{max-width:680px; margin:0 auto}
   .lectura .volver{display:inline-block; margin:0 0 18px; font:600 15px system-ui,sans-serif; text-decoration:none}
   .lectura .meta{margin-bottom:28px}
@@ -515,7 +520,7 @@ ${FUENTES}
 <main class="wrap"><article class="lectura">
   <a class="volver" id="volver" href="../">← ${esc(x.volver)}</a>
   <h1>${esc(l.titulo)}<span class="sub">${esc(x.primeras[0].toUpperCase() + x.primeras.slice(1))}</span></h1>
-  <p class="meta">${esc(l.autor)} · ${esc(l.anio)}</p>
+  <p class="meta">${esc(l.autor)} · ${esc(l.anio).replace(/ /g, "\u00a0")}</p>
   <div class="texto">
 ${m.html.replace(/@@RAIZ@@/g, B)}
   </div>
@@ -602,7 +607,7 @@ ${FUENTES}
 <meta name="twitter:description" content="${esc(t.lede)}">
 <meta name="twitter:image" content="${imagen}">
 <!-- Generada por herramientas/gen_estaticos.js. No editar a mano. -->
-<style>${ESTILO}
+<style>${estilo(B)}
   .dona{max-width:720px}
   .dona .lede{font-size:19px}
   .dona ul{padding-left:22px} .dona li{margin:8px 0}

@@ -12,7 +12,9 @@ Revisa, en ventanas de escritorio y de celular:
   - la barra del sistema del celular (theme-color) es del color de la cabecera (--cabecera, la madera), en claro y en oscuro.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
-     --capturas <carpeta>  guarda una captura del inicio por ventana, para mirarlas
+     --capturas <carpeta>  guarda una captura del inicio por ventana y el RECORRIDO (inicio, Biblioteca,
+                           Todos, Editorial, Citas, una ficha, una página de libro y su muestra, más el pie)
+                           en claro y oscuro, en computador y celular; mirarlas con lib/hoja_contacto.py
 """
 import argparse
 import functools
@@ -38,6 +40,45 @@ def servir(raiz):
     return srv
 
 
+# Recorrido para mirar a ojo (--capturas): cada página que se pide revisar tras un cambio de diseño, en claro y
+# oscuro, en computador y celular (9-nov-2026). Se capturan las primeras pantallas (hasta ALTO_CAPTURA) para que
+# las repisas y el pie entren sin llevar a la hoja de contacto la página entera.
+RECORRIDO = [("inicio", "#inicio"), ("biblioteca", "#biblioteca"), ("todos", "#todos"), ("editorial", "#editorial"),
+             ("citas", "#citas"), ("ficha", "#biblioteca"), ("libro", LIBRO), ("muestra", LIBRO + "muestra/")]
+ALTO_CAPTURA = 2400
+
+
+def capturar(nav, base, carpeta):
+    os.makedirs(carpeta, exist_ok=True)
+    for esquema in ("light", "dark"):
+        for w, h in ((1366, 768), (390, 844)):
+            pg = nav.new_page(viewport={"width": w, "height": h}, color_scheme=esquema)
+            for nombre, ruta in RECORRIDO:
+                pg.goto(base + ruta)
+                pg.wait_for_load_state("networkidle")
+                # Las portadas cargan diferidas: se baja y se vuelve para que estén todas.
+                # behavior 'instant': con scroll-behavior: smooth la captura salía a medio subir, con la cabecera
+                # fija pintada en el medio de la página.
+                pg.evaluate("window.scrollTo({top: %d, behavior: 'instant'})" % ALTO_CAPTURA)
+                pg.wait_for_timeout(500)
+                pg.evaluate("window.scrollTo({top: 0, behavior: 'instant'})")
+                if nombre == "ficha":
+                    pg.evaluate("document.querySelector('.libro, .fila[data-id]').click()")
+                    pg.wait_for_timeout(700)
+                pg.wait_for_timeout(400)
+                alto = min(ALTO_CAPTURA, pg.evaluate("document.documentElement.scrollHeight"))
+                completa = nombre != "ficha"
+                pg.screenshot(path=os.path.join(carpeta, f"{nombre}_{'pc' if w > 760 else 'cel'}_{esquema}.png"),
+                              full_page=completa, clip={"x": 0, "y": 0, "width": w, "height": alto if completa else h})
+            # El pie (zócalo de madera) queda fuera del primer tramo: una captura aparte del final del inicio.
+            pg.goto(base + "#inicio")
+            pg.wait_for_load_state("networkidle")
+            pg.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)")
+            pg.wait_for_timeout(500)
+            pg.screenshot(path=os.path.join(carpeta, f"pie_{'pc' if w > 760 else 'cel'}_{esquema}.png"))
+            pg.close()
+
+
 def revisar(raiz, capturas=None):
     try:
         from playwright.sync_api import sync_playwright
@@ -48,6 +89,8 @@ def revisar(raiz, capturas=None):
     fallas = []
     with sync_playwright() as p:
         nav = p.chromium.launch()
+        if capturas:
+            capturar(nav, base, capturas)
         for w, h in VENTANAS:
             pg = nav.new_page(viewport={"width": w, "height": h})
             errores = []
@@ -71,8 +114,30 @@ def revisar(raiz, capturas=None):
                     fallas.append(f"{donde}: falta en el pie el auspicio de Verum Data con enlace a verumdata.cl")
                 elif not aus["img"]:
                     fallas.append(f"{donde}: el auspicio de Verum Data no muestra su ícono (img/verum-data.svg)")
+                # Madera (9-nov-2026, «la madera está medio falsa»): la cabecera y el pie pintan la tabla de nogal de
+                # herramientas/madera.py, y la imagen carga también desde las páginas de libro (su ruta lleva la base).
+                mad = pg.evaluate("""() => { const cargo = performance.getEntriesByType('resource')
+                        .some(e => e.name.includes('img/madera/nogal.webp') && (e.responseStatus || 200) < 400);
+                    const usa = s => /nogal\\.webp/.test(getComputedStyle(document.querySelector(s)).backgroundImage);
+                    return {cargo, cab: usa('header'), pie: usa('footer')}; }""")
+                if not (mad["cab"] and mad["pie"]):
+                    fallas.append(f"{donde}: la cabecera o el pie no usan la madera (img/madera/nogal.webp)")
+                elif not mad["cargo"]:
+                    fallas.append(f"{donde}: img/madera/nogal.webp no cargó (ruta rota)")
+                # Los botones redondos de la cabecera (idioma, tema, lupa) son píldoras en todas las páginas; en las de
+                # libro, «English» es un enlace del menú y heredaba el radio de 8 px (9-nov-2026).
+                radios = pg.evaluate("""() => [...document.querySelectorAll('header .pildora')]
+                    .map(e => (e.textContent.trim() || e.id) + ':' + parseFloat(getComputedStyle(e).borderTopLeftRadius))""")
+                cuadrados = [r for r in radios if float(r.rsplit(":", 1)[1]) < 15]
+                if cuadrados:
+                    fallas.append(f"{donde}: botones de la cabecera que no son píldora: {cuadrados}")
                 if vista != "inicio":
                     continue
+                # Una tabla por fila: el tramo de repisa de cada libro sigue la veta del vecino (--rx distinto).
+                rx = pg.evaluate("""() => [...document.querySelectorAll('.grilla > .libro')].filter(l => l.offsetParent)
+                    .slice(0, 4).map(l => l.style.getPropertyValue('--rx') + ' ' + l.style.getPropertyValue('--ry'))""")
+                if len(rx) > 1 and len(set(rx)) < len(rx):
+                    fallas.append(f"{donde}: las repisas repiten el mismo recorte de madera bajo cada libro (--rx --ry {rx})")
                 r = pg.evaluate("""() => {
                     const q = s => document.querySelector(s);
                     return {cifras: q('.hero .cifras').getBoundingClientRect().bottom,

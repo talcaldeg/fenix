@@ -1194,7 +1194,15 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     /* Texturas en SVG incrustado (ruido de feTurbulence): grano de papel al ~5 % y veta de madera; no se descarga nada. */
     --papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
     --papel-osc:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9  0 0 0 0 .75  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
-    --veta:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='96'%3E%3Cfilter id='v'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0035 .16' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08  0 0 0 0 .04  0 0 0 0 .01  0 0 0 1.5 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23v)'/%3E%3C/svg%3E");
+    /* Nogal: tabla dibujada por herramientas/madera.py (anillos, poros y tono; empalma por los cuatro lados). Se tiñe
+       con --tinte-* según dónde va y el modo. gen_estaticos.js antepone la base de cada página a url("img/. */
+    --veta:url("img/madera/nogal.webp"); --veta-tam:1200px 200px;
+    --tinte-cab:rgba(30,15,6,.50); --tinte-pie:rgba(22,11,4,.60); --tinte-repisa:rgba(40,20,8,.10);
+    /* Cabecera: arriba se funde con --cabecera (el theme-color de la barra del celular, sin corte) y abajo, una moldura. */
+    --madera-cab:linear-gradient(180deg,var(--cabecera) 0,rgba(0,0,0,0) 14px), linear-gradient(0deg,rgba(255,226,180,.10) 0,rgba(255,226,180,0) 3px),
+                 linear-gradient(var(--tinte-cab),var(--tinte-cab)), var(--veta) 0 0/var(--veta-tam), var(--cabecera);
+    --madera-pie:linear-gradient(180deg,rgba(255,226,180,.08) 0,rgba(0,0,0,0) 4px), linear-gradient(var(--tinte-pie),var(--tinte-pie)),
+                 var(--veta) -300px -60px/var(--veta-tam), var(--zocalo);
     --grano:var(--papel); --luz:linear-gradient(transparent,transparent);
   }
   @media (prefers-color-scheme: dark){
@@ -1205,6 +1213,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
       --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
       --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
       --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
       --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
     }
   }
@@ -1215,6 +1224,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
     --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
     --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
     --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
   }
   /* PALETA:fin */
@@ -1588,7 +1598,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .hero .eyebrow::before{color:inherit}
 
   /* Cornisa: nogal con veta, filete de latón y la sombra que deja sobre el papel. theme-color = --cabecera. */
-  header.top{background-color:var(--cabecera); background-image:var(--veta), linear-gradient(180deg,var(--cabecera),var(--cabecera-2)); background-size:640px 96px, auto;
+  header.top{background:var(--madera-cab);
              -webkit-backdrop-filter:none; backdrop-filter:none; border-bottom:2px solid var(--filete); box-shadow:0 6px 14px -8px rgba(40,20,5,.55)}
   header.top .marca{color:var(--en-madera-2); font-weight:600; font-size:21px; letter-spacing:.01em}
   nav.menu a, nav.menu summary{font:500 17px/1.25 var(--letra); font-size-adjust:.46; color:var(--en-madera)}
@@ -1600,7 +1610,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   header.top #btnLupa{color:var(--en-madera-2)}
   header.top #btnLupa[aria-expanded="true"]{background:rgba(243,230,196,.16)}
   @media (max-width:960px){
-    nav.menu{background-color:var(--cabecera-2); background-image:var(--veta); border-bottom:2px solid var(--filete)}
+    nav.menu{background:linear-gradient(rgba(0,0,0,.18),rgba(0,0,0,.18)), var(--madera-cab); border-bottom:2px solid var(--filete)}
     .mas .sub a{color:var(--en-madera)}
     .mas .sub a.on, .mas .sub a:hover{color:#fbf1d8; background:rgba(243,230,196,.10)}
     .ajustes-nav{border-top-color:rgba(243,230,196,.2)}
@@ -1619,20 +1629,33 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (max-width:600px){.grilla{--g:12px}}
   .libro{position:relative; background:none; border:0; border-radius:0; overflow:visible; box-shadow:none}
   .libro:hover{transform:none; box-shadow:none}
-  .libro .portada{z-index:1; border-radius:2px 5px 5px 2px; box-shadow:0 1px 1px rgba(30,15,5,.25), 0 10px 14px -8px rgba(30,15,5,.55); transition:transform .2s ease, box-shadow .2s ease}
+  .libro .portada{z-index:1; border-radius:2px 5px 5px 2px; box-shadow:0 1px 1px rgba(30,15,5,.25), 5px 0 9px -5px rgba(30,15,5,.40); transition:transform .2s ease, box-shadow .2s ease}
   .libro:hover .portada, .libro:focus-visible .portada{transform:translateY(-6px); box-shadow:0 1px 1px rgba(30,15,5,.25), 0 18px 22px -10px rgba(30,15,5,.6)}
   @media (prefers-reduced-motion: reduce){.libro .portada{transition:none}}
   .libro .portada.marco::after{display:block; content:""; position:absolute; inset:0; border:0; border-radius:inherit; pointer-events:none;
        background:linear-gradient(90deg,rgba(0,0,0,.30) 0,rgba(255,255,255,.14) 2.2%,rgba(0,0,0,.10) 4%,rgba(0,0,0,0) 7%)}
-  .libro .pie{position:relative; padding:24px 2px 4px}
-  .libro .pie::before{content:""; position:absolute; top:0; left:calc(var(--g,18px) / -2); right:calc(var(--g,18px) / -2); height:13px;
-       background-color:var(--repisa); background-image:var(--veta), linear-gradient(180deg,var(--repisa-luz) 0,var(--repisa) 35%,var(--repisa-2) 100%); background-size:640px 96px, auto;
-       box-shadow:0 7px 9px -5px rgba(30,15,5,.5), inset 0 1px 0 rgba(255,230,190,.25)}
+  /* La tabla se ve de frente y un poco desde arriba: 6 px de cubierta (más oscura al fondo, donde no llega la luz),
+     un canto redondeado que brilla y 18 px de frente que oscurece hacia abajo, con su sombra sobre el papel. Las
+     portadas bajan 3 px sobre la cubierta: el libro se apoya en la tabla y no flota sobre ella. La veta sigue de un
+     libro al vecino (--rx y --ry los pone alinearRepisas() con la posición de cada libro): una tabla por fila, no
+     un recorte repetido bajo cada libro. */
+  .libro .pie{position:relative; padding:31px 2px 4px}
+  .libro .pie::before{content:""; position:absolute; top:-3px; left:calc(var(--g,18px) / -2); right:calc(var(--g,18px) / -2); height:24px;
+       background:
+         linear-gradient(180deg,rgba(20,10,4,.55) 0,rgba(20,10,4,.12) 6px,rgba(0,0,0,0) 6px) 0 0/100% 6px no-repeat,
+         linear-gradient(rgba(255,228,186,.45),rgba(255,228,186,.10)) 0 6px/100% 2px no-repeat,
+         linear-gradient(180deg,rgba(255,228,186,.10) 8px,rgba(0,0,0,0) 11px,rgba(14,7,3,.38) 100%),
+         linear-gradient(var(--tinte-repisa),var(--tinte-repisa)),
+         var(--veta) calc(var(--g,18px) / 2 - var(--rx,0px)) calc(-40px - var(--ry,0px))/var(--veta-tam),
+         var(--repisa);
+       box-shadow:0 1px 0 rgba(14,7,3,.45), 0 10px 12px -7px rgba(30,15,5,.55)}
   .libro .pie .tl .tt{font:600 17px/1.25 var(--letra); font-size-adjust:.46}
   /* Recomendados por Fénix: una cinta de marcapáginas color vino en vez del borde dorado. */
   .libro.fenix{border:0}
   .libro.fenix .portada.marco::before{content:""; position:absolute; z-index:2; top:-4px; right:14%; width:13px; height:46px;
        background:linear-gradient(90deg,#5e1520,#9a2f3c 50%,#5e1520); clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%)}
+  /* En el celular la portada es angosta y la cinta tapaba el final del título («CONFESIONE|»): va sobre el marco. */
+  @media (max-width:600px){.libro.fenix .portada.marco::before{right:4%; width:9px; height:32px}}
   .libro.sin-epub:hover .portada{transform:none}
 
   /* Catálogo: una hoja de registro con renglones y encabezado en versalitas. */
@@ -1650,8 +1673,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .cita, .parecido{border-radius:6px}
 
   /* Zócalo: el pie es la base de la estantería, en nogal oscuro. */
-  footer{background-color:var(--zocalo); background-image:var(--veta), linear-gradient(180deg,var(--zocalo),var(--zocalo-2)); background-size:640px 96px, auto;
-         color:var(--en-madera); border-top:3px solid var(--filete)}
+  footer{background:var(--madera-pie); color:var(--en-madera); border-top:3px solid var(--filete)}
   footer a, footer button.enlace{color:#e9c26a}
 </style>
 </head>
@@ -2544,6 +2566,8 @@ function iniciar(){
   }, true);
 
   // ---------- utilidades ----------
+  // «c. 390 a. C.» no se parte entre líneas (en el celular quedaba «a.» arriba y «C.» abajo).
+  const anioJunto = a => esc(a).replace(/ /g, "\u00a0");
   const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
   // Una obra es una ficha; si tiene versión en el idioma de la página (`versiones` en datos.js), se
   // muestra esa: sus campos reemplazan a los de la ficha y los enlaces de cada una quedan en su idioma.
@@ -2641,7 +2665,7 @@ function iniciar(){
   }
   function fila(l){
     return `<div class="fila${claseLibro(l)}" role="listitem" data-id="${esc(l.id)}" tabindex="0">${miniatura(l)}
-      <div class="libro-c"><div class="tt"><a href="${esc(rutaLibro(l))}">${esc(l.titulo)}</a></div><div class="au">${esc(l.autor)} · ${esc(l.anio)}</div></div>
+      <div class="libro-c"><div class="tt"><a href="${esc(rutaLibro(l))}">${esc(l.titulo)}</a></div><div class="au">${esc(l.autor)} · ${anioJunto(l.anio)}</div></div>
       <div class="etqs">${sello(l)}${etqsFormato(l)}<span class="etq">${esc(categoria(l.categoria))}</span>
         ${l.editorial ? `<span class="etq ed-fenix">${esc(t("x.edFenix"))}</span>` : ""}</div>
       ${moral(l)}
@@ -2786,7 +2810,7 @@ function iniciar(){
     $("#fichaCuerpo").innerHTML = `<div class="ficha">${portada(l)}<div>
       ${sello(l, true)}
       <h3 style="font-size:22px" id="fichaTitulo">${esc(l.titulo)}</h3>
-      <p class="meta">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</p>
+      <p class="meta">${esc(l.autor)} · ${anioJunto(l.anio)} · ${esc(categoria(l.categoria))}</p>
       <div class="descargas">${desc}</div>
       ${Object.keys(archivosEn(l)).length ? `<p class="ayuda">${esc(t("x.ayuda"))}</p>` : ""}
       <div class="marcas">
@@ -3175,7 +3199,7 @@ function iniciar(){
     $("#listaEditorial").innerHTML = ls.map(l => `<article class="caja ed" data-id="${esc(l.id)}" tabindex="0">
       ${miniatura(l, "medio", 72, 108)}
       <div><h3><a href="${esc(rutaLibro(l))}" style="color:inherit; text-decoration:none">${esc(l.titulo)}</a></h3>
-        <div class="meta" style="margin:0">${esc(l.autor)} · ${esc(l.anio)} · ${esc(categoria(l.categoria))}</div>
+        <div class="meta" style="margin:0">${esc(l.autor)} · ${anioJunto(l.anio)} · ${esc(categoria(l.categoria))}</div>
         <p><strong>${esc(t("x.queHicimos"))}:</strong> ${esc(l.editorial[lang] || l.editorial.es)}</p>
         <span class="btn">${esc(t("x.verLibro"))}</span></div></article>`).join("");
   }
@@ -3438,6 +3462,29 @@ document.addEventListener("click", function(e){
 });
 </script>
 <!-- AVISO_EPUB:fin -->
+<script>
+/* Repisas: cada libro dice dónde está en su grilla (--rx) y en qué fila (--ry), para que la veta del tramo de tabla bajo
+   él continúe la del vecino. Sin esto, todos los tramos repetían el mismo recorte de madera y se notaba lo falso. */
+(function(){
+  var pend = 0;
+  function alinearRepisas(){
+    pend = 0;
+    document.querySelectorAll(".grilla").forEach(function(g){
+      var x0 = g.getBoundingClientRect().left, alto = null, fila = -1;
+      g.querySelectorAll(":scope > .libro").forEach(function(l){
+        var r = l.getBoundingClientRect();
+        if (alto === null || Math.abs(r.top - alto) > 4){ alto = r.top; fila++; }
+        l.style.setProperty("--rx", Math.round(r.left - x0) + "px");
+        l.style.setProperty("--ry", (fila * 53 % 200) + "px");
+      });
+    });
+  }
+  function pedir(){ if (!pend) pend = requestAnimationFrame(alinearRepisas); }
+  new MutationObserver(pedir).observe(document.body, {childList: true, subtree: true});
+  addEventListener("resize", pedir); addEventListener("hashchange", pedir); addEventListener("load", pedir);
+  pedir();
+})();
+</script>
 <!-- MEDICION:inicio - GoatCounter: cuenta visitas y clics de descarga sin cookies ni datos personales. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
 <script>
 window.goatcounter = {path: function(p){ return p + location.hash; }};
