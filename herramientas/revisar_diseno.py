@@ -9,7 +9,7 @@ Revisa, en ventanas de escritorio y de celular:
   - todas las vistas y una página de libro: sin scroll horizontal y sin errores de JavaScript;
   - la barra de arriba cabe en una línea en escritorio;
   - cada enlace del menú lleva al principio de su vista, también si ya se está en ella más abajo;
-  - la barra del sistema del celular (theme-color) es del color de la cabecera, en claro y en oscuro.
+  - la barra del sistema del celular (theme-color) es del color de la cabecera (--cabecera, la madera), en claro y en oscuro.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
      --capturas <carpeta>  guarda una captura del inicio por ventana, para mirarlas
@@ -116,11 +116,19 @@ def revisar(raiz, capturas=None):
                     r = pg.evaluate("""() => {
                         const m = [...document.querySelectorAll('meta[name="theme-color"]')]
                             .find(x => !x.media || matchMedia(x.media).matches);
-                        return {barra: (m || {}).content || '', bg: getComputedStyle(document.documentElement).getPropertyValue('--bg').trim()};
+                        // Desde el 9-nov-2026 la cabecera es de madera (--cabecera), no del color del papel (--bg):
+                        // se compara con esa variable y con el color que de verdad pinta el <header>.
+                        const cab = getComputedStyle(document.documentElement).getPropertyValue('--cabecera').trim();
+                        const h = document.querySelector('header'), c = document.createElement('i');
+                        c.style.color = cab; document.body.appendChild(c);
+                        const rgbCab = getComputedStyle(c).color; c.remove();
+                        return {barra: (m || {}).content || '', bg: cab, pinta: h ? getComputedStyle(h).backgroundColor : '', rgbCab};
                     }""")
-                    if r["barra"].lower() != r["bg"].lower():
+                    if not r["bg"] or r["barra"].lower() != r["bg"].lower():
                         fallas.append(f"barra del celular {esquema} {vista} {paso}: theme-color {r['barra'] or 'ausente'} "
-                                      f"y la cabecera es {r['bg']} (se ve un corte de color arriba)")
+                                      f"y la cabecera es {r['bg'] or '(sin --cabecera)'} (se ve un corte de color arriba)")
+                    elif r["pinta"] != r["rgbCab"]:
+                        fallas.append(f"cabecera {esquema} {vista} {paso}: el <header> pinta {r['pinta']} y no --cabecera ({r['bg']})")
             pg.close()
         # Un enlace del menú lleva al principio de su vista aunque ya se esté en ella, abajo (el hash no
         # cambia y no hay hashchange), o en una sección de la misma vista (#editores -> Editorial).

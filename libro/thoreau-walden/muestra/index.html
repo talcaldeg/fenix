@@ -10,10 +10,10 @@
 <link rel="manifest" href="../../../manifest.webmanifest">
 <!-- La barra del sistema (hora, batería) toma el color de fondo de la cabecera, en claro y en oscuro, y lo sigue si se
      fuerza el tema con ◐; revisar_diseno.py lo exige. -->
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf6ef">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16110f">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#2f1d12">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e130b">
 <script>(function(){var r=document.documentElement,m=document.querySelectorAll('meta[name="theme-color"]'),orig=[].map.call(m,function(x){return x.content;});
-new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getPropertyValue("--bg").trim();m.forEach(function(x,i){x.content=bg||orig[i];});}).observe(r,{attributes:true,attributeFilter:["data-theme"]});})();</script>
+new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getPropertyValue("--cabecera").trim();m.forEach(function(x,i){x.content=bg||orig[i];});}).observe(r,{attributes:true,attributeFilter:["data-theme"]});})();</script>
 <link rel="apple-touch-icon" href="../../../img/icono-apple-180.png">
 <meta name="apple-mobile-web-app-title" content="Fénix">
 <meta name="mobile-web-app-capable" content="yes">
@@ -21,6 +21,9 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
 <!-- PWA:fin -->
 <meta name="description" content="Read the first pages of «Walden» by Henry David Thoreau online, free and without downloading anything.">
 <meta name="color-scheme" content="light dark">
+<!-- FUENTES:inicio --><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&display=swap"><!-- FUENTES:fin -->
 <link rel="canonical" href="https://talcaldeg.github.io/fenix/libro/thoreau-walden/muestra/">
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="Proyecto Fénix">
@@ -97,6 +100,67 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
     .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
   }
+  /* Ambiente de biblioteca, igual que index.html (9-nov-2026): papel y tinta, cabecera y pie de nogal, EB Garamond.
+     La paleta y las texturas se toman de index.html (PALETA), para no tener dos copias. */
+  
+  :root{
+    color-scheme: light dark;
+    --bg:#f6f0e1; --bg2:#ede4cf; --card:#fbf7ec; --line:#dccfb3; --ink:#1e2230; --muted:#5a4c3e;
+    --vino:#7a1f2b; --oro:#7a5a14; --acento:#7a1f2b; --acento-ink:#fbf3e2; --chip:#ebe0c8;
+    --ok:#2f6b3a; --sombra:0 1px 2px rgba(60,40,20,.12), 0 10px 24px -12px rgba(60,40,20,.35);
+    --c-lectura:#6b1d24; --c-oracion:#2c4a6e; --c-novela:#3f5a2e;
+    --c-teatro:#5a3a6b; --c-poesia:#7a4a1f; --c-ensayo:#3d4a52;
+    --cabecera:#2f1d12; --cabecera-2:#22140b; --en-madera:#d8c6a0; --en-madera-2:#f3e6c4; --laton:#d9a441; --filete:#8a6a2a;
+    --repisa:#6b4226; --repisa-luz:#8f5e39; --repisa-2:#4a2c18; --zocalo:#2f1d12; --zocalo-2:#1f1209;
+    --letra:"EB Garamond",Georgia,"Iowan Old Style","Palatino Linotype",serif;
+    /* Texturas en SVG incrustado (ruido de feTurbulence): grano de papel al ~5 % y veta de madera; no se descarga nada. */
+    --papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    --papel-osc:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9  0 0 0 0 .75  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    --veta:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='96'%3E%3Cfilter id='v'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0035 .16' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08  0 0 0 0 .04  0 0 0 0 .01  0 0 0 1.5 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23v)'/%3E%3C/svg%3E");
+    --grano:var(--papel); --luz:linear-gradient(transparent,transparent);
+  }
+  @media (prefers-color-scheme: dark){
+    :root:not([data-theme="light"]){
+      --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
+      --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+      --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
+      --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+      --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
+      --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+      --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
+    }
+  }
+  :root[data-theme="dark"]{
+    --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
+    --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+    --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
+    --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
+    --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
+    --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+    --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
+  }
+  
+  body{font-family:var(--letra); font-size-adjust:.46; font-variant-numeric:oldstyle-nums proportional-nums; font-kerning:normal;
+       background:var(--luz) no-repeat, var(--grano) 0 0/180px 180px repeat, var(--bg)}
+  h1,h2{font-weight:600} h2{font-weight:500}
+  header{background-color:var(--cabecera); background-image:var(--veta), linear-gradient(180deg,var(--cabecera),var(--cabecera-2)); background-size:640px 96px, auto;
+         border-bottom:2px solid var(--filete); box-shadow:0 6px 14px -8px rgba(40,20,5,.55)}
+  header .marca{color:var(--en-madera-2); font-weight:600; font-size:21px}
+  nav.menu a, nav.menu summary{font:500 17px/1.25 var(--letra); font-size-adjust:.46; color:var(--en-madera)}
+  nav.menu a:hover, nav.menu summary:hover{color:#fbf1d8; background:rgba(243,230,196,.10); box-shadow:inset 0 -2px 0 var(--laton)}
+  .mas .sub a{color:var(--muted)} .mas .sub a:hover{color:var(--ink); background:var(--chip); box-shadow:none}
+  header .pildora{font:600 16px/1 var(--letra); font-size-adjust:.46; background:rgba(243,230,196,.06); border-color:rgba(243,230,196,.28); color:var(--en-madera-2)}
+  header details.buscar summary{color:var(--en-madera-2)}
+  @media (max-width:960px){
+    nav.menu{background-color:var(--cabecera-2); background-image:var(--veta); border-bottom:2px solid var(--filete)}
+    .mas .sub a{color:var(--en-madera)} .mas .sub a:hover{color:#fbf1d8; background:rgba(243,230,196,.10)}
+    .ajustes-nav{border-top-color:rgba(243,230,196,.2)}
+  }
+  .btn{font:600 17px/1.2 var(--letra); font-size-adjust:.46; border-radius:6px}
+  .ficha img{border-radius:2px 5px 5px 2px; box-shadow:0 1px 1px rgba(30,15,5,.25), 0 12px 18px -10px rgba(30,15,5,.55)}
+  footer{background-color:var(--zocalo); background-image:var(--veta), linear-gradient(180deg,var(--zocalo),var(--zocalo-2)); background-size:640px 96px, auto;
+         color:var(--en-madera); border-top:3px solid var(--filete)}
+  footer a, footer nav a{color:#e9c26a}
   .lectura{max-width:680px; margin:0 auto}
   .lectura .volver{display:inline-block; margin:0 0 18px; font:600 15px system-ui,sans-serif; text-decoration:none}
   .lectura .meta{margin-bottom:28px}

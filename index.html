@@ -11,15 +11,20 @@ if(!location.hash||location.hash==="#inicio"){var p=document.createElement("link
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2214%22%20fill%3D%22%236b1d24%22/%3E%3Cg%20fill%3D%22%23e8b04a%22%3E%3Cpath%20d%3D%22M31%2056C24%2052%2015%2051%207%2053L6.5%2046.5%204.5%2045.5%206%2038.5%203.5%2037%205%2029%202.5%2027.5%202.5%207.5C8%2017%2019%2026%2031%2036.5Z%22/%3E%3Cpath%20d%3D%22M33%2056C40%2052%2049%2051%2057%2053L57.5%2046.5%2059.5%2045.5%2058%2038.5%2060.5%2037%2059%2029%2061.5%2027.5%2061.5%207.5C56%2017%2045%2026%2033%2036.5Z%22/%3E%3Cpath%20d%3D%22M32%2038C29.3%2033%2028.9%2027.6%2029.8%2022.8C30.7%2018.4%2033.4%2015.6%2037.2%2016.1L42.6%2018%2037.6%2020.1C36%2023%2035.7%2028%2034.8%2032.8Z%22/%3E%3Cpath%20d%3D%22M31.4%2019.4C28%2017%2026.6%2013.2%2027.7%209.2C28.8%2012.4%2030.6%2014%2033%2015.2Z%22/%3E%3Cpath%20d%3D%22M33.6%2016.4C32.4%2012.8%2033.2%209.4%2035.4%206.8C35.2%2010.2%2036.1%2012.4%2037.5%2014.4Z%22/%3E%3C/g%3E%3Cpath%20d%3D%22M5%2045.2C13%2042.6%2022%2043.4%2030.4%2048.2M4.6%2036.8C11.6%2033.6%2019.6%2034.2%2027.4%2039.2M59%2045.2C51%2042.6%2042%2043.4%2033.6%2048.2M59.4%2036.8C52.4%2033.6%2044.4%2034.2%2036.6%2039.2%22%20fill%3D%22none%22%20stroke%3D%22%236b1d24%22%20stroke-width%3D%222.4%22%20stroke-linecap%3D%22round%22/%3E%3C/svg%3E">
 <meta name="description" content="Novelas, teatro, poesía, ensayo y clásicos de todas las épocas, escogidos uno a uno y gratis en EPUB y PDF, con por qué leerlo, citas y valoración moral. Sin publicidad ni registro.">
 <meta name="color-scheme" content="light dark">
+<!-- Letra de libro: EB Garamond (la Garamond de Egenolff-Berner, 1592, la de tantas ediciones clásicas). Mientras
+     carga se ve Georgia con el mismo alto de x (font-size-adjust), así el cambio no mueve la página. -->
+<!-- FUENTES:inicio --><link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..700;1,400..700&display=swap"><!-- FUENTES:fin -->
 <!-- PWA:inicio - Instalable como app en el celular (manifest, íconos de herramientas/logo.py y sw.js). Las rutas son relativas a la
      carpeta del sitio: herramientas/gen_estaticos.js copia el bloque en cada ficha y les antepone su base. -->
 <link rel="manifest" href="manifest.webmanifest">
 <!-- La barra del sistema (hora, batería) toma el color de fondo de la cabecera, en claro y en oscuro, y lo sigue si se
      fuerza el tema con ◐; revisar_diseno.py lo exige. -->
-<meta name="theme-color" media="(prefers-color-scheme: light)" content="#faf6ef">
-<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#16110f">
+<meta name="theme-color" media="(prefers-color-scheme: light)" content="#2f1d12">
+<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#1e130b">
 <script>(function(){var r=document.documentElement,m=document.querySelectorAll('meta[name="theme-color"]'),orig=[].map.call(m,function(x){return x.content;});
-new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getPropertyValue("--bg").trim();m.forEach(function(x,i){x.content=bg||orig[i];});}).observe(r,{attributes:true,attributeFilter:["data-theme"]});})();</script>
+new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getPropertyValue("--cabecera").trim();m.forEach(function(x,i){x.content=bg||orig[i];});}).observe(r,{attributes:true,attributeFilter:["data-theme"]});})();</script>
 <link rel="apple-touch-icon" href="img/icono-apple-180.png">
 <meta name="apple-mobile-web-app-title" content="Fénix">
 <meta name="mobile-web-app-capable" content="yes">
@@ -1171,30 +1176,48 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
 <script>window.DESCARGAS = {"libros/agustin-confesiones.epub":"agustin-confesiones-9f33e2.epub","libros/agustin-confessions.epub":"agustin-confessions-598532.epub","libros/aristoteles-etica-a-nicomaco.epub":"aristoteles-etica-a-nicomaco-ea535a.epub","libros/austen-emma-es.epub":"austen-emma-es-e5629f.epub","libros/austen-emma.epub":"austen-emma-1c6f9d.epub","libros/austen-mansfield-park.epub":"austen-mansfield-park-d80d04.epub","libros/austen-northanger-abbey.epub":"austen-northanger-abbey-ce01f5.epub","libros/austen-persuasion.epub":"austen-persuasion-18447b.epub","libros/austen-pride-and-prejudice-es.epub":"austen-pride-and-prejudice-es-ff1304.epub","libros/austen-pride-and-prejudice.epub":"austen-pride-and-prejudice-00b802.epub","libros/austen-sense-and-sensibility-es.epub":"austen-sense-and-sensibility-es-dc63a0.epub","libros/austen-sense-and-sensibility.epub":"austen-sense-and-sensibility-462f98.epub","libros/benson-lord-of-the-world.epub":"benson-lord-of-the-world-be4655.epub","libros/bernadot-de-la-eucaristia-a-la-trinidad.epub":"bernadot-de-la-eucaristia-a-la-trinidad-9f8dc5.epub","libros/burnett-el-jardin-secreto.epub":"burnett-el-jardin-secreto-dc8c14.epub","libros/burnett-el-pequeno-lord-fauntleroy.epub":"burnett-el-pequeno-lord-fauntleroy-ec79fe.epub","libros/burroughs-una-princesa-de-marte.epub":"burroughs-una-princesa-de-marte-484c7e.epub","libros/chesterton-heretics.epub":"chesterton-heretics-f2c00b.epub","libros/chesterton-manalive.epub":"chesterton-manalive-24b4a0.epub","libros/chesterton-orthodoxy-es.epub":"chesterton-orthodoxy-es-5ec7c5.epub","libros/chesterton-orthodoxy.epub":"chesterton-orthodoxy-5a422a.epub","libros/chesterton-st-francis-of-assisi.epub":"chesterton-st-francis-of-assisi-203b43.epub","libros/chesterton-the-ball-and-the-cross.epub":"chesterton-the-ball-and-the-cross-df1def.epub","libros/chesterton-the-everlasting-man.epub":"chesterton-the-everlasting-man-169b90.epub","libros/chesterton-the-innocence-of-father-brown.epub":"chesterton-the-innocence-of-father-brown-104617.epub","libros/chesterton-the-man-who-was-thursday.epub":"chesterton-the-man-who-was-thursday-cfe0bf.epub","libros/chesterton-the-napoleon-of-notting-hill.epub":"chesterton-the-napoleon-of-notting-hill-bb9edf.epub","libros/chesterton-the-wisdom-of-father-brown.epub":"chesterton-the-wisdom-of-father-brown-bc3f1f.epub","libros/chesterton-whats-wrong-with-the-world-es.epub":"chesterton-whats-wrong-with-the-world-es-c63f97.epub","libros/chesterton-whats-wrong-with-the-world.epub":"chesterton-whats-wrong-with-the-world-463f7f.epub","libros/coloma-pequeneces.epub":"coloma-pequeneces-46080b.epub","libros/de-jaegher-la-vida-de-identificacion.epub":"de-jaegher-la-vida-de-identificacion-688feb.epub","libros/douay-rheims-bible.epub":"douay-rheims-bible-1bb2da.epub","libros/doyle-el-sabueso-de-los-baskerville.epub":"doyle-el-sabueso-de-los-baskerville-926237.epub","libros/kempis-imitacion-de-cristo-granada.epub":"kempis-imitacion-de-cristo-granada-9ddd31.epub","libros/kempis-imitation-of-christ.epub":"kempis-imitation-of-christ-a152b6.epub","libros/ligorio-preparacion-para-la-muerte.epub":"ligorio-preparacion-para-la-muerte-2d1876.epub","libros/ligorio-the-glories-of-mary.epub":"ligorio-the-glories-of-mary-a91ac3.epub","libros/lorenzo-practice-of-the-presence-of-god.epub":"lorenzo-practice-of-the-presence-of-god-858ee0.epub","libros/marmion-jesucristo-vida-del-alma.epub":"marmion-jesucristo-vida-del-alma-645677.epub","libros/newman-loss-and-gain.epub":"newman-loss-and-gain-fe5baa.epub","libros/newman-the-dream-of-gerontius.epub":"newman-the-dream-of-gerontius-890c92.epub","libros/nieremberg-diferencia-entre-lo-temporal-y-eterno.epub":"nieremberg-diferencia-entre-lo-temporal-y-eterno-61014a.epub","libros/platon-apologia-de-socrates.epub":"platon-apologia-de-socrates-43b255.epub","libros/platon-apology.epub":"platon-apology-df1b0c.epub","libros/quiroga-cuentos-de-la-selva.epub":"quiroga-cuentos-de-la-selva-12985a.epub","libros/saint-exupery-el-principito.epub":"saint-exupery-el-principito-b3e457.epub","libros/sales-introduccion-a-la-vida-devota.epub":"sales-introduccion-a-la-vida-devota-71eb51.epub","libros/salgari-los-pescadores-de-trepang.epub":"salgari-los-pescadores-de-trepang-0f4a5c.epub","libros/salgari-los-piratas-de-la-malasia.epub":"salgari-los-piratas-de-la-malasia-f649f8.epub","libros/scupoli-combate-espiritual.epub":"scupoli-combate-espiritual-811e5c.epub","libros/sienkiewicz-quo-vadis.epub":"sienkiewicz-quo-vadis-de9a99.epub","libros/teresa-historia-de-un-alma.epub":"teresa-historia-de-un-alma-62b177.epub","libros/thoreau-walden-es.epub":"thoreau-walden-es-46122d.epub","libros/thoreau-walden.epub":"thoreau-walden-5a988d.epub","libros/unamuno-niebla.epub":"unamuno-niebla-999bb0.epub","libros/wallace-ben-hur.epub":"wallace-ben-hur-203bb7.epub","libros/wiseman-fabiola.epub":"wiseman-fabiola-096222.epub"};</script>
 <!-- DESCARGAS:fin -->
 <style>
+  /* Paleta de biblioteca: papel crema y tinta negro azulada para leer; nogal en la cabecera, las repisas y el pie;
+     latón en filetes y adornos. De noche, la sala a media luz: madera oscura y luz cálida de lámpara arriba.
+     Contraste medido (WCAG): tinta 13,9:1, gris sepia 7,3:1, vino 9:1, latón 5,6:1; en oscuro 14,1 / 7,9 / 7,1 / 8,1.
+     gen_estaticos.js copia este bloque (PALETA) en las páginas de cada libro. */
+  /* PALETA:inicio */
   :root{
     color-scheme: light dark;
-    --bg:#faf6ef; --bg2:#f3ebdd; --card:#fffdf8; --line:#e4d8c4; --ink:#2a1f1a; --muted:#6e5d50;
-    --vino:#6b1d24; --oro:#8a5d14; --acento:#6b1d24; --acento-ink:#fff8ec; --chip:#efe4d2;
-    --ok:#2f6b3a; --sombra:0 6px 24px rgba(60,30,10,.10);
+    --bg:#f6f0e1; --bg2:#ede4cf; --card:#fbf7ec; --line:#dccfb3; --ink:#1e2230; --muted:#5a4c3e;
+    --vino:#7a1f2b; --oro:#7a5a14; --acento:#7a1f2b; --acento-ink:#fbf3e2; --chip:#ebe0c8;
+    --ok:#2f6b3a; --sombra:0 1px 2px rgba(60,40,20,.12), 0 10px 24px -12px rgba(60,40,20,.35);
     --c-lectura:#6b1d24; --c-oracion:#2c4a6e; --c-novela:#3f5a2e;
     --c-teatro:#5a3a6b; --c-poesia:#7a4a1f; --c-ensayo:#3d4a52;
+    --cabecera:#2f1d12; --cabecera-2:#22140b; --en-madera:#d8c6a0; --en-madera-2:#f3e6c4; --laton:#d9a441; --filete:#8a6a2a;
+    --repisa:#6b4226; --repisa-luz:#8f5e39; --repisa-2:#4a2c18; --zocalo:#2f1d12; --zocalo-2:#1f1209;
+    --letra:"EB Garamond",Georgia,"Iowan Old Style","Palatino Linotype",serif;
+    /* Texturas en SVG incrustado (ruido de feTurbulence): grano de papel al ~5 % y veta de madera; no se descarga nada. */
+    --papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    --papel-osc:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9  0 0 0 0 .75  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    --veta:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='640' height='96'%3E%3Cfilter id='v'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.0035 .16' numOctaves='3' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .08  0 0 0 0 .04  0 0 0 0 .01  0 0 0 1.5 -.55'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23v)'/%3E%3C/svg%3E");
+    --grano:var(--papel); --luz:linear-gradient(transparent,transparent);
   }
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
-      --bg:#16110f; --bg2:#1d1714; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c;
-      --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e;
-      --ok:#7cc48a; --sombra:0 6px 24px rgba(0,0,0,.35);
+      --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
+      --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+      --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
       --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
       --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
+      --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+      --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
     }
   }
   :root[data-theme="dark"]{
-    --bg:#16110f; --bg2:#1d1714; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c;
-    --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e;
-    --ok:#7cc48a; --sombra:0 6px 24px rgba(0,0,0,.35);
+    --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
+    --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+    --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
     --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
-      --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
+    --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
+    --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
+    --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
   }
+  /* PALETA:fin */
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
   body{margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 Georgia,"Iowan Old Style","Palatino Linotype",serif}
@@ -1544,6 +1567,88 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
   footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
   footer button.enlace{background:none; border:0; padding:0; font:inherit; color:inherit; text-decoration:underline; cursor:pointer}
+
+  /* ===== Ambiente de biblioteca (9-nov-2026). Papel y tinta donde se lee; madera solo donde la habría en una sala
+     de verdad: la cornisa (cabecera), las repisas bajo las portadas y el zócalo (pie). Como en Standard Ebooks,
+     Folio Society o Persephone, el ambiente lo dan la letra, el color y un adorno contenido, no la imitación de
+     objetos: nada de pergamino manchado ni bordes quemados, y el texto siempre sobre papel liso con contraste AA.
+     Va al final para pisar las reglas de arriba sin reescribirlas. font-size-adjust iguala el alto de x de
+     EB Garamond al de Georgia: el tamaño de cada texto queda como estaba y el cambio de letra no mueve nada.
+     Las reglas con `font:` (abreviada) reinician font-size-adjust, por eso lo repiten. */
+  body{font-family:var(--letra); font-size-adjust:.46; font-variant-numeric:oldstyle-nums proportional-nums; font-kerning:normal;
+       background:var(--luz) no-repeat, var(--grano) 0 0/180px 180px repeat, var(--bg)}
+  h1,h2,h3{font-weight:600; letter-spacing:-.005em}
+  h2{font-weight:500}
+  .eyebrow{font:600 16px/1.2 var(--letra); font-size-adjust:.46; font-variant-caps:all-small-caps; letter-spacing:.16em; color:var(--oro)}
+  .eyebrow::before{content:"❦"; margin-right:.55em; color:var(--vino); letter-spacing:0; font-variant-caps:normal}
+  .hero .eyebrow::before{color:inherit}
+
+  /* Cornisa: nogal con veta, filete de latón y la sombra que deja sobre el papel. theme-color = --cabecera. */
+  header.top{background-color:var(--cabecera); background-image:var(--veta), linear-gradient(180deg,var(--cabecera),var(--cabecera-2)); background-size:640px 96px, auto;
+             -webkit-backdrop-filter:none; backdrop-filter:none; border-bottom:2px solid var(--filete); box-shadow:0 6px 14px -8px rgba(40,20,5,.55)}
+  header.top .marca{color:var(--en-madera-2); font-weight:600; font-size:21px; letter-spacing:.01em}
+  nav.menu a, nav.menu summary{font:500 17px/1.25 var(--letra); font-size-adjust:.46; color:var(--en-madera)}
+  nav.menu a.on, nav.menu a:hover, nav.menu summary:hover, .mas.on summary{color:#fbf1d8; background:rgba(243,230,196,.10); box-shadow:inset 0 -2px 0 var(--laton)}
+  .mas .sub a{color:var(--muted)}
+  .mas .sub a.on, .mas .sub a:hover{color:var(--ink); background:var(--chip); box-shadow:none}
+  header.top .pildora{font:600 16px/1 var(--letra); font-size-adjust:.46; background:rgba(243,230,196,.06); border-color:rgba(243,230,196,.28); color:var(--en-madera-2)}
+  header.top .pildora:hover{border-color:var(--laton)}
+  header.top #btnLupa{color:var(--en-madera-2)}
+  header.top #btnLupa[aria-expanded="true"]{background:rgba(243,230,196,.16)}
+  @media (max-width:960px){
+    nav.menu{background-color:var(--cabecera-2); background-image:var(--veta); border-bottom:2px solid var(--filete)}
+    .mas .sub a{color:var(--en-madera)}
+    .mas .sub a.on, .mas .sub a:hover{color:#fbf1d8; background:rgba(243,230,196,.10)}
+    .ajustes-nav{border-top-color:rgba(243,230,196,.2)}
+  }
+
+  .hero h1{font-weight:600}
+  .hero .cifras b{font-family:var(--letra); font-size-adjust:.46; font-weight:600; font-variant-numeric:oldstyle-nums}
+  .btn{font:600 16px/1.2 var(--letra); font-size-adjust:.46; border-radius:6px; letter-spacing:.01em}
+  .titulo-fila a, .cita-dia .ir, .obra-acc{font:italic 500 17px/1.3 var(--letra); font-size-adjust:.46}
+  .acceso{border-radius:6px} .acceso b{font-weight:600; font-size:21px}
+  .acceso::after{content:""; position:absolute; inset:6px; border:1px solid rgba(233,194,106,.35); border-radius:3px; pointer-events:none}
+
+  /* Los libros en su repisa: portada de tapa dura (bisagra del lomo a la izquierda y sombra), y bajo ella una tabla
+     de nogal. La tabla se alarga medio hueco a cada lado y se une con la del libro vecino: cada fila es una repisa. */
+  .grilla{--g:18px; row-gap:calc(var(--g) * 2)}
+  @media (max-width:600px){.grilla{--g:12px}}
+  .libro{position:relative; background:none; border:0; border-radius:0; overflow:visible; box-shadow:none}
+  .libro:hover{transform:none; box-shadow:none}
+  .libro .portada{z-index:1; border-radius:2px 5px 5px 2px; box-shadow:0 1px 1px rgba(30,15,5,.25), 0 10px 14px -8px rgba(30,15,5,.55); transition:transform .2s ease, box-shadow .2s ease}
+  .libro:hover .portada, .libro:focus-visible .portada{transform:translateY(-6px); box-shadow:0 1px 1px rgba(30,15,5,.25), 0 18px 22px -10px rgba(30,15,5,.6)}
+  @media (prefers-reduced-motion: reduce){.libro .portada{transition:none}}
+  .libro .portada.marco::after{display:block; content:""; position:absolute; inset:0; border:0; border-radius:inherit; pointer-events:none;
+       background:linear-gradient(90deg,rgba(0,0,0,.30) 0,rgba(255,255,255,.14) 2.2%,rgba(0,0,0,.10) 4%,rgba(0,0,0,0) 7%)}
+  .libro .pie{position:relative; padding:24px 2px 4px}
+  .libro .pie::before{content:""; position:absolute; top:0; left:calc(var(--g,18px) / -2); right:calc(var(--g,18px) / -2); height:13px;
+       background-color:var(--repisa); background-image:var(--veta), linear-gradient(180deg,var(--repisa-luz) 0,var(--repisa) 35%,var(--repisa-2) 100%); background-size:640px 96px, auto;
+       box-shadow:0 7px 9px -5px rgba(30,15,5,.5), inset 0 1px 0 rgba(255,230,190,.25)}
+  .libro .pie .tl .tt{font:600 17px/1.25 var(--letra); font-size-adjust:.46}
+  /* Recomendados por Fénix: una cinta de marcapáginas color vino en vez del borde dorado. */
+  .libro.fenix{border:0}
+  .libro.fenix .portada.marco::before{content:""; position:absolute; z-index:2; top:-4px; right:14%; width:13px; height:46px;
+       background:linear-gradient(90deg,#5e1520,#9a2f3c 50%,#5e1520); clip-path:polygon(0 0,100% 0,100% 100%,50% 80%,0 100%)}
+  .libro.sin-epub:hover .portada{transform:none}
+
+  /* Catálogo: una hoja de registro con renglones y encabezado en versalitas. */
+  .lista{box-shadow:var(--sombra)}
+  .fila.cab{font:600 15px/1.2 var(--letra); font-size-adjust:.46; font-variant-caps:all-small-caps; text-transform:none; letter-spacing:.12em}
+  .fila .tt{font-weight:600; font-size:17px}
+
+  /* Fichas, cajas y la cita del día: tarjeta de catálogo con filete doble. */
+  .caja{border-radius:6px; box-shadow:inset 0 0 0 5px var(--card), inset 0 0 0 6px var(--line), var(--sombra)}
+  dialog{border-radius:8px; background:var(--card) var(--grano) 0 0/180px 180px}
+  .cita-dia{position:relative; padding:24px 26px 22px 74px; border:1px solid var(--line); border-radius:4px;
+            box-shadow:inset 0 0 0 5px var(--card), inset 0 0 0 6px var(--line), var(--sombra)}
+  .cita-dia::before{content:"“"; position:absolute; left:22px; top:10px; font:600 86px/1 var(--letra); color:var(--vino); opacity:.45}
+  @media (max-width:600px){.cita-dia{padding:22px 18px 18px 50px} .cita-dia::before{left:13px; font-size:64px}}
+  .cita, .parecido{border-radius:6px}
+
+  /* Zócalo: el pie es la base de la estantería, en nogal oscuro. */
+  footer{background-color:var(--zocalo); background-image:var(--veta), linear-gradient(180deg,var(--zocalo),var(--zocalo-2)); background-size:640px 96px, auto;
+         color:var(--en-madera); border-top:3px solid var(--filete)}
+  footer a, footer button.enlace{color:#e9c26a}
 </style>
 </head>
 <body>

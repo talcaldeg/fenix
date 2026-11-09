@@ -59,6 +59,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   y Copilot) de las páginas con fecha de hoy; `--todas` manda el sitemap entero. El `robots.txt` y la señal de contenido para IA
   (`Content-Signal: search=yes,ai-input=yes,ai-train=yes`, igual que verumdata.cl) viven en la
   raíz del repo `talcaldeg.github.io`, que también apunta a este sitemap.
+- **Diseño de biblioteca** (9-nov-2026): papel y tinta donde se lee; madera (nogal con veta en SVG)
+  solo en la cabecera, las repisas bajo las portadas y el pie; EB Garamond con `font-size-adjust`
+  igual al de Georgia. Paleta y texturas viven en el bloque `PALETA` de `index.html` y la letra en
+  `FUENTES`; `gen_estaticos.js` los copia a las páginas de cada libro (no se duplican a mano). La
+  barra del celular (`theme-color`) es `--cabecera`, no `--bg`, y `revisar_diseno.py` lo exige.
 - Editorial: un libro cuya edición hizo Fénix (traducción, revisión, edición digital) lleva
   `editorial: { es, en }` con qué se hizo; aparece en la sección Editorial y con la etiqueta
   «Edición Fénix». Las categorías Teatro, Poesía y Ensayo e historia son para lo que no es

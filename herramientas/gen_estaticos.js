@@ -202,6 +202,12 @@ function oferta(l, lang){
 }
 const textoDelibris = (d, lang) => { const e = ESCALA_DELIBRIS[d.genero] || ESCALA_DELIBRIS.Literatura; return (e[lang] || e.es)[d.valor - 1]; };
 
+// Paleta, letra y texturas de biblioteca: el bloque PALETA:inicio/fin de index.html, tal cual (claro, oscuro y tema forzado).
+const PALETA = (leer("index.html").match(/\/\* PALETA:inicio \*\/([\s\S]*?)\/\* PALETA:fin \*\//) || [])[1];
+if (!PALETA){ console.error("index.html no tiene el bloque /* PALETA:inicio */ ... /* PALETA:fin */"); process.exit(1); }
+// La letra de libro (EB Garamond), igual que en index.html.
+const FUENTES = (leer("index.html").match(/<!-- FUENTES:inicio -->[\s\S]*?<!-- FUENTES:fin -->/) || [])[0];
+if (!FUENTES){ console.error("index.html no tiene el bloque <!-- FUENTES:inicio --> ... <!-- FUENTES:fin -->"); process.exit(1); }
 const ESTILO = `
   :root{color-scheme:light dark; --bg:#faf6ef; --card:#fffdf8; --line:#e4d8c4; --ink:#2a1f1a; --muted:#6e5d50; --vino:#6b1d24; --oro:#8a5d14; --acento:#6b1d24; --acento-ink:#fff8ec; --chip:#efe4d2}
   @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e}}
@@ -269,7 +275,31 @@ const ESTILO = `
     nav.menu.abierto{display:flex}
     .mas .sub{position:static; box-shadow:none; border:0; padding:0 0 0 12px; background:transparent}
     .ajustes-nav{margin:8px 0 0; padding-top:12px; border-top:1px solid var(--line)}
-  }`;
+  }
+  /* Ambiente de biblioteca, igual que index.html (9-nov-2026): papel y tinta, cabecera y pie de nogal, EB Garamond.
+     La paleta y las texturas se toman de index.html (PALETA), para no tener dos copias. */
+  ${PALETA}
+  body{font-family:var(--letra); font-size-adjust:.46; font-variant-numeric:oldstyle-nums proportional-nums; font-kerning:normal;
+       background:var(--luz) no-repeat, var(--grano) 0 0/180px 180px repeat, var(--bg)}
+  h1,h2{font-weight:600} h2{font-weight:500}
+  header{background-color:var(--cabecera); background-image:var(--veta), linear-gradient(180deg,var(--cabecera),var(--cabecera-2)); background-size:640px 96px, auto;
+         border-bottom:2px solid var(--filete); box-shadow:0 6px 14px -8px rgba(40,20,5,.55)}
+  header .marca{color:var(--en-madera-2); font-weight:600; font-size:21px}
+  nav.menu a, nav.menu summary{font:500 17px/1.25 var(--letra); font-size-adjust:.46; color:var(--en-madera)}
+  nav.menu a:hover, nav.menu summary:hover{color:#fbf1d8; background:rgba(243,230,196,.10); box-shadow:inset 0 -2px 0 var(--laton)}
+  .mas .sub a{color:var(--muted)} .mas .sub a:hover{color:var(--ink); background:var(--chip); box-shadow:none}
+  header .pildora{font:600 16px/1 var(--letra); font-size-adjust:.46; background:rgba(243,230,196,.06); border-color:rgba(243,230,196,.28); color:var(--en-madera-2)}
+  header details.buscar summary{color:var(--en-madera-2)}
+  @media (max-width:960px){
+    nav.menu{background-color:var(--cabecera-2); background-image:var(--veta); border-bottom:2px solid var(--filete)}
+    .mas .sub a{color:var(--en-madera)} .mas .sub a:hover{color:#fbf1d8; background:rgba(243,230,196,.10)}
+    .ajustes-nav{border-top-color:rgba(243,230,196,.2)}
+  }
+  .btn{font:600 17px/1.2 var(--letra); font-size-adjust:.46; border-radius:6px}
+  .ficha img{border-radius:2px 5px 5px 2px; box-shadow:0 1px 1px rgba(30,15,5,.25), 0 12px 18px -10px rgba(30,15,5,.55)}
+  footer{background-color:var(--zocalo); background-image:var(--veta), linear-gradient(180deg,var(--zocalo),var(--zocalo-2)); background-size:640px 96px, auto;
+         color:var(--en-madera); border-top:3px solid var(--filete)}
+  footer a, footer nav a{color:#e9c26a}`;
 
 const SCRIPT_TEMA = `<script>
 (function(){var r=document.documentElement,k="fenix:tema";try{var g=JSON.parse(localStorage.getItem(k));if(g)r.dataset.theme=g}catch(e){}
@@ -364,6 +394,7 @@ ${FAVICON}
 ${pwaEn(B)}
 <meta name="description" content="${esc(descripcion)}">
 <meta name="color-scheme" content="light dark">
+${FUENTES}
 <link rel="canonical" href="${urlLibro(l)}">${Object.keys(porId(l.id).versiones || {}).length ? [porId(l.id), ...Object.keys(porId(l.id).versiones).map(k => vista(porId(l.id), k))].map(p => `
 <link rel="alternate" hreflang="${p.idioma}" href="${urlLibro(p)}">`).join("") : ""}
 <meta property="og:type" content="book">
@@ -450,6 +481,7 @@ ${FAVICON}
 ${pwaEn(B)}
 <meta name="description" content="${esc(descripcion)}">
 <meta name="color-scheme" content="light dark">
+${FUENTES}
 <link rel="canonical" href="${url}">
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="Proyecto Fénix">
@@ -545,6 +577,7 @@ ${FAVICON}
 ${pwaEn(B)}
 <meta name="description" content="${esc(t.lede)}">
 <meta name="color-scheme" content="light dark">
+${FUENTES}
 <link rel="canonical" href="${url}">
 <link rel="alternate" hreflang="es" href="${SITIO}dona/">
 <link rel="alternate" hreflang="en" href="${SITIO}dona/en/">
