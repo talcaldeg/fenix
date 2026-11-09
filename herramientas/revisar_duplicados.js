@@ -78,6 +78,28 @@ function revisarDuplicados(D){
     archivos.set(ruta, l.id);
   }
 
+  // Ningún cuadro repetido (9-nov-2026): dos fichas distintas no comparten cuadro, ni por la
+  // página de Commons, ni por la portada, ni por el archivo de img/cuadros (mismos bytes). Las
+  // versiones de una misma ficha sí pueden compartirlo (cada sitio muestra un solo idioma).
+  const fs = require("fs"), path = require("path"), crypto = require("crypto");
+  const claveUrl = u => decodeURIComponent(String(u || "")).replace(/^https?:\/\/[a-z.]*wiki[mp]edia\.org\/wiki\/(File|Archivo):/i, "").replace(/[_ ]+/g, " ").trim().toLowerCase();
+  const huella = src => {
+    const m = /^img\/portadas\/([^/]+\.jpg)$/.exec(String(src || ""));
+    if (!m) return "";
+    try { return crypto.createHash("md5").update(fs.readFileSync(path.join(__dirname, "..", "img", "cuadros", m[1]))).digest("hex"); } catch { return ""; }
+  };
+  const cuadros = new Map();
+  for (const l of libros) for (const f of formas(l)){
+    if (!f.imagen) continue;
+    const claves = [["la portada", f.imagen.src], ["el cuadro de Commons", claveUrl(f.imagen.url)], ["el mismo archivo en img/cuadros", huella(f.imagen.src)]];
+    for (const [que, k] of claves){
+      if (!k || /^https?:/.test(k) && que !== "la portada") continue;
+      const clave = que + "|" + k, otro = cuadros.get(clave);
+      if (otro && otro.id !== l.id) problemas.push(`cuadro repetido: ${otro.id} [${otro.idioma}] y ${l.id} [${f.idioma}] tienen ${que} (${f.imagen.credito ? f.imagen.credito.es : k}). Cada obra lleva un cuadro que no use otra`);
+      else if (!otro) cuadros.set(clave, { id: l.id, idioma: f.idioma });
+    }
+  }
+
   // Pares de fichas que parecen la misma obra
   for (let i = 0; i < libros.length; i++) for (let j = i + 1; j < libros.length; j++){
     const a = libros[i], b = libros[j];

@@ -48,6 +48,11 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   tiene su página en `libro/<id>/<idioma>/`); una ficha fusionada deja su id en `alias`, que
   redirige el enlace viejo. Dos obras que el revisor confunde se declaran en `distintos`.
   `gen_estaticos.js` corre la revisión y no genera nada si hay un duplicado.
+- **Regla dura: ningún cuadro repetido.** Dos fichas distintas no comparten cuadro (misma página
+  de Commons, misma portada o mismo archivo en `img/cuadros/`), aunque sean del mismo autor o en
+  otro idioma; las versiones de una misma ficha sí pueden. Lo mide `revisar_duplicados.js`, así
+  que tampoco se genera nada con un cuadro repetido. Antes de elegir uno, buscar su archivo en
+  `datos.js`.
 - Antes de enlazar un libro solo para leer en línea, buscar si se descarga en EPUB o PDF en un
   sitio legal y preferir esa descarga (las Cartas de san Josemaría van a opusdei.org).
 - **Después de cambiar `datos.js`, correr `node herramientas/gen_estaticos.js`.** El sitio navega
