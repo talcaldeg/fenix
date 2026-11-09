@@ -17,9 +17,11 @@ Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta 
                            en claro y oscuro, en computador y celular; mirarlas con lib/hoja_contacto.py
 """
 import argparse
+import datetime
 import functools
 import http.server
 import os
+import re
 import sys
 import threading
 
@@ -327,6 +329,42 @@ def revisar(raiz, capturas=None):
             if not pg.evaluate("window.__compartido || ''").endswith("/libro/ligorio-the-glories-of-mary/"):
                 fallas.append("compartir (página del libro): el botón no entregó el enlace de la página")
         pg.close()
+        # Preventa impresa (9-nov-2026): mientras la campaña siga (data-hasta de la banda #campana), la ficha
+        # estática de los cuatro libros de la Colección Fénix, en español y en inglés, y la ficha de index.html
+        # avisan con enlace a Catapultame; otro libro no lleva el aviso. Se mira en claro y en oscuro.
+        with open(os.path.join(raiz, "index.html"), encoding="utf-8") as f:
+            m = re.search(r'id="campana" data-hasta="([^"]+)" data-libros="([^"]+)"', f.read())
+        if not m:
+            fallas.append("preventa: la banda #campana no trae data-hasta y data-libros (corre gen_estaticos.js)")
+        elif datetime.datetime.now(datetime.timezone.utc) < datetime.datetime.fromisoformat(m.group(1).replace("Z", "+00:00")):
+            revisa = """() => { const c = document.querySelector('#preventa, #dlgLibro .preventa'); if (!c) return 'falta';
+                const a = c.querySelector('a.btn'); return c.offsetHeight > 0 && a && a.href.includes('catapultame.com')
+                    && c.scrollWidth <= c.clientWidth + 1 ? 'ok' : 'mal'; }"""
+            for esquema in ("light", "dark"):
+                pg = nav.new_page(viewport={"width": 360, "height": 740}, color_scheme=esquema)
+                for lid in m.group(2).split(","):
+                    for sub in ("", "en/"):
+                        if sub and not os.path.exists(os.path.join(raiz, "libro", lid, "en", "index.html")):
+                            continue
+                        pg.goto(f"{base}libro/{lid}/{sub}")
+                        pg.wait_for_load_state("networkidle")
+                        if (r := pg.evaluate(revisa)) != "ok":
+                            fallas.append(f"preventa ({esquema}): libro/{lid}/{sub} {'no avisa' if r == 'falta' else 'avisa mal o sin enlace a Catapultame'}")
+                        if capturas and lid == "confesiones":
+                            pg.screenshot(path=os.path.join(capturas, f"preventa_{lid}_{sub.strip('/') or 'es'}_{esquema}.png"))
+                    for idioma in ("", "l=en&"):
+                        pg.goto(f"{base}?{idioma}abrir={lid}")
+                        pg.wait_for_load_state("networkidle")
+                        pg.wait_for_timeout(300)
+                        if (r := pg.evaluate(revisa)) != "ok":
+                            fallas.append(f"preventa ({esquema}): la ficha de {lid} en index.html{' (en)' if idioma else ''} {'no avisa' if r == 'falta' else 'avisa mal'}")
+                        if capturas and lid == "historia-de-un-alma":
+                            pg.screenshot(path=os.path.join(capturas, f"preventa_ficha_{lid}_{'en' if idioma else 'es'}_{esquema}.png"))
+                pg.goto(base + LIBRO)
+                pg.wait_for_load_state("networkidle")
+                if pg.evaluate("!!document.querySelector('#preventa')"):
+                    fallas.append(f"preventa: {LIBRO} avisa la preventa y no va en la Colección Fénix")
+                pg.close()
         # Donar: #dona (menú del sitio, enlaces viejos) lleva a la página aparte del idioma, y esa página
         # se comparte con su propia imagen; con #dona como vista, WhatsApp mostraba la tarjeta de la portada.
         pg = nav.new_page(viewport={"width": 390, "height": 844})

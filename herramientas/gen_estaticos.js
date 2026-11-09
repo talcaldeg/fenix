@@ -435,7 +435,7 @@ ${JSON.stringify(ld, null, 2)}
       ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
       <h1>${esc(l.titulo)}<span class="sub">${esc(of.sub)}</span></h1>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio).replace(/ /g, "\u00a0")} · ${esc(x.cat[l.categoria])}</p>${otra ? `
-      <p class="meta">${esc(x.tambien)}: <a href="${otraUrl}" hreflang="${otra.idioma}" lang="${otra.idioma}">${esc(otra.titulo)}</a></p>` : ""}
+      <p class="meta">${esc(x.tambien)}: <a href="${otraUrl}" hreflang="${otra.idioma}" lang="${otra.idioma}">${esc(otra.titulo)}</a></p>` : ""}${avisoPreventa(l, lang)}
     </div>
     <div class="cuerpo">
       ${l.porque ? `<h2>${esc(x.porque)}</h2>
@@ -550,6 +550,23 @@ ${MEDICION}
 // en el navegador y desaparece del HTML en la siguiente regeneración. La banda del inicio usa la misma fecha.
 const CAMPANA_URL = "https://catapultame.com/api/lanzamientos/coleccion-fenix/";
 const CAMPANA_HASTA = "2026-12-15T02:59:00Z";
+// Los cuatro libros de la Colección Fénix impresa: su ficha (la estática y la de index.html) avisa de la
+// preventa con enlace a la campaña. index.html recibe URL, fecha e ids desde aquí (ver «Campaña» abajo).
+const CAMPANA_LIBROS = ["confesiones", "historia-de-un-alma", "saint-exupery-el-principito", "apologia-de-socrates"];
+const campanaVigente = () => Date.now() < Date.parse(CAMPANA_HASTA);
+const campanaDia = lang => new Date(CAMPANA_HASTA).toLocaleDateString(lang === "en" ? "en-GB" : "es-CL", { day: "numeric", month: "long", timeZone: "America/Santiago" });
+const PREVENTA_TX = {
+  es: { titulo: "Este libro está en preventa impresa", texto: d => `Forma parte de la Colección Fénix en papel. Resérvalo en Catapultame hasta el ${d}; el despacho está incluido y es solo dentro de Chile.`, boton: "Reservar en Catapultame" },
+  en: { titulo: "This book is on pre-order in print", texto: d => `Its Spanish edition is part of the printed Fénix Collection. Pre-order it on Catapultame until ${d}; shipping is included and available only within Chile.`, boton: "Pre-order on Catapultame" }
+};
+const avisoPreventa = (l, lang) => {
+  if (!CAMPANA_LIBROS.includes(l.id) || !campanaVigente()) return "";
+  const t = PREVENTA_TX[lang] || PREVENTA_TX.es;
+  return `
+      <style>.preventa{margin:16px 0 4px; padding:14px 16px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:12px; background:var(--card); font:15px/1.5 system-ui,sans-serif} .preventa strong{display:block; color:var(--ink)} .preventa p{margin:4px 0 10px; color:var(--muted)}</style>
+      <div class="preventa" id="preventa" data-hasta="${CAMPANA_HASTA}"><strong>${esc(t.titulo)}</strong><p>${esc(t.texto(campanaDia(lang)))}</p><a class="btn prim" href="${CAMPANA_URL}" target="_blank" rel="noopener">${esc(t.boton)}</a></div>
+      <script>(function(){var c=document.getElementById("preventa");if(c&&Date.now()>Date.parse(c.dataset.hasta))c.remove();})();</script>`;
+};
 const DONA_TX = {
   es: {
     titulo: "Donar", og: "Dona a Proyecto Fénix", lede: "Fénix es gratuito y sin publicidad. Tu aporte ayuda a digitalizar, corregir y traducir libros que de otro modo se perderían.",
@@ -771,9 +788,14 @@ const epubs = [...new Set(JSON.stringify(D).match(/libros\/[^"]+\.epub/g) || [])
 const descargas = `<!-- DESCARGAS:inicio - lo genera herramientas/gen_estaticos.js; no editar a mano -->
 <script>window.DESCARGAS = ${JSON.stringify(Object.fromEntries(epubs.map(u => [u, nombreDescarga(u)])))};</script>
 <!-- DESCARGAS:fin -->`;
-const indexNuevo = conJsonld.includes("<!-- DESCARGAS:inicio")
+const conDescargas = conJsonld.includes("<!-- DESCARGAS:inicio")
   ? conJsonld.replace(/<!-- DESCARGAS:inicio[\s\S]*?<!-- DESCARGAS:fin -->/, descargas)
   : conJsonld.replace("<!-- JSONLD:fin -->", "<!-- JSONLD:fin -->\n" + descargas);
+// Campaña: la banda del inicio (#campana) toma fecha, enlace e ids de las constantes de arriba; la ficha de
+// index.html lee de esa banda si el libro va en la preventa, y deja de avisar cuando la banda se quita.
+const reBanda = /(<div class="caja banda campana" id="campana")[^>]*>([\s\S]*?<a class="btn prim" href=")[^"]*(")/;
+if (!reBanda.test(conDescargas)) throw new Error("index.html no tiene la banda #campana con su botón");
+const indexNuevo = conDescargas.replace(reBanda, `$1 data-hasta="${CAMPANA_HASTA}" data-libros="${CAMPANA_LIBROS.join(",")}">$2${CAMPANA_URL}$3`);
 if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
 
 // ---------- sw.js ----------
