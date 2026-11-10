@@ -27,7 +27,7 @@
 //   y aviso reemplaza el «dominio público» del crédito.
 
 window.FENIX = {
-  actualizado: "9-nov-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "10-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -4493,6 +4493,28 @@ window.FENIX = {
       fuente: {"texto": "Traducción de Enriqueta S. Albanella (Editorial Molino, Buenos Aires, 1943), en una edición digital, cotejada con el original de 1868-1869; nota y portada de Proyecto Fénix (dominio público)", "url": "https://datos.bne.es/persona/XX1179488.html"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mujercitas"},
       parecidos: ["austen-sense-and-sensibility", "burnett-el-jardin-secreto", "austen-pride-and-prejudice"]
+    },
+    {
+      id: "chautard-el-alma-de-todo-apostolado",
+      titulo: "El alma de todo apostolado",
+      autor: "Jean-Baptiste Chautard",
+      anio: "1907",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "Dom Jean-Baptiste Chautard, abad trapense de Sept-Fons, escribe para sacerdotes, religiosos y laicos dedicados a las obras de apostolado. Su tesis es que Dios quiere las obras, pero quiere que Jesús sea su vida: la acción que no brota de la vida interior se vuelve estéril y pone en peligro al mismo apóstol, lo que el autor llama la «herejía de las obras». En cinco partes muestra cómo se unen la vida activa y la contemplativa, por qué la vida interior es la fuente de la fecundidad del apostolado y qué medios la sostienen: la oración de la mañana, la vida litúrgica, la guarda del corazón y la devoción a la Virgen. Apoya su tesis, una y otra vez, en las enseñanzas de san Pío X.", "en":"Dom Jean-Baptiste Chautard, Trappist abbot of Sept-Fons, writes for priests, religious and lay people engaged in the works of the apostolate. His thesis is that God wills our works, but wills that Jesus be their life: action that does not spring from the interior life becomes sterile and endangers the apostle himself, what the author calls «the heresy of works». In five parts he shows how the active and contemplative lives are joined, why the interior life is the source of all apostolic fruitfulness, and which means sustain it: morning mental prayer, the liturgical life, custody of the heart and devotion to Our Lady. Again and again he grounds his thesis in the teaching of Saint Pius X."},
+      porque: {"es": "Para quien trabaja mucho por los demás, en una parroquia, un colegio, un movimiento o la propia familia, y siente que el activismo le seca el alma. Chautard no invita a hacer menos, sino a hacerlo desde la oración, y da pautas concretas para examinarse y ordenar el día. Es un libro para leer despacio y volver a él en los retiros.", "en": "For anyone who works hard for others, in a parish, a school, a movement or their own family, and feels that busyness is drying up their soul. Chautard does not ask us to do less, but to act out of prayer, and he gives concrete guidance for examining oneself and ordering the day. It is a book to read slowly and to return to on retreats."},
+      imagen: {"src": "img/portadas/chautard-el-alma-de-todo-apostolado.jpg", "credito": {"es": "Johannes Vermeer, «Cristo en casa de Marta y María», hacia 1655", "en": "Johannes Vermeer, «Christ in the House of Martha and Mary», c. 1655"}, "url": "https://commons.wikimedia.org/wiki/File:Johannes_(Jan)_Vermeer_-_Christ_in_the_House_of_Martha_and_Mary_-_Google_Art_Project.jpg"},
+      citas: [
+        "Los hombres llamados al honor de colaborar con el Salvador para transmitir a las almas esa vida divina deben, pues, considerarse como modestos canales encargados de tomar el agua de esa fuente única.",
+        "nunca se ha de abandonar al Dios de las obras por las obras de Dios",
+        "La vida interior es un baño de amor en el que el alma se sumerge."
+      ],
+      archivos: {"epub": "libros/chautard-el-alma-de-todo-apostolado.epub", "pdf": "libros/chautard-el-alma-de-todo-apostolado.pdf"},
+      fuente: {"texto": "Traducción de Proyecto Fénix desde la edición francesa de 1927 (Abadía de Sept-Fons; Vitte, Lyon; Téqui, París), en el escaneo de Internet Archive; licencia CC BY-NC-SA 4.0", "url": "https://archive.org/details/lamedetoutaposto0000unse"},
+      delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-alma-de-todo-apostolado"},
+      editorial: {"es": "Traducción nueva y completa de Proyecto Fénix desde el francés de 1927, con las notas del autor, las citas latinas conservadas y su traducción en nota; preparada con ayuda de inteligencia artificial y revisada contra el escaneo de la edición original, con nota de la edición y portada nueva. Edición al cuidado de Benjamín Ormazábal.", "en": "New, complete Proyecto Fénix translation from the 1927 French text, with the author's notes, the Latin quotations kept and translated in notes; prepared with the help of artificial intelligence and checked against the scan of the original edition, with an edition note and a new cover. Edited by Benjamín Ormazábal."},
+      parecidos: ["marmion-vida-del-alma", "de-la-eucaristia-a-la-trinidad", "presencia-de-dios"]
     }
   ],
 
@@ -4525,7 +4547,7 @@ window.FENIX = {
     { titulo: {"es": "Tratado de la verdadera devoción a la Santísima Virgen", "en": "True Devotion to Mary"}, autor: "San Luis María Grignion de Montfort", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/tratado-de-la-verdadera-devocion-la-santisima-virgen"} },
     { titulo: {"es": "Todo por Jesús", "en": "All for Jesus"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/todo-por-jesus"} },
     { titulo: {"es": "Progreso del alma en la vida espiritual", "en": "Growth in Holiness"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/progreso-del-alma-en-la-vida-espiritual"} },
-    { titulo: {"es": "El alma de todo apostolado", "en": "The Soul of the Apostolate"}, autor: "Jean-Baptiste Chautard", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-alma-de-todo-apostolado"} },
+    { titulo: {"en": "The Soul of the Apostolate"}, autor: "Jean-Baptiste Chautard", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-alma-de-todo-apostolado"} },
     { titulo: {"es": "El arte de aprovechar nuestras faltas", "en": "The Art of Profiting by Our Faults"}, autor: "Joseph Tissot", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-arte-de-aprovechar-nuestras-faltas"} },
     { titulo: {"es": "Apologia pro vita sua", "en": "Apologia pro Vita Sua"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"} },
     { titulo: {"es": "Perder y ganar"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"} },
