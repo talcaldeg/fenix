@@ -130,10 +130,16 @@ def _texto(ls, x, y_centro, tam, color, anchor="middle", estilo="bd", espaciado=
         for i, s in enumerate(ls))
 
 
+# La ventana corta ~12 % arriba y abajo del cuadro 2:3. Si lo esencial está pegado al borde
+# superior del original (la paloma de un Pentecostés), --cy no alcanza: estos se alinean arriba.
+ALINEAR_ARRIBA = {"chautard-el-alma-de-todo-apostolado"}
+
+
 def _imagen(cuadro: Path, x, y, w, h, clip):
     datos = base64.b64encode(cuadro.read_bytes()).decode("ascii")
+    alinear = "xMidYMin" if cuadro.stem in ALINEAR_ARRIBA else "xMidYMid"
     return (f'<image href="data:image/jpeg;base64,{datos}" x="{x}" y="{y}" width="{w}" height="{h}" '
-            f'preserveAspectRatio="xMidYMid slice" clip-path="url(#{clip})"/>')
+            f'preserveAspectRatio="{alinear} slice" clip-path="url(#{clip})"/>')
 
 
 def sello(cx, cy, r, fondo, tinta):
