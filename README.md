@@ -178,7 +178,7 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 - `herramientas/portadas.py`: cada libro lleva un cuadro de dominio público (Wikimedia Commons)
   relacionado con su tema, guardado sin marco en `img/cuadros/<nombre>.jpg` (2:3, de ahí se
   regenera todo). Sobre él arma la portada con el marco Fénix (`herramientas/marco.py`): códice
-  para Lectura espiritual y Oración, enredadera para lo demás. La deja en
+  para Lectura espiritual (vino; azul en los que eran de la antigua categoría Oración), enredadera para lo demás. La deja en
   `img/portadas/<nombre>.jpg` y, con `--epub`, dentro del EPUB, y rehace el PDF. `--todos`
   regenera el catálogo entero. Una versión en otro idioma lleva su propia `imagen` (el título
   va impreso). El sitio muestra la portada con marco en tarjetas y ficha, y el cuadro solo en

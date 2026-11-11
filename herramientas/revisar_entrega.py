@@ -19,7 +19,7 @@ import zipfile
 from pathlib import Path
 
 RAIZ = Path(__file__).resolve().parent.parent
-CATEGORIAS = {"lectura", "oracion", "novela", "teatro", "poesia", "ensayo"}
+CATEGORIAS = {"lectura", "novela", "teatro", "poesia", "ensayo"}
 GENEROS = {"Literatura", "Pensamiento", "Espiritualidad"}
 CAMPOS_EPUB = ("titulo", "autor", "subtitulo", "original", "editor", "traduccionFenix", "derechos")
 # Tildes que la RAE ya no pone (fué, sólo, éste, acercóse). Son mecánicas: --arreglar las quita.

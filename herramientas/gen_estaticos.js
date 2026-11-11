@@ -835,7 +835,7 @@ ${urls.map(u => `  <url>
 escribirSiCambia("sitemap.xml", sitemap);
 
 // ---------- llms.txt ----------
-const ORDEN = ["lectura", "oracion", "novela", "teatro", "poesia", "ensayo"];
+const ORDEN = ["lectura", "novela", "teatro", "poesia", "ensayo"];
 const linea = l => `- [${l.titulo} - ${l.autor} (${l.anio})](${urlLibro(l)}) - ${primeraOracion(l.resumen[l.idioma] || l.resumen.es)}${Object.keys(l.archivos || {}).length ? " Descarga gratuita en " + Object.keys(l.archivos).map(f => f.toUpperCase()).join(" y ") + "." : (l.externos || []).length ? " Se lee gratis en el sitio del titular." : " Protegido por derechos de autor: se enlaza a donde comprarlo."}`;
 const llms = `# Proyecto Fénix
 
