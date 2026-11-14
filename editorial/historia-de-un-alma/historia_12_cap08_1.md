@@ -142,13 +142,13 @@ Oh Madre mía, ¡qué dulce es la vía del *amor*! Sin duda se puede caer, se pu
 
 [^66]: Is 52, 11.
 
-[^67]: Este deseo, Teresa lo guardaba en su corazón desde su infancia. Esto es lo que nos confió más tarde:
+[^67]: N. del Carmelo de Lisieux: Este deseo, Teresa lo guardaba en su corazón desde su infancia. Esto es lo que nos confió más tarde:
 
     «Yo tenía diez años el día en que mi padre anunció a Celina que iba a hacerle dar lecciones de pintura; yo estaba allí y envidiaba su dicha. Papá me dijo: “Y tú, mi reinita, ¿te daría gusto también aprender dibujo?”. Iba a responder con un sí muy alegre, cuando María hizo notar que yo no tenía las mismas disposiciones que Celina. Ella se salió pronto con la suya; y yo, pensando que era una buena ocasión de ofrecer un gran sacrificio a Jesús, guardé silencio. Deseaba con tanto ardor aprender dibujo que todavía hoy me pregunto cómo tuve fuerzas para callar».
 
 [^68]: Qo 2, 11.
 
-[^69]: Fue el 14 de septiembre de 1894. *Celina* se hizo *Sor Genoveva de Santa Teresa*.
+[^69]: N. del Carmelo de Lisieux: Fue el 14 de septiembre de 1894. *Celina* se hizo *Sor Genoveva de Santa Teresa*.
 
 [^ed4]: N. del E.: Teresa se refiere a las faltas de fragilidad, como precisa enseguida («las pequeñas indelicadezas involuntarias de su hijo»). El pecado venial deliberado sí debilita la caridad, aunque no rompe la Alianza con Dios (CEC 1863).
 

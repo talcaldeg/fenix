@@ -124,7 +124,7 @@ Esa voluntad, Jesús me la dio a conocer cuando, en la última Cena, dio su *man
 
 [^81]: Sal 70, 18.
 
-[^82]: Ella ejercía el cargo de maestra de novicias, sin llevar el título.
+[^82]: N. del Carmelo de Lisieux: Ella ejercía el cargo de maestra de novicias, sin llevar el título.
 
 [^83]: Sal 118, 141, 100, 105, 106.
 

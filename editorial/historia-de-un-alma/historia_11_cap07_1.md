@@ -114,7 +114,7 @@ Me aplicaba sobre todo a los pequeños actos de virtud bien escondidos; así me 
 
 Entretanto la Santísima Virgen me ayudaba a preparar el vestido de mi alma; en cuanto estuvo terminado, los obstáculos se desvanecieron y mi profesión quedó fijada para el 8 de septiembre de 1890. Todo lo que acabo de decir en tan pocas palabras requeriría muchas páginas; pero esas páginas no se leerán jamás en la tierra...
 
-[^54]: Antiguo misionero de la Compañía de Jesús en el Canadá.
+[^54]: N. del Carmelo de Lisieux: Antiguo misionero de la Compañía de Jesús en el Canadá.
 
 [^55]: Jn 18, 36.
 
@@ -122,12 +122,12 @@ Entretanto la Santísima Virgen me ayudaba a preparar el vestido de mi alma; en 
 
 [^57]: Is 53, 3.
 
-[^58]: Para honrar a Jesús, el divino Rey de quien su *pequeña reina* iba a ser la prometida, el señor Martin había querido que, ese día, ella vistiera un traje de terciopelo blanco, guarnecido de cisne y de punto de Alençon. Sus grandes bucles de cabello rubio flotaban sobre sus hombros y unos lirios componían su adorno virginal.
+[^58]: N. del Carmelo de Lisieux: Para honrar a Jesús, el divino Rey de quien su *pequeña reina* iba a ser la prometida, el señor Martin había querido que, ese día, ella vistiera un traje de terciopelo blanco, guarnecido de cisne y de punto de Alençon. Sus grandes bucles de cabello rubio flotaban sobre sus hombros y unos lirios componían su adorno virginal.
 
-[^59]: Leonia, habiendo entrado con las Clarisas, orden demasiado austera para su delicada salud, tuvo que volver a casa de su padre. Más tarde fue recibida en la Visitación de Caen, donde pronunció sus votos con el nombre de *Sor Francisca Teresa*.
+[^59]: N. del Carmelo de Lisieux: Leonia, habiendo entrado con las Clarisas, orden demasiado austera para su delicada salud, tuvo que volver a casa de su padre. Más tarde fue recibida en la Visitación de Caen, donde pronunció sus votos con el nombre de *Sor Francisca Teresa*.
 
 [^60]: Sab 3, 6.
 
-[^61]: Ella estuvo encargada, hasta su muerte, de adornar esta estatua del Niño Jesús.
+[^61]: N. del Carmelo de Lisieux: Ella estuvo encargada, hasta su muerte, de adornar esta estatua del Niño Jesús.
 
 [^62]: Sal 89, 15.

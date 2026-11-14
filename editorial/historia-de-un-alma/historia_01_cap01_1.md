@@ -122,7 +122,7 @@ A menudo, durante estos largos paseos, nos encontrábamos con pobres, y la peque
 
 ¡Oh!, de veras, todo me sonreía en la tierra. Hallaba flores bajo cada uno de mis pasos, y mi feliz carácter contribuía también a hacer agradable mi vida; pero iba a abrirse un nuevo período. Destinada a ser tan pronto la prometida de Jesús, me era necesario sufrir desde mi infancia. Así como las flores de primavera comienzan a germinar bajo la nieve y se abren a los primeros rayos del sol, así también la florecilla cuyos recuerdos escribo debió pasar por el invierno de la prueba, y dejar que su tierno cáliz se llenara con el rocío de las lágrimas...
 
-[^8]: Esta preciosa imagen de la Virgen, aunque sin ningún valor artístico, se animó dos veces para iluminar y consolar, en graves circunstancias, a la madre de Teresa. Ella misma recibió, por medio de esta bendita estatua, gracias señaladas, como veremos más adelante.
+[^8]: N. del Carmelo de Lisieux: Esta preciosa imagen de la Virgen, aunque sin ningún valor artístico, se animó dos veces para iluminar y consolar, en graves circunstancias, a la madre de Teresa. Ella misma recibió, por medio de esta bendita estatua, gracias señaladas, como veremos más adelante.
 
 [^9]: Mc 3, 13.
 

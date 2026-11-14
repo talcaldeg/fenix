@@ -108,7 +108,7 @@ Usted estaba allí, Madre amada, y ¿de cuántas muestras de afecto no me colmó
 
 Al notar que las carmelitas se imaginaban algo muy distinto, creí haber mentido. ¡Ah, si hubiera guardado mi secreto, también habría guardado mi felicidad! Pero la Virgen María permitió este tormento para bien de mi alma; sin eso, quizá, la vanidad se habría deslizado en mi corazón; mientras que, al tocarme en suerte la humillación, no podía mirarme sin un sentimiento de profundo horror. ¡Dios mío, solo Tú sabes lo que he sufrido!
 
-[^15]: María Guérin entró en el Carmelo de Lisieux el 15 de agosto de 1895 y pronunció sus votos con el nombre de *sor María de la Eucaristía*.
+[^15]: N. del Carmelo de Lisieux: María Guérin entró en el Carmelo de Lisieux el 15 de agosto de 1895 y pronunció sus votos con el nombre de *sor María de la Eucaristía*.
 
     Se hizo notar por su gran espíritu de pobreza y su paciencia en medio de largos sufrimientos. «*No sé si he sufrido bien*, dirá durante su última enfermedad, *pero me parece que* TERESA *me comunica sus sentimientos y que tengo su mismo abandono*. *¡Oh, si pudiera, como ella, morir de amor! No sería de extrañar, puesto que formo parte de la legión de las pequeñas víctimas que ella pidió al buen Dios. Madre mía, durante mi agonía, si ve que el sufrimiento me impide hacer actos de amor, se lo ruego, recuérdeme mi deseo. Quiero morir diciendo a Jesús que lo amo.*»
 
@@ -122,7 +122,7 @@ Al notar que las carmelitas se imaginaban algo muy distinto, creí haber mentido
 
 [^16]: Jn 11, 4.
 
-[^17]: Desde lo alto del cielo, Teresa supo devolverle sus cuidados maternales. Durante su última enfermedad, la protegió visiblemente. Una mañana se la encontró apacible y radiante: «*Sufría mucho*, dijo, *pero mi pequeña Teresa me veló con ternura. Toda la noche la sentí junto a mi cama. Varias veces me acarició, lo cual me dio un valor extraordinario.*» la señora Guérin había vivido y murió como una santa, a la edad de 52 años. Repetía, con la sonrisa en los labios: «*¡Qué contenta estoy de morir! ¡Es tan bueno ir a ver al buen Dios! Jesús mío, te amo. Te ofrezco mi vida por los sacerdotes, como mi pequeña Teresa del Niño Jesús.*» Era el 13 de febrero de 1900.
+[^17]: N. del Carmelo de Lisieux: Desde lo alto del cielo, Teresa supo devolverle sus cuidados maternales. Durante su última enfermedad, la protegió visiblemente. Una mañana se la encontró apacible y radiante: «*Sufría mucho*, dijo, *pero mi pequeña Teresa me veló con ternura. Toda la noche la sentí junto a mi cama. Varias veces me acarició, lo cual me dio un valor extraordinario.*» la señora Guérin había vivido y murió como una santa, a la edad de 52 años. Repetía, con la sonrisa en los labios: «*¡Qué contenta estoy de morir! ¡Es tan bueno ir a ver al buen Dios! Jesús mío, te amo. Te ofrezco mi vida por los sacerdotes, como mi pequeña Teresa del Niño Jesús.*» Era el 13 de febrero de 1900.
 
     El señor Guérin, después de haber empleado durante muchos años su pluma en la defensa de la Iglesia y su fortuna en el sostén de las buenas obras, murió santamente, terciario del Carmelo, el 28 de septiembre de 1909, en su año sesenta y nueve.
 

@@ -32,4 +32,4 @@ La respuesta no se hizo esperar; pronto la paz vino a inundar mi alma con sus ol
 
 [^29]: Sb 5, 10.
 
-[^30]: Ella entró en el Carmelo de Lisieux el 15 de octubre de 1886 y tomó el nombre de *Sor María del Sagrado Corazón*.
+[^30]: N. del Carmelo de Lisieux: Ella entró en el Carmelo de Lisieux el 15 de octubre de 1886 y tomó el nombre de *Sor María del Sagrado Corazón*.

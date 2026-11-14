@@ -216,7 +216,7 @@ Viendo su celda vacía, y sabiendo que nunca volvería a subir a ella, la Madre 
 
 [^141]: Dom Guéranger.
 
-[^142]: Era la Reverenda Madre María de Gonzaga. Había reconocido en su novicia «un alma extraordinaria, ya santa, y capaz de llegar a ser más tarde una Priora de élite». Por eso le dio esa educación religiosa tan viril de la que Teresa se aprovechó tan bien y por la cual se mostró tan filialmente agradecida, como lo dice en la *Historia de su alma*. Fue en sus manos donde Sor Teresa del Niño Jesús dio el último suspiro, «*feliz*, decía ella, *de no tener en ese momento por Superiora a su Madrecita, para poder ejercitar más su espíritu de fe en la autoridad*.»
+[^142]: N. del Carmelo de Lisieux: Era la Reverenda Madre María de Gonzaga. Había reconocido en su novicia «un alma extraordinaria, ya santa, y capaz de llegar a ser más tarde una Priora de élite». Por eso le dio esa educación religiosa tan viril de la que Teresa se aprovechó tan bien y por la cual se mostró tan filialmente agradecida, como lo dice en la *Historia de su alma*. Fue en sus manos donde Sor Teresa del Niño Jesús dio el último suspiro, «*feliz*, decía ella, *de no tener en ese momento por Superiora a su Madrecita, para poder ejercitar más su espíritu de fe en la autoridad*.»
 
     La Madre María de Gonzaga murió el 17 de diciembre de 1904, asistida por la Reverenda Madre Inés de Jesús, entonces Priora. Tenía 71 años de edad.
 
