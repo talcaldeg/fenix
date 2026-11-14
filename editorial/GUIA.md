@@ -141,6 +141,13 @@ uno.
     palabras de la traducción en todo lo demás. Lo que dice el autor se deja, aunque hoy suene
     mal; lo que puso el traductor, no. La nota de la edición dice cuántos pasajes se corrigieron
     y contra qué edición del original.
+18. **«Esta palabra» por un dicho entero** (Marmion, prefacio, «según esta palabra del apóstol
+    san Pablo: *Et consummatus...*»; reporte del 14-nov). El francés *parole* (*cette parole de
+    saint Paul*) y el inglés *word* designan una frase completa; en castellano va en plural:
+    «estas palabras de san Pablo», «según las palabras de santo Tomás», «Meditemos estas
+    palabras». El singular queda solo para un vocablo («esta palabra "odio"»), para la Palabra de
+    Dios o el Verbo, para una orden («a la palabra de Cristo, las tinajas...») y dentro de una
+    cita bíblica ya traducida («Esta palabra es dura»).
 
 ## Glosario
 
