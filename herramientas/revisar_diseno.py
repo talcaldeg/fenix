@@ -30,6 +30,7 @@ VENTANAS = [(1366, 600), (1536, 650), (1280, 720), (1920, 950), (1024, 600), (39
 VISTAS = ["inicio", "biblioteca", "todos", "editorial", "oraciones", "citas", "salvar", "contacto"]
 LIBRO = "libro/one-with-jesus/"
 DONA = "dona/"  # página aparte (gen_estaticos.js), para que al compartirla salga su propia imagen
+CATEGORIA = "categoria/lectura/"  # sección (gen_estaticos.js): enlaces internos a cada ficha
 ALTO_BARRA = 80  # px: más que esto es que el menú se partió en dos líneas
 
 
@@ -46,7 +47,8 @@ def servir(raiz):
 # oscuro, en computador y celular (9-nov-2026). Se capturan las primeras pantallas (hasta ALTO_CAPTURA) para que
 # las repisas y el pie entren sin llevar a la hoja de contacto la página entera.
 RECORRIDO = [("inicio", "#inicio"), ("biblioteca", "#biblioteca"), ("todos", "#todos"), ("editorial", "#editorial"),
-             ("citas", "#citas"), ("ficha", "#biblioteca"), ("libro", LIBRO), ("muestra", LIBRO + "muestra/")]
+             ("citas", "#citas"), ("ficha", "#biblioteca"), ("libro", LIBRO), ("muestra", LIBRO + "muestra/"),
+             ("seccion", CATEGORIA)]
 ALTO_CAPTURA = 2400
 
 
@@ -97,8 +99,8 @@ def revisar(raiz, capturas=None):
             pg = nav.new_page(viewport={"width": w, "height": h})
             errores = []
             pg.on("pageerror", lambda e: errores.append(str(e)))
-            for vista in VISTAS + [LIBRO, DONA]:
-                url = base + vista if vista in (LIBRO, DONA) else f"{base}#{vista}"
+            for vista in VISTAS + [LIBRO, DONA, CATEGORIA]:
+                url = base + vista if vista in (LIBRO, DONA, CATEGORIA) else f"{base}#{vista}"
                 errores.clear()
                 pg.goto(url)
                 pg.wait_for_load_state("networkidle")
@@ -133,6 +135,22 @@ def revisar(raiz, capturas=None):
                 cuadrados = [r for r in radios if float(r.rsplit(":", 1)[1]) < 15]
                 if cuadrados:
                     fallas.append(f"{donde}: botones de la cabecera que no son píldora: {cuadrados}")
+                # Enlaces internos para Google (14-nov-2026: fichas rastreadas sin indexar, ninguna página las enlazaba
+                # en HTML): la ficha enlaza su sección y «Más en <sección>», la sección lista sus libros y el pie de la
+                # portada lleva las secciones visibles.
+                if vista == LIBRO:
+                    r = pg.evaluate("""() => ({cat: !!document.querySelector('.cabeza .meta a[href*="categoria/"]'),
+                        mas: document.querySelectorAll('ul.mas-cat a[href*="libro/"]').length})""")
+                    if not r["cat"] or r["mas"] < 3:
+                        fallas.append(f"{donde}: la ficha no enlaza su sección o trae menos de 3 libros en «Más en» ({r})")
+                if vista == CATEGORIA:
+                    n = pg.evaluate("document.querySelectorAll('main ul.lista a.tt[href*=\"libro/\"]').length")
+                    if n < 3:
+                        fallas.append(f"{donde}: la sección lista {n} libros")
+                if vista == "inicio":
+                    n = pg.evaluate("[...document.querySelectorAll('footer a[href^=\"categoria/\"]')].filter(a => a.offsetParent).length")
+                    if n < 3:
+                        fallas.append(f"{donde}: el pie de la portada muestra {n} enlaces a secciones")
                 if vista != "inicio":
                     continue
                 # Una tabla por fila: el tramo de repisa de cada libro sigue la veta del vecino (--rx distinto).

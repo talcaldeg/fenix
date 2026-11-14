@@ -129,6 +129,9 @@ const TX = {
     de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", preparado: "Preparado por", sello: "Recomendado por Fénix",
     y: "y", ebook: "ebook", menu: "Menú", otroIdioma: "English", tambien: "También en inglés",
     compartir: "Compartir", copiado: "Enlace copiado. Pégalo donde quieras.", copiaEnlace: "Copia este enlace:",
+    masEn: c => `Más en ${c}`, verSeccion: n => `Ver toda la sección (${n} libros)`, secciones: "Secciones de la biblioteca",
+    tCat: c => `${c} | Biblioteca gratuita Proyecto Fénix`, subCat: n => `${n} libros escogidos uno a uno`,
+    dCat: (c, n) => `${n} libros de ${c.toLowerCase()} escogidos uno a uno, con por qué leer cada uno, resumen y descarga gratuita en EPUB y PDF cuando es legal.`,
     hojear: "Hojear las primeras páginas", primeras: "primeras páginas", volver: "Volver a la ficha del libro",
     finMuestra: "Hasta aquí las primeras páginas. Para seguir leyendo, descarga el libro completo, gratis:",
     dMuestra: (t, a) => `Lee gratis en línea las primeras páginas de «${t}» de ${a}, sin descargar nada.`,
@@ -152,6 +155,9 @@ const TX = {
     de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", preparado: "Prepared by", sello: "Recommended by Fénix",
     y: "and", ebook: "ebook", menu: "Menu", otroIdioma: "Español", tambien: "Also in Spanish",
     compartir: "Share", copiado: "Link copied. Paste it wherever you like.", copiaEnlace: "Copy this link:",
+    masEn: c => `More in ${c}`, verSeccion: n => `See the whole section (${n} books)`, secciones: "Library sections",
+    tCat: c => `${c} | Proyecto Fénix free library`, subCat: n => `${n} books chosen one by one`,
+    dCat: (c, n) => `${n} ${c.toLowerCase()} books chosen one by one, with why to read each, a summary and a free EPUB and PDF download when it is legal.`,
     hojear: "Look inside: the first pages", primeras: "first pages", volver: "Back to the book page",
     finMuestra: "That is the end of the first pages. To keep reading, download the whole book, free:",
     dMuestra: (t, a) => `Read the first pages of «${t}» by ${a} online, free and without downloading anything.`,
@@ -334,6 +340,33 @@ const AVISO_EPUB = (leer("index.html").match(/<!-- AVISO_EPUB:inicio[\s\S]*?<!--
 const PWA = (leer("index.html").match(/<!-- PWA:inicio[\s\S]*?<!-- PWA:fin -->/) || [""])[0];
 const pwaEn = B => PWA.replace(/href="(?![a-z]+:|\/)/g, `href="${B}`);
 
+// Cabecera y pie comunes a la ficha y a las secciones. `otraUrl`: la misma página en el otro idioma.
+const cabecera = (lang, B, otraUrl) => {
+  const x = TX[lang], inicio = B + (lang === "en" ? "?l=en" : "");
+  return `<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><nav class="menu" id="menu" aria-label="${lang === "en" ? "Main menu" : "Menú principal"}">${navFicha(lang, B)}<div class="ajustes-nav"><a class="pildora" href="${otraUrl || B + (lang === "en" ? "" : "?l=en")}" hreflang="${lang === "en" ? "es" : "en"}" lang="${lang === "en" ? "es" : "en"}">${esc(x.otroIdioma)}</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></nav><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="${esc(x.buscar)}" title="${esc(x.buscar)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="${B}" method="get" role="search">${lang === "en" ? `<input type="hidden" name="l" value="en">` : ""}<input type="search" name="q" required aria-label="${esc(x.buscar)}" placeholder="${esc(x.buscarPh)}"><button class="btn prim" type="submit">${esc(x.buscarBtn)}</button></form></details><button class="pildora" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu">☰ ${esc(x.menu)}</button></div></div></header>`;
+};
+const pieDePagina = (lang, B) => {
+  const x = TX[lang], inicio = B + (lang === "en" ? "?l=en" : "");
+  return `<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>`;
+};
+
+// Secciones (categoria/<cat>/ y categoria/<cat>/en/): una página por categoría e idioma con un enlace a
+// cada libro. Google no indexaba las fichas (14-nov-2026: rastreadas sin indexar, sin páginas que las
+// enlazaran en HTML plano): la sección y el bloque «Más en <sección>» de cada ficha les dan enlaces internos.
+const ORDEN_CAT = ["lectura", "novela", "teatro", "poesia", "ensayo"];
+const rutaCat = (cat, lang) => `categoria/${cat}/${lang === "en" ? "en/" : ""}`;
+const enCategoria = (cat, lang) => PAGINAS.filter(p => p.idioma === lang && p.categoria === cat);
+const CATS = ORDEN_CAT.flatMap(cat => ["es", "en"].map(lang => ({ cat, lang }))).filter(c => enCategoria(c.cat, c.lang).length);
+const hayCat = (cat, lang) => CATS.some(c => c.cat === cat && c.lang === lang);
+// Los seis que siguen a este libro en su sección (en el orden de datos.js, dando la vuelta): así cada
+// ficha recibe enlaces de otras seis, sin repetir los parecidos.
+const masDeCategoria = (l, lang, excluir) => {
+  const lista = enCategoria(l.categoria, lang);
+  const i = lista.findIndex(p => urlLibro(p) === urlLibro(l));
+  const orden = [...lista.slice(i + 1), ...lista.slice(0, Math.max(i, 0))];
+  return orden.filter(p => !excluir.has(urlLibro(p))).slice(0, 6);
+};
+
 function paginaLibro(l){
   const lang = l.idioma, x = TX[lang];
   const resumen = l.resumen[lang] || l.resumen.es;
@@ -359,6 +392,9 @@ function paginaLibro(l){
   const tieneArchivos = Object.keys(l.archivos || {}).length > 0;
   const parecidos = (l.parecidos || []).map(porId).filter(p => p && visibleEn(vista(p, lang), lang)).map(p => vista(p, lang));
   const d = l.delibris;
+  const conCat = hayCat(l.categoria, lang);
+  const urlCat = conCat ? B + rutaCat(l.categoria, lang) : null;
+  const mas = conCat ? masDeCategoria(l, lang, new Set(parecidos.map(urlLibro))) : [];
   const ld = {
     "@context": "https://schema.org",
     "@graph": [
@@ -384,7 +420,8 @@ function paginaLibro(l){
         "@type": "BreadcrumbList",
         itemListElement: [
           { "@type": "ListItem", position: 1, name: "Proyecto Fénix", item: SITIO },
-          { "@type": "ListItem", position: 2, name: l.titulo, item: urlLibro(l) }
+          ...(conCat ? [{ "@type": "ListItem", position: 2, name: x.cat[l.categoria], item: SITIO + rutaCat(l.categoria, lang) }] : []),
+          { "@type": "ListItem", position: conCat ? 3 : 2, name: l.titulo, item: urlLibro(l) }
         ]
       }
     ]
@@ -423,7 +460,7 @@ ${JSON.stringify(ld, null, 2)}
 </style>
 </head>
 <body>
-<header><div class="wrap barra"><a class="marca" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="28" height="28">Proyecto Fénix</a><nav class="menu" id="menu" aria-label="${lang === "en" ? "Main menu" : "Menú principal"}">${navFicha(lang, B)}<div class="ajustes-nav"><a class="pildora" href="${otraUrl || B + (lang === "en" ? "" : "?l=en")}" hreflang="${lang === "en" ? "es" : "en"}" lang="${lang === "en" ? "es" : "en"}">${esc(x.otroIdioma)}</a><button class="pildora" id="btnTema" type="button" aria-label="${esc(x.tema)}" title="${esc(x.tema)}">◐</button></div></nav><div class="ajustes"><details class="buscar"><summary class="pildora" aria-label="${esc(x.buscar)}" title="${esc(x.buscar)}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><circle cx="10.5" cy="10.5" r="6.5"/><path d="m15.5 15.5 5 5"/></svg></summary><form action="${B}" method="get" role="search">${lang === "en" ? `<input type="hidden" name="l" value="en">` : ""}<input type="search" name="q" required aria-label="${esc(x.buscar)}" placeholder="${esc(x.buscarPh)}"><button class="btn prim" type="submit">${esc(x.buscarBtn)}</button></form></details><button class="pildora" id="btnMenu" type="button" aria-expanded="false" aria-controls="menu">☰ ${esc(x.menu)}</button></div></div></header>
+${cabecera(lang, B, otraUrl)}
 <main class="wrap">
   <div class="ficha">
     <div class="lado">${l.imagen ? `<img src="${esc(l.imagen.src.startsWith("http") ? l.imagen.src : B + l.imagen.src)}" alt="${esc(l.imagen.credito[lang] || l.imagen.credito.es)}" width="400" height="600">` : ""}
@@ -434,7 +471,7 @@ ${JSON.stringify(ld, null, 2)}
     <div class="cabeza">
       ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
       <h1>${esc(l.titulo)}<span class="sub">${esc(of.sub)}</span></h1>
-      <p class="meta">${esc(l.autor)} · ${esc(l.anio).replace(/ /g, "\u00a0")} · ${esc(x.cat[l.categoria])}</p>${otra ? `
+      <p class="meta">${esc(l.autor)} · ${esc(l.anio).replace(/ /g, "\u00a0")} · ${urlCat ? `<a href="${urlCat}">${esc(x.cat[l.categoria])}</a>` : esc(x.cat[l.categoria])}</p>${otra ? `
       <p class="meta">${esc(x.tambien)}: <a href="${otraUrl}" hreflang="${otra.idioma}" lang="${otra.idioma}">${esc(otra.titulo)}</a></p>` : ""}${avisoPreventa(l, lang)}
     </div>
     <div class="cuerpo">
@@ -447,14 +484,17 @@ ${JSON.stringify(ld, null, 2)}
       <h2>${esc(x.moral)}</h2>
       ${d ? `<p><span class="circ" aria-hidden="true">${[1, 2, 3, 4, 5, 6].map(n => `<i class="${n <= d.valor ? "on" : ""}"></i>`).join("")}</span><strong>${d.valor} ${esc(x.de)} 6</strong>: ${esc(textoDelibris(d, lang))}. <a href="${esc(d.url)}" rel="noopener">${esc(x.verEn)}</a></p>` : `<p>${esc(x.sinDelibris)}</p>`}
       <p class="meta">${esc(x.moralNota)}</p>
-      ${parecidos.length ? `<h2>${esc(x.parecidos)}</h2>\n      <ul class="parecidos">${parecidos.map(p => `<li><a href="${l._ruta ? "../../" : "../"}${esc((vista(p, lang)._ruta || "libro/" + p.id + "/").slice(6))}">${esc(p.titulo)}</a> · ${esc(p.autor)}</li>`).join("")}</ul>` : ""}
+      ${parecidos.length ? `<h2>${esc(x.parecidos)}</h2>\n      <ul class="parecidos">${parecidos.map(p => `<li><a href="${l._ruta ? "../../" : "../"}${esc((vista(p, lang)._ruta || "libro/" + p.id + "/").slice(6))}">${esc(p.titulo)}</a> · ${esc(p.autor)}</li>`).join("")}</ul>` : ""}${mas.length ? `
+      <h2>${esc(x.masEn(x.cat[l.categoria]))}</h2>
+      <ul class="parecidos mas-cat">${mas.map(p => `<li><a href="${B}${esc(p._ruta || "libro/" + p.id + "/")}">${esc(p.titulo)}</a> · ${esc(p.autor)}</li>`).join("")}</ul>
+      <p class="meta"><a href="${urlCat}">${esc(x.verSeccion(enCategoria(l.categoria, lang).length))}</a></p>` : ""}
       <div class="botones"><a class="btn" href="${B}?${lang === "en" ? "l=en&amp;" : ""}abrir=${encodeURIComponent(l.id)}">${esc(x.abrir)}</a><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
       ${l.fuente ? `<p class="meta">${esc(x.fuente)}: <a href="${esc(l.fuente.url)}" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
       ${l.imagen ? `<p class="meta">${esc(x.portada)}: <a href="${esc(l.imagen.url)}" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : x.dominio)})</p>` : ""}
     </div>
   </div>
 </main>
-<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
+${pieDePagina(lang, B)}
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${AVISO_EPUB}
@@ -488,6 +528,9 @@ ${pwaEn(B)}
 <meta name="color-scheme" content="light dark">
 ${FUENTES}
 <link rel="canonical" href="${url}">
+<!-- Fuera del índice de Google (14-nov-2026): es el comienzo del libro, que en las ediciones ajenas ya está
+     en Gutenberg o Wikisource; la página que debe salir en Google es la ficha. follow: sus enlaces sí cuentan. -->
+<meta name="robots" content="noindex, follow">
 <meta property="og:type" content="book">
 <meta property="og:site_name" content="Proyecto Fénix">
 <meta property="og:title" content="${esc(l.titulo + " - " + x.primeras)}">
@@ -716,6 +759,85 @@ for (const l of PAGINAS){
   if (m){ conMuestra.add(urlLibro(l) + "muestra/"); if (escribirSiCambia(dir + "index.html", paginaMuestra(l, m))) cambiadas.add(urlLibro(l) + "muestra/"); }
   else if (fs.existsSync(path.join(RAIZ, dir))) { fs.rmSync(path.join(RAIZ, dir), { recursive: true }); console.log("borrada " + dir); }
 }
+// Secciones: una página por categoría e idioma (ver rutaCat); la de una categoría que quedó vacía se borra.
+function paginaCategoria(cat, lang){
+  const x = TX[lang], B = lang === "en" ? "../../../" : "../../";
+  const nombre = x.cat[cat], libros = enCategoria(cat, lang), url = SITIO + rutaCat(cat, lang);
+  const otro = lang === "en" ? "es" : "en";
+  const otraUrl = hayCat(cat, otro) ? B + rutaCat(cat, otro) : null;
+  const descripcion = x.dCat(nombre, libros.length);
+  const ld = {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "CollectionPage", "@id": url + "#seccion", url, name: nombre, description: descripcion, inLanguage: lang, isPartOf: { "@id": SITIO + "#sitio" },
+        mainEntity: { "@type": "ItemList", numberOfItems: libros.length, itemListElement: libros.map((p, i) => ({ "@type": "ListItem", position: i + 1, url: urlLibro(p), name: p.titulo })) } },
+      { "@type": "BreadcrumbList", itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Proyecto Fénix", item: SITIO },
+        { "@type": "ListItem", position: 2, name: nombre, item: url }] }
+    ]
+  };
+  return `<!doctype html>
+<html lang="${lang}">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${esc(x.tCat(nombre))}</title>
+${FAVICON}
+${pwaEn(B)}
+<meta name="description" content="${esc(descripcion)}">
+<meta name="color-scheme" content="light dark">
+${FUENTES}
+<link rel="canonical" href="${url}">${otraUrl ? `
+<link rel="alternate" hreflang="${lang}" href="${url}">
+<link rel="alternate" hreflang="${otro}" href="${SITIO + rutaCat(cat, otro)}">` : ""}
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Proyecto Fénix">
+<meta property="og:title" content="${esc(x.tCat(nombre))}">
+<meta property="og:description" content="${esc(descripcion)}">
+<meta property="og:url" content="${url}">
+<meta property="og:image" content="${SITIO}img/compartir.jpg">
+<meta property="og:locale" content="${lang === "en" ? "en_US" : "es_CL"}">
+<!-- Generada por herramientas/gen_estaticos.js desde datos.js. No editar a mano. -->
+<script type="application/ld+json">
+${JSON.stringify(ld, null, 2)}
+</script>
+<style>${estilo(B)}
+  .seccion{max-width:760px}
+  .seccion ul.lista{list-style:none; padding:0; margin:24px 0 0}
+  .seccion ul.lista li{padding:14px 0; border-top:1px solid var(--line)}
+  .seccion ul.lista a.tt{font-size:19px; font-weight:700; text-decoration:none}
+  .seccion ul.lista .au{font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
+  .seccion ul.lista p{margin:4px 0 0}
+  nav.secciones{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 0}
+  nav.secciones a{font:600 15px system-ui,sans-serif; text-decoration:none; padding:6px 12px; border:1px solid var(--line); border-radius:999px; background:var(--card)}
+  nav.secciones a[aria-current]{background:var(--acento); color:var(--acento-ink); border-color:transparent}
+</style>
+</head>
+<body>
+${cabecera(lang, B, otraUrl)}
+<main class="wrap seccion">
+  <h1>${esc(nombre)}<span class="sub">${esc(x.subCat(libros.length))}</span></h1>
+  <nav class="secciones" aria-label="${esc(x.secciones)}">${CATS.filter(c => c.lang === lang).map(c => `<a href="${B}${rutaCat(c.cat, lang)}"${c.cat === cat ? ' aria-current="page"' : ""}>${esc(x.cat[c.cat])}</a>`).join("")}</nav>
+  <ul class="lista">
+${libros.map(p => `    <li><a class="tt" href="${B}${esc(p._ruta || "libro/" + p.id + "/")}">${esc(p.titulo)}</a><div class="au">${esc(p.autor)} · ${esc(p.anio).replace(/ /g, " ")}</div><p>${esc(primeraOracion(p.resumen[lang] || p.resumen.es))}</p></li>`).join("\n")}
+  </ul>
+  <div class="botones"><a class="btn" href="${B}${lang === "en" ? "?l=en" : ""}#biblioteca">${esc(x.verTodo)}</a></div>
+</main>
+${pieDePagina(lang, B)}
+${SCRIPT_TEMA}
+${MEDICION}
+</body>
+</html>
+`;
+}
+for (const c of CATS) if (escribirSiCambia(rutaCat(c.cat, c.lang) + "index.html", paginaCategoria(c.cat, c.lang))) cambiadas.add(SITIO + rutaCat(c.cat, c.lang));
+{
+  const dirCat = path.join(RAIZ, "categoria");
+  if (fs.existsSync(dirCat)) for (const d of fs.readdirSync(dirCat)) {
+    if (!CATS.some(c => c.cat === d)) { fs.rmSync(path.join(dirCat, d), { recursive: true }); console.log("borrada categoria/" + d); continue; }
+    if (!hayCat(d, "en") && fs.existsSync(path.join(dirCat, d, "en"))) { fs.rmSync(path.join(dirCat, d, "en"), { recursive: true }); console.log("borrada categoria/" + d + "/en"); }
+  }
+}
 // Fichas fusionadas en otra (alias): su dirección vieja redirige a la página nueva.
 for (const [viejo, a] of Object.entries(D.alias || {})){
   const destino = vista(porId(a.id), a.idioma || porId(a.id).idioma);
@@ -774,6 +896,7 @@ ${JSON.stringify(ldInicio, null, 2)}
 // y Google en su primera pasada ven así un enlace a cada libro desde la portada. El visitante no lo ve.
 const catalogo = `<!-- CATALOGO:inicio - lo genera herramientas/gen_estaticos.js desde datos.js; no editar a mano -->
   <noscript><nav aria-label="Catálogo"><h2>Catálogo</h2><ul>
+${CATS.map(c => `    <li><a href="${rutaCat(c.cat, c.lang)}">${esc(TX[c.lang].cat[c.cat])}</a>${c.lang === "en" ? " (English)" : ""}</li>`).join("\n")}
 ${PAGINAS.map(l => `    <li><a href="${(l._ruta || "libro/" + l.id + "/")}">${esc(l.titulo)}</a> - ${esc(l.autor)}</li>`).join("\n")}
   </ul></nav></noscript>
   <!-- CATALOGO:fin -->`;
@@ -781,8 +904,17 @@ const conCatalogo = INDEX.includes("<!-- CATALOGO:inicio")
   ? INDEX.replace(/<!-- CATALOGO:inicio[\s\S]*?<!-- CATALOGO:fin -->/, catalogo)
   : INDEX.replace("<main>\n", `<main>\n  ${catalogo}\n`);
 if (!conCatalogo.includes("<!-- CATALOGO:inicio")) throw new Error("index.html no tiene <main> para el catálogo");
-const conJsonld = conCatalogo.replace(/<!-- JSONLD:inicio[\s\S]*?<!-- JSONLD:fin -->/, bloque);
-if (conJsonld === conCatalogo && !INDEX.includes("<!-- JSONLD:inicio")) throw new Error("index.html no tiene las marcas JSONLD:inicio y JSONLD:fin");
+// Pie de la portada: enlaces visibles a las secciones (el catálogo de arriba va en <noscript> y Google, que
+// ejecuta JavaScript, puede no contarlo). Una línea por idioma; la portada muestra la del idioma activo.
+const lineaSecciones = lang => `<span class="sec-${lang}">${lang === "en" ? "Sections" : "Secciones"}: ${CATS.filter(c => c.lang === lang).map(c => `<a href="${rutaCat(c.cat, lang)}">${esc(TX[lang].cat[c.cat])}</a>`).join(" · ")}</span>`;
+const secciones = `<!-- SECCIONES:inicio - lo genera herramientas/gen_estaticos.js desde datos.js; no editar a mano -->
+  <style>html[lang="en"] .sec-es, html:not([lang="en"]) .sec-en{display:none}</style>
+  <nav class="wrap" style="margin-top:6px" aria-label="Secciones">${lineaSecciones("es")}${lineaSecciones("en")}</nav>
+  <!-- SECCIONES:fin -->`;
+if (!/<!-- SECCIONES:inicio[\s\S]*?<!-- SECCIONES:fin -->/.test(conCatalogo)) throw new Error("index.html no tiene las marcas SECCIONES:inicio y SECCIONES:fin en el pie");
+const conSecciones = conCatalogo.replace(/<!-- SECCIONES:inicio[\s\S]*?<!-- SECCIONES:fin -->/, secciones);
+const conJsonld = conSecciones.replace(/<!-- JSONLD:inicio[\s\S]*?<!-- JSONLD:fin -->/, bloque);
+if (conJsonld === conSecciones && !INDEX.includes("<!-- JSONLD:inicio")) throw new Error("index.html no tiene las marcas JSONLD:inicio y JSONLD:fin");
 // Nombres con huella de cada EPUB (nombreDescarga), para el botón de descarga de la portada.
 const epubs = [...new Set(JSON.stringify(D).match(/libros\/[^"]+\.epub/g) || [])].filter(u => fs.existsSync(path.join(RAIZ, u))).sort();
 const descargas = `<!-- DESCARGAS:inicio - lo genera herramientas/gen_estaticos.js; no editar a mano -->
@@ -823,7 +955,8 @@ const hoy = new Date().toISOString().slice(0, 10);
 const previo = fs.existsSync(path.join(RAIZ, "sitemap.xml")) ? leer("sitemap.xml") : "";
 const lastmodPrevio = {};
 for (const m of previo.matchAll(/<loc>([^<]+)<\/loc>\s*<lastmod>([^<]+)<\/lastmod>/g)) lastmodPrevio[m[1]] = m[2];
-const urls = [SITIO, SITIO + "dona/", SITIO + "dona/en/", ...PAGINAS.map(urlLibro), ...conMuestra];
+// Las muestras no van: llevan noindex (ver paginaMuestra). Las secciones sí.
+const urls = [SITIO, SITIO + "dona/", SITIO + "dona/en/", ...CATS.map(c => SITIO + rutaCat(c.cat, c.lang)), ...PAGINAS.map(urlLibro)];
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 ${urls.map(u => `  <url>
