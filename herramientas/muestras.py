@@ -50,7 +50,7 @@ INICIO = {
     "platon-apology": r"^APOLOGY$",
     "kempis-imitacion-de-cristo-granada": r"^Libro primero$",
     "ligorio-preparacion-para-la-muerte": r"^Consideración I\.",
-    "marmion-jesucristo-vida-del-alma": r"^PRIMERA PARTE$",
+    "marmion-jesucristo-vida-del-alma": r"^Primera parte",
     "doyle-el-sabueso-de-los-baskerville": r"^I\. El señor Sherlock Holmes",
 }
 NOTA_REF = re.compile(r"^\s*[\[(]?\s*(\d+|[*†‡]+|[ivxlc]+)\s*[\])]?\s*$", re.I)

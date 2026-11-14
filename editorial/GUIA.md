@@ -485,3 +485,76 @@ frases muy largas se pueden ordenar, nunca recortar.
 - Cursiva del original (`_texto_`) → `*texto*`. Las rayas largas del original pasan a comas,
   paréntesis, dos puntos o punto y coma, según el sentido.
 - Notas al pie: no se agregan; el revisor las pone después, verificadas.
+
+## Jesucristo, vida del alma (Marmion, *Le Christ, vie de l'âme*, 1914, desde el francés)
+
+Conferencias espirituales del abad benedictino Columba Marmion (Maredsous, 1914). Original: OCR
+del escaneo de la Bibliothèque municipale de Lyon, partido en tramos en
+`fenix_fuentes/marmion-le-christ-vie-de-l-ame-1914/tramos/NN_<parte>.txt`; la salida va en
+`editorial/marmion-vida-del-alma/NN_<parte>.md` (mismo nombre). Las reglas de arriba rigen igual;
+esto es lo propio del libro.
+
+- **Tramos.** 44 archivos `NN_<unidad>[a|b|c].txt`: `01_prefacio` (cardenal Mercier),
+  `02_advertencia` (Avant-propos, del autor), `03..13_p1-cNN` (primera parte, conferencias I a
+  VI) y `14..44_p2-cNN` (segunda parte, I a XIII); la letra marca la parte de una conferencia
+  larga. Plan, páginas y palabras: `tramos/plan.tsv`; se regeneran con `partir_tramos.py`.
+- **Formato del tramo.** Cada página abre con `== p. N (pdf M) ==` y su título corrido: ambos se
+  omiten (sirven para cotejar el PDF). El primer tramo de cada conferencia trae un bloque
+  `SOMMAIRE` sacado de la tabla de materias final: se traduce sin los números de página, como el
+  sumario en cursiva bajo el título (los «I. —», «II. —» de ese sumario se conservan). Si el
+  tramo termina con un bloque `SUITE`, se traduce solo hasta acabar la oración cortada; si abre
+  con «DÉJÀ TRADUIT», se empieza después de ese trozo. Las notas al pie de una página vienen al
+  pie de esa página.
+- **Secciones.** En el cuerpo, las secciones I, II, III del sumario no llevan título ni número:
+  el original las separa solo con un espacio. No se inventan `###`; basta el párrafo nuevo.
+  Excepción: si el escaneo imprime número y subtítulo en cursiva («1. / *Le sacrement.*», conf. IV),
+  va `#### 1. El sacramento` (error 3). El OCR suele perderlos («E q» por «1»): mirar el escaneo.
+
+- **OCR.** El texto viene de un escaneo: corrija en silencio lo que es error evidente del OCR
+  (letras cambiadas, palabras cortadas por guion de fin de línea, números de página, el título
+  corrido «LE CHRIST, VIE DE L'ÂME» y los números de capítulo en lo alto de cada página, que se
+  omiten). Si un pasaje no se entiende por el OCR, tradúzcalo según el sentido y anótelo en sus
+  dudas con la cita del original; no lo invente.
+- **Tratamiento.** Marmion habla al lector de «nous» casi siempre: «nosotros». Cuando interpela
+  en singular, «tú». A Dios y a Cristo, en las oraciones, de «tú» (con la regla de mayúsculas de
+  arriba), aunque el francés diga «vous». Cristo hablando a sus discípulos (vous plural):
+  «ustedes».
+- **Encabezados.** Partes, como `# Primera parte. La economía divina` y `# Segunda parte.
+  Fundamento y doble aspecto de la vida cristiana`; las secciones de la segunda parte, «A. La
+  muerte al pecado» y «B. La vida para Dios», como `### A. La muerte al pecado` antes del `##`
+  de su primera conferencia. Conferencias: `## I. <título>`
+  con su numeración romana. El sumario que abre cada conferencia va como un párrafo en cursiva,
+  temas separados por punto, sin rayas; el título de parte o sección solo en el primer tramo que
+  la abre (03, 14, 19 y 24).
+- **Notas.** Las notas al pie del escaneo vienen al final de cada página, con su llamada en el
+  texto (número o asterisco). Póngalas como `[^N]` en el lugar de la llamada, numeradas de
+  corrido dentro del tramo, y el texto de la nota al final del archivo como `[^N]: texto.`
+  Referencias bíblicas al modo castellano sin cambiar la numeración del original (salmos de la
+  Vulgata): Jn 17, 3; Rm 8, 29; Ef 1, 3-6; Col 1, 15; 2 Pe 1, 4; Sal 44, 2. Obras: *Suma
+  teológica*, I-II, q. 110, a. 1; *Tratados sobre el Evangelio de san Juan* (san Agustín);
+  Concilio de Trento, ses. VI, cap. 7. Las citas en latín de la nota se dejan en latín.
+- **Citas bíblicas y latín.** Marmion cita mucho la Vulgata en latín, en el texto o en nota, y
+  luego la traduce o la glosa. El latín se conserva tal cual (en cursiva si el original la
+  pone); su traducción se hace desde el francés de Marmion, no de una Biblia castellana. Las
+  frases de la liturgia, igual: latín como está, castellano desde su francés.
+- **Glosario.** le Christ → Cristo; le Christ Jésus → Cristo Jesús; Notre-Seigneur → Nuestro
+  Señor; le Verbe → el Verbo; le Verbe incarné → el Verbo encarnado; le Père éternel → el Padre
+  eterno; l'Esprit-Saint → el Espíritu Santo; la sainte Trinité → la santísima Trinidad;
+  l'adoption divine → la adopción divina; enfants de Dieu / fils adoptifs → hijos de Dios / hijos
+  adoptivos; la grâce sanctifiante → la gracia santificante; la grâce actuelle → la gracia
+  actual; la vie surnaturelle → la vida sobrenatural; l'ordre surnaturel → el orden
+  sobrenatural; la prédestination → la predestinación; le plan divin → el plan divino;
+  l'économie (divine) → la economía (divina); le Corps mystique → el Cuerpo místico; le chef →
+  la cabeza; les membres → los miembros; la foi → la fe; l'espérance → la esperanza; la
+  charité → la caridad; les mérites → los méritos; mériter → merecer; la componction → la
+  compunción; l'abandon → el abandono; la vertu de religion → la virtud de religión; les dons
+  du Saint-Esprit → los dones del Espíritu Santo; le saint sacrifice (de la messe) → el santo
+  sacrificio (de la misa); la sainte Humanité → la santa Humanidad; l'oraison → la oración
+  (mental); la prière → la oración (si hace falta distinguir, «oración» para oraison y «plegaria»
+  para prière); le Docteur angélique → el Doctor angélico; le grand Apôtre → el gran Apóstol;
+  saint Paul → san Pablo; satisfaire / la satisfaction → satisfacer / la satisfacción.
+- **Términos técnicos sin cambiar de grado:** nature, personne, substance, grâce, participation,
+  mérite, satisfaction, justification, sacrement, ex opere operato, se traducen por su
+  equivalente exacto, nunca por un sinónimo más vago.
+- **Dios en minúscula o mayúscula.** «Dieu se donne» → «Dios se da»; «Il» referido a Dios → «Él»;
+  «son Fils» → «su Hijo»; «lui» átono → «le», «lo».

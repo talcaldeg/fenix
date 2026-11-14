@@ -43,7 +43,7 @@ window.FENIX = {
       id: "marmion-vida-del-alma",
       titulo: "Jesucristo, vida del alma",
       autor: "Beato Columba Marmion, O.S.B.",
-      anio: "1917",
+      anio: "1914",
       idioma: "es",
       categoria: "lectura",
       recomendado: true,
@@ -54,13 +54,17 @@ window.FENIX = {
       porque: {"es":"Para quien quiere entender qué significa ser hijo de Dios más allá de la frase hecha. Marmion ordena la vida cristiana desde su centro, que es Cristo, y ayuda a ver cada práctica, la Misa, la oración, el esfuerzo diario, como parte de un solo plan. Se lee con calma, de a una conferencia.","en":"For anyone who wants to understand what it means to be a child of God beyond the stock phrase. Marmion arranges the Christian life around its centre, Christ, and helps the reader see each practice, the Mass, prayer, daily effort, as part of a single plan. It is best read slowly, one conference at a time."},
       imagen: { src: "img/portadas/marmion-vida-del-alma.jpg", credito: { es: "Cristo Pantocrátor, icono del monasterio de Santa Catalina del Sinaí, siglo VI", en: "Christ Pantocrator, icon from Saint Catherine's Monastery, Sinai, 6th century" }, url: "https://commons.wikimedia.org/wiki/File:CHRIST_PANTOCRATOR-SINAI(6th_Century).jpg" },
       citas: [
-        "Toda nuestra santidad se reduce a participar, por medio de la gracia, de la filiación divina de Jesucristo, a ser, por la adopción sobrenatural, lo que Cristo es por naturaleza.",
-        "«El cristiano es un nuevo Cristo». Esta es la definición del cristiano que ha dado, si no en los mismos términos, al menos en una expresión equivalente, la tradición entera.",
-        "Cristo es verdaderamente la vida del alma, porque es la fuente y el dispensador de esa vida.",
-        "La oración enciende y mantiene en el alma una como hoguera, en la cual el fuego del amor está, si no siempre en acción, al menos siempre latente."
+        "Toda nuestra santidad se reduce a participar, por la gracia, de la filiación divina de Cristo Jesús, a ser por la adopción sobrenatural lo que Cristo es por naturaleza.",
+        "«El cristiano es otro Cristo». Esta es, en efecto, la definición del cristiano que ha dado toda la tradición, si no en términos propios, al menos en expresión equivalente.",
+        "Cristo es la única fuente de la vida sobrenatural; toda nuestra actividad, toda nuestra existencia, solo tienen valor para la vida eterna en la medida en que estamos unidos a Cristo por la gracia.",
+        "Creer en la divinidad de Jesucristo es, pues, el medio que nos pone en contacto con Cristo, fuente de toda vida y de toda gracia."
       ],
       archivos: { epub: "libros/marmion-jesucristo-vida-del-alma.epub", pdf: "libros/marmion-jesucristo-vida-del-alma.pdf" },
-      fuente: { texto: "Edición de la Fundación Gratis Date, autorizada por el abad de Maredsous", url: "https://www.gratisdate.org/" },
+      editorial: {
+        es: "Traducción nueva de Proyecto Fénix, hecha desde el original francés de 1914, con el prefacio del cardenal Mercier, la advertencia del autor y las diecinueve conferencias, las notas del autor y notas del editor que identifican sus citas y aclaran con el Catecismo una docena de pasajes; revisada en sus pasajes doctrinales; preparada con ayuda de inteligencia artificial, con nota de la edición.",
+        en: "A new Proyecto Fénix translation, made from the 1914 French original, with Cardinal Mercier's preface, the author's foreword and the nineteen conferences, the author's notes and editor's notes that identify his quotations and clarify a dozen passages with the Catechism; reviewed in its doctrinal passages; prepared with the help of artificial intelligence, with an edition note."
+      },
+      fuente: { texto: "Le Christ, vie de l'âme (Maredsous, 1914), original francés escaneado por la Biblioteca municipal de Lyon (dominio público)", url: "https://numelyo.bm-lyon.fr/BML:BML_00GOO0100137001104814061" },
       delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/jesucristo-vida-del-alma-christ-life-soul" },
       parecidos: ["one-with-jesus", "imitacion-de-cristo", "presencia-de-dios"]
     },
