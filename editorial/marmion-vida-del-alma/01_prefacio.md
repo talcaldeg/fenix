@@ -24,7 +24,7 @@ La tabla de materias señala con mucha nitidez la continuidad del pensamiento de
 
 Habrá, quizá, almas a las que esta simplificación de la espiritualidad choque; no pueden hacerse a la idea de que, para llegar a la perfección, no haga falta «buscarle tres pies al gato».
 
-Sin embargo, son Cristo y su Evangelio los que tienen razón. ¿Y no está escrito en el Evangelio: «Si no se hacen semejantes a los niños pequeños, no entrarán en el Reino de los cielos»[^15]? ¿Y acaso nuestro divino Jesús no exclamó, en un momento de santo entusiasmo (*Exsultavit Spiritu Sancto*): «Atestiguo a mi Padre que Tú has ocultado estos misterios a los hombres que el mundo estima sabios y prudentes, y que has reservado su revelación a los humildes y a los pequeños»[^16]?
+Sin embargo, son Cristo y su Evangelio los que tienen razón. ¿Y no está escrito en el Evangelio: «Si no se hacen semejantes a los niños pequeños, no entrarán en el Reino de los cielos»[^15]? ¿Y acaso nuestro divino Jesús no exclamó, en un momento de santo entusiasmo (*Exsultavit Spiritu Sancto*[^edl1]): «Atestiguo a mi Padre que Tú has ocultado estos misterios a los hombres que el mundo estima sabios y prudentes, y que has reservado su revelación a los humildes y a los pequeños»[^16]?
 
 El perfume de la Escritura que se respira en cada página del volumen da la impresión de que fue concebido y preparado en la oración, al pie del altar, antes de darse a conocer al público.
 
@@ -47,20 +47,22 @@ Arzobispo de Malinas.
 
 [^7]: N. del E.: teándrica quiere decir divino-humana: la única Persona del Verbo encarnado es a la vez verdadero Dios y verdadero hombre, en dos naturalezas (Catecismo de la Iglesia Católica, n. 464-469).
 
-[^8]: N. del E.: «Solo tú eres santo, solo tú Señor, Jesucristo», del himno *Gloria in excelsis* de la misa.
+[^8]: N. del E.: «Solo Tú eres santo, solo Tú Señor, Jesucristo», del himno *Gloria in excelsis* de la misa.
 
-[^9]: Beato Alberto Magno, *De adhaerendo Deo*, cap. 2. N. del E.: Alberto Magno fue canonizado en 1931; la crítica moderna duda de que esta obra sea suya en su forma actual, aunque se la publicó bajo su nombre.
+[^9]: Beato Alberto Magno, *De adhaerendo Deo*, cap. 2. N. del E.: «Que nadie fije jamás la atención de su mente en otro objeto que en Jesucristo herido, y que así, por Él hacia Él, es decir, por el hombre hacia Dios, por las heridas de su humanidad hacia lo íntimo de su divinidad, tienda con diligencia y empeño». Alberto Magno fue canonizado en 1931; la crítica moderna duda de que esta obra sea suya en su forma actual, aunque se la publicó bajo su nombre.
 
 [^10]: N. del E.: primera parte, conferencia IV, «Cristo, causa eficiente de toda gracia», al comienzo (Mercier remite a la p. 70 de la edición francesa).
 
 [^11]: Cf. Rm 6, 11. N. del E.: son los títulos de las dos secciones de la segunda parte, «A. La muerte al pecado» y «B. La vida para Dios».
 
-[^12]: N. del E.: segunda parte, conferencia IX, *Vox sponsae*.
+[^12]: N. del E.: «La voz de la esposa». Segunda parte, conferencia IX, *Vox sponsae*.
 
 [^13]: N. del E.: segunda parte, conferencia X, «La oración», al comienzo.
 
-[^14]: Cf. Ef 4, 13. N. del E.: segunda parte, conferencia XIII, *Cohaeredes Christi*.
+[^14]: Cf. Ef 4, 13. N. del E.: «Coherederos de Cristo». Segunda parte, conferencia XIII, *Cohaeredes Christi*.
 
 [^15]: Mt 18, 3.
 
 [^16]: Lc 10, 21; cf. Mt 11, 25.
+
+[^edl1]: N. del E.: «Se llenó de gozo en el Espíritu Santo».

@@ -2,7 +2,7 @@
 
 Las conferencias que componen la presente obra son fruto de varios años de reflexión y de oración. Fueron dadas en circunstancias muy variadas, ante auditorios muy diversos; pero el autor, como no tenía la intención de publicarlas, nunca las había redactado por escrito. Algunos oyentes, creyendo que podían hacer bien a las almas, habían tomado abundantes notas y pedido al autor que permitiera su impresión. Tal como habían sido pronunciadas, con todas las imperfecciones de una improvisación hecha en una lengua que no es la lengua materna del autor, no habría sido posible entregarlas al público.
 
-Pero un colaborador abnegado se impuso la tarea, difícil y delicada, de reunir esas numerosas notas, de coordinarlas y de prepararlas para la impresión, en una forma que no fuera demasiado indigna del público. Se esforzó, a lo largo de todo su trabajo, por conservar la manera propia del autor; el mismo afán de fidelidad lo llevó a mantener, en la medida de lo posible, el estilo directo y el tono sencillo con que se pronunciaron las conferencias. El autor está persuadido de que este colaborador ha logrado su cometido; desea reconocer aquí su abnegación y testimoniarle toda su gratitud, así como a todos los que, de cualquier modo, lo ayudaron en su trabajo.
+Pero un colaborador abnegado[^ed1] se impuso la tarea, difícil y delicada, de reunir esas numerosas notas, de coordinarlas y de prepararlas para la impresión, en una forma que no fuera demasiado indigna del público. Se esforzó, a lo largo de todo su trabajo, por conservar la manera propia del autor; el mismo afán de fidelidad lo llevó a mantener, en la medida de lo posible, el estilo directo y el tono sencillo con que se pronunciaron las conferencias. El autor está persuadido de que este colaborador ha logrado su cometido; desea reconocer aquí su abnegación y testimoniarle toda su gratitud, así como a todos los que, de cualquier modo, lo ayudaron en su trabajo.
 
 La coordinación de las distintas conferencias se debe al editor; bastará echar una mirada al índice colocado al comienzo del volumen para darse cuenta de la sencillez del plan.
 
@@ -19,3 +19,4 @@ El autor
 [^1]: Cf. Rm 6, 2-11.
 
 [^2]: Jn 10, 10. N. del E.: las palabras entre comillas glosan, además, Mt 11, 28 y Jn 14, 6.
+[^ed1]: N. del E.: se trata de dom Raymond Thibaut, monje de Maredsous y secretario del autor. Ordenó estas conferencias a partir de las notas tomadas por los oyentes y de los apuntes del propio Marmion, que revisó y aprobó el texto. Preparó del mismo modo los otros dos libros de la trilogía, *Jesucristo en sus misterios* y *Jesucristo, ideal del monje*, y escribió después una biografía del autor.

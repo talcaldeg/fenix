@@ -484,8 +484,14 @@ frases muy largas se pueden ordenar, nunca recortar.
   castellano claro va con el nombre común más conocido en Latinoamérica; si no hay, el inglés en
   cursiva.
 - Citas en griego, latín u otra lengua dentro del texto: se dejan en su lengua y se traduce al
-  castellano a continuación, como lo hace el autor; si él no las traduce, quedan tal cual (el
-  revisor pone la nota). Versos: en verso libre castellano que conserve el sentido y la imagen,
+  castellano a continuación, como lo hace el autor; si él no las traduce, quedan tal cual y el
+  revisor pone la traducción en nota («N. del E.: «...».»), también la del latín que venga
+  dentro de una nota. Ningún latín queda sin traducir en el libro publicado (Marmion,
+  15-nov-2026). Si el latín es bíblico, esa traducción del editor sigue la redacción de la
+  Biblia de Navarra (ewtn.com/es/biblia; salmos con numeración hebrea allá), con «ustedes» y
+  ajustada donde la Vulgata citada diga otra cosa, y con la mayúscula de Dios de Fénix (Él, Tú,
+  Ti para Dios o Cristo; posesivos y átonos en minúscula) aunque Navarra escriba «él» o «tú»
+  (Marmion, 15-nov-2026). Versos: en verso libre castellano que conserve el sentido y la imagen,
   cada verso en su línea dentro de `> `; la firma del poeta, si la hay, en la última línea del
   bloque.
 - Citas bíblicas: se traducen del inglés que trae el libro.
@@ -539,7 +545,8 @@ esto es lo propio del libro.
   Referencias bíblicas al modo castellano sin cambiar la numeración del original (salmos de la
   Vulgata): Jn 17, 3; Rm 8, 29; Ef 1, 3-6; Col 1, 15; 2 Pe 1, 4; Sal 44, 2. Obras: *Suma
   teológica*, I-II, q. 110, a. 1; *Tratados sobre el Evangelio de san Juan* (san Agustín);
-  Concilio de Trento, ses. VI, cap. 7. Las citas en latín de la nota se dejan en latín.
+  Concilio de Trento, ses. VI, cap. 7. Las citas en latín de la nota se dejan en latín, y el revisor
+  agrega su traducción en la misma nota si el texto no la da.
 - **Citas bíblicas y latín.** Marmion cita mucho la Vulgata en latín, en el texto o en nota, y
   luego la traduce o la glosa. El latín se conserva tal cual (en cursiva si el original la
   pone); su traducción se hace desde el francés de Marmion, no de una Biblia castellana. Las

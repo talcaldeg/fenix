@@ -197,6 +197,19 @@ def revisar_epub(ruta: Path, creditos: dict) -> list:
             if not nombre.endswith((".xhtml", ".html", ".htm")):
                 continue
             t = z.read(nombre).decode("utf-8", "replace")
+            # Llamadas y notas de pareja: un `[^edl1]` en el sumario salía literal y dos tramos con
+            # la misma etiqueta repetían el id de la llamada (Marmion, 15-nov-2026).
+            pag = nombre.rpartition("/")[2]
+            if (lit := re.search(r"\[\^\w+\]", t)):
+                E.append(f"{pag}: llamada sin convertir «{lit.group(0)}»")
+            ids = re.findall(r'\bid="([^"]+)"', t)
+            if (rep := sorted({i for i in ids if ids.count(i) > 1})):
+                E.append(f"{pag}: ids repetidos {', '.join(rep[:5])}")
+            refs = set(re.findall(r'epub:type="noteref"[^>]*href="#([^"]+)"', t)
+                       + re.findall(r'href="#([^"]+)"[^>]*epub:type="noteref"', t))
+            notas_id = set(re.findall(r'<[^>]*\bid="(n\d+)"', t))
+            if refs and (sueltas := sorted(notas_id - refs, key=lambda x: int(x[1:]))):
+                E.append(f"{pag}: notas sin llamada {', '.join(sueltas[:5])}")
             for m in NOTA.finditer(t):
                 el = elemento(t, m)
                 if CURSIVA.search(el):

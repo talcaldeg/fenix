@@ -129,6 +129,10 @@ def leer(carpeta: Path, imagenes: dict = None):
         if md.name == "nota.md":
             continue
         txt = md.read_text(encoding="utf-8")
+        # Etiquetas por archivo: dos tramos de un mismo capítulo pueden repetir `[^edl1]` (Marmion,
+        # 15-nov-2026) y la segunda pisaba a la primera. Solo se renombran las que se definen acá.
+        for et in set(re.findall(r"(?m)^\[\^(\w+)\]:", txt)):
+            txt = txt.replace(f"[^{et}]", f"[^{re.sub(r'\W', '_', md.stem)}_{et}]")
         defs = {}
         for m in re.finditer(r"(?ms)^\[\^(\w+)\]:\s*(.*?)(?=^\[\^\w+\]:|\Z)", txt):
             defs[m.group(1)] = " ".join(m.group(2).split())
@@ -200,7 +204,9 @@ def leer(carpeta: Path, imagenes: dict = None):
             # puede quedar sola al comienzo de la línea siguiente.
             cuerpo = re.sub(r"\s*\[\^(\w+)\]", llamada, cuerpo)
             if recien_titulo and re.fullmatch(r"\*[^*].*\*", b.strip()):
-                c.html.append(f'<p class="subtitulo">{enlinea(b.strip()[1:-1])}</p>')
+                # El sumario también puede traer llamadas (la traducción de un latín).
+                sumario = re.sub(r"\s*\[\^(\w+)\]", llamada, enlinea(b.strip()[1:-1]))
+                c.html.append(f'<p class="subtitulo">{sumario}</p>')
             elif len(lineas) > 1:
                 c.html.append(f'<p class="verso">{cuerpo}</p>')
             elif unir:
