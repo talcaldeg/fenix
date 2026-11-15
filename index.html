@@ -3218,10 +3218,36 @@ function iniciar(){
     el.innerHTML = `<p class="eyebrow" style="margin:0">${esc(t("cit.dia"))}</p><p class="txt">${esc(c)}</p>
       <div style="display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap; align-items:baseline"><span class="de">${esc(l.autor)}, <i>${esc(l.titulo)}</i></span><span class="ir">${esc(t("cit.verLibro"))}</span></div>`;
   }
+  // Sección Citas: orden al azar en cada visita (con semilla fija mientras dura la página, para que
+  // el orden no salte al escribir en el buscador) y nunca dos citas seguidas del mismo libro, si se
+  // puede. En cada paso se sortea el libro, pesado por las citas que le quedan, entre los que no son
+  // el anterior y no dejan el resto imposible de intercalar.
+  const semillaCitas = (Math.random() * 2 ** 32) >>> 0;
+  function desordenarCitas(xs){
+    let s = semillaCitas;
+    const azar = () => { s = (s + 0x6D2B79F5) >>> 0; let x = Math.imul(s ^ (s >>> 15), 1 | s); x ^= x + Math.imul(x ^ (x >>> 7), 61 | x); return ((x ^ (x >>> 14)) >>> 0) / 4294967296; };
+    const g = new Map(); xs.forEach(x => { if (!g.has(x.l)) g.set(x.l, []); g.get(x.l).push(x); });
+    const grupos = [...g.values()];
+    grupos.forEach(a => { for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(azar() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } });
+    const r = []; let previo = null, quedan = xs.length;
+    while (quedan) {
+      const vivos = grupos.filter(a => a.length);
+      // Tras sacar uno de «a», el resto (quedan - 1) se puede intercalar si ningún libro pasa de la mitad
+      // (y «a», que queda como anterior, tampoco puede abrir lo que sigue).
+      const sirve = a => vivos.every(b => { const n = b === a ? b.length - 1 : b.length; return b === a ? 2 * n <= quedan - 1 : 2 * n <= quedan; });
+      let cand = vivos.filter(a => a !== previo && sirve(a));
+      if (!cand.length) cand = vivos.filter(a => a !== previo);
+      if (!cand.length) cand = vivos;
+      let tiro = azar() * cand.reduce((m, a) => m + a.length, 0), elegido = cand[cand.length - 1];
+      for (const a of cand) { tiro -= a.length; if (tiro < 0) { elegido = a; break; } }
+      r.push(elegido.pop()); previo = elegido; quedan--;
+    }
+    return r;
+  }
   function pintarCitas(){
     const sin = s => s.toLowerCase().normalize("NFD").replace(/\p{Diacritic}/gu, "");
     const q = sin($("#cBuscar").value.trim()), cat = $("#cCategoria").value;
-    const cs = citas().filter(({ c, l }) => (!cat || l.categoria === cat) && (!q || sin(c + " " + l.titulo + " " + l.autor).includes(q)));
+    const cs = desordenarCitas(citas().filter(({ c, l }) => (!cat || l.categoria === cat) && (!q || sin(c + " " + l.titulo + " " + l.autor).includes(q))));
     $("#cCuenta").textContent = cs.length === 1 ? t("cit.cuenta1") : t("cit.cuenta").replace("{n}", cs.length);
     $("#listaCitas").innerHTML = cs.map(({ c, l }) => `<a class="cita" role="listitem" href="${esc(rutaLibro(l))}">${miniatura(l)}
       <blockquote>${esc(c)}<cite>${esc(l.autor)}, ${esc(l.titulo)}</cite></blockquote></a>`).join("");
