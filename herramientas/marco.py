@@ -109,8 +109,9 @@ def lineas_equilibradas(texto, tam, ancho, max_lineas, estilo="bd", espaciado=0.
 
 def bloque(texto, tam, ancho, max_lineas, alto_max, estilo="bd", espaciado=0.0, interlinea=1.1, minimo=0.45):
     """Achica la letra hasta que el texto quepa en ancho, líneas y alto. Devuelve (lineas, tam).
-    Primero busca, achicando hasta un 75 %, un corte sin palabras colgando; si no hay, acepta el feo."""
-    for aceptar_feo, piso in ((False, 0.75), (True, minimo)):
+    Primero busca, achicando hasta un 70 %, un corte sin palabras colgando; si no hay, acepta el feo
+    (con 75 % «Visitas al Santísimo Sacramento y a María Santísima» quedaba con «Y A» colgando)."""
+    for aceptar_feo, piso in ((False, 0.70), (True, minimo)):
         t = tam
         while t >= tam * piso:
             ls = lineas_equilibradas(texto, t, ancho, max_lineas, estilo, espaciado, aceptar_feo)
