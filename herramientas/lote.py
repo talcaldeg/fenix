@@ -2,7 +2,7 @@
 Lote de encuadernadores en dos comandos, para que recibirlo cueste ~6 llamadas y no 30.
 
     python herramientas/lote.py recibir      copia lote-AAAAMMDD + recibir_entrega.py --gmail en ella
-    python herramientas/lote.py publicar     publica, IndexNow, enlaces de Search Console y cierra
+    python herramientas/lote.py publicar     publica, IndexNow, pide la indexación en Google y cierra
     (--tema <nombre> para otra copia que la del día)
 
 Entre uno y otro queda solo lo que no se mide: mirar la hoja de contacto y auditar-teologia sobre
@@ -31,7 +31,9 @@ def nuevos(ruta):
     st = git("status", "--porcelain", "-uall", "--", "libros", "libro", cwd=ruta).stdout.splitlines()
     sin = [l[3:].strip() for l in st if l.startswith("??")]
     ids = [os.path.basename(p)[:-5] for p in sin if p.startswith("libros/") and p.endswith(".epub")]
-    paginas = ["fenix/" + p[: -len("index.html")] for p in sin if p.startswith("libro/") and p.endswith("/index.html")]
+    # Las muestras llevan noindex: Google rechaza su indexación (16-nov-2026).
+    paginas = ["fenix/" + p[: -len("index.html")] for p in sin
+               if p.startswith("libro/") and p.endswith("/index.html") and "/muestra/" not in p]
     return ids, paginas
 
 
@@ -52,8 +54,9 @@ def main():
     subprocess.run(["node", os.path.join("herramientas", "indexnow.js")], cwd=ruta)
     if paginas:
         ingresos = next(p / "ingresos" for p in __import__("pathlib").Path(RAIZ).parents if (p / "ingresos").is_dir())
-        print("\nSearch Console (pedir indexación):")
-        subprocess.run([PY, str(ingresos / "search_console.py"), "enlaces", *paginas])
+        # Aprieta «Solicitar indexación» con Chrome invisible (sesión guardada); sin clics de nadie.
+        print("\nSearch Console (solicitar indexación):")
+        subprocess.run([PY, str(ingresos / "solicitar_indexacion.py"), *paginas])
     cerrar(a.tema)
 
 
