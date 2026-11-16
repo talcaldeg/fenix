@@ -1037,6 +1037,309 @@ window.FENIX = {
       parecidos: ["conocerle-y-conocerte", "para-mi-vivir-es-cristo", "santos-evangelios-navarra"]
     },
     {
+      id: "companeros-de-camino",
+      titulo: "Compañeros de Camino",
+      autor: "Javier Medina Bayo y Michele Dolz",
+      anio: "2017",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: true,
+      resumen: {
+        es: "Relatos de lectores de «Camino», de san Josemaría, enviados a la Oficina de las Causas de los Santos de la Prelatura del Opus Dei en Roma; los autores omitieron los apellidos y, en algunos casos, cambiaron los nombres de pila. Los testimonios se agrupan por temas: la amistad con Cristo, las obras, el apostolado, el trabajo, la familia, la educación, el dolor y la confianza en Dios. Abre con una presentación del autor de «Camino» y una breve historia del libro, y cierra con la invitación a volver a meditarlo.",
+        en: "Accounts by readers of «The Way», by Saint Josemaría, sent to the Office for the Causes of Saints of the Prelature of Opus Dei in Rome; the authors left out surnames and, in some cases, changed first names. The testimonies are grouped by theme: friendship with Christ, deeds, apostolate, work, family, education, suffering and trust in God. The book opens with an introduction to the author of «The Way» and a short history of the book, and closes with an invitation to go back and meditate on it."
+      },
+      porque: {"es":"Para quien ha leído «Camino» y quiere ver qué ha hecho en otros lectores, o para quien aún no lo conoce y busca por dónde empezar. Los relatos son breves y se pueden leer sueltos, según el tema que interese. Sirve también para leer «Camino» de a poco, como propone el cierre: no por leer, sino para meditar.","en":"For anyone who has read «The Way» and wants to see what it has done in other readers, or who does not yet know it and is looking for a way in. The accounts are short and can be read separately, according to the theme of interest. It also helps to read «The Way» slowly, as the closing chapter suggests: not for the sake of reading, but to meditate."},
+      imagen: { src: "img/portadas/companeros-de-camino.jpg", credito: { es: "Caravaggio, «La cena de Emaús», 1601", en: "Caravaggio, «The Supper at Emmaus», 1601" }, url: "https://commons.wikimedia.org/wiki/File:Supper_at_Emmaus-Caravaggio_(1601).jpg" },
+      citas: [
+        "Este que tienes en las manos es un libro imposible.",
+        "Se querría contar el bien que Camino ha hecho y sigue haciendo a las almas, a millares de almas.",
+        "Meditando sus consejos, uno termina haciéndose amigo del autor.",
+        "Camino era para todos, en todas partes.",
+        "No se trata de leer por leer, sino de profundizar en los textos que transmiten sabiduría verdadera, de un modo o de otro."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/companerosdecamino.epub" }
+      ],
+      fuente: { texto: "Edición gratuita de la Fundación Studium en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es/article/libro-electronico-companeros-de-camino/" },
+      delibris: {valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/companeros-de-camino"},
+      parecidos: ["escriva-camino", "conocerle-y-conocerte", "a-la-luz-del-evangelio"]
+    },
+
+    {
+      id: "amor-humano-y-vida-cristiana",
+      titulo: "Amor humano y vida cristiana",
+      autor: "José Manuel Martín Q. (ed.)",
+      anio: "2016",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Veinte artículos breves sobre el amor en el noviazgo y en el matrimonio, escritos por personas con años de reflexión y de experiencia en la vida de familia, a la luz del magisterio reciente y de las enseñanzas de san Josemaría. Siguen un orden: noviazgo y enamoramiento, el matrimonio como vocación, los primeros años, el hogar, la conciliación entre trabajo y familia, las dificultades, la intimidad conyugal, la paternidad responsable y el paso del tiempo.",
+        en: "Twenty short articles on love in courtship and in marriage, written by people with years of reflection on, and experience of, family life, in the light of recent Church teaching and the teachings of Saint Josemaría. They follow an order: courtship and falling in love, marriage as a vocation, the first years, the home, reconciling work and family, difficulties, conjugal intimacy, responsible parenthood and the passing of time."
+      },
+      porque: {"es":"Para novios que se preparan al matrimonio y para matrimonios de cualquier edad. Cada artículo es independiente, de modo que se puede leer por orden o ir al tema que hoy hace falta, como las dificultades o los primeros años. Su tono práctico sirve también a quien acompaña a otros en esta etapa.","en":"For couples preparing for marriage and for married couples of any age. Each article stands on its own, so it can be read in order or one can go to the topic needed today, such as difficulties or the first years. Its practical tone also helps those who accompany others at this stage."},
+      imagen: { src: "img/portadas/amor-humano-y-vida-cristiana.jpg", credito: { es: "Jan van Eyck, «El matrimonio Arnolfini», 1434", en: "Jan van Eyck, «The Arnolfini Portrait», 1434" }, url: "https://commons.wikimedia.org/wiki/File:Van_Eyck_-_Arnolfini_Portrait.jpg" },
+      citas: [
+        "De la misma manera que el matrimonio es una llamada a la entrega incondicional, el noviazgo ha de considerarse como un tiempo de discernimiento para que los novios se conozcan y decidan dar el siguiente paso, entregarse el uno al otro para siempre.",
+        "Hay alguien real ante nosotros y se inaugura una apasionante tarea: el descubrimiento gradual del otro",
+        "Nadie se casa para separarse. Nadie trae un hijo al mundo para hacerlo infeliz.",
+        "La familia es una célula abierta al servicio de la sociedad, no es una institución cerrada, lejana y de ámbito estrictamente privado",
+        "La tarea de amar, que es una liberalidad, es también un arte que sugiere un programa para la vida entera."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/amorhumano.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/pdf/es/amorhumano.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es/article/libro-electronico-amor-humano-y-vida-cristiana/" },
+      delibris: null,
+      parecidos: ["escriva-conversaciones", "escriva-amigos-de-dios", "para-mi-vivir-es-cristo"]
+    },
+
+    {
+      id: "el-tiempo-de-una-presencia",
+      titulo: "El tiempo de una presencia",
+      autor: "Juan José Silvestre (ed.)",
+      anio: "2017",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Doce textos sobre el año litúrgico en la vida de los cristianos, publicados antes en opusdei.org: Adviento, Navidad, Cuaresma, Semana Santa, Pascua, el domingo y el Tiempo ordinario, las fiestas del Señor, santa María, los santos, el canto y la música en la liturgia, y un epílogo sobre la oración con toda la Iglesia. El título viene de una frase de Benedicto XVI: la historia es «el tiempo de una presencia».",
+        en: "Twelve texts on the liturgical year in the life of Christians, first published on opusdei.org: Advent, Christmas, Lent, Holy Week, Easter, Sunday and Ordinary Time, the feasts of the Lord, Saint Mary, the saints, song and music in the liturgy, and an epilogue on praying with the whole Church. The title comes from a phrase of Benedict XVI: history is «the time of a presence»."
+      },
+      porque: {"es":"Para quien quiere vivir cada tiempo litúrgico con más conciencia, sobre todo la Misa del domingo y las fiestas principales. Los capítulos siguen el orden del calendario, así que conviene leer el que corresponde al tiempo en curso. Es una buena compañía para preparar el Adviento, la Cuaresma o la Pascua.","en":"For anyone who wants to live each liturgical season with greater awareness, above all Sunday Mass and the main feasts. The chapters follow the order of the calendar, so it is best to read the one that matches the current season. A good companion for preparing Advent, Lent or Easter."},
+      imagen: { src: "img/portadas/el-tiempo-de-una-presencia.jpg", credito: { es: "Hermanos de Limbourg, «Anuncio a los pastores», c. 1412-1416 (Las muy ricas horas del duque de Berry)", en: "Limbourg brothers, «The Annunciation to the Shepherds», c. 1412-1416 (Très Riches Heures du duc de Berry)" }, url: "https://commons.wikimedia.org/wiki/File:Folio_48r_-_The_Annunciation_to_the_Shepherds.jpg" },
+      citas: [
+        "En la liturgia Dios se hace presente entre nosotros y realiza nuestra salvación de un modo misterioso pero real: tan real como cuando Cristo era visible sobre la tierra.",
+        "El Señor no se ha retirado del mundo, no nos ha dejado solos.",
+        "En el concierto de la historia, cada santo toca un instrumento distinto.",
+        "En cada celebración eucarística está toda la Iglesia, cielos y tierra, Dios y los hombres."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/tiempo-presencia.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/pdf/es/tiempo-presencia.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-es/article/libro-electronico-el-tiempo-de-una-presencia-ano-liturgico/" },
+      delibris: null,
+      parecidos: ["escriva-es-cristo-que-pasa", "de-la-eucaristia-a-la-trinidad", "escriva-santo-rosario"]
+    },
+
+    {
+      id: "en-las-manos-de-dios",
+      titulo: "En las manos de Dios",
+      autor: "Oficina de Información del Opus Dei",
+      anio: "2017",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Ocho textos sobre figuras de la Biblia que muestran, cada una con un rasgo distinto, qué es la fe: Abraham, Moisés, David, Elías, María, el centurión, san Pedro, y Marta y María. Nacieron como artículos de opusdei.org durante el Año de la fe (2012-2013), para facilitar la oración personal sobre esta virtud. Unen el relato bíblico con textos de san Josemaría, del Catecismo y de los papas Benedicto XVI y Francisco.",
+        en: "Eight texts on figures of the Bible who show, each in a different way, what faith is: Abraham, Moses, David, Elijah, Mary, the centurion, Saint Peter, and Martha and Mary. They began as articles on opusdei.org during the Year of Faith (2012-2013), to help personal prayer on this virtue. They join the biblical account with texts of Saint Josemaría, the Catechism and Popes Benedict XVI and Francis."
+      },
+      porque: {"es":"Para quien quiere rezar con la Biblia y no sabe cómo meditar un pasaje largo. Cada capítulo toma un personaje y un aspecto de la fe, y puede servir de material para varios ratos de oración. Sirve también como introducción a las grandes figuras del Antiguo y del Nuevo Testamento.","en":"For anyone who wants to pray with the Bible and does not know how to meditate on a long passage. Each chapter takes a character and an aspect of faith, and can provide material for several periods of prayer. It also serves as an introduction to the great figures of the Old and New Testaments."},
+      imagen: { src: "img/portadas/en-las-manos-de-dios.jpg", credito: { es: "Rembrandt, «Moisés con las tablas de la Ley», 1659", en: "Rembrandt, «Moses with the Ten Commandments», 1659" }, url: "https://commons.wikimedia.org/wiki/File:Rembrandt_-_Moses_with_the_Ten_Commandments_-_Google_Art_Project.jpg" },
+      citas: [
+        "La respuesta de fe se apoya en la confianza, es decir, en un trato personal con Dios.",
+        "Tener fe y comprometerse con Dios a vivir con una misión apostólica son caras de la misma moneda.",
+        "Marta creyó en Jesús. Le abrió no solo las puertas de su vivienda, sino las de su corazón.",
+        "La fe es abrir las puertas a Cristo, hospedarle en la propia casa, compartir la mesa con él, dejar que entre hasta lo más íntimo del alma.",
+        "Abraham se fía de Dios, de su omnipotencia, de su sabiduría y bondad."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/en-las-manos-de-dios.epub" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-es/article/libro-electronico-en-las-manos-de-dios/" },
+      delibris: null,
+      parecidos: ["santos-evangelios-navarra", "a-la-luz-del-evangelio", "escriva-forja"]
+    },
+
+    {
+      id: "nuevos-mediterraneos",
+      titulo: "Nuevos Mediterráneos",
+      autor: "Lucas Buch",
+      anio: "2018",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Cinco capítulos, un interludio y un epílogo sobre los descubrimientos que hizo en su vida interior san Josemaría Escrivá siendo joven sacerdote, a los que llamaba «Mediterráneos»: verdades muy sabidas que de pronto se perciben con una profundidad nueva. Recorren la filiación divina, la Cruz como identificación con Cristo, la amistad con Jesús, las Llagas del Resucitado, el trato con el Espíritu Santo y el camino «a Jesús, por María». Cada capítulo parte de escenas del Evangelio y de textos del santo, sobre todo de «Forja» y «Es Cristo que pasa».",
+        en: "Five chapters, an interlude and an epilogue on the discoveries Saint Josemaría Escrivá made in his interior life as a young priest, which he called «Mediterraneans»: well-known truths that suddenly are perceived with a new depth. They cover divine filiation, the Cross as identification with Christ, friendship with Jesus, the Wounds of the Risen One, dealing with the Holy Spirit and the way «to Jesus, through Mary». Each chapter starts from scenes of the Gospel and from texts by the saint, above all from «The Forge» and «Christ Is Passing By»."
+      },
+      porque: {"es":"Para quien conoce lo básico de la fe y quiere hallar una hondura nueva en su oración: ser hijo de Dios, la amistad con Jesús, el Espíritu Santo, María. Se lee un capítulo cada vez y se vuelve a él, porque el propio libro propone meditar muchas veces los mismos argumentos hasta descubrir «un nuevo Mediterráneo». Sirve también como introducción a la vida espiritual de san Josemaría.","en":"For anyone who knows the basics of the faith and wants to find a new depth in their prayer: being a child of God, friendship with Jesus, the Holy Spirit, Mary. One chapter can be read at a time and returned to, since the book itself proposes meditating many times on the same arguments until one discovers «a new Mediterranean». It also serves as an introduction to the spiritual life of Saint Josemaría."},
+      imagen: { src: "img/portadas/nuevos-mediterraneos.jpg", credito: { es: "Eugène Delacroix, «Cristo en el mar de Galilea», 1854", en: "Eugène Delacroix, «Christ on the Sea of Galilee», 1854" }, url: "https://commons.wikimedia.org/wiki/File:Eug%C3%A8ne_Delacroix_-_Christ_on_the_Sea_of_Galilee_-_Google_Art_Project_(27796212).jpg" },
+      citas: [
+        "La vida de los santos es una luz que ilumina el camino de nuestras vidas cuando cae la noche.",
+        "Por el Amor que nos tiene, Jesús nos hace amigos suyos.",
+        "El Don de Dios, la Salvación que recibimos, no es una cosa, sino una Persona.",
+        "Jesús no es solo el Unigénito del Padre, sino también el Primogénito de muchos hermanos (cfr. Rm 8,29; Col 1,15).",
+        "Desde ese momento, María es Madre de los cristianos."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/mediterraneos.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/pdf/es/mediterraneos.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es/article/libro-electronico-nuevos-mediterraneos/" },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/nuevos-mediterraneos" },
+      parecidos: ["escriva-forja", "escriva-es-cristo-que-pasa", "conocerle-y-conocerte"]
+    },
+
+    {
+      id: "maria-una-vida-junto-a-jesus",
+      titulo: "María, una vida junto a Jesús",
+      autor: "José Antonio Loarte",
+      anio: "2015",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Veinte escenas de la vida de la Virgen María narradas a partir de los Evangelios y de la tradición de la Iglesia, desde la Inmaculada Concepción y la Natividad de la Virgen hasta la Dormición, la Asunción y su realeza, pasando por la Anunciación, el nacimiento de Jesús, los años de Nazaret, Caná, la Cruz y Pentecostés. El autor se apoya en la mariología posterior al Concilio Vaticano II y escribe en un lenguaje accesible a todos. La edición digital no incluye los textos de Padres de la Iglesia, santos y poetas que acompañan cada escena en el libro en papel de la editorial Palabra.",
+        en: "Twenty scenes from the life of the Virgin Mary told from the Gospels and the tradition of the Church, from the Immaculate Conception and the Nativity of the Virgin to the Dormition, the Assumption and her queenship, passing through the Annunciation, the birth of Jesus, the years in Nazareth, Cana, the Cross and Pentecost. The author draws on the Mariology that followed the Second Vatican Council and writes in language accessible to everyone. The digital edition does not include the texts of Fathers of the Church, saints and poets that accompany each scene in the paper book from the publisher Palabra."
+      },
+      porque: {"es":"Para quien quiere conocer a la Virgen más allá de las imágenes de devoción: lo que dicen de Ella los Evangelios y cómo la tradición y los estudios recientes lo han entendido. Cada escena se lee en pocos minutos, y sirve para acompañar el rosario o preparar una fiesta de la Virgen. Resulta útil también para catequistas y grupos de lectura.","en":"For anyone who wants to know the Virgin beyond devotional images: what the Gospels say of her and how tradition and recent studies have understood it. Each scene can be read in a few minutes, and serves to accompany the rosary or to prepare a feast of the Virgin. It is also useful for catechists and reading groups."},
+      imagen: { src: "img/portadas/maria-una-vida-junto-a-jesus.jpg", credito: { es: "Henry Ossawa Tanner, «La Anunciación», 1898", en: "Henry Ossawa Tanner, «The Annunciation», 1898" }, url: "https://commons.wikimedia.org/wiki/File:The_Annunciation,_Philadelphia_Museum_of_Art,_W1899-1-1-pma,_by_Henry_Ossawa_Tanner.jpg" },
+      citas: [
+        "La historia del hombre sobre la tierra es la historia de la misericordia de Dios.",
+        "El diálogo más importante de la historia tuvo lugar en el interior de una pobre casa de Nazaret.",
+        "Mil tareas domésticas que María realizaba como las demás mujeres de la aldea, pero con un inmenso amor.",
+        "María, al contrario de todos los demás, creía firmemente en la palabra de su Hijo, que había predicho su resurrección de entre los muertos al tercer día.",
+        "Ser Madre de Dios y Madre de los hombres es el fundamento sólido de la filial confianza en su intercesión poderosa, que nos conforta y nos impulsa a levantarnos de nuestras caídas."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/maria.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/pdf/es/maria-vida.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-es/article/ebook-maria-una-vida-junto-a-jesus/" },
+      delibris: null,
+      parecidos: ["santos-evangelios-navarra", "ligorio-visitas-al-santisimo-sacramento-y-a-maria-santisima", "escriva-santo-rosario"]
+    },
+
+    {
+      id: "trabajar-bien-trabajar-por-amor",
+      titulo: "Trabajar bien, trabajar por amor",
+      autor: "Javier López Díaz",
+      anio: "2016",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Diecisiete textos breves sobre la santificación del trabajo profesional en las enseñanzas de san Josemaría Escrivá: el motivo sobrenatural del trabajo, trabajar a conciencia, trabajo y contemplación, el descanso, la cruz y la resurrección en la tarea diaria, la unidad de vida, el prestigio profesional, el trabajo y la familia. Aparecieron antes como artículos en la página web del Opus Dei y se reunieron en este libro en 2016. Cada uno se puede leer por separado.",
+        en: "Seventeen short texts on the sanctification of professional work in the teachings of Saint Josemaría Escrivá: the supernatural motive of work, working conscientiously, work and contemplation, rest, the cross and the resurrection in daily tasks, unity of life, professional prestige, work and family. They first appeared as articles on the Opus Dei website and were gathered into this book in 2016. Each one can be read on its own."
+      },
+      porque: {"es":"Para quien trabaja y busca darle un sentido que no dependa de las ganas ni de los resultados: servir, hacer las cosas bien y hacerlas por amor. Los textos son breves y se leen por separado, según la pregunta del día: el cansancio, el descanso, la familia o el prestigio. Sirve también para conversar sobre el trabajo en un grupo.","en":"For anyone who works and seeks a meaning for it that does not depend on mood or results: serving, doing things well and doing them out of love. The texts are short and can be read separately, according to the question of the day: tiredness, rest, family or prestige. It also serves for discussing work in a group."},
+      imagen: { src: "img/portadas/trabajar-bien-trabajar-por-amor.jpg", credito: { es: "Georges de La Tour, «San José carpintero», c. 1642-1644", en: "Georges de La Tour, «Saint Joseph the Carpenter», c. 1642-1644" }, url: "https://commons.wikimedia.org/wiki/File:La_Tour_-_Saint_Joseph_charpentier,_vers_1642_-_1644,_RF_1948_27.jpg" },
+      citas: [
+        "Las circunstancias de la vida ordinaria no son obstáculo, sino materia y camino de santificación.",
+        "Es la hora de recordar que el fin de nuestra vida no es hacer cosas sino amar a Dios.",
+        "Es el amor de Dios el que da unidad, pone orden en el corazón, enseña cuáles son las prioridades.",
+        "La santificación del trabajo profesional reclama que lo realicemos con perfección, por amor a Dios, y que esa perfección por amor sea luz que atraiga hacia Dios a quienes nos rodean.",
+        "Hombres y mujeres que trabajaban con horizontes sólo terrenos, de dos dimensiones, se entusiasman al saber que su tarea profesional puede adquirir una tercera dimensión, trascendente, que da relieve de eternidad a la vida cotidiana."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/trabajar-bien.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://odnmedia.s3.amazonaws.com/files/Trabajarbien20160719-113408.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei y Edizioni Santa Croce en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es/article/trabajar-bien-trabajar-por-amor/" },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/trabajar-bien-trabajar-por-amor" },
+      parecidos: ["escriva-amigos-de-dios", "escriva-surco", "escriva-es-cristo-que-pasa"]
+    },
+
+    {
+      id: "rezar-con-alvaro-del-portillo",
+      titulo: "Rezar con Álvaro del Portillo",
+      autor: "Álvaro del Portillo (selección de José Antonio Loarte)",
+      anio: "2015",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Antología de textos de Álvaro del Portillo, sucesor de san Josemaría al frente del Opus Dei, tomados de sus homilías, meditaciones, cartas pastorales y entrevistas. Están ordenados en cinco partes: la llamada de todos a la santidad, la lucha por alcanzarla, los medios (la Confesión, la Eucaristía, la oración y la mortificación, las virtudes, el trabajo y la Virgen María), la Iglesia y el apostolado. Cada texto va numerado y con su fuente, y se ofrece como materia breve para meditar. La selección es de José Antonio Loarte y la edición en papel apareció meses antes de la beatificación de Álvaro del Portillo, en 2014.",
+        en: "An anthology of texts by Álvaro del Portillo, successor of Saint Josemaría at the head of Opus Dei, taken from his homilies, meditations, pastoral letters and interviews. They are arranged in five parts: the call of all to holiness, the struggle to attain it, the means (Confession, the Eucharist, prayer and mortification, the virtues, work and the Virgin Mary), the Church and apostolate. Each text is numbered and gives its source, and is offered as brief material for meditation. The selection is by José Antonio Loarte, and the paper edition appeared months before the beatification of Álvaro del Portillo, in 2014."
+      },
+      porque: {"es":"Para quien busca textos breves y numerados para la oración personal, con la mirada puesta en la santidad en medio de la vida corriente. Se puede leer un número al día o ir al apartado que hace falta, gracias al índice por temas. Sirve también para conocer la enseñanza de don Álvaro, que repite y aplica la de san Josemaría.","en":"For anyone looking for brief, numbered texts for personal prayer, with an eye on holiness in the midst of ordinary life. One can read a number a day or go straight to the section that is needed, thanks to the index by topic. It is also useful for getting to know the teaching of don Álvaro, who repeats and applies that of Saint Josemaría."},
+      imagen: { src: "img/portadas/rezar-con-alvaro-del-portillo.jpg", credito: { es: "Carl Bloch, «Cristo en Getsemaní», 1873", en: "Carl Bloch, «Christ in Gethsemane», 1873" }, url: "https://commons.wikimedia.org/wiki/File:Carl_Heinrich_Bloch_-_Gethsemane.jpg" },
+      citas: [
+        "Esforzaos por conocer más y más al Señor: no os conforméis con un trato superficial.",
+        "Tened hambre de ver el rostro de Jesús.",
+        "Cristo nos pide que seamos cristianos en cada momento, en cada ambiente.",
+        "Jesús, creciendo y actuando como uno de nosotros, nos revela que la existencia humana, el quehacer corriente y ordinario, adquiere un sentido divino.",
+        "No es propio de un cristiano encerrarse en sí mismo y despreocuparse de las personas que tiene alrededor."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/rezar-alvaro.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://odnmedia.s3.amazonaws.com/files/RezarconAlvarodelPortillo_Cobel20150310-092908.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei, con Cobel Ediciones y la Fundación Studium, en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-es/article/rezar-con-alvaro-del-portillo-libro-electronico-gratuito/" },
+      delibris: { valor: 6, genero: "Espiritualidad", url: "https://delibris.org/es/rezar-con-alvaro-del-portillo" },
+      parecidos: ["conocerle-y-conocerte", "presencia-de-dios", "escriva-en-dialogo-con-el-senor"]
+    },
+
+    {
+      id: "letras-a-un-santo",
+      titulo: "Letras a un santo",
+      autor: "Guadalupe Ortiz de Landázuri (edición de María del Rincón y María Teresa Escobar)",
+      anio: "2018",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Selección de pasajes de las más de trescientas cartas que la beata Guadalupe Ortiz de Landázuri, profesora de Química, escribió a san Josemaría Escrivá entre 1944 y 1975. Están agrupados en cinco capítulos: la santidad en la vida ordinaria, el trato enamorado con Dios, la alegría del apóstol, el trabajo para Dios y el camino y la misión. Llevan una carta al lector, una breve semblanza de Guadalupe, una cronología y notas que explican personas y expresiones de la época. Las editoras los presentan como un material que ayude a rezar.",
+        en: "A selection of passages from the more than three hundred letters that Blessed Guadalupe Ortiz de Landázuri, a Chemistry teacher, wrote to Saint Josemaría Escrivá between 1944 and 1975. They are grouped in five chapters: holiness in ordinary life, a loving dealing with God, the joy of the apostle, work for God, and the way and the mission. They come with a letter to the reader, a short biographical sketch of Guadalupe, a chronology and notes explaining people and expressions of the time. The editors present them as material to help prayer."
+      },
+      porque: {"es":"Para quien quiere ver cómo se vive la santidad en medio del trabajo, la casa y los problemas de cada día, contada sin retoques por quien la vivía. Los fragmentos son breves y se prestan para leerlos como material de oración, de uno en uno. La semblanza y la cronología del comienzo ayudan a ubicar cada carta.","en":"For anyone who wants to see how holiness is lived amid work, home and the problems of each day, told without retouching by the one who lived it. The fragments are short and lend themselves to being read as material for prayer, one at a time. The sketch and the chronology at the beginning help to place each letter."},
+      imagen: { src: "img/portadas/letras-a-un-santo.jpg", credito: { es: "Gerard ter Borch, «Mujer escribiendo una carta», c. 1655", en: "Gerard ter Borch, «Woman Writing a Letter», c. 1655" }, url: "https://commons.wikimedia.org/wiki/File:Gerard_ter_Borch_-_Woman_Writing_a_Letter_-_797_-_Mauritshuis.jpg" },
+      citas: [
+        "Los pies en la tierra pero mirando siempre (cada ratito) al Cielo, para ver luego más claro lo que pasa junto a nosotros.",
+        "Todo lo que me preocupa se lo digo y me quedo más tranquila.",
+        "La presencia de Dios hace maravillas. ¡Cómo se nota!",
+        "Pero no me desanimo ni me asusto, sólo le pido una oración para que nunca, en nada, por pequeño o grande que sea, deje de hacer lo que Dios quiere.",
+        "Lo mismo en la oración, que en las cartas que le escribo a usted, que al hablar con don Pedro, me vacío de todo lo que me preocupa y me siento ligera para coger todo lo que el Señor ponga sobre mí"
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/letras-a-un-santo.epub" },
+        { formato: "pdf", texto: "opusdei.org", url: "https://multimedia.opusdei.org/pdf/es/letras-a-un-santo.pdf" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei en opusdei.org (obra protegida por derechos de autor)", url: "https://opusdei.org/es-es/article/libro-cartas-guadalupe-ortiz-landazuri-josemaria-escriva-balaguer/" },
+      delibris: { valor: 6, genero: "Espiritualidad", url: "https://delibris.org/es/letras-un-santo" },
+      parecidos: ["para-mi-vivir-es-cristo", "conocerle-y-conocerte", "escriva-amigos-de-dios"]
+    },
+
+    {
+      id: "50-preguntas-sobre-jesus",
+      titulo: "50 preguntas sobre Jesús",
+      autor: "Juan Chapa (ed.)",
+      anio: "2012",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Cincuenta respuestas breves, de profesores del Departamento de Sagrada Escritura de la Facultad de Teología de la Universidad de Navarra, a preguntas históricas sobre Jesús y los orígenes del cristianismo: qué se sabe de Él, su nacimiento, los apóstoles, María Magdalena, la Última Cena, su muerte y resurrección, los evangelios canónicos y los apócrifos, los gnósticos, Qumrán y Nag-Hammadi, Constantino y el Concilio de Nicea. Una presentación explica el propósito y el libro termina con una bibliografía selecta por apartados.",
+        en: "Fifty short answers, by professors of the Department of Sacred Scripture of the Faculty of Theology of the University of Navarre, to historical questions about Jesus and the origins of Christianity: what is known about Him, His birth, the apostles, Mary Magdalene, the Last Supper, His death and resurrection, the canonical and apocryphal gospels, the Gnostics, Qumran and Nag Hammadi, Constantine and the Council of Nicaea. A presentation explains the purpose and the book ends with a select bibliography by section."
+      },
+      porque: {"es":"Para quien se topa con dudas o con afirmaciones sensacionalistas sobre Jesús y quiere datos históricos concretos y contrastables, sin ser especialista. Se lee por preguntas sueltas, sin orden obligado, y la bibliografía final permite profundizar en cada tema. Es también un material de apoyo para conversar con quien duda o busca.","en":"For anyone who runs into doubts or sensationalist claims about Jesus and wants concrete, verifiable historical facts, without being a specialist. It is read by individual questions, in no required order, and the final bibliography allows going deeper into each topic. It is also supporting material for talking with someone who doubts or is searching."},
+      imagen: { src: "img/portadas/50-preguntas-sobre-jesus.jpg", credito: { es: "Caravaggio, «La incredulidad de santo Tomás», c. 1601-1602", en: "Caravaggio, «The Incredulity of Saint Thomas», c. 1601-1602" }, url: "https://commons.wikimedia.org/wiki/File:The_Incredulity_of_Saint_Thomas-Caravaggio_(1601-2).jpg" },
+      citas: [
+        "De Jesús de Nazaret tenemos más y mejor información que de la mayoría de los personajes de su tiempo.",
+        "Los datos que hay en los evangelios apócrifos y otras referencias extrabíblicas no aportan nada sustancial a la información que nos ofrecen los evangelios de Mateo, Marcos, Lucas y Juan; más bien, la confirman.",
+        "La resurrección de Jesucristo es un acontecimiento real que tuvo manifestaciones históricamente comprobadas."
+      ],
+      archivos: {},
+      externos: [
+        { formato: "epub", texto: "opusdei.org", url: "https://multimedia.opusdei.org/epub/es/50preguntasJC.epub" }
+      ],
+      fuente: { texto: "Edición gratuita de la Oficina de Información del Opus Dei en opusdei.org, con la edición en papel de Ediciones Rialp (obra protegida por derechos de autor)", url: "https://opusdei.org/es-es/article/jesucristo-y-la-iglesia/" },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://delibris.org/es/50-preguntas-sobre-jesus" },
+      parecidos: ["tardif-jesus-esta-vivo", "escriva-es-cristo-que-pasa", "unirse-a-jesus"]
+    },
+    {
       id: "santos-evangelios-navarra",
       titulo: "Santos Evangelios",
       autor: "Facultad de Teología de la Universidad de Navarra",
