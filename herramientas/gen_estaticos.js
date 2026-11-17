@@ -253,6 +253,7 @@ const ESTILO = `
   .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px system-ui,sans-serif; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
   .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
+  .sello.exclusivo{background:var(--oro); color:var(--bg); border-color:var(--oro)}
   .aviso{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:6px 0 0}
   .aviso:empty{display:none}
   .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
@@ -469,7 +470,7 @@ ${cabecera(lang, B, otraUrl)}
       ${tieneArchivos && l.idioma === lang ? `<p class="ayuda">${esc(x.ayuda)}</p>` : ""}
     </div>
     <div class="cabeza">
-      ${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
+      ${l.id === D.exclusivoFenix ? `<span class="sello exclusivo">${lang === "en" ? "Only at Fénix" : "Solo en Fénix · Inédito por escrito"}</span> ` : ""}${(D.recomendadosFenix || []).includes(l.id) ? `<span class="sello">✦ ${esc(x.sello)}</span>` : ""}
       <h1>${esc(l.titulo)}<span class="sub">${esc(of.sub)}</span></h1>
       <p class="meta">${esc(l.autor)} · ${esc(l.anio).replace(/ /g, "\u00a0")} · ${urlCat ? `<a href="${urlCat}">${esc(x.cat[l.categoria])}</a>` : esc(x.cat[l.categoria])}</p>${otra ? `
       <p class="meta">${esc(x.tambien)}: <a href="${otraUrl}" hreflang="${otra.idioma}" lang="${otra.idioma}">${esc(otra.titulo)}</a></p>` : ""}${avisoPreventa(l, lang)}

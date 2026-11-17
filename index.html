@@ -1604,6 +1604,17 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .ed p{margin:6px 0 10px; font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
   [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
   .etq.ed-fenix{color:var(--oro); font-weight:600}
+  .etq.exclusivo{background:var(--vino); color:#fff7ea; font-weight:700; letter-spacing:.03em}
+  .exclusivo{margin-top:34px; display:grid; grid-template-columns:150px 1fr; gap:24px; align-items:center; border:2px solid var(--oro); padding:24px}
+  .exclusivo .portada{width:150px; cursor:pointer}
+  .exclusivo h2{margin:6px 0 4px; font-size:30px; line-height:1.15}
+  .exclusivo .eyebrow{margin:0}
+  .exclusivo .por{margin:0 0 10px; color:var(--muted)}
+  .exclusivo .gancho{margin:0 0 12px}
+  .exclusivo blockquote{margin:0 0 14px; padding-left:12px; border-left:3px solid var(--oro); font-style:italic; color:var(--muted)}
+  .exclusivo .acciones{display:flex; gap:10px; flex-wrap:wrap}
+  .exclusivo .datos{margin:10px 0 0; font-size:14px; color:var(--muted)}
+  @media (max-width:600px){.exclusivo{grid-template-columns:1fr; padding:18px} .exclusivo .portada{width:120px} .exclusivo h2{font-size:25px}}
   /* EPUB primero: su etiqueta resalta y lo que no lo tiene queda atenuado y plegado al final del catálogo. */
   .etq.epub{background:var(--acento); color:var(--acento-ink); font-weight:700; letter-spacing:.03em}
   .etq.sello{background:transparent; border:1.5px solid var(--oro); color:var(--oro); font-weight:700; padding:1px 8px; font-size:12.5px; white-space:nowrap}
@@ -2059,6 +2070,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
       </div>
     </div>
     <div class="wrap">
+      <!-- Exclusiva de Fénix (D.exclusivoFenix): la pinta pintarExclusivo(); solo en el idioma del libro. -->
+      <div class="caja exclusivo" id="exclusivo" hidden></div>
       <!-- Campaña de Catapultame: se oculta sola al pasar data-hasta (cierre de la campaña, hora de Chile). -->
       <div class="caja banda campana" id="campana" data-hasta="2026-12-15T02:59:00Z" data-libros="confesiones,historia-de-un-alma,saint-exupery-el-principito,apologia-de-socrates">
         <div>
@@ -2599,12 +2612,12 @@ function iniciar(){
       "f.enviar":"Send","f.libro":"Book","f.libroPh":"Type the title or the author","f.libroVacio":"No matching book. You can send it as written.","f.tipo":"Type of error","f.t1":"Typo or spelling","f.t2":"File will not open or download","f.t3":"Missing or jumbled text","f.t4":"Error in the review or a quote","f.t5":"Doctrinal error","f.t6":"Other",
       "f.donde":"Where? (chapter, page or sentence)","f.descripcion":"Description","f.nombre":"Name","f.correo":"Email","f.mensaje":"Message",
       "pie":"Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
-      "x.leer":"Download","x.hojear":"Look inside: the first pages","x.enLinea":"Read online","x.escuchar":"Listen online","x.audios":"The meditations, to listen to","x.web":"Online","x.comprar":"Buy","x.leido":"Read","x.marcarLeido":"Mark as read","x.quitarLeido":"Mark as not read","x.fav":"Favourite","x.marcarFav":"Add to favourites","x.quitarFav":"Remove from favourites",
+      "x.leer":"Download","x.hojear":"Look inside: the first pages","x.enLinea":"Read online","exc.etq":"Only at Fénix","exc.eyebrow":"Fénix exclusive","exc.por":"","exc.gancho":"","exc.boton":"Download free","exc.datos":"","x.escuchar":"Listen online","x.audios":"The meditations, to listen to","x.web":"Online","x.comprar":"Buy","x.leido":"Read","x.marcarLeido":"Mark as read","x.quitarLeido":"Mark as not read","x.fav":"Favourite","x.marcarFav":"Add to favourites","x.quitarFav":"Remove from favourites",
       "x.porque":"Why read it","x.resumen":"Summary","x.citas":"Quotes","x.parecidos":"Similar books",
       "x.fuente":"Source","x.enviando":"Sending…","x.enviado":"Thank you! We received your message.","x.fallo":"It could not be sent. Please try again in a moment.","x.verIn":"See in"
     },
     es: {
-      "x.leer":"Descargar","x.hojear":"Hojear las primeras páginas","x.enLinea":"Leer en línea","x.escuchar":"Escuchar en línea","x.audios":"Las meditaciones, para escucharlas","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
+      "x.leer":"Descargar","x.hojear":"Hojear las primeras páginas","x.enLinea":"Leer en línea","exc.etq":"Solo en Fénix","exc.eyebrow":"Exclusiva de Fénix · Inédito por escrito","exc.por":"Once meditaciones del P. Ricardo Sada Fernández","exc.gancho":"Hasta ahora existían solo en audio. Las pasamos al papel con autorización del autor: once ratos de oración para que tu trabajo de cada día, en la oficina, en la casa o en terreno, no se quede en cumplir. No las encontrarás por escrito en ninguna otra parte.","exc.boton":"Descargar gratis","exc.datos":"Gratis en EPUB y PDF · Con autorización del autor · Cada meditación con su audio original","x.escuchar":"Escuchar en línea","x.audios":"Las meditaciones, para escucharlas","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.porque":"Por qué leerlo","x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos",
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "hero.buscarAria":"Buscar un libro","hero.sinFenix":"Todavía no está en Fénix.","hero.buscarTodos":"Buscar «{q}» en todos los libros →",
@@ -2740,9 +2753,30 @@ function iniciar(){
     if (l.imagen) return `<div class="portada img ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"><div class="t">${esc(l.titulo)}</div><div class="a">${esc(l.autor)}</div></div>`;
     return `<div class="portada ${esc(l.categoria)}"><div class="t">${esc(l.titulo)}</div><div class="f">✠</div><div class="a">${esc(l.autor)}</div></div>`;
   }
+  const etqExclusivo = l => l.id === D.exclusivoFenix ? `<span class="etq exclusivo">${esc(t("exc.etq"))}</span>` : "";
+  // Exclusiva de Fénix bajo el hero: novedad + exclusividad + beneficio + una cita, y dos acciones
+  // (abrir la ficha para descargar y hojear). Se oculta en el idioma que no tiene el libro.
+  function pintarExclusivo(){
+    const c = $("#exclusivo"), l = porId(D.exclusivoFenix);
+    if (!c || !l || !visible(l) || !tieneEpub(l)) { if (c) c.hidden = true; return; }
+    c.innerHTML = `<div class="destacado-abrir" data-id="${esc(l.id)}" tabindex="0">${portada(l)}</div>
+      <div>
+        <p class="eyebrow">${esc(t("exc.eyebrow"))}</p>
+        <h2>${esc(l.titulo)}</h2>
+        <p class="por">${esc(t("exc.por"))}</p>
+        <p class="gancho">${esc(t("exc.gancho"))}</p>
+        ${(l.citas || [])[1] ? `<blockquote>«${esc(l.citas[1])}»</blockquote>` : ""}
+        <div class="acciones">
+          <a class="btn prim destacado-abrir" data-id="${esc(l.id)}" href="${esc(rutaLibro(l))}">${esc(t("exc.boton"))}</a>
+          <a class="btn" href="${esc(rutaLibro(l))}muestra/">${esc(t("x.hojear"))}</a>
+        </div>
+        <p class="datos">${esc(t("exc.datos"))}</p>
+      </div>`;
+    c.hidden = false;
+  }
   function tarjeta(l){
     return `<article class="libro${claseLibro(l)}" data-id="${esc(l.id)}" tabindex="0">${portada(l)}
-      <div class="pie"><div class="tl"><span class="tt">${esc(l.titulo)}</span><span class="au">${esc(l.autor)}</span></div>${sello(l)}${etqsFormato(l, true)}<span class="etq">${esc(categoria(l.categoria))}</span>
+      <div class="pie"><div class="tl"><span class="tt">${esc(l.titulo)}</span><span class="au">${esc(l.autor)}</span></div>${etqExclusivo(l)}${sello(l)}${etqsFormato(l, true)}<span class="etq">${esc(categoria(l.categoria))}</span>
       ${leidos[l.id] ? `<span class="leido" title="${esc(t("x.leido"))}" aria-label="${esc(t("x.leido"))}">✓</span>` : ""}
       ${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}</div></article>`;
   }
@@ -2778,8 +2812,8 @@ function iniciar(){
   function fila(l){
     return `<div class="fila${claseLibro(l)}" role="listitem" data-id="${esc(l.id)}" tabindex="0">${miniatura(l)}
       <div class="libro-c"><div class="tt"><a href="${esc(rutaLibro(l))}">${esc(l.titulo)}</a></div><div class="au">${esc(l.autor)} · ${anioJunto(l.anio)}</div></div>
-      <div class="etqs">${sello(l)}${etqsFormato(l)}<span class="etq">${esc(categoria(l.categoria))}</span>
-        ${l.editorial ? `<span class="etq ed-fenix">${esc(t("x.edFenix"))}</span>` : ""}</div>
+      <div class="etqs">${etqExclusivo(l)}${sello(l)}${etqsFormato(l)}<span class="etq">${esc(categoria(l.categoria))}</span>
+        ${l.editorial ?`<span class="etq ed-fenix">${esc(t("x.edFenix"))}</span>` : ""}</div>
       ${moral(l)}
       <div class="marcas-f">${leidos[l.id] ? `<span class="leido" title="${esc(t("x.leido"))}">✓</span>` : ""}${favoritos[l.id] ? `<span class="fav" title="${esc(t("x.fav"))}">★</span>` : ""}<span class="ir" aria-hidden="true">›</span></div></div>`;
   }
@@ -2828,6 +2862,7 @@ function iniciar(){
     $("#bloqueSello").hidden = !selloF.length;
     $("#recomendados").innerHTML = ediciones.map(tarjeta).join("");
     $("#bloqueEdFenix").hidden = !ediciones.length;
+    pintarExclusivo();
   }
   // Seguir leyendo (lo abierto y aún no marcado como leído) y Tus favoritos (el último marcado primero): una fila de 4 cada una.
   function pintarMios(){
@@ -2892,7 +2927,7 @@ function iniciar(){
   // muestra esa misma página. Ctrl o clic central la abren aparte, como un enlace normal.
   document.addEventListener("click", e => {
     if (e.defaultPrevented || e.button !== 0 || e.metaKey || e.ctrlKey || e.shiftKey || e.altKey) return;
-    const c = e.target.closest(".libro, .fila[data-id], .ed[data-id]");
+    const c = e.target.closest(".libro, .fila[data-id], .ed[data-id], .destacado-abrir[data-id]");
     if (c){ e.preventDefault(); irALibro(c.dataset.id); return; }
     const a = e.target.closest("a[href]");
     if (!a || a.target || a.hasAttribute("download") || a.hasAttribute("data-pagina")) return;
@@ -2903,7 +2938,7 @@ function iniciar(){
     // Desde la URL de una ficha, un enlace a una vista (#biblioteca) no recarga la página.
     if (esRaiz(u.pathname) && !esRaiz(location.pathname)){ e.preventDefault(); ir(u.href); }
   });
-  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro, .fila[data-id], .ed[data-id]"); if (a && e.key === "Enter") irALibro(a.dataset.id); });
+  document.addEventListener("keydown", e => { const a = e.target.closest && e.target.closest(".libro, .fila[data-id], .ed[data-id], .destacado-abrir[data-id]"); if (a && e.key === "Enter") irALibro(a.dataset.id); });
 
   // El PDF se abre en el visor del navegador (con `download`, en el celular solo quedaba en Descargas);
   // el EPUB se descarga y el bloque AVISO_EPUB explica con qué aplicación abrirlo. Se guarda con el

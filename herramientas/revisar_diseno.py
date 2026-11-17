@@ -360,6 +360,20 @@ def revisar(raiz, capturas=None):
             pg.wait_for_timeout(300)
             if not pg.evaluate(revisa_audio):
                 fallas.append(f"audios ({donde}): falta «Escuchar en línea» o la lista de las 11 meditaciones")
+        # Exclusiva de Fénix (17-nov-2026): bajo el hero en español, con botón que abre la ficha; oculta en inglés.
+        for esquema in ("light", "dark"):
+            pg2 = nav.new_page(viewport={"width": 360, "height": 740}, color_scheme=esquema)
+            pg2.goto(base)
+            pg2.wait_for_load_state("networkidle")
+            pg2.wait_for_timeout(300)
+            if not pg2.evaluate("() => { const c = document.querySelector('#exclusivo'); return !!c && !c.hidden && c.offsetHeight > 0 && !!c.querySelector('a.btn.prim.destacado-abrir') && c.scrollWidth <= c.clientWidth + 1; }"):
+                fallas.append(f"exclusiva ({esquema}): falta o se ve mal el bloque «Exclusiva de Fénix» en el inicio")
+            pg2.goto(base + "?l=en")
+            pg2.wait_for_load_state("networkidle")
+            pg2.wait_for_timeout(300)
+            if not pg2.evaluate("document.querySelector('#exclusivo').hidden"):
+                fallas.append("exclusiva: el bloque aparece en inglés y el libro es solo en español")
+            pg2.close()
         pg.close()
         # Preventa impresa (9-nov-2026): mientras la campaña siga (data-hasta de la banda #campana), la ficha
         # estática de los cuatro libros de la Colección Fénix, en español y en inglés, y la ficha de index.html
