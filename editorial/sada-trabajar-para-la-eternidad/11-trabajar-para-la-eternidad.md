@@ -50,17 +50,17 @@ Si miramos los campos de la actividad humana, veremos que hoy hay innumerables S
 
 Mucha gente se decepciona. Trabajé veinte o treinta años en una empresa, o quince, o cinco, y un día me dijeron: «Muchas gracias, aquí está su liquidación, hasta luego». Yo di mi vida a esa empresa día tras día, y así pagan los hombres. Eso es Sísifo: no te sirvió, porque no lo hiciste con lo que realmente se va a la eternidad. No lo hiciste amando a Dios ahí, por Cristo, con Cristo y en Cristo, colaborando con tu trabajo para que toda la realidad creada sea elevada hasta Dios.
 
-Que Cristo esté en la cumbre de tu actividad porque está en tu corazón, porque lo llevas contigo y estás siempre en comunicación con Él. Conversa con Él. Nunca estás solo: estás siempre con el que te ama y espera tu correspondencia. Encuéntralo con tu fe, con tu contemplación, con la seguridad de que su palabra no pasa: «yo estoy con vosotros todos los días». Ha estado contigo todo el día de hoy, desde la medianoche, y va a estar contigo hasta el último momento, y lo mismo mañana. Esa es nuestra fe. No tengas una vida cuadriculada: aquí te encuentro y aquí no, aquí me acuerdo y aquí me olvido. Todo, como decía san Pablo: «tanto si coméis, como si bebéis, o hacéis cualquier otra cosa, hacedlo todo para gloria de Dios»[^9].
+Que Cristo esté en la cumbre de tu actividad porque está en tu corazón, porque lo llevas contigo y estás siempre en comunicación con Él. Conversa con Él. Nunca estás solo: estás siempre con el que te ama y espera tu correspondencia. Encuéntralo con tu fe, con tu contemplación, con la seguridad de que su palabra no pasa: «yo estoy con vosotros todos los días»[^9]. Ha estado contigo todo el día de hoy, desde la medianoche, y va a estar contigo hasta el último momento, y lo mismo mañana. Esa es nuestra fe. No tengas una vida cuadriculada: aquí te encuentro y aquí no, aquí me acuerdo y aquí me olvido. Todo, como decía san Pablo: «tanto si coméis, como si bebéis, o hacéis cualquier otra cosa, hacedlo todo para gloria de Dios»[^10].
 
 ### Lo que Dios quiso recordar
 
-Por eso en la Misa de san Josemaría pedimos a Dios que, por su intercesión y su ejemplo, en el ejercicio del trabajo ordinario nos configuremos a su Hijo Jesucristo y sirvamos con ardiente amor a la obra de la Redención[^10]. Es lo específico que Dios quiso recordar al mundo por medio de él.
+Por eso en la Misa de san Josemaría pedimos a Dios que, por su intercesión y su ejemplo, en el ejercicio del trabajo ordinario nos configuremos a su Hijo Jesucristo y sirvamos con ardiente amor a la obra de la Redención[^11]. Es lo específico que Dios quiso recordar al mundo por medio de él.
 
 San Josemaría decía que no quería fundar nada. Le parecían muy bien todas las instituciones que había en la Iglesia, y no veía que hiciera falta otra. Pero Dios le pidió que fundara una que enseñara a amar a Jesús en medio de la calle, en todas partes: a vivir la vida contemplativa que lleva una monja en el silencio de su convento, pero vendiendo helados, barriendo las calles, en el laboratorio, de policía, de ama de casa, quien sea y haciendo lo que sea. Que aprenda a descubrir a Dios ahí, a amarlo ahí, a hacer las cosas por amor.
 
 El amor que hace grande lo pequeño. El amor que ilumina lo que está oscuro. El amor que hace más hermoso el mundo. Imagínate que un día todos los hombres de todos los países hicieran las cosas así, amando. Qué maravilla: este mundo sería como un paraíso, si en cada uno se estuviera manifestando el amor de Dios.
 
-Que san Josemaría interceda por nosotros mientras nos preparamos para su fiesta. Y pidámosle ayuda a Santa María, porque él también nos enseñaba a encontrarnos con Ella constantemente en la actividad diaria. Nos enseñaba a tratar a la Virgen «como se trata a una persona viva»[^11], como si la viéramos con los ojos de la cara: igual que a tu mamá, a la que saludas, le preguntas algo, le ayudas, con toda sencillez y naturalidad, como las personas que tienen fe. Que sepamos encontrar a Jesús y a María en nuestra vida ordinaria, que vivamos este espíritu de manera cada vez más radical y profunda, y que cada jornada se convierta en un canto de alabanza al amor de Dios.
+Que san Josemaría interceda por nosotros mientras nos preparamos para su fiesta. Y pidámosle ayuda a Santa María, porque él también nos enseñaba a encontrarnos con Ella constantemente en la actividad diaria. Nos enseñaba a tratar a la Virgen «como se trata a una persona viva»[^12], como si la viéramos con los ojos de la cara: igual que a tu mamá, a la que saludas, le preguntas algo, le ayudas, con toda sencillez y naturalidad, como las personas que tienen fe. Que sepamos encontrar a Jesús y a María en nuestra vida ordinaria, que vivamos este espíritu de manera cada vez más radical y profunda, y que cada jornada se convierta en un canto de alabanza al amor de Dios.
 
 [^1]: San Josemaría, *Es Cristo que pasa*, n. 183.
 [^2]: Mt 28, 20.
@@ -70,6 +70,7 @@ Que san Josemaría interceda por nosotros mientras nos preparamos para su fiesta
 [^6]: Mt 6, 3-4.
 [^7]: San Josemaría, *Camino*, n. 813.
 [^8]: Sal 23 (22), 4.
-[^9]: 1 Co 10, 31.
-[^10]: Cf. Misal Romano, 26 de junio, san Josemaría Escrivá, presbítero, oración colecta.
-[^11]: San Josemaría, *Es Cristo que pasa*, n. 142.
+[^9]: Mt 28, 20.
+[^10]: 1 Co 10, 31.
+[^11]: Cf. Misal Romano, 26 de junio, san Josemaría Escrivá, presbítero, oración colecta.
+[^12]: San Josemaría, *Es Cristo que pasa*, n. 142.
