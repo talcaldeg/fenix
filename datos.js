@@ -1251,6 +1251,43 @@ window.FENIX = {
     },
 
     {
+      id: "sada-trabajar-para-la-eternidad",
+      titulo: "Trabajar para la eternidad",
+      autor: "Ricardo Sada Fernández",
+      anio: "2026",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Once meditaciones del P. Ricardo Sada sobre el trabajo, pensadas para un rato de oración. Parten de Dios, primer obrero, y de la vida de Jesús, José y María en Nazaret; siguen con santificar el trabajo, trabajar ante Dios y convertir la tarea en oración, la laboriosidad, el trabajo hecho con amor y con gozo, y terminan con lo que de la tarea de cada día se va con Él a la eternidad. Van con las oraciones para comenzar y terminar el rato de meditación y con las citas de la Escritura y de san Josemaría identificadas en notas.",
+        en: "Eleven meditations by Fr. Ricardo Sada on work, written for a time of prayer. They begin with God, the first worker, and with the life of Jesus, Joseph and Mary at Nazareth; they go on to sanctifying work, working before God and turning the task into prayer, industriousness, work done with love and with joy, and end with what of each day's task goes with Him into eternity. They come with the prayers for beginning and ending a time of meditation and with the quotations from Scripture and from Saint Josemaría identified in notes."
+      },
+      porque: {
+        es: "Para ti, si trabajas y quieres que tu jornada no sea solo cumplir ni producir. Cada meditación es breve y se puede hacer sola, como el punto de partida de tu oración de la mañana o de un rato a mitad del día; el tono es el de una predicación sencilla, con ejemplos que se entienden sin conocer nada previo.",
+        en: "For you, if you work and want your day to be more than getting things done or producing. Each meditation is short and can be made on its own, as the starting point for your morning prayer or for a moment in the middle of the day; the tone is that of a simple sermon, with examples that make sense without any prior knowledge."
+      },
+      imagen: { src: "img/portadas/sada-trabajar-para-la-eternidad.jpg", credito: { es: "John Everett Millais, «Cristo en la casa de sus padres», 1849-1850", en: "John Everett Millais, «Christ in the House of His Parents», 1849-1850" }, url: "https://commons.wikimedia.org/wiki/File:John_Everett_Millais_-_Christ_in_the_House_of_His_Parents_(%60The_Carpenter%27s_Shop%27)_-_Google_Art_Project.jpg" },
+      citas: [
+        "Esa es nuestra especialidad, nuestra vocación: saber transformar todo en gloria de Dios, en oración; saber santificar lo más ordinario y prosaico; ser contemplativos en medio de lo operativo.",
+        "El Señor mide nuestras obras a peso de amor, a peso de la ilusión con que se las ofrecemos.",
+        "Una persona que tiene su día ocupado, con su horario lleno de distintas actividades, está prolongando la obra de la creación.",
+        "Piensa en los enamorados: todo el tiempo llevan en la cabeza a la persona que aman, y por eso todo tiene sentido.",
+        "El amor que hace grande lo pequeño. El amor que ilumina lo que está oscuro. El amor que hace más hermoso el mundo."
+      ],
+      archivos: { epub: "libros/sada-trabajar-para-la-eternidad.epub", pdf: "libros/sada-trabajar-para-la-eternidad.pdf" },
+      externos: [
+        { formato: "web", texto: "medita.cc (audios originales, sección «Trabajo»)", url: "https://medita.cc" }
+      ],
+      editorial: {
+        es: "Edición de Proyecto Fénix de once meditaciones orales del P. Ricardo Sada en medita.cc, pasadas al papel con su autorización (sigue el hilo, las ideas y el tono del autor, sin las repeticiones propias de la predicación), con las oraciones de comienzo y fin del rato de meditación una sola vez al principio y las citas de la Escritura y de san Josemaría identificadas en notas; revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición. Se publica gratis con autorización del autor.",
+        en: "A Proyecto Fénix edition of eleven spoken meditations by Fr. Ricardo Sada at medita.cc, put into print with his authorization (it follows the author's thread, ideas and tone, without the repetitions of a spoken sermon), with the prayers for beginning and ending a time of meditation given once at the start and the quotations from Scripture and from Saint Josemaría identified in notes; reviewed in its doctrinal passages against the Catechism; prepared with the help of artificial intelligence, with an edition note. Published free of charge with the author's authorization."
+      },
+      fuente: { texto: "Meditaciones del P. Ricardo Sada Fernández en medita.cc; edición de Proyecto Fénix con autorización del autor, gratis y sin fines comerciales", url: "https://medita.cc" },
+      delibris: null,
+      parecidos: ["trabajar-bien-trabajar-por-amor", "escriva-surco", "escriva-amigos-de-dios"]
+    },
+
+    {
       id: "rezar-con-alvaro-del-portillo",
       titulo: "Rezar con Álvaro del Portillo",
       autor: "Álvaro del Portillo (selección de José Antonio Loarte)",

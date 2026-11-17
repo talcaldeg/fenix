@@ -1,0 +1,110 @@
+## Dios, primer obrero
+
+### Trabajar para la eternidad
+
+Se cuenta que Miguel Ángel trabajaba en los frescos de la Capilla Sixtina, esa maravilla del arte que cubre los techos de la capilla donde se elige a los papas. Pasaban los días, las semanas y los meses, y el Papa que le había hecho el encargo se impacientó. Fue hasta donde trabajaba el artista y le preguntó:
+
+—Miguel Ángel, ¿cuándo terminas?
+
+—Cuando pueda.
+
+—Pero si hace meses que empezaste y parece que no has comenzado.
+
+—Santidad, yo no trabajo para el tiempo; trabajo para la eternidad.
+
+Esta anécdota nos sirve para pensar en lo que es el núcleo del espíritu que san Josemaría predicó: el trabajo que se santifica y se hace por amor. Puedes pedirle al Señor que te ayude a comprender algo en lo que el santo insistía tanto: que el trabajo es una colaboración en la obra creadora de Dios.
+
+### Dios confía en ti
+
+Dios es un obrero. Es el primero y más grande de los trabajadores: ha creado el cielo y la tierra, una obra tan grande y maravillosa que ni siquiera acabamos de conocer todos sus misterios. Y a nosotros, a todos, nos ha dicho: quiero que colabores conmigo.
+
+No quiso dejar su obra creadora del todo terminada e inamovible. Nos da el privilegio de completar lo que Él, el artista divino, comenzó. Esto no es lo que suelen hacer los artistas de la tierra. A los maestros no les gusta que nadie toque sus cosas. A quien ha tenido que encargar una obra le habrá pasado: se le pide al arquitecto un cambio pequeño y se ofende, y no hay manera de que acepte otra cosa que su proyecto tal como lo ideó.
+
+Dios no es así. Nos dice: ahí está mi obra creadora; colaboren para que la terminen, trabajen conmigo, confío en ustedes. Cree en el hombre. Eso sí, nos pide que nos atengamos a su proyecto, que no hagamos nada contra su obra y que estemos siempre bajo la guía de Cristo. Si nuestra obra se ajusta al proyecto que trazó el Creador en su mente, será una maravilla.
+
+Por lo tanto, cuando cumplimos la voluntad de Dios no trabajamos por otra razón que esta: Él nos ha involucrado en su obra. Lo que mueve nuestro trabajo es la gloria de Dios y su proyecto, no nuestra propia gloria ni nuestro enaltecimiento. Porque se nos puede meter la mentalidad del mundo, que es la pura competitividad: hacer las cosas para destacar y ganar más que los demás. Así se pierde la recta intención.
+
+### Un trabajo que da alegría
+
+A san Josemaría le gustaba recordar que Dios puso a Adán en el Edén para que trabajara, y que lo hizo antes del pecado[^1]. Se ha dicho que un hombre sin trabajo no es del todo hombre: a una persona se la define por lo que hace. Preguntamos qué es alguien y respondemos que albañil, carpintero, campesino, maestro.
+
+En el paraíso el trabajo no era la obligación costosa que fue después. La tierra todavía no estaba maldita, no producía espinas ni abrojos, y no se trabajaba con el sudor de la frente. Adán trabajaba gozosamente, y así debemos buscar hacerlo nosotros. Con un término moderno, podríamos decir que su trabajo era una especie de juego, en el sentido del deporte: una tarea que le llenaba de alegría. Siempre debemos buscar que nuestro trabajo sea así, que nos encante.
+
+Si hago las cosas a regañadientes, de mala gana, porque estoy cansado, recuerda que también el deportista está cansado, y sin embargo sigue con ilusión hasta el último minuto que le queda para jugar. El hombre no mejora su trabajo solo perfeccionando el método, sino con el amor que pone en él. San Pablo escribía a los primeros cristianos que supieran siempre que su trabajo no es vano en el Señor[^2].
+
+### Lo que importa es el cómo
+
+Esto es el ABC del espíritu que san Josemaría enseñó: no importa tanto qué haces, sino cómo lo haces, con cuánto amor. La gente en el mundo se fija en el qué, y es fácil confundirse y pensar que lo importante es que mi trabajo tenga mucha relevancia humana. No es verdad. Hay que decir, con Miguel Ángel: yo trabajo para la eternidad. Los hombres ven las apariencias, pero Dios ve el corazón[^3]; lo que es grandioso para los hombres puede ser abominable ante Dios[^4].
+
+Ningún trabajo es vano a los ojos de Dios, aunque esté totalmente oculto. Aunque sea ordenar la habitación a la que solo entro yo. Nadie la va a ver, nadie me va a pagar por tenerla ordenada, yo ya sé dónde están las cosas. Pero si lo haces con amor, si lo haces como un juego lleno de alegría y de libertad, porque estás trabajando a los ojos de Dios, eso vale.
+
+Dios tiene una balanza especial, muy fina, como esas que pesan miligramos de oro o una piedra preciosa diminuta o un poco de polvo de oro. Con esa balanza pesa tus acciones, y las pesa con rectitud. Quiere que en todas ellas haya pureza de intención, y la tendrás si siempre y en todo buscas solo agradar a Dios. Entonces tu trabajo se convierte en *Opus Dei*, *operatio Dei*: trabajo divinizado.
+
+### Contemplativo mientras trabajas
+
+¿Cómo hacer para que mi trabajo sea trabajo divinizado? Estando siempre en actitud contemplativa mientras trabajas. No te desconectes, no trabajes solo en tu mundo cerrado: da siempre entrada a Aquel que es el primer obrero, el que hizo la primera obra, de la que han seguido todas las demás tareas. Eso es lo que llamamos contemplación en el trabajo, una especie de contemplación operativa, y tu trabajo se llena así de oración.
+
+San Josemaría decía que, de este modo, casi sin darte cuenta, llegarás a la oración contemplativa, y brotarán de tu alma más actos de amor, jaculatorias, acciones de gracias, actos de desagravio, comuniones espirituales. Y no en momentos en que solo estás haciendo eso, sino mientras atiendes tus obligaciones: al descolgar el teléfono, al subir a un medio de transporte, al abrir o cerrar una puerta, al pasar ante una iglesia.
+
+Al comenzar una nueva tarea, al realizarla y al concluirla, todo lo referirás a tu Padre Dios. Es lo que pedimos en la liturgia: que toda nuestra oración y toda nuestra obra empiecen siempre en Él y por Él se concluyan. Cada vez que voy a empezar una tarea, puedo preguntarme: esto que voy a hacer, ¿está purificado en la intención? ¿Solo quiero la gloria de Dios y el bien de las almas? Lo voy a hacer por amor.
+
+Es bonito ver que muchos jugadores de fútbol en los países católicos se persignan al entrar a la cancha, y también al salir, como diciendo: ya terminó, y lo que terminó también es para Dios. Algunos, cuando meten un gol, se ponen de rodillas y señalan al cielo, como dándole gracias por haber alcanzado esa meta. También ellos, al comenzar, al realizar y al concluir, se acuerdan de Dios.
+
+### Convertirlo todo en diálogo
+
+Puedes vivir las normas de piedad de siempre, y además hacer pequeñas adaptaciones, pequeñas relaciones de lo que haces con Dios. Voy a encender el fuego para cocinar: «Enciéndeme, Señor, en el fuego de tu amor; así como calentarás esta olla, enciende también mi corazón con el fuego de tu Espíritu». Voy a limpiar: cuántas cosas necesito limpiar yo mismo, cuánto tengo que purificarme. Voy a barrer: bárreme los pensamientos inútiles, ociosos, inoportunos. Voy a salir: ven conmigo, no quiero salir solo, que me acompañe también María.
+
+Tengo una pena, una enfermedad grave, una muerte cercana: nunca es una tragedia, porque estás siempre con María y con José, y ellos están contigo. Tengo una gestión muy difícil: habla Tú, yo soy solo tu instrumento, Tú vives en mí. Subo unas escaleras que me cuestan: así voy subiendo a la eternidad, subiendo al cielo. Las bajo: Señor, ahora que bajo, quisiera meterme más hondo en tu corazón. Al dormirme, me duermo en el regazo de María, y no simplemente en mi cama con mi almohada. Al levantarme, quiero que todo sea para Ti hoy: mis pensamientos, mis palabras, mis obras, purificados, y presentes mi ofrecimiento de obras y mi consagración a María.
+
+También cuando oyes las noticias, o ves en la calle cosas que ofenden a Dios, puedes hacer actos de desagravio: si se emborrachó mucha gente en una fiesta, si hubo desgracias y ofensas, dices: Señor, perdónanos. Así se te va formando el sentido del pecado, la conciencia del mal y de la acción continua del demonio. Y si voy a ver a una persona que no me cae muy bien, pienso: voy a verte a Ti, que estás disfrazado de esa persona. Se me va haciendo una segunda naturaleza, porque en todo y para todo te encuentro.
+
+Por eso escribió san Josemaría: «Una hora de estudio, para un apóstol moderno, es una hora de oración»[^5]. Y puedo decir que media hora de conversación con amigos es media hora de oración; que una clase de formación de cuarenta y cinco minutos son cuarenta y cinco minutos de oración; que una hora de viaje en transporte público es una hora de oración; que una película puede ser también un tiempo de oración.
+
+### Hazlo todo por amor
+
+«Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo»[^6]. Hazlo todo por amor, porque te lo encargó tu Padre del Cielo. Un pequeño acto hecho por amor, ¿cuánto vale? No tengo cómo medirlo en el sentido humano, pero si se va a la eternidad, esto es lo que tengo que vivir, practicar y enseñar.
+
+Que tus ocupaciones habituales no sean un obstáculo: simplemente ama en ellas. El secreto para dar relieve a lo más humilde, incluso a lo más humillante, es amar. No porque seas perfeccionista y quieras hacerlo todo maravillosamente bien, sino porque sabes que Dios ve tu interior.
+
+Giovanni Papini cuenta una historia que lo dice bien. Un viajero encuentra a un sembrador y le pregunta para qué labra la tierra.
+
+—Para poner en ella la semilla.
+
+—¿Y para qué pones la semilla?
+
+—Para que salga el trigo.
+
+—¿Y para qué quieres el trigo?
+
+—Para hacer el pan.
+
+—¿Y el pan para qué es?
+
+—Para vivir.
+
+—¿Y para qué vivir?
+
+—Para labrar la tierra.
+
+El círculo se cerró. Lo que se hacía en la tierra en la tierra se quedaba, y no tenía sentido. Es como el eterno retorno del pensamiento griego, para el que la historia humana es una rueda que da vueltas y vueltas, termina y vuelve a empezar, casi como los ciclos de cada año. Pero sabemos que no: la historia es lineal, tiene un principio y tiene un final.
+
+Después el viajero encontró a una niña que cortaba flores, y quiso tener con ella el mismo diálogo. «¿Para qué cortas flores?». «Hago un collar para la Virgen», respondió la pequeña. El viajero ya no pudo preguntar más. Lo que la niña hacía en la tierra no era para la tierra.
+
+San Josemaría decía que descubras en todo lo que hagas el *quid divinum*, el toque divino. Es tener esa visión de fe que sabe trascender la visión puramente terrena o puramente humana.
+
+### Hasta la eternidad
+
+¿Qué estás haciendo? Trabajo porque me van a pagar el sueldo. ¿Para qué quieres el sueldo? Para poder comer. ¿Para qué quieres comer? Para venir a trabajar. ¿Y para qué quieres trabajar? Para que me paguen el sueldo. No es más que un eterno ciclo. Por eso pedimos en la liturgia que toda nuestra oración y toda nuestra obra empiecen en Dios y por Él se concluyan.
+
+Entonces tu trabajo será un constante ejercicio de las virtudes teologales: cambias de mundo, te vas a la eternidad desde el principio hasta el final, porque trabajas para Dios. Hazlo todo por amor, hazlo todo orando, contemplando, en la fe, en la esperanza y en el amor. Sin eso, el trabajo, a lo sumo, recibe su pago terreno y solo tiene sentido para lo que está en la tierra. Con eso, las carreteras, las calles, los pasillos, los espacios, las horas y los días se llenan de la presencia de Dios, y el trabajo no interrumpe tu diálogo contemplativo.
+
+Acude al modelo del obrero contemplativo, que es san José. Hablaba con el Niño mientras trabajaba en el taller. Llegaba la hora de cenar, guardaban y acomodaban las herramientas, se iban a cenar y seguían conversando con María. Una actividad no interrumpía a la otra, como ocurre cuando la vida se vuelve una cuadrícula cuyas casillas no se comunican. Todo tenía ese fondo común.
+
+Así nuestro trabajo se irá a la eternidad: cumpliendo la tarea que Dios ha asignado a cada uno, ahí donde estás, haciendo lo que haces, en lo que Él ha dispuesto para ti, para que completes la obra de la creación y colabores en la de la Redención. Te dice: tengo mucha confianza en ti, te he dejado poner las pinceladas de mi obra de arte; solo sigue lo que yo he previsto. Y lo que Dios ha previsto es que hagamos lo que debemos hacer, estando en lo que hacemos; es decir, que lo hagamos con amor de Dios.
+
+[^1]: Cf. Gn 2, 15.
+[^2]: Cf. 1 Co 15, 58.
+[^3]: Cf. 1 S 16, 7.
+[^4]: Cf. Lc 16, 15.
+[^5]: San Josemaría, *Camino*, n. 335.
+[^6]: San Josemaría, *Camino*, n. 813.
