@@ -8,7 +8,9 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
 
 - `index.html`: el sitio entero (vistas por `#hash`, modo claro y oscuro, ES/EN). Cada idioma
   muestra solo lo suyo: en español no aparece ningún libro, enlace ni oración en inglés, y al
-  revés. Un enlace en otro idioma que el libro lleva `idioma` en `externos`.
+  revés. Un enlace en otro idioma que el libro lleva `idioma` en `externos`. Un externo de
+  audio lleva `escuchar: true` («Escuchar en línea» en vez de «Leer en línea»), y un libro hecho
+  de audios (medita.cc) enumera cada uno en `audios: [{titulo, url}]`, sección propia de la ficha.
 - La ficha de un libro se abre encima de la vista y pone en la barra la página estática del libro
   (`libro/<id>/` o `libro/<id>/<idioma>/`, con `history.pushState`): lo que se copia de ahí trae
   la vista previa en WhatsApp. Atrás cierra la ficha. Todo enlace a un libro dentro del sitio va a

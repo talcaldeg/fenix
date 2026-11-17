@@ -119,7 +119,7 @@ const TX = {
   es: {
     cat: { lectura: "Lectura espiritual", oracion: "Oración", novela: "Novelas", teatro: "Teatro", poesia: "Poesía", ensayo: "Ensayo e historia" },
     biblioteca: "Biblioteca gratuita", verTodo: "Ver toda la biblioteca", abrir: "Abrir en la biblioteca",
-    descargar: "Descargar", enLinea: "Leer en línea", comprar: "Comprar",
+    descargar: "Descargar", enLinea: "Leer en línea", escuchar: "Escuchar en línea", audios: "Las meditaciones, para escucharlas", comprar: "Comprar",
     ayuda: "¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.",
     porque: "Por qué leerlo", resumen: "Resumen", citas: "Citas", masCitas: "Ver {n} citas más", moral: "Valoración moral", sinDelibris: "Sin valoración en Delibris",
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
@@ -145,7 +145,7 @@ const TX = {
   en: {
     cat: { lectura: "Spiritual reading", oracion: "Prayer", novela: "Novels", teatro: "Drama", poesia: "Poetry", ensayo: "Essays and history" },
     biblioteca: "Free library", verTodo: "See the whole library", abrir: "Open in the library",
-    descargar: "Download", enLinea: "Read online", comprar: "Buy",
+    descargar: "Download", enLinea: "Read online", escuchar: "Listen online", audios: "The meditations, to listen to", comprar: "Buy",
     ayuda: "Which one? The PDF opens straight away in the browser, on any phone or computer. The EPUB is saved in Downloads and is read with a reading app (Google Play Books on Android, Books on iPhone, Kindle or Kobo), which lets you enlarge the text.",
     porque: "Why read it", resumen: "Summary", citas: "Quotes", masCitas: "See {n} more quotes", moral: "Moral rating", sinDelibris: "Not rated by Delibris",
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
@@ -386,7 +386,7 @@ function paginaLibro(l){
   const botones = [
     ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${attrArchivo(f, u)}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
     ...(muestraDe(l) ? [`<a class="btn" href="muestra/">${esc(x.hojear)}</a>`] : []),
-    ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
+    ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(e.escuchar ? x.escuchar : x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
   ];
   const tieneArchivos = Object.keys(l.archivos || {}).length > 0;
@@ -478,7 +478,9 @@ ${cabecera(lang, B, otraUrl)}
       ${l.porque ? `<h2>${esc(x.porque)}</h2>
       <p>${esc(l.porque[lang] || l.porque.es)}</p>` : ""}
       <h2>${esc(x.resumen)}</h2>
-      <p>${esc(resumen)}</p>
+      <p>${esc(resumen)}</p>${(l.audios || []).length && l.idioma === lang ? `
+      <h2>${esc(x.audios)}</h2>
+      <ol class="audios">${l.audios.map(a => `<li><a href="${esc(a.url)}" rel="noopener">${esc(a.titulo)}</a></li>`).join("")}</ol>` : ""}
       ${l.editorial ? `<h2>${esc(x.edFenix)}</h2>\n      <p>${esc(l.editorial[lang] || l.editorial.es)}</p>` : ""}${l.encuadernador && !l.editorial ? `\n      <h2>${esc(x.preparado)}</h2>\n      <p>${esc(l.encuadernador)}</p>` : ""}
       ${(l.citas || []).length ? `<h2>${esc(x.citas)}</h2>\n      ${l.citas.slice(0, 2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("\n      ")}${l.citas.length > 2 ? `\n      <details class="citas"><summary>${esc(x.masCitas.replace("{n}", l.citas.length - 2))}</summary>${l.citas.slice(2).map(c => `<blockquote>${esc(c)}</blockquote>`).join("")}</details>` : ""}` : ""}
       <h2>${esc(x.moral)}</h2>

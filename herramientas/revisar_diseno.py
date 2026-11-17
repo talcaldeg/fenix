@@ -347,6 +347,20 @@ def revisar(raiz, capturas=None):
             if not pg.evaluate("window.__compartido || ''").endswith("/libro/ligorio-the-glories-of-mary/"):
                 fallas.append("compartir (página del libro): el botón no entregó el enlace de la página")
         pg.close()
+        # Libro de audios (medita.cc, 17-nov-2026): el botón dice «Escuchar en línea», no «Leer», y la
+        # ficha enumera las once meditaciones, cada una con su audio; en la página estática y en index.html.
+        pg = nav.new_page(viewport={"width": 390, "height": 844})
+        revisa_audio = """() => { const d = document.querySelector('#dlgLibro[open]') || document;
+            const b = [...d.querySelectorAll('a.btn')].map(a => a.textContent);
+            return b.some(t => t.startsWith('Escuchar en línea')) && !b.some(t => t.startsWith('Leer en línea'))
+                && d.querySelectorAll('ol.audios li a[href$=".mp3"]').length === 11; }"""
+        for url, donde in (("libro/sada-trabajar-para-la-eternidad/", "página del libro"), ("?abrir=sada-trabajar-para-la-eternidad", "ficha de index.html")):
+            pg.goto(base + url)
+            pg.wait_for_load_state("networkidle")
+            pg.wait_for_timeout(300)
+            if not pg.evaluate(revisa_audio):
+                fallas.append(f"audios ({donde}): falta «Escuchar en línea» o la lista de las 11 meditaciones")
+        pg.close()
         # Preventa impresa (9-nov-2026): mientras la campaña siga (data-hasta de la banda #campana), la ficha
         # estática de los cuatro libros de la Colección Fénix, en español y en inglés, y la ficha de index.html
         # avisan con enlace a Catapultame; otro libro no lleva el aviso. Se mira en claro y en oscuro.

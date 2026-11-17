@@ -1276,7 +1276,21 @@ window.FENIX = {
       ],
       archivos: { epub: "libros/sada-trabajar-para-la-eternidad.epub", pdf: "libros/sada-trabajar-para-la-eternidad.pdf" },
       externos: [
-        { formato: "web", texto: "medita.cc (audios originales, sección «Trabajo»)", url: "https://medita.cc" }
+        { formato: "web", escuchar: true, texto: "medita.cc (audios originales, sección «Trabajo»)", url: "https://medita.cc/index.php/meditaciones-sp-1033568393/2014-02-13-02-04-33/meditaciones-sp-1840794765/trabajo" }
+      ],
+      // Una línea por meditación del libro, en su orden, con el audio original en medita.cc.
+      audios: [
+        { titulo: "Dios, primer obrero", url: "https://medita.cc/audios/por_temas/t/trabajo/Dios_Primer_Obrero.mp3" },
+        { titulo: "San José obrero: santificar el trabajo", url: "https://medita.cc/audios/por_temas/t/trabajo/01_San_Jose_obrero_santificar_el_trabajo.mp3" },
+        { titulo: "Trabajo santificado", url: "https://medita.cc/audios/por_temas/t/trabajo/Trabajo_santificado.mp3" },
+        { titulo: "Santifica tu trabajo", url: "https://medita.cc/audios/por_temas/t/trabajo/Santifica_tu_trabajo.mp3" },
+        { titulo: "Trabajar ante Dios", url: "https://medita.cc/audios/por_temas/t/trabajo/Trabajar_ante_Dios.mp3" },
+        { titulo: "Trabajar, rezar", url: "https://medita.cc/audios/por_temas/t/trabajo/Trabajar_Rezar.mp3" },
+        { titulo: "Laboriosidad", url: "https://medita.cc/audios/por_temas/t/trabajo/Laboriosidad.mp3" },
+        { titulo: "Trabaja amando", url: "https://medita.cc/audios/por_temas/t/trabajo/Trabaja_amando.mp3" },
+        { titulo: "Trabaja con gozo", url: "https://medita.cc/audios/por_temas/t/trabajo/Trabaja_con_gozo.mp3" },
+        { titulo: "Tu trabajo al Cielo", url: "https://medita.cc/audios/por_temas/t/trabajo/Tu_trabajo_al_Cielo.mp3" },
+        { titulo: "Trabajar para la eternidad", url: "https://medita.cc/audios/por_temas/t/trabajo/22_Trabajar_para_la_eternidad.mp3" }
       ],
       editorial: {
         es: "Edición de Proyecto Fénix de once meditaciones orales del P. Ricardo Sada en medita.cc, pasadas al papel con su autorización (sigue el hilo, las ideas y el tono del autor, sin las repeticiones propias de la predicación), con las oraciones de comienzo y fin del rato de meditación una sola vez al principio y las citas de la Escritura y de san Josemaría identificadas en notas; revisada en sus pasajes doctrinales contra el Catecismo; preparada con ayuda de inteligencia artificial, con nota de la edición. Se publica gratis con autorización del autor.",
