@@ -1,4 +1,4 @@
-## Trabajar ante Dios
+## 5. Trabajar ante Dios
 
 ### Una fatiga que no es vana
 

@@ -1,4 +1,4 @@
-## Trabajo santificado
+## 3. Trabajo santificado
 
 ### Crecía en sabiduría, en edad y en gracia
 

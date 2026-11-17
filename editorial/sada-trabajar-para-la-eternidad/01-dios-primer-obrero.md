@@ -1,4 +1,4 @@
-## Dios, primer obrero
+## 1. Dios, primer obrero
 
 ### Trabajar para la eternidad
 

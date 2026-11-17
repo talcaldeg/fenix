@@ -1,4 +1,4 @@
-## San José obrero: santificar el trabajo
+## 2. San José obrero: santificar el trabajo
 
 ### Un hombre discreto y fidelísimo
 

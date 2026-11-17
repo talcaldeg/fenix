@@ -1,4 +1,4 @@
-## Trabajar, rezar
+## 6. Trabajar, rezar
 
 ### Dios ve el corazón
 
