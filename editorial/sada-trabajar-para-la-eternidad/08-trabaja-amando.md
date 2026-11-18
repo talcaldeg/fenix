@@ -42,7 +42,7 @@ Cuenta una biografía de san Josemaría que un día, en su despacho, tomó una c
 
 ### La tarea más pequeña, la más hermosa
 
-También podemos mirar el trabajo de María, nuestro modelo. Todo lo hacía amando, por amor a su Hijo: preparar la comida, ir por agua, barrer la casa. Preguntado san Josemaría cuál era el trabajo más bonito, respondía que posiblemente el más pequeño, pero hecho con más amor: cerrar una ventana, recoger un papel, barrer la casa, con el corazón lleno de amor a Jesucristo. «Todo lo que se hace por Amor adquiere hermosura y se engrandece».[^4] Y enseñaba también que de nada sirve afanarse en muchas obras exteriores si falta el amor: es como coser con una aguja sin hilo. Que yo sea el último en todo y el primero en el amor.
+También podemos mirar el trabajo de María, nuestro modelo. Todo lo hacía amando, por amor a su Hijo: preparar la comida, ir por agua, barrer la casa. Preguntado san Josemaría cuál era el trabajo más bonito, respondía que posiblemente el más pequeño, pero hecho con más amor: cerrar una ventana, recoger un papel, barrer la casa, con el corazón lleno de amor a Jesucristo.[^4] «Todo lo que se hace por Amor adquiere hermosura y se engrandece».[^5] Y escribió también: «Es inútil que te afanes en tantas obras exteriores si te falta Amor. —Es como coser con una aguja sin hilo».[^6] Que yo sea el último en todo y el primero en el amor.
 
 ¿Cuánto valdría ante el Padre el trabajo de María, el de José, el de Jesús? Piensa en los enamorados: todo el tiempo llevan en la cabeza a la persona que aman, y por eso todo tiene sentido. Así tendríamos que vivir, y entonces todo lo que hagas se estará yendo al cielo.
 
@@ -55,4 +55,6 @@ Pensemos, por último, por qué quiso el Padre que su Hijo fuera conocido por su
 [^1]: Cf. Mt 13, 54-58; cf. Mc 6, 3.
 [^2]: San Josemaría, *Conversaciones*, n. 116.
 [^3]: Cf. Lc 10, 38-42.
-[^4]: San Josemaría, *Camino*, n. 429.
+[^4]: Cf. San Josemaría, *Camino*, n. 813.
+[^5]: San Josemaría, *Camino*, n. 429.
+[^6]: San Josemaría, *Camino*, n. 967.

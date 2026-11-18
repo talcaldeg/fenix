@@ -8,7 +8,7 @@ El tema de esta meditación es el trabajo, su santificación, trabajar por amor.
 
 ### Colaboradores del Creador
 
-San Juan Crisóstomo comentaba que el primero y más grande obrero es Dios mismo, que hizo la obra grande y maravillosa de la creación del cielo y de la tierra. ¿Qué es entonces el hombre? Un colaborador en ese inmenso trabajo. Es un honor y un privilegio: Dios me invita a completar la obra comenzada por el artista supremo. La creación no es un evento cerrado; basta ver los ciclos de la naturaleza, las cosechas, las ciudades.
+Se ha dicho que el primero y más grande obrero es Dios mismo, que hizo la obra grande y maravillosa de la creación del cielo y de la tierra. ¿Qué es entonces el hombre? Un colaborador en ese inmenso trabajo. Es un honor y un privilegio: Dios me invita a completar la obra comenzada por el artista supremo. La creación no es un evento cerrado; basta ver los ciclos de la naturaleza, las cosechas, las ciudades.
 
 Cuando el maestro de un taller deja que su discípulo termine el cuadro, lo normal es que el discípulo haga lo grueso y el maestro dé las últimas pinceladas. Con Dios es al revés. Dios nos dice: «Aquí está esta gran pintura; ahora ve tú y dale unos toques. Yo te acompañaré, guiaré tu mano, trabajarás bajo mi guía, la de Cristo. Pero respeta mi proyecto original». Por eso la primera regla de este trabajo es tener en cuenta la voluntad de Dios: ¿qué quiere de mí aquí o allá?
 
@@ -16,7 +16,7 @@ El Génesis cuenta que Dios puso al hombre en el paraíso para que lo cultivara 
 
 ### Un honor que hubo que restaurar
 
-Para el cristiano que busca santificarse en medio del mundo, el trabajo es el quicio de su santificación. San Josemaría lo recordó con una insistencia nueva: no cabe olvidar, decía, que el trabajo digno, noble y honesto, en lo humano, puede y debe elevarse al orden sobrenatural y pasar a ser un quehacer divino.[^3] Es decir, no se queda en la tierra: se va al ámbito de la eternidad. Por eso pudo abrir caminos en la tierra, y todos los caminos de la tierra pueden llevar a Dios. Y fue él mismo un trabajador infatigable.
+Para el cristiano que busca santificarse en medio del mundo, el trabajo es el quicio de su santificación. San Josemaría lo recordó con una insistencia nueva: «No cabe olvidar que el trabajo digno, noble y honesto, en lo humano, puede —¡y debe!— elevarse al orden sobrenatural, pasando a ser un quehacer divino».[^3] Es decir, no se queda en la tierra: se va al ámbito de la eternidad. Por eso pudo abrir caminos en la tierra, y todos los caminos de la tierra pueden llevar a Dios. Y fue él mismo un trabajador infatigable.
 
 No siempre fue así de claro. Se cuenta que en la España del siglo XVIII el rey Carlos III tuvo que decretar la dignidad de todos los oficios, porque había trabajos tenidos por deshonrosos y se prefería mendigar a trabajar con las manos. Era un problema serio: frenaba la economía y daba mala fama al país entre los visitantes extranjeros. El decreto no cambió de golpe la mentalidad. Hoy el peligro suele ser el contrario, el de trabajar sin medida. Pero también existe, para cada uno, el riesgo de decir: «No me gusta mucho el trabajo, prefiero hacer otras cosas». Entonces desaprovechas el camino de tu santificación.
 

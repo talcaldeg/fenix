@@ -2,11 +2,11 @@
 
 ### Dios ve el corazón
 
-Jesús dijo una vez a los fariseos unas palabras muy duras: lo que los hombres estiman mucho puede ser abominable ante Dios, porque Dios conoce los corazones.[^1] Lo decía a fariseos amigos del dinero, que se burlaban de Él y se tenían por justos ante los hombres. Lo grande a los ojos de los hombres no siempre lo es a los de Dios.
+Jesús dijo una vez a los fariseos unas palabras muy duras: «lo que parece ser excelso ante los hombres es abominable delante de Dios», porque «Dios conoce vuestros corazones».[^1] Lo decía a fariseos amigos del dinero, que se burlaban de Él y se tenían por justos ante los hombres. Lo grande a los ojos de los hombres no siempre lo es a los de Dios.
 
 Dios sondea el corazón del hombre. Nada escapa a su mirada: ve hasta las intenciones más escondidas y por eso es absolutamente justo; nos premia a peso de rectitud. En esas palabras hay una luz: Dios ve mi yo profundo, sabe lo que hay en mi interior y, por lo mismo, me ayuda a limpiar mi corazón, a echar fuera a esos malos huéspedes que se instalan en él y a trabajar con un corazón puro y con rectitud de intención.
 
-De eso trata esta meditación: de trabajar por amor, con pureza de intención. A Dios le importa menos la tarea que hago que el cómo la hago: lo que hay en mí cuando la hago. San Pablo anima a los corintios a vivir así, sabiendo que su trabajo nunca es vano ante Dios.[^2] Nada de lo que hago es vano si procede, o quiere proceder, de mi amor a Dios.
+De eso trata esta meditación: de trabajar por amor, con pureza de intención. A Dios le importa menos la tarea que hago que el cómo la hago: lo que hay en mí cuando la hago. San Pablo anima a los corintios a vivir así, «sabiendo que en el Señor vuestro trabajo no es vano».[^2] Nada de lo que hago es vano si procede, o quiere proceder, de mi amor a Dios.
 
 ### Rectificar la intención
 
@@ -36,27 +36,27 @@ También ayudan los pequeños trucos. Voy a encender el horno y digo: «Señor, 
 
 ### Una puntada, un alma
 
-Se cuenta de santa Faustina Kowalska, a partir de su Diario, un episodio que ilustra esto. Ella tenía una comunicación muy especial con el Señor, en la que Él se le aparecía, algo que probablemente a nosotros no nos suceda: nos basta la fe para conversar con Él. Una vez iba a empezar una labor de ganchillo y le propuso a Jesús un trato: por cada puntada, la conversión de un alma. El Señor le respondió, más o menos, que lo que pedía era muy difícil, porque cada conversión cuesta mucha oración y mucha penitencia. Ella contestó que, como le habían prohibido las mortificaciones extraordinarias, solo tenía eso para ofrecerle, y que lo haría con tanto amor que se lo valdría por la conversión de un alma. Y Jesús le dijo que sí. Ella se puso muy contenta.
+Se cuenta de santa Faustina Kowalska, a partir de su Diario, un episodio que ilustra esto. Ella tenía una comunicación muy especial con el Señor, en la que Él se le aparecía, algo que probablemente a nosotros no nos suceda: nos basta la fe para conversar con Él. Una vez iba a empezar una labor de ganchillo y le propuso a Jesús un trato: la conversión de tantas almas como puntos hiciera ese día con el gancho. El Señor le respondió, más o menos, que lo que pedía era demasiado grande, porque cada conversión exige sacrificio. Ella contestó que, como le habían prohibido las mortificaciones extraordinarias, solo tenía eso para ofrecerle, y que lo haría con tanto amor que se lo valdría por la conversión de un alma. Y Jesús le dijo que sí. Ella se puso muy contenta.[^4]
 
-Qué relación tiene esto con la eternidad y con la salvación de las almas: algo que parece de muy poca importancia a los ojos de los hombres tiene muchísima ante los ojos de Dios. Porque los hombres ven las apariencias, pero Dios ve el corazón.
+Qué relación tiene esto con la eternidad y con la salvación de las almas: algo que parece de muy poca importancia a los ojos de los hombres tiene muchísima ante los ojos de Dios. Ya se lo había dicho el Señor a Samuel: «El hombre mira las apariencias pero el Señor mira el corazón».[^5]
 
 ### Rezar y trabajar, trabajar y rezar
 
-San Josemaría repetía que nuestra vida es trabajar y rezar, y al revés, rezar y trabajar. Llega un momento en que no se saben distinguir estos dos conceptos, contemplación y acción, y terminan por significar lo mismo en la mente y en la conciencia. Qué bonito sería que de alguien se dijera: «Está rezando las veinticuatro horas». Y qué pena que se dijera: «Está en otra cosa, anda distraída, ensimismada».
+San Josemaría pedía almas contemplativas en medio del mundo, que procuran convertir su trabajo en oración.[^6] Nuestra vida es trabajar y rezar, y al revés, rezar y trabajar. Llega un momento en que no se saben distinguir estos dos conceptos, contemplación y acción, y terminan por significar lo mismo en la mente y en la conciencia. Qué bonito sería que de alguien se dijera: «Está rezando las veinticuatro horas». Y qué pena que se dijera: «Está en otra cosa, anda distraída, ensimismada».
 
 Si alguien se descubre así, que barra, que trapee, que quite las telarañas y saque de su corazón a esos invasores. No estás hecho para las apariencias del mundo, para quedar bien. Estás hecho para Dios, eres de Dios. Métete en esa contemplación operativa: reza y trabaja, trabaja y reza, porque amas, porque estás en comunicación con Él, porque actúa el Espíritu Santo, porque tienes la gracia.
 
-¿Qué hiciste hoy? Recé. ¿Cuánto rezaste? Todo el tiempo. ¿Qué hiciste hoy? Trabajé. ¿Cuánto trabajaste? Todo el tiempo. ¿Entonces rezaste o trabajaste? Es una sola cosa. Por eso decía san Josemaría: «Una hora de estudio, para un apóstol moderno, es una hora de oración».[^4] Y lo mismo puede decirse de cualquier actividad: una hora de limpieza, una hora de cocina, es una hora de oración. Y un rato de conversación entre amigos: ¿hiciste media hora de oración mientras duraba? ¿Estuviste conversando con Jesús? ¿Sabías dónde estabas sentado, con la luz de que Él estaba contigo?
+¿Qué hiciste hoy? Recé. ¿Cuánto rezaste? Todo el tiempo. ¿Qué hiciste hoy? Trabajé. ¿Cuánto trabajaste? Todo el tiempo. ¿Entonces rezaste o trabajaste? Es una sola cosa. Por eso decía san Josemaría: «Una hora de estudio, para un apóstol moderno, es una hora de oración».[^7] Y lo mismo puede decirse de cualquier actividad: una hora de limpieza, una hora de cocina, es una hora de oración. Y un rato de conversación entre amigos: ¿hiciste media hora de oración mientras duraba? ¿Estuviste conversando con Jesús? ¿Sabías dónde estabas sentado, con la luz de que Él estaba contigo?
 
-Por eso san Josemaría decía que los hijos de Dios no se aburren: están en conversación con su Padre, en diálogo, o simplemente en su presencia, la presencia amorosa de dos que se quieren. Qué pena decir de alguien que necesita siempre compensaciones porque se aburre, que tiene que estar en un chisme, en algo que oír o que ver, en un video o en una red social. Le falta el espíritu que pide el Señor, que es rezar siempre, en medio de cualquier actividad. Una unidad de vida, una única vida «hecha de carne y espíritu»,[^5] que ha divinizado hasta lo más material. Esa es la santidad que enseñó san Josemaría, porque en definitiva es el ejercicio de las virtudes teologales.
+Por eso decía san Josemaría que quien vive de cara a Dios no tiene por qué aburrirse: «Yo no me he aburrido nunca. [...] No tenemos derecho a aburrirnos, ni a sentirnos tristes».[^8] Quien vive así está en conversación con su Padre, en diálogo, o simplemente en su presencia, la presencia amorosa de dos que se quieren. Qué pena decir de alguien que necesita siempre compensaciones porque se aburre, que tiene que estar en un chisme, en algo que oír o que ver, en un video o en una red social. Le falta el espíritu que pide el Señor, que es rezar siempre, en medio de cualquier actividad. Una unidad de vida, una única vida «hecha de carne y espíritu»,[^9] que ha divinizado hasta lo más material. Esa es la santidad que enseñó san Josemaría, porque en definitiva es el ejercicio de las virtudes teologales.
 
 ### Fe, esperanza y caridad
 
 ¿Por qué, cuando soy contemplativo en la acción, ejercito las tres virtudes teologales? En primer lugar, porque creo que Él está conmigo. Ya no conjugo el verbo en primera persona del singular, sino en primera persona del plural: nosotros. ¿Quiénes? Tú y yo. Tú y yo siempre. Es un ejercicio de fe. Es un ejercicio de esperanza, porque sé, como dice san Pablo, que mi trabajo no es inútil ante Dios: confío en que no solo no es inútil, sino gratísimo a sus ojos; le encanta lo que hago y con eso, con una labor de ganchillo o con lo que sea, ayudo a salvar almas. Y es un ejercicio de caridad, porque te amo en cada cosa que hago. El trabajo que hice hoy en la mañana me llevó a amarte más, porque compartí mi día contigo. No me sentí aislado ni solo; estamos siempre en equipo.
 
-San Josemaría contaba que había llenado las carreteras de Europa de avemarías y de canciones. ¿De qué estarán llenos los pasillos, los patios, los jardines, las aulas y las habitaciones de tu casa? De avemarías y de canciones de almas enamoradas. Y las paredes, hechas de amor de Dios. ¿Cómo prepararon este plato? Con amor de Dios; por eso está tan rico. Se cuenta de un obispo, hombre piadoso, que al ver una huerta recién sembrada preguntó si aquellas lechugas estaban regadas con jaculatorias. Había entendido el espíritu de la obra: eso es lo que hace que las lechugas salgan muy bien.
+San Josemaría contaba: «He llenado las carreteras de Europa de avemarías y de canciones».[^10] ¿De qué estarán llenos los pasillos, los patios, los jardines, las aulas y las habitaciones de tu casa? De avemarías y de canciones de almas enamoradas. Y las paredes, hechas de amor de Dios. ¿Cómo prepararon este plato? Con amor de Dios; por eso está tan rico. Se cuenta de un obispo, hombre piadoso, que al ver una huerta recién sembrada preguntó si aquellas lechugas estaban regadas con jaculatorias. Había entendido el espíritu de la obra: eso es lo que hace que las lechugas salgan muy bien.
 
-«Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo».[^6] Un pequeño acto hecho por amor, ¿cuánto vale? Y al revés, es inútil que te afanes en muchas obras exteriores si te falta amor: es como coser con una aguja sin hilo, no sirve de nada. «Todo lo que se hace por Amor adquiere hermosura y se engrandece».[^7]
+«Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo».[^11] Un pequeño acto hecho por amor, ¿cuánto vale? Y al revés: «Es inútil que te afanes en tantas obras exteriores si te falta Amor. —Es como coser con una aguja sin hilo».[^12] «Todo lo que se hace por Amor adquiere hermosura y se engrandece».[^13]
 
 ### Quiero darte alegría
 
@@ -66,10 +66,16 @@ Nuestros modelos son María y José, en quienes esa contemplación se daba sola,
 
 Esa es nuestra vida: trabajar y rezar, rezar y trabajar. Y eso es lo que nos llena de felicidad, porque nos damos cuenta, como dice san Pablo, de que nuestro trabajo, hecho por amor y para Dios, nunca es vano ante sus ojos.
 
-[^1]: Cf. Lc 16, 15.
-[^2]: Cf. 1 Co 15, 58.
+[^1]: Lc 16, 15.
+[^2]: 1 Co 15, 58.
 [^3]: San Josemaría, *Amigos de Dios*, n. 149.
-[^4]: San Josemaría, *Camino*, n. 335.
-[^5]: San Josemaría, *Conversaciones*, n. 114.
-[^6]: San Josemaría, *Camino*, n. 813.
-[^7]: San Josemaría, *Camino*, n. 429.
+[^4]: Cf. Santa Faustina Kowalska, *Diario*, n. 961.
+[^5]: 1 S 16, 7.
+[^6]: Cf. San Josemaría, *Surco*, n. 497.
+[^7]: San Josemaría, *Camino*, n. 335.
+[^8]: Palabras de san Josemaría recogidas en Javier Echevarría, *Memoria del Beato Josemaría Escrivá*, Rialp, Madrid 2000, p. 170.
+[^9]: San Josemaría, *Conversaciones*, n. 114.
+[^10]: Ana Sastre, *Tiempo de caminar*, Rialp, Madrid 1989, p. 438.
+[^11]: San Josemaría, *Camino*, n. 813.
+[^12]: San Josemaría, *Camino*, n. 967.
+[^13]: San Josemaría, *Camino*, n. 429.
