@@ -4219,6 +4219,44 @@ window.FENIX = {
       }
     },
     {
+      id: "chesterton-st-thomas-aquinas",
+      titulo: "Santo Tomás de Aquino",
+      autor: "G. K. Chesterton",
+      anio: "1933",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Chesterton cuenta la vida y el pensamiento de santo Tomás de Aquino en ocho capítulos breves: el fraile corpulento y callado al que sus compañeros llamaban el Buey Mudo, su familia, su encierro por querer ser dominico, sus maestros, su lucha contra los errores de su tiempo, su obra y su muerte. No es una biografía erudita sino un bosquejo hecho por un lector que lo admira, que explica con humor por qué Tomás defendió la razón, los sentidos y el mundo creado como camino hacia Dios, y por qué eso sigue importando.",
+        en: "Chesterton tells the life and thought of Saint Thomas Aquinas in eight short chapters: the big, silent friar his fellow students called the Dumb Ox, his family, his imprisonment for wanting to be a Dominican, his teachers, his struggle against the errors of his time, his work and his death. It is not a scholarly biography but a sketch by an admiring reader, who explains with humor why Thomas defended reason, the senses and the created world as a road to God, and why that still matters."
+      },
+      porque: {
+        es: "Para quien ha oído hablar de santo Tomás como de un autor imposible de leer y quiere conocerlo primero como persona y después como pensador. Es una puerta de entrada ágil y llena de humor a la filosofía cristiana, escrita para quien no es filósofo, y sirve también a quien no comparte la fe y solo quiere entender qué defendía este hombre.",
+        en: "For those who have heard of Saint Thomas as an author too hard to read and want to meet him first as a person and then as a thinker. It is a lively, humorous way into Christian philosophy, written for readers who are not philosophers, and it also serves those who do not share the faith and only want to understand what this man defended."
+      },
+      imagen: {
+        src: "img/portadas/chesterton-st-thomas-aquinas-es.jpg",
+        credito: { es: "Diego Velázquez, «Tentación de santo Tomás de Aquino», 1631-1632", en: "Diego Velázquez, «Temptation of Saint Thomas Aquinas», 1631-1632" },
+        url: "https://commons.wikimedia.org/wiki/File:Velazquez-Oriola.jpg"
+      },
+      // Citas copiadas literalmente de editorial/chesterton-st-thomas-aquinas-es/ (archivo entre paréntesis).
+      citas: [
+        "Que el tomismo sea la filosofía del sentido común es en sí mismo cuestión de sentido común.", // 06_c6.md
+        "Pero lo mejor es decir la verdad en su forma más simple: que ambos reafirmaron la Encarnación, trayendo a Dios de vuelta a la tierra.", // 01_c1a.md
+        "La existencia existe; pero no es suficientemente autoexistente; y nunca llegaría a serlo con solo seguir existiendo.", // 07_c7b.md
+        "Ningún tomista se quejará si el tomismo es el fin de nuestra filosofía, en el sentido en que Dios es el fin de nuestra existencia.", // 03_c3a.md
+        "Argumenta a favor de los refranes populares: que ver es creer; que la prueba del pudín está en comerlo; que un hombre no puede saltar por su propia garganta ni negar el hecho de su propia existencia." // 06_c6.md
+      ],
+      archivos: { epub: "libros/chesterton-st-thomas-aquinas-es.epub", pdf: "libros/chesterton-st-thomas-aquinas-es.pdf" },
+      editorial: {
+        es: "Traducción nueva de Proyecto Fénix, hecha directamente del inglés de St. Thomas Aquinas (Hodder & Stoughton, Londres, 1933), completa, con la nota introductoria y los ocho capítulos, y con notas de la edición que identifican las citas y alusiones del autor y dan contexto a unos pocos pasajes; preparada con ayuda de inteligencia artificial y revisada contra el original, con nota de la edición y portada nueva. Edición al cuidado de Tomás Alcalde.",
+        en: "A new Proyecto Fénix translation, made directly from the English of St. Thomas Aquinas (Hodder & Stoughton, London, 1933), complete, with the introductory note and the eight chapters, and with edition notes that identify the author's quotations and allusions and give context to a few passages; prepared with the help of artificial intelligence and checked against the original, with an edition note and a new cover. Edited by Tomás Alcalde."
+      },
+      fuente: { texto: "Traducción de Proyecto Fénix desde St. Thomas Aquinas (Hodder & Stoughton, Londres, 1933; Chesterton murió en 1936, obra libre en Chile), texto inglés de Project Gutenberg Australia, eBook n.º 0100331", url: "https://gutenberg.net.au/ebooks01/0100331h.html" },
+      delibris: { valor: 6, genero: "Pensamiento", url: "https://www.delibris.org/es/santo-tomas-de-aquino-2" },
+      parecidos: ["chesterton-st-francis-of-assisi", "ortodoxia", "chesterton-the-everlasting-man"]
+    },
+    {
       id: "chesterton-the-ball-and-the-cross",
       titulo: "The Ball and the Cross",
       autor: "G. K. Chesterton",

@@ -289,6 +289,44 @@ recortar.
   (palabras enteras en mayúscula al abrir un capítulo) van en minúscula normal. Las rayas largas
   del original pasan a comas, paréntesis o puntos suspensivos.
 
+## Santo Tomás de Aquino (Chesterton, *St. Thomas Aquinas*, 1933, desde el inglés)
+
+Original: Project Gutenberg Australia n.º 0100331 (Hodder & Stoughton, Londres, 1933), partido en
+tramos en `fenix_fuentes/chesterton-aquinas/tramos/NN_cX[a|b].txt`; la salida va en
+`editorial/chesterton-st-thomas-aquinas-es/NN_cX[a|b].md` (mismo nombre). Es una semblanza
+divulgativa en primera persona, con el mismo tono conversador y paradójico de *Ortodoxia*, pero
+con más filosofía: que la paradoja funcione en castellano y que el término técnico siga siendo
+técnico. Las frases muy largas se pueden ordenar, nunca recortar. Rige todo lo de *Ortodoxia*
+(tratamiento, nombres, versos, cursiva, rayas) salvo lo que se dice aquí.
+
+- Encabezados: `## Nota introductoria`, `## I. Sobre dos frailes`, `## II. El abad fugitivo`,
+  `## III. La revolución aristotélica`, `## IV. Una meditación sobre los maniqueos`, `## V. La
+  vida real de santo Tomás`, `## VI. Camino al tomismo`, `## VII. La filosofía perenne`,
+  `## VIII. Lo que vino después de santo Tomás`. Un tramo que es la segunda mitad de un capítulo
+  (sufijo `b`) no lleva encabezado. El número romano y el título del original, que vienen en
+  líneas sueltas al comienzo del tramo, se reemplazan por ese encabezado.
+- Nombres: santo Tomás (de Aquino), san Francisco (de Asís), santo Domingo, san Alberto Magno,
+  san Buenaventura, san Luis (rey de Francia), Siger de Brabante, Averroes, Avicena, Aristóteles,
+  Platón, san Agustín, Lutero, Calvino, Roger Bacon, Francis Bacon, Montecassino, Roccasecca,
+  Aquino, Nápoles, París, Colonia, Mahoma, Confucio, Nelson; los demás, como se conocen en
+  castellano o sin traducir.
+- Glosario: Thomism → tomismo; Thomist → tomista; the Schoolmen → los escolásticos; Scholasticism
+  → la escolástica; the Angelic Doctor → el Doctor Angélico; the Dumb Ox → el Buey Mudo; Friars →
+  frailes; Dominicans / Franciscans → dominicos / franciscanos; Order of Preachers → Orden de
+  Predicadores; *Summa Theologica* → *Suma teológica*; *Summa contra Gentiles* → *Suma contra los
+  gentiles*; the Manichees → los maniqueos; Manichean → maniqueo; Being → el Ser (con mayúscula
+  cuando el original la pone); being → ser; essence / existence → esencia / existencia; potency /
+  act → potencia / acto; Change / Becoming → el cambio / el devenir; the Reformation → la Reforma;
+  the Renaissance → el Renacimiento; Pragmatism → pragmatismo; Nominalism → nominalismo; Common
+  Sense → sentido común; the Incarnation → la Encarnación; the Creator / creation → el Creador /
+  la creación; heresy / heretic → herejía / hereje; Christendom → la cristiandad; the Church → la
+  Iglesia; Pope → papa (el Papa, si designa al de la época sin nombre).
+- Latín y otras lenguas: las palabras y frases que el autor deja en latín (*Ens*, *philosophia
+  perennis*, *Contra Gentiles*) quedan en latín y en cursiva; el traductor no agrega notas: el
+  revisor les pone la traducción en nota «N. del E.» si el texto no la da al lado.
+- Citas de santo Tomás y de otros autores: se traducen del inglés que trae el libro, entre
+  comillas «...» en el párrafo; el revisor les busca la fuente y pone la nota (errores 2 y 16).
+
 ## El jardín secreto (Burnett, *The Secret Garden*, 1911, desde el inglés)
 
 Original: Project Gutenberg n.º 113, partido en tramos en
