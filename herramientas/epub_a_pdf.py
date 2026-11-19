@@ -5,10 +5,12 @@
 
 La hoja es A5 salvo para los libros de HOJAS, que copian la página de su original; --hoja (en
 milímetros) manda sobre las dos. Si MuPDF achica un dibujo con {width=N%} porque no cabe en lo
-que queda de la página, ese dibujo pasa a la página siguiente (solo en el PDF, el EPUB no cambia).
+que queda de la página, ese dibujo pasa a la página siguiente, y un título (o rótulo del índice) que
+quedaría solo al pie de una página, también (solo en el PDF, el EPUB no cambia).
 En el índice de indice.py dibuja el número de página de cada entrada, con puntos guía.
 """
 import argparse
+import html
 import io
 import re
 import sys
@@ -197,24 +199,24 @@ def achicados(doc, dibujos: list) -> list:
     return salida
 
 
-def con_relleno(z: zipfile.ZipFile, dibujos: list, relleno: dict) -> bytes:
-    """Copia del EPUB con un bloque vacío de `relleno[i]` pt antes del <figure> del dibujo i.
-    MuPDF no respeta break-before ni page-break-before (probado en 1.29): un dibujo que no cabe
-    en lo que queda de la página se achica hasta caber; el bloque vacío completa la página y el
-    dibujo parte en la siguiente."""
+def con_relleno(z: zipfile.ZipFile, relleno: dict) -> bytes:
+    """Copia del EPUB con un bloque vacío de `alto` pt en cada (xhtml, posición) de `relleno`
+    (valor: (alto, etiqueta), «div» o, dentro de la lista del índice, «li»). MuPDF no respeta
+    break-before, break-after ni break-inside (probado en 1.29): un dibujo que no cabe en lo que
+    queda de la página se achica hasta caber, y un título puede quedar solo al pie; el bloque
+    vacío completa la página y lo que sigue parte en la siguiente."""
     por_archivo = {}
-    for i, alto in relleno.items():
-        nombre, pos = dibujos[i][:2]
-        por_archivo.setdefault(nombre, []).append((pos, alto))
+    for (nombre, pos), (alto, etiqueta) in relleno.items():
+        por_archivo.setdefault(nombre, []).append((pos, alto, etiqueta))
     buf = io.BytesIO()
     with zipfile.ZipFile(buf, "w") as nuevo:
         for item in z.infolist():
             datos = z.read(item)
             if item.filename in por_archivo:
                 xhtml = datos.decode("utf-8")
-                for pos, alto in sorted(por_archivo[item.filename], reverse=True):
-                    fig = xhtml.rindex("<figure", 0, pos)
-                    xhtml = xhtml[:fig] + f'<div style="height: {alto:.1f}pt"></div>' + xhtml[fig:]
+                for pos, alto, etiqueta in sorted(por_archivo[item.filename], reverse=True):
+                    estilo = f"height: {alto:.1f}pt" + ("; margin: 0; padding: 0" if etiqueta == "li" else "")
+                    xhtml = xhtml[:pos] + f'<{etiqueta} style="{estilo}"></{etiqueta}>' + xhtml[pos:]
                 datos = xhtml.encode("utf-8")
             # ZipInfo nuevo: writestr reescribe el que recibe y z ya no podría leer esa entrada
             nuevo.writestr(zipfile.ZipInfo(item.filename, item.date_time), datos,
@@ -222,30 +224,177 @@ def con_relleno(z: zipfile.ZipFile, dibujos: list, relleno: dict) -> bytes:
     return buf.getvalue()
 
 
+TITULO = re.compile(r"<(h[1-6])\b[^>]*>(.*?)</\1>", re.S)
+
+
+def sin_espacios(texto: str) -> str:
+    return re.sub(r"[\s­​]+", "", texto).casefold()
+
+
+def titulos_del_libro(z: zipfile.ZipFile) -> dict:
+    """{índice en el spine: [(posición del <hN>, texto sin espacios ni mayúsculas)]}, sin el índice."""
+    base, xhtmls = spine(z)
+    salida = {}
+    for k, nombre in enumerate(xhtmls):
+        if nombre.endswith("nav.xhtml"):
+            continue
+        xhtml = z.read(nombre).decode("utf-8")
+        lista = []
+        for m in TITULO.finditer(xhtml):
+            texto = sin_espacios(html.unescape(re.sub(r"<[^>]+>", " ", m.group(2))))
+            if texto:
+                lista.append((m.start(), texto))
+        if lista:
+            salida[k] = lista
+    return salida
+
+
+def titulos_huerfanos(z: zipfile.ZipFile, doc, titulos: dict, desde: int = 0):
+    """Primer título (o grupo de títulos seguidos, como «Libro IV» y «I») que queda al pie de una
+    página con menos de dos líneas de su texto debajo, mientras el capítulo sigue en la página
+    siguiente. (página, (xhtml, posición del primer título del grupo), y de su primera línea), o
+    None. Cada título se ubica por su texto, en orden dentro de su capítulo; si no se encuentra
+    (letra con versalitas que MuPDF no deja leer), se salta."""
+    base, xhtmls = spine(z)
+    por_capitulo = {}
+    for i in range(desde, doc.page_count):
+        k = doc.location_from_page_number(i)[0]
+        if k in titulos:
+            por_capitulo.setdefault(k, []).append(i)
+    for k, paginas in sorted(por_capitulo.items()):
+        lineas = []  # (página, y0, y1, texto) en orden de lectura; un dibujo cuenta como línea
+        for i in paginas:
+            for b in doc[i].get_text("dict")["blocks"]:
+                if b["type"] == 1:
+                    lineas.append((i, b["bbox"][1], b["bbox"][3], None))
+                for l in b.get("lines", []):
+                    t = sin_espacios("".join(s["text"] for s in l["spans"]))
+                    if t:
+                        lineas.append((i, l["bbox"][1], l["bbox"][3], t))
+        ubicados = []  # (pos, primera línea, última línea)
+        cursor = 0
+        for pos, texto in titulos[k]:
+            for j in range(cursor, len(lineas)):
+                t = lineas[j][3]
+                if not t or not texto.startswith(t):
+                    continue
+                acc, fin = t, j
+                while acc != texto and fin + 1 < len(lineas) and lineas[fin + 1][3] \
+                        and texto.startswith(acc + lineas[fin + 1][3]):
+                    fin += 1
+                    acc += lineas[fin][3]
+                if acc == texto:
+                    ubicados.append((pos, j, fin))
+                    cursor = fin + 1
+                    break
+        for n, (pos, ini, fin) in enumerate(ubicados):
+            pag = lineas[fin][0]
+            debajo = sum(1 for l in lineas[fin + 1:] if l[0] == pag)
+            if debajo >= 2 or fin + 1 + debajo >= len(lineas):
+                continue  # tiene texto debajo, o el capítulo termina en esta página
+            # sube por los títulos pegados encima en la misma página
+            while n > 0 and ubicados[n - 1][2] == ini - 1 and lineas[ubicados[n - 1][2]][0] == pag:
+                n -= 1
+                pos, ini = ubicados[n][0], ubicados[n][1]
+            if lineas[ini][0] != pag or ini == 0 or lineas[ini - 1][0] != pag:
+                continue  # el grupo ya abre la página: más arriba no puede ir
+            return pag, (xhtmls[k], pos), lineas[ini][1]
+    return None
+
+
+def entradas_del_indice(z: zipfile.ZipFile, doc) -> list:
+    """Entradas del índice en orden: [página, destino, punto, rect de su primera línea, partida],
+    donde partida dice si sigue en la página siguiente."""
+    entradas = []
+    for i in paginas_del_indice(z, doc):
+        enlaces = sorted((l for l in doc[i].get_links() if l["kind"] == fitz.LINK_GOTO and l.get("page", -1) >= 0),
+                         key=lambda l: l["from"].y0)
+        propias = []
+        for l in enlaces:
+            punto = round(l["to"].y) if l.get("to") is not None else None
+            if propias and propias[-1][1:3] == [l["page"], punto] and l["from"].y0 - propias[-1][5] < 0.45 * LETRA:
+                propias[-1][5] = l["from"].y1
+            else:
+                propias.append([i, l["page"], punto, l["from"], False, l["from"].y1])
+        if entradas and propias and entradas[-1][0] == i - 1 and entradas[-1][1:3] == propias[0][1:3]:
+            entradas[-1][4] = True
+            propias.pop(0)
+        entradas += propias
+    return entradas
+
+
+def indice_huerfano(z: zipfile.ZipFile, doc, desde: int = 0):
+    """Primera entrada del índice partida entre dos páginas (el rótulo «Segunda parte» al pie y su
+    título arriba de la siguiente) o parte con capítulos que queda última de su página. (página,
+    (nav, posición de su <li>), y de su primera línea), o None."""
+    base, xhtmls = spine(z)
+    nav = next((n for n in xhtmls if n.endswith("nav.xhtml")), None)
+    if not nav:
+        return None
+    xhtml = z.read(nav).decode("utf-8")
+    lis = [(m.start(), m.group(1)) for m in re.finditer(r'<li class="([^"]*)"', xhtml)]
+    entradas = entradas_del_indice(z, doc)
+    if len(entradas) != len(lis):
+        return None  # no calzan una a una: mejor no mover nada
+    paginas = {e[0] for e in entradas}
+    for n, (pag, _, _, r, partida, _) in enumerate(entradas):
+        ultima = n + 1 == len(entradas) or entradas[n + 1][0] != pag
+        con_hijas = "parte" in lis[n][1].split() and n + 1 < len(lis) and "seccion" not in lis[n + 1][1] \
+            and xhtml.find("<ol>", lis[n][0], lis[n + 1][0]) != -1
+        primera = n == 0 or entradas[n - 1][0] != pag
+        if pag >= desde and (partida or (ultima and con_hijas and pag + 1 in paginas)) and not primera:
+            return pag, (nav, lis[n][0]), r.y0
+    return None
+
+
 def maquetar(epub: Path, hoja: tuple):
-    """Diagrama el EPUB y pasa a la página siguiente cada dibujo que MuPDF achicaría, de a uno y
-    en orden, porque cada uno corre los que vienen después."""
+    """Diagrama el EPUB y arregla, de a uno y en orden de página (cada arreglo corre lo que viene
+    después), dos defectos de MuPDF: el dibujo que achicaría por no caber en lo que queda de la
+    página y el título que dejaría solo al pie (en el texto o en el índice). En los dos casos un
+    bloque vacío completa la página y el dibujo o el título parte en la siguiente."""
     ancho, alto = hoja[0] * MM, hoja[1] * MM
+    pie = alto - 2 * LETRA
     z = zipfile.ZipFile(epub)
     dibujos = dibujos_con_ancho(z)
-    relleno, no_caben = {}, set()
+    titulos = titulos_del_libro(z)
+    relleno, no_caben, titulos_movidos = {}, set(), set()
     doc = fitz.open(str(epub))
     doc.layout(width=ancho, height=alto, fontsize=LETRA)
-    while dibujos:
-        pendientes = [a for a in achicados(doc, dibujos) if a[0] not in no_caben]
-        if not pendientes:
+    desde = 0
+    for _ in range(500):
+        problemas = []
+        pendientes = [a for a in achicados(doc, dibujos) if a[0] not in no_caben] if dibujos else []
+        if pendientes:
+            i, pag, r = pendientes[0]
+            nombre, pos = dibujos[i][:2]
+            clave = (nombre, z.read(nombre).decode("utf-8").rindex("<figure", 0, pos))
+            arriba = [b[3] for b in doc[pag].get_text("blocks") if b[6] == 0 and b[3] <= r.y0 + 1]
+            if not arriba or relleno.get(clave, (0,))[0] > alto / 2:
+                no_caben.add(i)  # parte arriba de la página y aun así se achica: es más alto que ella
+                continue
+            problemas.append((pag, clave, "div", pie - max(arriba)))
+        for buscar, etiqueta in ((indice_huerfano, "li"), (lambda z, d, s: titulos_huerfanos(z, d, titulos, s), "div")):
+            h = buscar(z, doc, desde)
+            if h and relleno.get(h[1], (0,))[0] > alto / 2:
+                desde = h[0] + 1  # ni con media página de relleno se mueve: se deja como está
+                h = None
+            if h:
+                problemas.append((h[0], h[1], etiqueta, pie - h[2] + 2))
+        if not problemas:
             break
-        i, pag, r = pendientes[0]
-        arriba = [b[3] for b in doc[pag].get_text("blocks") if b[6] == 0 and b[3] <= r.y0 + 1]
-        if not arriba or relleno.get(i, 0) > alto / 2:
-            no_caben.add(i)  # parte arriba de la página y aun así se achica: es más alto que ella
-            continue
+        pag, clave, etiqueta, inicial = min(problemas, key=lambda p: p[0])
+        desde = max(desde, pag)
+        if problemas.index(min(problemas, key=lambda p: p[0])) > 0 or not pendientes:
+            titulos_movidos.add(clave)
         # la primera vez, lo que queda hasta el margen inferior; si no alcanza, de a poco más
-        relleno[i] = relleno[i] + 3 if i in relleno else alto - 2 * LETRA - max(arriba)
-        doc = fitz.open(stream=con_relleno(z, dibujos, relleno), filetype="epub")
+        relleno[clave] = (relleno[clave][0] + 3 if clave in relleno else inicial, etiqueta)
+        doc = fitz.open(stream=con_relleno(z, relleno), filetype="epub")
         doc.layout(width=ancho, height=alto, fontsize=LETRA)
-    if relleno:
-        print(f"{epub.name}: {len(relleno)} dibujos pasan a la página siguiente para no achicarse")
+    n_dib = len(relleno) - len(titulos_movidos)
+    if n_dib:
+        print(f"{epub.name}: {n_dib} dibujos pasan a la página siguiente para no achicarse")
+    if titulos_movidos:
+        print(f"{epub.name}: {len(titulos_movidos)} títulos pasan a la página siguiente para no quedar solos al pie")
     if no_caben:
         print(f"{epub.name}: siguen achicados (no caben en una página): "
               + ", ".join(str(i + 1) for i in sorted(no_caben)))

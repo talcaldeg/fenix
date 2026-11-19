@@ -51,7 +51,9 @@ nav.indice ol ol { margin: 0.3em 0 0 1.2em; }
 nav.indice ol ol li { margin-top: 0.3em; }
 /* Parte: rótulo espaciado y título algo mayor; sus capítulos sin sangría, con aire entre ellos. */
 nav.indice li.parte > a > .rotulo { letter-spacing: 0.14em; }
-nav.indice li.parte > a > .titulo { font-size: 1.12em; }
+/* Solo la parte que agrupa capítulos: si el rótulo de parte encabeza un capítulo más de la lista
+   (La Araucana: «Primera parte» sobre «Canto I»), ese título va del tamaño de los demás. */
+nav.indice li.parte.agrupa > a > .titulo { font-size: 1.12em; }
 nav.indice li.parte > ol { margin-left: 0; }
 nav.indice li.parte > ol > li { margin-top: 0.9em; }
 /* Secciones de un capítulo: un punto más chicas y con interlínea corta, para que el capítulo mande. */
@@ -59,7 +61,7 @@ nav.indice li.seccion { font-size: 0.9em; line-height: 1.25; margin-top: 0.25em;
 """
 TITULO = {"es": "Índice", "en": "Contents"}
 ROTULO = re.compile(
-    r"^((?:Capítulo|Consideración|Libro|Parte|Punto|Tratado|Chapter|Book|Part)\s+(?:(?:[IVXLCDM]+|\d+)(?:-[A-Z])?|[a-záéíóúñ]+)"
+    r"^((?:Canto|Capítulo|Consideración|Libro|Parte|Punto|Tratado|Chapter|Book|Part)\s+(?:(?:[IVXLCDM]+|\d+)(?:-[A-Z])?|[a-záéíóúñ]+)"
     r"|(?:Primera|Segunda|Tercera|Cuarta|Quinta|Sexta|First|Second|Third|Fourth|Fifth)\s+(?:[Pp]arte|[Pp]art))"
     r"(?:\s*[.:]\s+|\s+[-–·]\s+|$)(.*)$", re.S)
 NUMERAL = re.compile(r"^([IVXLCDM]+|\d+)(?:\.\s+(.+))?$", re.S)
@@ -123,6 +125,8 @@ def nav_xhtml(entradas: list, idioma: str = "es", hojas=("estilo.css",), epub_ty
                 clases.insert(0, grupo)
                 if (i == ini and ini > 0) or (i == fin + 1):
                     clases.append("inicio")
+            if hijas and "parte" in clases:
+                clases.append("agrupa")
             sub = f"<ol>{lis(hijas, nivel + 1, 'parte' in clases)}</ol>" if hijas else ""
             partes.append(f'<li class="{" ".join(clases)}"><a href="{html.escape(href)}">{contenido}</a>{sub}</li>')
         return "".join(partes)
