@@ -4739,6 +4739,29 @@ window.FENIX = {
       parecidos: ["saint-exupery-el-principito", "irving-cuentos-de-la-alhambra", "swift-los-viajes-de-gulliver"]
     },
     {
+      id: "huidobro-mio-cid-campeador",
+      titulo: "Mío Cid Campeador",
+      autor: "Vicente Huidobro",
+      anio: "1929",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "La vida de Rodrigo Díaz de Vivar contada de nuevo por el gran poeta chileno de la vanguardia, desde su concepción en Vivar hasta su victoria después de muerto ante los muros de Valencia. Huidobro llamó a este libro «Hazaña»: una épica en prosa que mezcla la crónica, el Cantar y el romancero con anacronismos, humor y metáforas de vanguardia, donde el joven Rodrigo es «el inventor insuperado del muchacho yankee, del futbolista y del cow-boy» y Babieca es un semidiós. Pasan la afrenta y la venganza, el amor por Jimena, la jura de Santa Gadea, el destierro, la toma de Valencia y la muerte del héroe. La carta del comienzo va dirigida a Douglas Fairbanks, que le había pedido datos sobre el Cid.", "en": "The life of Rodrigo Díaz de Vivar retold by Chile's great avant-garde poet, from his conception in Vivar to his victory after death before the walls of Valencia. Huidobro called this book a «Hazaña» (a «Feat»): a prose epic that blends chronicle, the Cantar and the ballads with anachronisms, humour and avant-garde metaphors, where young Rodrigo is «the unsurpassed inventor of the Yankee boy, the footballer and the cowboy» and Babieca is a demigod. Here are the insult and the revenge, the love for Jimena, the oath at Santa Gadea, the exile, the taking of Valencia and the hero's death. The opening letter is addressed to Douglas Fairbanks, who had asked him for material on the Cid."},
+      porque: {"es": "Para quien conoce el Cid de la escuela y quiere verlo con otros ojos: una épica de vanguardia que trata la fe, la guerra y el amor con ironía y desmesura, en una prosa que se lee rápido y sorprende en cada página. Ten en cuenta que hay escenas sexuales explícitas, lenguaje soez y burlas a lo sagrado y a otros pueblos propias de su tiempo.", "en": "For those who know the Cid from school and want to see him with new eyes: an avant-garde epic that treats faith, war and love with irony and excess, in a prose that reads fast and surprises on every page. Bear in mind that it has explicit sexual scenes, coarse language and mockery of sacred things and of other peoples typical of its time."},
+      imagen: {"src": "img/portadas/huidobro-mio-cid-campeador.jpg", "credito": {"es": "Marcos Hiráldez Acosta, «La jura de Santa Gadea», 1864", "en": "Marcos Hiráldez Acosta, «The Oath at Santa Gadea», 1864"}, "url": "https://commons.wikimedia.org/wiki/File:Jura_de_Santa_Gadea.jpg"},
+      citas: [
+        "Babieca es un semidiós. Pastará sobre el Olimpo hasta el fin de los tiempos.",
+        "El Cid es la fe. Un minuto de duda y el Cid se acaba, se deshace, se convierte en polvo.",
+        "En mi vida entendí de versos, pero ahora que estoy muerto y que paso como entre dos sueños, veo más claro que tú, porque solo entre sueños se ve claro.",
+        "Durante largos años el Cid fue España, España fue el Cid."
+      ],
+      archivos: {"epub": "libros/huidobro-mio-cid-campeador.epub", "pdf": "libros/huidobro-mio-cid-campeador.pdf"},
+      fuente: {"texto": "Primera edición, Madrid, Compañía Ibero-Americana de Publicaciones, 1929, escaneada por la Biblioteca Nacional de Chile en Memoria Chilena (dominio público)", "url": "https://www.memoriachilena.gob.cl/602/w3-article-67184.html"},
+      delibris: null,
+      editorial: {"es": "Edición digital de Proyecto Fénix sobre la primera edición (Madrid, 1929), con ortografía actualizada, diálogos entre comillas y el texto cotejado página por página contra el escaneo. Se omiten las ilustraciones de Ontañón. Edición al cuidado de Tomás Alcalde.", "en": "Proyecto Fénix digital edition based on the first edition (Madrid, 1929), with updated spelling, dialogue in quotation marks and the text checked page by page against the scan. Ontañón's illustrations are omitted. Edited by Tomás Alcalde."},
+      parecidos: ["cervantes-don-quijote", "lope-el-caballero-de-olmedo", "irving-cuentos-de-la-alhambra"]
+    },
+    {
       id: "burnett-el-jardin-secreto",
       titulo: "El jardín secreto",
       autor: "Frances Hodgson Burnett",
