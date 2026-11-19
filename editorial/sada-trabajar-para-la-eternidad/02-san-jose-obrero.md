@@ -2,7 +2,7 @@
 
 ### Un hombre discreto y fidelísimo
 
-El mes de mayo, paradójicamente, no empieza con una fiesta de la Virgen, sino con una fiesta de san José. Y no es casualidad, porque todo está previsto en el plan de Dios. Es como si nos dijera: no separes a la familia; atiende a este hombre discreto pero fidelísimo. Fíjate en él: es el padre de la casa del Hijo de Dios encarnado y el patrono de la Iglesia universal. Le decimos en la oración que Dios lo hizo señor de su casa, de toda su casa. Podemos mirar su figura, aprender muchas cosas, crecer en nuestra devoción a él y sentirnos siempre de su familia.
+El mes de mayo, paradójicamente, no empieza con una fiesta de la Virgen, sino con una fiesta de san José. Y no es casualidad, porque todo está previsto en el plan de Dios. Es como si nos dijera: no separes a la familia; atiende a este hombre discreto pero fidelísimo. Fíjate en él: es el padre de la casa del Hijo de Dios encarnado y el patrono de la Iglesia universal; es nuestro padre y señor, como le decimos al comenzar cada rato de oración[^padreysenor]. Y en la oración a san José le decimos que Dios lo hizo señor de su casa, de toda su casa[^gn458]. Podemos mirar su figura, aprender muchas cosas, crecer en nuestra devoción a él y sentirnos siempre de su familia.
 
 ### El hombre fiel
 
@@ -10,7 +10,7 @@ Lo primero que podemos comprender es que san José cumple cabalmente el proyecto
 
 El cardenal Ratzinger, en una homilía sobre san José, cuenta que vio en casa de unos amigos un relieve de un retablo portugués de la época barroca, que representa la noche de la huida a Egipto[^1]. Se ve una tienda abierta y, junto a ella, un ángel. Dentro está José, durmiendo, pero vestido de peregrino y con botas altas, como las que se necesitan para una caminata difícil. A primera vista parece ingenuo que un viajero aparezca a la vez como durmiente. Pensándolo más a fondo, la imagen sugiere algo: un hombre no se duerme con las botas de peregrino puestas. José duerme, sí, pero a la vez está en disposición de oír la voz del ángel. Es lo que dice el Cantar de los Cantares: yo dormía, pero mi corazón estaba despierto[^2]. Reposan los sentidos exteriores, pero el fondo del alma sigue abierto para oír lo que resuene dentro de ella o se le diga desde arriba.
 
-Esa es la característica fundamental de este patrono nuestro: su alma siempre está abierta, siempre pronta a responder a Dios. José tuvo muchas razones para no ser fiel. En su vida de José hubo muchas cosas ilógicas, algunas terriblemente paradójicas y contradictorias. Quizá la más dura fue la prueba de ver que María esperaba un hijo, y de resolver abandonarla en secreto, siendo un hombre justo[^3]. Perder a María, perder la posibilidad de formar un hogar, la confusión: un dolor grandísimo. Y sin embargo fue fiel. De la Escritura, aplicada a él, bien se puede decir que el hombre fiel será muy alabado[^4].
+Esa es la característica fundamental de este patrono nuestro: su alma siempre está abierta, siempre pronta a responder a Dios. José tuvo muchas razones para no ser fiel. En su vida hubo muchas cosas ilógicas, algunas terriblemente paradójicas y contradictorias. Quizá la más dura fue la prueba de ver que María esperaba un hijo, y de resolver abandonarla en secreto, siendo un hombre justo[^3]. Perder a María, perder la posibilidad de formar un hogar, la confusión: un dolor grandísimo. Y sin embargo fue fiel. De la Escritura, aplicada a él, bien se puede decir que el hombre fiel será muy alabado[^4].
 
 ### El hijo del carpintero
 
@@ -58,6 +58,8 @@ Por eso, en la Misa podemos dar mucha importancia a la última elevación, cuand
 
 Que nos ayude san José, patrono de nuestra perseverancia, hoy que es la fiesta de san José obrero, a contemplarlo en esta realidad tan cercana y tan propia de nuestro espíritu: la santificación del trabajo ordinario.
 
+[^padreysenor]: Cf. la oración inicial, al comienzo de este libro: «San José, mi padre y señor».
+[^gn458]: Cf. Gn 45, 8, palabras de José de Egipto que la Iglesia aplica a san José: Dios lo hizo «como padre del rey y señor de toda su casa».
 [^1]: Cf. Joseph Ratzinger, homilía sobre san José (Roma, 19-III-1992), en *De la mano de Cristo*, Eunsa, Pamplona 1997, pp. 37-42.
 [^2]: Cf. Cant 5, 2.
 [^3]: Cf. Mt 1, 19.

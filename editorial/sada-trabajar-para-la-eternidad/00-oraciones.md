@@ -2,6 +2,8 @@
 
 ### Oración inicial
 
+> Por la señal de la Santa Cruz, de nuestros enemigos líbranos, Señor, Dios nuestro. En el nombre del Padre, y del Hijo, y del Espíritu Santo. Amén.
+>
 > Señor mío y Dios mío: creo firmemente que estás aquí, que me ves, que me oyes. Te adoro con profunda reverencia. Te pido perdón de mis pecados y gracia para hacer con fruto este rato de oración. Madre mía Inmaculada, San José, mi padre y señor, Ángel de mi guarda: interceded por mí.[^1]
 
 ### Oración final

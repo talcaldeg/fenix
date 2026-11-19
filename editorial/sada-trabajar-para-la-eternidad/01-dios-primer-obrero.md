@@ -46,7 +46,7 @@ Dios tiene una balanza especial, muy fina, como esas que pesan miligramos de oro
 
 San Josemaría decía que, de este modo, casi sin darte cuenta, llegarás a la oración contemplativa, y brotarán de tu alma más actos de amor, jaculatorias, acciones de gracias, actos de desagravio, comuniones espirituales. Y no solo en momentos dedicados a eso, sino «mientras atiendes tus obligaciones: al descolgar el teléfono, al subir a un medio de transporte, al cerrar o abrir una puerta, al pasar ante una iglesia, al comenzar una nueva tarea, al realizarla y al concluirla; todo lo referirás a tu Padre Dios»[^6].
 
-Es lo que pedimos en la liturgia: que toda nuestra oración y toda nuestra obra empiecen siempre en Él y por Él se concluyan. Cada vez que voy a empezar una tarea, puedo preguntarme: esto que voy a hacer, ¿está purificado en la intención? ¿Solo quiero la gloria de Dios y el bien de las almas? Lo voy a hacer por amor.
+Es lo que pedimos en la liturgia: que toda nuestra oración y toda nuestra obra empiecen siempre en Él y por Él se concluyan. Cada vez que voy a empezar una tarea, puedo preguntarme: esto que voy a hacer, ¿está purificado en la intención? ¿Solo quiero la gloria de Dios y el bien de las almas? ¿Lo voy a hacer por amor?
 
 Es bonito ver que muchos jugadores de fútbol en los países católicos se persignan al entrar a la cancha, y también al salir, como diciendo: ya terminó, y lo que terminó también es para Dios. Algunos, cuando meten un gol, se ponen de rodillas y señalan al cielo, como dándole gracias por haber alcanzado esa meta. También ellos, al comenzar, al realizar y al concluir, se acuerdan de Dios.
 
@@ -100,7 +100,7 @@ Entonces tu trabajo será un constante ejercicio de las virtudes teologales: cam
 
 Acude al modelo del obrero contemplativo, que es san José. Hablaba con el Niño mientras trabajaba en el taller. Llegaba la hora de cenar, guardaban y acomodaban las herramientas, se iban a cenar y seguían conversando con María. Una actividad no interrumpía a la otra, como ocurre cuando la vida se vuelve una cuadrícula cuyas casillas no se comunican. Todo tenía ese fondo común.
 
-Así nuestro trabajo se irá a la eternidad: cumpliendo la tarea que Dios ha asignado a cada uno, ahí donde estás, haciendo lo que haces, en lo que Él ha dispuesto para ti, para que completes la obra de la creación y colabores en la de la Redención. Te dice: tengo mucha confianza en ti, te he dejado poner las pinceladas de mi obra de arte; solo sigue lo que yo he previsto. Y lo que Dios ha previsto es que hagamos lo que debemos hacer, estando en lo que hacemos; es decir, que lo hagamos con amor de Dios.
+Así nuestro trabajo se irá a la eternidad: cumpliendo la tarea que Dios ha asignado a cada uno, ahí donde estás, haciendo lo que haces, en lo que Él ha dispuesto para ti, para que completes la obra de la creación y colabores en la de la Redención. Te dice: tengo mucha confianza en ti, te he dejado poner las pinceladas de mi obra de arte; solo sigue lo que yo he previsto. Y lo que Dios ha previsto es lo que pedía san Josemaría: «haz lo que debes y está en lo que haces»[^camino815]; es decir, que lo hagamos con amor de Dios.
 
 [^1]: Cf. Gn 2, 15.
 [^2]: 1 Co 15, 58.
@@ -111,3 +111,4 @@ Así nuestro trabajo se irá a la eternidad: cumpliendo la tarea que Dios ha asi
 [^7]: San Josemaría, *Camino*, n. 335.
 [^8]: San Josemaría, *Camino*, n. 813.
 [^9]: San Josemaría, *Conversaciones*, n. 114.
+[^camino815]: San Josemaría, *Camino*, n. 815.
