@@ -148,6 +148,10 @@ uno.
     palabras». El singular queda solo para un vocablo («esta palabra "odio"»), para la Palabra de
     Dios o el Verbo, para una orden («a la palabra de Cristo, las tinajas...») y dentro de una
     cita bíblica ya traducida («Esta palabra es dura»).
+19. **Nota del editor en el pasaje equivocado** (Marmion, nota sobre «de hecho o de deseo»
+    puesta en la conferencia I, 1, cuando la frase está en la de la Iglesia; reporte del
+    19-nov). La nota que comenta una expresión o frase va en el párrafo que la contiene: al
+    insertar las notas aprobadas, se busca lo que la nota cita entre comillas junto a su llamada.
 
 ## Glosario
 
