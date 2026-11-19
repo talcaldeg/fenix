@@ -4740,7 +4740,7 @@ window.FENIX = {
     },
     {
       id: "huidobro-mio-cid-campeador",
-      titulo: "Mío Cid Campeador",
+      titulo: "Mío Cid Campeador. Hazaña",
       autor: "Vicente Huidobro",
       anio: "1929",
       idioma: "es",
