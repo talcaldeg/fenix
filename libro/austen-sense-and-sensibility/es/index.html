@@ -193,6 +193,11 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     --letra:"EB Garamond",Georgia,"Iowan Old Style","Palatino Linotype",serif;
     /* Texturas en SVG incrustado (ruido de feTurbulence): grano de papel al ~5 % y veta de madera; no se descarga nada. */
     --papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    /* Fondo de página (20-nov-2026): papel verjurado en claro (manchas de tono, fibras a lo largo, corondeles
+       verticales y puntizones horizontales, como el papel de los libros antiguos) y cuero en oscuro. Tesela de 480 px. */
+    --fondo-papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.005' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45  0 0 0 0 .32  0 0 0 0 .15  0 0 0 .16 0'/%3E%3C/filter%3E%3Cfilter id='h'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.025 .5' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4  0 0 0 0 .3  0 0 0 0 .15  0 0 0 .08 0'/%3E%3C/filter%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .1 0'/%3E%3C/filter%3E%3Cpattern id='v' width='480' height='5' patternUnits='userSpaceOnUse'%3E%3Crect y='4' width='480' height='1' fill='%23705030' fill-opacity='.022'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' filter='url(%23h)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23v)'/%3E%3Cg fill='%23705030' fill-opacity='.03'%3E%3Crect x='40' width='1.5' height='480'/%3E%3Crect x='200' width='1.5' height='480'/%3E%3Crect x='360' width='1.5' height='480'/%3E%3C/g%3E%3C/svg%3E");
+    --fondo-cuero:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6  0 0 0 0 .42  0 0 0 0 .25  0 0 0 .09 0'/%3E%3C/filter%3E%3Cfilter id='o'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.5' numOctaves='1' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.3 -.62'/%3E%3C/filter%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .75  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23o)' opacity='.3'/%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
+    --fondo:var(--fondo-papel); --resplandor:rgba(214,140,40,.24);
     --papel-osc:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9  0 0 0 0 .75  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
     /* Nogal: tabla dibujada por herramientas/madera.py (anillos, poros y tono; empalma por los cuatro lados). Se tiñe
        con --tinte-* según dónde va y el modo. gen_estaticos.js antepone la base de cada página a url("../../../img/. */
@@ -215,6 +220,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
       --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
       --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
       --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
+      --fondo:var(--fondo-cuero); --resplandor:rgba(232,140,50,.17);
     }
   }
   :root[data-theme="dark"]{
@@ -226,6 +232,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
       --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
     --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
+    --fondo:var(--fondo-cuero); --resplandor:rgba(232,140,50,.17);
   }
   
   body{font-family:var(--letra); font-size-adjust:.46; font-variant-numeric:oldstyle-nums proportional-nums; font-kerning:normal;
