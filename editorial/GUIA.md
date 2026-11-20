@@ -152,6 +152,18 @@ uno.
     puesta en la conferencia I, 1, cuando la frase está en la de la Iglesia; reporte del
     19-nov). La nota que comenta una expresión o frase va en el párrafo que la contiene: al
     insertar las notas aprobadas, se busca lo que la nota cita entre comillas junto a su llamada.
+20. **Cita bíblica con la paráfrasis del autor** (Marmion, Jn 14,8-9: «Oh Maestro, muéstranos al
+    Padre, y no te pediremos nada más»; reporte del 20-nov). Todo pasaje bíblico entre comillas,
+    en el cuerpo o en las notas, va con la redacción de la Biblia de Navarra
+    (ewtn.com/es/biblia/{id}-{libro}/{cap}), aunque el autor use otra versión o parafrasee: él
+    prefiere la exactitud de Navarra a la fidelidad al autor. Con «ustedes» y la mayúscula de
+    Dios de Fénix; ajustada solo donde la Vulgata que el autor cita diga otra cosa. Vale también
+    para los resúmenes de capítulo que repiten la cita. Reemplaza la regla vieja «se traducen
+    del inglés que trae el libro».
+21. **«No... sino si» por «ne... que si»** (Marmion, «no seremos coherederos de Cristo sino si
+    somos sus hermanos»; reporte del 20-nov). El francés *ne... que si* (y el inglés *only if*) es
+    «solo... si»: «solo seremos coherederos de Cristo si somos sus hermanos». «No..., sino si»
+    queda solo cuando contrapone dos preguntas («la cuestión no es si..., sino si...»).
 
 ## Glosario
 
@@ -536,7 +548,7 @@ frases muy largas se pueden ordenar, nunca recortar.
   (Marmion, 15-nov-2026). Versos: en verso libre castellano que conserve el sentido y la imagen,
   cada verso en su línea dentro de `> `; la firma del poeta, si la hay, en la última línea del
   bloque.
-- Citas bíblicas: se traducen del inglés que trae el libro.
+- Citas bíblicas: con la redacción de la Biblia de Navarra, no la del libro (error 20).
 - Cursiva del original (`_texto_`) → `*texto*`. Las rayas largas del original pasan a comas,
   paréntesis, dos puntos o punto y coma, según el sentido.
 - Notas al pie: no se agregan; el revisor las pone después, verificadas.
