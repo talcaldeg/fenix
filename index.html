@@ -1616,7 +1616,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .ed p{margin:6px 0 10px; font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
   [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
   .etq.ed-fenix{color:var(--oro); font-weight:600}
-  .etq.exclusivo{background:var(--vino); color:#fff7ea; font-weight:700; letter-spacing:.03em}
+  /* «Solo en Fénix»: no usar la clase .exclusivo (es el bloque grande del inicio y la etiqueta heredaba su borde, margen y relleno) */
+  .etq.solo-fenix{background:transparent; border:1.5px solid var(--vino); color:var(--vino); font-weight:700; padding:1px 8px; font-size:12.5px; white-space:nowrap}
   .exclusivo{margin-top:34px; display:grid; grid-template-columns:150px 1fr; gap:24px; align-items:center; border:2px solid var(--oro); padding:24px}
   .exclusivo .portada{width:150px; cursor:pointer}
   .exclusivo h2{margin:6px 0 4px; font-size:30px; line-height:1.15}
@@ -2631,7 +2632,7 @@ function iniciar(){
       "x.fuente":"Source","x.enviando":"Sending…","x.enviado":"Thank you! We received your message.","x.fallo":"It could not be sent. Please try again in a moment.","x.verIn":"See in"
     },
     es: {
-      "x.leer":"Descargar","x.hojear":"Hojear las primeras páginas","x.enLinea":"Leer en línea","exc.etq":"Solo en Fénix","exc.eyebrow":"Exclusiva de Fénix · Inédito por escrito","exc.por":"Once meditaciones del P. Ricardo Sada Fernández","exc.gancho":"Hasta ahora existían solo en audio. Las pasamos al papel con autorización del autor: once ratos de oración para que tu trabajo de cada día, en la oficina, en la casa o en terreno, no se quede en cumplir. No las encontrarás por escrito en ninguna otra parte.","exc.boton":"Descargar gratis","exc.datos":"Gratis en EPUB y PDF · Con autorización del autor · Cada meditación con su audio original","x.escuchar":"Escuchar en línea","x.audios":"Las meditaciones, para escucharlas","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
+      "x.leer":"Descargar","x.hojear":"Hojear las primeras páginas","x.enLinea":"Leer en línea","exc.etq":"Solo en Fénix","exc.eyebrow":"Exclusiva de Fénix · De medita.cc","exc.por":"Once meditaciones del P. Ricardo Sada Fernández, de medita.cc","exc.gancho":"Si rezas con los audios de medita.cc, ya conoces esta voz. Hasta ahora estas meditaciones existían solo en audio; las pasamos al papel con autorización del autor: once ratos de oración para que tu trabajo de cada día, en la oficina, en la casa o en terreno, no se quede en cumplir. No las encontrarás por escrito en ninguna otra parte.","exc.boton":"Descargar gratis","exc.datos":"Gratis en EPUB y PDF · Con autorización del autor · Cada meditación con su audio original en medita.cc","x.escuchar":"Escuchar en línea","x.audios":"Las meditaciones, para escucharlas","x.web":"En línea","x.comprar":"Comprar","x.leido":"Leído","x.marcarLeido":"Marcar como leído","x.quitarLeido":"Marcar como no leído","x.fav":"Favorito","x.marcarFav":"Agregar a favoritos","x.quitarFav":"Quitar de favoritos",
       "x.porque":"Por qué leerlo","x.resumen":"Resumen","x.citas":"Citas","x.parecidos":"Libros parecidos",
       "f.libroVacio":"Ningún libro coincide. Puedes enviarlo tal como lo escribiste.",
       "hero.buscarAria":"Buscar un libro","hero.sinFenix":"Todavía no está en Fénix.","hero.buscarTodos":"Buscar «{q}» en todos los libros →",
@@ -2767,7 +2768,7 @@ function iniciar(){
     if (l.imagen) return `<div class="portada img ${esc(l.categoria)}" style="background-image:url('${esc(l.imagen.src)}')" role="img" aria-label="${esc(l.titulo)} · ${esc(l.imagen.credito[lang] || l.imagen.credito.es)}"><div class="t">${esc(l.titulo)}</div><div class="a">${esc(l.autor)}</div></div>`;
     return `<div class="portada ${esc(l.categoria)}"><div class="t">${esc(l.titulo)}</div><div class="f">✠</div><div class="a">${esc(l.autor)}</div></div>`;
   }
-  const etqExclusivo = l => l.id === D.exclusivoFenix ? `<span class="etq exclusivo">${esc(t("exc.etq"))}</span>` : "";
+  const etqExclusivo = l => l.id === D.exclusivoFenix ? `<span class="etq solo-fenix">${esc(t("exc.etq"))}</span>` : "";
   // Exclusiva de Fénix bajo el hero: novedad + exclusividad + beneficio + una cita, y dos acciones
   // (abrir la ficha para descargar y hojear). Se oculta en el idioma que no tiene el libro.
   function pintarExclusivo(){
@@ -2777,7 +2778,7 @@ function iniciar(){
       <div>
         <p class="eyebrow">${esc(t("exc.eyebrow"))}</p>
         <h2>${esc(l.titulo)}</h2>
-        <p class="por">${esc(t("exc.por"))}</p>
+        <p class="por">${esc(t("exc.por")).replace("medita.cc", `<a href="https://medita.cc/" target="_blank" rel="noopener">medita.cc</a>`)}</p>
         <p class="gancho">${esc(t("exc.gancho"))}</p>
         ${(l.citas || [])[1] ? `<blockquote>«${esc(l.citas[1])}»</blockquote>` : ""}
         <div class="acciones">

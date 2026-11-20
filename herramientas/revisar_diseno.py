@@ -368,6 +368,14 @@ def revisar(raiz, capturas=None):
             pg2.wait_for_timeout(300)
             if not pg2.evaluate("() => { const c = document.querySelector('#exclusivo'); return !!c && !c.hidden && c.offsetHeight > 0 && !!c.querySelector('a.btn.prim.destacado-abrir') && c.scrollWidth <= c.clientWidth + 1; }"):
                 fallas.append(f"exclusiva ({esquema}): falta o se ve mal el bloque «Exclusiva de Fénix» en el inicio")
+            # Él, 20-nov-2026: en la portada tiene que quedar claro que el libro es de medita.cc.
+            if not pg2.evaluate("() => { const c = document.querySelector('#exclusivo'); return !!c && !!c.querySelector('a[href^=\"https://medita.cc\"]') && /medita\\.cc/.test(c.querySelector('.eyebrow')?.textContent || ''); }"):
+                fallas.append(f"exclusiva ({esquema}): el bloque no dice que las meditaciones son de medita.cc (antetítulo y enlace)")
+            # Él, 20-nov-2026: la etiqueta «Solo en Fénix» heredó el estilo del bloque .exclusivo y salió
+            # como un botón enorme, separado del libro. Toda etiqueta de tarjeta es una píldora baja.
+            grandes = pg2.evaluate("() => [...document.querySelectorAll('.libro .etq')].filter(e => e.offsetHeight > 30 || e.offsetWidth > 220).map(e => e.textContent.trim()).slice(0, 3)")
+            if grandes:
+                fallas.append(f"etiquetas ({esquema}): etiqueta de tarjeta desproporcionada: {grandes}")
             pg2.goto(base + "?l=en")
             pg2.wait_for_load_state("networkidle")
             pg2.wait_for_timeout(300)
