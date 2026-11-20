@@ -16,7 +16,7 @@ Y crecía en gracia. Su alma humana, movida por el Espíritu Santo, en perfecta 
 
 Esos años de vida oculta, anteriores a su predicación, son nuestra especialidad, nuestro espíritu. San Josemaría decía que por muchas vueltas que les demos, nos llenamos de admiración, que siempre es poca, por esos treinta años de oscuridad, que son los que vivimos nosotros[^3]. No tenemos ningún secreto que guardar, pero no manifestamos hacia afuera nuestra entrega al servicio del Señor, como hizo Jesucristo en Nazaret. Nadie tenía idea de quién era, por eso sus paisanos se extrañaron tanto cuando vieron su sabiduría y sus milagros. Nuestra vida es la vida común y ordinaria de nuestros compañeros, como la suya: el hijo del carpintero[^4].
 
-Jesús no era pescador, ni agricultor, ni pastor. ¿Qué sentido tiene que haya sido artesano? Quizá este: trabajaba con sus manos, transformaba la realidad con sus manos, transformaba los elementos de la tierra, y con eso los iba santificando. Jean Guitton lo decía así: Jesús eleva cada parcela de la tierra hasta la poesía pura. Esta es la maravilla de la Encarnación, y es también el fundamento de la santificación del trabajo: lo terrenal, lo material y lo humano quedaron entreverados con lo divino, con lo trascendente y con lo eterno por el Verbo encarnado.
+Jesús no era pescador, ni agricultor, ni pastor. ¿Qué sentido tiene que haya sido artesano? Quizá este: trabajaba con sus manos, transformaba la realidad con sus manos, transformaba los elementos de la tierra, y con eso los iba santificando. Jean Guitton lo decía así: Jesús eleva cada parcela de la tierra hasta la poesía pura[^gui]. Esta es la maravilla de la Encarnación, y es también el fundamento de la santificación del trabajo: lo terrenal, lo material y lo humano quedaron entreverados con lo divino, con lo trascendente y con lo eterno por el Verbo encarnado.
 
 El mismo autor escribe que, si considera que Dios bebió el agua del torrente, que Dios posó sus pies en el polvo del camino y que Dios miró la luna, ya no puede mirar la luna, pisar el suelo o comer un pedazo de pan de la misma manera. Todas esas cosas banales de la tierra han sido transfiguradas por el uso que Dios hizo de ellas. Es como cuando vemos con qué cuidado los fieles guardan un objeto que perteneció a un santo, el escritorio de santa Teresa o el calzado del cura de Ars: comprendemos que un objeto de uso cotidiano lleve el sello de quien lo usó. Pues Jesús transfiguró la tierra porque la pisó con sus pies, el aire porque lo respiró, el agua porque metió en ella sus manos, el fuego porque sin duda lo encendió todas las noches, y el sol, porque lo contemplaba desde la aurora y lo veía desvanecerse en el crepúsculo.
 
@@ -66,6 +66,7 @@ Yo también voy a hacer muchos collares para la Virgen. Voy a tener esta alma de
 [^2]: Concilio Vaticano II, constitución pastoral *Gaudium et spes*, n. 22.
 [^3]: Cf. San Josemaría, *Es Cristo que pasa*, n. 14.
 [^4]: Cf. Mt 13, 55.
+[^gui]: Cf. Jean Guitton. El autor lo cita de memoria; no hemos hallado el pasaje en las obras de Guitton.
 [^5]: Cf. San Josemaría, *Camino*, n. 813.
 [^6]: San Juan Pablo II, poema «La cantera», citado en *Don y Misterio*, cap. I.
 [^7]: San Josemaría, *Cartas I*, carta n. 3, n. 4.
