@@ -356,7 +356,9 @@ const pieDePagina = (lang, B) => {
 // enlazaran en HTML plano): la sección y el bloque «Más en <sección>» de cada ficha les dan enlaces internos.
 const ORDEN_CAT = ["lectura", "novela", "teatro", "poesia", "ensayo"];
 const rutaCat = (cat, lang) => `categoria/${cat}/${lang === "en" ? "en/" : ""}`;
-const enCategoria = (cat, lang) => PAGINAS.filter(p => p.idioma === lang && p.categoria === cat);
+// Los libros de la editorial Fénix (`editorial` en datos.js) van siempre primero; el resto, en el orden de datos.js.
+const editorialPrimero = xs => [...xs.filter(p => p.editorial), ...xs.filter(p => !p.editorial)];
+const enCategoria = (cat, lang) => editorialPrimero(PAGINAS.filter(p => p.idioma === lang && p.categoria === cat));
 const CATS = ORDEN_CAT.flatMap(cat => ["es", "en"].map(lang => ({ cat, lang }))).filter(c => enCategoria(c.cat, c.lang).length);
 const hayCat = (cat, lang) => CATS.some(c => c.cat === cat && c.lang === lang);
 // Los seis que siguen a este libro en su sección (en el orden de datos.js, dando la vuelta): así cada
@@ -391,7 +393,7 @@ function paginaLibro(l){
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
   ];
   const tieneArchivos = Object.keys(l.archivos || {}).length > 0;
-  const parecidos = (l.parecidos || []).map(porId).filter(p => p && visibleEn(vista(p, lang), lang)).map(p => vista(p, lang));
+  const parecidos = editorialPrimero((l.parecidos || []).map(porId).filter(p => p && visibleEn(vista(p, lang), lang)).map(p => vista(p, lang)));
   const d = l.delibris;
   const conCat = hayCat(l.categoria, lang);
   const urlCat = conCat ? B + rutaCat(l.categoria, lang) : null;
@@ -885,7 +887,7 @@ const ldInicio = {
       mainEntity: {
         "@type": "ItemList",
         numberOfItems: D.libros.length,
-        itemListElement: D.libros.map((l, i) => ({ "@type": "ListItem", position: i + 1, url: urlLibro(l), name: l.titulo }))
+        itemListElement: editorialPrimero(D.libros).map((l, i) => ({ "@type": "ListItem", position: i + 1, url: urlLibro(l), name: l.titulo }))
       }
     }
   ]

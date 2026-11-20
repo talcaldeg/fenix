@@ -282,6 +282,19 @@ def revisar(raiz, capturas=None):
                 if u.count("/libro/") > 1:
                     fallas.append(f"compartir ({paso}): enlace con la ruta repetida {u}")
         pg.close()
+        # Editorial primero (él, 20-nov-2026): en la biblioteca, y en toda la web, los libros de la
+        # editorial Fénix (`editorial` en datos.js) van antes que cualquier otro.
+        for sufijo in ("", "?l=en"):
+            pg = nav.new_page(viewport={"width": 1280, "height": 900})
+            pg.goto(f"{base}{sufijo}#biblioteca")
+            pg.wait_for_load_state("networkidle")
+            # La marca sale de la etiqueta «Editorial Fénix» de cada fila: `editorial` puede venir de la versión del idioma.
+            r = pg.evaluate("""() => { const marca = [...document.querySelectorAll('#catalogo .fila[data-id]')].map(e => !!e.querySelector('.ed-fenix'));
+                const n = marca.filter(Boolean).length;
+                return { n, ok: marca.slice(0, n).every(Boolean) }; }""")
+            if r["n"] and not r["ok"]:
+                fallas.append(f"biblioteca{sufijo}: los libros de la editorial Fénix no van todos al principio")
+            pg.close()
         # Como Netflix (4-nov-2026): lo abierto para leer va a «Seguir leyendo» y lo marcado a «Tus favoritos»
         # en la portada; la ficha abierta desde otra no repite en Parecidos el libro del que se vino.
         pg = nav.new_page(viewport={"width": 390, "height": 844})
