@@ -371,6 +371,9 @@ def revisar(raiz, capturas=None):
             # Él, 20-nov-2026: en la portada tiene que quedar claro que el libro es de medita.cc.
             if not pg2.evaluate("() => { const c = document.querySelector('#exclusivo'); return !!c && !!c.querySelector('a[href^=\"https://medita.cc\"]') && /medita\\.cc/.test(c.querySelector('.eyebrow')?.textContent || ''); }"):
                 fallas.append(f"exclusiva ({esquema}): el bloque no dice que las meditaciones son de medita.cc (antetítulo y enlace)")
+            # Él, 20-nov-2026: fondo de papel verjurado (claro) o cuero (oscuro) y resplandor del fénix bajo el hero.
+            if not pg2.evaluate("() => { const b = getComputedStyle(document.body).backgroundImage; const r = document.querySelector('#v-inicio > .resplandor'); return b.includes('svg') && b.includes('radial-gradient') && !!r && getComputedStyle(r, '::before').backgroundImage.includes('radial-gradient'); }"):
+                fallas.append(f"fondo ({esquema}): falta la textura de papel o cuero, o el resplandor del fénix bajo el hero")
             # Él, 20-nov-2026: la etiqueta «Solo en Fénix» heredó el estilo del bloque .exclusivo y salió
             # como un botón enorme, separado del libro. Toda etiqueta de tarjeta es una píldora baja.
             grandes = pg2.evaluate("() => [...document.querySelectorAll('.libro .etq')].filter(e => e.offsetHeight > 30 || e.offsetWidth > 220).map(e => e.textContent.trim()).slice(0, 3)")
