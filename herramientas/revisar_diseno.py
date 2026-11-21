@@ -118,9 +118,16 @@ def revisar(raiz, capturas=None):
                     fallas.append(f"{donde}: falta en el pie el auspicio de Verum Data con enlace a verumdata.cl")
                 elif not aus["img"]:
                     fallas.append(f"{donde}: el auspicio de Verum Data no muestra su ícono (img/verum-data.svg)")
-                # El pie enlaza la cuenta de Instagram de Fénix en todas las páginas (20-nov-2026).
-                if not pg.evaluate("""() => [...document.querySelectorAll('footer a[href*="instagram.com/proyectofenixcl"]')].some(a => a.offsetParent)"""):
-                    fallas.append(f"{donde}: falta en el pie el enlace visible a Instagram (proyectofenixcl)")
+                # El pie enlaza la cuenta de Instagram de Fénix en todas las páginas, con su ícono (20-nov-2026).
+                if not pg.evaluate("""() => [...document.querySelectorAll('footer a[href*="instagram.com/proyectofenixcl"]')]
+                        .some(a => a.offsetParent && (s => s && s.getBoundingClientRect().width >= 12)(a.querySelector('svg')))"""):
+                    fallas.append(f"{donde}: falta en el pie el enlace visible a Instagram (proyectofenixcl) con su ícono")
+                # El pie va en columnas (marca, Biblioteca, Proyecto) con franja de base, igual en todas las páginas
+                # (20-nov-2026, «muy básico»): no vuelve a ser una lista de líneas sueltas.
+                if not pg.evaluate("""() => { const f = document.querySelector('footer');
+                        return !!f && f.querySelectorAll('.pie-tit').length >= 2 && !!f.querySelector('.pie-logo img')
+                            && !!f.querySelector('.pie-base') && f.querySelectorAll('.pie-col a').length >= 6; }"""):
+                    fallas.append(f"{donde}: el pie no tiene sus columnas (marca, Biblioteca, Proyecto) ni la franja de base")
                 # Madera (9-nov-2026, «la madera está medio falsa»): la cabecera y el pie pintan la tabla de nogal de
                 # herramientas/madera.py, y la imagen carga también desde las páginas de libro (su ruta lleva la base).
                 mad = pg.evaluate("""() => { const cargo = performance.getEntriesByType('resource')

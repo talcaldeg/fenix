@@ -125,7 +125,8 @@ const TX = {
     moralNota: "Tomada de delibris.org, un sitio de reseñas (no es un juicio oficial de la Iglesia): de 1 a 6 círculos; 6 es «Sin inconvenientes».",
     verEn: "Ver en delibris.org", parecidos: "Libros parecidos", fuente: "Fuente", portada: "Portada", dominio: "dominio público, Wikimedia Commons",
     auspicio: "Con el auspicio de",
-    pie: "Proyecto Fénix · Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
+    pie: "Solo publicamos obras de dominio público o con permiso de difusión; las demás se enlazan a donde se pueden leer en línea o comprar.",
+    lema: "Biblioteca gratuita de grandes libros de todas las épocas, sin publicidad ni registro.", tBiblioteca: "Biblioteca", tProyecto: "Proyecto",
     de: "de", tema: "Cambiar a modo claro u oscuro", buscar: "Buscar un libro", buscarPh: "Busca un título o un autor", buscarBtn: "Buscar", edFenix: "Edición Fénix", preparado: "Preparado por", sello: "Recomendado por Fénix",
     y: "y", ebook: "ebook", menu: "Menú", otroIdioma: "English", tambien: "También en inglés",
     compartir: "Compartir", copiado: "Enlace copiado. Pégalo donde quieras.", copiaEnlace: "Copia este enlace:",
@@ -151,7 +152,8 @@ const TX = {
     moralNota: "Taken from delibris.org, a review site (not an official judgement of the Church): from 1 to 6 circles; 6 means «No drawbacks».",
     verEn: "See on delibris.org", parecidos: "Similar books", fuente: "Source", portada: "Cover", dominio: "public domain, Wikimedia Commons",
     auspicio: "Sponsored by",
-    pie: "Proyecto Fénix · We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
+    pie: "We only publish public-domain works or works with permission to share; others link to where they can be read online or bought.",
+    lema: "A free library of great books from every age, with no ads and no sign-up.", tBiblioteca: "Library", tProyecto: "Project",
     de: "of", tema: "Switch between light and dark mode", buscar: "Search for a book", buscarPh: "Search for a title or an author", buscarBtn: "Search", edFenix: "Fénix edition", preparado: "Prepared by", sello: "Recommended by Fénix",
     y: "and", ebook: "ebook", menu: "Menu", otroIdioma: "Español", tambien: "Also in Spanish",
     compartir: "Share", copiado: "Link copied. Paste it wherever you like.", copiaEnlace: "Copy this link:",
@@ -209,7 +211,10 @@ function oferta(l, lang){
 const textoDelibris = (d, lang) => { const e = ESCALA_DELIBRIS[d.genero] || ESCALA_DELIBRIS.Literatura; return (e[lang] || e.es)[d.valor - 1]; };
 
 // Paleta, letra y texturas de biblioteca: el bloque PALETA:inicio/fin de index.html, tal cual (claro, oscuro y tema forzado).
-const PALETA = (leer("index.html").match(/\/\* PALETA:inicio \*\/([\s\S]*?)\/\* PALETA:fin \*\//) || [])[1];
+// Estilos del pie, los mismos de la portada (bloque PIE de index.html).
+const PIE_CSS = (leer("index.html").match(/\/\* PIE:inicio[^*]*\*\/([\s\S]*?)\/\* PIE:fin \*\//) || [])[1];
+if (!PIE_CSS) throw new Error("index.html no tiene el bloque /* PIE:inicio */ ... /* PIE:fin */");
+const PALETA =(leer("index.html").match(/\/\* PALETA:inicio \*\/([\s\S]*?)\/\* PALETA:fin \*\//) || [])[1];
 if (!PALETA){ console.error("index.html no tiene el bloque /* PALETA:inicio */ ... /* PALETA:fin */"); process.exit(1); }
 // La letra de libro (EB Garamond), igual que en index.html.
 const FUENTES = (leer("index.html").match(/<!-- FUENTES:inicio -->[\s\S]*?<!-- FUENTES:fin -->/) || [])[0];
@@ -264,9 +269,7 @@ const ESTILO = `
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
   ul.parecidos{padding-left:20px}
   ul.parecidos li{margin:4px 0}
-  footer{border-top:1px solid var(--line); padding:22px 0 30px; color:var(--muted); font:14px/1.5 system-ui,sans-serif}
-  footer nav{display:flex; flex-wrap:wrap; gap:4px 18px; margin-top:8px} footer nav a{color:var(--vino)}
-  footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
+${PIE_CSS}
   /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
   nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
   nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
@@ -348,7 +351,17 @@ const cabecera = (lang, B, otraUrl) => {
 };
 const pieDePagina = (lang, B) => {
   const x = TX[lang], inicio = B + (lang === "en" ? "?l=en" : "");
-  return `<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}<a href="${INSTAGRAM}" target="_blank" rel="noopener">Instagram</a></nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>`;
+  // Mismo pie que la portada (index.html): marca con Instagram, Biblioteca, Proyecto y la franja de base.
+  const secs = CATS.filter(c => c.lang === lang).map(c => `<li><a href="${B}${rutaCat(c.cat, lang)}">${esc(x.cat[c.cat])}</a></li>`).join("");
+  const proy = ["contacto", "error", "dona"].map(v => `<li><a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a></li>`).join("");
+  return `<footer>
+  <div class="wrap pie-cols">
+    <div class="pie-marca"><a class="pie-logo" href="${inicio}"><img src="${B}img/favicon.svg" alt="" width="34" height="34">Proyecto Fénix</a><p>${esc(x.lema)}</p>${IG_LINK}</div>
+    <nav class="pie-col" aria-label="${esc(x.tBiblioteca)}"><p class="pie-tit">${esc(x.tBiblioteca)}</p><ul>${secs}</ul></nav>
+    <nav class="pie-col" aria-label="${esc(x.tProyecto)}"><p class="pie-tit">${esc(x.tProyecto)}</p><ul>${proy}</ul></nav>
+  </div>
+  <div class="wrap pie-base"><p>${esc(x.pie)}</p><p>${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></p></div>
+</footer>`;
 };
 
 // Secciones (categoria/<cat>/ y categoria/<cat>/en/): una página por categoría e idioma con un enlace a
@@ -578,7 +591,7 @@ ${m.html.replace(/@@RAIZ@@/g, B)}
     <p class="ayuda">${esc(x.ayuda)}</p>
   </div>
 </article></main>
-<footer><div class="wrap">${esc(x.pie)} · <a href="${INSTAGRAM}" target="_blank" rel="noopener">Instagram</a></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
+${pieDePagina(lang, B)}
 ${SCRIPT_TEMA}
 <script>
 // Si se llegó desde la ficha del sitio, Volver regresa ahí (con la biblioteca detrás) en vez de abrir la página suelta.
@@ -598,6 +611,8 @@ ${MEDICION}
 // en el navegador y desaparece del HTML en la siguiente regeneración. La banda del inicio usa la misma fecha.
 // Cuenta de Instagram de Fénix (abierta el 20-nov-2026); va en el pie de todas las páginas.
 const INSTAGRAM = "https://www.instagram.com/proyectofenixcl/";
+// Ícono de línea (el mismo de verumdata.cl), en currentColor para que tome el dorado del pie en claro y oscuro.
+const IG_LINK = `<a class="pie-red" href="${INSTAGRAM}" target="_blank" rel="noopener" aria-label="Proyecto Fénix en Instagram"><svg width="18" height="18"viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.3" cy="6.7" r="1.1" fill="currentColor" stroke="none"/></svg>@proyectofenixcl</a>`;
 const CAMPANA_URL ="https://catapultame.com/api/lanzamientos/coleccion-fenix/";
 const CAMPANA_HASTA = "2026-12-15T02:59:00Z";
 // Los cuatro libros de la Colección Fénix impresa: su ficha (la estática y la de index.html) avisa de la
@@ -701,7 +716,7 @@ ${FUENTES}
   ${donar ? "" : `<p class="meta">${esc(t.pendiente)}</p>`}
   <div class="botones"><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
 </div></main>
-<footer><div class="wrap">${esc(x.pie)} · <a href="${INSTAGRAM}" target="_blank" rel="noopener">Instagram</a></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
+${pieDePagina(lang, B)}
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${MEDICION}
@@ -913,10 +928,10 @@ const conCatalogo = INDEX.includes("<!-- CATALOGO:inicio")
 if (!conCatalogo.includes("<!-- CATALOGO:inicio")) throw new Error("index.html no tiene <main> para el catálogo");
 // Pie de la portada: enlaces visibles a las secciones (el catálogo de arriba va en <noscript> y Google, que
 // ejecuta JavaScript, puede no contarlo). Una línea por idioma; la portada muestra la del idioma activo.
-const lineaSecciones = lang => `<span class="sec-${lang}">${lang === "en" ? "Sections" : "Secciones"}: ${CATS.filter(c => c.lang === lang).map(c => `<a href="${rutaCat(c.cat, lang)}">${esc(TX[lang].cat[c.cat])}</a>`).join(" · ")}</span>`;
+const lineaSecciones = lang => `<ul class="sec-${lang}">${CATS.filter(c => c.lang === lang).map(c => `<li><a href="${rutaCat(c.cat, lang)}">${esc(TX[lang].cat[c.cat])}</a></li>`).join("")}</ul>`;
 const secciones = `<!-- SECCIONES:inicio - lo genera herramientas/gen_estaticos.js desde datos.js; no editar a mano -->
   <style>html[lang="en"] .sec-es, html:not([lang="en"]) .sec-en{display:none}</style>
-  <nav class="wrap" style="margin-top:6px" aria-label="Secciones">${lineaSecciones("es")}${lineaSecciones("en")}</nav>
+  ${lineaSecciones("es")}${lineaSecciones("en")}
   <!-- SECCIONES:fin -->`;
 if (!/<!-- SECCIONES:inicio[\s\S]*?<!-- SECCIONES:fin -->/.test(conCatalogo)) throw new Error("index.html no tiene las marcas SECCIONES:inicio y SECCIONES:fin en el pie");
 const conSecciones = conCatalogo.replace(/<!-- SECCIONES:inicio[\s\S]*?<!-- SECCIONES:fin -->/, secciones);
