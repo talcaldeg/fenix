@@ -251,9 +251,22 @@ def bajar_de_gmail(query: str) -> list[Path]:
     print(f"{len(rutas)} paquetes de {len(df)} correos.")
     # Quién mandó y si ya se le respondió alguna entrega: así la bienvenida a uno nuevo no parte
     # buscando el hilo y el correo anterior (5-nov-2026, diez llamadas solo para eso).
-    for de in df["de"].drop_duplicates():
+    # Lo que llega por el formulario viene de FormSubmit: el remitente real es su campo «email»
+    # (vacío si no lo dio). Sin esto, FormSubmit salía como PRIMERA ENTREGA (20-nov-2026).
+    remitentes = []
+    for _, fila in df.iterrows():
+        de = fila["de"]
+        if "formsubmit.co" in de:
+            campo = re.search(r"\bemail\s+([\w.+-]+@[\w.-]+)", g.leer(fila["id"]))
+            de = f"{campo.group(1)} (formulario)" if campo else "formulario sin correo: no hay a quién responder"
+        if de not in remitentes:
+            remitentes.append(de)
+    for de in remitentes:
         correo = re.search(r"[\w.+-]+@[\w.-]+", de)
-        previas = len(g.buscar(f'in:sent to:{correo.group(0)} subject:"Fénix - encuadernador"', maximo=5)) if correo else 0
+        if not correo:
+            print(f"De: {de}")
+            continue
+        previas = len(g.buscar(f'in:sent to:{correo.group(0)} subject:"Fénix - encuadernador"', maximo=5))
         print(f"De: {de} - {'PRIMERA ENTREGA: lleva bienvenida' if not previas else f'{previas} entrega(s) ya respondidas'}")
     return rutas
 
