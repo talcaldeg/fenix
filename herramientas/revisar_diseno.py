@@ -407,6 +407,21 @@ def revisar(raiz, capturas=None):
             grandes = pg2.evaluate("() => [...document.querySelectorAll('.libro .etq')].filter(e => e.offsetHeight > 30 || e.offsetWidth > 220).map(e => e.textContent.trim()).slice(0, 3)")
             if grandes:
                 fallas.append(f"etiquetas ({esquema}): etiqueta de tarjeta desproporcionada: {grandes}")
+            # Auditoría de color, 20-nov-2026: el hero era un negro frío (#0f0d10) en una paleta cálida, y de noche
+            # EPUB, «Recomendado» y «Edición Fénix» iban los tres en dorado. Hero cálido (rojo > azul) y cada
+            # etiqueta de su color.
+            if not pg2.evaluate("() => { const m = getComputedStyle(document.querySelector('.hero')).backgroundColor.match(/\\d+/g).map(Number); return m[0] > m[2]; }"):
+                fallas.append(f"hero ({esquema}): el fondo del hero es frío; va en negro cálido como el resto de la paleta")
+            pg2.goto(base + "#biblioteca")  # las filas de la biblioteca traen las tres etiquetas
+            pg2.wait_for_load_state("networkidle")
+            pg2.wait_for_timeout(300)
+            colores = pg2.evaluate("""() => { const c = s => { const e = document.querySelector(s); return e ? getComputedStyle(e) : null; };
+                const ep = c('.etq.epub'), se = c('.etq.sello'), ed = c('.etq.ed-fenix');
+                return ep && se && ed ? [ep.backgroundColor, se.color, ed.color] : null; }""")
+            if not colores:
+                fallas.append(f"etiquetas ({esquema}): la biblioteca no muestra EPUB, «Recomendado» y «Edición Fénix»")
+            elif len(set(colores)) < 3:
+                fallas.append(f"etiquetas ({esquema}): EPUB, «Recomendado» y «Edición Fénix» comparten color: {colores}")
             pg2.goto(base + "?l=en")
             pg2.wait_for_load_state("networkidle")
             pg2.wait_for_timeout(300)

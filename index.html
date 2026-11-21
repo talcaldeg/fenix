@@ -1274,13 +1274,17 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
 <style>
   /* Paleta de biblioteca: papel crema y tinta negro azulada para leer; nogal en la cabecera, las repisas y el pie;
      latón en filetes y adornos. De noche, la sala a media luz: madera oscura y luz cálida de lámpara arriba.
-     Contraste medido (WCAG): tinta 13,9:1, gris sepia 7,3:1, vino 9:1, latón 5,6:1; en oscuro 14,1 / 7,9 / 7,1 / 8,1.
+     Contraste medido (WCAG): tinta 13,9:1, gris sepia 7,3:1, vino 9:1, latón 5,6:1; en oscuro 14,1 / 7,9 / 5,4 / 8,1.
+     De noche el vino es cobre (#d4875a): el rosado #e08a8a chocaba con el latón y el nogal.
      gen_estaticos.js copia este bloque (PALETA) en las páginas de cada libro. */
   /* PALETA:inicio */
   :root{
     color-scheme: light dark;
     --bg:#f6f0e1; --bg2:#ede4cf; --card:#fbf7ec; --line:#dccfb3; --ink:#1e2230; --muted:#5a4c3e;
     --vino:#7a1f2b; --oro:#7a5a14; --acento:#7a1f2b; --acento-ink:#fbf3e2; --chip:#ebe0c8;
+    /* Etiquetas de tarjeta: EPUB lleno, «Recomendado» con filete de --oro y «Edición Fénix» en --ed, cada una de su
+       color, de día y de noche (de noche el EPUB va en pergamino: todo en dorado no dejaba ver cuál era cuál). */
+    --epub:var(--acento); --epub-ink:var(--acento-ink); --ed:#8a3a12;
     --ok:#2f6b3a; --sombra:0 1px 2px rgba(60,40,20,.12), 0 10px 24px -12px rgba(60,40,20,.35);
     --c-lectura:#6b1d24; --c-oracion:#2c4a6e; --c-novela:#3f5a2e;
     --c-teatro:#5a3a6b; --c-poesia:#7a4a1f; --c-ensayo:#3d4a52;
@@ -1289,9 +1293,10 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     --letra:"EB Garamond",Georgia,"Iowan Old Style","Palatino Linotype",serif;
     /* Texturas en SVG incrustado (ruido de feTurbulence): grano de papel al ~5 % y veta de madera; no se descarga nada. */
     --papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .11 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
-    /* Fondo de página (20-nov-2026): papel verjurado en claro (manchas de tono, fibras a lo largo, corondeles
-       verticales y puntizones horizontales, como el papel de los libros antiguos) y cuero en oscuro. Tesela de 480 px. */
-    --fondo-papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.005' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45  0 0 0 0 .32  0 0 0 0 .15  0 0 0 .16 0'/%3E%3C/filter%3E%3Cfilter id='h'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.025 .5' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4  0 0 0 0 .3  0 0 0 0 .15  0 0 0 .08 0'/%3E%3C/filter%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .1 0'/%3E%3C/filter%3E%3Cpattern id='v' width='480' height='5' patternUnits='userSpaceOnUse'%3E%3Crect y='4' width='480' height='1' fill='%23705030' fill-opacity='.022'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' filter='url(%23h)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23v)'/%3E%3Cg fill='%23705030' fill-opacity='.03'%3E%3Crect x='40' width='1.5' height='480'/%3E%3Crect x='200' width='1.5' height='480'/%3E%3Crect x='360' width='1.5' height='480'/%3E%3C/g%3E%3C/svg%3E");
+    /* Fondo de página (20-nov-2026): papel verjurado en claro (manchas de tono, fibras a lo largo y puntizones
+       horizontales, como el papel de los libros antiguos) y cuero en oscuro. Tesela de 480 px. Sin corondeles: filetes
+       verticales rectos y parejos cada 160 px se leían como rayas de papel mural, no como papel. */
+    --fondo-papel:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.005' numOctaves='3' seed='7' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45  0 0 0 0 .32  0 0 0 0 .15  0 0 0 .16 0'/%3E%3C/filter%3E%3Cfilter id='h'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.025 .5' numOctaves='2' seed='11' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .4  0 0 0 0 .3  0 0 0 0 .15  0 0 0 .08 0'/%3E%3C/filter%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .35  0 0 0 0 .25  0 0 0 0 .12  0 0 0 .1 0'/%3E%3C/filter%3E%3Cpattern id='v' width='480' height='5' patternUnits='userSpaceOnUse'%3E%3Crect y='4' width='480' height='1' fill='%23705030' fill-opacity='.022'/%3E%3C/pattern%3E%3Crect width='100%25' height='100%25' filter='url(%23h)'/%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3Crect width='100%25' height='100%25' fill='url(%23v)'/%3E%3C/svg%3E");
     --fondo-cuero:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='480' height='480'%3E%3Cfilter id='m'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.006' numOctaves='3' seed='4' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .6  0 0 0 0 .42  0 0 0 0 .25  0 0 0 .09 0'/%3E%3C/filter%3E%3Cfilter id='o'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.5' numOctaves='1' seed='5' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 1.3 -.62'/%3E%3C/filter%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1  0 0 0 0 .9  0 0 0 0 .75  0 0 0 .08 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23o)' opacity='.55'/%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
     --fondo:var(--fondo-papel); --resplandor:rgba(214,140,40,.24);
     --papel-osc:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='p'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' seed='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 .9  0 0 0 0 .75  0 0 0 .05 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23p)'/%3E%3C/svg%3E");
@@ -1309,24 +1314,26 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (prefers-color-scheme: dark){
     :root:not([data-theme="light"]){
       --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
-      --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+      --vino:#d4875a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+    --epub:#d8c6a0; --epub-ink:#1b1206; --ed:var(--vino);
       --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
       --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
       --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
       --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
-      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
+      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.18);
       --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
       --fondo:var(--fondo-cuero); --resplandor:rgba(232,140,50,.3);
     }
   }
   :root[data-theme="dark"]{
     --bg:#1b1410; --bg2:#211913; --card:#241a14; --line:#3d2f24; --ink:#ece2cc; --muted:#b8a98a;
-    --vino:#e08a8a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+    --vino:#d4875a; --oro:#d9a441; --acento:#d9a441; --acento-ink:#1b1206; --chip:#30241b;
+    --epub:#d8c6a0; --epub-ink:#1b1206; --ed:var(--vino);
     --ok:#7cc48a; --sombra:0 8px 24px -10px rgba(0,0,0,.6);
     --c-lectura:#8a2a33; --c-oracion:#33557f; --c-novela:#4b6b37;
     --c-teatro:#704a85; --c-poesia:#946027; --c-ensayo:#4d5d67;
     --cabecera:#1e130b; --cabecera-2:#140c06; --repisa:#4a2c18; --repisa-luz:#6b4226; --repisa-2:#2e1a0d; --zocalo:#1e130b; --zocalo-2:#120a05;
-      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.42);
+      --tinte-cab:rgba(12,6,2,.68); --tinte-pie:rgba(10,5,2,.74); --tinte-repisa:rgba(14,7,3,.18);
     --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
     --fondo:var(--fondo-cuero); --resplandor:rgba(232,140,50,.3);
   }
@@ -1415,9 +1422,11 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .eyebrow{font:700 12px system-ui,sans-serif; letter-spacing:1.6px; text-transform:uppercase; color:var(--oro); margin:0 0 8px}
 
   /* Portada: siempre oscura, para empalmar con la noche del fénix (img/inicio-fenix.webp, que saca herramientas/miniaturas.py del JPG). */
-  .hero{position:relative; overflow:hidden; background:#0f0d10; color:#f6ecd9; border-bottom:1px solid var(--line); min-height:min(80vh,660px); display:flex; align-items:center; padding:clamp(20px,5vh,64px) 0}
-  .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#0f0d10 url(img/inicio-fenix.webp) center top/cover no-repeat; animation:acercar 2.8s ease-out both}
-  .hero .fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,#0f0d10 0%,rgba(15,13,16,.8) 18%,rgba(15,13,16,0) 52%), linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 28%)}
+  /* Hero (20-nov-2026): negro cálido de la sala (antes #0f0d10, el único color frío de la paleta) y, abajo, el mismo
+     filete de latón y sombra de la cornisa: el corte con el papel se lee como el borde de un cuadro, no como un tajo. */
+  .hero{position:relative; overflow:hidden; background:#160e09; color:#f6ecd9; border-bottom:2px solid var(--filete); box-shadow:0 8px 16px -10px rgba(40,20,5,.55); min-height:min(80vh,660px); display:flex; align-items:center; padding:clamp(20px,5vh,64px) 0}
+  .hero .fondo{position:absolute; top:0; right:0; bottom:0; width:min(64%,820px); background:#160e09 url(img/inicio-fenix.webp) center top/cover no-repeat; animation:acercar 2.8s ease-out both}
+  .hero .fondo::after{content:""; position:absolute; inset:0; background:linear-gradient(90deg,#160e09 0%,rgba(22,14,9,.8) 18%,rgba(22,14,9,0) 52%), linear-gradient(0deg,#160e09 0%,rgba(22,14,9,0) 28%)}
   .hero .wrap{position:relative; width:100%}
   .hero .txt{max-width:640px; animation:subir 1.1s .2s ease-out both}
   .hero h1{font-size:clamp(34px,min(6.6vw,9vh),64px); line-height:1.04; letter-spacing:-.5px; margin-bottom:clamp(8px,1.8vh,16px); text-wrap:balance; text-shadow:0 2px 20px rgba(0,0,0,.65)}
@@ -1437,7 +1446,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (max-width:760px){
     .hero{display:block; min-height:0; padding:0 0 40px}
     .hero .fondo{position:relative; width:100%; height:min(78vw,38vh,440px); height:min(78vw,38svh,440px); background-position:center top}
-    .hero .fondo::after{background:linear-gradient(0deg,#0f0d10 0%,rgba(15,13,16,0) 50%)}
+    .hero .fondo::after{background:linear-gradient(0deg,#160e09 0%,rgba(22,14,9,0) 50%)}
     .hero .wrap{margin-top:-70px}
     .hero .cifras{display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px}
     .hero .cifras b{font-size:26px}
@@ -1622,7 +1631,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .ed .mini{width:72px; height:108px; border-radius:6px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
   .ed p{margin:6px 0 10px; font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
   [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
-  .etq.ed-fenix{color:var(--oro); font-weight:600}
+  .etq.ed-fenix{color:var(--ed); font-weight:600}
   /* «Solo en Fénix»: no usar la clase .exclusivo (es el bloque grande del inicio y la etiqueta heredaba su borde, margen y relleno) */
   .etq.solo-fenix{background:transparent; border:1.5px solid var(--vino); color:var(--vino); font-weight:700; padding:1px 8px; font-size:12.5px; white-space:nowrap}
   .exclusivo{margin-top:34px; display:grid; grid-template-columns:150px 1fr; gap:24px; align-items:center; border:2px solid var(--oro); padding:24px}
@@ -1636,7 +1645,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .exclusivo .datos{margin:10px 0 0; font-size:14px; color:var(--muted)}
   @media (max-width:600px){.exclusivo{grid-template-columns:1fr; padding:18px} .exclusivo .portada{width:120px} .exclusivo h2{font-size:25px}}
   /* EPUB primero: su etiqueta resalta y lo que no lo tiene queda atenuado y plegado al final del catálogo. */
-  .etq.epub{background:var(--acento); color:var(--acento-ink); font-weight:700; letter-spacing:.03em}
+  .etq.epub{background:var(--epub); color:var(--epub-ink); font-weight:700; letter-spacing:.03em}
   .etq.sello{background:transparent; border:1.5px solid var(--oro); color:var(--oro); font-weight:700; padding:1px 8px; font-size:12.5px; white-space:nowrap}
   .libro.fenix{border:2px solid var(--oro)}
   /* Se atenúa la imagen, no el texto: así el texto conserva un contraste de 4,5:1 o más. */
