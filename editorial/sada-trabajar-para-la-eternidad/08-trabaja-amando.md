@@ -26,7 +26,7 @@ Para lograrlo, no pierdas de vista por qué haces las cosas, con quién y por qu
 
 ### Cuando el trabajo se pierde
 
-San Josemaría no era un iluso. Sabía que el mundo tiene peligros, y que el trabajo puede ser también un obstáculo. Si me dejo arrastrar por la corriente y pierdo el hilo, las perlas se regarán por el suelo y mi vida será un caos, sin unidad. El trabajo empieza entonces a llenarme de tensión. Me hace faltar a la caridad. Me vuelve una persona dura: como quiero ser muy eficaz, paso por encima de los demás, o hago trampas, o me absorbe tanto que me convierto en adicto al trabajo. Y así deja de ser obra de Dios para volverse contra mi alma.
+San Josemaría no era un iluso. Sabía que el mundo tiene peligros, y que el trabajo puede ser también un obstáculo. Si me dejo arrastrar por la corriente y pierdo el hilo, las perlas se regarán por el suelo y mi vida será un caos, sin unidad. El trabajo empieza entonces a llenarme de tensión. Me hace faltar a la caridad. Me vuelve una persona dura: como quiero ser muy eficaz, paso por encima de los demás, o hago trampas, o me absorbe tanto que me convierto en adicto al trabajo. Y así, como decía san Josemaría, ya no es *opus Dei*, obra de Dios, sino que puede ser *opus diaboli*, obra del demonio: el mundo, el demonio y la carne se meten en él.
 
 El Evangelio nos da el ejemplo de Marta, la hermana de María y de Lázaro. Estaba atendiendo a Jesús y a los apóstoles, preparándoles la comida, y se enfadó porque su hermana no la ayudaba, y le pidió al Señor que le dijera algo. El Señor la corrige, pero no porque trabaje, pues trabajaba por Él, sino porque estaba inquieta y enojada, y había perdido de vista para qué lo hacía.[^3]
 
@@ -34,7 +34,7 @@ Si trabajas y trabajas, y no tienes rectitud de intención, es decir, no lo hace
 
 ### Industrias humanas
 
-Por eso, en medio del trabajo, haré pequeñas pausas: «Espera, ¿qué estás haciendo? Jesús, te invito, ven, ¿cómo resolvemos esto? Ilumíname». O pondré un crucifijo delante, o una imagen en la pantalla del ordenador. A un joven que se confesó de tentaciones contra la pureza, un sacerdote le aconsejó que, en el momento de la tentación, se pusiera a mirar imágenes de la Pasión; y es muy probable que, con la gracia de Dios, ya no caiga. Se cuenta también que san Juan Pablo II escribía al comienzo de cada hoja unas iniciales, una pequeña oración, y así volvía a hacer esa página con rectitud, por la gloria de Dios y en compañía del Señor.
+Por eso, en medio del trabajo, haré pequeñas pausas: «Espera, ¿qué estás haciendo? Jesús, te invito, ven, ¿cómo resolvemos esto? Ilumíname». O pondré un crucifijo delante, o una imagen en la pantalla del ordenador. A un joven que se confesó de tentaciones contra la pureza, un sacerdote le aconsejó que, en el momento de la tentación, se pusiera a mirar imágenes de la Pasión; y le aseguró que así ya no caería. Se cuenta también que san Juan Pablo II escribía al comienzo de cada hoja unas iniciales, una pequeña oración, y así volvía a hacer esa página con rectitud, por la gloria de Dios y en compañía del Señor.
 
 Son lo que se llama industrias humanas: cosas que me recuerden la presencia de Dios. Una campanada, pasar ante una iglesia, subir una escalera. Llevar el rosario en el bolsillo, para sacarlo en cualquier momento, o simplemente tenerlo en la mano y acordarme de que es la mano de María. Tienes que lograr esa simbiosis de trabajo y oración: encontrarlo ahí, amar ahí. Entonces, aunque la cosa sea muy pequeña, se va a la eternidad.
 
@@ -50,11 +50,11 @@ Se cuenta que, en una ocasión, en una tertulia con mucha gente, un joven taxist
 
 No es fácil, sobre todo donde manda la eficacia, y nadie va a ver el motivo por el que lo hago. Pero yo sé que eso es lo que da sentido a lo que hago, y que ahí puedo amar de verdad, encontrar al Señor y vivir así porque soy cristiano.
 
-Pensemos, por último, por qué quiso el Padre que su Hijo fuera conocido por su oficio, y que lo ejerciera años y años. Por eso sus paisanos se extrañaban de dónde sacaba esas cosas: había estado siempre con ellos, todo había sido de lo más normal. Y nos está diciendo que tú puedes encontrar a Dios aquí, amar aquí, hacerte santo aquí; que no necesitas irte a ninguna parte. Se ha abierto para ti un camino divino: el de tu propia profesión sobre la tierra, donde puedes dejar un surco de luz, esa realidad maravillosa que es el amor de Dios.
+Pensemos, por último, por qué quiso el Padre que su Hijo fuera conocido por su oficio. Te conocían por tu oficio, Jesús, y lo ejerciste años y años. Por eso tus paisanos se extrañaban de dónde sacabas esas cosas: habías estado siempre con ellos, todo había sido de lo más normal. Y así nos dices: tú puedes encontrar a Dios aquí, amar aquí, hacerte santo aquí; no necesitas irte a ninguna parte. Se ha abierto para ti un camino divino: el de tu propia profesión sobre la tierra, donde puedes dejar un surco de luz, esa realidad maravillosa que es el amor de Dios.
 
 [^1]: Cf. Mt 13, 54-58; cf. Mc 6, 3.
 [^2]: San Josemaría, *Conversaciones*, n. 116.
 [^3]: Cf. Lc 10, 38-42.
-[^4]: Cf. San Josemaría, *Camino*, n. 813.
+[^4]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.
 [^5]: San Josemaría, *Camino*, n. 429.
 [^6]: San Josemaría, *Camino*, n. 967.

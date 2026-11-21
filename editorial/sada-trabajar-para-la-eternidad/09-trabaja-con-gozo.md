@@ -6,7 +6,7 @@ Algunas frases del Evangelio parecen dichas de pasada y, sin embargo, abarcan un
 
 Crecía en edad porque es hombre verdadero y va recorriendo las etapas de la vida de cualquier persona: un bebé perfecto, un niño perfecto, un adolescente, como en el único relato que tenemos de esa edad, un joven, un adulto. Pero no crecía solo en años, sino también en sabiduría. No es solo que fuera sabiendo más cosas, que también las aprendía, sino que tenía la sabiduría, esa mirada que ve las cosas desde Dios, desde las causas más altas. El filósofo estudia las cosas en sus causas últimas; el sabio las ve desde la eternidad, y no solo en sí mismas. Es hermoso pensar que sus primeras oraciones las aprendería de labios de María, el modo de dirigirse al Padre; que José le enseñaría los ritos de su pueblo, y también a trabajar.
 
-Y crecía en gracia, porque su alma humana fue siempre movida por el Espíritu Santo y se mostraba dócil a sus impulsos. Tenía desde el principio la plenitud de la gracia, que en cada etapa se iba manifestando de un modo que no podemos ni imaginar. Y rezaba: con su corazón de hombre, para unir siempre su voluntad humana al querer del Padre.
+Y crecía en gracia, porque su alma humana fue siempre movida por el Espíritu Santo y se mostraba dócil a sus impulsos. Tenía desde el principio la plenitud de la gracia, que en cada etapa se iba manifestando de un modo que no podemos ni imaginar.[^ne1] Y rezaba: con su corazón de hombre, para unir siempre su voluntad humana al querer del Padre.
 
 Jesús nos revela lo que es el hombre. También cada uno de nosotros tiene que ir creciendo así, en edad, en sabiduría y en gracia. A san Josemaría le gustaba repetir un dicho de su tierra: las almas, como el buen vino, mejoran con el tiempo.[^2] El buen vino va ganando con los años, el malo se hace vinagre. Por eso, en el proceso de un santo importan menos los primeros años que los últimos: quien va hacia Dios lo hace con un movimiento uniformemente acelerado, como un cuerpo que cae y va más deprisa cuanto más cerca está del centro. No sea que pensemos: mientras más viejo, más me amargo, peor carácter tengo, menos piadoso soy, pierdo el ardor apostólico. No: las almas mejoran, como el buen vino.
 
@@ -34,7 +34,7 @@ Hay hoy una especie de vicio del trabajo. Hay quien trabaja hasta las once o doc
 
 El astrónomo francés Le Verrier, buen cristiano, descubrió el planeta Neptuno con cálculos matemáticos, antes de verlo, y supo decir dónde estaba. Se cuenta que un obispo fue a visitarlo y le dijo que había elevado su nombre hasta los astros. Y él respondió que esperaba elevarlo algo más arriba. Ninguna meta solo humana es digna de nuestra fatiga: solo vale la pena lo que nos consigue la eternidad. Y si tu mano izquierda supo lo que hizo la derecha porque lo hiciste por quedar bien, ya perdió su mérito.[^5] Ese trabajo no se parece al de Jesús, que lo hace todo para la gloria del Padre.
 
-Yo lo hago por Jesús, por Cristo; y con Cristo, que me acompaña siempre. A san Josemaría le gustaba hablar de nuestras cosas: no es mi trabajo, mi apostolado, mis pendientes, sino nuestro trabajo, nuestro viaje, nuestro tráfico. Jesús, acompáñame, hombro con hombro; sostenme, porque estás conmigo; sé mi cireneo en esta cruz que a veces me pesa. Y no solo con Cristo, sino en Cristo: Tú en mí, yo en Ti, no somos dos separados. Que vea con tus ojos, que trabaje con tus manos. Te presto mi cuerpo para que te canses, mis manos para que sigas curando, mis labios para que sigas hablando. Ya no vivo yo: es Cristo quien vive en mí.[^6] Serás Cristo que trabaja.
+Yo lo hago por Jesús, por Cristo; y con Cristo, que me acompaña siempre. A san Josemaría le gustaba hablar de nuestras cosas: no es mi trabajo, mi apostolado, mis pendientes, sino nuestro trabajo, nuestro viaje, nuestro tráfico. Jesús, acompáñame, hombro con hombro; sostenme, porque estás conmigo; sé mi cireneo en esta cruz que a veces me pesa. Y no solo con Cristo, sino en Cristo: Tú en mí, yo en Ti, no somos dos separados. Que vea con tus ojos, que trabaje con tus manos. Te presto mi cuerpo para que te canses, mis manos para que sigas curando, mis labios para que sigas hablando. Por Cristo, con Cristo y en Cristo[^6]: ya eres Cristo que pasa, eres Cristo que trabaja.
 
 ### Disfruta tu trabajo
 
@@ -57,5 +57,6 @@ Así hizo Jesús, en la oscuridad de un pueblo pequeño, perdido entre las monta
 [^3]: Cf. Gn 2, 15.
 [^4]: Cf. San Josemaría, *Forja*, n. 742.
 [^5]: Cf. Mt 6, 3.
-[^6]: Cf. Ga 2, 20.
+[^6]: Doxología final de la Plegaria eucarística, Misal Romano.
 [^7]: Cf. San Josemaría, *Surco*, n. 497.
+[^ne1]: N. del E.: según santo Tomás de Aquino, la gracia de Cristo fue plena desde el principio y no podía aumentar; lo que crecía eran sus efectos, en obras cada vez más sabias y santas (Suma Teológica, III, q. 7, a. 12; cf. Lc 2, 52; Catecismo, n. 472). En el audio, el autor dice: «esa plenitud aumentaba y aumentaba… Jesús crecía por tanto en santidad».

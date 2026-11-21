@@ -10,7 +10,7 @@ Podemos pensar que la perfección humana supone la madurez propia de cada etapa,
 
 Crecía en sabiduría, esa ciencia de las cosas más altas, la ciencia que se ve desde Dios. Su ciencia adquirida fue aumentando poco a poco: fue instruido por sus padres. María le enseñaría las cosas de la casa, a atarse las sandalias, a comer, a rezar, las oraciones de su pueblo. José le enseñaría el oficio de artesano.
 
-Y crecía en gracia. Su alma humana, movida por el Espíritu Santo, en perfecta correspondencia, tenía la plenitud de gracia, que se manifestaba cada vez más. Por eso oraba: para unir su voluntad humana a la del Padre y escuchar las inspiraciones del Espíritu Santo. Si lo hacía con tanta frecuencia en su vida pública, cuánto oraría en el silencio y la paz de Nazaret, una población tan pequeña.
+Y crecía en gracia. Su alma humana, movida por el Espíritu Santo, en perfecta correspondencia, tenía la plenitud de gracia, que se manifestaba cada vez más.[^ne1] Por eso oraba: para unir su voluntad humana a la del Padre y escuchar las inspiraciones del Espíritu Santo. Si lo hacía con tanta frecuencia en su vida pública, cuánto oraría en el silencio y la paz de Nazaret, una población tan pequeña.
 
 ### Los años de oscuridad
 
@@ -40,7 +40,7 @@ Con perfección humana, en gracia, por amor y con rectitud, el trabajo tiene un 
 
 ### Cuando el trabajo aparta de Dios
 
-Existe el riesgo de que se nos vaya hacia otro lado, y de que lo que debía ser obra de Dios se convierta en obra del demonio. Sirve el ejemplo del carbón y el fuego: si echas carbón en una proporción adecuada, el fuego aumenta; si echas demasiado, lo apagas. El mundo contemporáneo tiende a privilegiar el trabajo sobre las demás ocupaciones. El trabajo es camino de santidad, pero también puede conducir al pecado. Mi trabajo profesional puede apartarme de Dios y hacerme perder mi vocación.
+Existe el riesgo de que se nos vaya hacia otro lado, y de que lo que debía ser *opus Dei*, obra de Dios, se convierta en *opus diaboli*, obra del demonio. Sirve el ejemplo del carbón y el fuego: si echas carbón en una proporción adecuada, el fuego aumenta; si echas demasiado, lo apagas. El mundo contemporáneo tiende a privilegiar el trabajo sobre las demás ocupaciones. El trabajo es camino de santidad, pero también puede conducir al pecado. Mi trabajo profesional puede apartarme de Dios y hacerme perder mi vocación.
 
 El trabajo es bueno en la medida en que nos permite volcarnos en la realidad, y es malo cuando se vuelve obsesión: cuando pasa de medio a fin, cuando no nos lleva a Cristo sino que nos aleja de Él y cierra otras puertas, no solo a Dios, sino también a la familia, a los demás, a uno mismo. Se vuelve lo absolutamente prioritario, y ¿por qué? Porque es una afirmación del yo, y de algún modo también una falta de fe. Quiero afirmar mi persona en mi cualificación profesional, y entro en una carrera agotadora con la competencia.
 
@@ -67,7 +67,8 @@ Yo también voy a hacer muchos collares para la Virgen. Voy a tener esta alma de
 [^3]: Cf. San Josemaría, *Es Cristo que pasa*, n. 14.
 [^4]: Cf. Mt 13, 55.
 [^gui]: Cf. Jean Guitton. El autor lo cita de memoria; no hemos hallado el pasaje en las obras de Guitton.
-[^5]: Cf. San Josemaría, *Camino*, n. 813.
+[^5]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.
 [^6]: San Juan Pablo II, poema «La cantera», citado en *Don y Misterio*, cap. I.
 [^7]: San Josemaría, *Cartas I*, carta n. 3, n. 4.
 [^8]: Cf. San Francisco de Asís, *Cántico de las criaturas*.
+[^ne1]: N. del E.: según santo Tomás de Aquino, la gracia de Cristo fue plena desde el principio y no podía aumentar; lo que crecía eran sus efectos, en obras cada vez más sabias y santas (Suma Teológica, III, q. 7, a. 12; cf. Lc 2, 52; Catecismo, n. 472). En el audio, el autor dice: «una perfección de gracia cada vez más plena».

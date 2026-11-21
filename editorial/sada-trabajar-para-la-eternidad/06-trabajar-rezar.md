@@ -2,7 +2,7 @@
 
 ### Dios ve el corazón
 
-Jesús dijo una vez a los fariseos unas palabras muy duras: «lo que parece ser excelso ante los hombres es abominable delante de Dios», porque «Dios conoce vuestros corazones».[^1] Lo decía a fariseos amigos del dinero, que se burlaban de Él y se tenían por justos ante los hombres. Lo grande a los ojos de los hombres no siempre lo es a los de Dios.
+Jesús dijo una vez a los fariseos unas palabras muy duras: «lo que parece ser excelso ante los hombres es abominable delante de Dios», porque «Dios conoce vuestros corazones».[^1] Era lo que ellos buscaban: escoger los primeros puestos, vestir túnicas y mantos, que la gente los llamara maestros. Lo que es grande ante los ojos de los hombres es abominable ante Dios.
 
 Dios sondea el corazón del hombre. Nada escapa a su mirada: ve hasta las intenciones más escondidas y por eso es absolutamente justo; nos premia a peso de rectitud. En esas palabras hay una luz: Dios ve mi yo profundo, sabe lo que hay en mi interior y, por lo mismo, me ayuda a limpiar mi corazón, a echar fuera a esos malos huéspedes que se instalan en él y a trabajar con un corazón puro y con rectitud de intención.
 

@@ -44,7 +44,7 @@ Se trata de acabar la tarea con perfección, con belleza, con el primor de esas 
 
 Hay que luchar contra la mentalidad del mundo, que valora todo de otra manera. Si alguien te pregunta si trabajas en una importante empresa transnacional y respondes que no, casi pareces no contar. O te dicen que, si no has escrito en inglés, no existes: tus libros están en español y no entras en la consideración de los que de verdad mandan en el mundo. Cuántas veces nos dirán que no existimos, porque no tenemos una aportación sustantiva, como tal diplomático o tal empresario. Pero nosotros venimos a hacer el trabajo de Dios, la obra de Dios. Y en la eternidad se verá el valor de esas obras.
 
-¿Cuál es la labor más hermosa? Quizá la más hermosa sea la tarea más sencilla, la que se hace con más amor de Dios[^9]. Es un trabajo muy humilde, muy oculto, del que nadie sabe quién lo hizo. Alguien vio a una persona limpiar un baño, algo que quizá muchos nunca hemos hecho: hay cepillos especiales, se limpia muy bien, hasta que queda impecable. A esa persona nadie le va a decir que su trabajo tuvo una gran importancia trascendente.
+A san Josemaría le preguntaron cuál era la labor más hermosa, y respondió que no lo sabía, pero que quizá fuera la tarea más sencilla, la que se hace con más amor de Dios[^9]. Es un trabajo muy humilde, muy oculto, del que nadie sabe quién lo hizo. Alguien vio a una persona limpiar un baño, algo que quizá muchos nunca hemos hecho: hay cepillos especiales, se limpia muy bien, hasta que queda impecable. A esa persona nadie le va a decir que su trabajo tuvo una gran importancia trascendente.
 
 De un joven me contaron que había sido excelente estudiante de ingeniería, y que hizo después un posgrado en finanzas en el extranjero, con gran éxito. ¿Y qué hace ahora? Trabaja en una fábrica de papel higiénico. Toda su preparación, todas sus finanzas, y al final lo que produce es papel higiénico. Ese es el peligro de Sísifo: que, si no se hace por Dios, al final todo acabe ahí, sin servir para más.
 
@@ -68,4 +68,4 @@ Que nos ayude san José, patrono de nuestra perseverancia, hoy que es la fiesta 
 [^6]: Cf. Misal Romano, 1 de mayo, san José Obrero, oración colecta.
 [^7]: San Josemaría, *Amigos de Dios*, n. 65.
 [^8]: San Josemaría, *Amigos de Dios*, n. 65.
-[^9]: Cf. San Josemaría, *Camino*, n. 813.
+[^9]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.

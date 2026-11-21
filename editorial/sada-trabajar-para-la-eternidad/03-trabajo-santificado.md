@@ -42,7 +42,7 @@ Y así iré siendo contemplativo, y podré enseñar a los demás a serlo: quizá
 
 ¿Qué es no santificar el trabajo? Puede ocurrirme lo que pasa con una parrilla cuando hay unas brasas encendidas. Ese fuego es la vida interior. Si llego con el costal de carbón y lo vacío encima de las brasas, lo más probable es que se apaguen. Mi trabajo también puede apagar mi vida interior. Santificar el trabajo no se da por descontado: es algo que hay que aprender constantemente.
 
-Mi trabajo no santifica, para empezar, cuando me lleva a la vanidad, cuando lo hago por perfeccionismo, cuando estoy construyendo mi propio pedestal. Eso es obra mía y de mi soberbia: no me sirvió de nada, es como si se la ofreciera al demonio de mi soberbia.
+Mi trabajo no santifica, para empezar, cuando me lleva a la vanidad, cuando lo hago por perfeccionismo, cuando estoy construyendo mi propio pedestal. Entonces mi trabajo ya no es *opus Dei*, obra de Dios, sino *opus diaboli*, obra del demonio: no me sirvió de nada, se lo ofrezco al demonio de mi soberbia.
 
 No santifico mi trabajo cuando tengo compartimentos estancos, es decir, cuando hay grandes ausencias contemplativas, cuando no rezo. Entonces es fácil romper la unidad de vida: ya se me fue la presencia de Dios, estoy con la presencia de cualquier cosa excepto de Dios, sobre todo con la presencia de mi egoísmo.
 
@@ -56,7 +56,7 @@ Esa es la petición que podemos hacerle a Jesús, que crecía en edad, en sabidu
 
 María estaría muchas veces con ellos, como vemos en los cuadros de la Sagrada Familia, en un taller y un hogar muy modestos y muy pequeños, cosiendo y aprovechando el tiempo. Juan Pablo II, en la exhortación apostólica sobre san José, escribe que «la aparente tensión entre la vida activa y la contemplativa encuentra en él una superación ideal»[^11]: se está contemplando y se está trabajando, y no hay por qué ver contraposición. San Josemaría decía que la devoción a san José creció en él de manera impetuosa en sus últimos años, quizá para hacernos entender que esto es lo propio de su espíritu: san José, el artesano, el trabajador, el que hace lo que debe.
 
-San Josemaría se propuso como programa de vida cinco verbos: perdonar, callar, rezar, trabajar, sonreír. Que sean también los de nuestro trabajo santificado.
+Callar, rezar, trabajar, sonreír: así podría encuadrarse la vida de san José.[^ne1] Que sean también los verbos de nuestro trabajo santificado.
 
 [^1]: Lc 2, 52.
 [^2]: Cf. Flp 3, 8.
@@ -69,6 +69,7 @@ San Josemaría se propuso como programa de vida cinco verbos: perdonar, callar, 
 [^jp]: San Juan Pablo II escribió poesía desde joven; cf., por ejemplo, el poema «La cantera», que él mismo recuerda en *Don y misterio*, cap. I.
 [^7]: Cf. Jn 12, 32.
 [^8]: San Josemaría, *Camino*, n. 784.
-[^9]: Cf. San Josemaría, *Camino*, n. 813.
+[^9]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.
 [^10]: J. W. von Goethe, *Fausto*, primera parte, v. 1237: «Im Anfang war die Tat».
 [^11]: San Juan Pablo II, exhortación apostólica *Redemptoris custos*, n. 27.
+[^ne1]: N. del E.: la fórmula es de san Josemaría, que se proponía como programa cinco verbos: perdonar, callar, rezar, trabajar, sonreír (cf. «El perdón y san Josemaría Escrivá», opusdei.org).

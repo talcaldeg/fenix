@@ -34,7 +34,7 @@ Así puedes tú tener tu horario de entre semana, el del sábado, el del domingo
 
 ### En la viña del Padre
 
-Una persona que tiene su día ocupado, con su horario lleno de distintas actividades, está prolongando la obra de la creación. Es un hijo de Dios al que el Padre celestial ha encargado trabajar en su viña. Tal vez al final de su vida no se note mucho lo que hizo, como sí se nota lo que hace un arquitecto, que puede decir: «Yo construí esa casa, yo proyecté esa carretera». Pero se santificó en la viña de su Padre. Aquello que el pecado rompió, la unión con lo divino, Cristo lo restaura, y el trabajo de los hijos de Dios, unido al suyo, colabora en esa reconstrucción.
+Una persona que tiene su día ocupado, con su horario lleno de distintas actividades, está prolongando la obra de la creación. Es un hijo de Dios al que el Padre celestial ha encargado trabajar en su viña. Tal vez al final de su vida no se note mucho lo que hizo, como sí se nota lo que hace un arquitecto, que puede decir: «Yo construí esa casa, yo proyecté esa carretera». Pero se santificó en la viña de su Padre. Aquello que el pecado rompió, la unión con lo divino, se fue reconstituyendo con el trabajo de los hijos de Dios.
 
 Se dice que de Thomas Edison, el inventor del foco incandescente, afirmaron en su funeral que dejó la tierra más iluminada de lo que la encontró. Yo también quisiera dejar un rastro de luz: muchas cosas buenas. Para eso necesito, en primer lugar, la virtud de la laboriosidad, y además hacerlo como hijo de Dios, por amor a Dios y por su gloria. Corro el riesgo, como ocurre hoy también, de que mi trabajo sea completamente inútil por mucho que trabaje, si lo hago por mi gloria humana o por una recompensa puramente terrena.
 

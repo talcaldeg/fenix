@@ -32,7 +32,7 @@ San Josemaría insistía en hacerlo todo por amor. A veces hacemos la tarea por 
 
 Entonces se enciende otra vez la luz, y esa luz se va a la eternidad. Es más importante que el trabajo de Cai Lun o de Edison, porque lo que se enciende son las realidades de la gracia, donde aparece lo propio de Dios, que es el amor. «Todo lo que se hace por Amor adquiere hermosura y se engrandece»[^6]. Puedo haber hecho muchas cosas maravillosas, perfectas, pero por vanidad, por quedar bien, porque me iban a pagar o como simple terapia ocupacional. Hazlas por amor.
 
-Podríamos decir que la tarea más hermosa es quizá la más escondida, la que está hecha con más amor, la que a lo mejor nadie va a ver nunca.[^7] Es lo que explica Jesús en el Evangelio: «que tu mano izquierda no sepa lo que hace tu mano derecha», y «tu Padre, que ve en lo oculto, te recompensará»[^8]. No busques la paga humana, porque entonces lo habrías hecho por egoísmo y no por amor. «Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo»[^9].
+A san Josemaría le preguntaban también cuál era la tarea más hermosa, y respondía que quizá la más escondida, la que está hecha con más amor, la que a lo mejor nadie va a ver nunca.[^7] Es lo que explica Jesús en el Evangelio: «que tu mano izquierda no sepa lo que hace tu mano derecha», y «tu Padre, que ve en lo oculto, te recompensará»[^8]. No busques la paga humana, porque entonces lo habrías hecho por egoísmo y no por amor. «Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo»[^9].
 
 ### Aprender a rezar trabajando
 
@@ -56,7 +56,7 @@ Que Cristo esté en la cumbre de tu actividad porque está en tu corazón, porqu
 
 Por eso en la Misa de san Josemaría pedimos a Dios que, por su intercesión y su ejemplo, en el ejercicio del trabajo ordinario nos configuremos a su Hijo Jesucristo y sirvamos con ardiente amor a la obra de la Redención[^13]. Es lo específico que Dios quiso recordar al mundo por medio de él.
 
-San Josemaría decía que no quería fundar nada. Le parecían muy bien todas las instituciones que había en la Iglesia, y no veía que hiciera falta otra. Pero Dios le pidió que fundara una que enseñara a amar a Jesús en medio de la calle, en todas partes: a vivir la vida contemplativa que lleva una monja en el silencio de su convento, pero vendiendo helados, barriendo las calles, en el laboratorio, de policía, de ama de casa, quien sea y haciendo lo que sea. Que aprenda a descubrir a Dios ahí, a amarlo ahí, a hacer las cosas por amor.
+San Josemaría decía que no quería fundar nada. Le parecían muy bien todas las instituciones que había en la Iglesia, y no veía que hiciera falta otra. Pero Dios le dijo: funda lo que te voy a decir, una institución que enseñe a amar a Jesús en medio de la calle, en todas partes; tú enseña a vivir la vida contemplativa que lleva una monja en el silencio de su convento, pero vendiendo helados, barriendo las calles, en el laboratorio, de policía, de ama de casa, quien sea y haciendo lo que sea; que aprenda a descubrirme ahí, a amarme ahí, a hacer las cosas por amor.
 
 El amor que hace grande lo pequeño. El amor que ilumina lo que está oscuro. El amor que hace más hermoso el mundo. Imagínate que un día todos los hombres de todos los países hicieran las cosas así, amando. Qué maravilla: este mundo sería como un paraíso, si en cada uno se estuviera manifestando el amor de Dios.
 
@@ -68,7 +68,7 @@ Que san Josemaría interceda por nosotros mientras nos preparamos para su fiesta
 [^4]: San Josemaría, *Conversaciones*, n. 114.
 [^5]: Jn 15, 4.
 [^6]: San Josemaría, *Camino*, n. 429.
-[^7]: Cf. San Josemaría, *Camino*, n. 813.
+[^7]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.
 [^8]: Mt 6, 3-4.
 [^9]: San Josemaría, *Camino*, n. 813.
 [^10]: Sal 23 (22), 4.
