@@ -1352,26 +1352,25 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   /* PALETA:fin */
   *{box-sizing:border-box}
   html{scroll-behavior:smooth}
-  body{margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+  body{margin:0; background:var(--bg); color:var(--ink); font:16px/1.6 var(--letra)}
   a{color:var(--vino)}
   a,button{-webkit-tap-highlight-color:transparent}
   a:active,button:active{opacity:.7}
   button,input,select,textarea{font:inherit; color:inherit}
   .wrap{max-width:1080px; margin:0 auto; padding:0 16px}
-  .sans{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-
+  
   #oraciones, #editores, #encuadernadores{scroll-margin-top:84px}  /* que la barra fija no tape el título al bajar */
   .editores{margin-top:44px; padding-top:30px; border-top:1px solid var(--line)}
   /* El formulario va centrado bajo el contenido a todo el ancho (cajas y lista), como el bloque de Standard Ebooks o Gutenberg */
   .editores form.formulario{margin-inline:auto}
-  .pasos{margin:8px 0 0; padding-left:20px; font:15px/1.55 system-ui,sans-serif}
+  .pasos{margin:8px 0 0; padding-left:20px; font:15px/1.55 var(--letra); font-size-adjust:.46}
   .pasos li{margin-bottom:8px}
   /* Encuadernadores: el prompt a la vista y la lista de libros que se buscan */
   .prompt pre{margin:10px 0 14px; padding:14px 16px; background:var(--chip); border:1px solid var(--line); border-radius:10px; font:13px/1.55 ui-monospace,Consolas,monospace; color:var(--ink); white-space:pre-wrap; overflow-wrap:anywhere}
   .buscados{border:1px solid var(--line); border-radius:14px; overflow:hidden; background:var(--card); margin-top:14px}
   .buscado{display:grid; grid-template-columns:minmax(0,2.2fr) minmax(0,2fr) auto; gap:16px; align-items:center; padding:12px 16px; border-top:1px solid var(--line)}
   .buscado:first-child{border-top:0}
-  .buscado .tt{font-weight:600} .buscado .au{font:14px system-ui,sans-serif; color:var(--muted)}
+  .buscado .tt{font-weight:600} .buscado .au{font:14px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted)}
   .buscado .acc{display:flex; align-items:center; gap:10px; justify-content:flex-end}
   .buscado .btn{padding:7px 12px; font-size:13px; white-space:nowrap}
   @media (max-width:720px){.buscado{grid-template-columns:1fr; gap:6px} .buscado .acc{justify-content:flex-start}}
@@ -1382,7 +1381,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .marca{display:flex; align-items:center; gap:10px; text-decoration:none; color:var(--ink); font-weight:700; font-size:19px; white-space:nowrap}
   .marca img{width:30px; height:30px}
   nav.menu{display:flex; align-items:center; gap:2px; flex-wrap:nowrap; white-space:nowrap; margin-left:auto}
-  nav.menu a, nav.menu summary{font-family:system-ui,sans-serif; font-size:15px; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a, nav.menu summary{text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
   nav.menu a.on, nav.menu a:hover, nav.menu summary:hover, .mas.on summary{color:var(--ink); background:var(--chip)}
   .mas{position:relative}
   .mas summary{list-style:none; cursor:pointer}
@@ -1391,7 +1390,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .mas .sub{position:absolute; right:0; top:calc(100% + 6px); min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:var(--sombra)}
   .ajustes, .ajustes-nav{display:flex; gap:6px}
   .ajustes-nav{margin-left:10px}
-  .pildora{border:1px solid var(--line); background:var(--card); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
+  .pildora{border:1px solid var(--line); background:var(--card); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px/1.33 var(--letra); font-size-adjust:.46; cursor:pointer}
   #btnMenu{display:none}
   /* Lupa: lleva al buscador de la portada desde cualquier vista; en el celular queda al lado de Menú. */
   .ajustes{align-items:center}
@@ -1402,7 +1401,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .panel-buscar{border-top:1px solid var(--line); background:var(--bg); padding:12px 0}
   .panel-buscar form{position:relative; display:flex; gap:8px; max-width:640px; margin:0 auto}
   .panel-buscar .combo{flex:1 1 auto; min-width:0}
-  .panel-buscar input{width:100%; padding:10px 14px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); font:16px/1.3 system-ui,sans-serif}
+  .panel-buscar input{width:100%; padding:10px 14px; border:1px solid var(--line); border-radius:10px; background:var(--card); color:var(--ink); font:16px/1.3 var(--letra); font-size-adjust:.46}
   .panel-buscar input:focus{outline:2px solid var(--acento); outline-offset:1px; border-color:transparent}
   .panel-buscar .combo-lista{max-height:min(60vh,340px)}
   /* El menú en una fila necesita unos 950 px en español (con la lupa): bajo 960 pasa a «Menú». */
@@ -1431,7 +1430,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   h2{font-size:clamp(22px,3.4vw,28px); margin:0 0 14px}
   h3{margin:0 0 6px; font-size:18px}
   .lede{color:var(--muted); font-size:clamp(16px,2.2vw,19px); max-width:680px}
-  .eyebrow{font:700 12px system-ui,sans-serif; letter-spacing:1.6px; text-transform:uppercase; color:var(--oro); margin:0 0 8px}
+  .eyebrow{margin:0 0 8px}
 
   /* Portada: siempre oscura, para empalmar con la noche del fénix (img/inicio-fenix.webp, que saca herramientas/miniaturas.py del JPG). */
   /* Hero (20-nov-2026): negro cálido de la sala (antes #0f0d10, el único color frío de la paleta) y, abajo, el mismo
@@ -1444,13 +1443,13 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .hero h1{font-size:clamp(34px,min(6.6vw,9vh),64px); line-height:1.04; letter-spacing:-.5px; margin-bottom:clamp(8px,1.8vh,16px); text-wrap:balance; text-shadow:0 2px 20px rgba(0,0,0,.65)}
   .hero .eyebrow{color:#e8b04a}
   .hero .lede{color:#dccdb7; margin:0}
-.hero .legal{margin:12px 0 0; max-width:520px; padding:2px 0 2px 12px; border-left:3px solid #e8b04a; font:600 15px/1.45 system-ui,sans-serif; color:#f6ecd9}
+.hero .legal{margin:12px 0 0; max-width:520px; padding:2px 0 2px 12px; border-left:3px solid #e8b04a; font:600 15px/1.45 var(--letra); font-size-adjust:.46; color:#f6ecd9}
   .hero .btn{background:rgba(255,248,236,.06); color:#f6ecd9; border-color:rgba(255,240,210,.35)}
   .hero .btn.prim{background:#e8b04a; color:#1d1206; border-color:transparent}
   .hero .btn:hover{border-color:#e8b04a}
-  .hero .cifras{display:flex; gap:28px; flex-wrap:wrap; margin-top:clamp(14px,3.5vh,30px); font:13px/1.35 system-ui,sans-serif; color:#c9b9a2}
-  .hero .cifras b{display:block; font:700 30px/1.1 Georgia,serif; color:#f6ecd9}
-  .hero .credito{position:absolute; right:12px; bottom:8px; font:11px system-ui,sans-serif; color:rgba(246,236,217,.55); text-decoration:none}
+  .hero .cifras{display:flex; gap:28px; flex-wrap:wrap; margin-top:clamp(14px,3.5vh,30px); font:13px/1.35 var(--letra); font-size-adjust:.46; color:#c9b9a2}
+  .hero .cifras b{display:block; font:700 30px/1.1 var(--letra); color:#f6ecd9}
+  .hero .credito{position:absolute; right:12px; bottom:8px; font:italic 12px/15px var(--letra); font-size-adjust:.46; color:rgba(246,236,217,.55); text-decoration:none}
   .hero .credito:hover{color:#f6ecd9}
   @keyframes acercar{from{transform:scale(1.07); opacity:.4} to{transform:scale(1); opacity:1}}
   @keyframes subir{from{transform:translateY(14px); opacity:0} to{transform:none; opacity:1}}
@@ -1470,7 +1469,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   /* Buscador del inicio: la portada es oscura en los dos temas; la lista sale con los colores del tema. */
   .hero-buscar{position:relative; display:flex; gap:8px; margin-top:clamp(14px,3vh,24px); max-width:520px}
   .hero-buscar .combo{flex:1 1 auto; min-width:0}
-  .hero-buscar input{width:100%; padding:12px 14px; border:1px solid rgba(255,240,210,.35); border-radius:10px; background:rgba(255,248,236,.08); color:#f6ecd9; font:16px/1.3 system-ui,sans-serif}
+  .hero-buscar input{width:100%; padding:12px 14px; border:1px solid rgba(255,240,210,.35); border-radius:10px; background:rgba(255,248,236,.08); color:#f6ecd9; font:16px/1.3 var(--letra); font-size-adjust:.46}
   .hero-buscar input{color-scheme:dark}
   .hero-buscar input::placeholder{color:#c9b9a2}
   .hero-buscar input:focus{outline:2px solid #e8b04a; outline-offset:1px; border-color:transparent}
@@ -1478,7 +1477,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .combo-lista li.todos{border-top:1px solid var(--line); margin-top:4px; padding-top:10px; color:var(--vino); font-weight:600}
   .combo-lista li.vacio + li.todos{border-top:0; margin-top:0}
   .hero-buscar + .acciones{margin-top:10px}
-  .hero .ir{font:600 15px system-ui,sans-serif; color:#e8b04a; text-decoration:none}
+  .hero .ir{font:600 15px/1.33 var(--letra); font-size-adjust:.46; color:#e8b04a; text-decoration:none}
   .hero .ir::after{content:" →"}
   .hero .ir:hover{text-decoration:underline}
 
@@ -1490,19 +1489,19 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .acceso::before{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(22,15,12,.95) 0%, rgba(22,15,12,.55) 45%, rgba(22,15,12,.1) 100%)}
   .acceso > *{position:relative}
   .acceso b{font-size:19px; line-height:1.2}
-  .acceso span{font:13px/1.35 system-ui,sans-serif; opacity:.88}
+  .acceso span{font:13px/1.35 var(--letra); font-size-adjust:.46; opacity:.88}
   .acceso:hover, .acceso:focus-visible{transform:translateY(-2px)}
   /* Seis categorías y un acceso ancho (Editorial, o Citas si el sitio no tiene ediciones propias): ocupa dos columnas y la grilla queda sin hueco (4 + 4 y, en el celular, 2 + 2 + 2 + 2). */
   .acceso.ancho{grid-column:span 2}
   .titulo-fila{display:flex; align-items:baseline; justify-content:space-between; gap:12px; flex-wrap:wrap}
-  .titulo-fila a{font:600 14px system-ui,sans-serif; text-decoration:none}
+  .titulo-fila a{font:600 14px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none}
   .banda{display:flex; align-items:center; justify-content:space-between; gap:18px; flex-wrap:wrap; margin-top:44px}
   .banda.campana{margin-top:34px; border-left:4px solid var(--oro)}
   .banda.campana > div:first-child{flex:1 1 420px}
   .banda.campana h3{margin:4px 0 6px} .banda.campana p{margin:0}
   .banda.campana .eyebrow{margin:0}
   .banda p{margin:0; color:var(--muted)}
-  .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; font:600 14px system-ui,sans-serif; border:1px solid var(--line); background:var(--card); color:var(--ink); text-decoration:none; cursor:pointer}
+  .btn{display:inline-flex; align-items:center; gap:8px; padding:10px 16px; border-radius:10px; font:600 14px/1.33 var(--letra); font-size-adjust:.46; border:1px solid var(--line); background:var(--card); color:var(--ink); text-decoration:none; cursor:pointer}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
   .btn:disabled{opacity:.55; cursor:not-allowed}
 
@@ -1510,8 +1509,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (max-width:820px){.teologia{grid-template-columns:1fr}}
   .caja{background:var(--card); border:1px solid var(--line); border-radius:14px; padding:20px; box-shadow:var(--sombra)}
   blockquote{margin:0 0 14px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic}
-  blockquote cite{display:block; font:normal 13px system-ui,sans-serif; color:var(--muted); margin-top:4px}
-  .precision{font:14px/1.55 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:12px 14px; margin-top:12px}
+  blockquote cite{display:block; font:normal 13px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted); margin-top:4px}
+  .precision{font:14px/1.55 var(--letra); font-size-adjust:.46; color:var(--muted); background:var(--chip); border-radius:10px; padding:12px 14px; margin-top:12px}
   /* Línea de investigación: el versículo como título y las obras numeradas en el orden en que se investigaron. */
   /* En escritorio, dos columnas: a la izquierda el versículo y la idea (fijos al bajar), a la derecha
      las obras como línea de tiempo, unidas por un hilo. En el celular, una sola columna. */
@@ -1520,24 +1519,24 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .linea-intro{position:sticky; top:96px}
   @media (max-width:900px){.linea-intro{position:static}}
   .linea-titulo{font-style:italic; font-size:clamp(26px,3.2vw,36px); line-height:1.2; margin:6px 0 8px}
-  .linea-ref{font:14px system-ui,sans-serif; color:var(--muted); margin:0 0 20px}
+  .linea-ref{font:14px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted); margin:0 0 20px}
   .linea-intro > p:not(.eyebrow):not(.linea-ref){margin-top:0}
-  .linea-grupo{font:600 12px system-ui,sans-serif; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); margin:6px 0 18px}
+  .linea-grupo{font:600 15px/16px var(--letra); font-size-adjust:.46; letter-spacing:.12em; font-variant-caps:all-small-caps; color:var(--muted); margin:6px 0 18px}
   .linea-obras + .linea-grupo{margin-top:30px}
   .linea-obras{list-style:none; padding:0; margin:0}
   .obra{position:relative; display:flex; gap:18px; padding-bottom:28px}
   .obra:last-child{padding-bottom:0}
   .obra:not(:last-child)::before{content:""; position:absolute; left:14px; top:34px; bottom:4px; width:1px; background:var(--line)}
   .obra > div{min-width:0}
-  .obra-n{flex:0 0 auto; width:29px; height:29px; border-radius:50%; display:grid; place-items:center; font:600 13px system-ui,sans-serif; border:1.5px solid var(--oro); color:var(--oro)}
+  .obra-n{flex:0 0 auto; width:29px; height:29px; border-radius:50%; display:grid; place-items:center; font:600 13px/1.33 var(--letra); font-size-adjust:.46; border:1.5px solid var(--oro); color:var(--oro)}
   .linea-obras.inv .obra-n{border-style:dashed}
-  .obra-meta{font:13px system-ui,sans-serif; color:var(--muted); margin:5px 0 4px}
+  .obra-meta{font:13px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted); margin:5px 0 4px}
   .obra h3{margin:0 0 10px; font-size:20px; line-height:1.3}
   .obra blockquote{margin-bottom:8px; font-size:17px; line-height:1.5}
   .obra blockquote:empty{display:none}
   html[lang="en"] .obra .solo-es{display:none}
-  .obra-nota{font:14px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 6px}
-  .obra-acc{margin:0; display:flex; flex-wrap:wrap; gap:4px 18px; font:600 14px system-ui,sans-serif}
+  .obra-nota{font:14px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); margin:0 0 6px}
+  .obra-acc{margin:0; display:flex; flex-wrap:wrap; gap:4px 18px; font:600 14px/1.33 var(--letra); font-size-adjust:.46}
   .obra-acc a{text-decoration:none}
 
   .grilla{display:grid; grid-template-columns:repeat(auto-fill,minmax(200px,1fr)); gap:18px}
@@ -1554,7 +1553,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .portada.teatro{background:var(--c-teatro)} .portada.poesia{background:var(--c-poesia)} .portada.ensayo{background:var(--c-ensayo)}
   .portada::after{content:""; position:absolute; inset:8px; border:1px solid rgba(255,240,210,.45); border-radius:6px; pointer-events:none}
   .portada .t{font-size:18px; line-height:1.2; font-weight:700}
-  .portada .a{font:13px system-ui,sans-serif; opacity:.9}
+  .portada .a{font:13px/1.33 var(--letra); font-size-adjust:.46; opacity:.9}
   .portada .f{font-size:26px; opacity:.85; align-self:center}
   .portada.img{background-size:cover; background-position:center; justify-content:flex-end; gap:6px}
   .portada.img::before{content:""; position:absolute; inset:0; background:linear-gradient(to top, rgba(22,15,12,.94) 0%, rgba(22,15,12,.6) 34%, rgba(22,15,12,0) 60%); pointer-events:none}
@@ -1568,9 +1567,9 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   img.mini{display:block; object-fit:cover}
   /* Título y autor en texto bajo la portada: se recorre el catálogo sin leer la portada y lo indexan lectores de pantalla y buscadores. */
   .libro .pie .tl{flex:1 0 100%; display:flex; flex-direction:column; gap:2px; margin-bottom:4px}
-  .libro .pie .tl .tt{font:700 15px/1.25 Georgia,serif; color:var(--ink); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+  .libro .pie .tl .tt{font:700 15px/1.25 var(--letra); font-size-adjust:.46; color:var(--ink); display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
   .libro .pie .tl .au{font-size:13px; color:var(--muted)}
-  .libro .pie{padding:10px 12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font:14px system-ui,sans-serif; color:var(--muted)}
+  .libro .pie{padding:10px 12px; display:flex; gap:6px; flex-wrap:wrap; align-items:center; font:14px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted)}
   .etq{background:var(--chip); border-radius:999px; padding:2px 8px}
   .etq.leido{color:var(--ok)}
   .libro .pie .leido{margin-left:auto; color:var(--ok); font-weight:700} .libro .pie .leido + .fav{margin-left:4px}
@@ -1581,22 +1580,22 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .fila .mini{width:44px; height:66px; border-radius:4px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
   .fila .mini.oracion{background-color:var(--c-oracion)} .fila .mini.novela{background-color:var(--c-novela)}
   .fila:first-child{border-top:0}
-  .fila.cab{cursor:default; padding-top:10px; padding-bottom:10px; background:var(--bg2); font:600 12px system-ui,sans-serif; color:var(--muted); text-transform:uppercase; letter-spacing:.04em}
+  .fila.cab{cursor:default; padding-top:10px; padding-bottom:10px; background:var(--bg2); color:var(--muted)}
   .fila:not(.cab):hover, .fila:focus-visible{background:var(--bg2); outline:none}
   .fila .tt{font-weight:700; font-size:16px; line-height:1.25}
-  .fila .au{font:13px system-ui,sans-serif; color:var(--muted); margin-top:2px}
-  .fila .etqs{display:flex; gap:6px; flex-wrap:wrap; font:14px system-ui,sans-serif; color:var(--muted)}
+  .fila .au{font:13px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted); margin-top:2px}
+  .fila .etqs{display:flex; gap:6px; flex-wrap:wrap; font:14px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted)}
   .fila .tt a{color:inherit; text-decoration:none}
   .fila .ir{color:var(--muted); font-size:22px; line-height:1}
-  .fila .marcas-f{display:flex; gap:6px; justify-content:flex-end; font:13px system-ui,sans-serif}
+  .fila .marcas-f{display:flex; gap:6px; justify-content:flex-end; font:13px/1.33 var(--letra); font-size-adjust:.46}
   .fila .marcas-f .leido{color:var(--ok)} .fila .marcas-f .fav{margin:0}
-  .moral{display:flex; align-items:center; gap:8px; font:13px system-ui,sans-serif; color:var(--muted); min-width:0}
+  .moral{display:flex; align-items:center; gap:8px; font:13px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted); min-width:0}
   .moral .n{font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums}
   .moral .txt{overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
   .circ{display:inline-flex; gap:3px; flex:none}
   .circ i{width:10px; height:10px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
-  .leyenda-moral{font:13px/1.5 system-ui,sans-serif; color:var(--muted); margin-top:10px}
+  .leyenda-moral{font:13px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); margin-top:10px}
   @media (max-width:700px){
     .fila{grid-template-columns:44px minmax(0,1fr) auto; gap:4px 12px; padding:12px 14px}
     .fila.cab{display:none}
@@ -1606,14 +1605,14 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     .moral .txt{white-space:normal}
   }
 
-  .filtros{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 20px; font:14px system-ui,sans-serif}
+  .filtros{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 20px; font:14px/1.33 var(--letra); font-size-adjust:.46}
   .filtros input[type=search], .filtros select{padding:8px 10px; border:1px solid var(--line); border-radius:9px; background:var(--card)}
   .filtros input[type=search]{flex:1 1 220px}
   /* Casillas con área de toque de 40 px de alto (la casilla sola medía 13 px). */
   .filtros label{display:flex; align-items:center; gap:8px; min-height:40px; padding:0 4px; cursor:pointer}
   .filtros input[type=checkbox]{width:18px; height:18px; margin:0; accent-color:var(--acento)}
   #fCuenta{margin:-8px 0 12px}
-  .vacio{color:var(--muted); font:15px system-ui,sans-serif; padding:24px 0}
+  .vacio{color:var(--muted); font:15px/1.33 var(--letra); font-size-adjust:.46; padding:24px 0}
 
   dialog{border:1px solid var(--line); border-radius:16px; padding:0; max-width:760px; width:calc(100% - 32px); background:var(--card); color:var(--ink); box-shadow:var(--sombra)}
   dialog::backdrop{background:rgba(20,10,5,.55)}
@@ -1625,7 +1624,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .botones-ficha{position:sticky; top:0; height:0; z-index:2}
   .cerrar.volver{right:auto; left:8px; font-size:24px}
   .cerrar[hidden]{display:none}
-  .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 12px}
+  .meta{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); margin:0 0 12px}
   .descargas{display:flex; gap:8px; flex-wrap:wrap; margin:14px 0}
   .marcas{display:flex; gap:8px; flex-wrap:wrap}
   .parecidos{display:grid; grid-template-columns:repeat(auto-fill,minmax(230px,1fr)); gap:10px; margin-top:8px}
@@ -1634,14 +1633,14 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .parecido .mini{width:44px; height:66px; border-radius:4px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
   .parecido .mini.oracion{background-color:var(--c-oracion)} .parecido .mini.novela{background-color:var(--c-novela)}
   .parecido .tt{font-weight:700; font-size:15px; line-height:1.25}
-  .parecido .au{font:12px system-ui,sans-serif; color:var(--muted); margin-top:2px}
-  .parecido .de{font:13px/1.35 system-ui,sans-serif; color:var(--muted); margin-top:6px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
+  .parecido .au{font:12px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted); margin-top:2px}
+  .parecido .de{font:13px/1.35 var(--letra); font-size-adjust:.46; color:var(--muted); margin-top:6px; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical; overflow:hidden}
   .seccion-ficha{border-top:1px solid var(--line); margin-top:14px; padding-top:12px}
-  .preventa{margin:12px 0; padding:12px 14px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:12px; background:var(--card); font:14px/1.5 system-ui,sans-serif}
+  .preventa{margin:12px 0; padding:12px 14px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:12px; background:var(--card); font:14px/1.5 var(--letra); font-size-adjust:.46}
   .preventa strong{display:block} .preventa p{margin:4px 0 10px; color:var(--muted)}
   .ed{display:grid; grid-template-columns:72px minmax(0,1fr); gap:16px; align-items:start; margin-bottom:14px; cursor:pointer}
   .ed .mini{width:72px; height:108px; border-radius:6px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
-  .ed p{margin:6px 0 10px; font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
+  .ed p{margin:6px 0 10px; font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted)}
   [hidden]{display:none !important} /* .btn y .formulario fijan display y anulaban el atributo */
   .etq.ed-fenix{color:var(--ed); font-weight:600}
   /* «Solo en Fénix»: no usar la clase .exclusivo (es el bloque grande del inicio y la etiqueta heredaba su borde, margen y relleno) */
@@ -1658,6 +1657,9 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (max-width:600px){.exclusivo{grid-template-columns:1fr; padding:18px} .exclusivo .portada{width:120px} .exclusivo h2{font-size:25px}}
   /* EPUB primero: su etiqueta resalta y lo que no lo tiene queda atenuado y plegado al final del catálogo. */
   .etq.epub{background:var(--epub); color:var(--epub-ink); font-weight:700; letter-spacing:.03em}
+  /* Siglas (EPUB, PDF) en versalitas, como se componen en un libro: en Garamond las mayúsculas plenas ensanchaban
+     la etiqueta y partían la fila en dos líneas. */
+  .etq.epub, .etq.fmt{font-variant-caps:all-small-caps; letter-spacing:.06em}
   .etq.sello{background:transparent; border:1.5px solid var(--oro); color:var(--oro); font-weight:700; padding:1px 8px; font-size:12.5px; white-space:nowrap}
   .libro.fenix{border:2px solid var(--oro)}
   /* Se atenúa la imagen, no el texto: así el texto conserva un contraste de 4,5:1 o más. */
@@ -1670,22 +1672,22 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   img.mini.teatro{background-color:var(--c-teatro)} img.mini.poesia{background-color:var(--c-poesia)} img.mini.ensayo{background-color:var(--c-ensayo)}
   img.mini.oracion{background-color:var(--c-oracion)} img.mini.novela{background-color:var(--c-novela)}
   .sin-epub-grupo{border-top:1px solid var(--line)}
-  .sin-epub-grupo > summary{cursor:pointer; padding:12px 16px; font:600 14px system-ui,sans-serif; color:var(--muted); background:var(--bg2)}
+  .sin-epub-grupo > summary{cursor:pointer; padding:12px 16px; font:600 14px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted); background:var(--bg2)}
   .sin-epub-grupo > summary:hover{color:var(--ink)}
   .sin-epub-grupo .fila:first-of-type{border-top:1px solid var(--line)}
   .ficha .sello{display:inline-block; margin:0 0 8px}
   /* Citas: más aire entre una y otra, y solo dos a la vista; el resto tras «Ver más citas». */
   .citas-ficha{margin-top:8px} .citas-ficha blockquote{margin-bottom:18px; line-height:1.55}
-  .citas-ficha summary{cursor:pointer; font:600 14px system-ui,sans-serif; color:var(--acento); margin-bottom:12px}
+  .citas-ficha summary{cursor:pointer; font:600 14px/1.33 var(--letra); font-size-adjust:.46; color:var(--acento); margin-bottom:12px}
   .etq.der-libre{color:var(--ok); font-weight:600} .etq.der-protegido, .etq.der-probable{color:var(--vino); font-weight:600}
   .fila .moral-obra{min-width:0}
-  .ayuda{font:14px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 12px; margin:0 0 12px}
+  .ayuda{font:14px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 12px; margin:0 0 12px}
 
   .oracion-txt p{margin:0 0 12px}
   .oracion-txt{max-width:720px}
   .idiomas-oracion{display:flex; gap:6px; margin:8px 0 14px}
 
-  form.formulario{display:grid; gap:12px; max-width:620px; font:15px system-ui,sans-serif}
+  form.formulario{display:grid; gap:12px; max-width:620px; font:15px/1.33 var(--letra); font-size-adjust:.46}
   form.formulario label{display:grid; gap:4px; font-weight:600; font-size:14px}
   form.formulario input, form.formulario select, form.formulario textarea{padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--card); font-weight:400}
   form.formulario textarea{min-height:120px; resize:vertical}
@@ -1696,7 +1698,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .combo-lista li[aria-selected="true"], .combo-lista li:hover{background:var(--chip)}
   .combo-lista li.vacio{cursor:default; color:var(--muted); background:none}
   .oculto{position:absolute; left:-9999px}
-  .estado{font:14px system-ui,sans-serif; min-height:20px}
+  .estado{font:14px/1.33 var(--letra); font-size-adjust:.46; min-height:20px}
   .estado.ok{color:var(--ok)} .estado.err{color:var(--vino)}
   .dos-col{display:grid; grid-template-columns:1fr 1fr; gap:22px}
   @media (max-width:820px){.dos-col{grid-template-columns:1fr}}
@@ -1705,8 +1707,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .cita-dia{display:block; margin-top:34px; padding:22px 24px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:14px; background:var(--card); color:inherit; text-decoration:none}
   .cita-dia:hover, .cita-dia:focus-visible{border-color:var(--oro)}
   .cita-dia .txt{margin:6px 0 10px; font-size:clamp(19px,2.6vw,24px); line-height:1.45; font-style:italic}
-  .cita-dia .de{font:14px system-ui,sans-serif; color:var(--muted)}
-  .cita-dia .ir{font:600 14px system-ui,sans-serif; color:var(--acento); white-space:nowrap}
+  .cita-dia .de{font:14px/1.33 var(--letra); font-size-adjust:.46; color:var(--muted)}
+  .cita-dia .ir{font:600 14px/1.33 var(--letra); font-size-adjust:.46; color:var(--acento); white-space:nowrap}
   .citas{display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:14px}
   @media (max-width:760px){.citas{grid-template-columns:1fr}}
   .cita{display:flex; gap:14px; padding:16px; border:1px solid var(--line); border-radius:12px; background:var(--card); color:inherit; text-decoration:none}
@@ -1714,10 +1716,10 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   .cita .mini{flex:0 0 auto; width:44px; height:66px; border-radius:4px; background:var(--c-lectura) center/cover no-repeat; box-shadow:0 1px 3px rgba(0,0,0,.25)}
   .cita .mini.oracion{background-color:var(--c-oracion)} .cita .mini.novela{background-color:var(--c-novela)}
   .cita blockquote{margin:0; border:0; padding:0}
-  .ficha .aviso{font:13px system-ui,sans-serif; color:var(--ok); align-self:center}
+  .ficha .aviso{font:13px/1.33 var(--letra); font-size-adjust:.46; color:var(--ok); align-self:center}
 
   /* PIE:inicio - gen_estaticos.js copia este bloque a las páginas estáticas */
-  footer{border-top:1px solid var(--line); padding:40px 0 26px; color:var(--muted); font:14px/1.55 system-ui,sans-serif}
+  footer{border-top:1px solid var(--line); padding:40px 0 26px; color:var(--muted); font:14px/1.55 var(--letra); font-size-adjust:.46}
   footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
   footer button.enlace{background:none; border:0; padding:0; font:inherit; color:inherit; text-decoration:underline; cursor:pointer}
   footer .pie-cols{display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) minmax(0,1fr); gap:28px 48px; padding-bottom:28px}
@@ -1727,7 +1729,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   footer .pie-red{display:inline-flex; align-items:center; gap:8px; padding:7px 15px 7px 11px; border:1px solid rgba(233,194,106,.5); border-radius:999px; text-decoration:none; font-weight:500; transition:background .15s}
   footer .pie-red:hover{background:rgba(233,194,106,.14)}
   footer .pie-red svg{flex:none}
-  footer .pie-tit{margin:4px 0 12px; font:600 12px/1.2 system-ui,sans-serif; letter-spacing:.14em; text-transform:uppercase; opacity:.7}
+  footer .pie-tit{margin:4px 0 12px; font:600 15px/14px var(--letra); font-size-adjust:.46; letter-spacing:.14em; font-variant-caps:all-small-caps; opacity:.7}
   footer .pie-col ul{list-style:none; margin:0; padding:0; display:grid; gap:7px}
   /* Ningún enlace del pie va subrayado en reposo (el botón «Instalar como app» y Verum Data lo estaban); solo al pasar. */
   footer a, footer button.enlace{text-decoration:none} footer a:hover, footer button.enlace:hover{text-decoration:underline}
@@ -2832,7 +2834,7 @@ function iniciar(){
     if (!fm.length) return `<span class="etq">${esc(t("x.comprar"))}</span>`;
     const otros = fm.filter(f => f !== "epub").map(etqFormato);
     if (uno && fm.includes("epub")) return `<span class="etq epub">EPUB</span>`;
-    return (fm.includes("epub") ? `<span class="etq epub">EPUB</span>` : "") + (otros.length ? `<span class="etq">${otros.join(" · ")}</span>` : "");
+    return (fm.includes("epub") ? `<span class="etq epub">EPUB</span>` : "") + (otros.length ? `<span class="etq fmt">${otros.join(" · ")}</span>` : "");
   }
   // En tarjetas y filas va la versión corta, que cabe a 390 px; la ficha lleva el sello entero.
   const sello = (l, entero) => esFenix(l) ? `<span class="etq sello" title="${esc(t("x.sello"))}">✦ ${esc(t(entero ? "x.sello" : "x.selloCorto"))}</span>` : "";
@@ -3724,7 +3726,7 @@ function iniciar(){
 <!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
 <style>
 /* Arriba: abajo lo tapa el mensaje «Descarga completa · Abrir» de Chrome, que es justo el que hay que tocar. */
-.aviso-epub{position:fixed; left:16px; right:16px; top:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 system-ui,sans-serif}
+.aviso-epub{position:fixed; left:16px; right:16px; top:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 var(--letra); font-size-adjust:.46}
 .aviso-epub p{margin:0; flex:1}
 .aviso-epub a{color:var(--vino); font-weight:600}
 .aviso-epub button{flex:none; width:40px; height:40px; border:0; background:none; color:var(--muted); font-size:24px; line-height:1; cursor:pointer}

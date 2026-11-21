@@ -9,6 +9,7 @@ Revisa, en ventanas de escritorio y de celular:
   - todas las vistas y una página de libro: sin scroll horizontal y sin errores de JavaScript;
   - la barra de arriba cabe en una línea en escritorio;
   - cada enlace del menú lleva al principio de su vista, también si ya se está en ella más abajo;
+  - una sola letra: todo texto en EB Garamond (var(--letra)), salvo el código; ni el CSS fuente la mezcla;
   - la barra del sistema del celular (theme-color) es del color de la cabecera (--cabecera, la madera), en claro y en oscuro.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
@@ -83,6 +84,21 @@ def capturar(nav, base, carpeta):
             pg.close()
 
 
+# Una sola letra en el CSS fuente (20-nov-2026): toda declaración de letra usa var(--letra) (o inherit); solo el código
+# va en monoespaciada. Atrapa también reglas que hoy no se ven (una vista sin abrir, un aviso que sale a veces).
+LETRA_AJENA = re.compile(r'font(?:-family)?\s*:[^;}"`]*?(system-ui|sans-serif|Georgia|Arial|Helvetica|Roboto|"Segoe UI")')
+
+
+def letras_fuente(raiz):
+    fallas = []
+    for rel in ("index.html", os.path.join("herramientas", "gen_estaticos.js")):
+        with open(os.path.join(raiz, rel), encoding="utf-8") as f:
+            for n, linea in enumerate(f, 1):
+                if LETRA_AJENA.search(linea) and "monospace" not in linea and "--letra:" not in linea:
+                    fallas.append(f"{rel}:{n}: letra fuera de var(--letra): {linea.strip()[:90]}")
+    return fallas
+
+
 def revisar(raiz, capturas=None):
     try:
         from playwright.sync_api import sync_playwright
@@ -90,7 +106,7 @@ def revisar(raiz, capturas=None):
         sys.exit("Falta playwright (pip install playwright && playwright install chromium).")
     srv = servir(raiz)
     base = f"http://127.0.0.1:{srv.server_port}/"
-    fallas = []
+    fallas = letras_fuente(raiz)
     with sync_playwright() as p:
         nav = p.chromium.launch()
         if capturas:
@@ -111,6 +127,15 @@ def revisar(raiz, capturas=None):
                     fallas.append(f"{donde}: scroll horizontal ({ancho}px en {w}px)")
                 for e in errores:
                     fallas.append(f"{donde}: error de JavaScript: {e}")
+                # Una sola letra (20-nov-2026): todo texto visible va en EB Garamond (var(--letra)); solo el código
+                # (pre, code) va en monoespaciada. Antes convivían 49 reglas en system-ui con la Garamond.
+                if w == VENTANAS[0][0] or w < 760:
+                    ajenas = pg.evaluate("""() => [...document.querySelectorAll('body *')].filter(e => e.offsetParent
+                            && !e.closest('pre, code, svg') && [...e.childNodes].some(n => n.nodeType === 3 && n.textContent.trim())
+                            && !getComputedStyle(e).fontFamily.startsWith('"EB Garamond"'))
+                        .map(e => `${e.tagName.toLowerCase()}.${e.className} (${getComputedStyle(e).fontFamily.split(',')[0]})`)""")
+                    for x in sorted(set(ajenas))[:5]:
+                        fallas.append(f"{donde}: texto fuera de var(--letra): {x}")
                 # El pie lleva el auspicio de Verum Data con su enlace, en todas las páginas (7-nov-2026).
                 aus = pg.evaluate("""() => { const a = document.querySelector('footer a[href="https://verumdata.cl/"]');
                     const i = a && a.querySelector('img'); return {a: !!a, img: !!(i && i.complete && i.naturalWidth > 0)}; }""")

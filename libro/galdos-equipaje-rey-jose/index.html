@@ -108,7 +108,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e}}
   :root[data-theme="dark"]{--bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e}
   *{box-sizing:border-box}
-  body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+  body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 var(--letra)}
   a{color:var(--vino)}
   a,button{-webkit-tap-highlight-color:transparent}
   a:active,button:active{opacity:.7}
@@ -116,7 +116,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   header{border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
   .marca{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
-  .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
+  .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px/1.33 var(--letra); font-size-adjust:.46; cursor:pointer}
   /* Lupa: abre un buscador que lleva a la biblioteca filtrada (index.html lee ?q=). */
   .ajustes{display:flex; align-items:center; gap:6px}
   /* El buscador cuelga de la barra y no de la lupa: en el celular no se sale por la izquierda. */
@@ -125,7 +125,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   details.buscar summary::-webkit-details-marker{display:none}
   details.buscar summary svg{width:18px; height:18px}
   details.buscar form{position:absolute; right:16px; top:calc(100% - 4px); z-index:20; display:flex; gap:8px; width:min(380px,calc(100vw - 32px)); padding:10px; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
-  details.buscar input{flex:1 1 auto; min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font:16px/1.3 system-ui,sans-serif}
+  details.buscar input{flex:1 1 auto; min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font:16px/1.3 var(--letra); font-size-adjust:.46}
   details.buscar .btn{min-height:0; padding:10px 14px; font-size:15px; cursor:pointer}
   main.wrap{padding-top:28px; padding-bottom:48px}
   /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
@@ -135,26 +135,26 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   @media (max-width:760px){.ficha{grid-template-columns:1fr; grid-template-areas:"cabeza" "lado" "cuerpo"} .ficha .lado{position:static} .ficha img{max-width:150px} .ficha .lado .botones{flex-direction:row}}
   .ficha img{width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:var(--chip)}
   h1{font-size:clamp(28px,5vw,38px); line-height:1.15; margin:0 0 8px}
-  h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 system-ui,sans-serif; color:var(--muted)}
+  h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 var(--letra); font-size-adjust:.46; color:var(--muted)}
   h2{font-size:20px; margin:28px 0 8px}
-  .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 14px}
+  .meta{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); margin:0 0 14px}
   .botones{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 8px}
-  .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px system-ui,sans-serif; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
+  .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
-  .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
+  .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px/1.33 var(--letra); font-size-adjust:.46}
   .sello.exclusivo{background:var(--oro); color:var(--bg); border-color:var(--oro)}
-  .aviso{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:6px 0 0}
+  .aviso{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); margin:6px 0 0}
   .aviso:empty{display:none}
-  .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
+  .ayuda{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
   blockquote{margin:0 0 20px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic; line-height:1.6}
-  details.citas summary{cursor:pointer; font:600 15px system-ui,sans-serif; color:var(--vino); margin-bottom:14px}
+  details.citas summary{cursor:pointer; font:600 15px/1.33 var(--letra); font-size-adjust:.46; color:var(--vino); margin-bottom:14px}
   .circ{display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px}
   .circ i{width:12px; height:12px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
   ul.parecidos{padding-left:20px}
   ul.parecidos li{margin:4px 0}
 
-  footer{border-top:1px solid var(--line); padding:40px 0 26px; color:var(--muted); font:14px/1.55 system-ui,sans-serif}
+  footer{border-top:1px solid var(--line); padding:40px 0 26px; color:var(--muted); font:14px/1.55 var(--letra); font-size-adjust:.46}
   footer a.auspicio{display:inline-flex; align-items:center; gap:6px; vertical-align:bottom} footer a.auspicio img{border-radius:4px; flex:none}
   footer button.enlace{background:none; border:0; padding:0; font:inherit; color:inherit; text-decoration:underline; cursor:pointer}
   footer .pie-cols{display:grid; grid-template-columns:minmax(0,1.7fr) minmax(0,1fr) minmax(0,1fr); gap:28px 48px; padding-bottom:28px}
@@ -164,7 +164,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   footer .pie-red{display:inline-flex; align-items:center; gap:8px; padding:7px 15px 7px 11px; border:1px solid rgba(233,194,106,.5); border-radius:999px; text-decoration:none; font-weight:500; transition:background .15s}
   footer .pie-red:hover{background:rgba(233,194,106,.14)}
   footer .pie-red svg{flex:none}
-  footer .pie-tit{margin:4px 0 12px; font:600 12px/1.2 system-ui,sans-serif; letter-spacing:.14em; text-transform:uppercase; opacity:.7}
+  footer .pie-tit{margin:4px 0 12px; font:600 15px/14px var(--letra); font-size-adjust:.46; letter-spacing:.14em; font-variant-caps:all-small-caps; opacity:.7}
   footer .pie-col ul{list-style:none; margin:0; padding:0; display:grid; gap:7px}
   /* Ningún enlace del pie va subrayado en reposo (el botón «Instalar como app» y Verum Data lo estaban); solo al pasar. */
   footer a, footer button.enlace{text-decoration:none} footer a:hover, footer button.enlace:hover{text-decoration:underline}
@@ -174,7 +174,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   
   /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
   nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
-  nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a, nav.menu summary{font:15px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
   nav.menu a:hover, nav.menu summary:hover{color:var(--ink); background:var(--chip)}
   .mas{position:relative} .mas summary{list-style:none; cursor:pointer} .mas summary::-webkit-details-marker{display:none} .mas summary::after{content:" ▾"; font-size:12px}
   .mas .sub{position:absolute; right:0; top:calc(100% + 6px); z-index:30; min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
@@ -357,7 +357,7 @@ try{await navigator.clipboard.writeText(u);document.getElementById("avisoCompart
 <!-- AVISO_EPUB:inicio - En el celular el EPUB queda en Descargas sin abrirse: este aviso dice con qué aplicación leerlo. El mismo bloque lo pone herramientas/gen_estaticos.js en cada ficha. -->
 <style>
 /* Arriba: abajo lo tapa el mensaje «Descarga completa · Abrir» de Chrome, que es justo el que hay que tocar. */
-.aviso-epub{position:fixed; left:16px; right:16px; top:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 system-ui,sans-serif}
+.aviso-epub{position:fixed; left:16px; right:16px; top:16px; z-index:1000; max-width:520px; margin:0 auto; display:flex; gap:10px; align-items:flex-start; padding:14px 8px 14px 16px; border:1px solid var(--line); border-left:4px solid var(--acento); border-radius:12px; background:var(--card); color:var(--ink); box-shadow:0 8px 28px rgba(0,0,0,.3); font:15px/1.5 var(--letra); font-size-adjust:.46}
 .aviso-epub p{margin:0; flex:1}
 .aviso-epub a{color:var(--vino); font-weight:600}
 .aviso-epub button{flex:none; width:40px; height:40px; border:0; background:none; color:var(--muted); font-size:24px; line-height:1; cursor:pointer}

@@ -224,7 +224,7 @@ const ESTILO = `
   @media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e}}
   :root[data-theme="dark"]{--bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a; --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e}
   *{box-sizing:border-box}
-  body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 Georgia,"Iowan Old Style","Palatino Linotype",serif}
+  body{margin:0; background:var(--bg); color:var(--ink); font:17px/1.65 var(--letra)}
   a{color:var(--vino)}
   a,button{-webkit-tap-highlight-color:transparent}
   a:active,button:active{opacity:.7}
@@ -232,7 +232,7 @@ const ESTILO = `
   header{border-bottom:1px solid var(--line)}
   .barra{display:flex; align-items:center; justify-content:space-between; gap:12px; min-height:60px}
   .marca{display:flex; align-items:center; gap:10px; color:var(--ink); text-decoration:none; font-weight:700; font-size:19px}
-  .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px system-ui,sans-serif; cursor:pointer}
+  .pildora{border:1px solid var(--line); background:var(--card); color:var(--ink); border-radius:999px; min-height:40px; padding:6px 14px; font:600 15px/1.33 var(--letra); font-size-adjust:.46; cursor:pointer}
   /* Lupa: abre un buscador que lleva a la biblioteca filtrada (index.html lee ?q=). */
   .ajustes{display:flex; align-items:center; gap:6px}
   /* El buscador cuelga de la barra y no de la lupa: en el celular no se sale por la izquierda. */
@@ -241,7 +241,7 @@ const ESTILO = `
   details.buscar summary::-webkit-details-marker{display:none}
   details.buscar summary svg{width:18px; height:18px}
   details.buscar form{position:absolute; right:16px; top:calc(100% - 4px); z-index:20; display:flex; gap:8px; width:min(380px,calc(100vw - 32px)); padding:10px; background:var(--card); border:1px solid var(--line); border-radius:12px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
-  details.buscar input{flex:1 1 auto; min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font:16px/1.3 system-ui,sans-serif}
+  details.buscar input{flex:1 1 auto; min-width:0; padding:10px 12px; border:1px solid var(--line); border-radius:10px; background:var(--bg); color:var(--ink); font:16px/1.3 var(--letra); font-size-adjust:.46}
   details.buscar .btn{min-height:0; padding:10px 14px; font-size:15px; cursor:pointer}
   main.wrap{padding-top:28px; padding-bottom:48px}
   /* Escritorio: portada grande y descargas fijas a la izquierda, texto a la derecha. Celular: título, portada, descargas y texto. */
@@ -251,19 +251,19 @@ const ESTILO = `
   @media (max-width:760px){.ficha{grid-template-columns:1fr; grid-template-areas:"cabeza" "lado" "cuerpo"} .ficha .lado{position:static} .ficha img{max-width:150px} .ficha .lado .botones{flex-direction:row}}
   .ficha img{width:100%; height:auto; aspect-ratio:2/3; object-fit:cover; border-radius:10px; background:var(--chip)}
   h1{font-size:clamp(28px,5vw,38px); line-height:1.15; margin:0 0 8px}
-  h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 system-ui,sans-serif; color:var(--muted)}
+  h1 .sub{display:block; margin-top:6px; font:600 16px/1.4 var(--letra); font-size-adjust:.46; color:var(--muted)}
   h2{font-size:20px; margin:28px 0 8px}
-  .meta{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:0 0 14px}
+  .meta{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); margin:0 0 14px}
   .botones{display:flex; flex-wrap:wrap; gap:10px; margin:18px 0 8px}
-  .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px system-ui,sans-serif; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
+  .btn{display:inline-flex; align-items:center; min-height:46px; padding:10px 18px; border-radius:10px; font:600 16px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none; border:1px solid var(--line); background:var(--card); color:var(--ink)}
   .btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
-  .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px system-ui,sans-serif}
+  .sello{display:inline-block; margin:0 0 10px; padding:1px 10px; border:1.5px solid var(--oro); border-radius:999px; color:var(--oro); font:700 13px/1.33 var(--letra); font-size-adjust:.46}
   .sello.exclusivo{background:var(--oro); color:var(--bg); border-color:var(--oro)}
-  .aviso{font:15px/1.5 system-ui,sans-serif; color:var(--muted); margin:6px 0 0}
+  .aviso{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); margin:6px 0 0}
   .aviso:empty{display:none}
-  .ayuda{font:15px/1.5 system-ui,sans-serif; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
+  .ayuda{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted); background:var(--chip); border-radius:10px; padding:10px 14px; margin:8px 0 0}
   blockquote{margin:0 0 20px; padding:2px 0 2px 16px; border-left:3px solid var(--oro); font-style:italic; line-height:1.6}
-  details.citas summary{cursor:pointer; font:600 15px system-ui,sans-serif; color:var(--vino); margin-bottom:14px}
+  details.citas summary{cursor:pointer; font:600 15px/1.33 var(--letra); font-size-adjust:.46; color:var(--vino); margin-bottom:14px}
   .circ{display:inline-flex; gap:4px; vertical-align:middle; margin-right:8px}
   .circ i{width:12px; height:12px; border-radius:50%; border:1px solid var(--muted); opacity:.45}
   .circ i.on{background:var(--oro); border-color:var(--oro); opacity:1}
@@ -272,7 +272,7 @@ const ESTILO = `
 ${PIE_CSS}
   /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
   nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
-  nav.menu a, nav.menu summary{font:15px system-ui,sans-serif; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
+  nav.menu a, nav.menu summary{font:15px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
   nav.menu a:hover, nav.menu summary:hover{color:var(--ink); background:var(--chip)}
   .mas{position:relative} .mas summary{list-style:none; cursor:pointer} .mas summary::-webkit-details-marker{display:none} .mas summary::after{content:" ▾"; font-size:12px}
   .mas .sub{position:absolute; right:0; top:calc(100% + 6px); z-index:30; min-width:190px; display:flex; flex-direction:column; gap:2px; padding:6px; background:var(--card); border:1px solid var(--line); border-radius:10px; box-shadow:0 8px 28px rgba(0,0,0,.18)}
@@ -558,7 +558,7 @@ ${FUENTES}
 <!-- Generada por herramientas/gen_estaticos.js desde muestras/ (herramientas/muestras.py). No editar a mano. -->
 <style>${estilo(B)}
   .lectura{max-width:680px; margin:0 auto}
-  .lectura .volver{display:inline-block; margin:0 0 18px; font:600 15px system-ui,sans-serif; text-decoration:none}
+  .lectura .volver{display:inline-block; margin:0 0 18px; font:600 15px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none}
   .lectura .meta{margin-bottom:28px}
   .texto{font-size:19px; line-height:1.75; hyphens:auto; -webkit-hyphens:auto; overflow-wrap:break-word}
   .texto p{margin:0 0 1em}
@@ -568,12 +568,12 @@ ${FUENTES}
   .texto pre{white-space:pre-wrap; font:inherit}
   .texto hr{border:0; text-align:center; margin:2em 0} .texto hr::after{content:"⁂"; color:var(--muted)}
   .texto figure{margin:1.5em 0; text-align:center} .texto figure img{max-width:100%; height:auto; border-radius:6px}
-  .texto figcaption{margin-top:6px; font:italic 15px/1.5 Georgia,serif; color:var(--muted)}
+  .texto figcaption{margin-top:6px; font:italic 15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted)}
   /* Los dibujos con fondo transparente (El principito) son negros: en modo oscuro van sobre papel claro. */
   @media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .texto figure img{background:#faf6ef; padding:8px}}
   :root[data-theme="dark"] .texto figure img{background:#faf6ef; padding:8px}
   .fin{margin-top:40px; padding:20px; border:1px solid var(--line); border-radius:12px; background:var(--card)}
-  .fin p{margin:0; font:16px/1.5 system-ui,sans-serif}
+  .fin p{margin:0; font:16px/1.5 var(--letra); font-size-adjust:.46}
 </style>
 </head>
 <body>
@@ -628,7 +628,7 @@ const avisoPreventa = (l, lang) => {
   if (!CAMPANA_LIBROS.includes(l.id) || !campanaVigente()) return "";
   const t = PREVENTA_TX[lang] || PREVENTA_TX.es;
   return `
-      <style>.preventa{margin:16px 0 4px; padding:14px 16px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:12px; background:var(--card); font:15px/1.5 system-ui,sans-serif} .preventa strong{display:block; color:var(--ink)} .preventa p{margin:4px 0 10px; color:var(--muted)}</style>
+      <style>.preventa{margin:16px 0 4px; padding:14px 16px; border:1px solid var(--line); border-left:4px solid var(--oro); border-radius:12px; background:var(--card); font:15px/1.5 var(--letra); font-size-adjust:.46} .preventa strong{display:block; color:var(--ink)} .preventa p{margin:4px 0 10px; color:var(--muted)}</style>
       <div class="preventa" id="preventa" data-hasta="${CAMPANA_HASTA}"><strong>${esc(t.titulo)}</strong><p>${esc(t.texto(campanaDia(lang)))}</p><a class="btn prim" href="${CAMPANA_URL}" target="_blank" rel="noopener">${esc(t.boton)}</a></div>
       <script>(function(){var c=document.getElementById("preventa");if(c&&Date.now()>Date.parse(c.dataset.hasta))c.remove();})();</script>`;
 };
@@ -828,10 +828,10 @@ ${JSON.stringify(ld, null, 2)}
   .seccion ul.lista{list-style:none; padding:0; margin:24px 0 0}
   .seccion ul.lista li{padding:14px 0; border-top:1px solid var(--line)}
   .seccion ul.lista a.tt{font-size:19px; font-weight:700; text-decoration:none}
-  .seccion ul.lista .au{font:15px/1.5 system-ui,sans-serif; color:var(--muted)}
+  .seccion ul.lista .au{font:15px/1.5 var(--letra); font-size-adjust:.46; color:var(--muted)}
   .seccion ul.lista p{margin:4px 0 0}
   nav.secciones{display:flex; flex-wrap:wrap; gap:8px; margin:6px 0 0}
-  nav.secciones a{font:600 15px system-ui,sans-serif; text-decoration:none; padding:6px 12px; border:1px solid var(--line); border-radius:999px; background:var(--card)}
+  nav.secciones a{font:600 15px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none; padding:6px 12px; border:1px solid var(--line); border-radius:999px; background:var(--card)}
   nav.secciones a[aria-current]{background:var(--acento); color:var(--acento-ink); border-color:transparent}
 </style>
 </head>
