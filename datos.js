@@ -3495,6 +3495,29 @@ window.FENIX = {
       parecidos: ["perez-galdos-el-19-de-marzo-y-el-2-de-mayo", "perez-galdos-la-corte-de-carlos-iv", "perez-galdos-trafalgar"]
     },
     {
+      id: "hugo-los-miserables",
+      titulo: "Los miserables",
+      autor: "Victor Hugo (trad. Jacinto Labaila)",
+      anio: "1862",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Jean Valjean sale del presidio después de diecinueve años por robar un pan, endurecido y rechazado por todos. Un obispo lo acoge en su casa y, cuando Valjean le roba la plata, lo perdona y le regala además los candelabros. Ese perdón le cambia la vida: con otro nombre se vuelve un hombre honrado, cuida de Cosette, la hija de la pobre Fantina, y huye durante años del inspector Javert, que no cree que un hombre pueda cambiar. La novela recorre la Francia de la primera mitad del siglo XIX, de Waterloo a las barricadas de París de 1832. Se ofrece en la versión abreviada de Jacinto Labaila (Valencia, 1887)."},
+      porque: {"es":"Para quien quiere una gran novela que se lea sola y deje algo dentro. Es la historia de un hombre al que un acto de misericordia le cambia la vida, y de lo que hace con esa segunda oportunidad: Valjean pasa el resto de su vida devolviendo a otros el bien que recibió. Si alguna vez te preguntaste si alguien puede cambiar de verdad, este libro responde que sí. La versión abreviada deja la historia completa sin las largas digresiones del original.","en":"For anyone who wants a great novel that reads itself and leaves something behind. It is the story of a man whose life is changed by an act of mercy, and of what he does with that second chance: Valjean spends the rest of his life giving others the good he received. If you have ever wondered whether someone can truly change, this book answers yes. The abridged version keeps the whole story without the original's long digressions."},
+      imagen: {"src": "img/portadas/hugo-los-miserables.jpg", "credito": {"es": "Frédéric Lix, «El obispo y el forzado», ilustración de «Los miserables», c. 1879", "en": "Frédéric Lix, “The Bishop and the Convict”, illustration for «Les Misérables», c. 1879"}, "url": "https://commons.wikimedia.org/wiki/File:L%E2%80%99%C3%A9v%C3%AAque_et_le_for%C3%A7at,_578.jpg"},
+      citas: [
+        "Jean Valjean, hermano mío, vos no pertenecéis al mal, sino al bien. Yo compro vuestra alma; yo la libro de las negras ideas y del espíritu de perdición, y la consagro a Dios.",
+        "No preguntéis su nombre a quien os pide asilo. Precisamente quien más necesidad tiene de asilo es el que tiene más dificultad en decir su nombre.",
+        "Visitaba a los pobres mientras tenía dinero, y cuando éste se le acababa, visitaba a los ricos.",
+        "Amaos mucho, siempre. En el mundo casi no hay nada más importante que amar."
+      ],
+      archivos: {},
+      externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Los_miserables_(Labaila_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Los%20miserables%20%28Labaila%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Los%20miserables%20%28Labaila%20tr.%29"}],
+      fuente: {"texto": "Edición de Valencia, 1887 (Terraza, Aliena y Compañía), versión abreviada de Jacinto Labaila (1833-1895), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Los_miserables_(Labaila_tr.)"},
+      delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-miserables"},
+      parecidos: ["manzoni-los-novios", "dickens-el-cantico-de-navidad", "wallace-ben-hur"]
+    },
+    {
       id: "perez-galdos-juan-martin-el-empecinado",
       titulo: "Juan Martín el Empecinado",
       autor: "Benito Pérez Galdós",
