@@ -3087,6 +3087,8 @@ function iniciar(){
     id = l.id; // un id viejo (alias) abre la ficha nueva
     const desc = [
       ...Object.entries(archivosEn(l)).map(([f, url]) => botonArchivo(f, url)),
+      // Leer aquí: el lector del sitio (lector/) guarda el libro en el teléfono y se lee sin conexión.
+      ...(archivosEn(l).epub ? [`<a class="btn" href="lector/#fenix=${encodeURIComponent(l.id)}&l=${lang}">${lang === "en" ? "Read here" : "Leer aquí"}</a>`] : []),
       // Hojear: las primeras páginas en una página aparte (gen_estaticos.js la arma para cada EPUB propio).
       ...(archivosEn(l).epub ? [`<a class="btn" href="${esc(rutaLibro(l))}muestra/">${esc(t("x.hojear"))}</a>`] : []),
       ...[...externosEn(l)].sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" target="_blank" rel="noopener">${e.formato === "web" ? esc(t(e.escuchar ? "x.escuchar" : "x.enLinea")) : esc(t("x.leer")) + " " + e.formato.toUpperCase()} · ${esc(e.texto)}</a>`),

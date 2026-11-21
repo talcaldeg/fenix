@@ -10,7 +10,8 @@ Revisa, en ventanas de escritorio y de celular:
   - la barra de arriba cabe en una línea en escritorio;
   - cada enlace del menú lleva al principio de su vista, también si ya se está en ella más abajo;
   - una sola letra: todo texto en EB Garamond (var(--letra)), salvo el código; ni el CSS fuente la mezcla;
-  - la barra del sistema del celular (theme-color) es del color de la cabecera (--cabecera, la madera), en claro y en oscuro.
+  - la barra del sistema del celular (theme-color) es del color de la cabecera (--cabecera, la madera), en claro y en oscuro;
+  - el lector (lector/): sin errores ni scroll horizontal, y un libro agregado se abre sin conexión.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
      --capturas <carpeta>  guarda una captura del inicio por ventana y el RECORRIDO (inicio, Biblioteca,
@@ -21,6 +22,7 @@ import argparse
 import datetime
 import functools
 import http.server
+import json
 import os
 import re
 import sys
@@ -528,8 +530,50 @@ def revisar(raiz, capturas=None):
                 if f"/img/{img}\"" not in f.read():
                     fallas.append(f"encuadernar: {puerta} no declara og:image img/{img}")
         pg.close()
+        fallas += revisar_lector(nav, base, raiz)
         nav.close()
     srv.shutdown()
+    return fallas
+
+
+def revisar_lector(nav, base, raiz):
+    """El lector (lector/, 21-nov-2026): sin errores ni scroll horizontal en las 7 ventanas, y lo que él
+    pidió como regla: que funcione sin conexión. Se agrega el primer libro del catálogo desde la ficha
+    (#fenix=), se corta la red, se recarga y se abre de nuevo; ningún error de JavaScript en el camino."""
+    fallas = []
+    for w, h in VENTANAS:
+        pg = nav.new_page(viewport={"width": w, "height": h})
+        errores = []
+        pg.on("pageerror", lambda e: errores.append(str(e)))
+        pg.goto(base + "lector/")
+        pg.wait_for_load_state("networkidle")
+        ancho = pg.evaluate("document.documentElement.scrollWidth")
+        if ancho > w + 1:
+            fallas.append(f"{w}x{h} lector: scroll horizontal ({ancho}px en {w}px)")
+        fallas += [f"{w}x{h} lector: error de JavaScript: {e}" for e in errores]
+        pg.close()
+    with open(os.path.join(raiz, "lector", "catalogo.json"), encoding="utf-8") as f:
+        libro = json.load(f)["libros"][0]
+    ctx = nav.new_context(viewport={"width": 390, "height": 844})
+    pg = ctx.new_page()
+    errores = []
+    pg.on("pageerror", lambda e: errores.append(str(e)))
+    try:
+        pg.goto(f"{base}lector/#fenix={libro['id']}&l={libro['idioma']}")
+        pg.wait_for_selector("#vistaLectura:not([hidden]) #texto .lx-cap", timeout=30000)
+        pg.evaluate("navigator.serviceWorker.ready")
+        pg.wait_for_timeout(1500)
+        ctx.set_offline(True)
+        pg.goto(base + "lector/")
+        pg.wait_for_selector("#estante .tarjeta", timeout=15000)
+        pg.click("#estante .tarjeta")
+        pg.wait_for_selector("#vistaLectura:not([hidden]) #texto .lx-cap", timeout=15000)
+        if len(pg.inner_text("#texto")) < 50:
+            fallas.append("lector sin conexión: el libro abre vacío")
+    except Exception as e:
+        fallas.append(f"lector sin conexión: no abre ({str(e).splitlines()[0]})")
+    fallas += [f"lector sin conexión: error de JavaScript: {e}" for e in errores]
+    ctx.close()
     return fallas
 
 

@@ -203,6 +203,21 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   `index.html` o `datos.js`. El service worker pide primero a la red (páginas y datos) y guarda lo
   visitado para leerlo sin señal; no guarda `libros/`. El pie ofrece «Instalar como app» en
   Android y Chrome, y en el iPhone explica Compartir › Agregar a inicio.
+- Lector (`lector/`, botón «Leer aquí» de cada ficha con EPUB): lee EPUB en el navegador **sin
+  conexión** (regla dura: nada de leer depende de la red). Sin dependencias externas: `fflate` y la
+  letra van en `lector/vendor/` y `lector/fuentes/`, y `sw.js` guarda todo `lector/` al instalarse.
+  Los libros, la posición, los marcadores y las notas viven en IndexedDB del dispositivo, anclados
+  por texto (no por CFI), así que al llegar una versión corregida siguen en su lugar.
+  `gen_estaticos.js` arma `lector/catalogo.json` con la huella SHA-256 de cada EPUB: si cambia, el
+  lector baja la versión nueva solo, sin duplicar el libro; un EPUB agregado a mano con el mismo
+  `dc:identifier` (o título y autor) también reemplaza al anterior. Las ediciones bilingües
+  (`p.orig`, de `bilingue.py`) se ven lado a lado en pantalla ancha e intercaladas en el celular.
+  Las correcciones que marca el lector llegan por FormSubmit con asunto «Fénix - corrección desde el
+  lector: <título>» (sin conexión quedan en cola) y se leen con `python herramientas/lector.py
+  correcciones`, que ubica el texto en el EPUB y en `editorial/<id>/`. Nube opcional en Google
+  Drive (carpeta «Fénix - Lector», permiso `drive.file`): se activa con `GOOGLE_CLIENTE` al comienzo
+  de `lector/lector.js` y se lee con `python herramientas/lector.py nube`. `revisar_diseno.py`
+  comprueba que un libro agregado abre sin conexión.
 - Leídos y favoritos de cada visitante quedan en su navegador (`localStorage`).
   No hay puntuación de estrellas, ni de Fénix ni del visitante: solo la valoración moral de Delibris.
 - Cada ficha lleva al menos tres `citas` reales y verificadas: las más célebres, las más

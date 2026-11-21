@@ -401,6 +401,8 @@ function paginaLibro(l){
   const otraUrl = otra ? B + (otra._ruta || "libro/" + otra.id + "/") : null;
   const botones = [
     ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${attrArchivo(f, u)}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
+    // Leer en el lector del sitio (lector/): guarda el libro en el teléfono y se lee sin conexión.
+    ...(l.idioma === lang && (l.archivos || {}).epub ? [`<a class="btn" href="${B}lector/#fenix=${encodeURIComponent(l.id)}&amp;l=${l.idioma}">${lang === "en" ? "Read here" : "Leer aquí"}</a>`] : []),
     ...(muestraDe(l) ? [`<a class="btn" href="muestra/">${esc(x.hojear)}</a>`] : []),
     ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(e.escuchar ? x.escuchar : x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
@@ -952,8 +954,25 @@ if (!reBanda.test(conDescargas)) throw new Error("index.html no tiene la banda #
 const indexNuevo = conDescargas.replace(reBanda, `$1 data-hasta="${CAMPANA_HASTA}" data-libros="${CAMPANA_LIBROS.join(",")}">$2${CAMPANA_URL}$3`);
 if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
 
+// ---------- lector/catalogo.json ----------
+// Lo que el lector (lector/) puede bajar de Fénix: cada EPUB propio, en su idioma, con la huella SHA-256
+// del archivo. Cuando un libro se rearma cambia la huella y el lector baja la versión nueva solo,
+// conservando la página, los marcadores y las notas del lector.
+{
+  const sha256 = f => require("crypto").createHash("sha256").update(fs.readFileSync(path.join(RAIZ, f))).digest("hex");
+  const portadaMedio = src => {
+    if (!src || src.startsWith("http")) return "";
+    const medio = src.replace(/^img\/portadas\//, "img/portadas/medio/");
+    return medio !== src && fs.existsSync(path.join(RAIZ, medio)) ? medio : src;
+  };
+  const libros = editorialPrimero(PAGINAS.filter(l => (l.archivos || {}).epub && fs.existsSync(path.join(RAIZ, l.archivos.epub))))
+    .map(l => ({ id: l.id, idioma: l.idioma, titulo: l.titulo, autor: l.autor, epub: l.archivos.epub,
+      bytes: fs.statSync(path.join(RAIZ, l.archivos.epub)).size, sha: sha256(l.archivos.epub), portada: portadaMedio(l.imagen && l.imagen.src) }));
+  escribirSiCambia("lector/catalogo.json", JSON.stringify({ formato: 1, libros }, null, 1) + "\n");
+}
+
 // ---------- sw.js ----------
-// La VERSION sale de index.html, datos.js e img/: si cambian, el navegador instala el service worker
+// La VERSION sale de index.html, datos.js, img/ y lector/: si cambian, el navegador instala el service worker
 // nuevo y este borra la caché vieja, así la app instalada no se queda con el catálogo anterior.
 // img/ entra porque una imagen rehecha con el mismo nombre (la miniatura de El principito) seguía
 // saliendo de la caché vieja: el service worker sirve las imágenes guardadas primero.
@@ -961,7 +980,8 @@ if (escribirSiCambia("index.html", indexNuevo)) cambiadas.add(SITIO);
   const sha = require("crypto").createHash("sha1").update(indexNuevo + leer("datos.js").replace(/\r\n/g, "\n"));
   const imagenes = dir => fs.readdirSync(dir, { withFileTypes: true }).sort((a, b) => a.name < b.name ? -1 : 1)
     .flatMap(d => d.isDirectory() ? imagenes(path.join(dir, d.name)) : [path.join(dir, d.name)]);
-  for (const f of imagenes(path.join(RAIZ, "img"))) sha.update(path.relative(RAIZ, f).replace(/\\/g, "/")).update(fs.readFileSync(f));
+  // lector/ entra porque el service worker lo guarda al instalarse (el lector abre sin señal).
+  for (const f of [...imagenes(path.join(RAIZ, "img")), ...imagenes(path.join(RAIZ, "lector"))]) sha.update(path.relative(RAIZ, f).replace(/\\/g, "/")).update(fs.readFileSync(f));
   const huella = sha.digest("hex").slice(0, 10);
   // Un choque de rebase en la VERSION (dos sesiones a la vez) quedó con sus marcas en main y cada
   // publicación lo arrastraba: como la línea se reescribe igual, se queda la primera y se botan las marcas.

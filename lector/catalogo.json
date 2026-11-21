@@ -1,0 +1,725 @@
+{
+ "formato": 1,
+ "libros": [
+  {
+   "id": "marmion-vida-del-alma",
+   "idioma": "es",
+   "titulo": "Jesucristo, vida del alma",
+   "autor": "Beato Columba Marmion, O.S.B.",
+   "epub": "libros/marmion-jesucristo-vida-del-alma.epub",
+   "bytes": 802809,
+   "sha": "29bf5132747ff6dff715b8a42aa35fd72105cc12e3706909f4e5608bfc035850",
+   "portada": "img/portadas/marmion-vida-del-alma.jpg"
+  },
+  {
+   "id": "one-with-jesus",
+   "idioma": "es",
+   "titulo": "La vida de identificación con Cristo Jesús",
+   "autor": "Paul de Jaegher, S.J.",
+   "epub": "libros/de-jaegher-la-vida-de-identificacion.epub",
+   "bytes": 393508,
+   "sha": "3bc5633b59f6a0583bca954c03c55498cf1af65e4cf12e1faa6f8aeabc7e778b",
+   "portada": "img/portadas/one-with-jesus-es.jpg"
+  },
+  {
+   "id": "imitacion-de-cristo",
+   "idioma": "es",
+   "titulo": "Imitación de Cristo o menosprecio del mundo",
+   "autor": "Tomás de Kempis (trad. fray Luis de Granada)",
+   "epub": "libros/kempis-imitacion-de-cristo-granada.epub",
+   "bytes": 583814,
+   "sha": "0b58d89b39acbcd2f3aaf66a49d69a88fb659250e6c9e97bbffeb1851ec0c449",
+   "portada": "img/portadas/imitacion-de-cristo.jpg"
+  },
+  {
+   "id": "preparacion-para-la-muerte",
+   "idioma": "es",
+   "titulo": "Preparación para la muerte",
+   "autor": "San Alfonso María de Ligorio (trad. Joaquín Roca y Cornet)",
+   "epub": "libros/ligorio-preparacion-para-la-muerte.epub",
+   "bytes": 689576,
+   "sha": "a0aedd512dcdb7cba03d635364c091aa3e0b6aa9102ca6724e62e315163c1f2e",
+   "portada": "img/portadas/preparacion-para-la-muerte.jpg"
+  },
+  {
+   "id": "introduccion-a-la-vida-devota",
+   "idioma": "es",
+   "titulo": "Introducción a la vida devota",
+   "autor": "San Francisco de Sales (trad. Francisco de Quevedo)",
+   "epub": "libros/sales-introduccion-a-la-vida-devota.epub",
+   "bytes": 694557,
+   "sha": "b9f672a6dd55ece36400c5e4c8ca0f2d725c97f8ebf36fda2933191f1c56fec0",
+   "portada": "img/portadas/introduccion-a-la-vida-devota.jpg"
+  },
+  {
+   "id": "diferencia-entre-lo-temporal-y-eterno",
+   "idioma": "es",
+   "titulo": "Diferencia entre lo temporal y eterno",
+   "autor": "Juan Eusebio Nieremberg",
+   "epub": "libros/nieremberg-diferencia-entre-lo-temporal-y-eterno.epub",
+   "bytes": 877011,
+   "sha": "950983da14794eff4800b727e8b72eeafbd2809f5ad58eda7e1619103d9e23c7",
+   "portada": "img/portadas/nieremberg-diferencia-temporal-eterno.jpg"
+  },
+  {
+   "id": "confesiones",
+   "idioma": "es",
+   "titulo": "Confesiones",
+   "autor": "San Agustín de Hipona",
+   "epub": "libros/agustin-confesiones.epub",
+   "bytes": 529038,
+   "sha": "4d168cc48cdbe29163da446ee24a4ca732b704503d097bef2d89c4c16f2be505",
+   "portada": "img/portadas/confesiones-es.jpg"
+  },
+  {
+   "id": "historia-de-un-alma",
+   "idioma": "es",
+   "titulo": "Historia de un alma",
+   "autor": "Santa Teresa del Niño Jesús y de la Santa Faz",
+   "epub": "libros/teresa-historia-de-un-alma.epub",
+   "bytes": 595650,
+   "sha": "d75f2cd6090716ce77403ceb20f8c3812051d3f08e64b7b229b77e6f1c274d46",
+   "portada": "img/portadas/historia-de-un-alma.jpg"
+  },
+  {
+   "id": "de-la-eucaristia-a-la-trinidad",
+   "idioma": "es",
+   "titulo": "De la Eucaristía a la Trinidad",
+   "autor": "Marie-Vincent Bernadot, O.P.",
+   "epub": "libros/bernadot-de-la-eucaristia-a-la-trinidad.epub",
+   "bytes": 612655,
+   "sha": "bb7511797cf037a37e5a733d9905ec88b57712234171e7dead0478f40deebc94",
+   "portada": "img/portadas/de-la-eucaristia-a-la-trinidad.jpg"
+  },
+  {
+   "id": "ortodoxia",
+   "idioma": "es",
+   "titulo": "Ortodoxia",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-orthodoxy-es.epub",
+   "bytes": 450371,
+   "sha": "08079885913be8052667c45128dc78e430e895ccd0db144fa0dae2e2783d5e3e",
+   "portada": "img/portadas/ortodoxia-es.jpg"
+  },
+  {
+   "id": "sada-trabajar-para-la-eternidad",
+   "idioma": "es",
+   "titulo": "Trabajar para la eternidad",
+   "autor": "Ricardo Sada Fernández",
+   "epub": "libros/sada-trabajar-para-la-eternidad.epub",
+   "bytes": 479282,
+   "sha": "8f4f7eb42b0f81e11021c7df99fa6791d3c734efbe0acbe604f4d452f38064f2",
+   "portada": "img/portadas/sada-trabajar-para-la-eternidad.jpg"
+  },
+  {
+   "id": "apologia-de-socrates",
+   "idioma": "es",
+   "titulo": "Apología de Sócrates",
+   "autor": "Platón (trad. Patricio de Azcárate)",
+   "epub": "libros/platon-apologia-de-socrates.epub",
+   "bytes": 420647,
+   "sha": "fd89e3993b42d9afffb75d7490493491daddd61268e6bf5350aa379ba254e673",
+   "portada": "img/portadas/apologia-de-socrates.jpg"
+  },
+  {
+   "id": "etica-a-nicomaco",
+   "idioma": "es",
+   "titulo": "Ética a Nicómaco",
+   "autor": "Aristóteles (trad. Patricio de Azcárate)",
+   "epub": "libros/aristoteles-etica-a-nicomaco.epub",
+   "bytes": 678414,
+   "sha": "526754369652335143e31fb0db74c9fc79d8b3630c5254c40626d741dae85f00",
+   "portada": "img/portadas/etica-a-nicomaco.jpg"
+  },
+  {
+   "id": "ercilla-la-araucana",
+   "idioma": "es",
+   "titulo": "La Araucana",
+   "autor": "Alonso de Ercilla",
+   "epub": "libros/ercilla-la-araucana.epub",
+   "bytes": 761588,
+   "sha": "8431e6074472dd4494072116c2e739baadd20bf92f7e6d8e5578abad2f714124",
+   "portada": "img/portadas/ercilla-la-araucana.jpg"
+  },
+  {
+   "id": "shakespeare-el-mercader-de-venecia",
+   "idioma": "es",
+   "titulo": "El mercader de Venecia",
+   "autor": "William Shakespeare (trad. Marcelino Menéndez y Pelayo)",
+   "epub": "libros/shakespeare-el-mercader-de-venecia.epub",
+   "bytes": 507735,
+   "sha": "b833f93aec63bf8748f535f20965fc39164ee7d54aa0febde7a706bfe3915414",
+   "portada": "img/portadas/shakespeare-el-mercader-de-venecia.jpg"
+  },
+  {
+   "id": "calderon-la-vida-es-sueno",
+   "idioma": "es",
+   "titulo": "La vida es sueño",
+   "autor": "Pedro Calderón de la Barca",
+   "epub": "libros/calderon-la-vida-es-sueno.epub",
+   "bytes": 437805,
+   "sha": "6cad4b3813618a43b9373e23765a605e195ffb30a6f4199e88d6725bb1a8919a",
+   "portada": "img/portadas/calderon-la-vida-es-sueno.jpg"
+  },
+  {
+   "id": "pushkin-la-hija-del-capitan",
+   "idioma": "es",
+   "titulo": "La hija del capitán",
+   "autor": "Aleksandr Pushkin",
+   "epub": "libros/pushkin-la-hija-del-capitan.epub",
+   "bytes": 547614,
+   "sha": "ba312eb10663789b2fdb9f69eff84df743a43cdad495b8522ff37a21351d7f1c",
+   "portada": "img/portadas/pushkin-la-hija-del-capitan.jpg"
+  },
+  {
+   "id": "austen-emma",
+   "idioma": "es",
+   "titulo": "Emma",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-emma-es.epub",
+   "bytes": 770401,
+   "sha": "91c188bc89e084889483dbb07a080d3893646f636b3a274cbe3df1a237ec355d",
+   "portada": "img/portadas/austen-emma-es.jpg"
+  },
+  {
+   "id": "austen-persuasion",
+   "idioma": "es",
+   "titulo": "Persuasión",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-persuasion-es.epub",
+   "bytes": 544517,
+   "sha": "ed52909653774b5a74fede7819f72c163fbfe8fd5abcc09bdad52043dbd33907",
+   "portada": "img/portadas/austen-persuasion-es.jpg"
+  },
+  {
+   "id": "austen-sense-and-sensibility",
+   "idioma": "es",
+   "titulo": "Sentido y sensibilidad",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-sense-and-sensibility-es.epub",
+   "bytes": 687253,
+   "sha": "2e1bd9d52dc04898dcb0c029039dc0faa446cb84ee0c417629348fd5c98809ce",
+   "portada": "img/portadas/austen-sense-and-sensibility-es.jpg"
+  },
+  {
+   "id": "chesterton-st-francis-of-assisi",
+   "idioma": "es",
+   "titulo": "San Francisco de Asís",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-st-francis-of-assisi-es.epub",
+   "bytes": 500179,
+   "sha": "5f5ed6220a7c021d3081140b164cef705a5c5392e2deeef06e28b7d633eae128",
+   "portada": "img/portadas/chesterton-st-francis-of-assisi-es.jpg"
+  },
+  {
+   "id": "chesterton-st-thomas-aquinas",
+   "idioma": "es",
+   "titulo": "Santo Tomás de Aquino",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-st-thomas-aquinas-es.epub",
+   "bytes": 513797,
+   "sha": "39ff7d035c51b45fc9e3f4fa985a4f4a87dd83b254e1329017f23b06bf8c89eb",
+   "portada": "img/portadas/chesterton-st-thomas-aquinas-es.jpg"
+  },
+  {
+   "id": "chesterton-manalive",
+   "idioma": "es",
+   "titulo": "Hombre vivo",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-manalive.epub",
+   "bytes": 565143,
+   "sha": "f406fa872dc202f7b906f144e1a5365d9c3ccc2dd645a1a3ddc34497df42d5cf",
+   "portada": "img/portadas/chesterton-manalive.jpg"
+  },
+  {
+   "id": "chesterton-whats-wrong-with-the-world",
+   "idioma": "es",
+   "titulo": "Lo que está mal en el mundo",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-whats-wrong-with-the-world-es.epub",
+   "bytes": 692517,
+   "sha": "0fbcdaa90c86c1eafecbe9f54f20014f6e9c287a4dada5ad092c230ef1b6b2e3",
+   "portada": "img/portadas/chesterton-whats-wrong-with-the-world-es.jpg"
+  },
+  {
+   "id": "thoreau-walden",
+   "idioma": "es",
+   "titulo": "Walden",
+   "autor": "Henry David Thoreau",
+   "epub": "libros/thoreau-walden-es.epub",
+   "bytes": 890092,
+   "sha": "3a6909ab408b98cf9af280003e49435278006badb42c49e51e08c7cafe9f9748",
+   "portada": "img/portadas/thoreau-walden-es.jpg"
+  },
+  {
+   "id": "austen-pride-and-prejudice",
+   "idioma": "es",
+   "titulo": "Orgullo y prejuicio",
+   "autor": "Jane Austen (trad. José Jordán de Urríes y Azara)",
+   "epub": "libros/austen-pride-and-prejudice-es.epub",
+   "bytes": 769507,
+   "sha": "b0994e41995b467454963c96001a0c68157e684fec59f352e67f3287c5b090f4",
+   "portada": "img/portadas/austen-pride-and-prejudice-es.jpg"
+  },
+  {
+   "id": "saint-exupery-el-principito",
+   "idioma": "es",
+   "titulo": "El principito",
+   "autor": "Antoine de Saint-Exupéry",
+   "epub": "libros/saint-exupery-el-principito.epub",
+   "bytes": 4025243,
+   "sha": "6f2588444161d8c0cf9b252d9508a4831075f45c4afdf3c10f7b3e69cd687d3f",
+   "portada": "img/portadas/saint-exupery-el-principito.jpg"
+  },
+  {
+   "id": "salgari-los-piratas-de-la-malasia",
+   "idioma": "es",
+   "titulo": "Los piratas de la Malasia",
+   "autor": "Emilio Salgari (trad. R. Blanco Belmonte)",
+   "epub": "libros/salgari-los-piratas-de-la-malasia.epub",
+   "bytes": 661398,
+   "sha": "3f77dddce72a76536455d356ffede9eaa047c98af92e65641e5c53c8a51120b4",
+   "portada": "img/portadas/salgari-los-piratas-de-la-malasia.jpg"
+  },
+  {
+   "id": "quiroga-cuentos-de-la-selva",
+   "idioma": "es",
+   "titulo": "Cuentos de la selva",
+   "autor": "Horacio Quiroga",
+   "epub": "libros/quiroga-cuentos-de-la-selva.epub",
+   "bytes": 490542,
+   "sha": "8dbbb8ceeaf35fed61c00c6733ff0f13deb6fd70f48e0c3f4c16b2d5d53b91e3",
+   "portada": "img/portadas/quiroga-cuentos-de-la-selva.jpg"
+  },
+  {
+   "id": "huidobro-mio-cid-campeador",
+   "idioma": "es",
+   "titulo": "Mío Cid Campeador. Hazaña",
+   "autor": "Vicente Huidobro",
+   "epub": "libros/huidobro-mio-cid-campeador.epub",
+   "bytes": 756179,
+   "sha": "6b14825a70d408f20d870ae9abacc7a010cd2643db9942ed9528536c251bbcf7",
+   "portada": "img/portadas/huidobro-mio-cid-campeador.jpg"
+  },
+  {
+   "id": "burnett-el-jardin-secreto",
+   "idioma": "es",
+   "titulo": "El jardín secreto",
+   "autor": "Frances Hodgson Burnett",
+   "epub": "libros/burnett-el-jardin-secreto.epub",
+   "bytes": 712859,
+   "sha": "f19a3a1b1994b12a54384c4e933d6080c2dfd2e110b32e374203d866cca15926",
+   "portada": "img/portadas/burnett-el-jardin-secreto.jpg"
+  },
+  {
+   "id": "burnett-el-pequeno-lord-fauntleroy",
+   "idioma": "es",
+   "titulo": "El pequeño Lord Fauntleroy",
+   "autor": "Frances Hodgson Burnett",
+   "epub": "libros/burnett-el-pequeno-lord-fauntleroy.epub",
+   "bytes": 590994,
+   "sha": "f8b2b25ab92507a4c2fa747c868fac306e86d76b11c6ae4b373b94ab5d030b58",
+   "portada": "img/portadas/burnett-el-pequeno-lord-fauntleroy.jpg"
+  },
+  {
+   "id": "burroughs-una-princesa-de-marte",
+   "idioma": "es",
+   "titulo": "Una princesa de Marte",
+   "autor": "Edgar Rice Burroughs",
+   "epub": "libros/burroughs-una-princesa-de-marte.epub",
+   "bytes": 604393,
+   "sha": "4681af67ec95cb1529f7f8a9a9a3f6db3b6056586d784bc878795ca2ec11e9cb",
+   "portada": "img/portadas/burroughs-una-princesa-de-marte.jpg"
+  },
+  {
+   "id": "combate-espiritual",
+   "idioma": "es",
+   "titulo": "El combate espiritual",
+   "autor": "Lorenzo Scupoli (trad. Damián González Cueto)",
+   "epub": "libros/scupoli-combate-espiritual.epub",
+   "bytes": 485667,
+   "sha": "a599019a769a44fef127f681804036f031d0fb489ffacac78342d3abbf938025",
+   "portada": "img/portadas/combate-espiritual.jpg"
+  },
+  {
+   "id": "chautard-el-alma-de-todo-apostolado",
+   "idioma": "es",
+   "titulo": "El alma de todo apostolado",
+   "autor": "Jean-Baptiste Chautard",
+   "epub": "libros/chautard-el-alma-de-todo-apostolado.epub",
+   "bytes": 521176,
+   "sha": "a49fd5d2ecd22760d2881f05609e8610b31482894721ff3b2e29c5e238bf0d61",
+   "portada": "img/portadas/chautard-el-alma-de-todo-apostolado.jpg"
+  },
+  {
+   "id": "ligorio-visitas-al-santisimo-sacramento-y-a-maria-santisima",
+   "idioma": "es",
+   "titulo": "Visitas al Santísimo Sacramento y a María Santísima",
+   "autor": "San Alfonso María de Ligorio (trad. Sor María de Córdoba y Pacheco)",
+   "epub": "libros/ligorio-visitas-al-santisimo-sacramento-y-a-maria-santisima.epub",
+   "bytes": 438253,
+   "sha": "fea698ed5b1ccd0fd8cc9649512b3a9c8a317e59d18d7d271ec2087bc03d8ace",
+   "portada": "img/portadas/ligorio-visitas-al-santisimo-sacramento-y-a-maria-santisima.jpg"
+  },
+  {
+   "id": "imitacion-de-cristo",
+   "idioma": "en",
+   "titulo": "The Imitation of Christ",
+   "autor": "Thomas à Kempis",
+   "epub": "libros/kempis-imitation-of-christ.epub",
+   "bytes": 643878,
+   "sha": "db6576868ae19a1c28ab829e770ba834128005655ccca1692a1bbd594d19697f",
+   "portada": "img/portadas/imitacion-de-cristo-en.jpg"
+  },
+  {
+   "id": "confesiones",
+   "idioma": "en",
+   "titulo": "The Confessions of St. Augustine",
+   "autor": "Saint Augustine of Hippo",
+   "epub": "libros/agustin-confessions.epub",
+   "bytes": 816966,
+   "sha": "af2023cbd91b90553f30f88ce0a639fa3d2c002535fcc965400220247388663c",
+   "portada": "img/portadas/confesiones.jpg"
+  },
+  {
+   "id": "presencia-de-dios",
+   "idioma": "en",
+   "titulo": "The Practice of the Presence of God",
+   "autor": "Brother Lawrence of the Resurrection, O.C.D.",
+   "epub": "libros/lorenzo-practice-of-the-presence-of-god.epub",
+   "bytes": 431815,
+   "sha": "ab2d5d655ae4760c36fd0ea99cdca90d8ab80c1048cc08f1d411c101a2d49cea",
+   "portada": "img/portadas/presencia-de-dios.jpg"
+  },
+  {
+   "id": "ortodoxia",
+   "idioma": "en",
+   "titulo": "Orthodoxy",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-orthodoxy.epub",
+   "bytes": 563887,
+   "sha": "6bb91eb21e967792cfa5ff9953875b78d5680e605738bc4d7dce915197001589",
+   "portada": "img/portadas/ortodoxia.jpg"
+  },
+  {
+   "id": "quo-vadis",
+   "idioma": "en",
+   "titulo": "Quo Vadis: A Narrative of the Time of Nero",
+   "autor": "Henryk Sienkiewicz",
+   "epub": "libros/sienkiewicz-quo-vadis.epub",
+   "bytes": 968676,
+   "sha": "7c2b7c1542dfde3a796740fdad187a0deae50ff39e1717ac890c20391b43ca56",
+   "portada": "img/portadas/quo-vadis.jpg"
+  },
+  {
+   "id": "apologia-de-socrates",
+   "idioma": "en",
+   "titulo": "Apology",
+   "autor": "Plato (trans. Benjamin Jowett)",
+   "epub": "libros/platon-apology.epub",
+   "bytes": 443656,
+   "sha": "a49644baa3d9e0101f9e81d91a60fc50d73d0bb3b815df33886999b408368dee",
+   "portada": "img/portadas/apologia-de-socrates-en.jpg"
+  },
+  {
+   "id": "doyle-el-sabueso-de-los-baskerville",
+   "idioma": "es",
+   "titulo": "El sabueso de los Baskerville",
+   "autor": "Arthur Conan Doyle (trad. Arturo Costa Álvarez)",
+   "epub": "libros/doyle-el-sabueso-de-los-baskerville.epub",
+   "bytes": 577129,
+   "sha": "f028b68e11785bfb311984aef865cd97c3f97ca192605837a377a4abce39dbfc",
+   "portada": "img/portadas/doyle-el-sabueso-de-los-baskerville.jpg"
+  },
+  {
+   "id": "austen-emma",
+   "idioma": "en",
+   "titulo": "Emma",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-emma.epub",
+   "bytes": 1054393,
+   "sha": "bfcc08a295b77fe52fbf1cbcd01109341acdb811a67c88cc182a079c8a1d310c",
+   "portada": "img/portadas/austen-emma.jpg"
+  },
+  {
+   "id": "austen-mansfield-park",
+   "idioma": "en",
+   "titulo": "Mansfield Park",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-mansfield-park.epub",
+   "bytes": 897497,
+   "sha": "bde639488621dbc3483faf99c3be9548fe5250f6c61c6c992f995b0986acc046",
+   "portada": "img/portadas/austen-mansfield-park.jpg"
+  },
+  {
+   "id": "austen-northanger-abbey",
+   "idioma": "en",
+   "titulo": "Northanger Abbey",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-northanger-abbey.epub",
+   "bytes": 961119,
+   "sha": "6bafec01bcf0e55b094d9e753795f1106f126014fe6caa560b4a12aea97309fe",
+   "portada": "img/portadas/austen-northanger-abbey.jpg"
+  },
+  {
+   "id": "austen-persuasion",
+   "idioma": "en",
+   "titulo": "Persuasion",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-persuasion.epub",
+   "bytes": 870767,
+   "sha": "eda945dbc7b01a3092380c0f09f9a016378325f16440fa6d3d780b03ced69877",
+   "portada": "img/portadas/austen-persuasion.jpg"
+  },
+  {
+   "id": "austen-sense-and-sensibility",
+   "idioma": "en",
+   "titulo": "Sense and Sensibility",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-sense-and-sensibility.epub",
+   "bytes": 965634,
+   "sha": "af5a354d322fbb823f303df9c0be6680cc8354e753b296f5953b01e8810c1ef0",
+   "portada": "img/portadas/austen-sense-and-sensibility.jpg"
+  },
+  {
+   "id": "chesterton-heretics",
+   "idioma": "en",
+   "titulo": "Heretics",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-heretics.epub",
+   "bytes": 783550,
+   "sha": "86766ccc60ef5481c74132c6ba7fbc0b492c070a177c7fb930afc72849199652",
+   "portada": "img/portadas/chesterton-heretics.jpg"
+  },
+  {
+   "id": "chesterton-st-francis-of-assisi",
+   "idioma": "en",
+   "titulo": "St. Francis of Assisi",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-st-francis-of-assisi.epub",
+   "bytes": 675245,
+   "sha": "9f278b8e74a9d4c49526ff25b5903c9fbd8c3198ac9bc5d5aabdd89303a6ba2e",
+   "portada": "img/portadas/chesterton-st-francis-of-assisi.jpg"
+  },
+  {
+   "id": "chesterton-the-ball-and-the-cross",
+   "idioma": "en",
+   "titulo": "The Ball and the Cross",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-the-ball-and-the-cross.epub",
+   "bytes": 647788,
+   "sha": "952e03adf04e039b6875b84836a584d82d5fa7f36996256eaca65e4bd1fc6115",
+   "portada": "img/portadas/chesterton-the-ball-and-the-cross.jpg"
+  },
+  {
+   "id": "chesterton-the-everlasting-man",
+   "idioma": "en",
+   "titulo": "The Everlasting Man",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-the-everlasting-man.epub",
+   "bytes": 804188,
+   "sha": "165efea460e9b494e9806ea4c1cb394414231ffddd1a9807d8646c9c2f770718",
+   "portada": "img/portadas/chesterton-the-everlasting-man.jpg"
+  },
+  {
+   "id": "chesterton-the-innocence-of-father-brown",
+   "idioma": "en",
+   "titulo": "The Innocence of Father Brown",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-the-innocence-of-father-brown.epub",
+   "bytes": 894756,
+   "sha": "2fbe9b3afa40b5a27f022dd48bfa2a6fdd857ba2270fdedffc2774d80792a469",
+   "portada": "img/portadas/chesterton-the-innocence-of-father-brown.jpg"
+  },
+  {
+   "id": "chesterton-the-man-who-was-thursday",
+   "idioma": "en",
+   "titulo": "The Man Who Was Thursday: A Nightmare",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-the-man-who-was-thursday.epub",
+   "bytes": 833418,
+   "sha": "2216240b7b4e5b593a28d34dd46fd72ff6c7604d3e43b67f7a839ed73bce3636",
+   "portada": "img/portadas/chesterton-the-man-who-was-thursday.jpg"
+  },
+  {
+   "id": "chesterton-the-napoleon-of-notting-hill",
+   "idioma": "en",
+   "titulo": "The Napoleon of Notting Hill",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-the-napoleon-of-notting-hill.epub",
+   "bytes": 1524321,
+   "sha": "cdcc6192de1eb55dfa30a26ce1016767ccf077254652bb8a15072480b43edc23",
+   "portada": "img/portadas/chesterton-the-napoleon-of-notting-hill.jpg"
+  },
+  {
+   "id": "chesterton-whats-wrong-with-the-world",
+   "idioma": "en",
+   "titulo": "What's Wrong with the World",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-whats-wrong-with-the-world.epub",
+   "bytes": 719035,
+   "sha": "e2d9ffbf76f55aa93325b1d69cd8927bb9b0269a770ffaa5db1ba98b2ca99ec9",
+   "portada": "img/portadas/chesterton-whats-wrong-with-the-world.jpg"
+  },
+  {
+   "id": "thoreau-walden",
+   "idioma": "en",
+   "titulo": "Walden",
+   "autor": "Henry David Thoreau",
+   "epub": "libros/thoreau-walden.epub",
+   "bytes": 1113165,
+   "sha": "202b6cedc24e2ed6632db4e0157cf1d203cd341a01c5c44bb7de5a608ca476d6",
+   "portada": "img/portadas/thoreau-walden.jpg"
+  },
+  {
+   "id": "austen-pride-and-prejudice",
+   "idioma": "en",
+   "titulo": "Pride and Prejudice",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-pride-and-prejudice.epub",
+   "bytes": 24787533,
+   "sha": "d01283c884aa7c86eb3a46b935e34c2ea3d7a08e53ad2b1ca52c2be5b579b67e",
+   "portada": "img/portadas/austen-pride-and-prejudice.jpg"
+  },
+  {
+   "id": "chesterton-the-wisdom-of-father-brown",
+   "idioma": "en",
+   "titulo": "The Wisdom of Father Brown",
+   "autor": "G. K. Chesterton",
+   "epub": "libros/chesterton-the-wisdom-of-father-brown.epub",
+   "bytes": 826914,
+   "sha": "6ef6713309aacd1092f9c70a9330f143459fdafa835ddb88852eaa6359f08b0e",
+   "portada": "img/portadas/chesterton-the-wisdom-of-father-brown.jpg"
+  },
+  {
+   "id": "unamuno-niebla",
+   "idioma": "es",
+   "titulo": "Niebla",
+   "autor": "Miguel de Unamuno",
+   "epub": "libros/unamuno-niebla.epub",
+   "bytes": 582169,
+   "sha": "31f9453287c6891965dca42e2fceab10c172f3c229e9a6b223d69e2c18206742",
+   "portada": "img/portadas/unamuno-niebla.jpg"
+  },
+  {
+   "id": "ligorio-the-glories-of-mary",
+   "idioma": "en",
+   "titulo": "The Glories of Mary",
+   "autor": "St. Alphonsus Liguori",
+   "epub": "libros/ligorio-the-glories-of-mary.epub",
+   "bytes": 1170943,
+   "sha": "14f64bd730d6b7f787cf8896a68787d75d4f4ede155f5e0ec0f2214c4d874c67",
+   "portada": "img/portadas/ligorio-the-glories-of-mary.jpg"
+  },
+  {
+   "id": "benson-lord-of-the-world",
+   "idioma": "en",
+   "titulo": "Lord of the World",
+   "autor": "Robert Hugh Benson",
+   "epub": "libros/benson-lord-of-the-world.epub",
+   "bytes": 1044795,
+   "sha": "f05b5912746e4fbf0eb918dba778b2c41077401de87154d6e81841f6fba67388",
+   "portada": "img/portadas/benson-lord-of-the-world.jpg"
+  },
+  {
+   "id": "wallace-ben-hur",
+   "idioma": "en",
+   "titulo": "Ben-Hur: A Tale of the Christ",
+   "autor": "Lew Wallace",
+   "epub": "libros/wallace-ben-hur.epub",
+   "bytes": 1383636,
+   "sha": "1666c57aec6213846426d317eb631b77337c4cd83564fa58793896a62efe5f50",
+   "portada": "img/portadas/wallace-ben-hur.jpg"
+  },
+  {
+   "id": "douay-rheims-bible",
+   "idioma": "en",
+   "titulo": "The Holy Bible (Douay-Rheims, Challoner revision)",
+   "autor": "Douay-Rheims translation, revised by Bishop Richard Challoner",
+   "epub": "libros/douay-rheims-bible.epub",
+   "bytes": 3530172,
+   "sha": "5a709bf4ec3c19c9881d3844fc2d9988ccb559c11dba653c8df8d1e1afe8d62c",
+   "portada": "img/portadas/douay-rheims-bible.jpg"
+  },
+  {
+   "id": "newman-loss-and-gain",
+   "idioma": "en",
+   "titulo": "Loss and Gain: The Story of a Convert",
+   "autor": "Saint John Henry Newman",
+   "epub": "libros/newman-loss-and-gain.epub",
+   "bytes": 696142,
+   "sha": "23371693ca7aa8c5867db15e09c42f3df457ba0d316586ef59a3a48930f40122",
+   "portada": "img/portadas/newman-loss-and-gain.jpg"
+  },
+  {
+   "id": "wiseman-fabiola",
+   "idioma": "en",
+   "titulo": "Fabiola, or the Church of the Catacombs",
+   "autor": "Cardinal Nicholas Wiseman",
+   "epub": "libros/wiseman-fabiola.epub",
+   "bytes": 33357098,
+   "sha": "98c9b38c51165d1ca943ce206b8e23d2cfd1afdb062191c7afe5ac865da75002",
+   "portada": "img/portadas/wiseman-fabiola.jpg"
+  },
+  {
+   "id": "newman-the-dream-of-gerontius",
+   "idioma": "en",
+   "titulo": "The Dream of Gerontius",
+   "autor": "Saint John Henry Newman",
+   "epub": "libros/newman-the-dream-of-gerontius.epub",
+   "bytes": 883586,
+   "sha": "a6fa5e2d6d92fbf950f099a2e9cda1ec0f3baa7dd9b8c8aade1015c00ccceaaf",
+   "portada": "img/portadas/newman-the-dream-of-gerontius.jpg"
+  },
+  {
+   "id": "coloma-pequeneces",
+   "idioma": "es",
+   "titulo": "Pequeñeces",
+   "autor": "Luis Coloma",
+   "epub": "libros/coloma-pequeneces.epub",
+   "bytes": 829863,
+   "sha": "9ec4be4b319d40955775311710541a84259789b34ab3c3b712787cf4a03fc7be",
+   "portada": "img/portadas/coloma-pequeneces.jpg"
+  },
+  {
+   "id": "salgari-los-pescadores-de-trepang",
+   "idioma": "es",
+   "titulo": "Los pescadores de Trépang",
+   "autor": "Emilio Salgari (trad. anónima)",
+   "epub": "libros/salgari-los-pescadores-de-trepang.epub",
+   "bytes": 622042,
+   "sha": "4ac29cfc60f5468bfe0a226c766bb4ff6f7f7854a968bcae4df612d32d8e7f6b",
+   "portada": "img/portadas/salgari-los-pescadores-de-trepang.jpg"
+  },
+  {
+   "id": "alcott-mujercitas",
+   "idioma": "es",
+   "titulo": "Mujercitas",
+   "autor": "Louisa May Alcott (trad. Enriqueta S. Albanella)",
+   "epub": "libros/alcott-mujercitas.epub",
+   "bytes": 921425,
+   "sha": "48a613b5a3f1946670ada657e524c45bfb6e53b96db8ac9e8285153f18ae0bf0",
+   "portada": "img/portadas/alcott-mujercitas.jpg"
+  },
+  {
+   "id": "homero-la-iliada",
+   "idioma": "es",
+   "titulo": "La Ilíada",
+   "autor": "Homero (trad. Luis Segalá y Estalella)",
+   "epub": "libros/homero-la-iliada.epub",
+   "bytes": 2981749,
+   "sha": "71134f37cbdc16189fc3299ee0b345623dd16e924a5b31b77e85dd16eed5fc88",
+   "portada": "img/portadas/homero-la-iliada.jpg"
+  },
+  {
+   "id": "dario-azul",
+   "idioma": "es",
+   "titulo": "Azul...",
+   "autor": "Rubén Darío",
+   "epub": "libros/dario-azul.epub",
+   "bytes": 2294835,
+   "sha": "db1ba30a73fb5ab77a53a8e5aad082c041c86ad228f7d699ba5e469abd33f71c",
+   "portada": "img/portadas/dario-azul.jpg"
+  }
+ ]
+}

@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#16110f">
+<meta name="robots" content="noindex">
+<title>Lector Fénix</title>
+<meta name="description" content="Lee los EPUB de Proyecto Fénix y los tuyos, también sin conexión, con marcadores, notas y correcciones.">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236b1d24'/%3E%3Cg fill='%23e8b04a'%3E%3Cpath d='M31 56C24 52 15 51 7 53L6.5 46.5 4.5 45.5 6 38.5 3.5 37 5 29 2.5 27.5 2.5 7.5C8 17 19 26 31 36.5Z'/%3E%3Cpath d='M33 56C40 52 49 51 57 53L57.5 46.5 59.5 45.5 58 38.5 60.5 37 59 29 61.5 27.5 61.5 7.5C56 17 45 26 33 36.5Z'/%3E%3Cpath d='M32 38C29.3 33 28.9 27.6 29.8 22.8C30.7 18.4 33.4 15.6 37.2 16.1L42.6 18 37.6 20.1C36 23 35.7 28 34.8 32.8Z'/%3E%3Cpath d='M31.4 19.4C28 17 26.6 13.2 27.7 9.2C28.8 12.4 30.6 14 33 15.2Z'/%3E%3Cpath d='M33.6 16.4C32.4 12.8 33.2 9.4 35.4 6.8C35.2 10.2 36.1 12.4 37.5 14.4Z'/%3E%3C/g%3E%3C/svg%3E">
+<link rel="manifest" href="../manifest.webmanifest">
+<style>
+/* La letra va dentro del sitio (lector/fuentes/), no en Google Fonts: el lector tiene que abrir sin señal. */
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400 800;font-display:swap;src:url("fuentes/eb-garamond-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"EB Garamond";font-style:italic;font-weight:400 800;font-display:swap;src:url("fuentes/eb-garamond-latin-wght-italic.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"EB Garamond";font-style:normal;font-weight:400 800;font-display:swap;src:url("fuentes/eb-garamond-latin-ext-wght-normal.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+@font-face{font-family:"EB Garamond";font-style:italic;font-weight:400 800;font-display:swap;src:url("fuentes/eb-garamond-latin-ext-wght-italic.woff2") format("woff2");unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF}
+
+:root{color-scheme:light dark;
+  --letra:"EB Garamond",Georgia,"Iowan Old Style","Palatino Linotype",serif;
+  --bg:#faf6ef; --card:#fffdf8; --line:#e4d8c4; --ink:#2a1f1a; --muted:#6e5d50; --vino:#6b1d24; --oro:#8a5d14;
+  --acento:#6b1d24; --acento-ink:#fff8ec; --chip:#efe4d2; --marca:rgba(232,176,74,.38); --nota:rgba(107,29,36,.16); --corr:rgba(196,60,40,.22);
+  --barra:56px}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="sepia"]){color-scheme:dark;
+  --bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a;
+  --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e; --marca:rgba(232,176,74,.30); --nota:rgba(210,106,114,.26); --corr:rgba(230,90,60,.32)}}
+:root[data-theme="dark"]{color-scheme:dark;
+  --bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a;
+  --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e; --marca:rgba(232,176,74,.30); --nota:rgba(210,106,114,.26); --corr:rgba(230,90,60,.32)}
+:root[data-theme="sepia"]{color-scheme:light;
+  --bg:#f1e5cc; --card:#f7eedb; --line:#dccaa6; --ink:#3b2b1c; --muted:#715c45; --vino:#7a1f2b; --oro:#7a5a14;
+  --acento:#7a1f2b; --acento-ink:#fbf3e2; --chip:#e8d9b8}
+
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0; background:var(--bg); color:var(--ink); font:18px/1.5 var(--letra); min-height:100vh; overflow-x:hidden}
+button,input,select,textarea{font:inherit; color:inherit}
+a{color:var(--vino)}
+[hidden]{display:none !important}
+.oculto{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
+
+/* ---------- barra ---------- */
+header.barra{position:sticky; top:0; z-index:20; height:var(--barra); display:flex; align-items:center; gap:6px;
+  padding:0 max(10px, env(safe-area-inset-right)) 0 max(10px, env(safe-area-inset-left)); background:var(--bg); border-bottom:1px solid var(--line)}
+.marca{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-weight:600; font-size:19px; white-space:nowrap}
+.marca img{width:28px; height:28px}
+.titulo-barra{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:16px; color:var(--muted); text-align:center}
+.icono{border:1px solid transparent; background:none; border-radius:10px; min-width:40px; height:40px; padding:0 8px; cursor:pointer;
+  display:inline-flex; align-items:center; justify-content:center; gap:6px; font-size:16px; color:var(--ink)}
+.icono:hover,.icono:focus-visible{border-color:var(--line); background:var(--card)}
+.icono svg{width:22px; height:22px; stroke:currentColor; fill:none; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round}
+.icono[aria-pressed="true"] svg{fill:var(--oro); stroke:var(--oro)}
+.btn{display:inline-flex; align-items:center; justify-content:center; gap:6px; border:1px solid var(--line); background:var(--card); color:var(--ink);
+  border-radius:999px; padding:8px 16px; cursor:pointer; text-decoration:none; font-size:16px; line-height:1.2; min-height:40px}
+.btn.prim{background:var(--acento); color:var(--acento-ink); border-color:transparent}
+.btn.peligro{color:#fff; background:#a3302a; border-color:transparent}
+.btn:disabled{opacity:.55; cursor:default}
+
+/* ---------- biblioteca ---------- */
+main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
+.aviso{border:1px solid var(--line); background:var(--card); border-radius:12px; padding:10px 14px; margin:0 0 14px; font-size:16px; color:var(--muted)}
+.aviso b{color:var(--ink)}
+.pestanas{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 16px}
+.pestanas .btn[aria-selected="true"]{background:var(--acento); color:var(--acento-ink); border-color:transparent}
+.pestanas .derecha{margin-left:auto; display:flex; gap:8px; flex-wrap:wrap}
+.estante{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:18px}
+.tarjeta{position:relative; display:flex; flex-direction:column; gap:6px; background:none; border:0; padding:0; text-align:left; cursor:pointer; min-width:0}
+.tapa{aspect-ratio:2/3; width:100%; border-radius:8px; overflow:hidden; background:var(--chip); border:1px solid var(--line); display:grid; place-items:center;
+  box-shadow:0 2px 10px rgba(0,0,0,.12)}
+.tapa img{width:100%; height:100%; object-fit:cover; display:block}
+.tapa .sin{padding:12px; text-align:center; font-size:15px; color:var(--muted)}
+.tarjeta .t{font-weight:600; font-size:16px; line-height:1.25; overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical}
+.tarjeta .a{font-size:14px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis}
+.avance{height:4px; border-radius:2px; background:var(--chip); overflow:hidden}
+.avance i{display:block; height:100%; background:var(--oro)}
+.chips{display:flex; gap:4px; flex-wrap:wrap}
+.chip{font-size:12px; padding:1px 8px; border-radius:999px; background:var(--chip); color:var(--muted)}
+.chip.nuevo{background:var(--acento); color:var(--acento-ink)}
+.mas{position:absolute; top:6px; right:6px; width:34px; height:34px; border-radius:50%; border:0; background:rgba(0,0,0,.55); color:#fff; cursor:pointer; font-size:20px; line-height:1}
+.vacio{color:var(--muted); text-align:center; padding:40px 10px}
+.buscar{width:100%; max-width:420px; padding:9px 14px; border-radius:999px; border:1px solid var(--line); background:var(--card)}
+.catalogo{display:grid; grid-template-columns:repeat(auto-fill, minmax(300px, 1fr)); gap:10px}
+.fila{display:flex; gap:12px; align-items:center; padding:8px; border:1px solid var(--line); border-radius:12px; background:var(--card); min-width:0}
+.fila img,.fila .mini{width:44px; height:66px; object-fit:cover; border-radius:4px; background:var(--chip); flex:none}
+.fila .txt{flex:1; min-width:0}
+.fila .t{font-weight:600; font-size:16px; line-height:1.25}
+.fila .a{font-size:14px; color:var(--muted)}
+
+/* ---------- lectura ---------- */
+#vistaLectura{--ancho:36em; --tam:20px; --interlineado:1.6; --letra-lectura:var(--letra)}
+#texto{max-width:var(--ancho); margin:0 auto; padding:28px 18px 40px; font-size:var(--tam); line-height:var(--interlineado); font-family:var(--letra-lectura);
+  overflow-wrap:break-word}
+#vistaLectura[data-bilingue="lado"] #texto{max-width:calc(var(--ancho) * 1.9)}
+/* El CSS del libro llega acotado a #texto; estas reglas van después y mandan en color, fondo y medidas. */
+#texto *{color:inherit !important; background-color:transparent !important; max-width:100%}
+#texto a{color:var(--vino) !important}
+#texto img,#texto svg{height:auto; max-height:85vh; object-fit:contain}
+#texto table{display:block; overflow-x:auto}
+#texto pre{white-space:pre-wrap}
+#texto p,#texto li,#texto blockquote{line-height:var(--interlineado) !important}
+#vistaLectura:not([data-letra="libro"]) #texto :is(p,li,blockquote,h1,h2,h3,h4,h5,h6,div,span,em,i,b,strong,a,td,th,dd,dt){font-family:var(--letra-lectura) !important}
+#texto mark{color:inherit; border-radius:2px; cursor:pointer; padding:0}
+#texto mark.lx-sub{background-color:var(--marca) !important}
+#texto mark.lx-nota{background-color:var(--nota) !important; border-bottom:2px solid var(--vino)}
+#texto mark.lx-corr{background-color:var(--corr) !important; text-decoration:underline wavy #c43c28; text-underline-offset:3px}
+#texto .lx-destello{animation:destello 1.6s ease-out}
+@keyframes destello{from{background-color:var(--marca)}to{background-color:transparent}}
+
+/* Edición bilingüe (Fénix: <p class="orig" lang="fr"> después de cada párrafo traducido). */
+.lx-idiomas{display:none}
+#vistaLectura[data-bilingue="lado"] .lx-idiomas{display:grid; grid-template-columns:1fr 1fr; gap:2.2em; font-size:14px; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--muted); border-bottom:1px solid var(--line); padding-bottom:4px; margin-bottom:10px; position:sticky; top:var(--barra); background:var(--bg); z-index:2}
+#vistaLectura[data-bilingue="lado"] .lx-par{display:grid; grid-template-columns:1fr 1fr; gap:2.2em; align-items:start}
+#vistaLectura[data-bilingue="lado"] .lx-par > *{margin-top:0 !important}
+#vistaLectura[data-bilingue="lado"] .lx-par > .orig{color:var(--muted) !important; font-size:.96em !important; border:0 !important; padding:0 !important; margin:0 !important; text-indent:1.4em !important}
+#vistaLectura[data-bilingue="lado"] .lx-par > :is(h1,h2,h3,h4,.subtitulo,.separador,.verso) + .orig{text-indent:0 !important}
+#vistaLectura[data-bilingue="lado"] .lx-par > .subtitulo + .orig{text-align:center; font-style:italic}
+#vistaLectura[data-bilingue="lado"] .lx-par + .lx-par{margin-top:.55em}
+#vistaLectura[data-bilingue="inter"] .orig{color:var(--muted) !important; font-size:.9em; text-indent:0 !important; margin:.25em 0 .8em !important;
+  padding-left:.8em; border-left:2px solid var(--line)}
+#vistaLectura[data-bilingue="trad"] .orig{display:none}
+#vistaLectura[data-bilingue="orig"] .lx-par > .lx-trad{display:none}
+#vistaLectura[data-bilingue="orig"] .lx-par > .orig{color:inherit !important}
+
+.navcap{display:flex; justify-content:space-between; gap:10px; max-width:var(--ancho); margin:0 auto; padding:10px 18px 120px}
+#vistaLectura[data-bilingue="lado"] .navcap{max-width:calc(var(--ancho) * 1.9)}
+.progreso{position:fixed; left:0; right:0; bottom:0; z-index:15; height:4px; background:var(--chip)}
+.progreso i{display:block; height:100%; width:0; background:var(--oro); transition:width .3s}
+.pie-lectura{position:fixed; right:10px; bottom:10px; z-index:15; font-size:13px; color:var(--muted); background:var(--bg); padding:2px 8px; border-radius:999px; border:1px solid var(--line)}
+
+/* ---------- paneles, diálogos, avisos ---------- */
+dialog{border:1px solid var(--line); border-radius:16px; background:var(--card); color:var(--ink); padding:0; width:min(560px, calc(100vw - 24px)); max-height:min(86vh, 760px)}
+dialog::backdrop{background:rgba(10,6,4,.55)}
+dialog.panel{margin:0 0 0 auto; height:100vh; max-height:100vh; border-radius:0; border-width:0 0 0 1px; width:min(440px, 100vw)}
+.dlg-cab{display:flex; align-items:center; gap:8px; padding:10px 12px 10px 18px; border-bottom:1px solid var(--line); position:sticky; top:0; background:var(--card); z-index:1}
+.dlg-cab h2{flex:1; margin:0; font-size:20px; font-weight:600}
+.dlg-cuerpo{padding:14px 18px 20px}
+.dlg-pie{display:flex; justify-content:flex-end; gap:8px; padding:0 18px 18px; flex-wrap:wrap}
+.indice ol{list-style:none; margin:0; padding:0}
+.indice ol ol{padding-left:16px}
+.indice a{display:block; padding:7px 8px; border-radius:8px; text-decoration:none; color:var(--ink); line-height:1.3}
+.indice a:hover{background:var(--chip)}
+.indice a[aria-current]{background:var(--chip); font-weight:600}
+.ajuste{margin:0 0 16px}
+.ajuste > span{display:block; font-size:15px; color:var(--muted); margin-bottom:6px}
+.segmentos{display:flex; flex-wrap:wrap; gap:6px}
+.segmentos button{border:1px solid var(--line); background:var(--bg); border-radius:999px; padding:6px 12px; cursor:pointer; font-size:15px}
+.segmentos button[aria-pressed="true"]{background:var(--acento); color:var(--acento-ink); border-color:transparent}
+.nota-item{border:1px solid var(--line); border-radius:12px; padding:10px 12px; margin:0 0 10px; background:var(--bg)}
+.nota-item blockquote{margin:0 0 6px; font-style:italic; color:var(--muted); font-size:16px}
+.nota-item p{margin:0 0 6px}
+.nota-item .acciones{display:flex; gap:8px; flex-wrap:wrap; align-items:center; font-size:14px; color:var(--muted)}
+.nota-item .acciones button{border:0; background:none; color:var(--vino); cursor:pointer; padding:4px 2px; font-size:15px; text-decoration:underline}
+.etq{font-size:12px; text-transform:uppercase; letter-spacing:.08em; color:var(--muted)}
+textarea,input[type=text]{width:100%; border:1px solid var(--line); border-radius:10px; background:var(--bg); padding:10px 12px; font-size:17px}
+textarea{min-height:110px; resize:vertical}
+label.campo{display:block; margin:0 0 12px}
+label.campo > span{display:block; font-size:15px; color:var(--muted); margin-bottom:4px}
+.citado{border-left:3px solid var(--oro); padding:4px 10px; margin:0 0 12px; font-style:italic; color:var(--muted); max-height:9em; overflow:auto}
+
+#seleccion{position:fixed; left:50%; transform:translateX(-50%); bottom:calc(18px + env(safe-area-inset-bottom)); z-index:30; display:flex; gap:4px;
+  background:var(--ink); color:var(--bg); border-radius:999px; padding:5px; box-shadow:0 6px 24px rgba(0,0,0,.3); max-width:calc(100vw - 20px); overflow-x:auto}
+#seleccion button{border:0; background:none; color:var(--bg); padding:8px 12px; border-radius:999px; cursor:pointer; font-size:16px; white-space:nowrap}
+#seleccion button:hover{background:rgba(255,255,255,.14)}
+#nota-flotante{position:fixed; z-index:31; max-width:min(420px, calc(100vw - 20px)); background:var(--card); border:1px solid var(--line); border-radius:12px;
+  padding:12px 14px; box-shadow:0 8px 30px rgba(0,0,0,.28); font-size:17px; max-height:50vh; overflow:auto}
+#nota-flotante .acciones{display:flex; gap:10px; margin-top:8px}
+#nota-flotante .acciones button{border:0; background:none; color:var(--vino); cursor:pointer; text-decoration:underline; padding:2px; font-size:15px}
+#toast{position:fixed; left:50%; transform:translateX(-50%); top:calc(var(--barra) + 10px); z-index:40; background:var(--ink); color:var(--bg); padding:10px 16px;
+  border-radius:12px; max-width:calc(100vw - 32px); font-size:16px; box-shadow:0 6px 24px rgba(0,0,0,.3)}
+.carga{position:fixed; inset:0; z-index:50; display:grid; place-items:center; background:rgba(10,6,4,.45); color:#fff; font-size:18px}
+
+@media (max-width:620px){
+  .estante{grid-template-columns:repeat(auto-fill, minmax(110px, 1fr)); gap:14px}
+  .catalogo{grid-template-columns:1fr}
+  .marca span{display:none}
+  #texto{padding:20px 16px 32px}
+}
+@media (max-width:760px){
+  /* Lado a lado no cabe en el celular: pasa a intercalado sin cambiar el ajuste guardado. */
+  #vistaLectura[data-bilingue="lado"] .lx-idiomas{display:none}
+  #vistaLectura[data-bilingue="lado"] .lx-par{display:block}
+  #vistaLectura[data-bilingue="lado"] .lx-par > .orig{font-size:.9em; text-indent:0 !important; margin:.25em 0 .8em !important; padding-left:.8em; border-left:2px solid var(--line)}
+  #vistaLectura[data-bilingue="lado"] #texto{max-width:var(--ancho)}
+}
+@media print{header.barra,.navcap,.progreso,.pie-lectura{display:none}}
+h2{break-after:avoid; page-break-after:avoid}
+</style>
+</head>
+<body>
+<noscript><p style="padding:16px">El lector necesita JavaScript.</p></noscript>
+
+<!-- Biblioteca -->
+<div id="vistaBiblio">
+  <header class="barra">
+    <a class="marca" href="../"><img alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236b1d24'/%3E%3Cg fill='%23e8b04a'%3E%3Cpath d='M31 56C24 52 15 51 7 53L6.5 46.5 4.5 45.5 6 38.5 3.5 37 5 29 2.5 27.5 2.5 7.5C8 17 19 26 31 36.5Z'/%3E%3Cpath d='M33 56C40 52 49 51 57 53L57.5 46.5 59.5 45.5 58 38.5 60.5 37 59 29 61.5 27.5 61.5 7.5C56 17 45 26 33 36.5Z'/%3E%3Cpath d='M32 38C29.3 33 28.9 27.6 29.8 22.8C30.7 18.4 33.4 15.6 37.2 16.1L42.6 18 37.6 20.1C36 23 35.7 28 34.8 32.8Z'/%3E%3C/g%3E%3C/svg%3E"><span>Lector Fénix</span></a>
+    <div class="titulo-barra"></div>
+    <button class="icono" id="btnNube" type="button" hidden title="Nube" aria-label="Nube"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .6-7.96A6 6 0 0 0 6.2 9.1 4.5 4.5 0 0 0 7 18z"/></svg><span id="nubeTxt"></span></button>
+    <label class="btn prim" for="archivoEpub">Agregar EPUB</label>
+    <input class="oculto" id="archivoEpub" type="file" accept=".epub,application/epub+zip" multiple>
+  </header>
+  <main class="biblio">
+    <p class="aviso" id="avisoRed" hidden></p>
+    <div class="pestanas" role="tablist">
+      <button class="btn" type="button" role="tab" id="tabMios" aria-selected="true">Mis libros</button>
+      <button class="btn" type="button" role="tab" id="tabFenix" aria-selected="false">Catálogo Fénix</button>
+    </div>
+    <section id="secMios">
+      <div class="estante" id="estante"></div>
+      <p class="vacio" id="estanteVacio" hidden>Todavía no tienes libros aquí. Agrega uno del <a href="#" id="irCatalogo">catálogo Fénix</a> o un EPUB de tu teléfono o computador.<br>Quedan guardados en este dispositivo y se leen sin conexión.</p>
+    </section>
+    <section id="secFenix" hidden>
+      <p><input class="buscar" id="buscarCat" type="search" placeholder="Buscar por título o autor" aria-label="Buscar en el catálogo Fénix"></p>
+      <div class="catalogo" id="catalogo"></div>
+      <p class="vacio" id="catalogoVacio" hidden></p>
+    </section>
+  </main>
+</div>
+
+<!-- Lectura -->
+<div id="vistaLectura" hidden>
+  <header class="barra">
+    <button class="icono" id="btnVolver" type="button" title="Biblioteca" aria-label="Volver a la biblioteca"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
+    <div class="titulo-barra" id="tituloLectura"></div>
+    <button class="icono" id="btnIndice" type="button" title="Índice" aria-label="Índice"><svg viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></button>
+    <button class="icono" id="btnMarcador" type="button" title="Marcador" aria-label="Poner marcador aquí" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
+    <button class="icono" id="btnNotas" type="button" title="Marcadores y notas" aria-label="Marcadores y notas"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></button>
+    <button class="icono" id="btnAjustes" type="button" title="Letra y colores" aria-label="Letra y colores"><svg viewBox="0 0 24 24"><path d="M4 19l5-14 5 14M6 14h6M15 19l3.5-9 3.5 9M16.2 16h4.6"/></svg></button>
+  </header>
+  <div id="texto" lang="es"></div>
+  <nav class="navcap" aria-label="Capítulos">
+    <button class="btn" type="button" id="capAnterior">← Anterior</button>
+    <button class="btn prim" type="button" id="capSiguiente">Siguiente →</button>
+  </nav>
+  <div class="progreso" aria-hidden="true"><i id="barraProgreso"></i></div>
+  <div class="pie-lectura" id="pieLectura"></div>
+</div>
+
+<div id="seleccion" hidden role="toolbar" aria-label="Texto seleccionado">
+  <button type="button" data-accion="sub">Subrayar</button>
+  <button type="button" data-accion="nota">Nota</button>
+  <button type="button" data-accion="corr">Corrección</button>
+  <button type="button" data-accion="copiar">Copiar</button>
+</div>
+<div id="nota-flotante" hidden></div>
+<div id="toast" hidden role="status"></div>
+
+<dialog id="dlgIndice" class="panel"><div class="dlg-cab"><h2>Índice</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo indice" id="indice"></div></dialog>
+<dialog id="dlgNotas" class="panel"><div class="dlg-cab"><h2>Marcadores y notas</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="listaNotas"></div></dialog>
+<dialog id="dlgAjustes" class="panel"><div class="dlg-cab"><h2>Letra y colores</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="ajustes"></div></dialog>
+<dialog id="dlgEscribir">
+  <form method="dialog" id="formEscribir">
+    <div class="dlg-cab"><h2 id="escribirTitulo">Nota</h2></div>
+    <div class="dlg-cuerpo">
+      <div class="citado" id="escribirCita"></div>
+      <label class="campo"><span id="escribirEtq">Tu nota</span><textarea id="escribirTexto" required></textarea></label>
+      <p class="etq" id="escribirAyuda" hidden>La corrección llega a Proyecto Fénix con el libro, el capítulo y el texto marcado. Si no tienes conexión, se envía sola cuando vuelva.</p>
+    </div>
+    <div class="dlg-pie"><button class="btn" value="no" type="submit" formnovalidate>Cancelar</button><button class="btn prim" value="si" type="submit">Guardar</button></div>
+  </form>
+</dialog>
+<dialog id="dlgConfirmar">
+  <form method="dialog">
+    <div class="dlg-cab"><h2 id="confTitulo"></h2></div>
+    <div class="dlg-cuerpo"><p id="confTexto" style="margin:0"></p></div>
+    <div class="dlg-pie"><button class="btn" value="no" type="submit">Cancelar</button><button class="btn peligro" value="si" type="submit" id="confSi">Eliminar</button></div>
+  </form>
+</dialog>
+<dialog id="dlgLibro">
+  <div class="dlg-cab"><h2 id="libroTitulo"></h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div>
+  <div class="dlg-cuerpo" id="libroInfo"></div>
+  <div class="dlg-pie" id="libroAcciones"></div>
+</dialog>
+
+<script src="vendor/fflate.js"></script>
+<script src="lector.js"></script>
+</body>
+</html>
