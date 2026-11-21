@@ -1251,7 +1251,7 @@ tantas desdichas descuente.
 Pesome que el primer día
 echado al cuello trajese
 el retrato de una dama:
-hablele en él cortésmente,
+hablele en él cortésmente,[^edl1]
 es galán, y quiere bien,
 fue por él, y ha de traerle
 aquí; embarázame mucho
@@ -1846,3 +1846,5 @@ una sombra, una ficción,
 y el mayor bien es pequeño;
 que toda la vida es sueño,
 y los sueños sueños son.
+
+[^edl1]: N. del E.: «Hablar en» equivale aquí a «hablar de»: el verso significa «le hablé de él», es decir, del retrato.

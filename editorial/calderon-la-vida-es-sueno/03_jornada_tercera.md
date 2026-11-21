@@ -35,7 +35,7 @@ que en una prisión me veo,
 donde ya todos los días
 en el filósofo leo
 Nicomedes, y las noches
-en el concilio Niceno.
+en el concilio Niceno.[^edl1]
 Si llaman santo al callar,
 como en calendario nuevo,
 san secreto es para mí,
@@ -470,7 +470,7 @@ lo que la ciencia erró, venza el acero.
 Pues yo al lado del Sol seré Belona:
 poner mi nombre junto al suyo espero;
 que he de volar sobre tendidas alas
-a competir con la deidad de Palas.
+a competir con la deidad de Palas.[^edl2]
 
 ### Escena VIII
 
@@ -863,7 +863,7 @@ no haber nacido gentil,
 para persuadirme loca
 a que fue algún dios de aquellos
 que en metamorfosis llora
-lluvia de oro, cisne y toro
+lluvia de oro, cisne y toro[^edl3]
 en Dánae, Leda y Europa.
 Cuando pensé que alargaba,
 citando aleves historias,
@@ -879,7 +879,7 @@ la alcanzó tanto, que aún hoy
 el pensamiento la llora;
 habiendo sido un tirano
 tan Eneas de su Troya,
-que la dejó hasta la espada.
+que la dejó hasta la espada.[^edl4]
 Enváinese aquí su hoja,
 que yo la desnudaré
 antes que acabe la historia.
@@ -1581,3 +1581,11 @@ el tiempo que me durare:
 pidiendo de nuestras faltas
 perdón, pues de pechos nobles
 es tan propio el perdonarlas.
+
+[^edl1]: N. del E.: Juego de palabras de Clarín, que se muere de hambre: «Nicomedes» suena a «ni comedes» (ni comes) y «Niceno», a «ni ceno».
+
+[^edl2]: N. del E.: Belona era la diosa romana de la guerra y Palas, otro nombre de la diosa griega Atenea. Estrella dice que, junto a Basilio (el Sol), peleará como ellas.
+
+[^edl3]: N. del E.: Alude a Júpiter, que según la mitología se transformó en lluvia de oro para llegar a Dánae, en cisne para llegar a Leda y en toro para raptar a Europa.
+
+[^edl4]: N. del E.: Rosaura compara a su madre con Troya y al hombre que la abandonó con Eneas, el héroe que dejó atrás su ciudad en llamas. Aquel hombre, además, le dejó «hasta la espada», la que Rosaura trae consigo al comienzo de la obra.

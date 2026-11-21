@@ -9,7 +9,7 @@
 *(Rosaura vestida de hombre aparece en lo alto de las peñas, y baja a lo llano; tras ella viene Clarín.)*
 
 **ROSAURA**
-Hipogrifo violento
+Hipogrifo violento[^edl1]
 que corriste parejas con el viento,
 ¿dónde rayo sin llama,
 pájaro sin matiz, pez sin escama,
@@ -18,7 +18,7 @@ natural, al confuso laberinto
 destas desnudas peñas
 te desbocas, arrastras y despeñas?
 Quédate en este monte,
-donde tengan los brutos su Faetonte;
+donde tengan los brutos su Faetonte;[^edl2]
 que yo, sin más camino
 que el que me dan las leyes del destino.
 Ciega y desesperada
@@ -173,7 +173,7 @@ qué delito he cometido:
 bastante causa ha tenido
 vuestra justicia y rigor,
 pues el delito mayor
-del hombre es haber nacido.
+del hombre es haber nacido.[^edl6]
 Solo quisiera saber
 para apurar mis desvelos
 (dejando a una parte, cielos,
@@ -830,7 +830,7 @@ por mi ciencia he merecido
 el sobrenombre de docto,
 pues, contra el tiempo y olvido,
 los pinceles de Timantes,
-los mármoles de Lisipo,
+los mármoles de Lisipo,[^edl3]
 en el ámbito del orbe
 me aclaman el gran Basilio.
 Ya sabéis que son las ciencias
@@ -912,7 +912,7 @@ ya que no a brazo partido.
 El mayor, el más horrendo
 eclipse que ha padecido
 el sol, después que con sangre
-lloró la muerte de Cristo,
+lloró la muerte de Cristo,[^edl4]
 este fue, porque anegado
 el orbe en incendios vivos,
 presumió que padecía
@@ -1012,7 +1012,7 @@ porque el hado más esquivo,
 la inclinación más violenta,
 el planeta más impío,
 solo el albedrío inclinan,
-no fuerzan el albedrío.
+no fuerzan el albedrío.[^edl5]
 Y así, entre una y otra causa,
 vacilante y discursivo,
 previne un remedio tal,
@@ -1300,3 +1300,15 @@ aunque no sé si podrá,
 cuando en tan confuso abismo
 es todo el cielo un presagio,
 y es todo el mundo un prodigio.
+
+[^edl1]: N. del E.: El hipogrifo es un animal fabuloso, mitad caballo y mitad grifo (ave de presa con cuerpo de león), que aparece en los libros de caballerías y en el Orlando furioso. Rosaura llama así al caballo que la ha derribado en el monte.
+
+[^edl2]: N. del E.: Faetonte, hijo de Febo (el Sol), pidió conducir el carro de su padre y, al no poder dominar los caballos, cayó fulminado desde el cielo. Rosaura desea que este monte sea para los caballos lo que fue la caída para Faetonte.
+
+[^edl3]: N. del E.: Timantes fue un pintor griego y Lisipo, un escultor griego de la Antigüedad. Basilio quiere decir que retratos y estatuas suyas lo hacen famoso en todo el mundo.
+
+[^edl4]: N. del E.: Basilio compara el eclipse de la noche en que nació Segismundo con el que, según los evangelios, oscureció la tierra cuando murió Cristo (Mt 27,45). Es el presagio que Basilio toma por prueba del carácter de su hijo; la obra mostrará después que esa lectura de los astros fue un error suyo.
+
+[^edl5]: N. del E.: Es la respuesta cristiana tradicional: aunque en tiempos de Calderón se creía que los astros influían en el carácter, nada anula la libertad. La Iglesia rechaza la astrología como adivinación (cf. Catecismo, nn. 1730-1731 y 2115-2116).
+
+[^edl6]: N. del E.: Es el lamento de Segismundo en su encierro, no una enseñanza de la obra; al final él mismo reconoce que obrar bien es lo que importa. Para la fe, nacer es un don de Dios (Gn 1,31); lo que se hereda es la herida del pecado original, no un delito personal (cf. Catecismo, nn. 402-405).
