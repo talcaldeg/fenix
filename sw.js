@@ -8,7 +8,11 @@
 // VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html, datos.js o img/: el
 // navegador ve un sw.js distinto, instala el nuevo y este borra las cachés viejas.
 const VERSION = "fenix-cfa33b228c";
-const BASICO = ["./", "datos.js", "manifest.webmanifest", "img/favicon.svg", "img/icono-192.png"];
+// El lector (lector/) entra entero al instalarse: tiene que abrir sin señal aunque nunca se haya visitado.
+const BASICO = ["./", "datos.js", "manifest.webmanifest", "img/favicon.svg", "img/icono-192.png",
+  "lector/", "lector/lector.js", "lector/vendor/fflate.js", "lector/catalogo.json",
+  "lector/fuentes/eb-garamond-latin-wght-normal.woff2", "lector/fuentes/eb-garamond-latin-wght-italic.woff2",
+  "lector/fuentes/eb-garamond-latin-ext-wght-normal.woff2", "lector/fuentes/eb-garamond-latin-ext-wght-italic.woff2"];
 
 self.addEventListener("install", e => {
   e.waitUntil(caches.open(VERSION).then(c => c.addAll(BASICO)).then(() => self.skipWaiting()));
