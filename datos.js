@@ -1981,14 +1981,14 @@ window.FENIX = {
       imagen: {"src": "img/portadas/shakespeare-el-mercader-de-venecia.jpg", "credito": {"es": "Maurycy Gottlieb, «Shylock y Jessica», 1876", "en": "Maurycy Gottlieb, «Shylock and Jessica», 1876"}, "url": "https://commons.wikimedia.org/wiki/File:Maurycy_Gottlieb_-_Shylock_e_jessica.jpg"},
       citas: [
         "La clemencia no quiere fuerza: es como la plácida lluvia del cielo que cae sobre un campo y le fecunda: dos veces bendita porque consuela al que la da y al que la recibe.",
-        "Hebreo, ya que pides no más que justicia, piensa que si sólo justicia hubiera, no se salvaría ninguno de nosotros. Todos los días, en la oración, pedimos clemencia, pero la misma oración nos enseña a perdonar como deseamos que nos perdonen.",
+        "Hebreo, ya que pides no más que justicia, piensa que si solo justicia hubiera, no se salvaría ninguno de nosotros. Todos los días, en la oración, pedimos clemencia, pero la misma oración nos enseña a perdonar como deseamos que nos perdonen.",
         "¿Y el judío no tiene ojos, no tiene manos ni órganos ni alma, ni sentidos ni pasiones? ¿No se alimenta de los mismos manjares, no recibe las mismas heridas, no padece las mismas enfermedades y se cura con iguales medicinas, no tiene calor en verano y frío en invierno, lo mismo que el cristiano?",
-        "No es oro todo lo que reluce: así dice el refrán antiguo; tú verás si con razón. ¡A cuántos ha engañado en la vida una vana exterioridad!"
+        "No es oro todo lo que reluce: así dice el refrán antiguo: tú verás si con razón. ¡A cuántos ha engañado en la vida una vana exterioridad!"
       ],
-      archivos: {},
-      externos: [{"formato": "epub", "texto": "Project Gutenberg, volumen 1 (incluye El mercader de Venecia)", "url": "https://www.gutenberg.org/ebooks/53207.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, volumen 1 (incluye El mercader de Venecia)", "url": "https://www.gutenberg.org/ebooks/53207"}],
-      fuente: {"texto": "Project Gutenberg, libro n.º 53207: Dramas de Guillermo Shakspeare, vol. 1, traducción de Marcelino Menéndez y Pelayo (Barcelona, 1881) (dominio público)", "url": "https://www.gutenberg.org/ebooks/53207"},
+      archivos: {"epub": "libros/shakespeare-el-mercader-de-venecia.epub", "pdf": "libros/shakespeare-el-mercader-de-venecia.pdf"},
+      fuente: {"texto": "Traducción de Marcelino Menéndez y Pelayo (Dramas de Guillermo Shakspeare, tomo 1, Barcelona, 1881), según Project Gutenberg, libro n.º 53207 (dominio público)", "url": "https://www.gutenberg.org/ebooks/53207"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-mercader-de-venecia"},
+      editorial: {"es": "Edición digital de Proyecto Fénix de El mercader de Venecia en la traducción de Menéndez y Pelayo, con la lista de personajes, los cinco actos y sus 20 escenas; con ortografía y acentuación actualizadas sin cambiar ninguna palabra del traductor, y los nombres de los hablantes completos. Se omiten los grabados de la edición de 1881. Preparada con ayuda de inteligencia artificial y revisada contra la fuente. Edición al cuidado de Tomás Alcalde.", "en": "Proyecto Fénix digital edition of The Merchant of Venice in the Spanish translation of Menéndez y Pelayo, with the list of characters, the five acts and their 20 scenes; spelling and accents updated without changing any of the translator's words, and the speakers' names written out in full. The engravings of the 1881 edition are omitted. Prepared with the help of artificial intelligence and checked against the source. Edited by Tomás Alcalde."},
       parecidos: ["shakespeare-como-gusteis", "shakespeare-enrique-iv", "shakespeare-hamlet"]
     },
     {
