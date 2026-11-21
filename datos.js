@@ -2618,16 +2618,16 @@ window.FENIX = {
       porque: {"es":"Es la obra para quien alguna vez dudó de si lo que vive es real, o si merece la pena obrar bien aunque todo pase. Segismundo aprende a actuar con juicio ante lo incierto, y esa respuesta, dada hace siglos, sigue sirviendo a quien se siente perdido.","en":"The play for anyone who has ever doubted whether what he lives is real, or whether it is worth doing right when everything passes. The prince learns to act with judgment in the face of uncertainty, and that answer, given centuries ago, still serves those who feel lost."},
       imagen: {"src": "img/portadas/calderon-la-vida-es-sueno.jpg", "credito": {"es": "Caspar David Friedrich, «Mañana en el Riesengebirge», 1810-1811", "en": "Caspar David Friedrich, “Morning in the Riesengebirge”, 1810-1811"}, "url": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich,_Morgen_im_Riesengebirge.jpg"},
       citas: [
-        "¿Qué es la vida? Un frenesí. / ¿Qué es la vida? Una ilusión, / una sombra, una ficción, / y el mayor bien es pequeño; / que toda la vida es sueño, / y los sueños sueños son.",
-        "Pues el delito mayor / del hombre es haber nacido.",
+        "¿Qué es la vida? Un frenesí: / ¿qué es la vida? Una ilusión, / una sombra, una ficción, / y el mayor bien es pequeño; / que toda la vida es sueño, / y los sueños sueños son.",
+        "pues el delito mayor / del hombre es haber nacido.",
         "Mas sea verdad o sueño, / obrar bien es lo que importa; / si fuere verdad, por serlo; / si no, por ganar amigos / para cuando despertemos.",
         "Que estoy soñando, y que quiero / obrar bien, pues no se pierde / el hacer bien, aun en sueños.",
         "Sueña el rey que es rey, y vive / con este engaño mandando, / disponiendo y gobernando; / y este aplauso, que recibe / prestado, en el viento escribe; / y en cenizas le convierte / la muerte (¡desdicha fuerte!)"
       ],
-      archivos: {},
-      externos: [{"formato": "epub", "texto": "Project Gutenberg, tomo 1 de Teatro selecto", "url": "https://www.gutenberg.org/ebooks/54436.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, tomo 1 de Teatro selecto", "url": "https://www.gutenberg.org/ebooks/54436"}],
-      fuente: {"texto": "Project Gutenberg, libro n.º 54436 (Teatro selecto, tomo 1, con estudio crítico de Menéndez y Pelayo; dominio público)", "url": "https://www.gutenberg.org/ebooks/54436"},
+      archivos: {"epub": "libros/calderon-la-vida-es-sueno.epub", "pdf": "libros/calderon-la-vida-es-sueno.pdf"},
+      fuente: {"texto": "Edición de Marcelino Menéndez y Pelayo (Teatro selecto, tomo 1, Madrid, 1881), según Project Gutenberg, libro n.º 54436 (dominio público)", "url": "https://www.gutenberg.org/ebooks/54436"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-vida-es-sueno"},
+      editorial: {"es": "Edición digital de Proyecto Fénix de La vida es sueño, con la lista de personajes, las tres jornadas, sus 41 escenas y 3.328 versos; con ortografía y acentuación actualizadas sin cambiar ninguna palabra ni la métrica, y los nombres de los hablantes completos. Se omiten las notas de Menéndez y Pelayo. Preparada con ayuda de inteligencia artificial y revisada contra la fuente. Edición al cuidado de Tomás Alcalde.", "en": "Proyecto Fénix digital edition of La vida es sueño (Life Is a Dream), with the list of characters, the three acts, their 41 scenes and 3,328 lines of verse; spelling and accents updated without changing any word or the meter, and the speakers' names written out in full. The notes of Menéndez y Pelayo are omitted. Prepared with the help of artificial intelligence and checked against the source. Edited by Tomás Alcalde."},
       parecidos: ["calderon-amor-honor-y-poder", "calderon-casa-con-dos-puertas", "calderon-el-alcalde-de-zalamea"]
     },
     {
