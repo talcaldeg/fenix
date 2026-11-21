@@ -152,6 +152,16 @@
    "portada": "img/portadas/shakespeare-el-mercader-de-venecia.jpg"
   },
   {
+   "id": "cervantes-don-quijote",
+   "idioma": "es",
+   "titulo": "Don Quijote de la Mancha",
+   "autor": "Miguel de Cervantes",
+   "epub": "libros/cervantes-don-quijote.epub",
+   "bytes": 1603241,
+   "sha": "1776cf00a01cfc69a0cc014749bacb53bcd70d08e17a9385c11543dd7fc27778",
+   "portada": "img/portadas/cervantes-don-quijote.jpg"
+  },
+  {
    "id": "calderon-la-vida-es-sueno",
    "idioma": "es",
    "titulo": "La vida es sueño",

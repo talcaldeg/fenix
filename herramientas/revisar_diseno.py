@@ -561,8 +561,10 @@ def revisar_lector(nav, base, raiz):
     try:
         pg.goto(f"{base}lector/#fenix={libro['id']}&l={libro['idioma']}")
         pg.wait_for_selector("#vistaLectura:not([hidden]) #texto .lx-cap", timeout=30000)
-        pg.evaluate("navigator.serviceWorker.ready")
-        pg.wait_for_timeout(1500)
+        # Que el service worker haya guardado el lector antes de cortar la red (ready solo no bastó:
+        # en publicar falló una vez cortando la red antes de tiempo).
+        pg.wait_for_function("async () => { await navigator.serviceWorker.ready; return !!(await caches.match(location.origin + location.pathname)); }",
+                             timeout=60000, polling=500)
         ctx.set_offline(True)
         pg.goto(base + "lector/")
         pg.wait_for_selector("#estante .tarjeta", timeout=15000)
