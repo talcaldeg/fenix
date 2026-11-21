@@ -348,7 +348,7 @@ const cabecera = (lang, B, otraUrl) => {
 };
 const pieDePagina = (lang, B) => {
   const x = TX[lang], inicio = B + (lang === "en" ? "?l=en" : "");
-  return `<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}</nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>`;
+  return `<footer><div class="wrap">${esc(x.pie)}<nav aria-label="${lang === "en" ? "Get involved" : "Colaborar"}">${["contacto", "error", "dona"].map(v => `<a href="${v === "dona" ? urlDona(lang, B) : inicio + "#" + v}">${esc(textoNav("nav." + v, lang))}</a>`).join("")}<a href="${INSTAGRAM}" target="_blank" rel="noopener">Instagram</a></nav></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>`;
 };
 
 // Secciones (categoria/<cat>/ y categoria/<cat>/en/): una página por categoría e idioma con un enlace a
@@ -578,7 +578,7 @@ ${m.html.replace(/@@RAIZ@@/g, B)}
     <p class="ayuda">${esc(x.ayuda)}</p>
   </div>
 </article></main>
-<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
+<footer><div class="wrap">${esc(x.pie)} · <a href="${INSTAGRAM}" target="_blank" rel="noopener">Instagram</a></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 <script>
 // Si se llegó desde la ficha del sitio, Volver regresa ahí (con la biblioteca detrás) en vez de abrir la página suelta.
@@ -596,7 +596,9 @@ ${MEDICION}
 // cambia la vista previa, que siempre era la de la portada. index.html lleva #dona hasta acá.
 // Campaña de Catapultame (preventa de la Colección Fénix impresa). Al pasar la fecha, el bloque se quita
 // en el navegador y desaparece del HTML en la siguiente regeneración. La banda del inicio usa la misma fecha.
-const CAMPANA_URL = "https://catapultame.com/api/lanzamientos/coleccion-fenix/";
+// Cuenta de Instagram de Fénix (abierta el 20-nov-2026); va en el pie de todas las páginas.
+const INSTAGRAM = "https://www.instagram.com/proyectofenixcl/";
+const CAMPANA_URL ="https://catapultame.com/api/lanzamientos/coleccion-fenix/";
 const CAMPANA_HASTA = "2026-12-15T02:59:00Z";
 // Los cuatro libros de la Colección Fénix impresa: su ficha (la estática y la de index.html) avisa de la
 // preventa con enlace a la campaña. index.html recibe URL, fecha e ids desde aquí (ver «Campaña» abajo).
@@ -699,7 +701,7 @@ ${FUENTES}
   ${donar ? "" : `<p class="meta">${esc(t.pendiente)}</p>`}
   <div class="botones"><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
 </div></main>
-<footer><div class="wrap">${esc(x.pie)}</div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
+<footer><div class="wrap">${esc(x.pie)} · <a href="${INSTAGRAM}" target="_blank" rel="noopener">Instagram</a></div><div class="wrap" style="margin-top:6px">${esc(x.auspicio)} <a class="auspicio" href="https://verumdata.cl/" target="_blank" rel="noopener"><img src="${B}img/verum-data.svg" alt="" width="18" height="18">Verum Data</a></div></footer>
 ${SCRIPT_TEMA}
 ${SCRIPT_COMPARTIR}
 ${MEDICION}
