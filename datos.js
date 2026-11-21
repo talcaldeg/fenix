@@ -2140,15 +2140,15 @@ window.FENIX = {
       imagen: {"src": "img/portadas/cervantes-don-quijote.jpg", "credito": {"es": "Gustave Doré, «La aventura de los molinos de viento», 1863", "en": "Gustave Doré, “Adventure with the Windmills”, 1863"}, "url": "https://commons.wikimedia.org/wiki/File:Adventure_with_the_Windmills.jpg"},
       citas: [
         "En un lugar de la Mancha, de cuyo nombre no quiero acordarme, no ha mucho tiempo que vivía un hidalgo de los de lanza en astillero, adarga antigua, rocín flaco y galgo corredor.",
-        "La libertad, Sancho, es uno de los más preciosos dones que a los hombres dieron los cielos; con ella no pueden igualarse los tesoros que encierra la tierra ni el mar encubre; por la libertad, así como por la honra, se puede y debe aventurar la vida.",
-        "La verdad adelgaza y no quiebra, y siempre anda sobre la mentira como el aceite sobre el agua.",
-        "Yo sé quién soy; y sé que puedo ser no sólo los que he dicho, sino todos los Doce Pares de Francia, y aun todos los Nueve de la Fama.",
-        "No hay fortuna en el mundo, ni las cosas que en él suceden, buenas o malas que sean, vienen acaso, sino por particular providencia de los cielos, y de aquí viene lo que suele decirse: que cada uno es artífice de su ventura."
+        "La libertad, Sancho, es uno de los más preciosos dones que a los hombres dieron los cielos; con ella no pueden igualarse los tesoros que encierra la tierra ni el mar encubre; por la libertad, así como por la honra, se puede y debe aventurar la vida, y, por el contrario, el cautiverio es el mayor mal que puede venir a los hombres.",
+        "Y tuvo razón, porque la verdad adelgaza y no quiebra, y siempre anda sobre la mentira como el aceite sobre el agua.",
+        "«Yo sé quién soy», respondió don Quijote; «y sé que puedo ser no solo los que he dicho, sino todos los Doce Pares de Francia, y aun todos los Nueve de la Fama, pues a todas las hazañas que ellos todos juntos y cada uno por sí hicieron, se aventajarán las mías».",
+        "Lo que te sé decir es que no hay fortuna en el mundo, ni las cosas que en él suceden, buenas o malas que sean, vienen acaso, sino por particular providencia de los cielos, y de aquí viene lo que suele decirse: que cada uno es artífice de su ventura."
       ],
-      archivos: {},
-      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/2000.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/2000"}],
-      fuente: {"texto": "Project Gutenberg, libro n.º 2000 (dominio público)", "url": "https://www.gutenberg.org/ebooks/2000"},
+      archivos: {"epub": "libros/cervantes-don-quijote.epub", "pdf": "libros/cervantes-don-quijote.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 2000, cotejado con la edición ilustrada por Gustave Doré (Barcelona, Luis Tasso); los pasajes del hurto del rucio, de la edición de México de 1842 (dominio público)", "url": "https://www.gutenberg.org/ebooks/2000"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/don-quijote-de-la-mancha"},
+      editorial: {"es": "Edición digital de Proyecto Fénix de las dos partes de Don Quijote de la Mancha (1605 y 1615): sus 126 capítulos con las preliminares de cada parte; ortografía y acentuación actualizadas sin cambiar ninguna palabra; diálogos entre comillas angulares; con los pasajes del hurto del rucio de la segunda edición de Cuesta y 23 notas del editor: 19 sobre pasajes en latín, en italiano o en latín de burla y 4 sobre pasajes que se leen mal sin contexto."},
       parecidos: ["cervantes-el-trato-de-argel", "cervantes-novelas-ejemplares", "cervantes-viaje-al-parnaso"]
     },
     {

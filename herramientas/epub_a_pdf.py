@@ -199,7 +199,10 @@ def achicados(doc, dibujos: list) -> list:
     return salida
 
 
-def con_relleno(z: zipfile.ZipFile, relleno: dict) -> bytes:
+INTERLINEADO = 1.5  # el de estilo.css (body); la viuda de fin de capítulo lo aprieta solo en ese capítulo
+
+
+def con_relleno(z: zipfile.ZipFile, relleno: dict, apretados: dict | None = None) -> bytes:
     """Copia del EPUB con un bloque vacío de `alto` pt en cada (xhtml, posición) de `relleno`
     (valor: (alto, etiqueta), «div» o, dentro de la lista del índice, «li»). MuPDF no respeta
     break-before, break-after ni break-inside (probado en 1.29): un dibujo que no cabe en lo que
@@ -212,11 +215,14 @@ def con_relleno(z: zipfile.ZipFile, relleno: dict) -> bytes:
     with zipfile.ZipFile(buf, "w") as nuevo:
         for item in z.infolist():
             datos = z.read(item)
-            if item.filename in por_archivo:
+            if item.filename in por_archivo or (apretados and item.filename in apretados):
                 xhtml = datos.decode("utf-8")
-                for pos, alto, etiqueta in sorted(por_archivo[item.filename], reverse=True):
+                for pos, alto, etiqueta in sorted(por_archivo.get(item.filename, []), reverse=True):
                     estilo = f"height: {alto:.1f}pt" + ("; margin: 0; padding: 0" if etiqueta == "li" else "")
                     xhtml = xhtml[:pos] + f'<{etiqueta} style="{estilo}"></{etiqueta}>' + xhtml[pos:]
+                if apretados and item.filename in apretados:
+                    xhtml = re.sub(r"<body\b", f'<body style="line-height: {INTERLINEADO * apretados[item.filename]:.3f}"',
+                                   xhtml, count=1)
                 datos = xhtml.encode("utf-8")
             # ZipInfo nuevo: writestr reescribe el que recibe y z ya no podría leer esa entrada
             nuevo.writestr(zipfile.ZipInfo(item.filename, item.date_time), datos,
@@ -302,6 +308,25 @@ def titulos_huerfanos(z: zipfile.ZipFile, doc, titulos: dict, desde: int = 0):
     return None
 
 
+def viuda_de_capitulo(z: zipfile.ZipFile, doc, descartados: set):
+    """Primer capítulo (xhtml del spine, sin el índice) de dos o más páginas cuya última página trae
+    una sola línea de texto (una palabra suelta de un párrafo largo, p. ej.), o None. Cada capítulo
+    parte en página nueva, así que esa línea deja una hoja casi en blanco."""
+    base, xhtmls = spine(z)
+    por_capitulo = {}
+    for i in range(doc.page_count):
+        por_capitulo.setdefault(doc.location_from_page_number(i)[0], []).append(i)
+    for k, paginas in sorted(por_capitulo.items()):
+        if len(paginas) < 2 or xhtmls[k] in descartados or xhtmls[k].endswith("nav.xhtml"):
+            continue
+        pag = doc[paginas[-1]]
+        lineas = [l for b in pag.get_text("dict")["blocks"] for l in b.get("lines", [])
+                  if "".join(s["text"] for s in l["spans"]).strip()]
+        if len(lineas) <= 1 and not pag.get_images():
+            return xhtmls[k]
+    return None
+
+
 def entradas_del_indice(z: zipfile.ZipFile, doc) -> list:
     """Entradas del índice en orden: [página, destino, punto, rect de su primera línea, partida],
     donde partida dice si sigue en la página siguiente."""
@@ -358,6 +383,7 @@ def maquetar(epub: Path, hoja: tuple):
     dibujos = dibujos_con_ancho(z)
     titulos = titulos_del_libro(z)
     relleno, no_caben, titulos_movidos = {}, set(), set()
+    apretados, sin_remedio = {}, set()
     doc = fitz.open(str(epub))
     doc.layout(width=ancho, height=alto, fontsize=LETRA)
     desde = 0
@@ -381,15 +407,29 @@ def maquetar(epub: Path, hoja: tuple):
             if h:
                 problemas.append((h[0], h[1], etiqueta, pie - h[2] + 2))
         if not problemas:
-            break
+            viuda = viuda_de_capitulo(z, doc, sin_remedio)
+            if viuda is None:
+                break
+            # MuPDF no tiene control de viudas: se aprieta el interlineado de ese capítulo, de a 1 %, hasta que la línea suba
+            f = round(apretados.get(viuda, 1.0) - 0.01, 2)
+            if f < 0.90:
+                sin_remedio.add(viuda)  # ni con 10 % menos de interlineado sube: se deja como está
+                continue
+            apretados[viuda] = f
+            doc = fitz.open(stream=con_relleno(z, relleno, apretados), filetype="epub")
+            doc.layout(width=ancho, height=alto, fontsize=LETRA)
+            continue
         pag, clave, etiqueta, inicial = min(problemas, key=lambda p: p[0])
         desde = max(desde, pag)
         if problemas.index(min(problemas, key=lambda p: p[0])) > 0 or not pendientes:
             titulos_movidos.add(clave)
         # la primera vez, lo que queda hasta el margen inferior; si no alcanza, de a poco más
         relleno[clave] = (relleno[clave][0] + 3 if clave in relleno else inicial, etiqueta)
-        doc = fitz.open(stream=con_relleno(z, relleno), filetype="epub")
+        doc = fitz.open(stream=con_relleno(z, relleno, apretados), filetype="epub")
         doc.layout(width=ancho, height=alto, fontsize=LETRA)
+    if apretados:
+        print(f"{epub.name}: {len(apretados)} capítulos con interlineado apretado para que no quede una línea sola en la última página"
+              + (f" (sin remedio: {len(sin_remedio)})" if sin_remedio else ""))
     n_dib = len(relleno) - len(titulos_movidos)
     if n_dib:
         print(f"{epub.name}: {n_dib} dibujos pasan a la página siguiente para no achicarse")
