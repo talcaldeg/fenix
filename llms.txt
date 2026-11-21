@@ -211,6 +211,8 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 - [Martín Fierro - José Hernández (1872)](https://talcaldeg.github.io/fenix/libro/hernandez-martin-fierro/) - Poema narrativo en dos partes, «El gaucho Martín Fierro» (1872) y «La vuelta de Martín Fierro» (1879), sobre la vida de un paisano de la pampa argentina. Se lee gratis en el sitio del titular.
 - [Cantos de vida y esperanza, Los cisnes y otros poemas - Rubén Darío (1905)](https://talcaldeg.github.io/fenix/libro/dario-cantos-de-vida-y-esperanza/) - Colección de poemas de madurez del poeta nicaragüense, en la que su estilo modernista se une a una reflexión sobre el paso del tiempo, la muerte, la fe y la incertidumbre ante el futuro. Se lee gratis en el sitio del titular.
 - [The Dream of Gerontius - Saint John Henry Newman (1865)](https://talcaldeg.github.io/fenix/libro/newman-the-dream-of-gerontius/) - A dramatic poem on the death of a Christian and the journey of his soul. Descarga gratuita en EPUB y PDF.
+- [La Ilíada - Homero (trad. Luis Segalá y Estalella) (-750)](https://talcaldeg.github.io/fenix/libro/homero-la-iliada/) - La Ilíada cuenta cincuenta y un días del décimo año de la guerra de Troya. Descarga gratuita en EPUB y PDF.
+- [Azul... - Rubén Darío (1888)](https://talcaldeg.github.io/fenix/libro/dario-azul/) - Azul... Descarga gratuita en EPUB y PDF.
 
 ## Ensayo e historia
 

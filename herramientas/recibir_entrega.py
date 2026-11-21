@@ -6,7 +6,8 @@
     python herramientas/recibir_entrega.py --gmail "from:jialcalde newer_than:3d"
 
 Recibe varios paquetes de una vez. Con --gmail baja a .entregas/ los .zip de los correos de
-talcaldeg@gmail.com que calcen con la búsqueda (sola: las entregas de los últimos 14 días). Salta
+talcaldeg@gmail.com que calcen con la búsqueda (sola: todo .zip de los últimos 14 días, con
+cualquier asunto; los que no traen ficha.json se saltan). Salta
 los que ya están publicados, no se detiene si uno falla, calla la salida de los pasos que salen
 bien y cierra con una línea por libro, gen_estaticos.js, el resumen y porque de cada libro listo
 y una hoja de contacto de sus primeras páginas: lo que queda es mirarla, auditar-teologia y
@@ -74,7 +75,8 @@ def armar_epub(c: Path, f: dict, nombre: str) -> Path:
         if (quedan := sin_gutenberg.limpiar(epub)):
             sys.exit(f"Quedan menciones a Gutenberg en el EPUB: {quedan[:3]}")
         base = plano(texto_epub(epub))
-        faltan = [x for x in f["citas"] if plano(x) not in base]
+        # Sin su primera letra vale también: capital de adorno aparte (revisar_entrega.py).
+        faltan = [x for x in f["citas"] if plano(x) not in base and plano(x)[1:] not in base]
         if faltan:
             sys.exit(f"Citas que no están en el EPUB de Gutenberg: {faltan}")
         return epub
@@ -245,10 +247,17 @@ def bajar_de_gmail(query: str) -> list[Path]:
     g = abrir("personal")
     df = g.buscar(query + " has:attachment filename:zip", maximo=50)
     destino = RAIZ / ".entregas"
-    rutas = []
+    rutas, ajenos = [], []
     for _, fila in df.iterrows():
-        rutas += [Path(r) for r in g.descargar_adjuntos(fila["id"], str(destino), r"\.zip$")]
-    print(f"{len(rutas)} paquetes de {len(df)} correos.")
+        bajados = [Path(r) for r in g.descargar_adjuntos(fila["id"], str(destino), r"\.zip$")]
+        # La búsqueda ya no exige el asunto del formulario (Juan mandó la Ilíada como «La Iliada» y
+        # el lote no la vio, 20-nov-2026): un .zip es entrega solo si trae ficha.json.
+        if any(zipfile.is_zipfile(z) and any(n.endswith("ficha.json") for n in zipfile.ZipFile(z).namelist()) for z in bajados):
+            rutas += bajados
+        else:
+            ajenos.append(fila)
+    df = df.drop([f.name for f in ajenos])
+    print(f"{len(rutas)} paquetes de {len(df)} correos" + (f" ({len(ajenos)} .zip ajenos a Fénix, saltados)." if ajenos else "."))
     # Quién mandó y si ya se le respondió alguna entrega: así la bienvenida a uno nuevo no parte
     # buscando el hilo y el correo anterior (5-nov-2026, diez llamadas solo para eso).
     # Lo que llega por el formulario viene de FormSubmit: el remitente real es su campo «email»
@@ -266,7 +275,9 @@ def bajar_de_gmail(query: str) -> list[Path]:
         if not correo:
             print(f"De: {de}")
             continue
-        previas = len(g.buscar(f'in:sent to:{correo.group(0)} subject:"Fénix - encuadernador"', maximo=5))
+        # Cualquier correo enviado cuenta: a Juan se le respondió *Niebla* con «Re: Niebla» y salía
+        # como PRIMERA ENTREGA (20-nov-2026).
+        previas = len(g.buscar(f"in:sent to:{correo.group(0)}", maximo=5))
         print(f"De: {de} - {'PRIMERA ENTREGA: lleva bienvenida' if not previas else f'{previas} entrega(s) ya respondidas'}")
     return rutas
 
@@ -297,7 +308,7 @@ def main():
     ap.add_argument("paquetes", nargs="*", help=".zip o carpeta de cada entrega")
     # Sin búsqueda, toma todas las entregas recientes: las ya publicadas se saltan solas, así que
     # no hace falta buscar antes quién mandó qué.
-    ap.add_argument("--gmail", nargs="?", const='subject:"Fénix - encuadernador" newer_than:14d',
+    ap.add_argument("--gmail", nargs="?", const="newer_than:14d",
                     help="búsqueda de Gmail (talcaldeg@gmail.com) cuyos .zip se reciben; sola, las de los últimos 14 días")
     a = ap.parse_args()
     origenes = [Path(p).resolve() for p in a.paquetes] + (bajar_de_gmail(a.gmail) if a.gmail else [])

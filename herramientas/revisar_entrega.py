@@ -84,18 +84,22 @@ def epub_gutenberg(numero: int) -> Path:
     if ruta.exists() and zipfile.is_zipfile(ruta):
         return ruta
     ruta.parent.mkdir(parents=True, exist_ok=True)
-    url = f"https://www.gutenberg.org/ebooks/{numero}.epub3.images"
-    for intento in range(3):
-        try:
-            req = urllib.request.Request(url, headers={"User-Agent": "Proyecto Fenix"})
-            ruta.write_bytes(urllib.request.urlopen(req, timeout=300).read())
-            if zipfile.is_zipfile(ruta):
-                return ruta
-        except OSError as e:
-            if intento == 2:
-                raise
-            print(f"Reintento {intento + 1} de {url} ({e})")
-    raise OSError(f"{url} no trajo un EPUB válido")
+    # Si gutenberg.org cae (503 el 20-nov-2026, la Ilíada de Juan), el mismo archivo está en su
+    # espejo oficial aleph.pglaf.org.
+    urls = [f"https://www.gutenberg.org/ebooks/{numero}.epub3.images",
+            f"https://aleph.pglaf.org/cache/epub/{numero}/pg{numero}-images-3.epub"]
+    for url in urls:
+        for intento in range(3):
+            try:
+                req = urllib.request.Request(url, headers={"User-Agent": "Proyecto Fenix"})
+                ruta.write_bytes(urllib.request.urlopen(req, timeout=300).read())
+                if zipfile.is_zipfile(ruta):
+                    return ruta
+            except OSError as e:
+                if intento == 2 and url == urls[-1]:
+                    raise
+                print(f"Reintento {intento + 1} de {url} ({e})")
+    raise OSError(f"{urls[-1]} no trajo un EPUB válido")
 
 
 def texto_epub(ruta):
@@ -236,7 +240,9 @@ def revisar(carpeta: Path):
             try:
                 base = plano(texto_epub(epub_gutenberg(gutenberg)))
                 for c in citas:
-                    if plano(c) not in base:
+                    # Una capital de adorno puede venir aparte de su palabra («P» + «ARÍS es teatro»
+                    # en *Azul*, 20-nov-2026): se acepta la cita sin su primera letra.
+                    if plano(c) not in base and plano(c)[1:] not in base:
                         E.append(f"cita que no está en el EPUB de Gutenberg: «{c[:70]}...»")
             except OSError as e:
                 A.append(f"no se pudo bajar el EPUB de Gutenberg ({e}); las citas no se cotejaron:"

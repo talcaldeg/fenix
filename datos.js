@@ -28,7 +28,7 @@
 //   libre (p. ej. una fotografía CC BY-SA de Commons): aviso dice la licencia.
 
 window.FENIX = {
-  actualizado: "16-nov-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "20-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -4964,6 +4964,52 @@ window.FENIX = {
       delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/visitas-al-santisimo-sacramento-y-maria-santisima-para-todos-los-dias"},
       editorial: {"es": "Edición digital de Proyecto Fénix sobre la impresión de Madrid de 1803: texto transcrito del escaneo y cotejado con las imágenes, ortografía actualizada sin cambiar palabras y portada nueva. Edición al cuidado de Benjamín Ormazábal.", "en": "Proyecto Fénix digital edition of the 1803 Madrid printing: text transcribed from the scan and checked against the page images, modernized spelling without changing any words, and a new cover. Edited by Benjamín Ormazábal."},
       parecidos: ["preparacion-para-la-muerte", "imitacion-de-cristo", "de-la-eucaristia-a-la-trinidad"]
+    },
+    {
+      id: "homero-la-iliada",
+      titulo: "La Ilíada",
+      autor: "Homero (trad. Luis Segalá y Estalella)",
+      anio: "-750",
+      idioma: "es",
+      categoria: "poesia",
+      recomendado: false,
+      resumen: {"es": "La Ilíada cuenta cincuenta y un días del décimo año de la guerra de Troya. Agamenón arrebata a Aquiles su cautiva Briseida, y el héroe, ofendido, se retira del combate; sin él, los aqueos sufren derrota tras derrota ante Héctor, el defensor de Troya. Aquiles solo vuelve a las armas cuando muere su amigo Patroclo, mata a Héctor y arrastra su cadáver, hasta que el anciano rey Príamo va a suplicarle la devolución del cuerpo de su hijo. El poema termina con los funerales de Héctor.", "en": "The Iliad tells fifty-one days of the tenth year of the Trojan War. Agamemnon takes Briseis, Achilles' captive, and the offended hero withdraws from battle; without him the Achaeans suffer defeat after defeat against Hector, Troy's defender. Achilles returns to arms only when his friend Patroclus dies; he kills Hector and drags his body, until old King Priam comes to beg for his son's corpse. The poem ends with Hector's funeral."},
+      porque: {"es": "Para quien disfruta de las batallas, los héroes y las grandes campañas, desde Salgari hasta Tolkien o Escipión: aquí está la fuente de toda la épica. Más allá del combate, el poema habla de la ira, del honor, de la amistad y de la piedad ante el enemigo caído. Es un libro largo, que se puede leer canto a canto.", "en": "For anyone who enjoys battles, heroes and great campaigns, from Salgari to Tolkien or Scipio: this is the source of all epic. Beyond the fighting, the poem speaks of anger, honour, friendship and mercy toward a fallen enemy. It is a long book that can be read one canto at a time."},
+      imagen: {"src": "img/portadas/homero-la-iliada.jpg", "credito": {"es": "Alexander von Nothbeck (atribuido), «Príamo pide a Aquiles el cuerpo de Héctor», 1824", "en": "Alexander von Nothbeck (attributed), «Priam Asks Achilles for Hector's Body», 1824"}, "url": "https://commons.wikimedia.org/wiki/File:0583Fc._Notbek_A.V._Priam_asks_Achilles_for_the_body_of_his_son_Hector.jpg"},
+      citas: [
+        "Canta, oh diosa, la cólera del Pelida Aquiles; cólera funesta que causó infinitos males á los aqueos",
+        "Cual la generación de las hojas, así la de los hombres.",
+        "Esparce el viento las hojas por el suelo, y la selva, reverdeciendo, produce otras al llegar la primavera: de igual suerte, una generación humana nace y otra perece.",
+        "Respeta á los dioses, Aquiles, y apiádate de mí, acordándote de tu padre"
+      ],
+      archivos: {"epub": "libros/homero-la-iliada.epub", "pdf": "libros/homero-la-iliada.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 57654 (dominio público), traducción de Luis Segalá y Estalella, Barcelona, Montaner y Simón, 1908", "url": "https://www.gutenberg.org/ebooks/57654"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-iliada"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["dante-la-divina-comedia", "ercilla-la-araucana", "cervantes-don-quijote"]
+    },
+    {
+      id: "dario-azul",
+      titulo: "Azul...",
+      autor: "Rubén Darío",
+      anio: "1888",
+      idioma: "es",
+      categoria: "poesia",
+      recomendado: false,
+      resumen: {"es": "Azul... reúne los cuentos y poemas en prosa y verso con que Rubén Darío, a los veintiún años, abrió el modernismo en lengua española. Entre los relatos están «El rey burgués», sobre un monarca que aloja a un poeta en su palacio para presumir de mecenas, «El velo de la reina Mab», «La canción del oro» y «El pájaro azul», la historia de un bohemio parisino con un pájaro azul en el cerebro. Siguen estampas de pintor («En busca de cuadros»), «La muerte de la emperatriz de la China» y los versos de «El año lírico», con sus sonetos y medallones. La edición incluye la carta-prólogo de Juan Valera.", "en": "Azul... gathers the tales and the prose and verse poems with which Rubén Darío, aged twenty-one, opened modernism in the Spanish language. Among the stories are «El rey burgués», about a king who lodges a poet in his palace to boast of being a patron, «El velo de la reina Mab», «La canción del oro» and «El pájaro azul», the tale of a Parisian bohemian with a blue bird in his brain. Then come painterly sketches («En busca de cuadros»), «La muerte de la emperatriz de la China» and the verses of «El año lírico», with its sonnets and medallions. The edition includes Juan Valera's prefatory letter."},
+      porque: {"es": "Para quien quiere conocer el punto de partida de la poesía moderna en español y disfrutar de una prosa musical, llena de color, que se lee a ratos. Los cuentos son breves y se pueden leer de uno en uno; denuncian el desprecio del mundo por el artista y el poder del dinero. Es un libro de juventud: conviene leerlo con la atención puesta en su belleza y su fantasía.", "en": "For anyone who wants to meet the starting point of modern Spanish poetry and enjoy a musical, colourful prose that can be read in short sittings. The tales are brief and can be read one at a time; they denounce the world's contempt for the artist and the power of money. It is a book of youth: best read with attention to its beauty and fantasy."},
+      imagen: {"src": "img/portadas/dario-azul.jpg", "credito": {"es": "Jean-Antoine Watteau, «Pierrot, llamado antes Gilles», c. 1718-1719", "en": "Jean-Antoine Watteau, «Pierrot, formerly called Gilles», c. 1718-1719"}, "url": "https://commons.wikimedia.org/wiki/File:Jean-Antoine_Watteau_-_Pierrot,_dit_autrefois_Gilles.jpg"},
+      citas: [
+        "¿Era un rey poeta? No, amigo mío: era el Rey Burgués.",
+        "París es teatro divertido y terrible.",
+        "tengo un pájaro azul en el cerebro",
+        "El pájaro azul era el pobre Garcín."
+      ],
+      archivos: {"epub": "libros/dario-azul.epub", "pdf": "libros/dario-azul.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 52894 (dominio público), edición de Mundo Latino, Madrid (Obras completas, vol. IV)", "url": "https://www.gutenberg.org/ebooks/52894"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/azul-0"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["dario-cantos-de-vida-y-esperanza", "pardo-bazan-la-sirena-negra", "cervantes-novelas-ejemplares"]
     }
   ],
 
@@ -5043,9 +5089,7 @@ window.FENIX = {
     { titulo: {"es": "Los hermanos Karamázov"}, autor: "Fiódor Dostoievski", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-hermanos-karamazov"} },
     { titulo: {"es": "Los miserables"}, autor: "Victor Hugo", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-miserables"} },
     { titulo: {"es": "La Odisea"}, autor: "Homero", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-odisea"} },
-    { titulo: {"es": "La Ilíada"}, autor: "Homero", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-iliada"} },
     { titulo: {"es": "Fábulas de Esopo"}, autor: "Esopo", delibris: null, estimada: {"valor": 6, "genero": "Literatura"} },
-    { titulo: {"es": "Azul..."}, autor: "Rubén Darío", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/azul-0"} },
     { titulo: {"es": "El paraíso perdido"}, autor: "John Milton", delibris: null, estimada: {"valor": 6, "genero": "Literatura"} },
     { titulo: {"es": "Lazarillo de Tormes"}, autor: "Anónimo", delibris: null, estimada: {"valor": 5, "genero": "Literatura"} },
     { titulo: {"es": "Jane Eyre"}, autor: "Charlotte Brontë", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jane-eyre"} },
