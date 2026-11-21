@@ -626,3 +626,67 @@ esto es lo propio del libro.
   equivalente exacto, nunca por un sinónimo más vago.
 - **Dios en minúscula o mayúscula.** «Dieu se donne» → «Dios se da»; «Il» referido a Dios → «Él»;
   «son Fils» → «su Hijo»; «lui» átono → «le», «lo».
+
+## La hija del capitán (Pushkin, *Капитанская дочка*, 1836, desde el ruso)
+
+Original: texto de la edición soviética de 1960 (Собрание сочинений в 10 томах, т. 5) en
+Wikisource ruso, partido en `fenix_fuentes/hija-del-capitan/original/NN_cX.txt`; la salida va en
+`editorial/pushkin-la-hija-del-capitan/NN_cX.md` (mismo nombre base). Novela histórica contada
+como memorias de un viejo noble: prosa sobria, clara y rápida, frases cortas, poco adjetivo.
+Español culto actual, sin arcaísmos ni cultismos (error 15), que se lea de corrido.
+
+- **Notas del original**: las de la edición de 1960 (las «прим. редактора» y las traducciones
+  del francés) no se traducen; se borran sus llamadas `[^n]` y el bloque `---- NOTAS ----`.
+  Las palabras en francés o alemán del texto («pour être outchitel», «Schelm») quedan en el
+  idioma original, en cursiva, con nota `[^edN]: N. del E.: en francés, «...».` (numeración
+  `ed1`, `ed2`... por archivo). Ninguna otra nota: las de contexto histórico las pone el revisor.
+- **Encabezados**: `## I. Sargento de la Guardia`. Títulos fijos: I. Sargento de la Guardia;
+  II. El guía; III. La fortaleza; IV. El duelo; V. Amor; VI. La rebelión de Pugachov; VII. El
+  asalto; VIII. El huésped no invitado; IX. La separación; X. El sitio de la ciudad; XI. El
+  poblado rebelde; XII. La huérfana; XIII. El arresto; XIV. El juicio. El apéndice:
+  `## Capítulo omitido`. El epígrafe general del libro («Береги честь смолоду», *Пословица*) va al
+  comienzo de `01_cI.md`, antes del capítulo I: «Cuida la honra desde joven.» / *Proverbio.*
+- **Epígrafes**: cada capítulo trae uno; va en bloque `> ` tras el encabezado, verso por línea
+  (una línea `>` sola entre estrofas o réplicas), y la firma que pone Pushkin como última línea
+  del bloque, en cursiva: `> *Kniazhnín.*`, `> *Canción popular.*`, `> *Proverbio.*`. Es parte de
+  la obra: no lleva nota. Los versos (epígrafes, la canción de los sirgadores del cap. VII, la
+  canción del cap. XI, los versos de Griniov en el IV) se traducen fieles al sentido y con
+  ritmo, sin forzar rima.
+- **Diálogo**: las rayas del ruso pasan a comillas «...», con las reglas de *El jardín secreto*:
+  verbo de decir después, coma tras el cierre, también tras ? o !; el punto final fuera de la
+  comilla. Las cartas citadas, en bloque `> ` sin comillas.
+- **Tratamiento**: «ты» → tú; «вы» a una persona → usted; «вы» plural → ustedes. Pugachov y los
+  cosacos tutean a todos. Savélich trata a Piotr como lo haga el original en cada réplica.
+  Fórmulas: «ваше благородие» → «Su Señoría»; «ваше превосходительство» → «Su Excelencia»;
+  «государь», «ваше величество» → «Su Majestad», «el soberano»; «государыня» → «la emperatriz» o
+  «la soberana»; «батюшка» de Savélich a Piotr → «señorito»; «батюшка» del pueblo a Pugachov →
+  «padrecito»; «матушка» (a una señora) → «señora», a la emperatriz «nuestra madrecita».
+- **Nombres** (transcripción española, con tilde solo donde marca el acento): Piotr Andréievich
+  Griniov (Petrusha, Piotr Andréich); Andréi Petróvich Griniov; Avdotia Vasílievna; Arjip
+  Savélich; monsieur Beaupré; Iván Ivánovich Zurin; Alekséi Ivánovich Shvabrin; Iván Kuzmich
+  Mirónov (el capitán Mirónov); Vasilisa Yegórovna; María Ivánovna, Masha (Mironova); Palashka;
+  Iván Ignátich; Yemelián Pugachov; Akulina Pámfilovna; el padre Guerásim; Maksímych; Andréi
+  Kárlovich R.; Beloboródov; Jlopusha; Yulái; Prascovia; Anna Vlásievna; Marya Ivánovna Ivánova
+  se escribe siempre «María Ivánovna». Buláñin (Буланин) en el capítulo omitido. Catalina II;
+  Tsárskoie Seló; Oremburgo; Simbirsk; Kazán; el Yaik (río y cosacos del Yaik); el Volga;
+  la fortaleza de Belogorsk (Белогорская крепость); Nizhneózernaia; Tatíscheva; los baskires;
+  los kirguises; los calmucos.
+- **Glosario**: дядька (Savélich) → ayo; недоросль → muchacho sin servir; вожатый → guía;
+  кибитка → kibitka; тулуп / заячий тулупчик → zamarra / zamarra de piel de liebre; армяк →
+  caftán de campesino; верста → versta; рубль, копейка, полтина → rublo, kopek, medio rublo;
+  урядник → sargento de cosacos; комендант → comandante; крепость → fortaleza; бунт → rebelión;
+  самозванец → impostor; злодей (Pugachov) → el malhechor; Пугачёвщина → la rebelión de Pugachov;
+  кабак / постоялый двор → taberna / posada; умет → umet (posada de la estepa; la primera vez
+  «umet, como llaman allá a las posadas», solo si el original lo explica); буран → ventisca.
+- **Habla popular** (Savélich, Pugachov, los cosacos, Vasilisa Yegórovna): llana, con dichos y
+  refranes traducidos como refranes («как аукнется, так и откликнется» → algo que suene a
+  refrán castellano de igual sentido, sin cambiar la imagen si se entiende), sin formas
+  fonéticas ni regionalismos de un país. La conversación en clave del cap. II entre Pugachov y
+  el posadero se traduce literal, para que quede igual de enigmática.
+- **Dios y lo religioso**: mayúsculas con la regla general («Dios», «Él», «tu misericordia»);
+  «Господи!» → «¡Señor!» o «¡Dios mío!»; los iconos, la Pascua, el pope (священник → sacerdote;
+  поп → pope solo si el original lo usa con ese matiz).
+- **Decisiones de los primeros tramos** (rigen en los siguientes): «Государь» como encabezamiento
+  de carta a un noble → «Señor»; «матушка» de Iván Kuzmich a su mujer → «mujer»; medidas rusas
+  sin convertir (vershok, versta, sazhén); palabras tártaras o calmucas en cursiva, tal cual
+  (*Yakshí*); «генерал-майор» → «general de brigada».

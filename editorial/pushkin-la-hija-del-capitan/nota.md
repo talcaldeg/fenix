@@ -1,0 +1,9 @@
+Aleksandr Pushkin publicó *La hija del capitán* en 1836, en la revista *El Contemporáneo*, que él mismo dirigía. Es su única novela histórica terminada y está contada como las memorias de un viejo noble, Piotr Griniov, que recuerda su juventud durante la rebelión de Pugachov (1773-1775). Esta es una traducción nueva de Proyecto Fénix, hecha directamente del ruso sobre la edición soviética de las obras de Pushkin en diez tomos (*Собрание сочинений в 10 томах*, Moscú, Editorial Estatal de Literatura Artística, 1959-1962), tomo 5, que recoge la novela en sus catorce capítulos.
+
+Se tradujo cada oración del original, sin resumir ni añadir nada. Los epígrafes que Pushkin puso al frente de cada capítulo, con su proverbio general al comienzo del libro, se conservan, y los versos se tradujeron fieles al sentido y con ritmo, sin forzar la rima. Los nombres se transcriben a la ortografía española, y los diálogos van entre comillas. Pugachov, los cosacos y la gente del pueblo tutean a todos, y el trato de «usted» o «tú» entre los demás sigue el que marca el ruso en cada réplica. Se incluye al final el capítulo omitido, que Pushkin dejó en borrador y no publicó con la novela.
+
+Las notas que parten con «N. del E.:» son del editor: dan el contexto histórico que el lector de hoy ya no tiene a mano y traducen las pocas frases en francés y alemán que Pushkin deja en el texto. Las notas de la edición soviética no se reproducen.
+
+La traducción se preparó con ayuda de inteligencia artificial y la revisó el editor contra el original ruso. Si encuentras un error, puedes avisarlo desde el sitio de Proyecto Fénix.
+
+El texto de Aleksandr Pushkin es de dominio público. La imagen de la portada es el cuadro *El juicio de Pugachov*, de Vasili Perov (Museo Ruso). Traducción de Proyecto Fénix, 2026, con licencia CC BY-NC-SA 4.0: se puede copiar y difundir gratis, con crédito y sin fines de lucro.

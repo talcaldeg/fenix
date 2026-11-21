@@ -2995,6 +2995,30 @@ window.FENIX = {
       parecidos: ["balzac-eugenia-grandet", "irving-cuentos-de-la-alhambra", "poe-metzengerstein"]
     },
     {
+      id: "pushkin-la-hija-del-capitan",
+      titulo: "La hija del capitán",
+      autor: "Aleksandr Pushkin",
+      anio: "1836",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Piotr Griniov, hijo de un noble de provincia, es enviado de joven a servir en la fortaleza de Belogorsk, en el límite de la estepa. En el camino lo salva de una ventisca un guía desconocido; en la fortaleza se enamora de María, la hija del capitán, y se enfrenta a un oficial rival. Entonces estalla la rebelión de Yemelián Pugachov, el cosaco que dice ser el zar, y Piotr tiene que elegir entre su juramento y las personas que ama. Pushkin la cuenta como las memorias de un viejo noble, con una prosa sobria y rápida. Esta edición incluye al final el capítulo que dejó en borrador.", "en": "Piotr Griniov, the son of a provincial nobleman, is sent as a young man to serve at the fortress of Belogorsk, on the edge of the steppe. On the way a stranger who acts as his guide saves him from a blizzard; at the fortress he falls in love with Masha, the captain's daughter, and clashes with a rival officer. Then the rebellion of Yemelyan Pugachov breaks out, the Cossack who claims to be the tsar, and Piotr must choose between his oath and the people he loves. Pushkin tells it as the memoirs of an old nobleman, in sober, swift prose. This edition includes, at the end, the chapter he left in draft."},
+      porque: {"es": "Para quien quiere una novela de aventuras que además deje pensar: aquí la honra no es una pose, sino lo que se juega Piotr cada vez que tiene que elegir entre el miedo y su palabra. Se lee de un tirón, con humor y ternura, y muestra a un caudillo temido que no olvida un favor ni deja de ser cruel. Si buscas una puerta de entrada a la literatura rusa, esta es de las más amables, y las notas del editor te sitúan en la Rusia de Catalina II.", "en": "For anyone who wants an adventure novel that also gives food for thought: here honor is no pose, but what Piotr stakes every time he must choose between fear and his word. It reads in one sitting, with humor and tenderness, and it shows a feared leader who neither forgets a favor nor stops being cruel. If you are looking for a way into Russian literature, this is one of the friendliest, and the editor's notes place you in the Russia of Catherine II."},
+      imagen: {"src": "img/portadas/pushkin-la-hija-del-capitan.jpg", "credito": {"es": "Vasili Perov, «El juicio de Pugachov», 1875, Museo Histórico Estatal (Moscú)", "en": "Vasily Perov, «Pugachev's Judgement», 1875, State Historical Museum (Moscow)"}, "url": "https://commons.wikimedia.org/wiki/File:%D0%9F%D0%B5%D1%80%D0%BE%D0%B2_%D0%A1%D1%83%D0%B4_%D0%9F%D1%83%D0%B3%D0%B0%D1%87%D0%B5%D0%B2%D0%B0_(%D0%93%D0%98%D0%9C).jpg"},
+      citas: [
+        "Cuida la honra desde joven.",
+        "Para mí no habrá perdón. Seguiré como empecé.",
+        "Pero vivir del asesinato y del bandidaje equivale, para mí, a picotear carroña.",
+        "Vine a pedir clemencia, no justicia.",
+        "Dios nos libre de ver una rebelión rusa, insensata y despiadada."
+      ],
+      archivos: {"epub": "libros/pushkin-la-hija-del-capitan.epub", "pdf": "libros/pushkin-la-hija-del-capitan.pdf"},
+      fuente: {"texto": "Traducción de Proyecto Fénix desde Капитанская дочка (1836), según la edición soviética de las obras de Pushkin en diez tomos (Moscú, 1959-1962), tomo 5, en ru.wikisource.org (dominio público)", "url": "https://ru.wikisource.org/wiki/%D0%9A%D0%B0%D0%BF%D0%B8%D1%82%D0%B0%D0%BD%D1%81%D0%BA%D0%B0%D1%8F_%D0%B4%D0%BE%D1%87%D0%BA%D0%B0_(%D0%9F%D1%83%D1%88%D0%BA%D0%B8%D0%BD)"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-hija-del-capitan"},
+      editorial: {"es": "Traducción nueva de Proyecto Fénix, hecha directamente del ruso sobre la edición soviética de las obras de Pushkin (tomo 5, Moscú, 1959-1962), con sus catorce capítulos y el capítulo omitido que Pushkin dejó en borrador; preparada con ayuda de inteligencia artificial y revisada por el editor, con nota de la edición, notas del editor y el cuadro «El juicio de Pugachov», de Vasili Perov, en la portada. Edición al cuidado de Tomás Alcalde.", "en": "A new Proyecto Fénix translation, made directly from the Russian of the Soviet edition of Pushkin's works (volume 5, Moscow, 1959-1962), with its fourteen chapters and the omitted chapter that Pushkin left in draft; prepared with the help of artificial intelligence and revised by the editor, with an edition note, editor's notes and Vasily Perov's painting «Pugachev's Judgement» on the cover. Edited by Tomás Alcalde."},
+      parecidos: ["pushkin-la-dama-de-pique", "stevenson-isla-del-tesoro", "hugo-los-miserables"]
+    },
+    {
       id: "duque-de-rivas-don-alvaro",
       titulo: "Don Álvaro o La fuerza del sino",
       autor: "Duque de Rivas (Ángel de Saavedra)",
