@@ -128,6 +128,11 @@ def revisar(raiz, capturas=None):
                         return !!f && f.querySelectorAll('.pie-tit').length >= 2 && !!f.querySelector('.pie-logo img')
                             && !!f.querySelector('.pie-base') && f.querySelectorAll('.pie-col a').length >= 6; }"""):
                     fallas.append(f"{donde}: el pie no tiene sus columnas (marca, Biblioteca, Proyecto) ni la franja de base")
+                # Ningún enlace ni botón del pie se ve subrayado en reposo (20-nov-2026: «Instalar como app» y Verum lo estaban).
+                sub = pg.evaluate("""() => [...document.querySelectorAll('footer a, footer button')]
+                        .filter(e => getComputedStyle(e).textDecorationLine.includes('underline')).map(e => e.textContent.trim())""")
+                if sub:
+                    fallas.append(f"{donde}: enlaces subrayados en el pie: {', '.join(sub)}")
                 # Madera (9-nov-2026, «la madera está medio falsa»): la cabecera y el pie pintan la tabla de nogal de
                 # herramientas/madera.py, y la imagen carga también desde las páginas de libro (su ruta lleva la base).
                 mad = pg.evaluate("""() => { const cargo = performance.getEntriesByType('resource')

@@ -190,7 +190,8 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   footer .pie-red svg{flex:none}
   footer .pie-tit{margin:4px 0 12px; font:600 12px/1.2 system-ui,sans-serif; letter-spacing:.14em; text-transform:uppercase; opacity:.7}
   footer .pie-col ul{list-style:none; margin:0; padding:0; display:grid; gap:7px}
-  footer .pie-col a{text-decoration:none} footer .pie-col a:hover{text-decoration:underline}
+  /* Ningún enlace del pie va subrayado en reposo (el botón «Instalar como app» y Verum Data lo estaban); solo al pasar. */
+  footer a, footer button.enlace{text-decoration:none} footer a:hover, footer button.enlace:hover{text-decoration:underline}
   footer .pie-base{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 28px; border-top:1px solid rgba(233,194,106,.22); padding-top:18px; font-size:13px}
   footer .pie-base p{margin:0; opacity:.85} footer .pie-base p:first-child{max-width:68ch}
   @media (max-width:720px){ footer .pie-cols{grid-template-columns:1fr 1fr; gap:26px 24px} footer .pie-marca{grid-column:1 / -1} }
