@@ -3518,6 +3518,29 @@ window.FENIX = {
       parecidos: ["manzoni-los-novios", "dickens-el-cantico-de-navidad", "wallace-ben-hur"]
     },
     {
+      id: "verne-la-isla-misteriosa",
+      titulo: "La isla misteriosa",
+      autor: "Julio Verne (trad. Nemesio Fernández Cuesta)",
+      anio: "1874",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "En 1865, durante la guerra de Secesión, cinco prisioneros nordistas huyen de Richmond en un globo y una tormenta los arroja en una isla desierta del Pacífico. Guiados por el ingeniero Ciro Smith, sin más recursos que sus manos y su ingenio, fabrican fuego, ladrillos y hierro hasta levantar una colonia en la roca. Pero la isla esconde sucesos que nadie explica, y los náufragos sospechan que no están solos. Esta edición es la traducción de Nemesio Fernández Cuesta, publicada por Sáenz de Jubera en Madrid en 1930."},
+      porque: {"es":"Para quien disfruta viendo cómo se levanta un mundo desde cero, donde cada herramienta cuesta capítulos de ingenio. Conviene leerla sin prisa, por partes, y se pueden saltar sin culpa las explicaciones técnicas más largas si cansan, porque el misterio y el compañerismo sostienen el relato. Sirve a lectores jóvenes y adultos que quieran una aventura de supervivencia con corazón.","en":"For anyone who enjoys watching a world being built from nothing, where every tool costs whole chapters of ingenuity. It is best read unhurried, one part at a time, and the longer technical explanations can be skimmed without guilt when they tire, because the mystery and the camaraderie carry the story. It suits young readers and adults who want a survival adventure with heart."},
+      imagen: {"src": "img/portadas/verne-la-isla-misteriosa.jpg", "credito": {"es": "Jules Férat, el globo de los náufragos llega a la isla, ilustración de «La isla misteriosa», 1874", "en": "Jules Férat, the castaways’ balloon reaches the island, illustration for «The Mysterious Island», 1874"}, "url": "https://commons.wikimedia.org/wiki/File%3A'The_Mysterious_Island'_by_Jules_F%C3%A9rat_004.jpg"},
+      citas: [
+        "Que no nos consideremos náufragos, sino colonos que hemos venido aquí a colonizar.",
+        "Amigos, éste es mineral de hierro, éste es de pirita, éste de arcilla, esto es cal, esto es carbón. He aquí lo que nos da la naturaleza, y ésta es la parte que ha tomado en el trabajo común. ¡Mañana haremos el nuestro!",
+        "Tanto valía encontrarse con Ciro en una isla desierta como sin él en la misma industriosa ciudad de la Unión. Con él no podía faltar nada; con él no había que desesperar.",
+        "Los arcos y las flechas han valido durante siglos para ensangrentar el mundo. La pólvora es invención de ayer y la guerra es tan vieja como la raza humana, desgraciadamente."
+      ],
+      archivos: {},
+      externos: [{"formato": "web", "texto": "OneMoreLibrary", "url": "https://onemorelibrary.com/index.php/en/languages/spanish/book/literatura-francesa-134/la-isla-misteriosa-1253"}, {"formato": "epub", "texto": "OneMoreLibrary", "url": "https://onemorelibrary.com/index.php?option=com_djclassifieds&format=raw&view=download&task=download&fid=28286"}, {"formato": "pdf", "texto": "OneMoreLibrary", "url": "https://onemorelibrary.com/index.php?option=com_djclassifieds&format=raw&view=download&task=download&fid=28285"}],
+      fuente: {"texto": "Edición de Madrid, 1930 (Sáenz de Jubera), traducción de Nemesio Fernández Cuesta, en OneMoreLibrary (dominio público)", "url": "https://onemorelibrary.com/index.php/en/languages/spanish/book/literatura-francesa-134/la-isla-misteriosa-1253"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-isla-misteriosa"},
+      parecidos: ["stevenson-isla-del-tesoro", "swift-los-viajes-de-gulliver", "verne-la-vuelta-al-mundo-en-80-dias"]
+    },
+    {
       id: "perez-galdos-juan-martin-el-empecinado",
       titulo: "Juan Martín el Empecinado",
       autor: "Benito Pérez Galdós",
