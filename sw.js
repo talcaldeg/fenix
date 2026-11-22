@@ -7,10 +7,10 @@
 // - Lo de otros sitios (Open Library, GoatCounter, Delibris) pasa directo.
 // VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html, datos.js o img/: el
 // navegador ve un sw.js distinto, instala el nuevo y este borra las cachés viejas.
-const VERSION = "fenix-cfa33b228c";
+const VERSION = "fenix-526345209c";
 // El lector (lector/) entra entero al instalarse: tiene que abrir sin señal aunque nunca se haya visitado.
 const BASICO = ["./", "datos.js", "manifest.webmanifest", "img/favicon.svg", "img/icono-192.png",
-  "lector/", "lector/lector.js", "lector/vendor/fflate.js", "lector/catalogo.json",
+  "lector/", "lector/lector.js", "lector/manifest.webmanifest", "lector/vendor/fflate.js", "lector/catalogo.json",
   "lector/fuentes/eb-garamond-latin-wght-normal.woff2", "lector/fuentes/eb-garamond-latin-wght-italic.woff2",
   "lector/fuentes/eb-garamond-latin-ext-wght-normal.woff2", "lector/fuentes/eb-garamond-latin-ext-wght-italic.woff2"];
 
@@ -58,6 +58,14 @@ async function guardadoPrimero(req, cache){
   return g || red;
 }
 
+// Lo guardado al instalar esta VERSION, sin refresco por detrás: así el lector nunca mezcla un index.html
+// nuevo con un lector.js viejo. Lo que falte (un archivo agregado después) se pide a la red y se guarda.
+async function soloGuardado(req, cache){
+  const g = await cache.match(req, { ignoreSearch: true });
+  if (g) return g;
+  return redPrimero(req, cache);
+}
+
 self.addEventListener("fetch", e => {
   const req = e.request;
   if (req.method !== "GET" || req.headers.has("range")) return;
@@ -69,5 +77,8 @@ self.addEventListener("fetch", e => {
   // El índice de Delibris cambia pocas veces: como las imágenes, lo guardado al tiro (en el catálogo
   // mundial cada trozo esperaba la revalidación con GitHub, ~0,4 s).
   const primeroGuardado = ruta.startsWith("img/") || ruta.startsWith("delibris/");
-  e.respondWith(caches.open(VERSION).then(c => primeroGuardado ? guardadoPrimero(req, c) : redPrimero(req, c)));
+  // El lector (menos su catálogo) abre siempre con lo guardado, sin esperar a la red: con una rayita de
+  // señal, redPrimero demoraba hasta 4 s por archivo. Se renueva entero cuando cambia la VERSION.
+  const lector = ruta.startsWith("lector/") && ruta !== "lector/catalogo.json";
+  e.respondWith(caches.open(VERSION).then(c => lector ? soloGuardado(req, c) : primeroGuardado ? guardadoPrimero(req, c) : redPrimero(req, c)));
 });

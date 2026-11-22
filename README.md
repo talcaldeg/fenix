@@ -208,6 +208,16 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   letra van en `lector/vendor/` y `lector/fuentes/`, y `sw.js` guarda todo `lector/` al instalarse.
   Los libros, la posición, los marcadores y las notas viven en IndexedDB del dispositivo, anclados
   por texto (no por CFI), así que al llegar una versión corregida siguen en su lugar.
+  Se lee por páginas, como ReadEra (21-nov-2026): cada capítulo va en columnas del ancho de la pantalla
+  (dos, como libro abierto, en pantalla ancha y apaisada); tocar el borde derecho o izquierdo, deslizar,
+  las flechas o la rueda pasan la página, y el centro muestra u oculta la barra y los controles (capítulo,
+  deslizador, página y % del libro). Sin scroll ni botones fijos; al pie, «12 de 30 · quedan 18». La
+  posición es el primer carácter de la página (su texto y lo que lo antecede): al cambiar la letra o girar
+  el teléfono se repagina y se vuelve a la página donde quedó ese texto. En el celular, pantalla completa
+  (se apaga en Letra y colores) y la pantalla no se apaga mientras se pasan páginas (diez minutos sin
+  tocar, sí). `lector/manifest.webmanifest` lo deja instalable aparte como «Lector Fénix», a pantalla
+  completa; si el navegador no promete guardar los libros (`storage.persist`), la biblioteca sugiere
+  instalarlo. `sw.js` sirve `lector/` (menos `catalogo.json`) siempre desde lo guardado, sin esperar la red.
   `gen_estaticos.js` arma `lector/catalogo.json` con la huella SHA-256 de cada EPUB: si cambia, el
   lector baja la versión nueva solo, sin duplicar el libro; un EPUB agregado a mano con el mismo
   `dc:identifier` (o título y autor) también reemplaza al anterior. Las ediciones bilingües
@@ -217,7 +227,9 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   correcciones`, que ubica el texto en el EPUB y en `editorial/<id>/`. Nube opcional en Google
   Drive (carpeta «Fénix - Lector», permiso `drive.file`): se activa con `GOOGLE_CLIENTE` al comienzo
   de `lector/lector.js` y se lee con `python herramientas/lector.py nube`. `revisar_diseno.py`
-  comprueba que un libro agregado abre sin conexión.
+  comprueba que un libro agregado abre sin conexión y en frío, y prueba las páginas en 390x844 y 360x740
+  con pantalla táctil (toques, deslizar, controles, letra grande, teléfono girado, cambio de capítulo).
+  Próximo paso aprobado: APK de Android por descarga directa con el mismo lector (sin Play Store).
 - Leídos y favoritos de cada visitante quedan en su navegador (`localStorage`).
   No hay puntuación de estrellas, ni de Fénix ni del visitante: solo la valoración moral de Delibris.
 - Cada ficha lleva al menos tres `citas` reales y verificadas: las más célebres, las más

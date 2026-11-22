@@ -9,7 +9,7 @@
 <title>Lector Fénix</title>
 <meta name="description" content="Lee los EPUB de Proyecto Fénix y los tuyos, también sin conexión, con marcadores, notas y correcciones.">
 <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236b1d24'/%3E%3Cg fill='%23e8b04a'%3E%3Cpath d='M31 56C24 52 15 51 7 53L6.5 46.5 4.5 45.5 6 38.5 3.5 37 5 29 2.5 27.5 2.5 7.5C8 17 19 26 31 36.5Z'/%3E%3Cpath d='M33 56C40 52 49 51 57 53L57.5 46.5 59.5 45.5 58 38.5 60.5 37 59 29 61.5 27.5 61.5 7.5C56 17 45 26 33 36.5Z'/%3E%3Cpath d='M32 38C29.3 33 28.9 27.6 29.8 22.8C30.7 18.4 33.4 15.6 37.2 16.1L42.6 18 37.6 20.1C36 23 35.7 28 34.8 32.8Z'/%3E%3Cpath d='M31.4 19.4C28 17 26.6 13.2 27.7 9.2C28.8 12.4 30.6 14 33 15.2Z'/%3E%3Cpath d='M33.6 16.4C32.4 12.8 33.2 9.4 35.4 6.8C35.2 10.2 36.1 12.4 37.5 14.4Z'/%3E%3C/g%3E%3C/svg%3E">
-<link rel="manifest" href="../manifest.webmanifest">
+<link rel="manifest" href="manifest.webmanifest">
 <style>
 /* La letra va dentro del sitio (lector/fuentes/), no en Google Fonts: el lector tiene que abrir sin señal. */
 @font-face{font-family:"EB Garamond";font-style:normal;font-weight:400 800;font-display:swap;src:url("fuentes/eb-garamond-latin-wght-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
@@ -88,14 +88,27 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 .fila .a{font-size:14px; color:var(--muted)}
 
 /* ---------- lectura ---------- */
-#vistaLectura{--ancho:36em; --tam:20px; --interlineado:1.6; --letra-lectura:var(--letra)}
-#texto{max-width:var(--ancho); margin:0 auto; padding:28px 18px 40px; font-size:var(--tam); line-height:var(--interlineado); font-family:var(--letra-lectura);
-  overflow-wrap:break-word}
-#vistaLectura[data-bilingue="lado"] #texto{max-width:calc(var(--ancho) * 1.9)}
+/* Pantalla entera, sin scroll: #marco recorta una página y #texto, en columnas de su ancho, se corre
+   de a una (lector.js, maquetar). La barra y los controles salen con un toque al centro. */
+#vistaLectura{--ancho:36em; --tam:20px; --interlineado:1.6; --letra-lectura:var(--letra); --alto-pag:70vh;
+  position:fixed; inset:0; overflow:hidden; background:var(--bg); z-index:10}
+#vistaLectura header.barra{position:absolute; left:0; right:0; top:0; height:auto; min-height:var(--barra); padding-top:env(safe-area-inset-top);
+  transform:translateY(-105%); transition:transform .2s ease; box-shadow:0 2px 12px rgba(0,0,0,.18)}
+#vistaLectura[data-controles] header.barra{transform:none}
+#hoja{position:absolute; left:0; right:0; top:max(26px, calc(env(safe-area-inset-top) + 14px)); bottom:max(36px, calc(env(safe-area-inset-bottom) + 28px));
+  touch-action:pan-y; overflow:hidden}
+#marco{height:100%; margin:0 auto; overflow:hidden}
+#texto{height:100%; margin:0; padding:0; font-size:var(--tam); line-height:var(--interlineado); font-family:var(--letra-lectura);
+  overflow-wrap:break-word; column-fill:auto; transition:transform .22s ease-out}
+#vistaLectura #texto{margin:0 !important; padding:0 !important; border:0 !important; box-sizing:border-box}
+#texto.sin-animar{transition:none}
+#texto .lx-fin{display:block; height:0}
+#texto :is(img,svg,figure,table,pre,h1,h2,h3,h4){break-inside:avoid}
+#texto :is(h1,h2,h3,h4,h5,h6){break-after:avoid}
 /* El CSS del libro llega acotado a #texto; estas reglas van después y mandan en color, fondo y medidas. */
 #texto *{color:inherit !important; background-color:transparent !important; max-width:100%}
 #texto a{color:var(--vino) !important}
-#texto img,#texto svg{height:auto; max-height:85vh; object-fit:contain}
+#texto img,#texto svg{height:auto; max-height:var(--alto-pag); object-fit:contain}
 #texto table{display:block; overflow-x:auto}
 #texto pre{white-space:pre-wrap}
 #texto p,#texto li,#texto blockquote{line-height:var(--interlineado) !important}
@@ -110,7 +123,7 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 /* Edición bilingüe (Fénix: <p class="orig" lang="fr"> después de cada párrafo traducido). */
 .lx-idiomas{display:none}
 #vistaLectura[data-bilingue="lado"] .lx-idiomas{display:grid; grid-template-columns:1fr 1fr; gap:2.2em; font-size:14px; letter-spacing:.08em; text-transform:uppercase;
-  color:var(--muted); border-bottom:1px solid var(--line); padding-bottom:4px; margin-bottom:10px; position:sticky; top:var(--barra); background:var(--bg); z-index:2}
+  color:var(--muted); border-bottom:1px solid var(--line); padding-bottom:4px; margin-bottom:10px}
 #vistaLectura[data-bilingue="lado"] .lx-par{display:grid; grid-template-columns:1fr 1fr; gap:2.2em; align-items:start}
 #vistaLectura[data-bilingue="lado"] .lx-par > *{margin-top:0 !important}
 #vistaLectura[data-bilingue="lado"] .lx-par > .orig{color:var(--muted) !important; font-size:.96em !important; border:0 !important; padding:0 !important; margin:0 !important; text-indent:1.4em !important}
@@ -123,11 +136,16 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 #vistaLectura[data-bilingue="orig"] .lx-par > .lx-trad{display:none}
 #vistaLectura[data-bilingue="orig"] .lx-par > .orig{color:inherit !important}
 
-.navcap{display:flex; justify-content:space-between; gap:10px; max-width:var(--ancho); margin:0 auto; padding:10px 18px 120px}
-#vistaLectura[data-bilingue="lado"] .navcap{max-width:calc(var(--ancho) * 1.9)}
-.progreso{position:fixed; left:0; right:0; bottom:0; z-index:15; height:4px; background:var(--chip)}
-.progreso i{display:block; height:100%; width:0; background:var(--oro); transition:width .3s}
-.pie-lectura{position:fixed; right:10px; bottom:10px; z-index:15; font-size:13px; color:var(--muted); background:var(--bg); padding:2px 8px; border-radius:999px; border:1px solid var(--line)}
+.pie-lectura{position:absolute; left:0; right:0; bottom:max(8px, env(safe-area-inset-bottom)); text-align:center; font-size:13px; color:var(--muted);
+  pointer-events:none; font-variant-numeric:tabular-nums}
+.controles-pie{position:absolute; left:0; right:0; bottom:0; z-index:20; background:var(--bg); border-top:1px solid var(--line); box-shadow:0 -2px 12px rgba(0,0,0,.18);
+  padding:10px max(16px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  transform:translateY(105%); transition:transform .2s ease}
+#vistaLectura[data-controles] .controles-pie{transform:none}
+.cap-actual{font-size:15px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:center}
+#deslizador{display:block; width:100%; margin:8px 0; accent-color:var(--oro)}
+.fila-ctrl{display:flex; align-items:center; justify-content:space-between; gap:8px}
+#paginaTxt{font-size:15px; color:var(--muted); text-align:center; font-variant-numeric:tabular-nums}
 
 /* ---------- paneles, diálogos, avisos ---------- */
 dialog{border:1px solid var(--line); border-radius:16px; background:var(--card); color:var(--ink); padding:0; width:min(560px, calc(100vw - 24px)); max-height:min(86vh, 760px)}
@@ -175,16 +193,14 @@ label.campo > span{display:block; font-size:15px; color:var(--muted); margin-bot
   .estante{grid-template-columns:repeat(auto-fill, minmax(110px, 1fr)); gap:14px}
   .catalogo{grid-template-columns:1fr}
   .marca span{display:none}
-  #texto{padding:20px 16px 32px}
 }
 @media (max-width:760px){
   /* Lado a lado no cabe en el celular: pasa a intercalado sin cambiar el ajuste guardado. */
   #vistaLectura[data-bilingue="lado"] .lx-idiomas{display:none}
   #vistaLectura[data-bilingue="lado"] .lx-par{display:block}
   #vistaLectura[data-bilingue="lado"] .lx-par > .orig{font-size:.9em; text-indent:0 !important; margin:.25em 0 .8em !important; padding-left:.8em; border-left:2px solid var(--line)}
-  #vistaLectura[data-bilingue="lado"] #texto{max-width:var(--ancho)}
 }
-@media print{header.barra,.navcap,.progreso,.pie-lectura{display:none}}
+@media print{header.barra,.controles-pie,.pie-lectura{display:none}}
 h2{break-after:avoid; page-break-after:avoid}
 </style>
 </head>
@@ -202,6 +218,7 @@ h2{break-after:avoid; page-break-after:avoid}
   </header>
   <main class="biblio">
     <p class="aviso" id="avisoRed" hidden></p>
+    <p class="aviso" id="avisoGuardar" hidden><b>Instala el lector para que el teléfono no borre tus libros.</b> Toca «Instalar» o, en el menú del navegador, «Agregar a la pantalla de inicio». <button class="btn" type="button" id="btnInstalar" hidden>Instalar</button> <button class="btn" type="button" id="btnEntendido">Entendido</button></p>
     <div class="pestanas" role="tablist">
       <button class="btn" type="button" role="tab" id="tabMios" aria-selected="true">Mis libros</button>
       <button class="btn" type="button" role="tab" id="tabFenix" aria-selected="false">Catálogo Fénix</button>
@@ -228,13 +245,18 @@ h2{break-after:avoid; page-break-after:avoid}
     <button class="icono" id="btnNotas" type="button" title="Marcadores y notas" aria-label="Marcadores y notas"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></button>
     <button class="icono" id="btnAjustes" type="button" title="Letra y colores" aria-label="Letra y colores"><svg viewBox="0 0 24 24"><path d="M4 19l5-14 5 14M6 14h6M15 19l3.5-9 3.5 9M16.2 16h4.6"/></svg></button>
   </header>
-  <div id="texto" lang="es"></div>
-  <nav class="navcap" aria-label="Capítulos">
-    <button class="btn" type="button" id="capAnterior">← Anterior</button>
-    <button class="btn prim" type="button" id="capSiguiente">Siguiente →</button>
-  </nav>
-  <div class="progreso" aria-hidden="true"><i id="barraProgreso"></i></div>
-  <div class="pie-lectura" id="pieLectura"></div>
+  <!-- Páginas como en un libro: #texto en columnas del ancho de #marco, y se corre de a una página. -->
+  <div id="hoja"><div id="marco"><div id="texto" lang="es"></div></div></div>
+  <div class="pie-lectura" id="pieLectura" aria-live="polite"></div>
+  <div class="controles-pie" id="controlesPie">
+    <div class="cap-actual" id="capActual"></div>
+    <input type="range" id="deslizador" min="1" max="1" value="1" aria-label="Página del capítulo">
+    <div class="fila-ctrl">
+      <button class="btn" type="button" id="capAnterior">‹ Capítulo</button>
+      <span id="paginaTxt"></span>
+      <button class="btn" type="button" id="capSiguiente">Capítulo ›</button>
+    </div>
+  </div>
 </div>
 
 <div id="seleccion" hidden role="toolbar" aria-label="Texto seleccionado">

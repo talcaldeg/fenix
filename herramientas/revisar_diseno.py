@@ -11,7 +11,11 @@ Revisa, en ventanas de escritorio y de celular:
   - cada enlace del menú lleva al principio de su vista, también si ya se está en ella más abajo;
   - una sola letra: todo texto en EB Garamond (var(--letra)), salvo el código; ni el CSS fuente la mezcla;
   - la barra del sistema del celular (theme-color) es del color de la cabecera (--cabecera, la madera), en claro y en oscuro;
-  - el lector (lector/): sin errores ni scroll horizontal, y un libro agregado se abre sin conexión.
+  - el lector (lector/): sin errores ni scroll horizontal, y un libro agregado se abre sin conexión, también
+    en frío (sin la caché del navegador, solo con lo que guardó el lector);
+  - el lector por páginas, en 390x844 y 360x740 con pantalla táctil: sin scroll; tocar el borde derecho o
+    izquierdo y deslizar pasan la página; el centro muestra y oculta los controles; con letra más grande y
+    con el teléfono girado sigue a la vista la frase que se leía; la última página lleva al capítulo siguiente.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
      --capturas <carpeta>  guarda una captura del inicio por ventana y el RECORRIDO (inicio, Biblioteca,
@@ -565,6 +569,9 @@ def revisar_lector(nav, base, raiz):
         # en publicar falló una vez cortando la red antes de tiempo).
         pg.wait_for_function("async () => { await navigator.serviceWorker.ready; return !!(await caches.match(location.origin + location.pathname)); }",
                              timeout=60000, polling=500)
+        # En frío: sin la caché HTTP del navegador (dura 10 minutos en GitHub Pages y escondía una falla),
+        # queda solo lo que guardó el service worker y los libros de IndexedDB.
+        ctx.new_cdp_session(pg).send("Network.clearBrowserCache")
         ctx.set_offline(True)
         pg.goto(base + "lector/")
         pg.wait_for_selector("#estante .tarjeta", timeout=15000)
@@ -575,6 +582,119 @@ def revisar_lector(nav, base, raiz):
     except Exception as e:
         fallas.append(f"lector sin conexión: no abre ({str(e).splitlines()[0]})")
     fallas += [f"lector sin conexión: error de JavaScript: {e}" for e in errores]
+    ctx.close()
+    for w, h in [(390, 844), (360, 740)]:
+        fallas += revisar_paginas(nav, base, libro, w, h)
+    return fallas
+
+
+# ¿Se ve en la página el comienzo del ancla (la frase que se leía)? Busca su texto y mide su primer carácter.
+ANCLA_VISIBLE = """() => {
+  const a = lectorEstado().ancla, cita = (a.cita || '').trim().slice(0, 30), cap = document.querySelector('#texto .lx-cap');
+  const nodos = [], w = document.createTreeWalker(cap, NodeFilter.SHOW_TEXT); let t = '';
+  while (w.nextNode()) { nodos.push([w.currentNode, t.length]); t += w.currentNode.data; }
+  const k = t.indexOf(cita); if (k < 0) return 'no está en el capítulo: ' + cita;
+  const [n, ini] = nodos.filter(x => x[1] <= k).pop(), rg = document.createRange();
+  rg.setStart(n, k - ini); rg.setEnd(n, Math.min(n.data.length, k - ini + 1));
+  const r = rg.getClientRects()[0], m = document.querySelector('#marco').getBoundingClientRect();
+  return r && r.left >= m.left - 1 && r.right <= m.right + 1 && r.top >= m.top - 1 && r.bottom <= m.bottom + 1 ? '' : 'fuera de la página: ' + cita;
+}"""
+
+
+def revisar_paginas(nav, base, libro, w, h):
+    """El lector por páginas (21-nov-2026, él: «leer en el celular como ReadEra, pasando páginas»)."""
+    fallas, errores = [], []
+    rot = f"lector {w}x{h}"
+    ctx = nav.new_context(viewport={"width": w, "height": h}, is_mobile=True, has_touch=True)
+    pg = ctx.new_page()
+    pg.on("pageerror", lambda e: errores.append(str(e)))
+    # Sin pantalla completa: el navegador de prueba no deja cambiar el tamaño de una ventana en pantalla completa.
+    pg.add_init_script("if (!localStorage.getItem('lector.ajustes')) localStorage.setItem('lector.ajustes', JSON.stringify({pantalla: 'no'}))")
+    est = lambda: pg.evaluate("lectorEstado()")
+    cdp = ctx.new_cdp_session(pg)
+
+    def deslizar(x0, x1):
+        pt = lambda x: [{"x": x, "y": h / 2}]
+        cdp.send("Input.dispatchTouchEvent", {"type": "touchStart", "touchPoints": pt(x0)})
+        for k in range(1, 9):
+            cdp.send("Input.dispatchTouchEvent", {"type": "touchMove", "touchPoints": pt(x0 + (x1 - x0) * k / 8)})
+        cdp.send("Input.dispatchTouchEvent", {"type": "touchEnd", "touchPoints": []})
+        pg.wait_for_timeout(450)
+
+    def tocar(fx):
+        pg.touchscreen.tap(w * fx, h / 2)
+        pg.wait_for_timeout(450)
+
+    try:
+        pg.goto(f"{base}lector/#fenix={libro['id']}&l={libro['idioma']}")
+        pg.wait_for_selector("#vistaLectura:not([hidden]) #texto .lx-cap", timeout=30000)
+        pg.wait_for_timeout(800)
+        # Un capítulo con al menos tres páginas y sin enlaces donde se toca (un toque sobre un enlace, como
+        # en el índice del libro, lo sigue y no pasa la página).
+        sin_enlaces = f"[0.1, 0.5, 0.9].every(f => {{ const e = document.elementFromPoint({w} * f, {h} / 2); return !e || !e.closest('a, mark'); }})"
+        for _ in range(12):
+            if est()["paginas"] >= 3 and pg.evaluate(sin_enlaces):
+                break
+            pg.evaluate("document.querySelector('#capSiguiente').click()")
+            pg.wait_for_timeout(600)
+        if est()["paginas"] < 3 or not pg.evaluate(sin_enlaces):
+            return [f"{rot}: ningún capítulo de los primeros sirve para probar (tres páginas sin enlaces al medio)"]
+        alto, ancho = pg.evaluate("[document.documentElement.scrollHeight - innerHeight, document.documentElement.scrollWidth - innerWidth]")
+        if alto > 1 or ancho > 1:
+            fallas.append(f"{rot}: la lectura tiene scroll ({alto}px vertical, {ancho}px horizontal)")
+        p0 = est()["pag"]
+        tocar(0.9)
+        if est()["pag"] != p0 + 1:
+            fallas.append(f"{rot}: tocar el borde derecho no pasa la página")
+        tocar(0.1)
+        if est()["pag"] != p0:
+            fallas.append(f"{rot}: tocar el borde izquierdo no vuelve la página")
+        deslizar(w * 0.8, w * 0.2)
+        if est()["pag"] != p0 + 1:
+            fallas.append(f"{rot}: deslizar hacia la izquierda no pasa la página")
+        deslizar(w * 0.2, w * 0.8)
+        if est()["pag"] != p0:
+            fallas.append(f"{rot}: deslizar hacia la derecha no vuelve la página")
+        tocar(0.5)
+        if not pg.evaluate("document.querySelector('#vistaLectura').hasAttribute('data-controles')"):
+            fallas.append(f"{rot}: tocar al centro no muestra los controles")
+        tocar(0.5)
+        if pg.evaluate("document.querySelector('#vistaLectura').hasAttribute('data-controles')"):
+            fallas.append(f"{rot}: tocar al centro no oculta los controles")
+        tocar(0.9)
+        pg.wait_for_timeout(800)
+        # Letra más grande y teléfono girado: la frase que se leía sigue en la página.
+        pg.evaluate("document.querySelector('#btnAjustes').click()")
+        for _ in range(3):
+            pg.click("#ajustes [data-paso='1']")
+        pg.keyboard.press("Escape")
+        pg.wait_for_timeout(900)
+        if (r := pg.evaluate(ANCLA_VISIBLE)):
+            fallas.append(f"{rot}: con letra más grande se pierde la página ({r})")
+        pg.set_viewport_size({"width": h, "height": w})
+        pg.wait_for_timeout(900)
+        if (r := pg.evaluate(ANCLA_VISIBLE)):
+            fallas.append(f"{rot}: con el teléfono girado se pierde la página ({r})")
+        pg.set_viewport_size({"width": w, "height": h})
+        pg.wait_for_timeout(900)
+        if (r := pg.evaluate(ANCLA_VISIBLE)):
+            fallas.append(f"{rot}: al volver a enderezar el teléfono se pierde la página ({r})")
+        # Última página → primera del capítulo siguiente, y de vuelta.
+        e = est()
+        pg.evaluate("(() => { const d = document.querySelector('#deslizador'); d.value = d.max; d.dispatchEvent(new Event('input')); })()")
+        tocar(0.9)
+        pg.wait_for_timeout(600)
+        e2 = est()
+        if (e2["i"], e2["pag"]) != (e["i"] + 1, 0):
+            fallas.append(f"{rot}: la última página no lleva al comienzo del capítulo siguiente")
+        tocar(0.1)
+        pg.wait_for_timeout(600)
+        e3 = est()
+        if (e3["i"], e3["pag"]) != (e["i"], e3["paginas"] - 1):
+            fallas.append(f"{rot}: volver desde el comienzo de un capítulo no lleva a la última página del anterior")
+    except Exception as ex:
+        fallas.append(f"{rot}: la prueba de páginas no terminó ({str(ex).splitlines()[0]})")
+    fallas += [f"{rot}: error de JavaScript: {x}" for x in errores]
     ctx.close()
     return fallas
 

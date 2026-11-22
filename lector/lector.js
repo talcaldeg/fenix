@@ -409,7 +409,7 @@
   window.addEventListener("offline", pintarRed);
 
   // ---------- ajustes de lectura ----------
-  const AJ_DEF = { tam: 20, interlineado: 1.6, ancho: 36, letra: "garamond", tema: "auto", bilingue: "auto" };
+  const AJ_DEF = { tam: 20, interlineado: 1.6, ancho: 36, letra: "garamond", tema: "auto", bilingue: "auto", pantalla: "si" };
   let aj = { ...AJ_DEF };
   const LETRAS = { garamond: 'var(--letra)', georgia: 'Georgia,"Times New Roman",serif', sans: 'system-ui,-apple-system,"Segoe UI",Roboto,sans-serif', libro: 'var(--letra)' };
   function aplicarAjustes(){
@@ -434,19 +434,20 @@
       grupo("Colores", "tema", [["auto", "Como el sistema"], ["light", "Claro"], ["sepia", "Sepia"], ["dark", "Oscuro"]]) +
       grupo("Interlineado", "interlineado", [[1.35, "Junto"], [1.6, "Normal"], [1.9, "Amplio"]]) +
       grupo("Ancho del texto", "ancho", [[30, "Angosto"], [36, "Normal"], [46, "Ancho"]]) +
+      (tactil && document.fullscreenEnabled ? grupo("Pantalla completa al leer", "pantalla", [["si", "Sí"], ["no", "No"]]) : "") +
       (lectura && lectura.bilingue ? grupo("Edición bilingüe", "bilingue", [["auto", "Automático"], ["lado", "Lado a lado"], ["inter", "Intercalado"], ["trad", "Solo traducción"], ["orig", "Solo original"]]) +
         `<p class="etq">Lado a lado necesita una pantalla ancha; en el celular se muestra intercalado.</p>` : "");
   }
   $("#ajustes").addEventListener("click", e => {
     const b = e.target.closest("button"); if (!b) return;
-    const ancla = lectura ? posicionActual() : null;
     if (b.dataset.paso) aj.tam = Math.min(34, Math.max(13, aj.tam + 2 * b.dataset.paso));
     else if (b.dataset.k) aj[b.dataset.k] = isNaN(+b.dataset.v) ? b.dataset.v : +b.dataset.v;
     else return;
     try { localStorage.setItem("lector.ajustes", JSON.stringify(aj)); } catch {}
     conf.poner("ajustes", aj);
     aplicarAjustes(); pintarAjustes();
-    if (ancla) requestAnimationFrame(() => irAPosicion(ancla, false));
+    if (aj.pantalla === "no") salirPantallaCompleta();
+    if (lectura) reajustar();
   });
 
   // ---------- lectura ----------
@@ -454,6 +455,7 @@
   const barraAlto = () => $("#vistaLectura header").offsetHeight || 56;
 
   async function abrirLibro(id, ancla){
+    pantallaCompleta(); // antes de cualquier await: el navegador la permite solo en respuesta a un toque
     cargando("Abriendo…");
     try {
       const libro = await DB.get("libros", id);
@@ -470,7 +472,14 @@
       if (location.hash !== "#leer=" + encodeURIComponent(id)) history.pushState({ leer: id }, "", "#leer=" + encodeURIComponent(id));
       if (destino) await irAPosicion(destino, true);
       else await mostrarCapitulo(primerCapituloConTexto(), 0);
+      mostrarControles(false);
       cargando();
+      try {
+        if (!localStorage.getItem("lector.ayudaPaginas")) {
+          aviso("Toca los bordes o desliza para pasar de página; toca al centro para ver el menú.", 7000);
+          localStorage.setItem("lector.ayudaPaginas", "1");
+        }
+      } catch {}
       Nube.sincronizar(false);
     } catch (e) {
       cargando(); console.warn(e);
@@ -497,6 +506,7 @@
   function volverBiblioteca(){
     cerrarSeleccion();
     cerrarLectura();
+    mostrarControles(false); salirPantallaCompleta(); pantallaEncendida(false);
     $("#vistaLectura").hidden = true; $("#vistaBiblio").hidden = false;
     document.title = "Lector Fénix";
     if (location.hash.startsWith("#leer=")) history.replaceState(null, "", location.pathname);
@@ -527,7 +537,9 @@
     try { hoja = new CSSStyleSheet(); hoja.replaceSync(texto); } catch { return ""; }
     const sel = s => s.split(",").map(x => {
       x = x.trim().replace(/(^|[\s>+~])(html|body)(?=$|[\s>+~.#:[])/gi, "$1").replace(/^[\s>+~]+/, "").trim();
-      return x ? `#texto ${x}` : "#texto";
+      // html y body del libro van al capítulo, no a #texto: un margen o relleno en #texto corre las
+      // columnas y la página se ve cortada a la derecha.
+      return x ? `#texto ${x}` : "#texto .lx-cap";
     }).join(", ");
     const regla = r => {
       if (r instanceof CSSStyleRule) {
@@ -605,10 +617,10 @@
   }
   const NOMBRE_IDIOMA = { fr: "Original francés", en: "Original inglés", la: "Original latino", it: "Original italiano", de: "Original alemán", pt: "Original portugués", es: "Original" };
 
-  async function mostrarCapitulo(i, desplazar){
+  async function mostrarCapitulo(i, pagina){
     const L = lectura;
     i = Math.max(0, Math.min(L.ep.spine.length - 1, i));
-    cerrarSeleccion();
+    cerrarSeleccion(); cerrarFlotante();
     let prep;
     try { prep = prepararCapitulo(i); }
     catch (e) { console.warn(e); prep = { div: Object.assign(document.createElement("p"), { textContent: "Este capítulo no se pudo mostrar." }), css: "" }; }
@@ -625,74 +637,246 @@
       cab.innerHTML = `<span>Traducción</span><span>${esc(NOMBRE_IDIOMA[idioma.slice(0, 2)] || "Original")}</span>`;
       texto.append(cab);
     }
+    // Marca el final del texto: su columna dice cuántas páginas tiene el capítulo.
+    const fin = document.createElement("span"); fin.className = "lx-fin"; fin.setAttribute("aria-hidden", "true");
+    prep.div.append(fin);
     texto.append(prep.div);
+    // Sin carga diferida: en columnas las imágenes quedan fuera de la pantalla y no cargarían nunca. La que
+    // llega tarde cambia el alto del texto y se vuelve a paginar.
+    $$("img", prep.div).forEach(im => { im.removeAttribute("loading"); if (!im.complete) im.addEventListener("load", reajustar, { once: true }); });
     aplicarAjustes();
     // Bloques de texto sin otro bloque adentro (un li con párrafos cuenta por sus párrafos): en orden y
-    // sin anidar, para buscar el de arriba de la pantalla por bisección.
+    // sin anidar; las posiciones guardadas antes de las páginas (21-nov-2026) apuntan a uno de ellos.
     const BLOQUE = "p, h1, h2, h3, h4, h5, h6, li, blockquote, pre, dt, dd, td, figcaption";
     L.bloques = $$(BLOQUE, prep.div).filter(e => !e.querySelector(BLOQUE) && norm(e.textContent));
     pintarMarcas();
     $("#capAnterior").disabled = i === 0;
     $("#capSiguiente").disabled = i === L.ep.spine.length - 1;
-    $("#capSiguiente").textContent = i === L.ep.spine.length - 1 ? "Fin del libro" : "Siguiente →";
-    if (typeof desplazar === "number") scrollTo(0, desplazar);
+    $("#capActual").textContent = tituloCapitulo();
+    await maquetar();
+    irPagina(pagina === "fin" ? L.paginas - 1 : (pagina || 0), false);
     marcarIndice();
-    actualizarProgreso();
   }
   $("#capAnterior").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i - 1, 0); guardarPosicion(); };
   $("#capSiguiente").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i + 1, 0); guardarPosicion(); };
 
+  // ---------- páginas ----------
+  // Mide la hoja y arma las columnas: una página por pantalla, o dos (libro abierto) en pantalla ancha y
+  // apaisada. Corre al abrir un capítulo, al girar el teléfono, al cambiar la letra y al cargar una imagen.
+  async function maquetar(){
+    const L = lectura; if (!L) return;
+    try { await Promise.race([document.fonts.ready, espera(800)]); } catch {}
+    if (!lectura) return;
+    const v = $("#vistaLectura"), hoja = $("#hoja"), marco = $("#marco"), texto = $("#texto");
+    const lado = innerWidth < 500 ? 18 : 28, gap = 2 * lado;
+    const disp = Math.max(160, hoja.clientWidth - 2 * lado);
+    const ladoAlado = v.dataset.bilingue === "lado";
+    const anchoCol = aj.ancho * aj.tam * (ladoAlado ? 1.9 : 1);
+    const dos = !ladoAlado && innerWidth >= 900 && innerWidth > innerHeight && disp >= 1.6 * anchoCol + gap;
+    const col = dos ? Math.min(anchoCol, (disp - gap) / 2) : Math.min(anchoCol, disp);
+    const ancho = Math.floor(dos ? 2 * col + gap : col);
+    marco.style.width = texto.style.width = ancho + "px";
+    texto.style.columnCount = dos ? 2 : 1;
+    texto.style.columnGap = gap + "px";
+    v.style.setProperty("--alto-pag", Math.floor(hoja.clientHeight * 0.96) + "px");
+    L.paso = ancho + gap;
+    const f = $("#texto .lx-fin");
+    L.paginas = f ? Math.max(1, Math.floor((f.getBoundingClientRect().left - texto.getBoundingClientRect().left + 2) / L.paso) + 1) : 1;
+    L.cachePag = new Map();
+  }
+  function irPagina(p, animar = true, ancla = null){
+    const L = lectura; if (!L) return;
+    L.pag = Math.max(0, Math.min(L.paginas - 1, Math.round(p) || 0));
+    const t = $("#texto");
+    t.classList.toggle("sin-animar", !animar);
+    t.style.transform = `translateX(${-L.pag * L.paso}px)`;
+    cerrarFlotante();
+    // El ancla se toma acá y no al girar o cambiar la letra: para entonces el texto ya se movió. Al
+    // repaginar se conserva la de antes (va en algún lugar de la página nueva); si se tomara de nuevo, cada
+    // cambio de letra la correría hacia atrás.
+    L.ancla = ancla || posicionActual();
+    actualizarProgreso();
+    guardarPosicion();
+    pantallaEncendida(true);
+  }
+  let ocupado = false;
+  async function siguiente(){
+    const L = lectura; if (!L || ocupado) return;
+    if (L.pag < L.paginas - 1) return irPagina(L.pag + 1);
+    if (L.i >= L.ep.spine.length - 1) { irPagina(L.pag); aviso("Fin del libro."); return; }
+    ocupado = true;
+    try { await mostrarCapitulo(L.i + 1, 0); } finally { ocupado = false; }
+  }
+  async function anterior(){
+    const L = lectura; if (!L || ocupado) return;
+    if (L.pag > 0) return irPagina(L.pag - 1);
+    if (L.i === 0) { irPagina(0); return; }
+    ocupado = true;
+    try { await mostrarCapitulo(L.i - 1, "fin"); } finally { ocupado = false; }
+  }
+  let reajT;
+  function reajustar(){
+    clearTimeout(reajT);
+    reajT = setTimeout(async () => {
+      const L = lectura; if (!L) return;
+      const ancla = L.ancla;
+      await maquetar();
+      if (lectura === L) irPagina(ancla ? paginaDePos(ancla) : L.pag, false, ancla);
+    }, 150);
+  }
+  $("#deslizador").addEventListener("input", e => irPagina(+e.target.value - 1, false));
+  function mostrarControles(si){ $("#vistaLectura").toggleAttribute("data-controles", !!si); }
+
+  // ---------- toques y deslizar ----------
+  // Tercio izquierdo: página anterior; tercio derecho: siguiente; centro: muestra u oculta los controles.
+  // Deslizar con el dedo arrastra la página. Dejar el dedo apretado selecciona texto y no pasa la página.
+  let gesto = null;
+  const hoja = $("#hoja");
+  hoja.addEventListener("pointerdown", e => {
+    if (!lectura || (e.pointerType === "mouse" && e.button !== 0)) return;
+    gesto = { x: e.clientX, y: e.clientY, t: Date.now(), tipo: e.pointerType, dx: 0, arrastre: false,
+      flotante: !$("#nota-flotante").hidden, sel: !getSelection().isCollapsed, sobre: !!e.target.closest("a[data-ir], a[href^='http'], mark[data-n]") };
+  });
+  hoja.addEventListener("pointermove", e => {
+    const g = gesto; if (!g || g.tipo === "mouse" || !lectura) return;
+    const dx = e.clientX - g.x, dy = e.clientY - g.y;
+    if (!g.arrastre) {
+      if (Math.abs(dx) < 12 || Math.abs(dx) < 1.2 * Math.abs(dy) || !getSelection().isCollapsed) return;
+      g.arrastre = true; $("#texto").classList.add("sin-animar");
+    }
+    g.dx = dx;
+    $("#texto").style.transform = `translateX(${-lectura.pag * lectura.paso + dx}px)`;
+  });
+  hoja.addEventListener("pointerup", e => {
+    const g = gesto; gesto = null;
+    if (!g || !lectura) return;
+    if (g.arrastre) {
+      const rapido = Math.abs(g.dx) / Math.max(1, Date.now() - g.t) > 0.35;
+      if (g.dx < -50 || (g.dx < -20 && rapido)) siguiente();
+      else if (g.dx > 50 || (g.dx > 20 && rapido)) anterior();
+      else irPagina(lectura.pag);
+      return;
+    }
+    if (Math.hypot(e.clientX - g.x, e.clientY - g.y) > 10 || Date.now() - g.t > 600 || g.sobre || g.flotante) return;
+    if (g.sel || !getSelection().isCollapsed) { getSelection().removeAllRanges(); return; }
+    tocar(e.clientX);
+  });
+  hoja.addEventListener("pointercancel", () => { if (gesto && gesto.arrastre && lectura) irPagina(lectura.pag); gesto = null; });
+  function tocar(x){
+    if ($("#vistaLectura").hasAttribute("data-controles")) { mostrarControles(false); return; }
+    const r = $("#hoja").getBoundingClientRect(), f = (x - r.left) / r.width;
+    if (f < 0.3) anterior(); else if (f > 0.7) siguiente(); else mostrarControles(true);
+    pantallaCompleta();
+  }
+  let ruedaT = 0;
+  hoja.addEventListener("wheel", e => {
+    if (!lectura) return;
+    e.preventDefault();
+    const d = Math.abs(e.deltaY) >= Math.abs(e.deltaX) ? e.deltaY : e.deltaX;
+    if (Math.abs(d) < 8 || Date.now() - ruedaT < 300) return;
+    ruedaT = Date.now();
+    if (d > 0) siguiente(); else anterior();
+  }, { passive: false });
+  document.addEventListener("keydown", e => {
+    if (!lectura || e.target.closest("input, textarea, dialog") || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(e.key)) { e.preventDefault(); siguiente(); }
+    else if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); anterior(); }
+    else if (e.key === "Escape") mostrarControles(false);
+  });
+
+  // ---------- pantalla completa y pantalla encendida ----------
+  const tactil = matchMedia("(pointer: coarse)").matches;
+  const instalado = () => matchMedia("(display-mode: standalone), (display-mode: fullscreen)").matches || navigator.standalone === true;
+  function pantallaCompleta(){
+    if (aj.pantalla === "no" || !tactil || !document.fullscreenEnabled || document.fullscreenElement || matchMedia("(display-mode: fullscreen)").matches) return;
+    try { document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); } catch {}
+  }
+  function salirPantallaCompleta(){ if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
+  // La pantalla no se apaga mientras se lee; si pasan diez minutos sin cambiar de página, vuelve a apagarse sola.
+  let despierta = null, despiertaT;
+  async function pantallaEncendida(si){
+    clearTimeout(despiertaT);
+    try {
+      if (si) {
+        despiertaT = setTimeout(() => pantallaEncendida(false), 10 * 60e3);
+        if (!despierta && "wakeLock" in navigator && document.visibilityState === "visible") {
+          despierta = await navigator.wakeLock.request("screen");
+          despierta.addEventListener("release", () => { despierta = null; });
+        }
+      } else if (despierta) { const d = despierta; despierta = null; await d.release(); }
+    } catch {}
+  }
+
   // ---------- posición ----------
-  const textoBloque = b => norm(b.textContent);
-  function bloqueVisible(){
-    const L = lectura, y = barraAlto() + 6;
-    const bs = L.bloques.filter(b => b.offsetParent !== null);
-    let lo = 0, hi = bs.length - 1, res = -1;
-    while (lo <= hi) { const m = (lo + hi) >> 1; if (bs[m].getBoundingClientRect().bottom > y) { res = m; hi = m - 1; } else lo = m + 1; }
-    return res < 0 ? null : bs[res];
+  // La posición es el primer carácter de la página: su texto (cita y lo que la antecede), no un número de
+  // página. Al cambiar la letra, girar el teléfono o llegar una versión nueva del libro, se busca ese texto
+  // y se abre la página donde quedó.
+  function paginaDeRect(r){
+    const L = lectura;
+    return Math.max(0, Math.min(L.paginas - 1, Math.floor((r.left - $("#texto").getBoundingClientRect().left + 2) / L.paso)));
+  }
+  const rectVisible = rg => [...rg.getClientRects()].find(r => r.width || r.height) || null;
+  function nodoEn(plano, off){
+    let lo = 0, hi = plano.nodos.length - 1;
+    while (lo < hi) { const m = (lo + hi + 1) >> 1; if (plano.nodos[m].ini <= off) lo = m; else hi = m - 1; }
+    return [lo, off - (plano.nodos[lo] ? plano.nodos[lo].ini : 0)];
+  }
+  // Desde off en adelante, el primer carácter que se ve: { k, pag }. Salta espacios y texto oculto (el
+  // original de una edición bilingüe en «Solo traducción»).
+  function primeroVisible(plano, off){
+    let [idx, o] = nodoEn(plano, off);
+    const rg = document.createRange();
+    for (let c = 0; idx < plano.nodos.length && c < 400; idx++, o = 0, c++) {
+      const { n, ini } = plano.nodos[idx], d = n.data;
+      let j = Math.max(0, o);
+      while (j < d.length && /\s/.test(d[j])) j++;
+      if (j >= d.length) continue;
+      rg.setStart(n, j); rg.setEnd(n, j + 1);
+      const r = rectVisible(rg);
+      if (r) return { k: ini + j, pag: paginaDeRect(r) };
+    }
+    return { k: plano.texto.length, pag: Infinity };
+  }
+  // Primer carácter de la página p: bisección sobre el texto, que corre en orden por las columnas.
+  function primerCaracter(plano, p){
+    let lo = 0, hi = plano.texto.length - 1, res = plano.texto.length;
+    while (lo <= hi) { const m = (lo + hi) >> 1, v = primeroVisible(plano, m); if (v.pag >= p) { res = v.k; hi = m - 1; } else lo = m + 1; }
+    return res;
   }
   function posicionActual(){
-    const L = lectura;
-    const b = bloqueVisible();
-    const alto = Math.max(1, document.documentElement.scrollHeight - innerHeight);
-    const pos = { href: L.ep.spine[L.i].href, i: L.i, frac: Math.min(1, scrollY / alto), t: Date.now() };
-    if (b) {
-      const r = b.getBoundingClientRect();
-      pos.b = L.bloques.indexOf(b);
-      pos.cita = textoBloque(b).slice(0, 120);
-      pos.dentro = r.height ? Math.max(0, Math.min(1, (barraAlto() + 6 - r.top) / r.height)) : 0;
-    }
+    const L = lectura, cap = $("#texto .lx-cap");
+    const pos = { href: L.ep.spine[L.i].href, i: L.i, frac: L.paginas > 1 ? L.pag / (L.paginas - 1) : 0, t: Date.now() };
+    if (!cap) return pos;
+    const plano = textoPlano(cap), k = primerCaracter(plano, L.pag || 0);
+    if (k < plano.texto.length) { pos.off = k; pos.cita = plano.texto.slice(k, k + 120); pos.prefijo = plano.texto.slice(Math.max(0, k - 48), k); }
     return pos;
   }
-  // Ubica un ancla de texto en el capítulo ya pintado: primero la cita exacta más cerca del índice
-  // guardado, después el índice, al final la fracción. Así sobrevive a una versión nueva del libro.
-  function bloqueDe(pos){
-    const L = lectura;
-    if (pos.cita) {
-      const c = norm(pos.cita);
-      const cands = L.bloques.map((b, k) => [b, k]).filter(([b]) => textoBloque(b).startsWith(c.slice(0, 60)));
-      if (cands.length) return cands.sort((a, b) => Math.abs(a[1] - (pos.b || 0)) - Math.abs(b[1] - (pos.b || 0)))[0][0];
+  // Página de una posición guardada: primero su texto (también el de las posiciones de antes de las
+  // páginas, que guardaban el comienzo de un párrafo), después el número de párrafo y al final la fracción.
+  function paginaDePos(pos){
+    const L = lectura, cap = $("#texto .lx-cap");
+    if (cap && pos.cita) {
+      // Se mide el primer carácter que se ve desde el comienzo de la cita, no el rectángulo del rango: ese
+      // puede empezar en el final de la línea anterior, en la página de antes.
+      const plano = textoPlano(cap);
+      const r = rangoDeCita(plano, { exacto: pos.cita.slice(0, 80), prefijo: pos.prefijo || "", sufijo: "" });
+      const k = r ? offsetEn(plano, r.startContainer, r.startOffset) : -1;
+      if (k >= 0) { const v = primeroVisible(plano, k); if (v.pag !== Infinity) return v.pag; }
     }
-    return null;
+    if (pos.b != null && L.bloques[pos.b]) { const rc = L.bloques[pos.b].getClientRects()[0]; if (rc) return paginaDeRect(rc); }
+    return Math.round((pos.frac || 0) * (L.paginas - 1));
+  }
+  function paginaDeElemento(el){
+    const rc = [...el.getClientRects()].find(r => r.width || r.height) || el.getBoundingClientRect();
+    return paginaDeRect(rc);
   }
   async function irAPosicion(pos, pintar){
     const L = lectura;
     let i = L.ep.spine.findIndex(s => s.href === pos.href);
     if (i < 0) i = Math.min(pos.i || 0, L.ep.spine.length - 1);
     if (pintar || i !== L.i) await mostrarCapitulo(i);
-    // Con la letra a medio cargar el texto se mueve después de ubicarlo.
-    try { await Promise.race([document.fonts.ready, espera(800)]); } catch {}
-    await espera(30);
-    const b = bloqueDe(pos);
-    if (b) {
-      const r = b.getBoundingClientRect();
-      scrollTo(0, scrollY + r.top - barraAlto() - 6 + (pos.dentro || 0) * r.height);
-    } else if (pos.b != null && L.bloques[pos.b]) {
-      L.bloques[pos.b].scrollIntoView({ block: "start" }); scrollBy(0, -barraAlto() - 6);
-    } else {
-      scrollTo(0, (pos.frac || 0) * (document.documentElement.scrollHeight - innerHeight));
-    }
-    actualizarProgreso();
+    const ancla = pos.cita ? { href: L.ep.spine[i].href, i, cita: pos.cita, prefijo: pos.prefijo, frac: pos.frac, t: Date.now() } : null;
+    if (lectura === L) irPagina(paginaDePos(pos), false, ancla);
   }
   let guardarT;
   function guardarPosicion(ahora){
@@ -703,7 +887,7 @@
       // Todo lo que mira la pantalla se calcula antes del primer await: al cerrar el libro, lectura
       // queda en null y el texto se borra mientras esto sigue guardando.
       const L = lectura, avance = avanceTotal();
-      L.estado.pos = posicionActual();
+      L.estado.pos = L.ancla || posicionActual();
       await guardarEstado(L.estado).catch(e => console.warn(e));
       const l = await DB.get("libros", L.libro.id).catch(() => null);
       if (l) { l.leido = Date.now(); l.avance = avance; await DB.poner("libros", l).catch(() => {}); }
@@ -714,31 +898,31 @@
     const L = lectura; if (!L) return 0;
     const tams = L.ep.spine.map(s => s.tam), total = tams.reduce((a, b) => a + b, 0) || 1;
     const antes = tams.slice(0, L.i).reduce((a, b) => a + b, 0);
-    const alto = Math.max(1, document.documentElement.scrollHeight - innerHeight);
-    return Math.min(1, (antes + tams[L.i] * Math.min(1, scrollY / alto)) / total);
+    return Math.min(1, (antes + tams[L.i] * ((L.pag || 0) + 1) / (L.paginas || 1)) / total);
+  }
+  function paginaMarcador(m){
+    const c = lectura.cachePag;
+    if (!c.has(m.id)) c.set(m.id, paginaDePos(m));
+    return c.get(m.id);
+  }
+  function marcadorAqui(){
+    const L = lectura, href = L.ep.spine[L.i].href;
+    return L.estado.marcadores.find(m => !m.borrado && m.href === href && paginaMarcador(m) === L.pag);
   }
   function actualizarProgreso(){
-    if (!lectura) return;
-    const a = avanceTotal();
-    $("#barraProgreso").style.width = (a * 100).toFixed(1) + "%";
-    $("#pieLectura").textContent = Math.round(a * 100) + " %";
-    const L = lectura, b = bloqueVisible(), pos = b ? textoBloque(b).slice(0, 120) : "";
-    const marcado = L.estado.marcadores.some(m => !m.borrado && m.href === L.ep.spine[L.i].href && m.cita && norm(m.cita).slice(0, 60) === pos.slice(0, 60));
-    $("#btnMarcador").setAttribute("aria-pressed", marcado);
+    const L = lectura; if (!L) return;
+    const a = avanceTotal(), quedan = L.paginas - L.pag - 1;
+    $("#pieLectura").textContent = `${L.pag + 1} de ${L.paginas}` + (quedan ? ` · quedan ${quedan}` : " · fin del capítulo");
+    $("#paginaTxt").textContent = `Pág. ${L.pag + 1} de ${L.paginas} · ${Math.round(a * 100)} % del libro`;
+    const d = $("#deslizador"); d.max = L.paginas; d.value = L.pag + 1; d.disabled = L.paginas < 2;
+    $("#btnMarcador").setAttribute("aria-pressed", !!marcadorAqui());
   }
-  let rafScroll = 0;
-  addEventListener("scroll", () => {
-    if (!lectura || rafScroll) return;
-    rafScroll = requestAnimationFrame(() => { rafScroll = 0; actualizarProgreso(); guardarPosicion(); });
-  }, { passive: true });
-  document.addEventListener("visibilitychange", () => { if (document.visibilityState === "hidden") { guardarPosicion(true); Nube.sincronizar(false); } });
-  addEventListener("pagehide", () => guardarPosicion(true));
-  addEventListener("resize", () => { if (lectura) { const p = posicionActual(); aplicarAjustes(); requestAnimationFrame(() => irAPosicion(p, false)); } });
-  document.addEventListener("keydown", e => {
-    if (!lectura || e.target.closest("input, textarea, dialog")) return;
-    if (e.key === "ArrowRight" && e.altKey) $("#capSiguiente").click();
-    if (e.key === "ArrowLeft" && e.altKey) $("#capAnterior").click();
+  document.addEventListener("visibilitychange", () => {
+    if (document.visibilityState === "hidden") { guardarPosicion(true); Nube.sincronizar(false); }
+    else if (lectura) pantallaEncendida(true);
   });
+  addEventListener("pagehide", () => guardarPosicion(true));
+  addEventListener("resize", () => { if (lectura) { aplicarAjustes(); reajustar(); } });
 
   // ---------- índice ----------
   function pintarIndice(){
@@ -766,9 +950,9 @@
     if (i < 0) return;
     if (i !== L.i) await mostrarCapitulo(i, 0);
     const el = frag ? document.getElementById("e_" + frag) : null;
-    if (el) { el.scrollIntoView({ block: "start" }); scrollBy(0, -barraAlto() - 8); el.classList.add("lx-destello"); setTimeout(() => el.classList.remove("lx-destello"), 1700); }
-    else scrollTo(0, 0);
-    guardarPosicion();
+    if (el) { irPagina(paginaDeElemento(el), false); el.classList.add("lx-destello"); setTimeout(() => el.classList.remove("lx-destello"), 1700); }
+    else irPagina(0, false);
+    mostrarControles(false);
   }
 
   // Enlaces del libro: una llamada a nota se muestra flotando, sin perder la página; lo demás navega.
@@ -997,10 +1181,9 @@
   // ---------- marcadores ----------
   $("#btnMarcador").onclick = async () => {
     const L = lectura; if (!L) return;
-    const pos = posicionActual();
-    const ya = L.estado.marcadores.find(m => !m.borrado && m.href === pos.href && m.cita && pos.cita && norm(m.cita).slice(0, 60) === norm(pos.cita).slice(0, 60));
+    const ya = marcadorAqui();
     if (ya) { ya.borrado = true; ya.modificado = Date.now(); aviso("Marcador quitado."); }
-    else { L.estado.marcadores.push({ id: nuevoId(), ...pos, capitulo: tituloCapitulo(), avance: avanceTotal(), creado: Date.now(), modificado: Date.now() }); aviso("Marcador puesto."); }
+    else { L.estado.marcadores.push({ id: nuevoId(), ...posicionActual(), capitulo: tituloCapitulo(), avance: avanceTotal(), creado: Date.now(), modificado: Date.now() }); aviso("Marcador puesto."); }
     await guardarEstado(L.estado);
     actualizarProgreso();
   };
@@ -1025,15 +1208,15 @@
   $("#btnNotas").onclick = () => { pintarNotas(); $("#dlgNotas").showModal(); };
   $("#listaNotas").addEventListener("click", async e => {
     const L = lectura, b = e.target.closest("button"); if (!b || !L) return;
-    if (b.dataset.irM) { const m = L.estado.marcadores.find(x => x.id === b.dataset.irM); $("#dlgNotas").close(); await irAPosicion(m, false); guardarPosicion(); }
+    if (b.dataset.irM) { const m = L.estado.marcadores.find(x => x.id === b.dataset.irM); $("#dlgNotas").close(); await irAPosicion(m, false); mostrarControles(false); }
     if (b.dataset.delM) { const m = L.estado.marcadores.find(x => x.id === b.dataset.delM); m.borrado = true; m.modificado = Date.now(); await guardarEstado(L.estado); pintarNotas(); actualizarProgreso(); }
     if (b.dataset.irN) {
       const n = L.estado.notas.find(x => x.id === b.dataset.irN); $("#dlgNotas").close();
       const i = L.ep.spine.findIndex(s => s.href === n.href);
       if (i >= 0 && i !== L.i) await mostrarCapitulo(i, 0);
       const m = $(`#texto mark[data-n="${CSS.escape(n.id)}"]`);
-      if (m) { m.scrollIntoView({ block: "center" }); m.classList.add("lx-destello"); setTimeout(() => m.classList.remove("lx-destello"), 1700); }
-      guardarPosicion();
+      if (m) { irPagina(paginaDeElemento(m), false); m.classList.add("lx-destello"); setTimeout(() => m.classList.remove("lx-destello"), 1700); }
+      mostrarControles(false);
     }
     if (b.dataset.delN) await borrarNota(L.estado.notas.find(x => x.id === b.dataset.delN));
   });
@@ -1215,6 +1398,22 @@
   })();
   $("#btnNube").onclick = () => Nube.boton();
 
+  // Para las pruebas de herramientas/revisar_diseno.py: dónde va la lectura, sin tocar nada.
+  window.lectorEstado = () => lectura && { i: lectura.i, pag: lectura.pag, paginas: lectura.paginas, ancla: lectura.ancla };
+
+  // ---------- instalar ----------
+  let pedirInstalar = null;
+  addEventListener("beforeinstallprompt", e => { e.preventDefault(); pedirInstalar = e; $("#btnInstalar").hidden = false; });
+  addEventListener("appinstalled", () => { $("#avisoGuardar").hidden = true; });
+  $("#btnInstalar").onclick = async () => {
+    if (!pedirInstalar) return;
+    pedirInstalar.prompt();
+    const r = await pedirInstalar.userChoice.catch(() => null);
+    pedirInstalar = null; $("#btnInstalar").hidden = true;
+    if (r && r.outcome === "accepted") $("#avisoGuardar").hidden = true;
+  };
+  $("#btnEntendido").onclick = () => { $("#avisoGuardar").hidden = true; try { localStorage.setItem("lector.avisoGuardar", "1"); } catch {} };
+
   // ---------- arranque ----------
   async function iniciar(){
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
@@ -1222,8 +1421,14 @@
     aplicarAjustes();
     pintarRed();
     Nube.pintar();
-    // Que el navegador no borre los libros cuando falte espacio.
-    try { if (navigator.storage && navigator.storage.persist) navigator.storage.persist(); } catch {}
+    // Que el navegador no borre los libros cuando falte espacio. Si no lo promete y el lector no está
+    // instalado, se sugiere instalarlo (instalado, el teléfono no los borra).
+    try {
+      if (navigator.storage && navigator.storage.persist) navigator.storage.persist().then(ok => {
+        let visto = false; try { visto = localStorage.getItem("lector.avisoGuardar") === "1"; } catch {}
+        if (!ok && !instalado() && !visto) $("#avisoGuardar").hidden = false;
+      }).catch(() => {});
+    } catch {}
     if ("serviceWorker" in navigator) navigator.serviceWorker.register("../sw.js").catch(() => {});
     await pintarBiblioteca();
     // Enlace desde la ficha de Fénix: lector/#fenix=<id>&l=<idioma> agrega el libro (si falta) y lo abre.
