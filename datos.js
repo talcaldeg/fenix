@@ -2631,6 +2631,30 @@ window.FENIX = {
       parecidos: ["calderon-amor-honor-y-poder", "calderon-casa-con-dos-puertas", "calderon-el-alcalde-de-zalamea"]
     },
     {
+      id: "teresa-castillo-interior",
+      titulo: "Castillo interior",
+      autor: "Santa Teresa de Jesús",
+      anio: "1577",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "Santa Teresa describe el alma como un castillo todo de diamante, con muchas moradas y, en el centro, la morada del Rey. El libro recorre las siete moradas, desde la entrada, que es la oración, hasta aquella donde el alma vive unida a Dios, y en cada una va diciendo qué se vive, qué estorba y cómo se avanza. Lo escribió en 1577, por mandato de su confesor, para sus hermanas carmelitas, y lo llenó de comparaciones sencillas: el gusano de seda y la mariposa, las dos fuentes que llenan sus pilones, el agua que cae del cielo en un río.", "en": "Saint Teresa of Ávila describes the soul as a castle made entirely of diamond, with many dwelling places and, at its center, the place where the King dwells. The book walks through the seven dwelling places, from the entrance, which is prayer, to the one where the soul lives united with God, and in each it says what is lived there, what gets in the way and how to move forward. She wrote it in 1577, at her confessor's command, for her Carmelite sisters, and filled it with homely comparisons: the silkworm and the butterfly, the two fountains filling their basins, the rain falling into a river."},
+      porque: {"es":"Es el libro para quien reza y siente que no avanza, o no sabe por dónde empezar. Teresa no promete atajos: dice que la puerta del castillo es la oración, que sin humildad y conocimiento propio no se llega lejos, y que lo que importa no es pensar mucho, sino amar mucho. Se lee con calma, una morada por vez, con la sencillez con que ella escribe.","en":"The book for anyone who prays and feels he is getting nowhere, or does not know where to begin. Teresa promises no shortcuts: she says the door of the castle is prayer, that without humility and self-knowledge one does not get far, and that what matters is not to think much but to love much. It is best read slowly, one dwelling place at a time, in the plain voice in which she writes."},
+      imagen: {"src": "img/portadas/teresa-castillo-interior.jpg", "credito": {"es": "El Greco, «Vista de Toledo», h. 1599-1600", "en": "El Greco, “View of Toledo”, c. 1599-1600"}, "url": "https://commons.wikimedia.org/wiki/File:El_Greco_-_View_of_Toledo_-_Google_Art_Project.jpg"},
+      citas: [
+        "considerar nuestra alma, como un castillo todo de un diamante, o muy claro cristal, a donde hay muchos aposentos; ansí como en el cielo hay muchas moradas.",
+        "la puerta para entrar en este Castillo es la oración",
+        "no está la cosa en pensar mucho, sino en amar mucho, y ansí lo que más os dispertare a amar, eso haced.",
+        "porque Dios es suma verdad, y la humildad es andar en verdad",
+        "el Señor no mira tanto la grandeza de las obras, como el amor con que se hacen"
+      ],
+      archivos: {"epub": "libros/teresa-castillo-interior.epub", "pdf": "libros/teresa-castillo-interior.pdf"},
+      fuente: {"texto": "Edición de Vicente de la Fuente en los Escritos de Santa Teresa, tomo I (Biblioteca de Autores Españoles, tomo 53, Madrid, 1861), según la digitalización de Internet Archive (dominio público)", "url": "https://archive.org/details/escritosdesanta00jesgoog"},
+      delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/castillo-interior-las-moradas"},
+      editorial: {"es": "Edición digital de Proyecto Fénix de Castillo interior (Las Moradas), con el prólogo, las siete moradas con sus 27 capítulos y sumarios, y el epílogo; con ortografía y acentuación actualizadas sin cambiar ninguna palabra, notas al pie con el lugar de las citas de la Escritura y el latín traducido con la Biblia de Navarra. Se omiten las notas y variantes de De la Fuente. Preparada con ayuda de inteligencia artificial y revisada contra la fuente y contra una segunda edición. Edición al cuidado de Tomás Alcalde.", "en": "Proyecto Fénix digital edition of Castillo interior (The Interior Castle, or The Mansions), with the prologue, the seven dwelling places with their 27 chapters and chapter summaries, and the epilogue; spelling and accents updated without changing any word, footnotes giving the place of each quotation from Scripture, and the Latin translated with the Navarre Bible. The notes and variants of De la Fuente are omitted. Prepared with the help of artificial intelligence and checked against the source and against a second edition. Edited by Tomás Alcalde."},
+      parecidos: ["historia-de-un-alma", "imitacion-de-cristo", "marmion-vida-del-alma"]
+    },
+    {
       id: "calderon-el-magico-prodigioso",
       titulo: "El mágico prodigioso",
       autor: "Pedro Calderón de la Barca",

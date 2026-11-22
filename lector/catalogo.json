@@ -172,6 +172,16 @@
    "portada": "img/portadas/calderon-la-vida-es-sueno.jpg"
   },
   {
+   "id": "teresa-castillo-interior",
+   "idioma": "es",
+   "titulo": "Castillo interior",
+   "autor": "Santa Teresa de Jesús",
+   "epub": "libros/teresa-castillo-interior.epub",
+   "bytes": 518957,
+   "sha": "822d10916f273301288d91e1645dc4ec0d4ab5dc403f60978dd56c5bf7f89f4b",
+   "portada": "img/portadas/teresa-castillo-interior.jpg"
+  },
+  {
    "id": "pushkin-la-hija-del-capitan",
    "idioma": "es",
    "titulo": "La hija del capitán",
