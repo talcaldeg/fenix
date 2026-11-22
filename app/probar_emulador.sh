@@ -6,7 +6,7 @@
 #   3. los botones de volumen pasan de página;
 #   4. con red, el catálogo de Fénix llega del sitio.
 # Lo que pasa dentro de la WebView no lo ve uiautomator: se lee de los hitos «LECTOR ...» que lector.js
-# escribe en la consola solo dentro de la app (Capacitor los pasa al logcat).
+# manda a LectorFenix.hito, que los escribe en el logcat con la etiqueta LECTOR.
 set -u
 APK=lector-fenix.apk
 PKG=io.github.talcaldeg.fenix.lector
@@ -15,7 +15,7 @@ mkdir -p "$OUT"
 fallas=0
 captura(){ adb exec-out screencap -p > "$OUT/$1.png"; }
 falla(){ echo "FALLA: $1"; fallas=$((fallas + 1)); }
-hitos(){ adb logcat -d | grep -o "LECTOR .*" > "$OUT/hitos-$1.txt"; cat "$OUT/hitos-$1.txt"; }
+hitos(){ adb logcat -d -s LECTOR:I | grep -o "LECTOR *: .*" | sed "s/^LECTOR *: /LECTOR /" > "$OUT/hitos-$1.txt"; cat "$OUT/hitos-$1.txt"; }
 
 adb install -r "$APK" || { echo "FALLA: no se instala"; exit 1; }
 # El aviso de Android «Viewing full screen» (solo la primera vez) se queda con las teclas: se da por visto.
@@ -65,7 +65,7 @@ grep -q "LECTOR biblioteca 1" "$OUT/hitos-4.txt" || falla "al volver a abrir la 
 
 adb logcat -d -b crash > "$OUT/cierres.txt"
 [ -s "$OUT/cierres.txt" ] && { falla "la app se cerró sola"; head -40 "$OUT/cierres.txt"; }
-adb logcat -d -s Capacitor/Console:* > "$OUT/consola.txt"
+adb logcat -d "*:W" > "$OUT/avisos.txt"
 
 echo "Fallas: $fallas"
 exit "$fallas"

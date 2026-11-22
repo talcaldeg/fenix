@@ -75,6 +75,14 @@ public class LectorFenix extends Plugin {
         call.resolve();
     }
 
+    // Hitos del lector al logcat (etiqueta LECTOR), para app/probar_emulador.sh: el APK firmado no pasa
+    // la consola de la WebView al logcat.
+    @PluginMethod
+    public void hito(PluginCall call) {
+        android.util.Log.i("LECTOR", call.getString("t", ""));
+        call.resolve();
+    }
+
     @PluginMethod
     public void volumen(PluginCall call) {
         volumen = Boolean.TRUE.equals(call.getBoolean("activo", false));

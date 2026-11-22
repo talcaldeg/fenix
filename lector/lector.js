@@ -24,7 +24,7 @@
   const APK = "https://github.com/talcaldeg/fenix/releases/latest/download/lector-fenix.apk";
   const nativo = (metodo, datos = {}) => APP ? window.Capacitor.nativePromise("LectorFenix", metodo, datos) : Promise.resolve(null);
   // Hitos para la prueba del emulador (app/probar_emulador.sh los busca en el logcat): solo en la app.
-  const hito = t => { if (APP) console.info("LECTOR " + t); };
+  const hito = t => { nativo("hito", { t }).catch(() => {}); };
   const CARPETA_NUBE = "Fénix - Lector";
   const ARCHIVO_NUBE = "lector.json";
   const CADA_ACTUALIZAR = 6 * 3600e3;
