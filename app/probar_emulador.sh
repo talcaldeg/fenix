@@ -4,7 +4,9 @@
 #   1. abre sin red desde la primera vez (el lector viene dentro del APK);
 #   2. «Abrir con»: un EPUB abierto desde otra app entra a la biblioteca y se abre;
 #   3. los botones de volumen pasan de página;
-#   4. con red, el catálogo de Fénix carga desde el sitio.
+#   4. con red, el catálogo de Fénix llega del sitio.
+# Lo que pasa dentro de la WebView no lo ve uiautomator: se lee de los hitos «LECTOR ...» que lector.js
+# escribe en la consola solo dentro de la app (Capacitor los pasa al logcat).
 set -u
 APK=lector-fenix.apk
 PKG=io.github.talcaldeg.fenix.lector
@@ -13,11 +15,11 @@ mkdir -p "$OUT"
 fallas=0
 captura(){ adb exec-out screencap -p > "$OUT/$1.png"; }
 falla(){ echo "FALLA: $1"; fallas=$((fallas + 1)); }
-consola(){ adb logcat -d -s Capacitor/Console:* Capacitor:* chromium:* > "$OUT/logcat.txt"; }
+hitos(){ adb logcat -d | grep -o "LECTOR .*" > "$OUT/hitos-$1.txt"; cat "$OUT/hitos-$1.txt"; }
 
 adb install -r "$APK" || { echo "FALLA: no se instala"; exit 1; }
-adb shell settings put global window_animation_scale 0
-adb shell settings put global transition_animation_scale 0
+# El aviso de Android «Viewing full screen» (solo la primera vez) se queda con las teclas: se da por visto.
+adb shell settings put secure immersive_mode_confirmations confirmed
 
 # 1. Primera apertura, sin red.
 adb shell svc wifi disable; adb shell svc data disable
@@ -25,52 +27,45 @@ adb logcat -c
 adb shell am start -W -n "$PKG/.MainActivity"
 sleep 12
 captura 1-sin-red
-consola
-adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; adb shell cat /sdcard/ui.xml > "$OUT/1-ui.xml"
-grep -q "Mis libros" "$OUT/1-ui.xml" || falla "sin red, la biblioteca no aparece en la primera apertura"
+hitos 1
+grep -q "LECTOR biblioteca 0" "$OUT/hitos-1.txt" || falla "sin red, la biblioteca no aparece en la primera apertura"
 
 # 2. «Abrir con»: VIEW implícito de un EPUB (resuelve el intent-filter del manifiesto).
 adb push libro.epub /data/local/tmp/libro.epub
 adb shell chmod 644 /data/local/tmp/libro.epub
+adb logcat -c
 adb shell am start -W -a android.intent.action.VIEW -t application/epub+zip -d file:///data/local/tmp/libro.epub
 sleep 12
 captura 2-abrir-con
-adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; adb shell cat /sdcard/ui.xml > "$OUT/2-ui.xml"
+hitos 2
+grep -q "LECTOR abierto: " "$OUT/hitos-2.txt" || falla "el EPUB abierto con la app no se abrió"
+grep -q "LECTOR biblioteca 1" "$OUT/hitos-2.txt" || falla "el EPUB abierto con la app no quedó en la biblioteca"
 
-# 3. Volumen abajo dos veces y arriba una: cada toque cambia la página.
+# 3. Volumen abajo dos veces y arriba una: cada toque cambia de página.
+adb logcat -c
 adb shell input keyevent KEYCODE_VOLUME_DOWN; sleep 2; captura 3-volumen-1
 adb shell input keyevent KEYCODE_VOLUME_DOWN; sleep 2; captura 4-volumen-2
 adb shell input keyevent KEYCODE_VOLUME_UP; sleep 2; captura 5-volumen-arriba
-cmp -s "$OUT/2-abrir-con.png" "$OUT/3-volumen-1.png" && falla "volumen abajo no pasó de página"
-cmp -s "$OUT/3-volumen-1.png" "$OUT/4-volumen-2.png" && falla "el segundo volumen abajo no pasó de página"
-cmp -s "$OUT/4-volumen-2.png" "$OUT/5-volumen-arriba.png" && falla "volumen arriba no volvió de página"
-consola
-
-# Volver a la biblioteca: el libro tiene que estar en el estante.
-adb shell input keyevent KEYCODE_BACK; sleep 3
-captura 6-biblioteca-con-libro
-adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; adb shell cat /sdcard/ui.xml > "$OUT/6-ui.xml"
-grep -qi "identificaci" "$OUT/6-ui.xml" || falla "el libro abierto con la app no quedó en la biblioteca"
+hitos 3
+[ "$(grep -c "LECTOR volumen 1:" "$OUT/hitos-3.txt")" -eq 2 ] || falla "volumen abajo no pasó de página"
+grep -q "LECTOR volumen -1:" "$OUT/hitos-3.txt" || falla "volumen arriba no volvió de página"
+[ "$(sort -u "$OUT/hitos-3.txt" | wc -l)" -eq 3 ] || falla "el volumen no cambió la página (se repite la posición)"
 
 # 4. Con red: el catálogo de Fénix se trae del sitio.
 adb shell svc wifi enable; adb shell svc data enable
-sleep 8
+sleep 10
 adb shell am force-stop "$PKG"
+adb logcat -c
 adb shell am start -W -n "$PKG/.MainActivity"
-sleep 12
-adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; adb shell cat /sdcard/ui.xml > "$OUT/7-ui.xml"
-# Toca la pestaña «Catálogo Fénix» por su posición en el árbol de la interfaz.
-pos=$(grep -oE '(text|content-desc)="Catálogo Fénix"[^>]*bounds="\[[0-9]*,[0-9]*\]\[[0-9]*,[0-9]*\]"' "$OUT/7-ui.xml" | grep -o '\[[0-9]*,[0-9]*\]\[[0-9]*,[0-9]*\]' | head -1)
-if [ -n "$pos" ]; then
-  x=$(echo "$pos" | sed -E 's/\[([0-9]+),([0-9]+)\]\[([0-9]+),([0-9]+)\]/\1 \3/' | awk '{print int(($1+$2)/2)}')
-  y=$(echo "$pos" | sed -E 's/\[([0-9]+),([0-9]+)\]\[([0-9]+),([0-9]+)\]/\2 \4/' | awk '{print int(($1+$2)/2)}')
-  adb shell input tap "$x" "$y"; sleep 8
-fi
-captura 7-catalogo-con-red
-adb shell uiautomator dump /sdcard/ui.xml >/dev/null 2>&1; adb shell cat /sdcard/ui.xml > "$OUT/7b-ui.xml"
-grep -q "Marmion" "$OUT/7b-ui.xml" || falla "con red, el catálogo de Fénix no cargó"
-consola
-grep -i "error" "$OUT/logcat.txt" | grep -i "console" | head -20
+sleep 15
+captura 6-con-red
+hitos 4
+grep -q "LECTOR catálogo de la red: " "$OUT/hitos-4.txt" || falla "con red, el catálogo de Fénix no llegó del sitio"
+grep -q "LECTOR biblioteca 1" "$OUT/hitos-4.txt" || falla "al volver a abrir la app, el libro ya no estaba"
+
+adb logcat -d -b crash > "$OUT/cierres.txt"
+[ -s "$OUT/cierres.txt" ] && { falla "la app se cerró sola"; head -40 "$OUT/cierres.txt"; }
+adb logcat -d -s Capacitor/Console:* > "$OUT/consola.txt"
 
 echo "Fallas: $fallas"
 exit "$fallas"

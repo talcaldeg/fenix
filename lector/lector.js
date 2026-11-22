@@ -23,6 +23,8 @@
   const CATALOGO = APP ? SITIO + "lector/catalogo.json" : "catalogo.json";
   const APK = "https://github.com/talcaldeg/fenix/releases/latest/download/lector-fenix.apk";
   const nativo = (metodo, datos = {}) => APP ? window.Capacitor.nativePromise("LectorFenix", metodo, datos) : Promise.resolve(null);
+  // Hitos para la prueba del emulador (app/probar_emulador.sh los busca en el logcat): solo en la app.
+  const hito = t => { if (APP) console.info("LECTOR " + t); };
   const CARPETA_NUBE = "Fénix - Lector";
   const ARCHIVO_NUBE = "lector.json";
   const CADA_ACTUALIZAR = 6 * 3600e3;
@@ -205,7 +207,7 @@
     if (enLinea()) {
       try {
         const r = await fetch(CATALOGO, { cache: "no-cache" });
-        if (r.ok) { const j = await r.json(); if (Array.isArray(j.libros)) { catalogo = j; conf.poner("catalogo", j); return j; } }
+        if (r.ok) { const j = await r.json(); if (Array.isArray(j.libros)) { hito(`catálogo de la red: ${j.libros.length}`); catalogo = j; conf.poner("catalogo", j); return j; } }
       } catch (e) { console.warn("Catálogo sin red:", e); }
     }
     if (!catalogo) catalogo = await conf.leer("catalogo", null);
@@ -369,6 +371,7 @@
     const est = $("#estante"); est.innerHTML = "";
     libros.forEach(l => est.append(tarjeta(l)));
     $("#estanteVacio").hidden = libros.length > 0;
+    hito(`biblioteca ${libros.length}: ${libros.map(l => l.titulo).join(" | ")}`);
     pintarCatalogo();
   }
   function fichaLocal(l){
@@ -503,6 +506,7 @@
       else await mostrarCapitulo(primerCapituloConTexto(), 0);
       mostrarControles(false);
       cargando();
+      hito(`abierto: ${libro.titulo}`);
       try {
         if (!localStorage.getItem("lector.ayudaPaginas")) {
           aviso(`Toca los bordes o desliza para pasar de página${APP ? " (también con los botones de volumen)" : ""}; toca al centro para ver el menú.`, 7000);
@@ -817,6 +821,7 @@
   if (APP) addEventListener("lectorVolumen", e => {
     if (!lectura || $("dialog[open]")) return;
     if (e.paso > 0) siguiente(); else anterior();
+    setTimeout(() => hito(`volumen ${e.paso}: capítulo ${lectura && lectura.i} página ${lectura && lectura.pag}`), 400);
   });
 
   // ---------- pantalla completa y pantalla encendida ----------
