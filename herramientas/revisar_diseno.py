@@ -554,6 +554,15 @@ def revisar_lector(nav, base, raiz):
         ancho = pg.evaluate("document.documentElement.scrollWidth")
         if ancho > w + 1:
             fallas.append(f"{w}x{h} lector: scroll horizontal ({ancho}px en {w}px)")
+        # El APK de Android se baja desde aquí (app/, 21-nov-2026): botón a la vista y diálogo con la descarga y los pasos.
+        app = pg.evaluate("""() => { const b = document.querySelector('#btnApp');
+            if (!b || !b.offsetParent) return 'no se ve';
+            if (b.getBoundingClientRect().right > innerWidth + 1) return 'se sale de la pantalla';
+            b.click(); const d = document.querySelector('#dlgApp');
+            const ok = d.open && !!d.querySelector('a[href$="releases/latest/download/lector-fenix.apk"]') && d.querySelectorAll('ol li').length >= 3;
+            d.close(); return ok ? '' : 'el diálogo no trae la descarga o los pasos'; }""")
+        if app:
+            fallas.append(f"{w}x{h} lector: botón «Descargar app para Android»: {app}")
         fallas += [f"{w}x{h} lector: error de JavaScript: {e}" for e in errores]
         pg.close()
     with open(os.path.join(raiz, "lector", "catalogo.json"), encoding="utf-8") as f:

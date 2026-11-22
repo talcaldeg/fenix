@@ -155,6 +155,9 @@ dialog.panel{margin:0 0 0 auto; height:100vh; max-height:100vh; border-radius:0;
 .dlg-cab h2{flex:1; margin:0; font-size:20px; font-weight:600}
 .dlg-cuerpo{padding:14px 18px 20px}
 .dlg-pie{display:flex; justify-content:flex-end; gap:8px; padding:0 18px 18px; flex-wrap:wrap}
+.pasos{padding-left:1.4em; margin:0 0 12px} .pasos li{margin:0 0 8px}
+.nota-app{margin:0; font-size:15px; color:var(--muted)}
+#dlgApp .dlg-pie{position:sticky; bottom:0; background:var(--card); padding-top:12px; border-top:1px solid var(--line)}
 .indice ol{list-style:none; margin:0; padding:0}
 .indice ol ol{padding-left:16px}
 .indice a{display:block; padding:7px 8px; border-radius:8px; text-decoration:none; color:var(--ink); line-height:1.3}
@@ -219,9 +222,11 @@ h2{break-after:avoid; page-break-after:avoid}
   <main class="biblio">
     <p class="aviso" id="avisoRed" hidden></p>
     <p class="aviso" id="avisoGuardar" hidden><b>Instala el lector para que el teléfono no borre tus libros.</b> Toca «Instalar» o, en el menú del navegador, «Agregar a la pantalla de inicio». <button class="btn" type="button" id="btnInstalar" hidden>Instalar</button> <button class="btn" type="button" id="btnEntendido">Entendido</button></p>
+    <p class="aviso" id="avisoApp" hidden><b>Hay versión nueva del Lector Fénix.</b> Al instalarla se mantienen tus libros, páginas y notas. <a class="btn prim apk" href="#">Descargar</a></p>
     <div class="pestanas" role="tablist">
       <button class="btn" type="button" role="tab" id="tabMios" aria-selected="true">Mis libros</button>
       <button class="btn" type="button" role="tab" id="tabFenix" aria-selected="false">Catálogo Fénix</button>
+      <div class="derecha"><button class="btn" type="button" id="btnApp" hidden>Descargar app para Android</button></div>
     </div>
     <section id="secMios">
       <div class="estante" id="estante"></div>
@@ -288,6 +293,20 @@ h2{break-after:avoid; page-break-after:avoid}
     <div class="dlg-cuerpo"><p id="confTexto" style="margin:0"></p></div>
     <div class="dlg-pie"><button class="btn" value="no" type="submit">Cancelar</button><button class="btn peligro" value="si" type="submit" id="confSi">Eliminar</button></div>
   </form>
+</dialog>
+<dialog id="dlgApp">
+  <div class="dlg-cab"><h2>App para Android</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div>
+  <div class="dlg-cuerpo">
+    <p style="margin-top:0">Es este mismo lector, instalado como app: abre los EPUB que te mandan por WhatsApp, pasa de página con los botones de volumen y guarda los libros donde el teléfono no los borra. Es gratis y no está en Play Store, por eso se instala así:</p>
+    <ol class="pasos">
+      <li>Toca «Descargar» y espera que baje el archivo <b>lector-fenix.apk</b>.</li>
+      <li>Ábrelo desde el aviso de descarga o desde la carpeta Descargas.</li>
+      <li>Si el teléfono pide permiso para instalar apps de esa fuente, toca «Ajustes» (o «Configuración»), activa «Permitir de esta fuente» y vuelve atrás.</li>
+      <li>Toca «Instalar». Si aparece un aviso de Play Protect, elige «Instalar de todas formas».</li>
+    </ol>
+    <p class="nota-app">Los libros de esta biblioteca no pasan solos a la app: agrégalos de nuevo desde el catálogo. Cuando haya una versión nueva, la app te avisa.</p>
+  </div>
+  <div class="dlg-pie"><button class="btn" type="button" data-cerrar>Cerrar</button><a class="btn prim apk" href="#" download>Descargar</a></div>
 </dialog>
 <dialog id="dlgLibro">
   <div class="dlg-cab"><h2 id="libroTitulo"></h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div>

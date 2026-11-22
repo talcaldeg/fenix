@@ -16,7 +16,13 @@
   // ID de cliente OAuth web de Google Cloud (origen https://talcaldeg.github.io). Vacío = sin nube.
   const GOOGLE_CLIENTE = "";
   const FORMULARIO = "https://formsubmit.co/ajax/talcaldeg@gmail.com";
-  const CATALOGO = "catalogo.json";
+  // Dentro del APK de Android (app/, Capacitor) el lector viene en la propia app: catálogo y libros se
+  // piden al sitio, y lo que la web no tiene (abrir con, volumen, pantalla completa) lo hace LectorFenix.java.
+  const APP = !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+  const SITIO = APP ? "https://talcaldeg.github.io/fenix/" : "../";
+  const CATALOGO = APP ? SITIO + "lector/catalogo.json" : "catalogo.json";
+  const APK = "https://github.com/talcaldeg/fenix/releases/latest/download/lector-fenix.apk";
+  const nativo = (metodo, datos = {}) => APP ? window.Capacitor.nativePromise("LectorFenix", metodo, datos) : Promise.resolve(null);
   const CARPETA_NUBE = "Fénix - Lector";
   const ARCHIVO_NUBE = "lector.json";
   const CADA_ACTUALIZAR = 6 * 3600e3;
@@ -203,6 +209,8 @@
       } catch (e) { console.warn("Catálogo sin red:", e); }
     }
     if (!catalogo) catalogo = await conf.leer("catalogo", null);
+    // La app recién instalada y sin señal: el catálogo que trae adentro, para que al menos se vea.
+    if (!catalogo && APP) try { catalogo = await (await fetch("catalogo.json")).json(); } catch {}
     return catalogo;
   }
   const idFenix = c => `fenix-${c.id}-${c.idioma}`;
@@ -239,7 +247,7 @@
   }
 
   async function bajarDeFenix(c){
-    const r = await fetch("../" + c.epub, { cache: "no-cache" });
+    const r = await fetch(SITIO + c.epub, { cache: "no-cache" });
     if (!r.ok) throw new Error(`Fénix respondió ${r.status} al pedir ${c.titulo}.`);
     const buf = await r.arrayBuffer();
     const res = await guardarEpub(buf, { fenix: { id: c.id, idioma: c.idioma } });
@@ -304,6 +312,25 @@
     const fs = [...(e.dataTransfer?.files || [])].filter(f => /\.epub$/i.test(f.name));
     if (fs.length) agregarArchivos(fs);
   });
+  // App de Android: EPUB abiertos con «Abrir con Lector Fénix» (WhatsApp, Archivos). Android los deja en la
+  // caché de la app y avisa con «lectorArchivo»; al arrancar se piden los que llegaron antes que el lector.
+  async function recibirDeAndroid(){
+    const r = await nativo("pendientes").catch(() => null);
+    for (const a of (r && r.archivos) || []) {
+      if (a.error || !a.ruta) { aviso(`«${a.nombre || "El archivo"}»: no se pudo abrir.`, 7000); continue; }
+      cargando(`Agregando «${a.nombre}»…`);
+      try {
+        const buf = await (await fetch(window.Capacitor.convertFileSrc(a.ruta))).arrayBuffer();
+        const { libro, reemplazo, igual } = await guardarEpub(buf, { bilingue: /bilingue/i.test(a.nombre) });
+        cargando();
+        nativo("descartar", { ruta: a.ruta }).catch(() => {});
+        if (!igual) aviso(reemplazo ? `«${libro.titulo}»: se reemplazó por la versión nueva. Tu página, marcadores y notas se mantienen.` : `«${libro.titulo}» quedó en tu biblioteca.`, 6000);
+        await pintarBiblioteca();
+        abrirLibro(libro.id);
+      } catch (e) { cargando(); aviso(`«${a.nombre}»: ${e.message || "no es un EPUB que se pueda leer."}`, 7000); }
+    }
+  }
+  if (APP) addEventListener("lectorArchivo", recibirDeAndroid);
 
   async function eliminarLibro(l){
     if (!await confirmar("Eliminar libro", `¿Eliminar «${l.titulo}» de este dispositivo${Nube.activa() ? " y de tu nube" : ""}? Tus marcadores y notas se guardan por si lo vuelves a agregar.`)) return;
@@ -382,7 +409,7 @@
     for (const c of items.slice(0, 400)) {
       const f = document.createElement("div"); f.className = "fila";
       const ya = tengo.has(idFenix(c));
-      f.innerHTML = `${c.portada ? `<img alt="" loading="lazy" src="../${esc(c.portada)}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mini'}))">` : `<div class="mini"></div>`}
+      f.innerHTML = `${c.portada ? `<img alt="" loading="lazy" src="${SITIO}${esc(c.portada)}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mini'}))">` : `<div class="mini"></div>`}
         <div class="txt"><div class="t">${esc(c.titulo)}</div><div class="a">${esc(c.autor)}${c.idioma !== "es" ? " · " + esc(c.idioma.toUpperCase()) : ""}</div></div>
         <button class="btn ${ya ? "" : "prim"}" type="button">${ya ? "Leer" : "Agregar"}</button>`;
       f.querySelector("button").onclick = () => ya ? abrirLibro(idFenix(c)) : agregarDeFenix(c, false);
@@ -434,7 +461,7 @@
       grupo("Colores", "tema", [["auto", "Como el sistema"], ["light", "Claro"], ["sepia", "Sepia"], ["dark", "Oscuro"]]) +
       grupo("Interlineado", "interlineado", [[1.35, "Junto"], [1.6, "Normal"], [1.9, "Amplio"]]) +
       grupo("Ancho del texto", "ancho", [[30, "Angosto"], [36, "Normal"], [46, "Ancho"]]) +
-      (tactil && document.fullscreenEnabled ? grupo("Pantalla completa al leer", "pantalla", [["si", "Sí"], ["no", "No"]]) : "") +
+      (APP || (tactil && document.fullscreenEnabled) ? grupo("Pantalla completa al leer", "pantalla", [["si", "Sí"], ["no", "No"]]) : "") +
       (lectura && lectura.bilingue ? grupo("Edición bilingüe", "bilingue", [["auto", "Automático"], ["lado", "Lado a lado"], ["inter", "Intercalado"], ["trad", "Solo traducción"], ["orig", "Solo original"]]) +
         `<p class="etq">Lado a lado necesita una pantalla ancha; en el celular se muestra intercalado.</p>` : "");
   }
@@ -447,6 +474,7 @@
     conf.poner("ajustes", aj);
     aplicarAjustes(); pintarAjustes();
     if (aj.pantalla === "no") salirPantallaCompleta();
+    else if (APP && lectura) pantallaCompleta();
     if (lectura) reajustar();
   });
 
@@ -466,6 +494,7 @@
       lectura = { libro, ep, estado: await estadoDe(id), i: 0, recursos: new Map(), bloques: [], bilingue: !!libro.bilingue };
       if (libro.nuevaVersion) { libro.nuevaVersion = false; DB.poner("libros", libro); }
       $("#vistaBiblio").hidden = true; $("#vistaLectura").hidden = false;
+      nativo("volumen", { activo: true }).catch(() => {});
       $("#tituloLectura").textContent = libro.titulo;
       document.title = libro.titulo + " · Lector Fénix";
       const destino = ancla || lectura.estado.pos;
@@ -476,7 +505,7 @@
       cargando();
       try {
         if (!localStorage.getItem("lector.ayudaPaginas")) {
-          aviso("Toca los bordes o desliza para pasar de página; toca al centro para ver el menú.", 7000);
+          aviso(`Toca los bordes o desliza para pasar de página${APP ? " (también con los botones de volumen)" : ""}; toca al centro para ver el menú.`, 7000);
           localStorage.setItem("lector.ayudaPaginas", "1");
         }
       } catch {}
@@ -507,6 +536,7 @@
     cerrarSeleccion();
     cerrarLectura();
     mostrarControles(false); salirPantallaCompleta(); pantallaEncendida(false);
+    nativo("volumen", { activo: false }).catch(() => {});
     $("#vistaLectura").hidden = true; $("#vistaBiblio").hidden = false;
     document.title = "Lector Fénix";
     if (location.hash.startsWith("#leer=")) history.replaceState(null, "", location.pathname);
@@ -783,15 +813,22 @@
     else if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); anterior(); }
     else if (e.key === "Escape") mostrarControles(false);
   });
+  // App de Android: volumen abajo, página siguiente; volumen arriba, anterior (MainActivity.dispatchKeyEvent).
+  if (APP) addEventListener("lectorVolumen", e => {
+    if (!lectura || $("dialog[open]")) return;
+    if (e.paso > 0) siguiente(); else anterior();
+  });
 
   // ---------- pantalla completa y pantalla encendida ----------
   const tactil = matchMedia("(pointer: coarse)").matches;
   const instalado = () => matchMedia("(display-mode: standalone), (display-mode: fullscreen)").matches || navigator.standalone === true;
   function pantallaCompleta(){
+    // En la app, la de Android: sin barra de estado ni botones de navegación (vuelven deslizando del borde).
+    if (APP) { if (aj.pantalla !== "no") nativo("pantallaCompleta", { activa: true }).catch(() => {}); return; }
     if (aj.pantalla === "no" || !tactil || !document.fullscreenEnabled || document.fullscreenElement || matchMedia("(display-mode: fullscreen)").matches) return;
     try { document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); } catch {}
   }
-  function salirPantallaCompleta(){ if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
+  function salirPantallaCompleta(){ if (APP) nativo("pantallaCompleta", { activa: false }).catch(() => {}); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
   // La pantalla no se apaga mientras se lee; si pasan diez minutos sin cambiar de página, vuelve a apagarse sola.
   let despierta = null, despiertaT;
   async function pantallaEncendida(si){
@@ -1414,6 +1451,22 @@
   };
   $("#btnEntendido").onclick = () => { $("#avisoGuardar").hidden = true; try { localStorage.setItem("lector.avisoGuardar", "1"); } catch {} };
 
+  // ---------- app de Android ----------
+  // En la web: el botón para bajar el APK (no en iPhone, donde no se instala). En la app: el aviso cuando
+  // hay un APK más nuevo; cada Release de GitHub se llama lector-v<versionCode> (.github/workflows/apk.yml).
+  $$("a.apk").forEach(a => { a.href = APK; });
+  if (!APP && !/iPhone|iPad|iPod/.test(navigator.userAgent) && !(navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) $("#btnApp").hidden = false;
+  $("#btnApp").onclick = () => $("#dlgApp").showModal();
+  async function buscarVersionApp(){
+    if (!APP || !enLinea()) return;
+    try {
+      const [yo, r] = await Promise.all([nativo("info"), fetch("https://api.github.com/repos/talcaldeg/fenix/releases/latest", { cache: "no-cache" })]);
+      if (!r.ok) return;
+      const n = parseInt(String((await r.json()).tag_name || "").replace(/\D+/g, ""), 10);
+      if (n && yo && n > yo.versionCode) $("#avisoApp").hidden = false;
+    } catch (e) { console.warn("Versión de la app:", e); }
+  }
+
   // ---------- arranque ----------
   async function iniciar(){
     if ("scrollRestoration" in history) history.scrollRestoration = "manual";
@@ -1426,11 +1479,14 @@
     try {
       if (navigator.storage && navigator.storage.persist) navigator.storage.persist().then(ok => {
         let visto = false; try { visto = localStorage.getItem("lector.avisoGuardar") === "1"; } catch {}
-        if (!ok && !instalado() && !visto) $("#avisoGuardar").hidden = false;
+        if (!ok && !instalado() && !visto && !APP) $("#avisoGuardar").hidden = false;
       }).catch(() => {});
     } catch {}
-    if ("serviceWorker" in navigator) navigator.serviceWorker.register("../sw.js").catch(() => {});
+    // En la app el lector ya viene adentro: sin service worker, y el logo lleva al sitio (se abre en el navegador).
+    if (APP) $(".marca").href = SITIO;
+    else if ("serviceWorker" in navigator) navigator.serviceWorker.register("../sw.js").catch(() => {});
     await pintarBiblioteca();
+    if (APP) { recibirDeAndroid(); buscarVersionApp(); setInterval(buscarVersionApp, CADA_ACTUALIZAR); }
     // Enlace desde la ficha de Fénix: lector/#fenix=<id>&l=<idioma> agrega el libro (si falta) y lo abre.
     const h = new URLSearchParams(location.hash.slice(1));
     if (h.get("fenix")) {

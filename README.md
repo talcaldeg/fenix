@@ -229,7 +229,28 @@ Página: https://talcaldeg.github.io/fenix/ (GitHub Pages desde `main`).
   de `lector/lector.js` y se lee con `python herramientas/lector.py nube`. `revisar_diseno.py`
   comprueba que un libro agregado abre sin conexión y en frío, y prueba las páginas en 390x844 y 360x740
   con pantalla táctil (toques, deslizar, controles, letra grande, teléfono girado, cambio de capítulo).
-  Próximo paso aprobado: APK de Android por descarga directa con el mismo lector (sin Play Store).
+- App de Android del lector (`app/`, 21-nov-2026), por descarga directa, sin Play Store: Capacitor
+  envuelve `lector/` dentro del APK (`app/preparar.js` lo copia a `app/www`), así abre sin red desde la
+  primera vez, y los libros quedan en el IndexedDB de la propia app, que Android no borra para hacer
+  espacio. El mismo `lector.js` se da cuenta de que corre en la app (`window.Capacitor`): pide catálogo
+  y libros a `https://talcaldeg.github.io/fenix/`, no registra el service worker y usa el plugin propio
+  `LectorFenix` (`app/android/.../LectorFenix.java` y `MainActivity.java`) para lo que la web no tiene:
+  «Abrir con Lector Fénix» desde WhatsApp y Archivos (intent VIEW o SEND de `application/epub+zip`; el
+  EPUB pasa por la caché de la app y entra a la biblioteca como uno agregado a mano), los botones de
+  volumen para pasar página (solo con un libro abierto) y la pantalla completa de Android. Los libros se
+  siguen actualizando con `lector/catalogo.json`.
+  Lo compila GitHub Actions (`.github/workflows/apk.yml`) con cada cambio a `lector/` o `app/` en
+  `main`: compila y firma, revisa que la firma sea la de siempre (`HUELLA`), lo prueba en un emulador
+  Android 14 (`app/probar_emulador.sh`: abre sin red, «Abrir con», volumen y catálogo con red; capturas
+  en el artefacto «capturas») y lo publica como Release `lector-v<n>`, con `n` = `versionCode`. El sitio
+  enlaza a `releases/latest/download/lector-fenix.apk` (botón «Descargar app para Android» de la
+  biblioteca, con los pasos de instalación; no se muestra en iPhone ni dentro de la app), y la app avisa
+  «Hay versión nueva» cuando el último Release es mayor que su `versionCode`.
+  **Llave de firma (regla dura)**: si se pierde, el APK instalado ya no se puede actualizar. Vive como
+  secreto de GitHub (`LLAVE_APK_P12`, `LLAVE_APK_CLAVE`) y, de respaldo, cifrada con DPAPI fuera de git
+  en `Desktop\Personal\Claude\fenix_llaves\lector-apk.dpapi`; `python herramientas/llave_apk.py
+  subir|restaurar <carpeta>|ver`. Nunca se crea otra. Íconos y pantalla de inicio: `python app/iconos.py`
+  (desde `img/icono-maskable-512.png`).
 - Leídos y favoritos de cada visitante quedan en su navegador (`localStorage`).
   No hay puntuación de estrellas, ni de Fénix ni del visitante: solo la valoración moral de Delibris.
 - Cada ficha lleva al menos tres `citas` reales y verificadas: las más célebres, las más

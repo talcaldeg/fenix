@@ -1,0 +1,115 @@
+# APK de Android del Lector Fénix (app/): lo compila GitHub, no el PC.
+# Cada cambio a lector/ o app/ en main: compila y firma, lo prueba en un emulador (app/probar_emulador.sh)
+# y, si pasa, lo publica como Release «lector-v<n>». El sitio enlaza siempre al último:
+# https://github.com/talcaldeg/fenix/releases/latest/download/lector-fenix.apk
+# La app compara su versionCode (= n) con el último Release para avisar «Hay versión nueva».
+name: APK del Lector Fénix
+
+on:
+  push:
+    branches: [main]
+    paths: ["lector/**", "app/**", ".github/workflows/apk.yml"]
+  workflow_dispatch:
+
+concurrency:
+  group: apk
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+env:
+  # Huella SHA-256 del certificado de herramientas/llave_apk.py: si el APK sale firmado con otra llave
+  # (o sin firmar), no se publica, porque no se podría instalar encima del que ya tienen.
+  HUELLA: 00f810318a22969ba229e1a3d4626abb8a15dd3f8b6b21b8d8b6ca4ab81fc8c8
+
+jobs:
+  compilar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: |
+            lector
+            app
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "21"
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Lector dentro de la app
+        working-directory: app
+        run: npm ci && npm run preparar
+      - name: Compilar y firmar
+        env:
+          VERSION_APK: ${{ github.run_number }}
+          LLAVE_APK_CLAVE: ${{ secrets.LLAVE_APK_CLAVE }}
+          LLAVE_APK_P12: ${{ secrets.LLAVE_APK_P12 }}
+        run: |
+          echo "$LLAVE_APK_P12" | base64 -d > "$RUNNER_TEMP/lector.p12"
+          export LLAVE_APK_ARCHIVO="$RUNNER_TEMP/lector.p12"
+          cd app/android
+          chmod +x gradlew
+          ./gradlew assembleRelease --no-daemon
+          cp app/build/outputs/apk/release/app-release.apk "$GITHUB_WORKSPACE/lector-fenix.apk"
+          rm -f "$RUNNER_TEMP/lector.p12"
+      - name: Revisar la firma
+        run: |
+          APKSIGNER=$(ls "$ANDROID_HOME"/build-tools/*/apksigner | sort -V | tail -1)
+          "$APKSIGNER" verify --print-certs lector-fenix.apk | tee firma.txt
+          grep -qi "SHA-256 digest: $HUELLA" firma.txt || { echo "El APK no está firmado con la llave del Lector Fénix."; exit 1; }
+      - uses: actions/upload-artifact@v4
+        with:
+          name: apk
+          path: lector-fenix.apk
+
+  probar:
+    needs: compilar
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          sparse-checkout: app
+      - uses: actions/download-artifact@v4
+        with:
+          name: apk
+      - name: Libro de prueba
+        run: curl -fsSL -o libro.epub https://talcaldeg.github.io/fenix/libros/de-jaegher-la-vida-de-identificacion.epub
+      - name: KVM para el emulador
+        run: |
+          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
+          sudo udevadm control --reload-rules
+          sudo udevadm trigger --name-match=kvm
+      - name: Emulador
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: 34
+          target: google_apis
+          arch: x86_64
+          profile: pixel_6
+          disable-animations: true
+          script: bash app/probar_emulador.sh
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: capturas
+          path: capturas
+
+  publicar:
+    needs: probar
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: apk
+      - name: Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release create "lector-v${{ github.run_number }}" lector-fenix.apk -R "${{ github.repository }}" \
+            --title "Lector Fénix 1.${{ github.run_number }}" --latest \
+            --notes "APK del Lector Fénix, compilado desde ${GITHUB_SHA::7}. Se instala encima del anterior sin perder libros, páginas ni notas. Pasos de instalación: botón «Descargar app para Android» en https://talcaldeg.github.io/fenix/lector/"

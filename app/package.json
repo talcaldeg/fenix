@@ -1,0 +1,15 @@
+{
+  "name": "lector-fenix",
+  "private": true,
+  "description": "APK de Android del Lector Fénix: envuelve lector/ con Capacitor. Lo compila .github/workflows/apk.yml.",
+  "scripts": {
+    "preparar": "node preparar.js && cap sync android"
+  },
+  "dependencies": {
+    "@capacitor/android": "8.6.2",
+    "@capacitor/core": "8.6.2"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "8.6.2"
+  }
+}
