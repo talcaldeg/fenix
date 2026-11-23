@@ -164,6 +164,20 @@ uno.
     somos sus hermanos»; reporte del 20-nov). El francés *ne... que si* (y el inglés *only if*) es
     «solo... si»: «solo seremos coherederos de Cristo si somos sus hermanos». «No..., sino si»
     queda solo cuando contrapone dos preguntas («la cuestión no es si..., sino si...»).
+22. **Negación expletiva en la exclamación** (Marmion, «¡Qué confianza no debemos tener en un
+    Pontífice así!»; reporte del 23-nov). El francés *Quelle confiance ne devons-nous pas avoir!*
+    lleva un *ne... pas* que en castellano sobra: «¡Qué confianza debemos tener...!», «¡Qué
+    gracias aporta...!». Al revisar, se buscan las exclamaciones «¡Qué/Cuánto... no...!» y se
+    quita el «no» si no niega nada.
+23. **Escena del Evangelio aludida sin nota** (Marmion, «se postra ante sus discípulos para
+    lavarles los pies»; reporte del 23-nov). Como el error 16, pero con la Escritura: una escena o
+    un hecho bíblico contado sin comillas (el lavatorio, la samaritana, la oveja perdida) lleva
+    nota «Cf.» con el lugar (Jn 13, 4-15).
+24. **Latín sin traducir junto a una nota que solo da la referencia** (Marmion, san Agustín, *Sive
+    parum, sive multum...*; reporte del 23-nov). Si el latín ya tiene nota con la fuente («Jn 15,
+    5.»), la traducción se suma en esa misma nota («Jn 15, 5. N. del E.: «Sin mí no pueden hacer
+    nada».»); que la llamada exista no quiere decir que el pasaje esté traducido. Al revisar, se
+    recorren todas las cursivas latinas del cuerpo, no solo las que no tienen llamada.
 
 ## Glosario
 
