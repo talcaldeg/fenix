@@ -34,9 +34,7 @@ Cuando hay pureza de intención, el trabajo se hace desde el fondo, por amor, tr
 
 Por eso un trabajo santificado implica el ejercicio de las virtudes teologales. La fe: aquí estás, en este minúsculo detalle; y por eso cuido las cosas pequeñas, porque no da igual una cosa hecha sin cuidado que con cuidado. Descubro ahí que Dios me espera, que nada queda fuera, y que Dios, siendo infinito, está atento a lo mínimo y a las intenciones de mi corazón. Y todo en unión con Él: por Cristo, con Él y en Él, formando un solo corazón, viendo a través de sus ojos, sintonizando con su corazón. Todo está traspasado por Dios. Entonces lo que hago es una ofrenda que puedo llevar al altar, a la patena, especialmente en el ofertorio. Ahí va todo lo que voy a hacer hoy, unido a la ofrenda del Señor.
 
-### La tarea pequeña, hecha con amor
-
-Y así iré siendo contemplativo, y podré enseñar a los demás a serlo: quizá ese sea el modelo de educación del futuro, que la gente aprenda a contemplar en todo. Por eso decía san Josemaría que la tarea más hermosa quizá sea la más pequeña, la que está hecha con más amor, la más minúscula[^9]. Es algo que se comprueba todos los días, y es bueno no acostumbrarse. Se nota cuando un postre está hecho con amor, cuando la mesa está puesta con amor, cuando los cubiertos están colocados con cuidado y se ve que no fue un trámite. Esa es la tarea más pequeña, hecha con más amor.
+Y así iré siendo contemplativo, y podré enseñar a los demás a serlo: quizá ese sea el modelo de educación del futuro, que la gente aprenda a contemplar en todo. Se nota cuando un postre está hecho con amor, cuando la mesa está puesta con amor, cuando los cubiertos están colocados con cuidado y se ve que no fue un trámite.
 
 ### Cuando el trabajo no santifica
 
@@ -48,13 +46,13 @@ No santifico mi trabajo cuando tengo compartimentos estancos, es decir, cuando h
 
 Tampoco santifica cuando me impide cumplir mi plan de vida espiritual, o la vida de familia. Cuántas veces se oye decir a un hijo: mi papá nunca está, no me hace caso. Trabaja muchísimo, pero no atiende a su familia. O cuando me impide el apostolado.
 
-Y ocurre cuando soy un adicto al trabajo. Cuántas veces lo decimos con una sonrisa, pero detrás de ese ser adicto al trabajo hay una gran soberbia, una gran búsqueda de afirmación personal. Hay quien piensa que ha venido a este mundo a hacer cosas; Goethe hizo decir a Fausto que en el principio era la acción[^10]. Eso es activismo, y se parece al pelagianismo: yo voy a hacer las cosas porque soy muy capaz, yo me voy a salvar por mis propias fuerzas, voy a dejar mucho hecho, voy a tener muchos logros. Una persona así se va mundanizando y se justifica, además, diciendo que eso es secularidad: otra cerveza, otra película, en nombre de mi condición de laico. Se cuenta que san Josemaría decía a los primeros que trabajaron en bancos que debían rezar el doble, porque el dinero es muy peligroso: mundaniza.
+Y ocurre cuando soy un adicto al trabajo. Cuántas veces lo decimos con una sonrisa, pero detrás de ese ser adicto al trabajo hay una gran soberbia, una gran búsqueda de afirmación personal. Hay quien piensa que ha venido a este mundo a hacer cosas; Goethe hizo decir a Fausto que en el principio era la acción[^9]. Eso es activismo, y se parece al pelagianismo: yo voy a hacer las cosas porque soy muy capaz, yo me voy a salvar por mis propias fuerzas, voy a dejar mucho hecho, voy a tener muchos logros. Una persona así se va mundanizando y se justifica, además, diciendo que eso es secularidad: otra cerveza, otra película, en nombre de mi condición de laico. Se cuenta que san Josemaría decía a los primeros que trabajaron en bancos que debían rezar el doble, porque el dinero es muy peligroso: mundaniza.
 
 ### San José, icono del trabajo santificado
 
 Esa es la petición que podemos hacerle a Jesús, que crecía en edad, en sabiduría y en gracia[^lc252]: que también nosotros, que crecemos en edad irremediablemente, crezcamos en sabiduría y en gracia, en unión con Dios y en amor de Dios. Y en este tema podemos mirar siempre a san José, el icono de la santificación del trabajo. Seguramente no buscaba ningún lucimiento en su trabajo. Lo hacía siempre, siempre, siempre con el fin de atender a Jesús y a María, de darles los medios para vivir. Y lo hacía con ellos: trabajaban él y Jesús en el taller; terminaba la jornada, guardaban los instrumentos, se iban a cenar y seguían conversando.
 
-María estaría muchas veces con ellos, como vemos en los cuadros de la Sagrada Familia, en un taller y un hogar muy modestos y muy pequeños, cosiendo y aprovechando el tiempo. Juan Pablo II, en la exhortación apostólica sobre san José, escribe que «la aparente tensión entre la vida activa y la contemplativa encuentra en él una superación ideal»[^11]: se está contemplando y se está trabajando, y no hay por qué ver contraposición. San Josemaría decía que la devoción a san José creció en él de manera impetuosa en sus últimos años, quizá para hacernos entender que esto es lo propio de su espíritu: san José, el artesano, el trabajador, el que hace lo que debe.
+María estaría muchas veces con ellos, como vemos en los cuadros de la Sagrada Familia, en un taller y un hogar muy modestos y muy pequeños, cosiendo y aprovechando el tiempo. Juan Pablo II, en la exhortación apostólica sobre san José, escribe que «la aparente tensión entre la vida activa y la contemplativa encuentra en él una superación ideal»[^10]: se está contemplando y se está trabajando, y no hay por qué ver contraposición. San Josemaría decía que la devoción a san José creció en él de manera impetuosa en sus últimos años, quizá para hacernos entender que esto es lo propio de su espíritu: san José, el artesano, el trabajador, el que hace lo que debe.
 
 Callar, rezar, trabajar, sonreír: así podría encuadrarse la vida de san José.[^ne1] Que sean también los verbos de nuestro trabajo santificado.
 
@@ -70,7 +68,6 @@ Callar, rezar, trabajar, sonreír: así podría encuadrarse la vida de san José
 [^jp]: San Juan Pablo II escribió poesía desde joven; cf., por ejemplo, el poema «La cantera», que él mismo recuerda en *Don y misterio*, cap. I.
 [^7]: Cf. Jn 12, 32.
 [^8]: San Josemaría, *Camino*, n. 784.
-[^9]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.
-[^10]: J. W. von Goethe, *Fausto*, primera parte, v. 1237: «Im Anfang war die Tat».
-[^11]: San Juan Pablo II, exhortación apostólica *Redemptoris custos*, n. 27.
+[^9]: J. W. von Goethe, *Fausto*, primera parte, v. 1237: «Im Anfang war die Tat».
+[^10]: San Juan Pablo II, exhortación apostólica *Redemptoris custos*, n. 27.
 [^ne1]: N. del E.: la fórmula es de san Josemaría, que se proponía como programa cinco verbos: perdonar, callar, rezar, trabajar, sonreír (cf. «El perdón y san Josemaría Escrivá», opusdei.org).

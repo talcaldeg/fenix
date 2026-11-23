@@ -48,7 +48,7 @@ Ese espíritu es el amor de Dios. Es el cuidado de las cosas pequeñas por amor;
 
 ### Una nota en la sinfonía
 
-Siempre se puede encontrar, en lo que se tiene entre manos, la propia perfección. No porque sea un trabajo de un tipo o de otro, sino porque está hecho por amor. «Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo».[^4] Un pequeño acto hecho por amor marca la diferencia: hace que aquello se vaya a la eternidad, como una nota que hacía falta en la sinfonía de la creación.
+Siempre se puede encontrar, en lo que se tiene entre manos, la propia perfección. No porque sea un trabajo de un tipo o de otro, sino porque está hecho por amor. Un pequeño acto hecho por amor marca la diferencia: hace que aquello se vaya a la eternidad, como una nota que hacía falta en la sinfonía de la creación.
 
 Puedes preguntarle al Señor si tu trabajo, tus años de vida, tu situación actual están santificados: si colaboran humanamente con la obra de la creación y sobrenaturalmente con la obra de la Redención, encendiendo focos, proyectando luz. Tal vez tengas que corregir horas perdidas, lecturas insustanciales, programas de televisión inútiles, planes que son el equivalente de aquel casino de las vacaciones. Pon a producir los talentos. Y uno de los que todos tenemos es el tiempo: las veinticuatro horas de cada día y los siete días de cada semana.
 
@@ -57,4 +57,3 @@ Ojalá llegues al final de tu vida con mucho trabajo hecho. El mejor elogio que 
 [^1]: Cf. Jn 5, 17.
 [^2]: Cf. Gn 2, 15.
 [^3]: San Josemaría, *Forja*, n. 687.
-[^4]: San Josemaría, *Camino*, n. 813.

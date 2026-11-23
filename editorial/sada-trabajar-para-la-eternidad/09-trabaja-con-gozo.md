@@ -20,13 +20,11 @@ No era campesino, ni pescador, ni pastor, ni comerciante, aunque habría podido 
 
 Tiene uno muy profundo. Primero, nos dice que el hombre está hecho para trabajar. Lo enseña ya el Génesis: Dios puso al hombre en el paraíso para que lo cultivara, antes del castigo del pecado y no después.[^3] El trabajo no es el castigo; el castigo es la fatiga. El hombre es un ser perfectible y se perfecciona trabajando: se hace más hombre, se hace más proyecto divino en la medida en que trabaja.
 
-En segundo lugar, el Hijo de Dios trabajó para dar una dimensión eterna a las cosas materiales. Desde que el Verbo hecho carne escogió Nazaret, transformó todos los elementos de la tierra. Antes de Nazaret, caminar, beber, respirar, cansarse tenían un sentido común, prosaico, sin hondura ni trascendencia. Jesús de Nazaret eleva cada parcela de la tierra hasta la poesía más pura. A san Josemaría le gustaba hablar del rey Midas, que convertía en oro todo lo que tocaba: aquí lo toca alguien divino, que lo hace por amor, y lo convierte en oro.[^4] Dios bebió el agua de un arroyo. Dios puso sus pies en el polvo del camino. Dios miró la luna. Dios trabajó con sus manos. Esas cosas aparentemente banales han quedado transfiguradas por el uso que Dios hizo de ellas. Y entonces lo que tengo entre manos me está metiendo en el cielo, me está divinizando. Ese es mi ámbito propio.
+En segundo lugar, el Hijo de Dios trabajó para dar una dimensión eterna a las cosas materiales. A san Josemaría le gustaba hablar del rey Midas, que convertía en oro todo lo que tocaba: aquí lo toca alguien divino, que lo hace por amor, y lo convierte en oro.[^4] Y entonces lo que tengo entre manos me está metiendo en el cielo, me está divinizando. Ese es mi ámbito propio.
 
-### La piedra de Sísifo
+### La causa final de tu trabajo
 
-Por contraste, nos puede servir el mito antiguo de Sísifo. Los dioses lo castigaron por los pecados de su vida: tenía que subir empujando una roca hasta la cumbre de un peñasco muy alto. Pero nunca alcanzaba la cima: cuando estaba a punto de llegar, la roca rodaba de nuevo cuesta abajo. En el momento crítico, otra vez abajo. Sísifo repetía con redoblado afán su esfuerzo, sin culminar jamás su empresa. Era inútil, porque no contaba con el favor del cielo.
-
-Si miramos los campos de la actividad humana, veremos innumerables Sísifos: hombres que emprenden proyectos, se afanan, se desgastan, y al final tienen las manos vacías. No suman lo divino a lo humano y se quedan en lo humano. Todos podemos haber corrido ese riesgo, cuando el trabajo nos aparta de la relación con Dios. ¿Qué hacer? Algo muy sencillo: lo que decimos al final de la plegaria eucarística, por Cristo, con Él y en Él. Trabaja por Cristo, con Cristo y en Cristo. Tu trabajo se hace por Cristo: la causa final de tu trabajo es Jesucristo. No hago nada, Señor, que no sea para Ti. No lo hago para la galería, para que me vean, para que me paguen más, para quedar bien.
+Todos podemos haber corrido el riesgo de que el trabajo nos aparte de la relación con Dios. ¿Qué hacer? Algo muy sencillo: lo que decimos al final de la plegaria eucarística, por Cristo, con Él y en Él. Trabaja por Cristo, con Cristo y en Cristo. Tu trabajo se hace por Cristo: la causa final de tu trabajo es Jesucristo. No hago nada, Señor, que no sea para Ti. No lo hago para la galería, para que me vean, para que me paguen más, para quedar bien.
 
 ### Por Cristo, con Cristo y en Cristo
 
@@ -44,13 +42,9 @@ Igual podemos decir nosotros: disfruta. Hay dos cansancios. El del esclavo que c
 
 Qué bonito lo que enseñaba san Josemaría: ya no se puede decir hasta aquí rezo y hasta aquí trabajo. Es una sola cosa.[^7] Estoy gozando contigo en lo que hago. Convierto mi trabajo en oración, en diálogo contigo. No basta con ofrecerlo, ni con decir de vez en cuando una jaculatoria. Se trata de estar con Él: conversa, cuéntaselo todo. Sé contemplativo en tu trabajo y en la calle; refiérelo todo a Él, escucha lo que te dice. Entonces tu trabajo se va a la eternidad, trabajas para la eternidad.
 
-### Un collar para la Virgen
+### En la oscuridad de un pueblo pequeño
 
-Se cuenta la historia de un viajero que se encuentra con un labrador y le pregunta para qué ara la tierra. Para echar la semilla, responde. ¿Y para qué la semilla? Para que salga el trigo. ¿Y el trigo? Para hacer pan. ¿Y el pan? Para comer. ¿Y para qué comer? Para vivir. ¿Y para qué vivir? El labrador hizo una pausa y dijo que para labrar la tierra. Se había cerrado el círculo: lo que se hacía en la tierra, en la tierra se quedaba. Luego el viajero encontró a una niña que cortaba flores, y le hizo las mismas preguntas. Cortaba las flores para hacer un collar para la Virgen. El viajero ya no pudo preguntar más: lo que hacía la niña no era para la tierra, sino para el cielo.
-
-Qué bueno que también nosotros hagamos collares para la Virgen. Como el niño que va descubriendo violetas, flores pequeñas y sencillas, escondidas entre la maleza o debajo de otras, sin color deslumbrante ni aroma, pero que él va cortando una a una. Quizá mi trabajo no sea espectacular, ni salga en los periódicos, ni reciba una gran recompensa. Pero estoy haciendo collares para la Virgen, tejiendo pequeñas violetas.
-
-Así hizo Jesús, en la oscuridad de un pueblo pequeño, perdido entre las montañas de Galilea, en una sociedad sometida al gran poder del imperio romano. Allí trabajaba este niño, este adolescente, este joven, este adulto, y aquel trabajo se convertía en gloria de Dios. Y trabajaba así para enseñarte qué has de hacer: hazlo todo desde el amor, con amor, por amor; con Cristo, por Cristo y en Cristo. El Padre estará complacido, tu trabajo te hará crecer en sabiduría y en gracia, y te irá consiguiendo la eternidad. Que tu nombre no esté escrito solo en los astros, sino más allá: en la realidad del cielo, por toda la eternidad.
+Jesús vivió en la oscuridad de un pueblo pequeño, perdido entre las montañas de Galilea, en una sociedad sometida al gran poder del imperio romano. Allí trabajaba este niño, este adolescente, este joven, este adulto, y aquel trabajo se convertía en gloria de Dios. Y trabajaba así para enseñarte qué has de hacer: hazlo todo desde el amor, con amor, por amor; con Cristo, por Cristo y en Cristo. El Padre estará complacido, tu trabajo te hará crecer en sabiduría y en gracia, y te irá consiguiendo la eternidad. Que tu nombre no esté escrito solo en los astros, sino más allá: en la realidad del cielo, por toda la eternidad.
 
 [^1]: Lc 2, 52.
 [^2]: Cf. San Josemaría, *Amigos de Dios*, n. 78.

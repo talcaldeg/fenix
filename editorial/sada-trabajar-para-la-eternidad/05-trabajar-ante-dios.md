@@ -1,12 +1,10 @@
 ## 5. Trabajar ante Dios
 
-### Una fatiga que no es vana
+### Lo que haces ante Dios
 
-San Pablo termina su gran capítulo sobre la resurrección con una exhortación a los corintios: que permanezcan firmes, progresando siempre en la obra del Señor, conscientes de que «en el Señor vuestro trabajo no es vano».[^1] La expresión es fuerte: no es una realidad vacía, hueca, inútil.
+Se trata de tomar conciencia de lo que estoy haciendo, aunque sea mínimo, aunque pase inadvertido a los ojos del mundo. Nada de lo que hago por Dios es vano. Lo que haces ante Dios se va a la eternidad y recibe una recompensa infinita, aunque sea una realidad mínima.
 
-Conviene detenerse en esa palabra, «conscientes». Se trata de tomar conciencia de lo que estoy haciendo, aunque sea mínimo, aunque pase inadvertido a los ojos del mundo. Nada de lo que hago por Dios es vano. Dijo el Señor a Samuel: «El hombre mira las apariencias pero el Señor mira el corazón».[^2] Y Jesús dijo a los fariseos: «Dios conoce vuestros corazones».[^3] Lo que el mundo premia, lo espectacular, lo llamativo, lo que sale en los periódicos y recibe reflectores y alabanzas, es abominable ante Dios: a Dios le choca, lo rechaza. En cambio, lo que haces ante Dios se va a la eternidad y recibe una recompensa infinita, aunque sea una realidad mínima.
-
-Por eso vale la pena pensar en nuestro trabajo hecho por amor, con amor, desde el amor. Si no lo hacemos así, hacemos lo que hace el mundo: buscar la paga, el reconocimiento, la propia gloria, la fama, la popularidad, el impresionar a los demás. O bien buscamos aquello que el Padre ve en lo oculto: «tu Padre, que ve en lo oculto, te recompensará».[^4] La pregunta de fondo es siempre la misma: ¿por qué lo hago?
+Por eso vale la pena pensar en nuestro trabajo hecho por amor, con amor, desde el amor. Si no lo hacemos así, hacemos lo que hace el mundo: buscar la paga, el reconocimiento, la propia gloria, la fama, la popularidad, el impresionar a los demás. O bien buscamos aquello que el Padre ve en lo oculto: «tu Padre, que ve en lo oculto, te recompensará».[^1] La pregunta de fondo es siempre la misma: ¿por qué lo hago?
 
 ### Por Jesús, no por la paga
 
@@ -26,27 +24,23 @@ Algunos tienen el carisma especial de encontrar a Cristo en el leproso o en el h
 
 ### Contemplativos en medio del trabajo
 
-San Josemaría enseñaba que esa vida contemplativa hará brotar del alma más actos de amor, jaculatorias, acciones de gracias, actos de desagravio y comuniones espirituales. Y eso, «mientras atiendes tus obligaciones: al descolgar el teléfono, al subir a un medio de transporte, al cerrar o abrir una puerta, al pasar ante una iglesia, al comenzar una nueva tarea, al realizarla y al concluirla; todo lo referirás a tu Padre Dios».[^5]
+Hay quienes no tienen respetos humanos para persignarse. El taxista lo hace cada vez que sube un pasajero, el futbolista al entrar a la cancha, el que metió un gol, el atleta antes de la carrera. Nosotros no siempre podemos hacer la señal de la cruz al empezar una tarea, pero sí podemos decir por dentro: «Por Ti, todo por Ti. Contigo voy a hacer esto, codo con codo, hombro con hombro. Tú en mí y yo en Ti; vamos a ser uno».
 
-Hay quienes no tienen respetos humanos para persignarse. El taxista lo hace cada vez que sube un pasajero, el futbolista al entrar a la cancha, el que metió un gol, el atleta antes de la carrera. Nosotros no siempre podemos hacer la señal de la cruz al empezar una tarea, pero sí podemos decir por dentro: «Por Ti, todo por Ti. Contigo voy a hacer esto, codo con codo, hombro con hombro. Tú en mí y yo en Ti; vamos a ser uno». Puede ser un acto de amor, una jaculatoria, una acción de gracias.
-
-Y de gracias, tantas. Sé una persona que da gracias por todo, a quien todo le parece bueno: porque vino fulano o porque no vino, porque está de buenas o de malas, porque es como es. Y acuérdate también del desagravio. En el mundo ocurren cada día cosas terribles, guerras, violencias, muertes injustas, y no hace falta irse lejos para encontrarlas. Hay mucho que reparar con pequeños actos de amor. Y las comuniones espirituales, con hambre, con ansia, con deseo.
+Sé una persona que da gracias por todo, a quien todo le parece bueno: porque vino fulano o porque no vino, porque está de buenas o de malas, porque es como es. Y acuérdate también del desagravio. En el mundo ocurren cada día cosas terribles, guerras, violencias, muertes injustas, y no hace falta irse lejos para encontrarlas. Hay mucho que reparar con pequeños actos de amor. Y las comuniones espirituales, con hambre, con ansia, con deseo.
 
 ### Pequeños trucos de amor
 
 A veces ayuda inventar pequeños trucos. Voy a encender el horno y digo: «Líbrame, Señor, del fuego del infierno». O, si quiero ser más positivo: «Enciéndeme mejor en el fuego de tu amor; enciende mi corazón con el mismo fuego que voy a encender». Voy a hacer la limpieza: limpio esto como si quisiera limpiar mi alma, que está llena de miseria. Al caminar, no camino solo: lo invito siempre a caminar conmigo. Al subir las escaleras me voy dirigiendo al cielo; al bajarlas, me voy metiendo en tu corazón. Al acostarme me duermo en el regazo de María. Al sentarme a cenar le digo: «Acompáñame, te invito a cenar». Al encontrarme con una persona que quizá no me agrada mucho, pienso: «Voy a encontrarte a Ti, disfrazado de esa persona».
 
-Entonces podré decir con verdad que una hora de estudio es una hora de oración.[^6] Y lo mismo una hora de planchado, de lavado, de viaje en coche, un rato de conversación con amigos. Por eso decía san Josemaría que quien vive de cara a Dios no tiene por qué aburrirse: «Nosotros no estamos nunca solos. No tenemos derecho a aburrirnos, ni a sentirnos tristes».[^7] Quien vive así está en conversación con su Padre. Está en diálogo contemplativo, o a veces simplemente en su presencia. «Me estás viendo. A lo mejor no te voy a decir nada, pero te invité a sentarte frente a mí y sé que estás ahí».
+Quien vive así está en conversación con su Padre. Está en diálogo contemplativo, o a veces simplemente en su presencia. «Me estás viendo. A lo mejor no te voy a decir nada, pero te invité a sentarte frente a mí y sé que estás ahí».
 
-Esta es la fe y esta es la vocación del cristiano corriente: contemplativo en la operación, contemplativo en el trabajo. Hay quienes son contemplativos ante la naturaleza, y es muy bueno aprender a contemplar a Dios en su obra creadora. Pero lo propio de nuestra vocación es contemplar mientras caminas, mientras corres, mientras trabajas, mientras hablas, mientras te duermes y mientras despiertas. Tendrás una única vida, y lo que estarás haciendo es ejercitar constantemente las virtudes teologales.
+Esta es la fe y esta es la vocación del cristiano corriente: contemplativo en la operación, contemplativo en el trabajo. Hay quienes son contemplativos ante la naturaleza, y es muy bueno aprender a contemplar a Dios en su obra creadora. Pero lo propio de nuestra vocación es contemplar mientras caminas, mientras corres, mientras trabajas, mientras hablas, mientras te duermes y mientras despiertas. Lo que estarás haciendo es ejercitar constantemente las virtudes teologales.
 
 ### Al ritmo de las virtudes
 
 Debemos vivir al ritmo de las virtudes teologales, no al ritmo que marcan los medios de comunicación o los teléfonos celulares, sino al de ese mundo nuevo que se nos da con la gracia santificante: la fe en la inteligencia, la esperanza en la memoria y la imaginación, la caridad en el centro del alma. Así ya puedo actuar de manera sobrenatural, porque además cuento con el influjo del Espíritu Santo, que viene con sus dones y no se niega a quien se dispone a recibirlos, a quien no se distrae, a quien de verdad lo desea y corresponde a su vocación.
 
-Alguien que viera lo que piensas y dices por dentro tal vez diría que estás un poco loco, que traes tu propio mundo, como si llevaras música por dentro. Pues qué bonito: sí, llevo música por dentro. Hay gente que la trae nada más en las orejas, con audífonos. Tú la traes por dentro, una música celestial. San Josemaría contaba: «He llenado las carreteras de Europa de avemarías y de canciones».[^8] Imagina cómo estarían los caminos de tu casa, los pasillos, las paredes, las habitaciones de tu casa: tapizadas de oración, hechas de avemarías y de canciones. Una casa así es como una central atómica: de ella sale mucha fuerza de Dios. ¿Y de dónde sale? De cada corazón que vive teologalmente, en el ejercicio de las virtudes que Dios nos ha dado, infusas, sin merecerlas.
-
-Nuestra vida es trabajar y rezar, y al revés, rezar y trabajar. «¿Qué haces?». «Lo que hago siempre». «¿Y qué haces siempre?». «Trabajo y rezo, rezo y trabajo». No rezas solo cuando te detienes: rezas también mientras trabajas y trabajas mientras rezas. Llega un momento en que ya no se saben distinguir estos dos conceptos, contemplación y acción, y terminan por significar lo mismo en la mente y en la conciencia.
+Alguien que viera lo que piensas y dices por dentro tal vez diría que estás un poco loco, que traes tu propio mundo, como si llevaras música por dentro. Pues qué bonito: sí, llevo música por dentro. Hay gente que la trae nada más en las orejas, con audífonos. Tú la traes por dentro, una música celestial. Un alma así es como una central atómica: de ella sale mucha fuerza de Dios. ¿Y de dónde sale? De cada corazón que vive teologalmente, en el ejercicio de las virtudes que Dios nos ha dado, infusas, sin merecerlas.
 
 Pide al Señor que ese despliegue de la vocación contemplativa se dé en el mundo, en el trabajo, en lo ordinario. No digas: «Tengo que esperar otra situación para estar metido en Dios». Tu vocación te lleva a decir: en el instante presente. No te vayas del instante presente; aprovéchalo, y cuida que no se vuelva vacío, como esas nueces que de pronto abres y no tienen nada dentro. Hay personas cuya apariencia y cuyo quehacer son sencillos, pero por dentro están llenas de Dios.
 
@@ -58,17 +52,10 @@ Un círculo cerrado. Lo que hacía en la tierra en la tierra se quedaba. Empieza
 
 Y el viajero ya no pudo preguntar más, porque lo que hacía la niña en la tierra no era para la tierra.
 
-Ojalá que al final de cada jornada podamos preguntarnos: ¿hiciste hoy muchos collares para la Virgen? ¿Hiciste muchas obras de arte para Dios, o te quedaste en la tierra? Qué triste sería haber cosido con una aguja sin Él.[^9] Hagamos collares para la Virgen, y pidámosle que nos ayude a trabajar como ella.
+Ojalá que al final de cada jornada podamos preguntarnos: ¿hiciste hoy muchos collares para la Virgen? ¿Hiciste muchas obras de arte para Dios, o te quedaste en la tierra? Qué triste sería haber cosido con una aguja sin Él.[^2] Hagamos collares para la Virgen, y pidámosle que nos ayude a trabajar como ella.
 
-A María le resultaba más fácil, porque lo que hacía era muy directo: daba de comer al Niño, trabajaba, y todo con la única dirección de amar a su Hijo y cumplir el proyecto de Dios con perfecta rectitud de intención. Por eso podemos decir que en María y en José se daba la contemplación en la acción de manera espontánea y natural. Esa es nuestra vocación, esa es la familia a la que pertenecemos, con todas las miradas centradas en el Señor. Así aseguraremos que trabajamos por amor, haciéndolo todo por Cristo, con Cristo y en Cristo.[^10]
+A María le resultaba más fácil, porque lo que hacía era muy directo: daba de comer al Niño, trabajaba, y todo con la única dirección de amar a su Hijo y cumplir el proyecto de Dios con perfecta rectitud de intención. Por eso podemos decir que en María y en José se daba la contemplación en la acción de manera espontánea y natural. Esa es nuestra vocación, esa es la familia a la que pertenecemos, con todas las miradas centradas en el Señor. Así aseguraremos que trabajamos por amor, haciéndolo todo por Cristo, con Cristo y en Cristo.[^3]
 
-[^1]: 1 Co 15, 58.
-[^2]: 1 S 16, 7.
-[^3]: Lc 16, 15.
-[^4]: Mt 6, 4.
-[^5]: San Josemaría, *Amigos de Dios*, n. 149.
-[^6]: San Josemaría, *Camino*, n. 335: «Una hora de estudio, para un apóstol moderno, es una hora de oración».
-[^7]: Palabras de san Josemaría recogidas en Javier Echevarría, *Memoria del Beato Josemaría Escrivá*, Rialp, Madrid 2000, p. 170.
-[^8]: Ana Sastre, *Tiempo de caminar*, Rialp, Madrid 1989, p. 438.
-[^9]: Cf. San Josemaría, *Camino*, n. 967.
-[^10]: Cf. Misal Romano, Plegaria eucarística, doxología final.
+[^1]: Mt 6, 4.
+[^2]: Cf. San Josemaría, *Camino*, n. 967.
+[^3]: Cf. Misal Romano, Plegaria eucarística, doxología final.

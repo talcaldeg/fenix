@@ -2,7 +2,7 @@
 
 ### Conocer a Jesús para saber quiénes somos
 
-«Y Jesús crecía en sabiduría, en edad y en gracia delante de Dios y de los hombres»[^1]. Con esta frase termina san Lucas el relato de la infancia del Señor y, a continuación, empieza a hablar de la predicación del Bautista. Nosotros queremos, como siempre, conocer más a Jesús, porque no solo nos revela cómo es Él, sino también cómo debemos ser nosotros. Nuestra salvación está en ese conocimiento: Cristo «manifiesta plenamente el hombre al propio hombre y le descubre la sublimidad de su vocación»[^2]. La frase de san Lucas es muy escueta y, como todas, encierra una gran revelación.
+«Y Jesús crecía en sabiduría, en edad y en gracia delante de Dios y de los hombres»[^1]. Nosotros queremos, como siempre, conocer más a Jesús, porque no solo nos revela cómo es Él, sino también cómo debemos ser nosotros. Nuestra salvación está en ese conocimiento: Cristo «manifiesta plenamente el hombre al propio hombre y le descubre la sublimidad de su vocación»[^2]. La frase de san Lucas es muy escueta y, como todas, encierra una gran revelación.
 
 Jesús crecía: se desarrollaba, aumentaba en los distintos aspectos, como todo ser vivo. Crecía en edad porque es perfecto hombre, y nada lo separa de la verdad de la naturaleza humana. En cada edad era perfecto, con la madurez propia de esa edad. En esta oración contemplativa estamos invitados a meternos en cada una de las edades de la vida del Señor: el niño, el adolescente, que vivió con sus padres un episodio un poco tormentoso para ellos.
 
@@ -12,23 +12,19 @@ Crecía en sabiduría, esa ciencia de las cosas más altas, la ciencia que se ve
 
 Y crecía en gracia. Su alma humana, movida por el Espíritu Santo, en perfecta correspondencia, tenía la plenitud de gracia, que se manifestaba cada vez más.[^ne1] Por eso oraba: para unir su voluntad humana a la del Padre y escuchar las inspiraciones del Espíritu Santo. Si lo hacía con tanta frecuencia en su vida pública, cuánto oraría en el silencio y la paz de Nazaret, una población tan pequeña.
 
-### Los años de oscuridad
+### La maravilla de la Encarnación
 
-Esos años de vida oculta, anteriores a su predicación, son nuestra especialidad, nuestro espíritu. San Josemaría decía que por muchas vueltas que les demos, nos llenamos de admiración, que siempre es poca, por esos treinta años de oscuridad, que son los que vivimos nosotros[^3]. No tenemos ningún secreto que guardar, pero no manifestamos hacia afuera nuestra entrega al servicio del Señor, como hizo Jesucristo en Nazaret. Nadie tenía idea de quién era, por eso sus paisanos se extrañaron tanto cuando vieron su sabiduría y sus milagros. Nuestra vida es la vida común y ordinaria de nuestros compañeros, como la suya: el hijo del carpintero[^4].
+Jesús no era pescador, ni agricultor, ni pastor. ¿Qué sentido tiene que haya sido artesano? Quizá este: trabajaba con sus manos, transformaba la realidad con sus manos, transformaba los elementos de la tierra, y con eso los iba santificando. Esta es la maravilla de la Encarnación, y es también el fundamento de la santificación del trabajo: lo terrenal, lo material y lo humano quedaron entreverados con lo divino, con lo trascendente y con lo eterno por el Verbo encarnado.
 
-Jesús no era pescador, ni agricultor, ni pastor. ¿Qué sentido tiene que haya sido artesano? Quizá este: trabajaba con sus manos, transformaba la realidad con sus manos, transformaba los elementos de la tierra, y con eso los iba santificando. Jean Guitton lo decía así: Jesús eleva cada parcela de la tierra hasta la poesía pura[^gui]. Esta es la maravilla de la Encarnación, y es también el fundamento de la santificación del trabajo: lo terrenal, lo material y lo humano quedaron entreverados con lo divino, con lo trascendente y con lo eterno por el Verbo encarnado.
-
-El mismo autor escribe que, si considera que Dios bebió el agua del torrente, que Dios posó sus pies en el polvo del camino y que Dios miró la luna, ya no puede mirar la luna, pisar el suelo o comer un pedazo de pan de la misma manera. Todas esas cosas banales de la tierra han sido transfiguradas por el uso que Dios hizo de ellas. Es como cuando vemos con qué cuidado los fieles guardan un objeto que perteneció a un santo, el escritorio de santa Teresa o el calzado del cura de Ars: comprendemos que un objeto de uso cotidiano lleve el sello de quien lo usó. Pues Jesús transfiguró la tierra porque la pisó con sus pies, el aire porque lo respiró, el agua porque metió en ella sus manos, el fuego porque sin duda lo encendió todas las noches, y el sol, porque lo contemplaba desde la aurora y lo veía desvanecerse en el crepúsculo.
+Es como cuando vemos con qué cuidado los fieles guardan un objeto que perteneció a un santo, el escritorio de santa Teresa o el calzado del cura de Ars: comprendemos que un objeto de uso cotidiano lleve el sello de quien lo usó.
 
 Desde que el Verbo se hizo carne y trabajó con sus manos, tenemos la invitación a imitarlo y a vivir como vivió Él, santificando la realidad cotidiana.
 
 ### Primero, en gracia
 
-¿Cómo hacerlo? En primer lugar, no se puede santificar nada en alguien que no está en gracia. Y hay que enseñarlo, porque cuánto trabajo inútil, cuánto esfuerzo para nada, cuánto empeño, cuánto sudor y cuánto sacrificio acaban por no tener mérito ante Dios. El hombre moderno está repitiendo el mito de Sísifo.
+¿Cómo hacerlo? En primer lugar, no se puede santificar nada en alguien que no está en gracia. Y hay que enseñarlo, porque cuánto trabajo inútil, cuánto esfuerzo para nada, cuánto empeño, cuánto sudor y cuánto sacrificio acaban por no tener mérito ante Dios. No hay mérito sobrenatural en un trabajo que no se hace en gracia: quien lo realiza ha perdido la gracia, la vida de hijo de Dios.
 
-Sísifo fue castigado a empujar una roca hasta la cumbre de un elevado peñasco. Nunca alcanzaba la cima, porque cuando ya iba a coronarla, la gran piedra caía otra vez a las faldas de la montaña, y él tenía que repetir su ascensión una y otra vez sin lograr nunca su empresa. Todo era inútil porque no contaba con el favor del cielo. Si miramos los campos de la actividad humana, veremos innumerables Sísifos: hombres que emprenden grandes proyectos, se afanan, se desgastan en ellos y nunca los coronan con éxito, porque no suman a su actividad humana la actividad divina. No hay mérito sobrenatural en un trabajo que no se hace en gracia: quien lo realiza ha perdido la gracia, la vida de hijo de Dios.
-
-Y al revés: si lo haces en gracia, con rectitud de intención, por amor, contemplativamente, aunque sea algo minúsculo, tu Padre Dios lo mira con gran complacencia. A san Josemaría le preguntaron cuál era la labor más hermosa que se hacía en el Opus Dei, y respondió que no lo sabía, pero que quizá fuera la más pequeña, la que se hace con más amor[^5].
+Y al revés: si lo haces en gracia, con rectitud de intención, por amor, contemplativamente, aunque sea algo minúsculo, tu Padre Dios lo mira con gran complacencia.
 
 ### A peso de amor
 
@@ -36,7 +32,7 @@ El Señor mide nuestras obras a peso de amor, a peso de la ilusión con que se l
 
 Así es nuestro trabajo. Su valor objetivo puede ser muy pequeño: algo que escribimos en el computador, hacer la cama, acompañar a alguien al médico, lo que sea. Si sale de un corazón lleno de amor, donde buscamos complacerlo a Él, Dios lo recibe con gran agrado. Está traspasado de amor, empapado, tiene alma. Qué distinto es recibir un correo electrónico de recibir una carta escrita a mano, con la caligrafía cuidada, quizá en varias tardes: lleva más alma, la persona está más presente. Dios está atento a las intenciones minúsculas, y sobre todo a la rectitud con que hicimos el trabajo.
 
-Con perfección humana, en gracia, por amor y con rectitud, el trabajo tiene un gran valor. Juan Pablo II, que de joven trabajó como obrero en una cantera de la fábrica Solvay, escribió un poema sobre esa experiencia. Allí dice: «entenderás conmigo que toda la grandeza del trabajo bien hecho es grandeza del hombre»[^6]. Como el Señor crecía también en su perfección humana gracias a su trabajo, el nuestro nos hace cooperar con la creación, siempre y cuando tenga estas características.
+Con perfección humana, en gracia, por amor y con rectitud, el trabajo tiene un gran valor. Juan Pablo II, que de joven trabajó como obrero en una cantera de la fábrica Solvay, escribió un poema sobre esa experiencia. Allí dice: «entenderás conmigo que toda la grandeza del trabajo bien hecho es grandeza del hombre»[^3]. Como el Señor crecía también en su perfección humana gracias a su trabajo, el nuestro nos hace cooperar con la creación, siempre y cuando tenga estas características.
 
 ### Cuando el trabajo aparta de Dios
 
@@ -48,27 +44,19 @@ El trabajo no sirve para demostrar nuestra valía, sino la rectitud de trabajar 
 
 ### Artista, poeta y maestro
 
-Dice san Josemaría que sus hijos han de actuar profesionalmente «con sabiduría de artista, con felicidad de poeta, con seguridad de maestro»[^7]. Sabiduría de artista: una obra de arte, con el cuidado de lo pequeño, de lo que quizá los hombres no ven pero Dios sí. Felicidad de poeta: sabiendo que eso trasciende y no se queda en la materialidad de lo que hago. San Francisco de Asís es maestro en esto: veía a Dios en el hermano sol y en la hermana muerte[^8]; veía el misterio en cada cosa, no lo opaco sino lo luminoso. Con felicidad de poeta, desde el fondo del alma, porque lo está viendo mi Padre Dios. Y con seguridad de maestro: la perfección humana, porque lo hago contemplativamente, santificando esa realidad, y me lleva a la gloria de Dios y al bien de las almas.
+Dice san Josemaría que sus hijos han de actuar profesionalmente «con sabiduría de artista, con felicidad de poeta, con seguridad de maestro»[^4]. Sabiduría de artista: una obra de arte, con el cuidado de lo pequeño, de lo que quizá los hombres no ven pero Dios sí. Felicidad de poeta: sabiendo que eso trasciende y no se queda en la materialidad de lo que hago. San Francisco de Asís es maestro en esto: veía a Dios en el hermano sol y en la hermana muerte[^5]; veía el misterio en cada cosa, no lo opaco sino lo luminoso. Con felicidad de poeta, desde el fondo del alma, porque lo está viendo mi Padre Dios. Y con seguridad de maestro: la perfección humana, porque lo hago contemplativamente, santificando esa realidad, y me lleva a la gloria de Dios y al bien de las almas.
 
-Puedes preguntarte entonces: ¿mi trabajo me santifica o me mundaniza? ¿Es para mí un compartimento estanco o una integración en la unidad de vida? ¿Me impide la oración, o me fomenta la piedad? ¿Es un obstáculo para mis compromisos y mi apostolado personal, o una ocasión para intensificarlos? ¿Me lleva al envanecimiento? Quizá, el día del juicio, más vale que tape un poco mis éxitos profesionales, por si me llevaron a la vanidad. ¿Me está haciendo perfeccionista, voluntarista, o me eleva, y tengo la felicidad del poeta? Hay gente que piensa que ha venido a este mundo a hacer cosas, y así se hacen muchos Sísifos. No hemos venido a hacer cosas. Hemos venido a amar, a amar a Dios.
+Puedes preguntarte entonces: ¿mi trabajo me santifica o me mundaniza? ¿Es para mí un compartimento estanco o una integración en la unidad de vida? ¿Me impide la oración, o me fomenta la piedad? ¿Es un obstáculo para mis compromisos y mi apostolado personal, o una ocasión para intensificarlos? ¿Me lleva al envanecimiento? Quizá, el día del juicio, más vale que tape un poco mis éxitos profesionales, por si me llevaron a la vanidad. ¿Me está haciendo perfeccionista, voluntarista, o me eleva, y tengo la felicidad del poeta? Hay gente que piensa que ha venido a este mundo a hacer cosas. No hemos venido a hacer cosas. Hemos venido a amar, a amar a Dios.
 
-### Collares para la Virgen
+### La síntesis que da el amor
 
-Por eso conviene mirar a san José, la síntesis que supera la oposición entre acción y contemplación. Quizá por eso quiso Dios que su Hijo unigénito fuera artesano y llevara el título de hijo del artesano. San José es el modelo de la vida contemplativa en el trabajo. Estaría en el taller con los instrumentos de su tarea, unido a Jesús, que estaba con él; le comentaría cosas, quizá hasta le diría cómo hacer aquello. Y al llegar la hora de terminar, guardaban las herramientas, se iban a cenar y seguían conversando. Todo lo hacía por Jesús y por María. Esa es la síntesis que da el amor.
+Por eso conviene mirar a san José, la síntesis que supera la oposición entre acción y contemplación. Quizá por eso quiso Dios que su Hijo unigénito fuera artesano. San José es el modelo de la vida contemplativa en el trabajo. Estaría en el taller con los instrumentos de su tarea, unido a Jesús, que estaba con él; le comentaría cosas, quizá hasta le diría cómo hacer aquello. Y al llegar la hora de terminar, guardaban las herramientas, se iban a cenar y seguían conversando. Todo lo hacía por Jesús y por María. Esa es la síntesis que da el amor.
 
-Para terminar, un pequeño cuento de Giovanni Papini. Un viajero encuentra a un sembrador y le pregunta para qué labra la tierra. Para poner en ella la semilla, responde el sembrador; la semilla, para que salga el trigo; el trigo, para hacer pan; el pan, para comer; comer, para vivir; y vivir, para labrar la tierra. El círculo se cerró: lo que se hacía en la tierra, en la tierra se quedaba.
-
-Después el viajero encuentra a una niña que cortaba flores e intenta con ella el mismo diálogo. Le pregunta para qué corta flores, y la niña le dice que hace un collar para la Virgen. El viajero ya no pudo preguntar nada más. Lo que hacía la niña no era para la tierra.
-
-Yo también voy a hacer muchos collares para la Virgen. Voy a tener esta alma de niña y a ofrecerle las flores de mi tarea, santificada, hecha como la hacía María, con el valor inmenso que tendría todo lo que ella realizaba, traspasada por el amor de Jesús. No quisiera perder nunca de vista esto: vivir así mi fe y mi contemplación en la actividad más sencilla, en la cotidiana, en aquello que tengo encomendado y que debo saber santificar.
+Voy a ofrecer mi tarea, santificada, hecha como la hacía María, con el valor inmenso que tendría todo lo que ella realizaba, traspasada por el amor de Jesús. No quisiera perder nunca de vista esto: vivir así mi fe y mi contemplación en la actividad más sencilla, en la cotidiana, en aquello que tengo encomendado y que debo saber santificar.
 
 [^1]: Lc 2, 52.
 [^2]: Concilio Vaticano II, constitución pastoral *Gaudium et spes*, n. 22.
-[^3]: Cf. San Josemaría, *Es Cristo que pasa*, n. 14.
-[^4]: Cf. Mt 13, 55.
-[^gui]: Cf. Jean Guitton. El autor lo cita de memoria; no hemos hallado el pasaje en las obras de Guitton.
-[^5]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.
-[^6]: San Juan Pablo II, poema «La cantera», citado en *Don y Misterio*, cap. I.
-[^7]: San Josemaría, *Cartas I*, carta n. 3, n. 4.
-[^8]: Cf. San Francisco de Asís, *Cántico de las criaturas*.
+[^3]: San Juan Pablo II, poema «La cantera», citado en *Don y Misterio*, cap. I.
+[^4]: San Josemaría, *Cartas I*, carta n. 3, n. 4.
+[^5]: Cf. San Francisco de Asís, *Cántico de las criaturas*.
 [^ne1]: N. del E.: según santo Tomás de Aquino, la gracia de Cristo fue plena desde el principio y no podía aumentar; lo que crecía eran sus efectos, en obras cada vez más sabias y santas (Suma Teológica, III, q. 7, a. 12; cf. Lc 2, 52; Catecismo, n. 472).

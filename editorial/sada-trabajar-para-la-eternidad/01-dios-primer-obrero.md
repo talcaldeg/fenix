@@ -30,23 +30,20 @@ A san Josemaría le gustaba recordar que Dios puso a Adán en el Edén para que 
 
 En el paraíso el trabajo no era la obligación costosa que fue después. La tierra todavía no estaba maldita, no producía espinas ni abrojos, y no se trabajaba con el sudor de la frente. Adán trabajaba gozosamente, y así debemos buscar hacerlo nosotros. Con un término moderno, podríamos decir que su trabajo era una especie de juego, en el sentido del deporte: una tarea que le llenaba de alegría. Siempre debemos buscar que nuestro trabajo sea así, que nos encante.
 
-Si hago las cosas a regañadientes, de mala gana, porque estoy cansado, recuerda que también el deportista está cansado, y sin embargo sigue con ilusión hasta el último minuto que le queda para jugar. El hombre no mejora su trabajo solo perfeccionando el método, sino con el amor que pone en él. San Pablo escribía a los primeros cristianos que tuvieran siempre presente que «en el Señor vuestro trabajo no es vano»[^2].
+Si hago las cosas a regañadientes, de mala gana, porque estoy cansado, recuerda que también el deportista está cansado, y sin embargo sigue con ilusión hasta el último minuto que le queda para jugar. El hombre no mejora su trabajo solo perfeccionando el método, sino con el amor que pone en él.
 
 ### Lo que importa es el cómo
 
-Esto es el ABC del espíritu que san Josemaría enseñó: no importa tanto qué haces, sino cómo lo haces, con cuánto amor. La gente en el mundo se fija en el qué, y es fácil confundirse y pensar que lo importante es que mi trabajo tenga mucha relevancia humana. No es verdad. Hay que decir, con Miguel Ángel: yo trabajo para la eternidad. Dijo el Señor a Samuel: «El hombre mira las apariencias pero el Señor mira el corazón»[^3]. Y Jesús advirtió a los fariseos que «lo que parece ser excelso ante los hombres es abominable delante de Dios»[^4].
-
+Esto es el ABC del espíritu que san Josemaría enseñó: no importa tanto qué haces, sino cómo lo haces, con cuánto amor. La gente en el mundo se fija en el qué, y es fácil confundirse y pensar que lo importante es que mi trabajo tenga mucha relevancia humana. No es verdad. Hay que decir, con Miguel Ángel: yo trabajo para la eternidad.
 Ningún trabajo es vano a los ojos de Dios, aunque esté totalmente oculto. Aunque sea ordenar la habitación a la que solo entro yo. Nadie la va a ver, nadie me va a pagar por tenerla ordenada, yo ya sé dónde están las cosas. Pero si lo haces con amor, si lo haces como un juego lleno de alegría y de libertad, porque estás trabajando a los ojos de Dios, eso vale.
 
-Dios tiene una balanza especial, muy fina, como esas que pesan miligramos de oro o una piedra preciosa diminuta o un poco de polvo de oro. Con esa balanza pesa tus acciones, y las pesa con rectitud. Quiere que en todas ellas haya pureza de intención. Así lo escribió san Josemaría: «Pureza de intención. —La tendrás siempre, si, siempre y en todo, sólo buscas agradar a Dios»[^5]. Entonces tu trabajo se convierte en *Opus Dei*, *operatio Dei*: trabajo divinizado.
+Dios tiene una balanza especial, muy fina, como esas que pesan miligramos de oro o una piedra preciosa diminuta o un poco de polvo de oro. Con esa balanza pesa tus acciones, y las pesa con rectitud. Quiere que en todas ellas haya pureza de intención. Así lo escribió san Josemaría: «Pureza de intención. —La tendrás siempre, si, siempre y en todo, sólo buscas agradar a Dios»[^2]. Entonces tu trabajo se convierte en *Opus Dei*, *operatio Dei*: trabajo divinizado.
 
 ### Contemplativo mientras trabajas
 
 ¿Cómo hacer para que mi trabajo sea trabajo divinizado? Estando siempre en actitud contemplativa mientras trabajas. No te desconectes, no trabajes solo en tu mundo cerrado: da siempre entrada a Aquel que es el primer obrero, el que hizo la primera obra, de la que han seguido todas las demás tareas. Eso es lo que llamamos contemplación en el trabajo, una especie de contemplación operativa, y tu trabajo se llena así de oración.
 
-San Josemaría decía que, de este modo, casi sin darte cuenta, llegarás a la oración contemplativa, y brotarán de tu alma más actos de amor, jaculatorias, acciones de gracias, actos de desagravio, comuniones espirituales. Y no solo en momentos dedicados a eso, sino «mientras atiendes tus obligaciones: al descolgar el teléfono, al subir a un medio de transporte, al cerrar o abrir una puerta, al pasar ante una iglesia, al comenzar una nueva tarea, al realizarla y al concluirla; todo lo referirás a tu Padre Dios»[^6].
-
-Es lo que pedimos en la liturgia: que toda nuestra oración y toda nuestra obra empiecen siempre en Él y por Él se concluyan. Cada vez que voy a empezar una tarea, puedo preguntarme: esto que voy a hacer, ¿está purificado en la intención? ¿Solo quiero la gloria de Dios y el bien de las almas? ¿Lo voy a hacer por amor?
+En la liturgia pedimos que toda nuestra oración y toda nuestra obra empiecen siempre en Él y por Él se concluyan. Cada vez que voy a empezar una tarea, puedo preguntarme: esto que voy a hacer, ¿está purificado en la intención? ¿Solo quiero la gloria de Dios y el bien de las almas? ¿Lo voy a hacer por amor?
 
 Es bonito ver que muchos jugadores de fútbol en los países católicos se persignan al entrar a la cancha, y también al salir, como diciendo: ya terminó, y lo que terminó también es para Dios. Algunos, cuando meten un gol, se ponen de rodillas y señalan al cielo, como dándole gracias por haber alcanzado esa meta. También ellos, al comenzar, al realizar y al concluir, se acuerdan de Dios.
 
@@ -58,39 +55,13 @@ Tengo una pena, una enfermedad grave, una muerte cercana: nunca es una tragedia,
 
 También cuando oyes las noticias, o ves en la calle cosas que ofenden a Dios, puedes hacer actos de desagravio: si se emborrachó mucha gente en una fiesta, si hubo desgracias y ofensas, dices: Señor, perdónanos. Así se te va formando el sentido del pecado, la conciencia del mal y de la acción continua del demonio. Y si voy a ver a una persona que no me cae muy bien, pienso: voy a verte a Ti, que estás disfrazado de esa persona. Se me va haciendo una segunda naturaleza, porque en todo y para todo te encuentro.
 
-Por eso escribió san Josemaría: «Una hora de estudio, para un apóstol moderno, es una hora de oración»[^7]. Y puedo decir que media hora de conversación con amigos es media hora de oración; que una clase de formación de cuarenta y cinco minutos son cuarenta y cinco minutos de oración; que una hora de viaje en transporte público es una hora de oración; que una película puede ser también un tiempo de oración.
-
 ### Hazlo todo por amor
 
-«Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo»[^8]. Hazlo todo por amor, porque te lo encargó tu Padre del Cielo. Un pequeño acto hecho por amor, ¿cuánto vale? No tengo cómo medirlo en el sentido humano, pero si se va a la eternidad, esto es lo que tengo que vivir, practicar y enseñar.
+«Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo»[^3]. Hazlo todo por amor, porque te lo encargó tu Padre del Cielo. Un pequeño acto hecho por amor, ¿cuánto vale? No tengo cómo medirlo en el sentido humano, pero si se va a la eternidad, esto es lo que tengo que vivir, practicar y enseñar.
 
 Que tus ocupaciones habituales no sean un obstáculo: simplemente ama en ellas. El secreto para dar relieve a lo más humilde, incluso a lo más humillante, es amar. No porque seas perfeccionista y quieras hacerlo todo maravillosamente bien, sino porque sabes que Dios ve tu interior.
 
-Giovanni Papini cuenta una historia que lo dice bien. Un viajero encuentra a un sembrador y le pregunta para qué labra la tierra.
-
-—Para poner en ella la semilla.
-
-—¿Y para qué pones la semilla?
-
-—Para que salga el trigo.
-
-—¿Y para qué quieres el trigo?
-
-—Para hacer el pan.
-
-—¿Y el pan para qué es?
-
-—Para vivir.
-
-—¿Y para qué vivir?
-
-—Para labrar la tierra.
-
-El círculo se cerró. Lo que se hacía en la tierra en la tierra se quedaba, y no tenía sentido. Es como el eterno retorno del pensamiento griego, para el que la historia humana es una rueda que da vueltas y vueltas, termina y vuelve a empezar, casi como los ciclos de cada año. Pero sabemos que no: la historia es lineal, tiene un principio y tiene un final.
-
-Después el viajero encontró a una niña que cortaba flores, y quiso tener con ella el mismo diálogo. «¿Para qué cortas flores?». «Hago un collar para la Virgen», respondió la pequeña. El viajero ya no pudo preguntar más. Lo que la niña hacía en la tierra no era para la tierra.
-
-San Josemaría decía: «Sabedlo bien: hay *un algo* santo, divino, escondido en las situaciones más comunes, que toca a cada uno de vosotros descubrir»[^9]. Es el *quid divinum*, el toque divino: tener esa visión de fe que sabe trascender la visión puramente terrena o puramente humana.
+San Josemaría decía: «Sabedlo bien: hay *un algo* santo, divino, escondido en las situaciones más comunes, que toca a cada uno de vosotros descubrir»[^4]. Es el *quid divinum*, el toque divino: tener esa visión de fe que sabe trascender la visión puramente terrena o puramente humana.
 
 ### Hasta la eternidad
 
@@ -103,12 +74,7 @@ Acude al modelo del obrero contemplativo, que es san José. Hablaba con el Niño
 Así nuestro trabajo se irá a la eternidad: cumpliendo la tarea que Dios ha asignado a cada uno, ahí donde estás, haciendo lo que haces, en lo que Él ha dispuesto para ti, para que completes la obra de la creación y colabores en la de la Redención. Te dice: tengo mucha confianza en ti, te he dejado poner las pinceladas de mi obra de arte; solo sigue lo que yo he previsto. Y lo que Dios ha previsto es lo que pedía san Josemaría: «haz lo que debes y está en lo que haces»[^camino815]; es decir, que lo hagamos con amor de Dios.
 
 [^1]: Cf. Gn 2, 15.
-[^2]: 1 Co 15, 58.
-[^3]: 1 S 16, 7.
-[^4]: Lc 16, 15.
-[^5]: San Josemaría, *Camino*, n. 287.
-[^6]: San Josemaría, *Amigos de Dios*, n. 149.
-[^7]: San Josemaría, *Camino*, n. 335.
-[^8]: San Josemaría, *Camino*, n. 813.
-[^9]: San Josemaría, *Conversaciones*, n. 114.
+[^2]: San Josemaría, *Camino*, n. 287.
+[^3]: San Josemaría, *Camino*, n. 813.
+[^4]: San Josemaría, *Conversaciones*, n. 114.
 [^camino815]: San Josemaría, *Camino*, n. 815.

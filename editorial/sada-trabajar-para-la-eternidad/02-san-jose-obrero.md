@@ -30,10 +30,6 @@ También se le pide a Dios, creador del universo, que ha querido que el hombre c
 
 Podemos examinar, entonces, si cada cosa que hacemos nos hace crecer en el amor, si nos hace encontrar el sentido de por qué la hacemos. Se atribuye a Einstein haber dicho que nuestra época se caracteriza por la perfección de los medios y la confusión de los fines. Medios técnicos maravillosos, pero al final nadie sabe exactamente para qué. Un coche que sube a 240 kilómetros por hora en diez segundos: ¿para qué lo quieres? Son medios perfectos, pero ¿cuál es tu fin?
 
-Por eso, al enseñar a la gente a hacer las cosas por amor a Dios y para su gloria, viene bien recordar el mito griego de Sísifo. Los dioses lo castigaron con un tormento: subir empujando una roca hasta la cumbre de un elevado peñasco. Nos lo imaginamos fuerte, musculoso, con una piedra redonda e inmensa que va subiendo por la ladera. Pero nunca alcanzaba la cima, porque en el momento crítico la piedra rodaba de nuevo cuesta abajo. Una y otra vez repetía Sísifo sus esfuerzos, con redoblado afán, sin lograr nunca su empresa. Todo era inútil, porque no contaba con el favor del cielo.
-
-Si miramos los campos de la actividad humana, veremos que hay innumerables Sísifos. Hombres que emprenden grandes proyectos, se afanan, se desgastan, y nunca los coronan con éxito, porque no suman a su actividad humana la actividad divina. Al final podrán preguntarse en qué quedó todo, para qué sirvió, cuál fue el sentido.
-
 ### Un encaje de piedra que nadie ve
 
 Esta es una de las enseñanzas de san Josemaría sobre la santificación del trabajo. En los años treinta, durante su estancia en Burgos, recibía la visita de jóvenes y les hablaba del trabajo con la imagen de la catedral. Le gustaba subirlos a una torre para contemplar de cerca la crestería, «un auténtico encaje de piedra, fruto de una labor paciente, costosa»[^7]. Les hacía notar que aquella maravilla no se veía desde abajo. ¿Cuántas cosas hacemos que nunca nadie va a ver? Trabajos internos, tareas que hicimos sin que nadie nos las encargara. Y les decía: esto es el trabajo de Dios, la obra de Dios. Esto sí cuenta, esto sí llega hasta el cielo, porque lo que mira Dios no es lo externo, sino el amor con que lo haces, la rectitud de intención.
@@ -44,9 +40,9 @@ Se trata de acabar la tarea con perfección, con belleza, con el primor de esas 
 
 Hay que luchar contra la mentalidad del mundo, que valora todo de otra manera. Si alguien te pregunta si trabajas en una importante empresa transnacional y respondes que no, casi pareces no contar. O te dicen que, si no has escrito en inglés, no existes: tus libros están en español y no entras en la consideración de los que de verdad mandan en el mundo. Cuántas veces nos dirán que no existimos, porque no tenemos una aportación sustantiva, como tal diplomático o tal empresario. Pero nosotros venimos a hacer el trabajo de Dios, la obra de Dios. Y en la eternidad se verá el valor de esas obras.
 
-A san Josemaría le preguntaron cuál era la labor más hermosa, y respondió que no lo sabía, pero que quizá fuera la tarea más sencilla, la que se hace con más amor de Dios[^9]. Es un trabajo muy humilde, muy oculto, del que nadie sabe quién lo hizo. Alguien vio a una persona limpiar un baño, algo que quizá muchos nunca hemos hecho: hay cepillos especiales, se limpia muy bien, hasta que queda impecable. A esa persona nadie le va a decir que su trabajo tuvo una gran importancia trascendente.
+Pensemos en un trabajo muy humilde, muy oculto, del que nadie sabe quién lo hizo. Alguien vio a una persona limpiar un baño, algo que quizá muchos nunca hemos hecho: hay cepillos especiales, se limpia muy bien, hasta que queda impecable. A esa persona nadie le va a decir que su trabajo tuvo una gran importancia trascendente.
 
-De un joven me contaron que había sido excelente estudiante de ingeniería, y que hizo después un posgrado en finanzas en el extranjero, con gran éxito. ¿Y qué hace ahora? Trabaja en una fábrica de papel higiénico. Toda su preparación, todas sus finanzas, y al final lo que produce es papel higiénico. Ese es el peligro de Sísifo: que, si no se hace por Dios, al final todo acabe ahí, sin servir para más.
+De un joven me contaron que había sido excelente estudiante de ingeniería, y que hizo después un posgrado en finanzas en el extranjero, con gran éxito. ¿Y qué hace ahora? Trabaja en una fábrica de papel higiénico. Toda su preparación, todas sus finanzas, y al final lo que produce es papel higiénico. Si no se hace por Dios, al final todo acaba ahí, sin servir para más.
 
 ### Yo creía que era para Dios
 
@@ -68,4 +64,3 @@ Que nos ayude san José, patrono de nuestra perseverancia, hoy que es la fiesta 
 [^6]: Cf. Misal Romano, 1 de mayo, san José Obrero, oración colecta.
 [^7]: San Josemaría, *Amigos de Dios*, n. 65.
 [^8]: San Josemaría, *Amigos de Dios*, n. 65.
-[^9]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.

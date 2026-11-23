@@ -30,15 +30,15 @@ Qué bonito sería pensar que los ángeles, y Dios mismo, ven que ahí donde est
 
 San Josemaría insistía en hacerlo todo por amor. A veces hacemos la tarea por egoísmo, por conveniencia, por interés, y por lo tanto sin amor. Esto se les dice especialmente a algunas profesiones, por ejemplo a los médicos: no se trata solo de que recetes, sino de que ames a tus enfermos. Así los vas a ayudar mucho mejor que si los tratas como a alguien que te viene a molestar, poniéndoles mala cara. Lo mismo vale para cualquier trabajo: hazlo siempre por amor a Dios, por amor a Jesucristo.
 
-Entonces se enciende otra vez la luz, y esa luz se va a la eternidad. Es más importante que el trabajo de Cai Lun o de Edison, porque lo que se enciende son las realidades de la gracia, donde aparece lo propio de Dios, que es el amor. «Todo lo que se hace por Amor adquiere hermosura y se engrandece»[^6]. Puedo haber hecho muchas cosas maravillosas, perfectas, pero por vanidad, por quedar bien, porque me iban a pagar o como simple terapia ocupacional. Hazlas por amor.
+Entonces se enciende otra vez la luz, y esa luz se va a la eternidad. Es más importante que el trabajo de Cai Lun o de Edison, porque lo que se enciende son las realidades de la gracia, donde aparece lo propio de Dios, que es el amor. Puedo haber hecho muchas cosas maravillosas, perfectas, pero por vanidad, por quedar bien, porque me iban a pagar o como simple terapia ocupacional. Hazlas por amor.
 
-A san Josemaría le preguntaban también cuál era la tarea más hermosa, y respondía que quizá la más escondida, la que está hecha con más amor, la que a lo mejor nadie va a ver nunca.[^7] Es lo que explica Jesús en el Evangelio: «que tu mano izquierda no sepa lo que hace tu mano derecha», y «tu Padre, que ve en lo oculto, te recompensará»[^8]. No busques la paga humana, porque entonces lo habrías hecho por egoísmo y no por amor. «Hacedlo todo por Amor. —Así no hay cosas pequeñas: todo es grande. —La perseverancia en las cosas pequeñas, por Amor, es heroísmo»[^9].
+Es lo que explica Jesús en el Evangelio: «que tu mano izquierda no sepa lo que hace tu mano derecha»[^6]. No busques la paga humana, porque entonces lo habrías hecho por egoísmo y no por amor.
 
 ### Aprender a rezar trabajando
 
 Le pedimos a san Josemaría que nos ayude a vivirlo, porque no es fácil. Tengo muchas distracciones en el trabajo. Me resulta fácil rezar en una iglesia, pero no en el metro; en la noche, antes de dormir, pero no frente a la computadora.
 
-Ve aprendiendo. Ponte cosas que te ayuden a darte cuenta de que Jesús está contigo. Si estás estudiando, pon otra silla: «Jesús, siéntate aquí; yo estoy en esta silla y Tú a mi lado, en esta otra. Estoy estudiando por Ti». Esa hora de estudio se convierte en una hora de oración. O vas en el metro y aprietas en la mano el rosario, y eso te hace consciente de que vas de la mano de María, que te acompaña y se baja contigo en tu estación. Así no tienes miedo, aunque te puedan asaltar, porque vas con Ella y con tu ángel de la guarda, al que invocas para que te acompañe en todos tus caminos: «Aunque camine por valles oscuros, no temo ningún mal, porque Tú estás conmigo»[^10].
+Ve aprendiendo. Ponte cosas que te ayuden a darte cuenta de que Jesús está contigo. Si estás estudiando, pon otra silla: «Jesús, siéntate aquí; yo estoy en esta silla y Tú a mi lado, en esta otra. Estoy estudiando por Ti». Esa hora de estudio se convierte en una hora de oración. O vas en el metro y aprietas en la mano el rosario, y eso te hace consciente de que vas de la mano de María, que te acompaña y se baja contigo en tu estación. Así no tienes miedo, aunque te puedan asaltar, porque vas con Ella y con tu ángel de la guarda, al que invocas para que te acompañe en todos tus caminos: «Aunque camine por valles oscuros, no temo ningún mal, porque Tú estás conmigo»[^7].
 
 ### La piedra de Sísifo
 
@@ -50,29 +50,26 @@ Si miramos los campos de la actividad humana, veremos que hoy hay innumerables S
 
 Mucha gente se decepciona. Trabajé veinte o treinta años en una empresa, o quince, o cinco, y un día me dijeron: «Muchas gracias, aquí está su liquidación, hasta luego». Yo di mi vida a esa empresa día tras día, y así pagan los hombres. Eso es Sísifo: no te sirvió, porque no lo hiciste con lo que realmente se va a la eternidad. No lo hiciste amando a Dios ahí, por Cristo, con Cristo y en Cristo, colaborando con tu trabajo para que toda la realidad creada sea elevada hasta Dios.
 
-Que Cristo esté en la cumbre de tu actividad porque está en tu corazón, porque lo llevas contigo y estás siempre en comunicación con Él. Conversa con Él. Nunca estás solo: estás siempre con el que te ama y espera tu correspondencia. Encuéntralo con tu fe, con tu contemplación, con la seguridad de que su palabra no pasa: «yo estoy con vosotros todos los días»[^11]. Ha estado contigo todo el día de hoy, desde la medianoche, y va a estar contigo hasta el último momento, y lo mismo mañana. Esa es nuestra fe. No tengas una vida cuadriculada: aquí te encuentro y aquí no, aquí me acuerdo y aquí me olvido. Todo, como decía san Pablo: «tanto si coméis, como si bebéis, o hacéis cualquier otra cosa, hacedlo todo para gloria de Dios»[^12].
+Que Cristo esté en la cumbre de tu actividad porque está en tu corazón, porque lo llevas contigo y estás siempre en comunicación con Él. Conversa con Él. Nunca estás solo: estás siempre con el que te ama y espera tu correspondencia. Encuéntralo con tu fe, con tu contemplación, con la seguridad de que su palabra no pasa: «yo estoy con vosotros todos los días»[^8]. Ha estado contigo todo el día de hoy, desde la medianoche, y va a estar contigo hasta el último momento, y lo mismo mañana. Esa es nuestra fe. No tengas una vida cuadriculada: aquí te encuentro y aquí no, aquí me acuerdo y aquí me olvido. Todo, como decía san Pablo: «tanto si coméis, como si bebéis, o hacéis cualquier otra cosa, hacedlo todo para gloria de Dios»[^9].
 
 ### Lo que Dios quiso recordar
 
-Por eso en la Misa de san Josemaría pedimos a Dios que, por su intercesión y su ejemplo, en el ejercicio del trabajo ordinario nos configuremos a su Hijo Jesucristo y sirvamos con ardiente amor a la obra de la Redención[^13]. Es lo específico que Dios quiso recordar al mundo por medio de él.
+Por eso en la Misa de san Josemaría pedimos a Dios que, por su intercesión y su ejemplo, en el ejercicio del trabajo ordinario nos configuremos a su Hijo Jesucristo y sirvamos con ardiente amor a la obra de la Redención[^10]. Es lo específico que Dios quiso recordar al mundo por medio de él.
 
 San Josemaría decía que no quería fundar nada. Le parecían muy bien todas las instituciones que había en la Iglesia, y no veía que hiciera falta otra. Pero Dios le dijo: funda lo que te voy a decir, una institución que enseñe a amar a Jesús en medio de la calle, en todas partes; tú enseña a vivir la vida contemplativa que lleva una monja en el silencio de su convento, pero vendiendo helados, barriendo las calles, en el laboratorio, de policía, de ama de casa, quien sea y haciendo lo que sea; que aprenda a descubrirme ahí, a amarme ahí, a hacer las cosas por amor.
 
 El amor que hace grande lo pequeño. El amor que ilumina lo que está oscuro. El amor que hace más hermoso el mundo. Imagínate que un día todos los hombres de todos los países hicieran las cosas así, amando. Qué maravilla: este mundo sería como un paraíso, si en cada uno se estuviera manifestando el amor de Dios.
 
-Que san Josemaría interceda por nosotros mientras nos preparamos para su fiesta. Y pidámosle ayuda a Santa María, porque él también nos enseñaba a encontrarnos con Ella constantemente en la actividad diaria. Nos enseñaba a tratar a la Virgen «como se trata a una persona viva»[^14], como si la viéramos con los ojos de la cara: igual que a tu mamá, a la que saludas, le preguntas algo, le ayudas, con toda sencillez y naturalidad, como las personas que tienen fe. Que sepamos encontrar a Jesús y a María en nuestra vida ordinaria, que vivamos este espíritu de manera cada vez más radical y profunda, y que cada jornada se convierta en un canto de alabanza al amor de Dios.
+Que san Josemaría interceda por nosotros mientras nos preparamos para su fiesta. Y pidámosle ayuda a Santa María, porque él también nos enseñaba a encontrarnos con Ella constantemente en la actividad diaria. Nos enseñaba a tratar a la Virgen «como se trata a una persona viva»[^11], como si la viéramos con los ojos de la cara: igual que a tu mamá, a la que saludas, le preguntas algo, le ayudas, con toda sencillez y naturalidad, como las personas que tienen fe. Que sepamos encontrar a Jesús y a María en nuestra vida ordinaria, que vivamos este espíritu de manera cada vez más radical y profunda, y que cada jornada se convierta en un canto de alabanza al amor de Dios.
 
 [^1]: San Josemaría, *Es Cristo que pasa*, n. 183.
 [^2]: Mt 28, 20.
 [^3]: San Josemaría, *Conversaciones*, n. 114.
 [^4]: San Josemaría, *Conversaciones*, n. 114.
 [^5]: Jn 15, 4.
-[^6]: San Josemaría, *Camino*, n. 429.
-[^7]: Respuesta de san Josemaría que recoge el autor; no la hemos hallado en sus obras publicadas.
-[^8]: Mt 6, 3-4.
-[^9]: San Josemaría, *Camino*, n. 813.
-[^10]: Sal 23 (22), 4.
-[^11]: Mt 28, 20.
-[^12]: 1 Co 10, 31.
-[^13]: Cf. Misal Romano, 26 de junio, san Josemaría Escrivá, presbítero, oración colecta.
-[^14]: San Josemaría, *Es Cristo que pasa*, n. 142.
+[^6]: Mt 6, 3.
+[^7]: Sal 23 (22), 4.
+[^8]: Mt 28, 20.
+[^9]: 1 Co 10, 31.
+[^10]: Cf. Misal Romano, 26 de junio, san Josemaría Escrivá, presbítero, oración colecta.
+[^11]: San Josemaría, *Es Cristo que pasa*, n. 142.
