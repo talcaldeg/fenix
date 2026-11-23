@@ -5113,6 +5113,22 @@ window.FENIX = {
   // se pide; sin "en", no aparece en el sitio en inglés. delibris como en las fichas, o null con
   // `estimada` { valor, genero } si Delibris no la reseña. El sitio oculta sola la que ya está en ese idioma.
   buscados: [
+    // Sin traducción al español hallada (23-nov-2026): se traducen del original (vía D de ENCUADERNAR.md).
+    { titulo: {"es": "Cuentos con moraleja para niños", "en": "Cautionary Tales for Children"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cautionary-tales"} },
+    { titulo: {"es": "Shelley", "en": "Shelley"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/shelley-postumo"} },
+    { titulo: {"es": "La mujer sabia", "en": "The Wise Woman"}, autor: "George MacDonald", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/wise-woman-lost-princess"} },
+    { titulo: {"es": "Canciones de hermanas", "en": "Sister Songs"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sister-songs"} },
+    { titulo: {"es": "Poemas nuevos", "en": "New Poems"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/new-poems"} },
+    { titulo: {"es": "Belinda", "en": "Belinda"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/bellinda"} },
+    { titulo: {"es": "La Iglesia católica y la historia", "en": "The Catholic Church and History"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/catholic-church-and-history"} },
+    { titulo: {"es": "Las confesiones no católicas", "en": "Non-Catholic Denominations"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/non-catholics-denominations"} },
+    { titulo: {"es": "Santo Tomás de Canterbury", "en": "St. Thomas of Canterbury"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/st-thomas-canterbury"} },
+    { titulo: {"es": "Un hombre corriente", "en": "An Average Man"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/average-man"} },
+    { titulo: {"es": "Autobiografía", "en": "An Autobiography"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/autobiography-2"} },
+    { titulo: {"es": "La rectoría de Framley", "en": "Framley Parsonage"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/framley-parsonage"} },
+    { titulo: {"es": "Los diamantes Eustace", "en": "The Eustace Diamonds"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/les-diamants-eustace"} },
+    { titulo: {"es": "¿Puedes perdonarla?", "en": "Can You Forgive Her?"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/peut-lui-pardonner"} },
+    { titulo: {"es": "Sabía que tenía razón", "en": "He Knew He Was Right"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/he-knew-he-was-right"} },
     { titulo: {"es": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
     { titulo: {"es": "La abadía de Northanger"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"} },
     { titulo: {"es": "Ortodoxia", "en": "Orthodoxy"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/ortodoxia"} },
