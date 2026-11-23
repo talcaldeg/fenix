@@ -340,6 +340,18 @@ def revisar(raiz, capturas=None):
                 return { n, ok: marca.slice(0, n).every(Boolean) }; }""")
             if r["n"] and not r["ok"]:
                 fallas.append(f"biblioteca{sufijo}: los libros de la editorial Fénix no van todos al principio")
+            # Lista o cuadros (él, 23-nov-2026): el botón «Cuadros» pasa las mismas filas, en el mismo
+            # orden, a tarjetas con portada; «Lista» las devuelve.
+            r = pg.evaluate("""() => { const ids = s => [...document.querySelectorAll('#catalogo ' + s)].map(e => e.dataset.id);
+                const filas = ids('.fila[data-id]');
+                document.querySelector('#vistaBib [data-vista="cuadros"]').click();
+                const cuadros = ids('.grilla > .libro[data-id]');
+                const portadas = document.querySelectorAll('#catalogo .grilla > .libro .portada').length;
+                document.querySelector('#vistaBib [data-vista="lista"]').click();
+                return { filas: filas.join(), cuadros: cuadros.join(), portadas, n: cuadros.length,
+                         vuelta: ids('.fila[data-id]').join() === filas.join() }; }""")
+            if not r["n"] or r["cuadros"] != r["filas"] or r["portadas"] != r["n"] or not r["vuelta"]:
+                fallas.append(f"biblioteca{sufijo}: la vista en cuadros no muestra los mismos libros con portada, o no vuelve a lista")
             pg.close()
         # Como Netflix (4-nov-2026): lo abierto para leer va a «Seguir leyendo» y lo marcado a «Tus favoritos»
         # en la portada; la ficha abierta desde otra no repite en Parecidos el libro del que se vino.

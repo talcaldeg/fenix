@@ -1630,6 +1630,15 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   }
 
   .filtros{display:flex; flex-wrap:wrap; gap:10px; align-items:center; margin:0 0 20px; font:14px/1.33 var(--letra); font-size-adjust:.46}
+  /* Lista o cuadros: dos píldoras unidas; la elegida, marcada. En cuadros el catálogo deja la caja y cada fila es una repisa. */
+  .vista-bib{display:inline-flex; margin-left:auto}
+  .vista-bib .pildora{border-radius:0} .vista-bib .pildora:first-child{border-radius:999px 0 0 999px} .vista-bib .pildora:last-child{border-radius:0 999px 999px 0; margin-left:-1px}
+  .vista-bib .pildora[aria-pressed="true"]{background:var(--ink); color:var(--bg2); border-color:var(--ink)}
+  #catalogo.cuadros{background:none; border:0; border-radius:0; box-shadow:none; overflow:visible}
+  #catalogo.cuadros > .grilla{margin-top:8px}
+  #catalogo.cuadros .sin-epub-grupo{margin-top:36px; border:1px solid var(--line); border-radius:14px}
+  #catalogo.cuadros .sin-epub-grupo > summary{border-radius:14px}
+  #catalogo.cuadros .sin-epub-grupo > div{padding:24px 16px 8px}
   .filtros input[type=search], .filtros select{padding:8px 10px; border:1px solid var(--line); border-radius:9px; background:var(--card)}
   .filtros input[type=search]{flex:1 1 220px}
   /* Casillas con área de toque de 40 px de alto (la casilla sola medía 13 px). */
@@ -2337,6 +2346,11 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
         <label><input type="checkbox" id="fNoLeidos"> <span data-i18n="bib.noLeidos">No leídos</span></label>
         <label><input type="checkbox" id="fFavoritos"> <span data-i18n="bib.favoritos">Favoritos</span></label>
         <button type="button" class="pildora" id="fLimpiar" data-i18n="bib.limpiar">Limpiar filtros</button>
+        <!-- Vista de la biblioteca: lista (filas con valoración) o cuadros (portadas grandes en repisa); se recuerda en este navegador. -->
+        <div class="vista-bib" id="vistaBib" role="group">
+          <button type="button" class="pildora" data-vista="lista" aria-pressed="true"><span aria-hidden="true">☰</span> <span data-i18n="bib.vLista">Lista</span></button>
+          <button type="button" class="pildora" data-vista="cuadros" aria-pressed="false"><span aria-hidden="true">▦</span> <span data-i18n="bib.vCuadros">Cuadros</span></button>
+        </div>
       </div>
       <p class="meta" id="fCuenta" aria-live="polite"></p>
       <div class="lista" id="catalogo" role="list"></div>
@@ -2667,6 +2681,8 @@ function iniciar(){
   };
   let leidos = almacen.leer("leidos", {});
   let favoritos = almacen.leer("favoritos", {});
+  // Vista de la biblioteca: "lista" (por defecto) o "cuadros".
+  let vistaBib = almacen.leer("vistaBib", "lista") === "cuadros" ? "cuadros" : "lista";
   // Libros que el lector abrió para leer (Descargar, Hojear o leer en línea), el más reciente primero: fila «Seguir leyendo».
   let abiertos = almacen.leer("abiertos", []);
   // Fichas fusionadas: lo marcado con el id viejo pasa al id de la ficha que lo reemplazó.
@@ -2718,7 +2734,7 @@ function iniciar(){
       "acc.eyebrow":"Explore","acc.editorial":"Books we translate and edit","acc.citas":"A sentence from each book","x.libros":"books","x.libro":"book",
       "cam.eyebrow":"Pre-order until 14 December","cam.titulo":"The Fénix Collection: four classics, now in print","cam.texto":"Confessions, Story of a Soul, The Little Prince and Plato's Apology in Proyecto Fénix editions, with free shipping anywhere in Chile. Reserving yours helps keep the library free.","cam.boton":"Pre-order on Catapultame",
       "ban.titulo":"Do you know a good book that is being lost?","ban.texto":"Tell us which one: we will look for it, check its rights and, if possible, publish it.",
-      "mios.seguir":"Continue reading","mios.favs":"Your favourites","mios.todos":"See all →","sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)",
+      "mios.seguir":"Continue reading","mios.favs":"Your favourites","mios.todos":"See all →","sello.eyebrow":"Fénix seal","sello.titulo":"Recommended by Fénix","sello.texto":"The books we most want you to read. They carry this seal throughout the catalogue.","x.sello":"Recommended by Fénix","x.selloCorto":"Recommended","x.masCitas":"See {n} more quotes","x.sinEpub":"Show {n} books without EPUB (online, PDF or to buy)","bib.vLista":"List","bib.vCuadros":"Covers",
       "rec.eyebrow":"Our editions","rec.titulo":"Fénix editions","rec.todos":"See our editions →",
       "oh.eyebrow":"Line of research","oh.titulo":"«It is no longer I who live, but Christ who lives in me»","oh.tituloRef":"Galatians 2:20 (RSV)",
       "oh.p1":"The Son of God became man once, in the womb of the Virgin Mary, yet He wants to go on loving the Father and mankind through those who belong to Him by grace: to be for Christ «like another humanity». We follow this idea from book to book, in the authors who formulated it and in those who quote them, and we publish what we find.",
@@ -2975,8 +2991,13 @@ function iniciar(){
     const arriba = l => tieneEpub(l) || esFenix(l) || l.editorial;
     const con = lista.filter(arriba), sin = lista.filter(l => !arriba(l));
     const abierto = !con.length || $("#fBuscar").value.trim() || ["pdf", "web", "comprar"].includes($("#fFormato").value);
-    $("#catalogo").innerHTML = !lista.length ? "" : (con.length ? cabecera() + con.map(fila).join("") : "")
-      + (sin.length ? `<details class="sin-epub-grupo"${abierto ? " open" : ""}><summary>${esc(t("x.sinEpub").replace("{n}", sin.length))}</summary>${con.length ? "" : cabecera()}<div role="list">${sin.map(fila).join("")}</div></details>` : "");
+    // En cuadros, las mismas listas van como tarjetas con la portada grande (las del inicio), sin cabecera.
+    const cuadros = vistaBib === "cuadros";
+    const bloque = xs => cuadros ? `<div class="grilla">${xs.map(tarjeta).join("")}</div>` : xs.map(fila).join("");
+    const cab = cuadros ? "" : cabecera();
+    $("#catalogo").classList.toggle("cuadros", cuadros);
+    $("#catalogo").innerHTML = !lista.length ? "" : (con.length ? cab + bloque(con) : "")
+      + (sin.length ? `<details class="sin-epub-grupo"${abierto ? " open" : ""}><summary>${esc(t("x.sinEpub").replace("{n}", sin.length))}</summary>${con.length ? "" : cab}<div role="list">${bloque(sin)}</div></details>` : "");
     $("#catalogo").hidden = !lista.length;
     $("#sinResultados").hidden = lista.length > 0;
     $("#fCuenta").textContent = !lista.length ? "" : lista.length === 1 ? t("bib.cuenta1") : t("bib.cuenta").replace("{n}", lista.length);
@@ -3052,6 +3073,11 @@ function iniciar(){
   });
   $$('#v-inicio a[href="#biblioteca"]:not([data-cat])').forEach(a => a.addEventListener("click", () => { $("#fCategoria").value = ""; pintarCatalogo(); }));
   ["#fBuscar","#fCategoria","#fFormato","#fNoLeidos","#fFavoritos"].forEach(s => $(s).addEventListener("input", pintarCatalogo));
+  const marcarVista = () => $$("#vistaBib [data-vista]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.vista === vistaBib)));
+  $$("#vistaBib [data-vista]").forEach(b => b.addEventListener("click", () => {
+    vistaBib = b.dataset.vista; almacen.guardar("vistaBib", vistaBib); marcarVista(); pintarCatalogo();
+  }));
+  marcarVista();
   $("#fLimpiar").addEventListener("click", () => {
     ["#fBuscar","#fCategoria","#fFormato"].forEach(s => $(s).value = "");
     $("#fNoLeidos").checked = $("#fFavoritos").checked = false;
