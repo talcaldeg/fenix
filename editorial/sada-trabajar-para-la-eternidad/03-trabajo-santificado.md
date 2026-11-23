@@ -52,13 +52,14 @@ Y ocurre cuando soy un adicto al trabajo. Cuántas veces lo decimos con una sonr
 
 ### San José, icono del trabajo santificado
 
-Esa es la petición que podemos hacerle a Jesús, que crecía en edad, en sabiduría y en gracia: que también nosotros, que crecemos en edad irremediablemente, crezcamos en sabiduría y en gracia, en unión con Dios y en amor de Dios. Y en este tema podemos mirar siempre a san José, el icono de la santificación del trabajo. Seguramente no buscaba ningún lucimiento en su trabajo. Lo hacía siempre, siempre, siempre con el fin de atender a Jesús y a María, de darles los medios para vivir. Y lo hacía con ellos: trabajaban él y Jesús en el taller; terminaba la jornada, guardaban los instrumentos, se iban a cenar y seguían conversando.
+Esa es la petición que podemos hacerle a Jesús, que crecía en edad, en sabiduría y en gracia[^lc252]: que también nosotros, que crecemos en edad irremediablemente, crezcamos en sabiduría y en gracia, en unión con Dios y en amor de Dios. Y en este tema podemos mirar siempre a san José, el icono de la santificación del trabajo. Seguramente no buscaba ningún lucimiento en su trabajo. Lo hacía siempre, siempre, siempre con el fin de atender a Jesús y a María, de darles los medios para vivir. Y lo hacía con ellos: trabajaban él y Jesús en el taller; terminaba la jornada, guardaban los instrumentos, se iban a cenar y seguían conversando.
 
 María estaría muchas veces con ellos, como vemos en los cuadros de la Sagrada Familia, en un taller y un hogar muy modestos y muy pequeños, cosiendo y aprovechando el tiempo. Juan Pablo II, en la exhortación apostólica sobre san José, escribe que «la aparente tensión entre la vida activa y la contemplativa encuentra en él una superación ideal»[^11]: se está contemplando y se está trabajando, y no hay por qué ver contraposición. San Josemaría decía que la devoción a san José creció en él de manera impetuosa en sus últimos años, quizá para hacernos entender que esto es lo propio de su espíritu: san José, el artesano, el trabajador, el que hace lo que debe.
 
 Callar, rezar, trabajar, sonreír: así podría encuadrarse la vida de san José.[^ne1] Que sean también los verbos de nuestro trabajo santificado.
 
 [^1]: Lc 2, 52.
+[^lc252]: Cf. Lc 2, 52.
 [^2]: Cf. Flp 3, 8.
 [^3]: Cf. Lc 3, 23.
 [^4]: Cf. San Josemaría, *Es Cristo que pasa*, n. 14.

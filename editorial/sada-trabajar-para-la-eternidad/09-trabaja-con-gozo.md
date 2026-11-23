@@ -59,4 +59,4 @@ Así hizo Jesús, en la oscuridad de un pueblo pequeño, perdido entre las monta
 [^5]: Cf. Mt 6, 3.
 [^6]: Doxología final de la Plegaria eucarística, Misal Romano.
 [^7]: Cf. San Josemaría, *Surco*, n. 497.
-[^ne1]: N. del E.: según santo Tomás de Aquino, la gracia de Cristo fue plena desde el principio y no podía aumentar; lo que crecía eran sus efectos, en obras cada vez más sabias y santas (Suma Teológica, III, q. 7, a. 12; cf. Lc 2, 52; Catecismo, n. 472). En el audio, el autor dice: «esa plenitud aumentaba y aumentaba… Jesús crecía por tanto en santidad».
+[^ne1]: N. del E.: según santo Tomás de Aquino, la gracia de Cristo fue plena desde el principio y no podía aumentar; lo que crecía eran sus efectos, en obras cada vez más sabias y santas (Suma Teológica, III, q. 7, a. 12; cf. Lc 2, 52; Catecismo, n. 472).

@@ -8,7 +8,7 @@ Jesús crecía: se desarrollaba, aumentaba en los distintos aspectos, como todo 
 
 Podemos pensar que la perfección humana supone la madurez propia de cada etapa, y preguntarnos: ¿estoy viviendo bien esta etapa, o tengo añoranzas de otra?, ¿soy una persona madura para la edad que tengo? A veces vemos a hombres de setenta años con melena, ropa de adolescente y actividades de muchacho, y uno piensa: ponte en tu edad, ubícate. Jesús, en cada edad, era el que debía ser.
 
-Crecía en sabiduría, esa ciencia de las cosas más altas, la ciencia que se ve desde Dios. Su ciencia adquirida fue aumentando poco a poco: fue instruido por sus padres. María le enseñaría las cosas de la casa, a atarse las sandalias, a comer, a rezar, las oraciones de su pueblo. José le enseñaría el oficio de artesano.
+Crecía en sabiduría, esa ciencia de las cosas más altas, la ciencia que se ve desde Dios. Su ciencia adquirida fue aumentando poco a poco: fue instruido por sus padres. María le enseñaría las cosas de la casa, a atarse las sandalias, a comer, a rezar las oraciones de su pueblo. José le enseñaría el oficio de artesano.
 
 Y crecía en gracia. Su alma humana, movida por el Espíritu Santo, en perfecta correspondencia, tenía la plenitud de gracia, que se manifestaba cada vez más.[^ne1] Por eso oraba: para unir su voluntad humana a la del Padre y escuchar las inspiraciones del Espíritu Santo. Si lo hacía con tanta frecuencia en su vida pública, cuánto oraría en el silencio y la paz de Nazaret, una población tan pequeña.
 
@@ -71,4 +71,4 @@ Yo también voy a hacer muchos collares para la Virgen. Voy a tener esta alma de
 [^6]: San Juan Pablo II, poema «La cantera», citado en *Don y Misterio*, cap. I.
 [^7]: San Josemaría, *Cartas I*, carta n. 3, n. 4.
 [^8]: Cf. San Francisco de Asís, *Cántico de las criaturas*.
-[^ne1]: N. del E.: según santo Tomás de Aquino, la gracia de Cristo fue plena desde el principio y no podía aumentar; lo que crecía eran sus efectos, en obras cada vez más sabias y santas (Suma Teológica, III, q. 7, a. 12; cf. Lc 2, 52; Catecismo, n. 472). En el audio, el autor dice: «una perfección de gracia cada vez más plena».
+[^ne1]: N. del E.: según santo Tomás de Aquino, la gracia de Cristo fue plena desde el principio y no podía aumentar; lo que crecía eran sus efectos, en obras cada vez más sabias y santas (Suma Teológica, III, q. 7, a. 12; cf. Lc 2, 52; Catecismo, n. 472).
