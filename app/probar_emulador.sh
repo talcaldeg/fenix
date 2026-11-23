@@ -29,6 +29,8 @@ sleep 12
 captura 1-sin-red
 hitos 1
 grep -q "LECTOR biblioteca 0" "$OUT/hitos-1.txt" || falla "sin red, la biblioteca no aparece en la primera apertura"
+# La barra del lector no queda debajo de la hora: la app conoce el alto de la barra de estado.
+grep -Eq "LECTOR bordes [1-9]" "$OUT/hitos-1.txt" || falla "la app no conoce el alto de la barra de estado (la hora queda encima del logo)"
 
 # 2. «Abrir con»: VIEW implícito de un EPUB (resuelve el intent-filter del manifiesto).
 adb push libro.epub /data/local/tmp/libro.epub

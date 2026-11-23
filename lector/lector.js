@@ -829,11 +829,11 @@
   const instalado = () => matchMedia("(display-mode: standalone), (display-mode: fullscreen)").matches || navigator.standalone === true;
   function pantallaCompleta(){
     // En la app, la de Android: sin barra de estado ni botones de navegación (vuelven deslizando del borde).
-    if (APP) { if (aj.pantalla !== "no") nativo("pantallaCompleta", { activa: true }).catch(() => {}); return; }
+    if (APP) { if (aj.pantalla !== "no") nativo("pantallaCompleta", { activa: true }).then(() => setTimeout(ajustarBordes, 400)).catch(() => {}); return; }
     if (aj.pantalla === "no" || !tactil || !document.fullscreenEnabled || document.fullscreenElement || matchMedia("(display-mode: fullscreen)").matches) return;
     try { document.documentElement.requestFullscreen({ navigationUI: "hide" }).catch(() => {}); } catch {}
   }
-  function salirPantallaCompleta(){ if (APP) nativo("pantallaCompleta", { activa: false }).catch(() => {}); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
+  function salirPantallaCompleta(){ if (APP) nativo("pantallaCompleta", { activa: false }).then(() => setTimeout(ajustarBordes, 400)).catch(() => {}); if (document.fullscreenElement) document.exitFullscreen().catch(() => {}); }
   // La pantalla no se apaga mientras se lee; si pasan diez minutos sin cambiar de página, vuelve a apagarse sola.
   let despierta = null, despiertaT;
   async function pantallaEncendida(si){
@@ -1458,19 +1458,76 @@
 
   // ---------- app de Android ----------
   // En la web: el botón para bajar el APK (no en iPhone, donde no se instala). En la app: el aviso cuando
-  // hay un APK más nuevo; cada Release de GitHub se llama lector-v<versionCode> (.github/workflows/apk.yml).
+  // hay un APK más nuevo; cada Release de GitHub se llama lector-v<versionCode> (.github/workflows/apk.yml)
+  // y trae el APK dos veces: lector-fenix-1.<n>.apk (el que se baja, para saber qué versión es) y
+  // lector-fenix.apk (nombre fijo de releases/latest/download, respaldo si no se alcanza a leer el Release).
   $$("a.apk").forEach(a => { a.href = APK; });
   if (!APP && !/iPhone|iPad|iPod/.test(navigator.userAgent) && !(navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1)) $("#btnApp").hidden = false;
   $("#btnApp").onclick = () => $("#dlgApp").showModal();
-  async function buscarVersionApp(){
-    if (!APP || !enLinea()) return;
-    try {
-      const [yo, r] = await Promise.all([nativo("info"), fetch("https://api.github.com/repos/talcaldeg/fenix/releases/latest", { cache: "no-cache" })]);
-      if (!r.ok) return;
-      const n = parseInt(String((await r.json()).tag_name || "").replace(/\D+/g, ""), 10);
-      if (n && yo && n > yo.versionCode) $("#avisoApp").hidden = false;
-    } catch (e) { console.warn("Versión de la app:", e); }
+  async function ultimoApk(){
+    const r = await fetch("https://api.github.com/repos/talcaldeg/fenix/releases/latest", { cache: "no-cache" });
+    if (!r.ok) throw new Error("GitHub respondió " + r.status);
+    const j = await r.json();
+    const n = parseInt(String(j.tag_name || "").replace(/\D+/g, ""), 10);
+    const a = (j.assets || []).find(x => /^lector-fenix-1\.\d+\.apk$/.test(x.name)) || (j.assets || []).find(x => x.name === "lector-fenix.apk");
+    return { n, nombre: a ? a.name : "lector-fenix.apk", url: a ? a.browser_download_url : APK };
   }
+  // En la web, «Descargar» baja el archivo con la versión en el nombre.
+  if (!APP && !$("#btnApp").hidden) ultimoApk().then(u => {
+    $$("a.apk").forEach(a => { a.href = u.url; });
+    $$(".apk-nombre").forEach(b => { b.textContent = u.nombre; });
+  }).catch(() => {});
+  let ultimo = null, instalada = null;
+  function pintarVersion(){
+    if (!instalada) return;
+    const nueva = ultimo && ultimo.n > instalada.versionCode;
+    $("#versionTxt").textContent = `Lector Fénix ${instalada.versionName || "1." + instalada.versionCode}` +
+      (nueva ? ` · hay una más nueva: 1.${ultimo.n}` : ultimo ? " · es la última versión" : "");
+    $("#btnBuscarApp").textContent = nueva ? "Actualizar" : "Buscar actualización";
+    $("#btnBuscarApp").classList.toggle("prim", !!nueva);
+    $("#avisoAppVer").textContent = nueva ? ` (1.${ultimo.n}; tienes la ${instalada.versionName || "1." + instalada.versionCode})` : "";
+    $("#avisoApp").hidden = !nueva;
+    $("#pieVersion").hidden = false;
+  }
+  async function buscarVersionApp(avisar = false){
+    if (!APP) return;
+    try {
+      if (!instalada) instalada = await nativo("info");
+      pintarVersion();
+      if (!enLinea()) { if (avisar) aviso("Sin conexión: no se puede revisar si hay una versión nueva."); return; }
+      ultimo = await ultimoApk();
+      pintarVersion();
+      if (avisar && !(ultimo.n > instalada.versionCode)) aviso(`Ya tienes la última versión (${instalada.versionName || "1." + instalada.versionCode}).`);
+    } catch (e) {
+      console.warn("Versión de la app:", e);
+      if (avisar) aviso("No se pudo revisar si hay una versión nueva. Prueba de nuevo en un rato.");
+    }
+  }
+  async function actualizarApp(){
+    if (!ultimo || !(ultimo.n > (instalada || {}).versionCode)) return buscarVersionApp(true);
+    cargando(`Descargando ${ultimo.nombre}…`);
+    try {
+      await nativo("actualizar", { url: ultimo.url, nombre: ultimo.nombre });
+      aviso("Toca «Instalar» (o «Actualizar»). Si Android pide permiso, activa «Permitir de esta fuente» y vuelve atrás. Tus libros y notas se mantienen.", 12000);
+    } catch (e) {
+      aviso("No se pudo descargar la versión nueva. Revisa la conexión y vuelve a tocar «Actualizar».", 8000);
+    } finally { cargando(""); }
+  }
+  $("#btnBuscarApp").onclick = () => (ultimo && instalada && ultimo.n > instalada.versionCode) ? actualizarApp() : buscarVersionApp(true);
+  $$("[data-actualizar]").forEach(b => { b.onclick = actualizarApp; });
+  // Bordes de la hora y de los botones de Android (la app se dibuja debajo de ellos).
+  async function ajustarBordes(){
+    if (!APP) return;
+    try {
+      const i = await nativo("insets");
+      if (!i) return;
+      hito(`bordes ${i.arriba} ${i.abajo}`);
+      const s = document.documentElement.style;
+      s.setProperty("--sa-t", i.arriba + "px"); s.setProperty("--sa-b", i.abajo + "px");
+      s.setProperty("--sa-l", i.izquierda + "px"); s.setProperty("--sa-r", i.derecha + "px");
+    } catch {}
+  }
+  if (APP) { ajustarBordes(); addEventListener("resize", () => setTimeout(ajustarBordes, 300)); }
 
   // ---------- arranque ----------
   async function iniciar(){

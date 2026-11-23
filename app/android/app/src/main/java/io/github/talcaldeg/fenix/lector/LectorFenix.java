@@ -7,6 +7,9 @@ import android.content.pm.PackageInfo;
 import android.database.Cursor;
 import android.net.Uri;
 import android.provider.OpenableColumns;
+import androidx.core.content.FileProvider;
+import androidx.core.graphics.Insets;
+import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowCompat;
 import androidx.core.view.WindowInsetsCompat;
 import androidx.core.view.WindowInsetsControllerCompat;
@@ -21,6 +24,8 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.net.HttpURLConnection;
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -30,7 +35,8 @@ import java.util.List;
  *   quedan en espera hasta que el lector los pida con pendientes(); el evento «lectorArchivo» le avisa.
  * - Botones de volumen para pasar página, solo mientras hay un libro abierto (volumen({activo})).
  * - Pantalla completa de Android (pantallaCompleta({activa})).
- * - Versión instalada (info()), para el aviso «Hay versión nueva».
+ * - Versión instalada (info()), para el aviso «Hay versión nueva», y actualizar() para instalarla con un toque.
+ * - Altura de las barras del sistema (insets()), para no dibujar debajo de la hora.
  * Desde JS se llama con Capacitor.nativePromise("LectorFenix", "<método>", {...}).
  */
 @CapacitorPlugin(name = "LectorFenix")
@@ -51,6 +57,68 @@ public class LectorFenix extends Plugin {
             r.put("versionCode", 0);
         }
         call.resolve(r);
+    }
+
+    // Alto de la barra de estado y de la de navegación, en px de CSS. Android 15 dibuja la app debajo de
+    // ellas y la WebView no siempre lo informa en env(safe-area-inset-*): el lector usa estos valores para
+    // que la hora y la batería no queden encima del logo.
+    @PluginMethod
+    public void insets(PluginCall call) {
+        Activity a = getActivity();
+        a.runOnUiThread(() -> {
+            JSObject r = new JSObject();
+            WindowInsetsCompat w = ViewCompat.getRootWindowInsets(a.getWindow().getDecorView());
+            float d = a.getResources().getDisplayMetrics().density;
+            Insets i = w == null ? Insets.NONE : w.getInsets(WindowInsetsCompat.Type.systemBars() | WindowInsetsCompat.Type.displayCutout());
+            r.put("arriba", Math.round(i.top / d));
+            r.put("abajo", Math.round(i.bottom / d));
+            r.put("izquierda", Math.round(i.left / d));
+            r.put("derecha", Math.round(i.right / d));
+            call.resolve(r);
+        });
+    }
+
+    // Actualizar la app con un toque: baja el APK nuevo (url) a la caché con su nombre de versión
+    // (lector-fenix-1.N.apk) y abre el instalador de Android, que lo pone encima sin borrar libros ni notas.
+    // La primera vez Android pide permitir instalar desde el Lector Fénix.
+    @PluginMethod
+    public void actualizar(PluginCall call) {
+        String url = call.getString("url", "");
+        String nombre = call.getString("nombre", "lector-fenix.apk").replaceAll("[^A-Za-z0-9._-]", "_");
+        if (!url.startsWith("https://github.com/talcaldeg/fenix/releases/")) {
+            call.reject("Dirección no permitida");
+            return;
+        }
+        Context ctx = getContext();
+        new Thread(() -> {
+            try {
+                File dir = new File(ctx.getCacheDir(), "apk");
+                File[] viejos = dir.listFiles();
+                if (viejos != null) for (File f : viejos) f.delete();
+                dir.mkdirs();
+                File destino = new File(dir, nombre);
+                HttpURLConnection c = (HttpURLConnection) new URL(url).openConnection();
+                c.setInstanceFollowRedirects(true);
+                c.setConnectTimeout(20000);
+                c.setReadTimeout(60000);
+                if (c.getResponseCode() != 200) throw new Exception("HTTP " + c.getResponseCode());
+                try (InputStream in = c.getInputStream(); OutputStream out = new FileOutputStream(destino)) {
+                    byte[] buf = new byte[65536];
+                    int n;
+                    while ((n = in.read(buf)) > 0) out.write(buf, 0, n);
+                } finally {
+                    c.disconnect();
+                }
+                Uri uri = FileProvider.getUriForFile(ctx, ctx.getPackageName() + ".fileprovider", destino);
+                Intent i = new Intent(Intent.ACTION_VIEW);
+                i.setDataAndType(uri, "application/vnd.android.package-archive");
+                i.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION | Intent.FLAG_ACTIVITY_NEW_TASK);
+                ctx.startActivity(i);
+                call.resolve();
+            } catch (Exception e) {
+                call.reject(String.valueOf(e.getMessage()));
+            }
+        }).start();
     }
 
     @PluginMethod

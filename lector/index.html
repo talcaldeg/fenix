@@ -21,7 +21,9 @@
   --letra:"EB Garamond",Georgia,"Iowan Old Style","Palatino Linotype",serif;
   --bg:#faf6ef; --card:#fffdf8; --line:#e4d8c4; --ink:#2a1f1a; --muted:#6e5d50; --vino:#6b1d24; --oro:#8a5d14;
   --acento:#6b1d24; --acento-ink:#fff8ec; --chip:#efe4d2; --marca:rgba(232,176,74,.38); --nota:rgba(107,29,36,.16); --corr:rgba(196,60,40,.22);
-  --barra:56px}
+  --barra:56px;
+  /* Bordes que tapan la hora y los botones de Android: en la app los fija lector.js con LectorFenix.insets(). */
+  --sa-t:env(safe-area-inset-top, 0px); --sa-b:env(safe-area-inset-bottom, 0px); --sa-l:env(safe-area-inset-left, 0px); --sa-r:env(safe-area-inset-right, 0px)}
 @media (prefers-color-scheme: dark){:root:not([data-theme="light"]):not([data-theme="sepia"]){color-scheme:dark;
   --bg:#16110f; --card:#231b17; --line:#3a2e27; --ink:#f2e9dc; --muted:#bfae9c; --vino:#d26a72; --oro:#e8b04a;
   --acento:#e8b04a; --acento-ink:#1d1206; --chip:#2e241e; --marca:rgba(232,176,74,.30); --nota:rgba(210,106,114,.26); --corr:rgba(230,90,60,.32)}}
@@ -32,7 +34,10 @@
   --bg:#f1e5cc; --card:#f7eedb; --line:#dccaa6; --ink:#3b2b1c; --muted:#715c45; --vino:#7a1f2b; --oro:#7a5a14;
   --acento:#7a1f2b; --acento-ink:#fbf3e2; --chip:#e8d9b8}
 
-*{box-sizing:border-box}
+*{box-sizing:border-box; -webkit-tap-highlight-color:transparent}
+/* Sin el recuadro celeste de Android al tocar; el anillo de foco queda solo para el teclado. */
+:focus:not(:focus-visible){outline:none}
+:focus-visible{outline:2px solid var(--oro); outline-offset:2px}
 html{-webkit-text-size-adjust:100%}
 body{margin:0; background:var(--bg); color:var(--ink); font:18px/1.5 var(--letra); min-height:100vh; overflow-x:hidden}
 button,input,select,textarea{font:inherit; color:inherit}
@@ -41,8 +46,8 @@ a{color:var(--vino)}
 .oculto{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap}
 
 /* ---------- barra ---------- */
-header.barra{position:sticky; top:0; z-index:20; height:var(--barra); display:flex; align-items:center; gap:6px;
-  padding:0 max(10px, env(safe-area-inset-right)) 0 max(10px, env(safe-area-inset-left)); background:var(--bg); border-bottom:1px solid var(--line)}
+header.barra{position:sticky; top:0; z-index:20; height:calc(var(--barra) + var(--sa-t)); display:flex; align-items:center; gap:6px;
+  padding:var(--sa-t) max(10px, var(--sa-r)) 0 max(10px, var(--sa-l)); background:var(--bg); border-bottom:1px solid var(--line)}
 .marca{display:flex; align-items:center; gap:8px; text-decoration:none; color:var(--ink); font-weight:600; font-size:19px; white-space:nowrap}
 .marca img{width:28px; height:28px}
 .titulo-barra{flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font-size:16px; color:var(--muted); text-align:center}
@@ -59,6 +64,7 @@ header.barra{position:sticky; top:0; z-index:20; height:var(--barra); display:fl
 
 /* ---------- biblioteca ---------- */
 main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
+.pie-version{margin:40px 0 0; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:15px; display:flex; flex-wrap:wrap; align-items:center; gap:10px}
 .aviso{border:1px solid var(--line); background:var(--card); border-radius:12px; padding:10px 14px; margin:0 0 14px; font-size:16px; color:var(--muted)}
 .aviso b{color:var(--ink)}
 .pestanas{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 16px}
@@ -92,10 +98,10 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
    de a una (lector.js, maquetar). La barra y los controles salen con un toque al centro. */
 #vistaLectura{--ancho:36em; --tam:20px; --interlineado:1.6; --letra-lectura:var(--letra); --alto-pag:70vh;
   position:fixed; inset:0; overflow:hidden; background:var(--bg); z-index:10}
-#vistaLectura header.barra{position:absolute; left:0; right:0; top:0; height:auto; min-height:var(--barra); padding-top:env(safe-area-inset-top);
+#vistaLectura header.barra{position:absolute; left:0; right:0; top:0; height:auto; min-height:var(--barra); padding-top:var(--sa-t);
   transform:translateY(-105%); transition:transform .2s ease; box-shadow:0 2px 12px rgba(0,0,0,.18)}
 #vistaLectura[data-controles] header.barra{transform:none}
-#hoja{position:absolute; left:0; right:0; top:max(26px, calc(env(safe-area-inset-top) + 14px)); bottom:max(36px, calc(env(safe-area-inset-bottom) + 28px));
+#hoja{position:absolute; left:0; right:0; top:max(26px, calc(var(--sa-t) + 14px)); bottom:max(36px, calc(var(--sa-b) + 28px));
   touch-action:pan-y; overflow:hidden}
 #marco{height:100%; margin:0 auto; overflow:hidden}
 #texto{height:100%; margin:0; padding:0; font-size:var(--tam); line-height:var(--interlineado); font-family:var(--letra-lectura);
@@ -136,10 +142,10 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 #vistaLectura[data-bilingue="orig"] .lx-par > .lx-trad{display:none}
 #vistaLectura[data-bilingue="orig"] .lx-par > .orig{color:inherit !important}
 
-.pie-lectura{position:absolute; left:0; right:0; bottom:max(8px, env(safe-area-inset-bottom)); text-align:center; font-size:13px; color:var(--muted);
+.pie-lectura{position:absolute; left:0; right:0; bottom:max(8px, var(--sa-b)); text-align:center; font-size:13px; color:var(--muted);
   pointer-events:none; font-variant-numeric:tabular-nums}
 .controles-pie{position:absolute; left:0; right:0; bottom:0; z-index:20; background:var(--bg); border-top:1px solid var(--line); box-shadow:0 -2px 12px rgba(0,0,0,.18);
-  padding:10px max(16px, env(safe-area-inset-right)) max(12px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  padding:10px max(16px, var(--sa-r)) max(12px, var(--sa-b)) max(16px, var(--sa-l));
   transform:translateY(105%); transition:transform .2s ease}
 #vistaLectura[data-controles] .controles-pie{transform:none}
 .cap-actual{font-size:15px; color:var(--muted); white-space:nowrap; overflow:hidden; text-overflow:ellipsis; text-align:center}
@@ -180,7 +186,7 @@ label.campo{display:block; margin:0 0 12px}
 label.campo > span{display:block; font-size:15px; color:var(--muted); margin-bottom:4px}
 .citado{border-left:3px solid var(--oro); padding:4px 10px; margin:0 0 12px; font-style:italic; color:var(--muted); max-height:9em; overflow:auto}
 
-#seleccion{position:fixed; left:50%; transform:translateX(-50%); bottom:calc(18px + env(safe-area-inset-bottom)); z-index:30; display:flex; gap:4px;
+#seleccion{position:fixed; left:50%; transform:translateX(-50%); bottom:calc(18px + var(--sa-b)); z-index:30; display:flex; gap:4px;
   background:var(--ink); color:var(--bg); border-radius:999px; padding:5px; box-shadow:0 6px 24px rgba(0,0,0,.3); max-width:calc(100vw - 20px); overflow-x:auto}
 #seleccion button{border:0; background:none; color:var(--bg); padding:8px 12px; border-radius:999px; cursor:pointer; font-size:16px; white-space:nowrap}
 #seleccion button:hover{background:rgba(255,255,255,.14)}
@@ -188,7 +194,7 @@ label.campo > span{display:block; font-size:15px; color:var(--muted); margin-bot
   padding:12px 14px; box-shadow:0 8px 30px rgba(0,0,0,.28); font-size:17px; max-height:50vh; overflow:auto}
 #nota-flotante .acciones{display:flex; gap:10px; margin-top:8px}
 #nota-flotante .acciones button{border:0; background:none; color:var(--vino); cursor:pointer; text-decoration:underline; padding:2px; font-size:15px}
-#toast{position:fixed; left:50%; transform:translateX(-50%); top:calc(var(--barra) + 10px); z-index:40; background:var(--ink); color:var(--bg); padding:10px 16px;
+#toast{position:fixed; left:50%; transform:translateX(-50%); top:calc(var(--barra) + var(--sa-t) + 10px); z-index:40; background:var(--ink); color:var(--bg); padding:10px 16px;
   border-radius:12px; max-width:calc(100vw - 32px); font-size:16px; box-shadow:0 6px 24px rgba(0,0,0,.3)}
 .carga{position:fixed; inset:0; z-index:50; display:grid; place-items:center; background:rgba(10,6,4,.45); color:#fff; font-size:18px}
 
@@ -222,7 +228,7 @@ h2{break-after:avoid; page-break-after:avoid}
   <main class="biblio">
     <p class="aviso" id="avisoRed" hidden></p>
     <p class="aviso" id="avisoGuardar" hidden><b>Instala el lector para que el teléfono no borre tus libros.</b> Toca «Instalar» o, en el menú del navegador, «Agregar a la pantalla de inicio». <button class="btn" type="button" id="btnInstalar" hidden>Instalar</button> <button class="btn" type="button" id="btnEntendido">Entendido</button></p>
-    <p class="aviso" id="avisoApp" hidden><b>Hay versión nueva del Lector Fénix.</b> Al instalarla se mantienen tus libros, páginas y notas. <a class="btn prim apk" href="#">Descargar</a></p>
+    <p class="aviso" id="avisoApp" hidden><b>Hay versión nueva del Lector Fénix<span id="avisoAppVer"></span>.</b> Al instalarla se mantienen tus libros, páginas y notas. <button class="btn prim" type="button" data-actualizar>Actualizar</button></p>
     <div class="pestanas" role="tablist">
       <button class="btn" type="button" role="tab" id="tabMios" aria-selected="true">Mis libros</button>
       <button class="btn" type="button" role="tab" id="tabFenix" aria-selected="false">Catálogo Fénix</button>
@@ -237,6 +243,7 @@ h2{break-after:avoid; page-break-after:avoid}
       <div class="catalogo" id="catalogo"></div>
       <p class="vacio" id="catalogoVacio" hidden></p>
     </section>
+    <p class="pie-version" id="pieVersion" hidden><span id="versionTxt"></span> <button class="btn" type="button" id="btnBuscarApp">Buscar actualización</button></p>
   </main>
 </div>
 
@@ -299,12 +306,12 @@ h2{break-after:avoid; page-break-after:avoid}
   <div class="dlg-cuerpo">
     <p style="margin-top:0">Es este mismo lector, instalado como app: abre los EPUB que te mandan por WhatsApp, pasa de página con los botones de volumen y guarda los libros donde el teléfono no los borra. Es gratis y no está en Play Store, por eso se instala así:</p>
     <ol class="pasos">
-      <li>Toca «Descargar» y espera que baje el archivo <b>lector-fenix.apk</b>.</li>
+      <li>Toca «Descargar» y espera que baje el archivo <b class="apk-nombre">lector-fenix.apk</b> (el número es la versión).</li>
       <li>Ábrelo desde el aviso de descarga o desde la carpeta Descargas.</li>
       <li>Si el teléfono pide permiso para instalar apps de esa fuente, toca «Ajustes» (o «Configuración»), activa «Permitir de esta fuente» y vuelve atrás.</li>
       <li>Toca «Instalar». Si aparece un aviso de Play Protect, elige «Instalar de todas formas».</li>
     </ol>
-    <p class="nota-app">Los libros de esta biblioteca no pasan solos a la app: agrégalos de nuevo desde el catálogo. Cuando haya una versión nueva, la app te avisa.</p>
+    <p class="nota-app">Los libros de esta biblioteca no pasan solos a la app: agrégalos de nuevo desde el catálogo. Cuando haya una versión nueva, la app te avisa y se actualiza con el botón «Actualizar», sin volver a esta página.</p>
   </div>
   <div class="dlg-pie"><button class="btn" type="button" data-cerrar>Cerrar</button><a class="btn prim apk" href="#" download>Descargar</a></div>
 </dialog>

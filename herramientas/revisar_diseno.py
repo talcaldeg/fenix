@@ -571,10 +571,16 @@ def revisar_lector(nav, base, raiz):
             if (!b || !b.offsetParent) return 'no se ve';
             if (b.getBoundingClientRect().right > innerWidth + 1) return 'se sale de la pantalla';
             b.click(); const d = document.querySelector('#dlgApp');
-            const ok = d.open && !!d.querySelector('a[href$="releases/latest/download/lector-fenix.apk"]') && d.querySelectorAll('ol li').length >= 3;
+            // El APK con la versión en el nombre (lector-fenix-1.N.apk, 23-nov-2026) o, sin red, el de nombre fijo.
+            const a = d.querySelector('a.apk');
+            const ok = d.open && !!a && /^https:\\/\\/github\\.com\\/talcaldeg\\/fenix\\/releases\\/(latest\\/download\\/lector-fenix|download\\/lector-v\\d+\\/lector-fenix(-1\\.\\d+)?)\\.apk$/.test(a.href) && d.querySelectorAll('ol li').length >= 3;
             d.close(); return ok ? '' : 'el diálogo no trae la descarga o los pasos'; }""")
         if app:
             fallas.append(f"{w}x{h} lector: botón «Descargar app para Android»: {app}")
+        # Tocar un botón en Android no deja el recuadro celeste (él, 23-nov-2026).
+        toque = pg.evaluate("""() => getComputedStyle(document.querySelector('#tabMios')).webkitTapHighlightColor""")
+        if toque and toque not in ("transparent", "rgba(0, 0, 0, 0)"):
+            fallas.append(f"{w}x{h} lector: los botones muestran el recuadro de toque de Android ({toque})")
         fallas += [f"{w}x{h} lector: error de JavaScript: {e}" for e in errores]
         pg.close()
     with open(os.path.join(raiz, "lector", "catalogo.json"), encoding="utf-8") as f:

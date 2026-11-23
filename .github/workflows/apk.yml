@@ -110,6 +110,9 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          gh release create "lector-v${{ github.run_number }}" lector-fenix.apk -R "${{ github.repository }}" \
+          # Dos copias del mismo APK: con la versión en el nombre (la que baja el lector, para saber cuál se
+          # descargó) y con nombre fijo (para el enlace releases/latest/download y las apps antiguas).
+          cp lector-fenix.apk "lector-fenix-1.${{ github.run_number }}.apk"
+          gh release create "lector-v${{ github.run_number }}" "lector-fenix-1.${{ github.run_number }}.apk" lector-fenix.apk -R "${{ github.repository }}" \
             --title "Lector Fénix 1.${{ github.run_number }}" --latest \
             --notes "APK del Lector Fénix, compilado desde ${GITHUB_SHA::7}. Se instala encima del anterior sin perder libros, páginas ni notas. Pasos de instalación: botón «Descargar app para Android» en https://talcaldeg.github.io/fenix/lector/"
