@@ -7,7 +7,7 @@
 // - Lo de otros sitios (Open Library, GoatCounter, Delibris) pasa directo.
 // VERSION la reescribe herramientas/gen_estaticos.js cuando cambian index.html, datos.js o img/: el
 // navegador ve un sw.js distinto, instala el nuevo y este borra las cachés viejas.
-const VERSION = "fenix-b8d298a1e1";
+const VERSION = "fenix-ec6f6e087e";
 // El lector (lector/) entra entero al instalarse: tiene que abrir sin señal aunque nunca se haya visitado.
 const BASICO = ["./", "datos.js", "manifest.webmanifest", "img/favicon.svg", "img/icono-192.png",
   "lector/", "lector/lector.js", "lector/manifest.webmanifest", "lector/vendor/fflate.js", "lector/catalogo.json",
