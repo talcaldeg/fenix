@@ -123,6 +123,13 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 #texto mark.lx-sub{background-color:var(--marca) !important}
 #texto mark.lx-nota{background-color:var(--nota) !important; border-bottom:2px solid var(--vino)}
 #texto mark.lx-corr{background-color:var(--corr) !important; text-decoration:underline wavy #c43c28; text-underline-offset:3px}
+#texto mark.lx-busca{background-color:var(--marca) !important; outline:2px solid var(--oro); border-radius:2px}
+.resultados{list-style:none; margin:0; padding:0}
+.resultados li{border-bottom:1px solid var(--line)}
+.resultados button{display:block; width:100%; text-align:left; background:none; border:0; padding:10px 4px; cursor:pointer; font-size:16px; line-height:1.4}
+.resultados .etq{display:block; font-size:13px; color:var(--muted); margin-bottom:2px}
+.resultados b{background:var(--marca); font-weight:inherit; border-radius:2px}
+#formBuscar .buscar{width:100%; max-width:none}
 #texto .lx-destello{animation:destello 1.6s ease-out}
 @keyframes destello{from{background-color:var(--marca)}to{background-color:transparent}}
 
@@ -252,6 +259,7 @@ h2{break-after:avoid; page-break-after:avoid}
   <header class="barra">
     <button class="icono" id="btnVolver" type="button" title="Biblioteca" aria-label="Volver a la biblioteca"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
     <div class="titulo-barra" id="tituloLectura"></div>
+    <button class="icono" id="btnBuscar" type="button" title="Buscar en el libro" aria-label="Buscar en el libro"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/></svg></button>
     <button class="icono" id="btnIndice" type="button" title="Índice" aria-label="Índice"><svg viewBox="0 0 24 24"><path d="M8 6h12M8 12h12M8 18h12M4 6h.01M4 12h.01M4 18h.01"/></svg></button>
     <button class="icono" id="btnMarcador" type="button" title="Marcador" aria-label="Poner marcador aquí" aria-pressed="false"><svg viewBox="0 0 24 24"><path d="M6 3h12v18l-6-4-6 4z"/></svg></button>
     <button class="icono" id="btnNotas" type="button" title="Marcadores y notas" aria-label="Marcadores y notas"><svg viewBox="0 0 24 24"><path d="M4 5h16v11H9l-5 4z"/></svg></button>
@@ -262,7 +270,7 @@ h2{break-after:avoid; page-break-after:avoid}
   <div class="pie-lectura" id="pieLectura" aria-live="polite"></div>
   <div class="controles-pie" id="controlesPie">
     <div class="cap-actual" id="capActual"></div>
-    <input type="range" id="deslizador" min="1" max="1" value="1" aria-label="Página del capítulo">
+    <input type="range" id="deslizador" min="1" max="1" value="1" aria-label="Posición en el libro" step="1">
     <div class="fila-ctrl">
       <button class="btn" type="button" id="capAnterior">‹ Capítulo</button>
       <span id="paginaTxt"></span>
@@ -281,6 +289,7 @@ h2{break-after:avoid; page-break-after:avoid}
 <div id="toast" hidden role="status"></div>
 
 <dialog id="dlgIndice" class="panel"><div class="dlg-cab"><h2>Índice</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo indice" id="indice"></div></dialog>
+<dialog id="dlgBuscar" class="panel"><div class="dlg-cab"><h2>Buscar en el libro</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo"><form id="formBuscar"><input class="buscar" id="buscarTexto" type="search" placeholder="Palabra o frase" aria-label="Palabra o frase" enterkeyhint="search" autocomplete="off"></form><p class="etq" id="buscarEstado" aria-live="polite"></p><ol class="resultados" id="buscarLista"></ol></div></dialog>
 <dialog id="dlgNotas" class="panel"><div class="dlg-cab"><h2>Marcadores y notas</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="listaNotas"></div></dialog>
 <dialog id="dlgAjustes" class="panel"><div class="dlg-cab"><h2>Letra y colores</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="ajustes"></div></dialog>
 <dialog id="dlgEscribir">

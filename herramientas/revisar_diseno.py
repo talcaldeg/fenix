@@ -707,8 +707,11 @@ def revisar_paginas(nav, base, libro, w, h):
         if (r := pg.evaluate(ANCLA_VISIBLE)):
             fallas.append(f"{rot}: al volver a enderezar el teléfono se pierde la página ({r})")
         # Última página → primera del capítulo siguiente, y de vuelta.
+        for _ in range(80):
+            if est()["pag"] >= est()["paginas"] - 1:
+                break
+            tocar(0.9)
         e = est()
-        pg.evaluate("(() => { const d = document.querySelector('#deslizador'); d.value = d.max; d.dispatchEvent(new Event('input')); })()")
         tocar(0.9)
         pg.wait_for_timeout(600)
         e2 = est()
@@ -719,6 +722,26 @@ def revisar_paginas(nav, base, libro, w, h):
         e3 = est()
         if (e3["i"], e3["pag"]) != (e["i"], e3["paginas"] - 1):
             fallas.append(f"{rot}: volver desde el comienzo de un capítulo no lleva a la última página del anterior")
+        # La línea de abajo recorre el libro entero, no el capítulo (él, 23-nov-2026): soltarla en el 90 %
+        # lleva a un capítulo posterior.
+        antes = est()["i"]
+        pg.evaluate("(() => { const d = document.querySelector('#deslizador'); d.value = 900; d.dispatchEvent(new Event('input')); d.dispatchEvent(new Event('change')); })()")
+        pg.wait_for_timeout(900)
+        if pg.evaluate("document.querySelector('#deslizador').max") != "1000" or est()["i"] <= antes:
+            fallas.append(f"{rot}: la línea para moverse no recorre el libro entero")
+        # Buscar en el libro (él, 23-nov-2026): una palabra del primer capítulo con texto aparece y su
+        # resultado lleva a ese capítulo con la palabra marcada.
+        pg.evaluate("document.querySelector('#btnBuscar').click()")
+        pg.fill("#buscarTexto", "dios")
+        pg.wait_for_timeout(1500)
+        n = pg.evaluate("document.querySelectorAll('#buscarLista button').length")
+        if not n:
+            fallas.append(f"{rot}: el buscador no encuentra «dios» en el libro")
+        else:
+            pg.evaluate("document.querySelector('#buscarLista button').click()")
+            pg.wait_for_timeout(900)
+            if not pg.evaluate("!!document.querySelector('#texto mark.lx-busca')"):
+                fallas.append(f"{rot}: el resultado de la búsqueda no lleva a la palabra marcada")
     except Exception as ex:
         fallas.append(f"{rot}: la prueba de páginas no terminó ({str(ex).splitlines()[0]})")
     fallas += [f"{rot}: error de JavaScript: {x}" for x in errores]

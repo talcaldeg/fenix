@@ -758,7 +758,28 @@
       if (lectura === L) irPagina(ancla ? paginaDePos(ancla) : L.pag, false, ancla);
     }, 150);
   }
-  $("#deslizador").addEventListener("input", e => irPagina(+e.target.value - 1, false));
+  // La línea recorre el libro entero (0 a 1000, por tamaño de cada capítulo): al arrastrar muestra a qué
+  // capítulo llega y, al soltar, va ahí (él, 23-nov-2026: antes era solo el capítulo actual).
+  function puntoDelLibro(f){
+    const L = lectura, tams = L.ep.spine.map(s => s.tam || 1), total = tams.reduce((a, b) => a + b, 0) || 1;
+    let resto = Math.max(0, Math.min(1, f)) * total, i = 0;
+    while (i < tams.length - 1 && resto >= tams[i]) { resto -= tams[i]; i++; }
+    return { i, frac: Math.min(1, resto / tams[i]) };
+  }
+  $("#deslizador").addEventListener("input", e => {
+    if (!lectura) return;
+    const f = +e.target.value / 1000, { i } = puntoDelLibro(f);
+    $("#capActual").textContent = tituloDe(i);
+    $("#paginaTxt").textContent = `${Math.round(f * 100)} % del libro`;
+  });
+  $("#deslizador").addEventListener("change", async e => {
+    const L = lectura; if (!L) return;
+    const { i, frac } = puntoDelLibro(+e.target.value / 1000);
+    if (i !== L.i) await mostrarCapitulo(i, 0);
+    irPagina(Math.floor(frac * L.paginas), false);
+    $("#capActual").textContent = tituloCapitulo();
+    guardarPosicion();
+  });
   function mostrarControles(si){ $("#vistaLectura").toggleAttribute("data-controles", !!si); }
 
   // ---------- toques y deslizar ----------
@@ -956,7 +977,9 @@
     const a = avanceTotal(), quedan = L.paginas - L.pag - 1;
     $("#pieLectura").textContent = `${L.pag + 1} de ${L.paginas}` + (quedan ? ` · quedan ${quedan}` : " · fin del capítulo");
     $("#paginaTxt").textContent = `Pág. ${L.pag + 1} de ${L.paginas} · ${Math.round(a * 100)} % del libro`;
-    const d = $("#deslizador"); d.max = L.paginas; d.value = L.pag + 1; d.disabled = L.paginas < 2;
+    const tams = L.ep.spine.map(s => s.tam || 1), total = tams.reduce((x, y) => x + y, 0) || 1;
+    const inicio = (tams.slice(0, L.i).reduce((x, y) => x + y, 0) + tams[L.i] * (L.pag || 0) / (L.paginas || 1)) / total;
+    const d = $("#deslizador"); d.min = 0; d.max = 1000; d.value = Math.round(inicio * 1000); d.disabled = false;
     $("#btnMarcador").setAttribute("aria-pressed", !!marcadorAqui());
   }
   document.addEventListener("visibilitychange", () => {
@@ -1179,6 +1202,109 @@
       aviso(enLinea() ? "Corrección enviada a Fénix. ¡Gracias!" : "Corrección guardada: se enviará a Fénix cuando vuelva la conexión.");
     }
   }
+  // Título del capítulo i según el índice del libro, sin abrirlo.
+  function tituloDe(i){
+    // Un archivo sin entrada propia en el índice (un capítulo partido en varios) toma la del anterior.
+    const L = lectura;
+    let t = "";
+    for (let k = i; k >= 0 && !t; k--) {
+      const href = L.ep.spine[k].href;
+      const buscar = items => items.forEach(x => { if (!t && x.ruta === href) t = x.titulo; if (x.hijos) buscar(x.hijos); });
+      buscar(L.ep.toc);
+    }
+    return t || `Sección ${i + 1}`;
+  }
+
+  // ---------- buscar en el libro ----------
+  // Recorre todos los capítulos sin tildes ni mayúsculas («dios» encuentra «Dios»); cada resultado lleva
+  // al capítulo y a la página donde está, con la palabra marcada.
+  const sinTilde = c => c.normalize("NFD").replace(/[̀-ͯ]/g, "").toLowerCase();
+  function plano(s){
+    let t = ""; const mapa = [];
+    for (let k = 0; k < s.length; k++) { const c = sinTilde(s[k]); t += c; for (let n = 0; n < c.length; n++) mapa.push(k); }
+    return { t, mapa };
+  }
+  function textoCapitulo(i){
+    const L = lectura;
+    L.textos = L.textos || [];
+    if (L.textos[i] == null) {
+      try {
+        const it = L.ep.spine[i], fuente = L.ep.txt(it.href);
+        let doc = new DOMParser().parseFromString(fuente, /html\+xml|xml/.test(it.tipo) ? "application/xhtml+xml" : "text/html");
+        if (!doc.body || doc.querySelector("parsererror")) doc = new DOMParser().parseFromString(fuente, "text/html");
+        $$(PROHIBIDOS, doc.body).forEach(e => e.remove());
+        L.textos[i] = doc.body.textContent || "";
+      } catch { L.textos[i] = ""; }
+    }
+    return L.textos[i];
+  }
+  let busquedaN = 0;
+  async function buscarEnLibro(q){
+    const L = lectura; if (!L) return;
+    const n = ++busquedaN, lista = $("#buscarLista"), estado = $("#buscarEstado");
+    lista.innerHTML = "";
+    const aguja = sinTilde(norm(q));
+    if (aguja.length < 2) { estado.textContent = "Escribe al menos dos letras."; return; }
+    estado.textContent = "Buscando…";
+    const MAX = 300; let total = 0, html = "";
+    for (let i = 0; i < L.ep.spine.length && total < MAX; i++) {
+      if (i % 8 === 7) { await espera(0); if (n !== busquedaN) return; }
+      const txt = textoCapitulo(i); if (!txt) continue;
+      const p = plano(txt);
+      let desde = 0, k = 0, pos;
+      while ((pos = p.t.indexOf(aguja, desde)) >= 0 && total < MAX) {
+        const a = p.mapa[pos], b = p.mapa[pos + aguja.length - 1] + 1;
+        const antes = norm(txt.slice(Math.max(0, a - 60), a)), despues = norm(txt.slice(b, b + 80));
+        html += `<li><button type="button" data-i="${i}" data-k="${k}"><span class="etq">${esc(tituloDe(i))}</span>…${esc(antes)} <b>${esc(norm(txt.slice(a, b)))}</b> ${esc(despues)}…</button></li>`;
+        total++; k++; desde = pos + aguja.length;
+      }
+    }
+    if (n !== busquedaN) return;
+    lista.innerHTML = html;
+    estado.textContent = total ? (total >= MAX ? `Más de ${MAX} resultados: escribe algo más preciso.` : `${total} resultado${total === 1 ? "" : "s"}.`) : "No aparece en este libro.";
+  }
+  // Marca la aparición k (en orden) de la búsqueda dentro del capítulo abierto y va a su página.
+  function marcarBusqueda(q, k){
+    const cap = $("#texto .lx-cap"); if (!cap) return;
+    const aguja = sinTilde(norm(q));
+    const nodos = []; let txt = "";
+    const tw = document.createTreeWalker(cap, NodeFilter.SHOW_TEXT);
+    while (tw.nextNode()) { nodos.push([tw.currentNode, txt.length]); txt += tw.currentNode.data; }
+    const p = plano(txt);
+    let pos = -1, desde = 0;
+    for (let n = 0; n <= k; n++) { pos = p.t.indexOf(aguja, desde); if (pos < 0) break; desde = pos + aguja.length; }
+    if (pos < 0) return;
+    const a = p.mapa[pos], b = p.mapa[pos + aguja.length - 1] + 1;
+    const donde = off => { let j = nodos.length - 1; while (j > 0 && nodos[j][1] > off) j--; return [nodos[j][0], off - nodos[j][1]]; };
+    const r = document.createRange();
+    r.setStart(...donde(a)); r.setEnd(...donde(b - 1)); r.setEnd(r.endContainer, r.endOffset + 1);
+    const rc = [...r.getClientRects()].find(x => x.width || x.height) || r.getBoundingClientRect();
+    irPagina(paginaDeRect(rc), false);
+    if (r.startContainer === r.endContainer) {
+      const m = document.createElement("mark"); m.className = "lx-busca";
+      try {
+        r.surroundContents(m);
+        setTimeout(() => { if (m.parentNode) { m.replaceWith(...m.childNodes); } }, 4000);
+      } catch {}
+    }
+  }
+  $("#btnBuscar").onclick = () => {
+    $("#dlgBuscar").showModal();
+    const inp = $("#buscarTexto"); inp.focus(); inp.select();
+  };
+  let buscarT = 0;
+  $("#buscarTexto").addEventListener("input", e => { clearTimeout(buscarT); buscarT = setTimeout(() => buscarEnLibro(e.target.value), 350); });
+  $("#formBuscar").addEventListener("submit", e => { e.preventDefault(); clearTimeout(buscarT); buscarEnLibro($("#buscarTexto").value); $("#buscarTexto").blur(); });
+  $("#buscarLista").addEventListener("click", async e => {
+    const b = e.target.closest("button[data-i]"); if (!b || !lectura) return;
+    $("#dlgBuscar").close();
+    const i = +b.dataset.i;
+    if (i !== lectura.i) await mostrarCapitulo(i, 0);
+    marcarBusqueda($("#buscarTexto").value, +b.dataset.k);
+    mostrarControles(false);
+    guardarPosicion();
+  });
+
   function tituloCapitulo(){
     const L = lectura, href = L.ep.spine[L.i].href;
     let t = "";
