@@ -704,3 +704,31 @@ Español culto actual, sin arcaísmos ni cultismos (error 15), que se lea de cor
   de carta a un noble → «Señor»; «матушка» de Iván Kuzmich a su mujer → «mujer»; medidas rusas
   sin convertir (vershok, versta, sazhén); palabras tártaras o calmucas en cursiva, tal cual
   (*Yakshí*); «генерал-майор» → «general de brigada».
+
+## Shelley (Thompson, *Shelley*, 1889, desde el inglés)
+
+Original: Project Gutenberg n.º 1336 (Burns & Oates, 1914), partido en
+`fenix_fuentes/shelley-thompson/tramos/t1-t3.txt`; encargo completo en
+`fenix_fuentes/shelley-thompson/ENCARGO.md`. Salida unida en `editorial/thompson-shelley/01.md`
+con el encabezado `## Shelley`. Sin la introducción de Wyndham de la edición de 1909.
+
+- **Registro**: prosa de poeta, barroca, de imágenes encadenadas y ritmo largo; se conservan la
+  imagen y el ritmo con frase castellana natural, sin arcaísmos (error 15). El vocativo «Fathers
+  of the Church (we would say)...» va como apóstrofe con «ustedes»; el «we» del ensayista, en
+  primera del plural.
+- **Párrafos**: uno por uno con el original (56 de prosa; versos, separadores y notas aparte).
+- **Títulos de obras**: en cursiva, con el título castellano asentado (*Prometeo liberado*,
+  *Adonais*, *La rebelión del Islam* para *Laon and Cythna*, *Oda al viento del oeste*, *A una
+  alondra*, *La nube*, *La sensitiva*, *El triunfo de la vida*); sin título asentado, el inglés.
+- **Versos citados**: traducidos en verso libre en el cuerpo, en bloque `> ` sin comillas, y
+  nota del editor con el lugar verificado y el original inglés completo (versos separados por
+  « / »), porque el ensayo juzga su sonido. Sin lugar verificado: «no hemos hallado el lugar de
+  estos versos». Nunca estrofas ni números de verso inventados.
+- **Citas en prosa y alusiones** (Faber, Persio, Alice Meynell, Poe, Pope, Patmore): nota «N.
+  del E.: cf. ...» con obra y lugar, o «no hemos hallado...». Francés o latín sin traducir queda
+  en el cuerpo con su traducción en nota.
+- **Notas**: las del autor `{n}` → `[^n]` con «N. del autor:» si explican (la referencia breve,
+  sin marca); las del editor `[^edN]` numeradas por tramo (ed1-39, ed40-79, ed80 en adelante).
+- **Notas doctrinales**: ninguna. La auditoría descartó la de la indisolubilidad (t1) y la del
+  juicio final (t3) porque el propio texto resuelve la tensión («extravío deplorable»; «nos
+  negamos a juzgar», «Esperemos»).
