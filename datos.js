@@ -28,7 +28,7 @@
 //   libre (p. ej. una fotografía CC BY-SA de Commons): aviso dice la licencia.
 
 window.FENIX = {
-  actualizado: "20-nov-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "24-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -5157,6 +5157,238 @@ window.FENIX = {
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/azul-0"},
       encuadernador: "Juan Ignacio Alcalde G.",
       parecidos: ["dario-cantos-de-vida-y-esperanza", "pardo-bazan-la-sirena-negra", "cervantes-novelas-ejemplares"]
+    },
+    {
+      id: "rojas-la-celestina",
+      titulo: "La Celestina",
+      autor: "Fernando de Rojas",
+      anio: "1499",
+      idioma: "es",
+      categoria: "teatro",
+      recomendado: false,
+      resumen: {"es": "Tragicomedia escrita casi toda en diálogo, publicada en 1499 y ampliada a veintiún actos en 1514. Calisto, un joven noble, se enamora de Melibea y ella lo rechaza; sus criados Sempronio y Pármeno lo llevan a la alcahueta Celestina, que con engaños y regalos consigue entrar en casa de Melibea y vencer su resistencia. La codicia lo desbarata todo: Celestina muere a manos de los criados que reclaman su parte, los criados son ajusticiados, Calisto se mata al caer de una tapia y Melibea se arroja desde una torre. La obra termina con el lamento de su padre, Pleberio, ante un mundo que le ha quitado a su hija. Esta edición conserva la ortografía de los impresos antiguos, sin tildes, con introducción, notas y glosario de Robert S. Rudder.", "en": "A tragicomedy written almost entirely in dialogue, published in 1499 and expanded to twenty-one acts in 1514. Calisto, a young nobleman, falls in love with Melibea and she rejects him; his servants Sempronio and Pármeno bring him to the go-between Celestina, who by deceit and gifts manages to enter Melibea's house and overcome her resistance. Greed ruins everything: Celestina is killed by the servants who demand their share, the servants are executed, Calisto dies falling from a garden wall, and Melibea throws herself from a tower. The work ends with the lament of her father, Pleberio, before a world that has taken his daughter from him. This edition keeps the spelling of the old printings, without accent marks, with an introduction, notes and glossary by Robert S. Rudder."},
+      porque: {"es":"Para quien quiera conocer una de las obras mayores de la literatura española, a caballo entre la Edad Media y el Renacimiento. Conviene leerla con las notas a mano y sin prisa: la ortografía antigua cansa al principio, y después se lee de corrido, como una obra de teatro. Ten en cuenta que hay escenas de sensualidad explícita, lenguaje soez y burlas de lo sagrado.","en":"For anyone who wants to know one of the great works of Spanish literature, standing between the Middle Ages and the Renaissance. It is best read with the notes at hand and without hurry: the old spelling is tiring at first, and afterwards it reads smoothly, like a play. Be aware that it contains scenes of explicit sensuality, coarse language and mockery of sacred things."},
+      imagen: {"src": "img/portadas/rojas-la-celestina.jpg", "credito": {"es": "Luis Paret y Alcázar, «La Celestina y los enamorados», 1784", "en": "Luis Paret y Alcázar, «Celestina and the Lovers», 1784"}, "url": "https://commons.wikimedia.org/wiki/File:La_Celestina_y_los_enamorados_(Paret).jpg"},
+      citas: [
+        "Todas las cosas ser criadas a manera de contienda o batalla dize aquel gran sabio Eraclito en este modo.",
+        "que la fortuna ayuda a los osados.",
+        "no ay cosa tan dificile de zofrir en sus principios: que el tiempo no la ablande: e faga comportable",
+        "nuestro gozo en el pozo. nuestro bien todo es perdido.",
+        "O mundo, mundo! muchos mucho de ti dixeron."
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/1619.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/1619"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 1619: edición electrónica de Robert S. Rudder, con la ortografía de los impresos de Burgos 1499, Toledo 1500, Sevilla 1501 y Valencia 1514, e introducción y notas (California State University, Los Ángeles, 1998; el archivo de Gutenberg lleva derechos de autor sobre la edición y las notas de Rudder; la obra es de dominio público)", "url": "https://www.gutenberg.org/ebooks/1619"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-celestina-tragicomedia-de-calixto-y-melibea"},
+      parecidos: ["juan-de-mena-laberinto-de-fortuna", "lope-el-caballero-de-olmedo", "cervantes-don-quijote"]
+    },
+    {
+      id: "hartzenbusch-los-amantes-de-teruel",
+      titulo: "Los amantes de Teruel",
+      autor: "Juan Eugenio Hartzenbusch",
+      anio: "1837",
+      idioma: "es",
+      categoria: "teatro",
+      recomendado: false,
+      resumen: {"es": "Drama romántico en verso, en cuatro actos, sobre la leyenda de los amantes de Teruel, ambientado en el año 1217. Diego Marsilla e Isabel de Segura se aman, pero él no tiene fortuna, y el padre de ella le concede un plazo para volver rico. Marsilla queda cautivo en Valencia, donde la reina mora Zulima, enamorada de él, lo libera y lo colma de riquezas. Cuando regresa a Teruel, Isabel acaba de casarse con don Rodrigo de Azagra, engañada con la noticia de su muerte. Marsilla muere de dolor al creer que ella lo rechaza, e Isabel muere sobre su cuerpo. Esta edición, de G. W. Umphrey (1920), trae introducción, notas y vocabulario en inglés.", "en": "A Romantic verse drama in four acts on the legend of the lovers of Teruel, set in the year 1217. Diego Marsilla and Isabel de Segura love each other, but he has no fortune, and her father grants him a term in which to return rich. Marsilla is held captive in Valencia, where the Moorish queen Zulima, in love with him, frees him and showers him with wealth. When he returns to Teruel, Isabel has just married Don Rodrigo de Azagra, misled by the news of his death. Marsilla dies of grief believing she rejects him, and Isabel dies over his body. This edition, by G. W. Umphrey (1920), has an introduction, notes and vocabulary in English."},
+      porque: {"es":"Para quien disfruta del drama romántico y de las historias de amor que acaban en tragedia. Conviene leerlo en voz alta, porque su fuerza está en el verso, y con las notas de la edición, que están en inglés. Es una buena puerta al teatro español del siglo XIX.","en":"For anyone who enjoys Romantic drama and love stories that end in tragedy. It is best read aloud, because its strength lies in the verse, and with the notes of the edition, which are in English. It is a good gateway to nineteenth-century Spanish theatre."},
+      imagen: {"src": "img/portadas/hartzenbusch-los-amantes-de-teruel.jpg", "credito": {"es": "Antonio Muñoz Degrain, «Los amantes de Teruel», 1884", "en": "Antonio Muñoz Degrain, «The Lovers of Teruel», 1884"}, "url": "https://commons.wikimedia.org/wiki/File:Los_amantes_de_Teruel_(Mu%C3%B1oz_Degrain).jpg"},
+      citas: [
+        "El cielo que en la vida nos aparta, / nos unirá en la tumba.",
+        "«Para ti (sollozando me decías), / o si no, para Dios.»",
+        "Yo con ella, por ella, para ella / viví... Sin ella, sin su amor, me falta / aire que respirar...",
+        "Tuya fuí, tuya soy: en pos del tuyo / mi enamorado espíritu se lanza.",
+        "Juntos aquí nos desterró la mano / que gozo y pena distribuye sabia: / juntos al fin de la mortal carrera / nos toca ver la celestial morada."
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/10909.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/10909"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 10909: edición de G. W. Umphrey, Heath's Modern Language Series, 1920, sobre el texto de Adolf Kressner (Leipzig, 1887) (dominio público)", "url": "https://www.gutenberg.org/ebooks/10909"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/los-amantes-de-teruel"},
+      parecidos: ["zorrilla-don-juan-tenorio", "duque-de-rivas-don-alvaro", "lope-el-caballero-de-olmedo"]
+    },
+    {
+      id: "lope-de-vega-la-moza-de-cantaro",
+      titulo: "La moza de cántaro",
+      autor: "Lope de Vega",
+      anio: "c. 1625",
+      idioma: "es",
+      categoria: "teatro",
+      recomendado: false,
+      resumen: {"es": "Comedia escrita hacia 1625 y revisada en 1632. En Ronda, doña María mata en la cárcel a don Diego, que había abofeteado a su padre, don Bernardo, y huye a Madrid disfrazada de criada. Con el nombre de Isabel sirve a un indiano y a una viuda, y se gana el pan acarreando agua como moza de cántaro. Allí la conoce don Juan, un caballero que la ama aunque la cree de humilde cuna y prefiere su amor a la riqueza. Al final María revela quién es y la comedia termina en boda. Esta edición, de Madison Stathers (1913), trae introducción y notas en inglés.", "en": "A comedy written around 1625 and revised in 1632. In Ronda, doña María kills Don Diego in prison, because he had slapped her father, Don Bernardo, and flees to Madrid disguised as a maid. Under the name Isabel she serves a returned colonial and a widow, and earns her bread carrying water as a water-girl. There she meets Don Juan, a gentleman who loves her although he thinks her of humble birth, and who prefers her love to wealth. In the end María reveals who she is and the comedy ends in a wedding. This edition, by Madison Stathers (1913), has an introduction and notes in English."},
+      porque: {"es":"Para quien se anime a un primer Lope de Vega: la trama es ágil, con enredo, disfraz y criados graciosos, y el verso se sigue bien en voz alta. Conviene leerla con las notas del editor, que están en inglés, y fijarse en una protagonista que decide por sí misma. Ten en cuenta que hay una venganza con muerte, enredos de amor y algunas bromas picantes de los criados.","en":"For anyone ready for a first Lope de Vega: the plot is brisk, with intrigue, disguise and comic servants, and the verse is easy to follow aloud. It is best read with the editor's notes, which are in English, noticing a heroine who makes her own decisions. Be aware that it contains a revenge killing, love intrigues and some risqué jokes from the servants."},
+      imagen: {"src": "img/portadas/lope-de-vega-la-moza-de-cantaro.jpg", "credito": {"es": "Francisco de Goya, «La aguadora», 1808-1812", "en": "Francisco de Goya, «The Water Carrier», 1808-1812"}, "url": "https://commons.wikimedia.org/wiki/File:Francisco_de_Goya_y_Lucientes_-_The_Water_Carrier_-_Google_Art_Project.jpg"},
+      citas: [
+        "Una moza de cántaro y del río, / Más limpia que la plata que en él lleva, / Recién herrada de chinela nueva, / Honor del devantal, reina del brío;",
+        "Que si tienes nobleza y hermosura, / Del cántaro por armas pienso honrarme;",
+        "Nací con esta arrogancia. / No me puedo sujetar, / Si es sujetarse el casar.",
+        "Herrado traigo, María, / El rostro con cinco letras, / Esclavo soy de la infamia, / Cautivo soy de la afrenta."
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/23206.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/23206"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 23206: edición de Madison Stathers, con introducción y notas, sobre el texto de las Comedias escogidas de Hartzenbusch (Henry Holt and Company, 1913) (dominio público)", "url": "https://www.gutenberg.org/ebooks/23206"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-moza-de-cantaro"},
+      parecidos: ["lope-de-vega-la-dama-boba", "lope-de-vega-el-perro-del-hortelano", "lope-de-vega-peribanez"]
+    },
+    {
+      id: "palacio-valdes-la-espuma",
+      titulo: "La espuma",
+      autor: "Armando Palacio Valdés",
+      anio: "1890",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Novela de Armando Palacio Valdés sobre la alta sociedad de Madrid en el siglo XIX, con sus salones, bailes y cenas. Clementina, hija natural del rico financiero Salabert, duque de Requena, está casada con Osorio; su amante, el elegante Pepe Castro, se propone casarse con la rica Esperancita Calderón. Raimundo Alcázar, un joven entomólogo tímido y sin fortuna, se enamora de Clementina, que lo atiende cada vez menos, ocupada en sus propias ambiciones. Con ironía, el autor muestra una sociedad que cuida las apariencias, el dinero y el apellido, y en la que quienes aman de verdad, como Raimundo, salen perdiendo.", "en": "A novel by Armando Palacio Valdés about high society in nineteenth-century Madrid, with its drawing rooms, balls and dinners. Clementina, the natural daughter of the wealthy financier Salabert, Duke of Requena, is married to Osorio; her lover, the elegant Pepe Castro, plans to marry the rich Esperancita Calderón. Raimundo Alcázar, a shy and penniless young entomologist, falls in love with Clementina, who pays him less and less attention, busy with her own ambitions. With irony, the author shows a society devoted to appearances, money and family name, in which those who truly love, like Raimundo, end up the losers."},
+      porque: {"es": "Para quien disfruta la novela de costumbres, con muchos personajes y mucha ironía, y quiere ver cómo era por dentro la alta sociedad madrileña. Se lee con facilidad, capítulo a capítulo, y conviene fijarse en cómo cada personaje trata el dinero y las apariencias. Ten en cuenta que hay adulterios y una reunión de salón donde el autor retrata con ironía una piedad más de costumbre que de convicción.", "en": "For readers who enjoy novels of manners, with many characters and plenty of irony, and who want to see Madrid's high society from the inside. It reads easily, chapter by chapter, and it pays to notice how each character treats money and appearances. Be aware that there are adulterous affairs and a drawing-room gathering in which the author ironically portrays a piety of habit rather than conviction."},
+      imagen: {"src": "img/portadas/palacio-valdes-la-espuma.jpg", "credito": {"es": "Raimundo de Madrazo, «Preparándose para el baile de disfraces», s. f.", "en": "Raimundo de Madrazo, «Preparing for the Costume Ball», n.d."}, "url": "https://commons.wikimedia.org/wiki/File:Raimundo_Madrazo_-_Preparing_for_the_Costume_Ball.jpg"},
+      citas: [
+        "El caudal de su padre había crecido como la espuma.",
+        "Muero satisfecha sabiendo que vas a deberme un poco de felicidad.",
+        "Así murió la duquesa de Requena. ¡Dejadla, dejadla partir!"
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/11529.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/11529"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 11529: tomo VII de las Obras completas de Armando Palacio Valdés, 1922 (dominio público)", "url": "https://www.gutenberg.org/ebooks/11529"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-espuma"},
+      parecidos: ["coloma-pequeneces", "pardo-bazan-la-quimera", "pereda-pedro-sanchez"]
+    },
+    {
+      id: "valera-juanita-la-larga",
+      titulo: "Juanita la Larga",
+      autor: "Juan Valera",
+      anio: "1895",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Novela de costumbres ambientada en Villalegre, un pueblo vinatero de Andalucía donde manda el cacique don Andrés Rubio y gobierna en la práctica su secretario, don Paco, viudo de cincuenta y tres años. Juanita, hija ilegítima de la trabajadora y austera Juana la Larga, es hermosa y lista, y tiene que defenderse de las hablillas del pueblo y de los pretendientes. Doña Inés, hija de don Paco, quiere verla monja; Juanita, que no tiene vocación, responde con ingenio y buen humor. Valera retrata con humor suave la política de pueblo, las envidias y las diferencias de clase, y la historia termina en boda.", "en": "A novel of manners set in Villalegre, a wine-growing town in Andalusia ruled by the local boss, don Andrés Rubio, and run in practice by his secretary, don Paco, a fifty-three-year-old widower. Juanita, the illegitimate daughter of the hard-working and austere Juana la Larga, is beautiful and clever, and must fend off village gossip and her suitors. Doña Inés, don Paco's daughter, wants to see her become a nun; Juanita, who has no vocation, answers with wit and good humor. Valera portrays with gentle humor small-town politics, envy and class differences, and the story ends in a wedding."},
+      porque: {"es": "Para quien busca una novela amable y bien escrita, con un pueblo andaluz lleno de personajes y una protagonista que se las arregla sola. Es lectura de tarde tranquila: la trama avanza despacio y lo mejor está en las conversaciones y en el humor de Valera. Ten en cuenta que el origen ilegítimo de Juanita y las intrigas del pueblo son tema central, y que el autor trata con ironía la idea de que una joven deba hacerse monja por conveniencia de otros.", "en": "For readers who want a pleasant, well-written novel, with an Andalusian town full of characters and a heroine who manages on her own. It suits a quiet afternoon: the plot moves slowly and the best of it lies in the conversations and Valera's humor. Be aware that Juanita's illegitimate birth and the town's intrigues are central themes, and that the author treats with irony the idea that a young woman should become a nun to suit others."},
+      imagen: {"src": "img/portadas/valera-juanita-la-larga.jpg", "credito": {"es": "Gonzalo Bilbao, «Modista sevillana», 1904", "en": "Gonzalo Bilbao, «Seville Seamstress», 1904"}, "url": "https://commons.wikimedia.org/wiki/File:Modista_sevillana_-_Gonzalo_Bilbao.jpg"},
+      citas: [
+        "Reza el refrán, que honra y provecho no caben en un saco",
+        "se contentó y se aquietó con ser el cacique, o más bien el César o el emperador de Villalegre, donde ejercía mero y mixto imperio y donde le acataban todos obedeciéndole gustosos.",
+        "Dios la ha hecho hermosísima, y casi, casi estoy por decir que no sólo tiene derecho, sino que tiene el deber de acicalarse y de realzar y mostrar la hermosura que Dios le ha dado.",
+        "Los dineros son la Tarifa de mi mujer, y no los entregará aunque me degolléis.",
+        "Yo no quiero cortarme el pelo y regalárselo a doña Inés. Un esportón de basura será lo que yo le regale."
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16484.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16484"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 16484: Salvat Editores, Biblioteca Básica Salvat, con prólogo de Paulino Garagorri (Estella, 1982-1983), texto de la obra en dominio público", "url": "https://www.gutenberg.org/ebooks/16484"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/juanita-la-larga"},
+      parecidos: ["fernan-caballero-la-gaviota", "fernan-caballero-el-alcazar-de-sevilla", "pereda-pedro-sanchez"]
+    },
+    {
+      id: "quiroga-cuentos-de-amor-de-locura-y-de-muerte",
+      titulo: "Cuentos de amor de locura y de muerte",
+      autor: "Horacio Quiroga",
+      anio: "1917",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Dieciocho cuentos de Horacio Quiroga, publicados en 1917, que giran en torno al amor, la locura y la muerte, con la selva de Misiones y la ciudad rioplatense de fondo. Una joven recién casada se debilita sin que nadie sepa por qué (El almohadón de pluma); un hombre mordido por una víbora intenta llegar a ayuda por el río (A la deriva); cuatro hermanos con grave discapacidad mental y sus padres viven una tragedia doméstica (La gallina degollada); dos peones de obraje vuelven a Posadas tras meses de trabajo en el monte (Los mensú). Otros relatos cuentan noviazgos, rupturas y obsesiones, con un estilo directo y sin adornos.", "en": "Eighteen stories by Horacio Quiroga, published in 1917, about love, madness and death, set against the jungle of Misiones and the cities of the River Plate. A young bride grows weaker for no apparent reason (The Feather Pillow); a man bitten by a snake tries to reach help by river (Adrift); four brothers with severe mental disability and their parents live through a domestic tragedy (The Decapitated Hen); two lumber-camp laborers return to Posadas after months of work in the forest (The Mensú). Other tales tell of courtships, breakups and obsessions, in a direct style without ornament."},
+      porque: {"es": "Para quien quiere entrar en Quiroga y en el mejor cuento rioplatense: relatos cortos y tensos, que se leen cada uno en una sentada. Conviene leerlos de a uno, no de corrido, porque varios dejan a propósito un mal sabor. Ten en cuenta que hay muertes violentas, locura, escenas crudas y un cuento sobre la adicción a la cocaína.", "en": "For readers who want to start with Quiroga and the best of River Plate short fiction: short, tense stories, each read in one sitting. They are best read one at a time rather than straight through, because several leave a bad taste on purpose. Be aware that there are violent deaths, madness, raw scenes and one story about cocaine addiction."},
+      imagen: {"src": "img/portadas/quiroga-cuentos-de-amor-de-locura-y-de-muerte.jpg", "credito": {"es": "Henri Rousseau, «La encantadora de serpientes», 1907", "en": "Henri Rousseau, «The Snake Charmer», 1907"}, "url": "https://commons.wikimedia.org/wiki/File:Henri_Rousseau,_known_as_le_Douanier_-_The_Snake_Charmer_-_Google_Art_Project.jpg"},
+      citas: [
+        "Su luna de miel fué un largo escalofrío.",
+        "El hombre pisó algo blanduzco, y en seguida sintió la mordedura en el pie.",
+        "Tengo en el Salto Oriental dos primos, hoy hombres ya, que a sus doce años, y en consecuencia de profundas lecturas de Julio Verne, dieron en la rica empresa de abandonar su casa para ir a vivir al monte.",
+        "Kassim era un hombre enfermizo, joyero de profesión, bien que no tuviera tienda establecida."
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/13507.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/13507"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 13507: edición de 1917 (el texto no declara ciudad ni editorial; dominio público)", "url": "https://www.gutenberg.org/ebooks/13507"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cuentos-de-amor-de-locura-y-de-muerte"},
+      parecidos: ["quiroga-cuentos-de-la-selva", "poe-el-gato-negro", "poe-el-barril-de-amontillado"]
+    },
+    {
+      id: "pereda-escenas-montanesas",
+      titulo: "Escenas montañesas",
+      autor: "José María de Pereda",
+      anio: "1864",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Colección de cuadros de costumbres de Santander y de la Montaña cántabra, publicada por primera vez en 1864 y reunida aquí en el tomo V de las Obras completas de Pereda (Madrid, 1919). Reúne dieciocho piezas breves: el raquero que crece entre los barcos del Muelle de las Naos, la costurera, la noche de Navidad en una casa de labradores, la leva que arranca a los pescadores de sus hogares, los bailes del campo y los retratos de marineros. Pereda cuenta con humor y con cariño la vida de los aldeanos y los marinos, y la contrapone a la afectación de la ciudad. El habla de los personajes va escrita tal como suena en la Montaña.", "en": "A collection of sketches of everyday life in Santander and the mountains of Cantabria, first published in 1864 and gathered here in volume V of Pereda's Complete Works (Madrid, 1919). It brings together eighteen short pieces: the raquero who grows up among the ships of the Muelle de las Naos, the seamstress, Christmas Eve in a farming household, the levy that drags fishermen from their homes, village dances and portraits of sailors. Pereda describes the life of villagers and seamen with humour and affection, and sets it against the affectation of the city. The characters' speech is written as it sounds in the Montaña."},
+      porque: {"es": "Para quien disfruta de las estampas de pueblo y del castellano de otro tiempo, con su humor y sus palabras de la tierra. No tiene una trama única: conviene leerlo de a un cuadro por vez, y el habla de los aldeanos, escrita como suena, pide un poco de paciencia al principio. Es una buena puerta de entrada a Pereda antes de sus novelas largas.", "en": "For readers who enjoy village sketches and the Spanish of another age, with its humour and local words. There is no single plot: it is best read one sketch at a time, and the villagers' speech, written as it sounds, asks for a little patience at first. It is a good way into Pereda before his long novels."},
+      imagen: {"src": "img/portadas/pereda-escenas-montanesas.jpg", "credito": {"es": "Darío de Regoyos, «El aguacero. Bahía de Santoña», h. 1880-1885", "en": "Darío de Regoyos, “The downpour. Santoña Bay”, c. 1880-1885"}, "url": "https://commons.wikimedia.org/wiki/File:(Barcelona)_Darío_de_Regoyos_-_The_downpour._Santoña_Bay_-_Museu_Nacional_d'Art_de_Catalunya.jpg"},
+      citas: [
+        "Las plantas del Norte se marchitan con el sol de los trópicos.",
+        "El sencillo aldeano de nuestros campos, tan risueño y expansivo entre los suyos, enmudece y se apena en medio del bullicio de la ciudad.",
+        "Á la desnuda campiña parece que se la ve tiritar de frío; las chimeneas de la barriada lanzan á borbotones el humo que se lleva rápido el helado norte, dejando en cambio algunos copos de nieve.",
+        "la casa de una persona acomodada de aldea es más espaciosa, y hasta más cómoda, que la mejor de la ciudad."
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/12627.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/12627"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 12627: Obras completas de D. José M. de Pereda, tomo V, Madrid, 1919 (dominio público)", "url": "https://www.gutenberg.org/ebooks/12627"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/escenas-montanesas"},
+      parecidos: ["pereda-pedro-sanchez", "fernan-caballero-la-gaviota", "galdos-marianela"]
+    },
+    {
+      id: "pereda-los-hombres-de-pro",
+      titulo: "Los hombres de pro",
+      autor: "José María de Pereda",
+      anio: "1872",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Novela satírica sobre la ambición política en la España del siglo XIX. Simón Cerojo, soldado licenciado casado con una moza vanidosa, abre una tienda en su aldea, se enriquece y se muda a la ciudad. Convertido en don Simón, se deja convencer de que un hombre de su fortuna debe ser diputado, y se lanza a una campaña en la que los caciques de los pueblos le sacan dinero a cambio de votos. Ya en Madrid, su familia se enreda con un joven diplomático que corteja a su hija Julieta, y una quiebra se lleva dos tercios de su fortuna. Esta edición es el tomo I de las Obras completas de Pereda (Madrid, 1921), con prólogo de Menéndez y Pelayo.", "en": "A satirical novel about political ambition in nineteenth-century Spain. Simón Cerojo, a discharged soldier married to a vain young woman, opens a shop in his village, grows rich and moves to the city. Now addressed as don Simón, he lets himself be persuaded that a man of his fortune ought to be a deputy, and launches a campaign in which the local bosses of the villages drain his money in exchange for votes. Once in Madrid, his family gets tangled up with a young diplomat who courts his daughter Julieta, and a bankruptcy takes away two thirds of his fortune. This edition is volume I of Pereda's Complete Works (Madrid, 1921), with a preface by Menéndez y Pelayo."},
+      porque: {"es": "Para quien quiere ver la política española del siglo XIX contada con humor y sin solemnidad, por alguien que conoce bien a los aldeanos y a los aspirantes a cargo. Es una novela ágil, de capítulos cortos y mucho diálogo. Conviene leerla pensando cuánto de lo que cuenta sigue pasando en cualquier elección.", "en": "For readers who want to see nineteenth-century Spanish politics told with humour and without solemnity, by someone who knows villagers and office-seekers well. It is a brisk novel, with short chapters and plenty of dialogue. It is worth reading while asking how much of what it describes still happens at any election."},
+      imagen: {"src": "img/portadas/pereda-los-hombres-de-pro.jpg", "credito": {"es": "Carl Spitzweg, «El escribiente», h. 1880", "en": "Carl Spitzweg, “The Clerk”, c. 1880"}, "url": "https://commons.wikimedia.org/wiki/File:Carl_Spitzweg_-_Der_Schreiber.jpg"},
+      citas: [
+        "En el tal pueblo todos los vecinos eran pobres, incluso el señor cura, que se remendaba sus propios calzones y se aderezaba las cuatro patatas y pocas más alubias con que se alimentaba cada día.",
+        "Todos dije, y dije mal: todos menos uno.",
+        "la vida regalona y el apego a las comodidades del rico Peñascales, habían enervado los bríos y arrugado el corazón del apuesto cortejante de la arisca Juana.",
+        "El mal no está en que, por casualidad, salga de un mal tabernero un buen ministro, o un gran alcalde, o un perfecto modelo de hombres de sociedad; la desgracia de España, la del mundo actual, consiste en que quieran ser ministros todos los taberneros"
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/14995.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/14995"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 14995: Obras completas de D. José M. de Pereda, tomo I, sexta edición, Madrid, Librería General de Victoriano Suárez, 1921 (dominio público)", "url": "https://www.gutenberg.org/ebooks/14995"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/los-hombres-de-pro"},
+      parecidos: ["pereda-pedro-sanchez", "coloma-pequeneces", "pardo-bazan-la-quimera"]
+    },
+    {
+      id: "pereda-penas-arriba",
+      titulo: "Peñas arriba",
+      autor: "José María de Pereda",
+      anio: "1895",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Marcelo, un joven ocioso de Madrid, recibe cartas de su tío don Celso, que desde su casona de las montañas de Cantabria, ya viejo y enfermo, le pide que vaya a vivir con él. Marcelo acepta y hace el viaje a caballo hasta el valle de Tablanca, donde conoce al cura don Sabas, al médico Neluco y al guía Chisco, y a las gentes de las aldeas. La vida del valle, con su trabajo, sus fiestas y sus peligros, lo va transformando. Decide casarse con Lituca, y un epílogo escrito años después da cuenta de la felicidad de la casa. Pereda dedica el libro a la memoria de su hijo Juan Manuel.", "en": "Marcelo, an idle young man from Madrid, receives letters from his uncle don Celso, who, old and ill in his big house in the mountains of Cantabria, asks him to come and live with him. Marcelo agrees and rides to the valley of Tablanca, where he meets the parish priest don Sabas, the doctor Neluco, the guide Chisco and the people of the villages. Life in the valley, with its work, its feasts and its dangers, gradually changes him. He decides to marry Lituca, and an epilogue written years later tells of the happiness of the household. Pereda dedicates the book to the memory of his son Juan Manuel."},
+      porque: {"es": "Para quien siente que la ciudad lo ha dejado sin raíces y quiere ver cómo un hombre se rehace en un lugar pequeño y duro. Es una novela larga y pausada, con descripciones minuciosas de la sierra y un lenguaje montañés que se agradece leer sin prisa. Conviene leerla por tramos, atendiendo más al paisaje y a las personas que a la intriga.", "en": "For readers who feel the city has left them without roots and want to see a man rebuild himself in a small, hard place. It is a long, unhurried novel, with careful descriptions of the mountains and a regional speech that is best read without haste. It is best read in stretches, paying more attention to landscape and people than to plot."},
+      imagen: {"src": "img/portadas/pereda-penas-arriba.jpg", "credito": {"es": "Carlos de Haes, «Montañas de Asturias», 1872", "en": "Carlos de Haes, “Mountains in Asturias”, 1872"}, "url": "https://commons.wikimedia.org/wiki/File:Carlos_de_Haes_-_Mountains_in_Asturias_-_Google_Art_Project.jpg"},
+      citas: [
+        "Las razones en que mi tío fundaba la tenacidad de su empeño eran muy juiciosas, y me las iba enviando por el correo, escritas con mano torpe, pluma de ave, tinta rancia, letras gordas y anticuada ortografía, en papel de barbas comprado en el estanquillo del lugar.",
+        "¿qué mejor nido que este vallecito abrigado y recóndito en que tan cercanos se ven, se sienten y se admiran los prodigios de la Naturaleza, y la inmensidad, la omnipotencia y la misericordia de su Creador?",
+        "Porque tan cabal, tan intensa, tan continua ha sido mi felicidad en ese tiempo, que a veces me espantan los temores de que no haya sido mi gratitud tan grande como el beneficio recibido"
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/24127.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/24127"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 24127: el texto no declara la edición impresa que sigue (dominio público)", "url": "https://www.gutenberg.org/ebooks/24127"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/penas-arriba"},
+      parecidos: ["pereda-pedro-sanchez", "galdos-marianela", "fernan-caballero-la-gaviota"]
+    },
+    {
+      id: "palma-tradiciones-peruanas",
+      titulo: "Tradiciones peruanas (selección)",
+      autor: "Ricardo Palma",
+      anio: "1872",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Selección de veintisiete tradiciones de Ricardo Palma, relatos breves que mezclan historia, leyenda y humor sobre el Perú del virreinato. Este texto de Project Gutenberg no es la obra completa, que Palma fue publicando en varias series: incluye «Los duendes del Cuzco», «Los polvos de la condesa», «El corregidor de Tinta», «Una excomunión famosa» y «La llorona del Viernes Santo», entre otras. Cada pieza parte de un suceso o rumor de Lima, el Cuzco o el Callao, con virreyes, frailes, corregidores y mujeres de carácter, y lo cuenta con tono de conversación y burla fina. Palma avisa cuánto hay de documento y cuánto de relato del pueblo. El texto no declara de qué edición impresa procede.", "en": "A selection of twenty-seven traditions by Ricardo Palma, short tales that mix history, legend and humour about viceregal Peru. This Project Gutenberg text is not the complete work, which Palma published in several series: it includes “Los duendes del Cuzco”, “Los polvos de la condesa”, “El corregidor de Tinta”, “Una excomunión famosa” and “La llorona del Viernes Santo”, among others. Each piece starts from an event or rumour of Lima, Cuzco or Callao, with viceroys, friars, magistrates and strong-willed women, and tells it in a conversational tone with gentle mockery. Palma points out how much comes from documents and how much from popular storytelling. The text does not state which printed edition it comes from."},
+      porque: {"es": "Para quien quiere conocer el Perú virreinal por historias cortas y entretenidas, que se leen sueltas y en cualquier orden. Palma escribe como quien conversa, con refranes, ironía y picardía, y conviene recordar que mezcla documentos reales con relatos populares. Ten en cuenta que hay burlas a frailes y clérigos, chistes sobre las devociones de la época y algún relato de vida licenciosa.", "en": "For readers who want to know viceregal Peru through short, entertaining stories that can be read singly and in any order. Palma writes like someone chatting, with proverbs, irony and mischief, and it is worth remembering that he mixes real documents with popular tales. Keep in mind that there are jibes at friars and clergy, jokes about the devotions of the time and the odd tale of a licentious life."},
+      imagen: {"src": "img/portadas/palma-tradiciones-peruanas.jpg", "credito": {"es": "Pancho Fierro, «Yendo a la iglesia: dama y dueña», h. 1850-1860", "en": "Pancho Fierro, “Going to church: lady and duenna”, c. 1850-1860"}, "url": "https://commons.wikimedia.org/wiki/File:Going_to_church_-_Pancho_Fierro-restored.jpg"},
+      citas: [
+        "Esta tradición no tiene otra fuente de autoridad que el relato del pueblo.",
+        "Hechas las salvedades anteriores, en descargo de mi conciencia de cronista, pongo punto redondo y entro en materia.",
+        "En verdad que es el más joven de los virreyes que hasta hoy han ido a Indias; pero en Esquilache hay cabeza, y más que cabeza brazo fuerte.",
+        "Amigo mío, lo hecho está bien hecho; y mejor andaría el mundo si, en casos dados, no fuesen leguleyos trapisondistas y demás cuervos de Temis, sino duendes, los que administrasen justicia.",
+        "El infeliz ignoraba que el dinero no es monje cartujo que gusta de estar guardado y criar moho, y que es un libertino que se desvive por andar al aire libre y de mano en mano."
+      ],
+      archivos: {},
+      externos: [{"formato": "epub", "texto": "Project Gutenberg, selección de 27 tradiciones", "url": "https://www.gutenberg.org/ebooks/21282.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg, selección de 27 tradiciones", "url": "https://www.gutenberg.org/ebooks/21282"}],
+      fuente: {"texto": "Project Gutenberg, libro n.º 21282: selección de 27 tradiciones; el texto no declara la edición impresa que sigue (dominio público)", "url": "https://www.gutenberg.org/ebooks/21282"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/tradiciones-peruanas"},
+      parecidos: ["irving-cuentos-de-la-alhambra", "cervantes-novelas-ejemplares", "acosta-historia-natural-y-moral-de-las-indias"]
     }
   ],
 
@@ -5289,6 +5521,7 @@ window.FENIX = {
 
   // Fichas que herramientas/revisar_duplicados.js confunde pero son obras distintas, con el porqué.
   distintos: [
+    { ids: ["quiroga-cuentos-de-la-selva", "quiroga-cuentos-de-amor-de-locura-y-de-muerte"], porque: "dos libros de cuentos distintos: los de la selva para niños (1918) y los de amor, de locura y de muerte (1917)" },
     { ids: ["apologia-de-socrates", "jenofonte-apologia-de-socrates"], porque: "dos obras: la Apología de Platón y la de Jenofonte" },
     { ids: ["escriva-cartas-1", "escriva-cartas-2"], porque: "volúmenes distintos: cartas 1 a 4 y cartas 5 a 8" },
     { ids: ["escriva-cartas-1", "escriva-carta-29"], porque: "la carta 29 no está en el volumen I" },
