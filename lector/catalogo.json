@@ -2,6 +2,16 @@
  "formato": 1,
  "libros": [
   {
+   "id": "belloc-cuentos-moraleja",
+   "idioma": "es",
+   "titulo": "Cuentos con moraleja para niños",
+   "autor": "Hilaire Belloc",
+   "epub": "libros/belloc-cuentos-con-moraleja.epub",
+   "bytes": 2304273,
+   "sha": "41197fae3d3f98c945e1e9eaf1aff1219f37ad60eb7e7aeb3f73e7780767b8d0",
+   "portada": "img/portadas/belloc-cuentos-moraleja.jpg"
+  },
+  {
    "id": "marmion-vida-del-alma",
    "idioma": "es",
    "titulo": "Jesucristo, vida del alma",

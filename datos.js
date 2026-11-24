@@ -44,6 +44,35 @@ window.FENIX = {
 
   libros: [
     {
+      id: "belloc-cuentos-moraleja",
+      titulo: "Cuentos con moraleja para niños",
+      autor: "Hilaire Belloc",
+      anio: "1907",
+      idioma: "es",
+      categoria: "poesia",
+      recomendado: false,
+      resumen: {
+        es: "Once cuentos en verso, con sus moralejas, sobre niños que pagan caro un mal hábito: Jim, que se suelta de la mano de la niñera en el zoológico y se lo come un león; Henry King, que masca cordel; Matilda, que miente tanto que nadie le cree cuando de verdad hay incendio; Rebecca, que da portazos, y otros más. Belloc parodia los libros de advertencia para niños del siglo XIX con castigos desmedidos contados con toda seriedad, y el humor nace de ese contraste. Con los 86 dibujos de B. T. B. en el lugar que ocupan en la edición de 1907.",
+        en: "Eleven tales in verse, with their morals, about children who pay dearly for a bad habit: Jim, who lets go of his nurse's hand at the zoo and is eaten by a lion; Henry King, who chews string; Matilda, who lies so much that nobody believes her when there really is a fire; Rebecca, who slams doors, and others. Belloc parodies the nineteenth-century cautionary books for children with outsized punishments told with perfect gravity, and the humour comes from that contrast. With the 86 drawings by B. T. B. in the places they hold in the 1907 edition."
+      },
+      porque: {"es":"Para leer en voz alta, con niños o sin ellos. Los versos riman y tienen ritmo marcado, y cada cuento se lee en pocos minutos. Es humor serio en la forma y disparatado en el fondo, con moralejas que parecen solemnes y se ríen de sí mismas; los dibujos de B. T. B. son la mitad de la gracia.","en":"To read aloud, with children or without them. The verses rhyme and keep a strong beat, and each tale takes a few minutes. It is humour that is grave in form and absurd in substance, with morals that sound solemn and laugh at themselves; B. T. B.'s drawings are half the fun."},
+      imagen: { src: "img/portadas/belloc-cuentos-moraleja.jpg", credito: { es: "B. T. B. (Basil Temple Blackwood), Jim y el león, portadilla de Cautionary Tales for Children, 1907", en: "B. T. B. (Basil Temple Blackwood), Jim and the lion, frontispiece of Cautionary Tales for Children, 1907" }, url: "https://archive.org/details/cautionarytalesf00belluoft" },
+      citas: [
+        "¿Que si es cierto? No es verdad. / Y si lo fuera, ¡qué calamidad / para nosotros, en realidad, / que casi todo el día, en efecto, / hacemos algo no muy correcto!",
+        "Pues cada vez que «¡Fuego!» gritaba, / solo «¡Mentirosilla!» escuchaba.",
+        "«¡Oh, amigos, aprendan de mi pena, / que desayuno, almuerzo, té y cena / es cuanto el cuerpo humano requiere...». / Y en eso el mísero niño muere.",
+        "Su padre, que nunca se alteró, / pidió a los niños, con voz estable, / mirar de James el fin miserable / y a la niñera nunca soltar, / por miedo a algo peor encontrar."
+      ],
+      archivos: { epub: "libros/belloc-cuentos-con-moraleja.epub", pdf: "libros/belloc-cuentos-con-moraleja.pdf" },
+      editorial: {
+        es: "Traducción nueva de Proyecto Fénix, en verso rimado, directa del inglés de 1907, con los 86 dibujos de B.T.B.",
+        en: "A new Proyecto Fénix translation, in rhyming verse, made directly from the 1907 English, with the 86 drawings by B.T.B."
+      },
+      fuente: { texto: "Cautionary Tales for Children (1907), Project Gutenberg, libro n.º 27424 (dominio público)", url: "https://www.gutenberg.org/ebooks/27424" },
+      delibris: { valor: 6, genero: "Literatura", url: "https://www.delibris.org/es/cautionary-tales" },
+      parecidos: ["lope-la-gatomaquia", "saint-exupery-el-principito", "cervantes-viaje-al-parnaso"]
+    },
+    {
       id: "marmion-vida-del-alma",
       titulo: "Jesucristo, vida del alma",
       autor: "Beato Columba Marmion, O.S.B.",
@@ -5138,7 +5167,6 @@ window.FENIX = {
   // `estimada` { valor, genero } si Delibris no la reseña. El sitio oculta sola la que ya está en ese idioma.
   buscados: [
     // Sin traducción al español hallada (23-nov-2026): se traducen del original (vía D de ENCUADERNAR.md).
-    { titulo: {"es": "Cuentos con moraleja para niños", "en": "Cautionary Tales for Children"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cautionary-tales"} },
     { titulo: {"es": "La mujer sabia", "en": "The Wise Woman"}, autor: "George MacDonald", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/wise-woman-lost-princess"} },
     { titulo: {"es": "Canciones de hermanas", "en": "Sister Songs"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sister-songs"} },
     { titulo: {"es": "Poemas nuevos", "en": "New Poems"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/new-poems"} },

@@ -206,6 +206,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 
 ## Poesía
 
+- [Cuentos con moraleja para niños - Hilaire Belloc (1907)](https://talcaldeg.github.io/fenix/libro/belloc-cuentos-moraleja/) - Once cuentos en verso, con sus moralejas, sobre niños que pagan caro un mal hábito: Jim, que se suelta de la mano de la niñera en el zoológico y se lo come un león; Henry King, que masca cordel; Matilda, que miente tanto que nadie le cree cuando de verdad hay incendio; Rebecca, que da portazos, y otros más. Descarga gratuita en EPUB y PDF.
 - [La Divina Comedia - Dante Alighieri (trad. Manuel Aranda y Sanjuán) (c. 1320)](https://talcaldeg.github.io/fenix/libro/dante-la-divina-comedia/) - Poema de Dante en tres partes (Infierno, Purgatorio y Paraíso) que relata un viaje por el más allá. Se lee gratis en el sitio del titular.
 - [Laberinto de Fortuna - Juan de Mena (1444)](https://talcaldeg.github.io/fenix/libro/juan-de-mena-laberinto-de-fortuna/) - Poema alegórico de Juan de Mena, escrito en el siglo XV y dedicado al rey Juan II de Castilla. Se lee gratis en el sitio del titular.
 - [Orlando furioso - Ludovico Ariosto (trad. Manuel Aranda y Sanjuán) (1516)](https://talcaldeg.github.io/fenix/libro/ariosto-orlando-furioso/) - Poema caballeresco de Ariosto que continúa la historia de Orlando enamorado, en tiempos de las guerras de Carlomagno contra los moros. Se lee gratis en el sitio del titular.
