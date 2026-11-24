@@ -552,6 +552,36 @@ def revisar(raiz, capturas=None):
     return fallas
 
 
+PORTADA_Y_NOTAS = """async () => {
+  const fallas = [], espera = ms => new Promise(r => setTimeout(r, ms)), cap = () => document.querySelector('#texto .lx-cap');
+  for (let k = 0; k < 60 && !document.querySelector('#capAnterior').disabled; k++) { document.querySelector('#capAnterior').click(); await espera(500); }
+  await espera(600);
+  const c0 = cap();
+  if (c0 && c0.querySelectorAll('img, image').length === 1 && !c0.textContent.trim() && !document.querySelector('#vistaLectura').dataset.portada)
+    fallas.push('la portada no pinta la pantalla entera de su color');
+  for (let k = 0; k < 15; k++) {
+    if (document.querySelector('#texto .lx-pie-nota')) break;
+    if (document.querySelector('#capSiguiente').disabled) return fallas;
+    document.querySelector('#capSiguiente').click(); await espera(700);
+  }
+  const tx = document.querySelector('#texto'), cajas = [...tx.querySelectorAll('.lx-pie')];
+  if (!cajas.length) return fallas;
+  const paso = parseFloat(getComputedStyle(tx).columnGap) + parseFloat(getComputedStyle(tx).width) / (parseInt(getComputedStyle(tx).columnCount) || 1);
+  const col = el => Math.floor((el.getBoundingClientRect().left - tx.getBoundingClientRect().left + 2) / paso);
+  for (const c of cajas) {
+    if (Math.abs(c.getBoundingClientRect().bottom - tx.getBoundingClientRect().bottom) > 3) { fallas.push('una caja de notas no llega al pie de la página'); break; }
+    for (const n of c.querySelectorAll('.lx-pie-nota')) {
+      const num = n.querySelector('.lx-pie-num').textContent;
+      // Puede haber otro enlace con el mismo número (índice, otra numeración): basta una llamada en esa página.
+      const ok = [...tx.querySelectorAll('.lx-cap a[data-ir]')].some(a => !a.closest('.lx-pie') && a.textContent.trim() === num && col(a) === col(c));
+      if (!ok) fallas.push(`la nota ${num} no está en la página de su llamada (columna ${col(c)})`);
+      if (/^\\s*\\d+\\s*[.:]/.test(n.textContent)) fallas.push(`la nota ${num} parte con un punto`);
+    }
+  }
+  return fallas.slice(0, 5);
+}"""
+
+
 def revisar_lector(nav, base, raiz):
     """El lector (lector/, 21-nov-2026): sin errores ni scroll horizontal en las 7 ventanas, y lo que él
     pidió como regla: que funcione sin conexión. Se agrega el primer libro del catálogo desde la ficha
@@ -745,6 +775,10 @@ def revisar_paginas(nav, base, libro, w, h):
             pg.wait_for_timeout(900)
             if not pg.evaluate("!!document.querySelector('#texto mark.lx-busca')"):
                 fallas.append(f"{rot}: el resultado de la búsqueda no lleva a la palabra marcada")
+        # Portada y notas al pie (él, 24-nov-2026): la portada pinta la pantalla entera de su color, y cada
+        # nota va al pie de la página de su llamada, abajo, sin el «. » que dejaba el número quitado.
+        r = pg.evaluate(PORTADA_Y_NOTAS)
+        fallas += [f"{rot}: {x}" for x in r]
     except Exception as ex:
         fallas.append(f"{rot}: la prueba de páginas no terminó ({str(ex).splitlines()[0]})")
     fallas += [f"{rot}: error de JavaScript: {x}" for x in errores]

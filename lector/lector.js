@@ -675,6 +675,7 @@
     const fin = document.createElement("span"); fin.className = "lx-fin"; fin.setAttribute("aria-hidden", "true");
     prep.div.append(fin);
     texto.append(prep.div);
+    fondoPortada(prep.div, i);
     // Sin carga diferida: en columnas las imágenes quedan fuera de la pantalla y no cargarían nunca. La que
     // llega tarde cambia el alto del texto y se vuelve a paginar.
     $$("img", prep.div).forEach(im => { im.removeAttribute("loading"); if (!im.complete) im.addEventListener("load", reajustar, { once: true }); });
@@ -694,6 +695,40 @@
   $("#capAnterior").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i - 1, 0); guardarPosicion(); };
   $("#capSiguiente").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i + 1, 0); guardarPosicion(); };
 
+  // Portada (un capítulo que es solo una imagen): toda la pantalla toma el color del borde de la imagen, sin
+  // franjas del fondo del lector alrededor (él, 24-nov-2026).
+  async function fondoPortada(div, i){
+    const v = $("#vistaLectura"), L = lectura;
+    delete v.dataset.portada; v.style.removeProperty("--bg-portada");
+    const imgs = $$("img, image", div);
+    if (imgs.length !== 1 || norm(div.textContent)) return;
+    const im = imgs[0], src = im.getAttribute("src") || im.getAttribute("href") || im.getAttribute("xlink:href");
+    if (!src || src === "data:,") return;
+    const pintar = (r, gr, b) => {
+      if (lectura !== L || L.i !== i) return;
+      v.style.setProperty("--bg-portada", `rgb(${r},${gr},${b})`);
+      v.dataset.portada = 0.299 * r + 0.587 * gr + 0.114 * b > 140 ? "claro" : "oscuro";
+    };
+    // Las portadas de Fénix (portadas.py) traen su fondo como un rect del SVG: ese es el color.
+    const fondo = $("svg rect[fill]", div);
+    if (fondo && /^#[0-9a-f]{6}$/i.test(fondo.getAttribute("fill"))) {
+      const h = fondo.getAttribute("fill");
+      return pintar(...[1, 3, 5].map(k => parseInt(h.slice(k, k + 2), 16)));
+    }
+    try {
+      const img = new Image(); img.src = src; await img.decode();
+      // Puntos a 1 px del borde, a lo largo de los cuatro lados; la mediana descarta un marco o un detalle.
+      const W = 200, H = Math.max(1, Math.round(W * img.naturalHeight / img.naturalWidth));
+      const c = document.createElement("canvas"); c.width = W; c.height = H;
+      const g = c.getContext("2d"); g.drawImage(img, 0, 0, W, H);
+      const pts = [];
+      for (let f = 0.05; f < 1; f += 0.1) pts.push([f * W, 1], [f * W, H - 2], [1, f * H], [W - 2, f * H]);
+      const px = pts.map(([x, y]) => g.getImageData(Math.floor(x), Math.floor(y), 1, 1).data);
+      const med = k => { const v = px.map(p => p[k]).sort((a, b) => a - b); return v[v.length >> 1]; };
+      pintar(med(0), med(1), med(2));
+    } catch {}
+  }
+
   // ---------- páginas ----------
   // Mide la hoja y arma las columnas: una página por pantalla, o dos (libro abierto) en pantalla ancha y
   // apaisada. Corre al abrir un capítulo, al girar el teléfono, al cambiar la letra y al cargar una imagen.
@@ -702,6 +737,7 @@
     try { await Promise.race([document.fonts.ready, espera(800)]); } catch {}
     if (!lectura) return;
     const v = $("#vistaLectura"), hoja = $("#hoja"), marco = $("#marco"), texto = $("#texto");
+    quitarPies();
     const lado = innerWidth < 500 ? 18 : 28, gap = 2 * lado;
     const disp = Math.max(160, hoja.clientWidth - 2 * lado);
     const ladoAlado = v.dataset.bilingue === "lado";
@@ -714,6 +750,8 @@
     texto.style.columnGap = gap + "px";
     v.style.setProperty("--alto-pag", Math.floor(hoja.clientHeight * 0.96) + "px");
     L.paso = ancho + gap;
+    L.paginas = 1e6; // paginaDeRect no recorta mientras se ponen las notas
+    try { ponerPies(texto.clientHeight, col + gap); } catch (e) { console.warn("Notas al pie:", e); quitarPies(); }
     const f = $("#texto .lx-fin");
     L.paginas = f ? Math.max(1, Math.floor((f.getBoundingClientRect().left - texto.getBoundingClientRect().left + 2) / L.paso) + 1) : 1;
     L.cachePag = new Map();
@@ -896,7 +934,7 @@
       if (j >= d.length) continue;
       rg.setStart(n, j); rg.setEnd(n, j + 1);
       const r = rectVisible(rg);
-      if (r) return { k: ini + j, pag: paginaDeRect(r) };
+      if (r) return { k: ini + j, pag: paginaDeRect(r), r };
     }
     return { k: plano.texto.length, pag: Infinity };
   }
@@ -1028,29 +1066,163 @@
     if (!a) return;
     e.preventDefault();
     const [ruta, frag] = a.dataset.ir.split("#");
-    const tipo = (a.getAttribute("epub:type") || "") + " " + a.className;
-    const esNota = /noteref|\bref\b|footnote|nota/i.test(tipo) || (!!a.closest("sup") || /^\s*\[?\*?\d{1,3}\]?\s*$/.test(a.textContent));
-    if (esNota && frag) {
-      const L = lectura;
-      let destino = ruta === L.ep.spine[L.i].href ? document.getElementById("e_" + frag) : null;
-      if (!destino) {
-        const i = L.ep.spine.findIndex(s => s.href === ruta);
-        if (i >= 0) { try { destino = prepararCapitulo(i).div.querySelector(`[id="e_${CSS.escape(frag)}"]`); } catch {} }
-      }
+    if (esLlamada(a) && frag) {
+      const destino = destinoNota(a);
       if (destino) {
-        const c = destino.cloneNode(true);
-        $$("a[data-ir]", c).filter(x => /^\s*(↩|↑|\^|\d+\.?)\s*$/.test(x.textContent) || /backlink|volver/i.test(x.className + (x.getAttribute("epub:type") || ""))).forEach(x => x.remove());
-        flotante(`<div>${c.innerHTML}</div><div class="acciones"><button type="button" data-ir-nota>Ir a la nota</button></div>`, a);
-        $("#nota-flotante [data-ir-nota]").onclick = () => { cerrarFlotante(); irADestino(ruta, frag); };
+        // La nota que ya está al pie de la página se oculta al final del capítulo: no hay adónde ir.
+        const ir = !destino.closest(".lx-oculta");
+        flotante(`<div>${cuerpoNota(destino).innerHTML}</div>` + (ir ? `<div class="acciones"><button type="button" data-ir-nota>Ir a la nota</button></div>` : ""), a);
+        if (ir) $("#nota-flotante [data-ir-nota]").onclick = () => { cerrarFlotante(); irADestino(ruta, frag); };
         return;
       }
     }
     irADestino(ruta, frag);
   });
 
+  // ---------- notas al pie de la página ----------
+  function esLlamada(a){
+    const tipo = (a.getAttribute("epub:type") || "") + " " + a.className;
+    return /noteref|\bref\b|footnote|nota/i.test(tipo) || !!a.closest("sup") || /^\s*\[?\*?\d{1,3}\]?\s*$/.test(a.textContent);
+  }
+  // El elemento de la nota a la que lleva la llamada, en este capítulo o en otro (las notas finales de un
+  // libro suelen ir en su propio archivo).
+  function destinoNota(a){
+    const L = lectura, [ruta, frag] = a.dataset.ir.split("#");
+    if (!frag) return null;
+    if (ruta === L.ep.spine[L.i].href) return document.getElementById("e_" + frag);
+    const i = L.ep.spine.findIndex(s => s.href === ruta);
+    if (i < 0) return null;
+    L.capsNotas = L.capsNotas || new Map();
+    if (!L.capsNotas.has(i)) { let d = null; try { d = prepararCapitulo(i).div; } catch {} L.capsNotas.set(i, d); }
+    const d = L.capsNotas.get(i);
+    return d ? d.querySelector(`[id="e_${CSS.escape(frag)}"]`) : null;
+  }
+  // Copia de la nota sin el número que vuelve al texto ni lo que lo seguía: md_a_epub escribe
+  // «<a>75</a>. Texto» y, sin el número, la nota partía con «. Texto» (él, 24-nov-2026).
+  function cuerpoNota(destino){
+    const c = destino.cloneNode(true);
+    $$("a[data-ir]", c).filter(x => /^\s*(↩|↑|\^|\d+\.?)\s*$/.test(x.textContent) || /backlink|volver/i.test(x.className + (x.getAttribute("epub:type") || ""))).forEach(x => x.remove());
+    const w = document.createTreeWalker(c, NodeFilter.SHOW_TEXT);
+    for (let t; (t = w.nextNode());) { if (!t.data.trim()) continue; t.data = t.data.replace(/^\s*[.:)\]]?\s*/, ""); break; }
+    c.removeAttribute("id"); $$("[id]", c).forEach(x => x.removeAttribute("id"));
+    return c;
+  }
+  // Cada nota va al pie de la página donde está su llamada, como en un libro impreso (él, 24-nov-2026; antes
+  // quedaban al final del capítulo, páginas después). En columnas no hay pie de página: el párrafo se parte
+  // donde la página tiene que terminar, y ahí va una caja con las notas que llena hasta el final de la columna.
+  // La copia del final del capítulo se oculta. quitarPies() lo deshace antes de volver a paginar.
+  // De la última caja a la primera: un trozo que sigue pudo partirse otra vez, y se junta antes con el suyo.
+  function quitarPies(){
+    $$("#texto .lx-pie").reverse().forEach(deshacerPie);
+    $$("#texto .lx-oculta").forEach(e => e.classList.remove("lx-oculta"));
+  }
+  // Saca una caja y, si partió un párrafo, le devuelve el trozo que siguió (el que ella misma creó, no un
+  // vecino que solo parezca serlo).
+  function deshacerPie(caja){
+    const corta = caja.lxCorta, sigue = caja.lxSigue;
+    if (corta && sigue) { corta.append(...sigue.childNodes); corta.classList.remove("lx-corta", "lx-justo"); sigue.remove(); }
+    caja.remove();
+  }
+  function ponerPies(alto, pasoCol){
+    const L = lectura, cap = $("#texto .lx-cap"), texto = $("#texto"), fin = $("#texto .lx-fin");
+    if (!cap || !fin) return;
+    const vistos = new Set(), pend = [];
+    for (const a of $$("a[data-ir]", cap)) {
+      if (!esLlamada(a)) continue;
+      const d = destinoNota(a);
+      if (!d || vistos.has(d) || d.contains(a)) continue;
+      // Solo llamadas hacia adelante: el número de la nota que vuelve al texto no es una llamada.
+      const aca = cap.contains(d);
+      if (aca ? !(a.compareDocumentPosition(d) & Node.DOCUMENT_POSITION_FOLLOWING) : L.ep.spine.findIndex(s => s.href === a.dataset.ir.split("#")[0]) < L.i) continue;
+      vistos.add(d); pend.push({ a, d, aca });
+    }
+    if (!pend.length) return;
+    // Las notas de este capítulo se ocultan antes de medir: van después de sus llamadas y no mueven nada.
+    pend.forEach(x => { if (x.aca) x.d.classList.add("lx-oculta"); });
+    $$("aside, section, div", cap).filter(s => s.querySelector(".lx-oculta") && ![...s.children].some(h => !h.classList.contains("lx-oculta") && norm(h.textContent) && !/^h\d$/.test(h.localName))).forEach(s => s.classList.add("lx-oculta"));
+    const mostrar = d => { for (let e = d; e && e !== cap; e = e.parentElement) e.classList.remove("lx-oculta"); };
+    const tl = () => texto.getBoundingClientRect();
+    const col = r => Math.floor((r.left - tl().left + 2) / pasoCol);
+    const ubicar = (plano, m) => { const v = primeroVisible(plano, m); if (!v.r) return { k: v.k, c: Infinity, y: 0, y2: 0 }; const t = tl().top; return { k: v.k, c: col(v.r), y: v.r.top - t, y2: v.r.bottom - t }; };
+    // Primer carácter que cumple f (en orden de lectura f pasa de falso a verdadero una sola vez).
+    const primero = (plano, f) => { let lo = 0, hi = plano.texto.length - 1, res = plano.texto.length; while (lo <= hi) { const m = (lo + hi) >> 1; if (f(ubicar(plano, m))) { res = m; hi = m - 1; } else lo = m + 1; } return res; };
+    const armar = grupo => {
+      const caja = document.createElement("div"); caja.className = "lx-pie";
+      if (grupo.length) {
+        const n = document.createElement("div"); n.className = "lx-pie-notas";
+        for (const x of grupo) {
+          const p = document.createElement("div"); p.className = "lx-pie-nota";
+          const num = document.createElement("span"); num.className = "lx-pie-num"; num.textContent = x.a.textContent.trim();
+          p.append(num, " ", ...cuerpoNota(x.d).childNodes);
+          n.append(p);
+        }
+        caja.append(n);
+      }
+      return caja;
+    };
+    const medir = caja => { fin.before(caja); const h = caja.getBoundingClientRect().height; caja.remove(); return h; };
+    for (let vuelta = 0; pend.length && vuelta < 500; vuelta++) {
+      let plano = textoPlano(cap);
+      const off = x => offsetEn(plano, x.a, 0);
+      const cols = pend.map(x => { const rc = [...x.a.getClientRects()].find(r => r.width || r.height); return rc ? col(rc) : Infinity; });
+      const c = Math.min(...cols);
+      if (c === Infinity) break;
+      let grupo = pend.filter((x, j) => cols[j] === c);
+      let caja = armar(grupo), h = medir(caja);
+      // Una nota más larga que media página no cabe al pie: queda solo flotando y al final del capítulo.
+      while (grupo.length && h > alto * 0.55) { const sobra = grupo.pop(); mostrar(sobra.d); pend.splice(pend.indexOf(sobra), 1); caja = armar(grupo); h = medir(caja); }
+      if (!grupo.length) continue;
+      // El corte se mide con el borde de las letras, pero la línea termina más abajo (el interlineado): con
+      // letra grande esos px faltaban, la caja no cabía y saltaba a la página siguiente, lejos de su llamada
+      // (24-nov-2026). Si no cupo, se deshace y el corte sube lo que faltó.
+      for (let extra = 0, intento = 0; ; intento++) {
+        let k = primero(plano, u => u.c > c || (u.c === c && u.y2 > alto - h - 2 - extra));
+        // Una llamada que cae bajo el corte pasa a la página siguiente con su nota: el corte sube hasta su línea.
+        const fuera = grupo.filter(x => off(x) >= k);
+        if (fuera.length) {
+          grupo = grupo.filter(x => off(x) < k);
+          const y = ubicar(plano, off(fuera[0])).y;
+          caja = armar(grupo); h = medir(caja);
+          k = Math.min(primero(plano, u => u.c > c || (u.c === c && u.y2 > alto - h - 2 - extra)), primero(plano, u => u.c > c || (u.c === c && u.y >= y - 2)));
+        }
+        // Se parte el bloque donde cae el carácter k, o se pone la caja antes de él si empieza ahí.
+        if (k >= plano.texto.length) fin.before(caja);
+        else {
+          const [idx, o] = nodoEn(plano, k), nodo = plano.nodos[idx].n;
+          let blk = nodo.parentElement;
+          while (blk && blk !== cap && !/^(block|list-item|flow-root)$/.test(getComputedStyle(blk).display)) blk = blk.parentElement;
+          if (!blk || blk === cap) { nodo.splitText(o).before(caja); }
+          else {
+            const rg = document.createRange(); rg.setStart(blk, 0); rg.setEnd(nodo, o);
+            if (!norm(rg.toString())) blk.before(caja);
+            else {
+              const resto = document.createRange(); resto.setStart(nodo, o); resto.setEnd(blk, blk.childNodes.length);
+              const sigue = blk.cloneNode(false); sigue.removeAttribute("id"); sigue.classList.add("lx-sigue");
+              sigue.append(resto.extractContents());
+              if (getComputedStyle(blk).textAlign === "justify") blk.classList.add("lx-justo");
+              blk.classList.add("lx-corta"); blk.after(caja, sigue);
+              caja.lxCorta = blk; caja.lxSigue = sigue;
+            }
+          }
+        }
+        const r = caja.getBoundingClientRect();
+        if (!grupo.length || intento >= 8 || (col(r) === c && r.top - tl().top + h <= alto + 0.5)) break;
+        const ant = caja.previousElementSibling, ra = ant ? [...ant.getClientRects()].filter(x => col(x) === c).pop() : null;
+        const falta = ra ? ra.bottom - tl().top + h - alto : 0;
+        deshacerPie(caja); plano = textoPlano(cap);
+        extra += Math.max(2, Math.ceil(falta) + 1);
+      }
+      // La caja llena hasta el final de la columna: las notas quedan abajo, como en el papel.
+      const arriba = caja.getBoundingClientRect().top - tl().top;
+      caja.style.height = Math.max(h, alto - arriba - 1) + "px";
+      grupo.forEach(x => pend.splice(pend.indexOf(x), 1));
+    }
+    pend.forEach(x => mostrar(x.d));
+  }
+
   // ---------- anclas de texto (subrayados, notas, correcciones) ----------
   function textoPlano(raiz){
-    const w = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, { acceptNode: n => n.parentElement && n.parentElement.closest("style, .lx-idiomas") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const w = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, { acceptNode: n => n.parentElement && n.parentElement.closest("style, .lx-idiomas, .lx-pie") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
     const nodos = []; let total = 0;
     while (w.nextNode()) { nodos.push({ n: w.currentNode, ini: total }); total += w.currentNode.data.length; }
     return { nodos, texto: nodos.map(x => x.n.data).join("") };
@@ -1631,13 +1803,14 @@
   }
   async function actualizarApp(){
     if (!ultimo || !(ultimo.n > (instalada || {}).versionCode)) return buscarVersionApp(true);
-    cargando(`Descargando ${ultimo.nombre}…`);
+    // La app ya no baja ni instala el APK ella misma (Play Protect la marcaba como dañina por eso,
+    // 24-nov-2026): lo abre en el navegador, que lo descarga, y se instala desde la descarga.
     try {
       await nativo("actualizar", { url: ultimo.url, nombre: ultimo.nombre });
-      aviso("Toca «Instalar» (o «Actualizar»). Si Android pide permiso, activa «Permitir de esta fuente» y vuelve atrás. Tus libros y notas se mantienen.", 12000);
+      aviso(`Se abrió el navegador para bajar ${ultimo.nombre}. Cuando termine, toca la descarga y luego «Actualizar». Tus libros y notas se mantienen.`, 14000);
     } catch (e) {
-      aviso("No se pudo descargar la versión nueva. Revisa la conexión y vuelve a tocar «Actualizar».", 8000);
-    } finally { cargando(""); }
+      aviso("No se pudo abrir la versión nueva. Revisa la conexión y vuelve a tocar «Actualizar».", 8000);
+    }
   }
   $("#btnBuscarApp").onclick = () => (ultimo && instalada && ultimo.n > instalada.versionCode) ? actualizarApp() : buscarVersionApp(true);
   $$("[data-actualizar]").forEach(b => { b.onclick = actualizarApp; });

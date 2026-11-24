@@ -54,6 +54,6 @@
     <!-- Permissions -->
 
     <uses-permission android:name="android.permission.INTERNET" />
-    <!-- «Actualizar»: la app baja su APK nuevo y abre el instalador (LectorFenix.actualizar). -->
-    <uses-permission android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- Sin REQUEST_INSTALL_PACKAGES: una app instalada fuera de Play que baja e instala APK es el patron
+         que Play Protect bloquea como "app danina" (24-nov-2026). Actualizar abre el APK en el navegador. -->
 </manifest>

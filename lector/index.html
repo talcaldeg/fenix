@@ -119,6 +119,24 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 #texto pre{white-space:pre-wrap}
 #texto p,#texto li,#texto blockquote{line-height:var(--interlineado) !important}
 #vistaLectura:not([data-letra="libro"]) #texto :is(p,li,blockquote,h1,h2,h3,h4,h5,h6,div,span,em,i,b,strong,a,td,th,dd,dt){font-family:var(--letra-lectura) !important}
+/* Subtítulos dentro del capítulo en negrita: con letra normal se perdían entre los párrafos (él, 24-nov-2026). */
+#texto :is(h2,h3,h4,h5,h6){font-weight:700 !important}
+/* Notas al pie de la página (lector.js, ponerPies): la caja llena hasta el final de la columna y el párrafo
+   partido sigue en la página siguiente sin sangría ni espacio. */
+#texto .lx-pie{display:flex; flex-direction:column; justify-content:flex-end; break-inside:avoid; margin:0 !important; padding:0 !important; text-indent:0 !important}
+#texto .lx-pie-notas{border-top:1px solid var(--line); padding-top:.4em; font-size:.78em; line-height:1.4; text-align:left}
+#texto .lx-pie-nota{margin:.25em 0 0; text-indent:0}
+#texto .lx-pie-nota *{font-size:inherit !important; line-height:inherit !important; margin:0 !important; text-indent:0 !important; display:inline}
+#texto .lx-pie-num{color:var(--vino) !important; font-variant-numeric:tabular-nums}
+#texto .lx-corta{margin-bottom:0 !important}
+#texto :is(.lx-corta,.lx-sigue){orphans:1; widows:1}
+#texto .lx-justo{text-align-last:justify}
+#texto .lx-sigue{margin-top:0 !important; text-indent:0 !important; list-style:none}
+#texto .lx-oculta{display:none !important}
+/* Portada: la pantalla entera del color del borde de la imagen (lector.js, fondoPortada). */
+#vistaLectura[data-portada]{background:var(--bg-portada)}
+#vistaLectura[data-portada="claro"] .pie-lectura{color:#5b4a3e}
+#vistaLectura[data-portada="oscuro"] .pie-lectura{color:#e6d9c8}
 #texto mark{color:inherit; border-radius:2px; cursor:pointer; padding:0}
 #texto mark.lx-sub{background-color:var(--marca) !important}
 #texto mark.lx-nota{background-color:var(--nota) !important; border-bottom:2px solid var(--vino)}
