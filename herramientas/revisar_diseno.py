@@ -584,7 +584,10 @@ def revisar_lector(nav, base, raiz):
         fallas += [f"{w}x{h} lector: error de JavaScript: {e}" for e in errores]
         pg.close()
     with open(os.path.join(raiz, "lector", "catalogo.json"), encoding="utf-8") as f:
-        libro = json.load(f)["libros"][0]
+        libros_cat = json.load(f)["libros"]
+    # Libro fijo para la prueba (busca «dios»): el primero del catálogo cambia con cada libro nuevo, y uno
+    # sin esa palabra (Belloc, 24-nov-2026) daba un falso «el buscador no encuentra».
+    libro = next((x for x in libros_cat if x.get("id") == "marmion-vida-del-alma"), libros_cat[0])
     ctx = nav.new_context(viewport={"width": 390, "height": 844})
     pg = ctx.new_page()
     errores = []
