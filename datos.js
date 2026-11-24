@@ -4834,6 +4834,30 @@ window.FENIX = {
       parecidos: ["saint-exupery-el-principito", "irving-cuentos-de-la-alhambra", "swift-los-viajes-de-gulliver"]
     },
     {
+      id: "thompson-shelley",
+      titulo: "Shelley",
+      autor: "Francis Thompson",
+      anio: "1889",
+      idioma: "es",
+      categoria: "ensayo",
+      recomendado: false,
+      resumen: {"es": "El ensayo que el poeta católico Francis Thompson escribió en 1889 para la Dublin Review y que se publicó después de su muerte. Abre con un llamado a la Iglesia para que vuelva a acoger la poesía y sigue con un retrato de Shelley como un niño que nunca dejó de serlo: la persecución en la escuela, su vida desordenada, su ateísmo y una poesía que juega con el universo como con un juguete. Recorre «Prometeo liberado», «Adonais» y la lírica, y cierra con una despedida que se niega a juzgar su destino y prefiere la esperanza. Traducción nueva de Proyecto Fénix, hecha desde el inglés."},
+      porque: {"es": "Para quien lee poesía o quiere entender por qué la fe y la belleza se necesitan. Thompson escribe como poeta sobre otro poeta: con imágenes que se encadenan, admiración sin ingenuidad y caridad hacia un hombre que vivió lejos de Dios. Los versos de Shelley van traducidos en el cuerpo, con el original inglés en nota."},
+      imagen: {"src": "img/portadas/thompson-shelley.jpg", "credito": {"es": "Louis Édouard Fournier, «El funeral de Shelley», 1889", "en": "Louis Édouard Fournier, «The Funeral of Shelley», 1889"}, "url": "https://commons.wikimedia.org/wiki/File:Louis_Edouard_Fournier_-_The_Funeral_of_Shelley_-_Google_Art_Project.jpg"},
+      citas: [
+        "La palma y el laurel, Domingo y Dante, la santidad y el canto, crecieron juntos en su suelo: ella ha retenido la palma, pero ha renunciado al laurel.",
+        "La separación ha sido mala para la poesía; no ha sido buena para la religión.",
+        "No la miren de reojo si rara vez canta directamente a la religión: el ave da gloria a Dios aunque solo cante sus inocentes amores.",
+        "Permítanle retozar, permítanle jugar, ¡con tal de que juegue en torno al pie de la Cruz!",
+        "El universo es su caja de juguetes. Chapotea con los dedos en el ocaso."
+      ],
+      archivos: {"epub": "libros/thompson-shelley.epub", "pdf": "libros/thompson-shelley.pdf"},
+      fuente: {"texto": "Traducción de Proyecto Fénix desde el inglés: Project Gutenberg, libro n.º 1336, que reproduce la edición de Burns & Oates (1914) (dominio público); licencia CC BY-NC-SA 4.0", "url": "https://www.gutenberg.org/ebooks/1336"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/shelley-postumo"},
+      editorial: {"es": "Traducción nueva de Proyecto Fénix, hecha desde el original inglés (Burns & Oates, 1914), con los versos citados traducidos en el cuerpo y su original inglés en nota, las notas del autor y notas del editor que identifican sus citas y alusiones; revisada en sus pasajes doctrinales; preparada con ayuda de inteligencia artificial, con nota de la edición.", "en": "A new Proyecto Fénix translation, made from the English original (Burns & Oates, 1914), with the quoted verse translated in the text and the English original in notes, the author's notes and editor's notes that identify his quotations and allusions; reviewed in its doctrinal passages; prepared with the help of artificial intelligence, with an edition note."},
+      parecidos: ["ortodoxia", "lope-de-vega-arte-nuevo-de-hacer-comedias", "chesterton-st-francis-of-assisi"]
+    },
+    {
       id: "huidobro-mio-cid-campeador",
       titulo: "Mío Cid Campeador. Hazaña",
       autor: "Vicente Huidobro",
@@ -5115,7 +5139,6 @@ window.FENIX = {
   buscados: [
     // Sin traducción al español hallada (23-nov-2026): se traducen del original (vía D de ENCUADERNAR.md).
     { titulo: {"es": "Cuentos con moraleja para niños", "en": "Cautionary Tales for Children"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cautionary-tales"} },
-    { titulo: {"es": "Shelley", "en": "Shelley"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/shelley-postumo"} },
     { titulo: {"es": "La mujer sabia", "en": "The Wise Woman"}, autor: "George MacDonald", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/wise-woman-lost-princess"} },
     { titulo: {"es": "Canciones de hermanas", "en": "Sister Songs"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sister-songs"} },
     { titulo: {"es": "Poemas nuevos", "en": "New Poems"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/new-poems"} },

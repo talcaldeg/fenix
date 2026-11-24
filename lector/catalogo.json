@@ -312,6 +312,16 @@
    "portada": "img/portadas/quiroga-cuentos-de-la-selva.jpg"
   },
   {
+   "id": "thompson-shelley",
+   "idioma": "es",
+   "titulo": "Shelley",
+   "autor": "Francis Thompson",
+   "epub": "libros/thompson-shelley.epub",
+   "bytes": 429546,
+   "sha": "5852b7e616c5ae0d527d6128afd4a460909ec9930cb8891303d689e04e895751",
+   "portada": "img/portadas/thompson-shelley.jpg"
+  },
+  {
    "id": "huidobro-mio-cid-campeador",
    "idioma": "es",
    "titulo": "Mío Cid Campeador. Hazaña",
