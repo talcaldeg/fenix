@@ -37,6 +37,12 @@
   const nuevoId = () => Date.now().toString(36) + Math.random().toString(36).slice(2, 8);
   const enLinea = () => navigator.onLine !== false;
   const espera = ms => new Promise(r => setTimeout(r, ms));
+  const plazo = ms => {
+    if (typeof AbortSignal.timeout === "function") return AbortSignal.timeout(ms);
+    const c = new AbortController();
+    setTimeout(() => c.abort(), ms);
+    return c.signal;
+  };
 
   // Ningún error suelto debe romper la lectura: se anota y se sigue.
   window.addEventListener("unhandledrejection", e => { console.warn("Lector:", e.reason); e.preventDefault(); });
@@ -109,10 +115,11 @@
   // ---------- EPUB ----------
   const dirDe = ruta => ruta.includes("/") ? ruta.slice(0, ruta.lastIndexOf("/") + 1) : "";
   function resolver(base, href){
-    const [p, frag] = String(href).split("#");
+    const [p, ...fragmentos] = String(href ?? "").split("#");
+    const decodificar = v => { try { return decodeURIComponent(v); } catch { return v; } };
     let ruta = p;
-    if (p) { try { ruta = decodeURIComponent(new URL(p, "https://e.pub/" + base).pathname.slice(1)); } catch { ruta = base + p; } }
-    return { ruta, frag: frag ? decodeURIComponent(frag) : "" };
+    if (p) { try { ruta = decodificar(new URL(p, "https://e.pub/" + base).pathname.slice(1)); } catch { ruta = base + p; } }
+    return { ruta, frag: decodificar(fragmentos.join("#")) };
   }
   const xml = s => new DOMParser().parseFromString(s, "application/xml");
   const porTag = (doc, tag) => [...doc.getElementsByTagNameNS("*", tag)];
@@ -121,7 +128,14 @@
     let zip;
     try { zip = fflate.unzipSync(new Uint8Array(buf)); } catch { throw new Error("El archivo no es un EPUB válido (no se pudo abrir el zip)."); }
     const dec = new TextDecoder("utf-8");
-    const bytes = ruta => zip[ruta] || zip[decodeURI(ruta)] || zip[Object.keys(zip).find(k => k.toLowerCase() === ruta.toLowerCase())];
+    const rutas = new Map(Object.keys(zip).map(k => [k.toLowerCase(), k]));
+    const bytes = ruta => {
+      if (typeof ruta !== "string" || !ruta) return;
+      let decodificada = ruta;
+      try { decodificada = decodeURI(ruta); } catch {}
+      const k = [ruta, decodificada, rutas.get(ruta.toLowerCase())].find(x => x && Object.hasOwn(zip, x));
+      return k ? zip[k] : undefined;
+    };
     const txt = ruta => { const b = bytes(ruta); if (!b) throw new Error("Falta " + ruta + " dentro del EPUB."); return dec.decode(b); };
     const cont = xml(txt("META-INF/container.xml"));
     const rf = porTag(cont, "rootfile")[0];
@@ -203,30 +217,48 @@
 
   // ---------- catálogo Fénix ----------
   let catalogo = null;
-  async function traerCatalogo(){
-    if (enLinea()) {
-      try {
-        const r = await fetch(CATALOGO, { cache: "no-cache" });
-        if (r.ok) { const j = await r.json(); if (Array.isArray(j.libros)) { hito(`catálogo de la red: ${j.libros.length}`); catalogo = j; conf.poner("catalogo", j); return j; } }
-      } catch (e) { console.warn("Catálogo sin red:", e); }
-    }
-    if (!catalogo) catalogo = await conf.leer("catalogo", null);
-    // La app recién instalada y sin señal: el catálogo que trae adentro, para que al menos se vea.
-    if (!catalogo && APP) try { catalogo = await (await fetch("catalogo.json")).json(); } catch {}
-    return catalogo;
+  let catalogoEnCurso = null;
+  async function traerCatalogo(actualizar = false){
+    if (catalogo && !actualizar) return catalogo;
+    if (catalogoEnCurso) return catalogoEnCurso;
+    const trabajo = (async () => {
+      if (!catalogo && !enLinea()) catalogo = await conf.leer("catalogo", null);
+      // El SW guarda un catálogo inicial: sirve incluso al abrir el lector por primera vez sin red.
+      if (enLinea() || !catalogo) {
+        const candidatos = APP && !catalogo && !enLinea() ? ["catalogo.json"] : [CATALOGO];
+        if (APP && candidatos[0] !== "catalogo.json") candidatos.push("catalogo.json");
+        for (const url of candidatos) {
+          try {
+            const r = await fetch(url, { cache: enLinea() ? "no-cache" : "default", signal: plazo(10000) });
+            if (!r.ok) continue;
+            const j = await r.json();
+            if (!Array.isArray(j.libros)) continue;
+            catalogo = j;
+            await conf.poner("catalogo", j);
+            return j;
+          } catch {}
+        }
+      }
+      return catalogo || (catalogo = await conf.leer("catalogo", null));
+    })();
+    catalogoEnCurso = trabajo;
+    try { return await trabajo; }
+    finally { if (catalogoEnCurso === trabajo) catalogoEnCurso = null; }
   }
   const idFenix = c => `fenix-${c.id}-${c.idioma}`;
+  const esLibroFenix = (l, c) => l.id === idFenix(c) || (l.fenix?.id === c.id && l.fenix?.idioma === c.idioma);
 
   // ---------- agregar y actualizar libros ----------
   // Un libro se identifica por su dc:identifier; si no trae, por título y autor. Al agregar uno que ya
   // está, se reemplaza el archivo y se conservan posición, marcadores y notas (que viven aparte, en estado).
   async function guardarEpub(buf, origen){
     const ep = leerEpub(buf);
-    const sha = await sha256(buf);
+    const sha = origen.sha || await sha256(buf);
     const libros = await DB.todos("libros");
-    let previo = origen.fenix ? libros.find(l => l.id === idFenix(origen.fenix)) : null;
-    if (!previo && ep.ident) previo = libros.find(l => l.ident === ep.ident);
-    if (!previo) previo = libros.find(l => clave(l.titulo) === clave(ep.titulo) && clave(l.autor) === clave(ep.autor) && !!l.bilingue === !!origen.bilingue);
+    let previo = origen.fenix ? libros.find(l => esLibroFenix(l, origen.fenix)) : null;
+    const comparable = l => (!origen.fenix || !l.fenix) && (!l.idioma || !ep.idioma || l.idioma === ep.idioma);
+    if (!previo && ep.ident) previo = libros.find(l => comparable(l) && l.ident === ep.ident);
+    if (!previo) previo = libros.find(l => comparable(l) && clave(l.titulo) === clave(ep.titulo) && clave(l.autor) === clave(ep.autor) && !!l.bilingue === !!origen.bilingue);
     // Un EPUB de Fénix agregado a mano queda unido al catálogo, para que se actualice solo.
     let fenix = origen.fenix || (previo && previo.fenix) || null;
     if (!fenix && sha && catalogo) { const c = catalogo.libros.find(x => x.sha === sha); if (c) fenix = { id: c.id, idioma: c.idioma }; }
@@ -236,7 +268,7 @@
     const muestra = ep.spine.slice(0, 12).map(s => { try { return ep.txt(s.href); } catch { return ""; } }).join("");
     const libro = {
       id, titulo: ep.titulo, autor: ep.autor, idioma: ep.idioma, ident: ep.ident, sha, bytes: buf.byteLength,
-      fenix, origen: fenix ? "fenix" : "archivo", bilingue: /class="[^"]*\borig\b/.test(muestra),
+      fenix, shaFenix: origen.shaFenix || (previo?.sha === sha ? previo.shaFenix : ""), origen: fenix ? "fenix" : "archivo", bilingue: /class="[^"]*\borig\b/.test(muestra),
       portada: await portadaChica(ep), agregado: previo ? previo.agregado : Date.now(), actualizado: Date.now(),
       version: (previo ? (previo.version || 1) + (previo.sha !== sha ? 1 : 0) : 1), driveId: previo && previo.sha === sha ? previo.driveId : "",
       leido: previo ? previo.leido : 0, avance: previo ? previo.avance : 0, nuevaVersion: !!previo && previo.sha !== sha,
@@ -248,28 +280,35 @@
     return { libro, reemplazo: !!previo && previo.sha !== sha, igual: !!previo && previo.sha === sha };
   }
 
-  async function bajarDeFenix(c){
-    const r = await fetch(SITIO + c.epub, { cache: "no-cache" });
-    if (!r.ok) throw new Error(`Fénix respondió ${r.status} al pedir ${c.titulo}.`);
-    const buf = await r.arrayBuffer();
-    const res = await guardarEpub(buf, { fenix: { id: c.id, idioma: c.idioma } });
-    // La huella que anunció el catálogo: si no calza con la del archivo (catálogo a medio publicar),
-    // igual se anota, para no bajar el mismo libro en cada revisión.
-    res.libro.shaFenix = c.sha;
-    await DB.poner("libros", res.libro);
-    return res;
+  const bajadas = new Map();
+  function bajarDeFenix(c){
+    const key = idFenix(c);
+    if (bajadas.has(key)) return bajadas.get(key);
+    const trabajo = (async () => {
+      const u = new URL(SITIO + c.epub, location.href);
+      u.searchParams.set("v", c.sha || "");
+      const r = await fetch(u, { cache: "no-cache", signal: plazo(60000) });
+      if (!r.ok) throw new Error(`Fénix respondió ${r.status}; prueba de nuevo más tarde.`);
+      const buf = await r.arrayBuffer(), sha = await sha256(buf);
+      if (sha && c.sha && sha !== c.sha) throw new Error("El catálogo y el archivo aún no coinciden. Tu copia no cambió; prueba de nuevo más tarde.");
+      return guardarEpub(buf, { fenix: { id: c.id, idioma: c.idioma }, sha, shaFenix: c.sha });
+    })();
+    bajadas.set(key, trabajo);
+    trabajo.finally(() => { if (bajadas.get(key) === trabajo) bajadas.delete(key); }).catch(() => {});
+    return trabajo;
   }
 
   async function agregarDeFenix(c, abrirAlTerminar){
     if (!enLinea()) { aviso("Sin conexión: este libro se podrá agregar cuando vuelva la señal."); return; }
+    if (bajadas.has(idFenix(c))) return;
     cargando(`Bajando «${c.titulo}»…`);
     try {
       const { libro } = await bajarDeFenix(c);
-      cargando();
       aviso(`«${libro.titulo}» quedó en tu biblioteca y se lee sin conexión.`);
       await pintarBiblioteca();
-      if (abrirAlTerminar) abrirLibro(libro.id);
-    } catch (e) { cargando(); aviso(e.message || "No se pudo bajar el libro. Inténtalo de nuevo."); }
+      if (abrirAlTerminar) await abrirLibro(libro.id);
+    } catch (e) { aviso(e.message || "No se pudo bajar el libro. Inténtalo de nuevo."); }
+    finally { cargando(); }
   }
 
   let actualizando = false;
@@ -277,7 +316,7 @@
     if (actualizando || !enLinea()) return;
     actualizando = true;
     try {
-      const cat = await traerCatalogo();
+      const cat = await traerCatalogo(true);
       if (!cat) return;
       const libros = (await DB.todos("libros")).filter(l => l.fenix);
       for (const l of libros) {
@@ -305,6 +344,7 @@
     cargando();
     pintarBiblioteca();
   }
+  $("#btnAgregarEpub").onclick = () => $("#archivoEpub").click();
   $("#archivoEpub").addEventListener("change", e => { const fs = [...e.target.files]; e.target.value = ""; if (fs.length) agregarArchivos(fs); });
   // Soltar un EPUB sobre la biblioteca, en el computador.
   document.addEventListener("dragover", e => { if (!lectura) e.preventDefault(); });
@@ -349,26 +389,26 @@
   const urlsPortada = [];
   function tarjeta(l){
     const b = document.createElement("div");
-    b.className = "tarjeta"; b.tabIndex = 0; b.setAttribute("role", "button"); b.dataset.id = l.id;
-    let img = `<div class="sin">${esc(l.titulo)}</div>`;
+    b.className = "tarjeta"; b.dataset.id = l.id;
+    let img = `<span class="sin">${esc(l.titulo)}</span>`;
     if (l.portada) { const u = URL.createObjectURL(l.portada); urlsPortada.push(u); img = `<img alt="" src="${u}">`; }
     const pct = Math.round((l.avance || 0) * 100);
-    b.innerHTML = `<div class="tapa">${img}</div>
-      <div class="t">${esc(l.titulo)}</div><div class="a">${esc(l.autor)}</div>
-      <div class="avance" title="${pct} % leído"><i style="width:${pct}%"></i></div>
-      <div class="chips">${pct ? `<span class="chip">${pct} %</span>` : ""}${l.bilingue ? `<span class="chip">Bilingüe</span>` : ""}${l.fenix ? `<span class="chip">Fénix</span>` : ""}${l.nuevaVersion ? `<span class="chip nuevo">Versión nueva</span>` : ""}</div>
+    b.innerHTML = `<button class="abrir-tarjeta" type="button" aria-label="Leer ${esc(l.titulo)}">
+      <span class="tapa">${img}</span><span class="t">${esc(l.titulo)}</span><span class="a">${esc(l.autor)}</span>
+      <span class="avance" title="${pct} % leído"><i style="width:${pct}%"></i></span>
+      <span class="chips">${pct ? `<span class="chip">${pct} %</span>` : ""}${l.bilingue ? `<span class="chip">Bilingüe</span>` : ""}${l.fenix ? `<span class="chip">Fénix</span>` : ""}${l.nuevaVersion ? `<span class="chip nuevo">Versión nueva</span>` : ""}</span></button>
       <button class="mas" type="button" aria-label="Opciones de ${esc(l.titulo)}">⋯</button>`;
-    b.addEventListener("click", e => { if (e.target.closest(".mas")) { e.stopPropagation(); fichaLocal(l); } else abrirLibro(l.id); });
-    b.addEventListener("keydown", e => { if (e.key === "Enter") abrirLibro(l.id); });
+    b.querySelector(".abrir-tarjeta").onclick = () => abrirLibro(l.id);
+    b.querySelector(".mas").onclick = () => fichaLocal(l);
     return b;
   }
   async function pintarBiblioteca(){
-    urlsPortada.splice(0).forEach(u => URL.revokeObjectURL(u));
     let libros = [];
     try { libros = await DB.todos("libros"); }
     catch { $("#estante").innerHTML = ""; $("#estanteVacio").hidden = false; $("#estanteVacio").textContent = "Este navegador no deja guardar libros (¿ventana privada?). Ábrelo en una ventana normal."; return; }
     libros.sort((a, b) => (b.leido || b.agregado) - (a.leido || a.agregado));
     const est = $("#estante"); est.innerHTML = "";
+    urlsPortada.splice(0).forEach(u => URL.revokeObjectURL(u));
     libros.forEach(l => est.append(tarjeta(l)));
     $("#estanteVacio").hidden = libros.length > 0;
     hito(`biblioteca ${libros.length}: ${libros.map(l => l.titulo).join(" | ")}`);
@@ -388,7 +428,7 @@
       d.close();
       if (!enLinea()) return aviso("Sin conexión: se buscará sola cuando vuelva la señal.");
       cargando("Buscando versión nueva…");
-      const cat = await traerCatalogo(); cargando();
+      const cat = await traerCatalogo(true); cargando();
       const c = cat && cat.libros.find(x => x.id === l.fenix.id && x.idioma === l.fenix.idioma);
       if (!c) return aviso("Este libro ya no está en el catálogo de Fénix; tu copia sigue aquí.");
       if (c.sha === l.sha || c.sha === l.shaFenix) return aviso("Ya tienes la última versión.");
@@ -398,37 +438,64 @@
     d.showModal();
   }
 
-  let filtroCat = "";
+  let filtroCat = "", vistaCatalogo = 0, filtroT;
   async function pintarCatalogo(){
     if ($("#secFenix").hidden) return;
-    const cat = await traerCatalogo();
+    const revision = ++vistaCatalogo;
     const lista = $("#catalogo"), vacio = $("#catalogoVacio");
-    lista.innerHTML = "";
-    if (!cat) { vacio.hidden = false; vacio.textContent = "Sin conexión: el catálogo aparecerá cuando vuelva la señal. Tus libros se leen igual."; return; }
-    const tengo = new Set((await DB.todos("libros").catch(() => [])).map(l => l.id));
+    lista.setAttribute("aria-busy", "true");
+    const [cat, locales] = await Promise.all([traerCatalogo(), DB.todos("libros").catch(() => [])]);
+    if (revision !== vistaCatalogo || $("#secFenix").hidden) return;
+    lista.removeAttribute("aria-busy");
+    const contenido = document.createDocumentFragment();
+    if (!cat) {
+      lista.replaceChildren(); vacio.hidden = false;
+      vacio.textContent = enLinea() ? "No se pudo cargar el catálogo. Vuelve a abrir esta pestaña para reintentar." : "Sin conexión: tus libros guardados siguen disponibles.";
+      $("#catalogoCuenta").textContent = "";
+      return;
+    }
     const q = clave(filtroCat);
     const items = cat.libros.filter(c => !q || clave(c.titulo + " " + c.autor).includes(q));
     vacio.hidden = items.length > 0; vacio.textContent = "Ningún libro coincide.";
+    $("#catalogoCuenta").textContent = `${items.length} ${items.length === 1 ? "libro" : "libros"}`;
     for (const c of items.slice(0, 400)) {
       const f = document.createElement("div"); f.className = "fila";
-      const ya = tengo.has(idFenix(c));
-      f.innerHTML = `${c.portada ? `<img alt="" loading="lazy" src="${SITIO}${esc(c.portada)}" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'mini'}))">` : `<div class="mini"></div>`}
+      const ya = locales.find(l => esLibroFenix(l, c));
+      f.innerHTML = `${c.portada ? `<img alt="" loading="lazy" src="${SITIO}${esc(c.portada)}">` : `<div class="mini"></div>`}
         <div class="txt"><div class="t">${esc(c.titulo)}</div><div class="a">${esc(c.autor)}${c.idioma !== "es" ? " · " + esc(c.idioma.toUpperCase()) : ""}</div></div>
         <button class="btn ${ya ? "" : "prim"}" type="button">${ya ? "Leer" : "Agregar"}</button>`;
-      f.querySelector("button").onclick = () => ya ? abrirLibro(idFenix(c)) : agregarDeFenix(c, false);
-      lista.append(f);
+      const img = f.querySelector("img");
+      if (img) img.addEventListener("error", () => img.replaceWith(Object.assign(document.createElement("div"), { className: "mini" })), { once: true });
+      const boton = f.querySelector("button");
+      boton.setAttribute("aria-label", `${boton.textContent} ${c.titulo}`);
+      boton.onclick = () => ya ? abrirLibro(ya.id) : agregarDeFenix(c, false);
+      contenido.append(f);
     }
+    lista.replaceChildren(contenido);
   }
-  function pestana(cual){
-    $("#tabMios").setAttribute("aria-selected", cual === "mios");
-    $("#tabFenix").setAttribute("aria-selected", cual === "fenix");
-    $("#secMios").hidden = cual !== "mios"; $("#secFenix").hidden = cual !== "fenix";
-    if (cual === "fenix") pintarCatalogo();
+  function pestana(cual, enfocar = false){
+    const mios = cual === "mios";
+    for (const [b, activa] of [[$("#tabMios"), mios], [$("#tabFenix"), !mios]]) {
+      b.setAttribute("aria-selected", activa);
+      b.tabIndex = activa ? 0 : -1;
+      if (activa && enfocar) b.focus();
+    }
+    $("#secMios").hidden = !mios; $("#secFenix").hidden = mios;
+    if (!mios) pintarCatalogo();
+    else { vistaCatalogo++; $("#catalogo").removeAttribute("aria-busy"); }
   }
   $("#tabMios").onclick = () => pestana("mios");
   $("#tabFenix").onclick = () => pestana("fenix");
-  $("#irCatalogo").onclick = e => { e.preventDefault(); pestana("fenix"); };
-  $("#buscarCat").addEventListener("input", e => { filtroCat = e.target.value; pintarCatalogo(); });
+  $("#irCatalogo").onclick = $("#btnExplorar").onclick = () => pestana("fenix", true);
+  $(".pestanas").addEventListener("keydown", e => {
+    if (!e.target.matches('[role="tab"]')) return;
+    const dir = { Home: "mios", End: "fenix", ArrowLeft: e.target.id === "tabMios" ? "fenix" : "mios", ArrowRight: e.target.id === "tabMios" ? "fenix" : "mios" }[e.key];
+    if (dir) { e.preventDefault(); pestana(dir, true); }
+  });
+  $("#buscarCat").addEventListener("input", e => {
+    filtroCat = e.target.value; vistaCatalogo++; clearTimeout(filtroT);
+    filtroT = setTimeout(pintarCatalogo, 90);
+  });
 
   function pintarRed(){
     const a = $("#avisoRed");
@@ -485,16 +552,23 @@
   let lectura = null; // { libro, ep, estado, i, recursos: Map, bloques: [], bilingue }
   const barraAlto = () => $("#vistaLectura header").offsetHeight || 56;
 
+  let abrirN = 0;
   async function abrirLibro(id, ancla){
+    const n = ++abrirN;
     pantallaCompleta(); // antes de cualquier await: el navegador la permite solo en respuesta a un toque
     cargando("Abriendo…");
     try {
       const libro = await DB.get("libros", id);
       const arch = await DB.get("archivos", id);
       if (!libro || !arch) throw new Error("Este libro ya no está en el dispositivo.");
-      const ep = leerEpub(await arch.blob.arrayBuffer());
-      cerrarLectura(false);
-      lectura = { libro, ep, estado: await estadoDe(id), i: 0, recursos: new Map(), bloques: [], bilingue: !!libro.bilingue };
+      const buf = await arch.blob.arrayBuffer();
+      if (n !== abrirN) return;
+      const ep = leerEpub(buf);
+      const estado = await estadoDe(id);
+      if (n !== abrirN) return;
+      cerrarBusqueda(); cerrarLectura(false);
+      lectura = { libro, ep, estado, i: 0, recursos: new Map(), bloques: [], bilingue: !!libro.bilingue };
+      const L = lectura;
       if (libro.nuevaVersion) { libro.nuevaVersion = false; DB.poner("libros", libro); }
       $("#vistaBiblio").hidden = true; $("#vistaLectura").hidden = false;
       nativo("volumen", { activo: true }).catch(() => {});
@@ -504,6 +578,7 @@
       if (location.hash !== "#leer=" + encodeURIComponent(id)) history.pushState({ leer: id }, "", "#leer=" + encodeURIComponent(id));
       if (destino) await irAPosicion(destino, true);
       else await mostrarCapitulo(primerCapituloConTexto(), 0);
+      if (n !== abrirN || lectura !== L) return;
       mostrarControles(false);
       cargando();
       hito(`abierto: ${libro.titulo}`);
@@ -515,6 +590,7 @@
       } catch {}
       Nube.sincronizar(false);
     } catch (e) {
+      if (n !== abrirN) return;
       cargando(); console.warn(e);
       aviso(e.message || "No se pudo abrir el libro.", 6000);
       volverBiblioteca();
@@ -537,6 +613,7 @@
     if (pintar) pintarBiblioteca();
   }
   function volverBiblioteca(){
+    abrirN++; cargando(); cerrarBusqueda();
     cerrarSeleccion();
     cerrarLectura();
     mostrarControles(false); salirPantallaCompleta(); pantallaEncendida(false);
@@ -550,8 +627,11 @@
   $("#btnVolver").onclick = volverBiblioteca;
   window.addEventListener("popstate", () => {
     const m = location.hash.match(/^#leer=(.+)$/);
-    if (!m && lectura) volverBiblioteca();
-    else if (m && (!lectura || lectura.libro.id !== decodeURIComponent(m[1]))) abrirLibro(decodeURIComponent(m[1]));
+    if (!m) { if (lectura || $(".carga")) volverBiblioteca(); return; }
+    let id;
+    try { id = decodeURIComponent(m[1]); }
+    catch { volverBiblioteca(); aviso("Este enlace no abre un libro válido."); return; }
+    if (!lectura || lectura.libro.id !== id) abrirLibro(id);
   });
 
   function urlRecurso(ruta){
@@ -652,7 +732,8 @@
   const NOMBRE_IDIOMA = { fr: "Original francés", en: "Original inglés", la: "Original latino", it: "Original italiano", de: "Original alemán", pt: "Original portugués", es: "Original" };
 
   async function mostrarCapitulo(i, pagina){
-    const L = lectura;
+    const L = lectura; if (!L) return false;
+    const cambio = L.cambioCapitulo = (L.cambioCapitulo || 0) + 1;
     i = Math.max(0, Math.min(L.ep.spine.length - 1, i));
     cerrarSeleccion(); cerrarFlotante();
     let prep;
@@ -689,8 +770,10 @@
     $("#capSiguiente").disabled = i === L.ep.spine.length - 1;
     $("#capActual").textContent = tituloCapitulo();
     await maquetar();
+    if (lectura !== L || L.cambioCapitulo !== cambio) return false;
     irPagina(pagina === "fin" ? L.paginas - 1 : (pagina || 0), false);
     marcarIndice();
+    return true;
   }
   $("#capAnterior").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i - 1, 0); guardarPosicion(); };
   $("#capSiguiente").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i + 1, 0); guardarPosicion(); };
@@ -734,8 +817,9 @@
   // apaisada. Corre al abrir un capítulo, al girar el teléfono, al cambiar la letra y al cargar una imagen.
   async function maquetar(){
     const L = lectura; if (!L) return;
+    const cambio = L.cambioCapitulo;
     try { await Promise.race([document.fonts.ready, espera(800)]); } catch {}
-    if (!lectura) return;
+    if (lectura !== L || L.cambioCapitulo !== cambio) return;
     const v = $("#vistaLectura"), hoja = $("#hoja"), marco = $("#marco"), texto = $("#texto");
     quitarPies();
     const lado = innerWidth < 500 ? 18 : 28, gap = 2 * lado;
@@ -791,9 +875,9 @@
     clearTimeout(reajT);
     reajT = setTimeout(async () => {
       const L = lectura; if (!L) return;
-      const ancla = L.ancla;
+      const ancla = L.ancla, cambio = L.cambioCapitulo;
       await maquetar();
-      if (lectura === L) irPagina(ancla ? paginaDePos(ancla) : L.pag, false, ancla);
+      if (lectura === L && L.cambioCapitulo === cambio) irPagina(ancla ? paginaDePos(ancla) : L.pag, false, ancla);
     }, 150);
   }
   // La línea recorre el libro entero (0 a 1000, por tamaño de cada capítulo): al arrastrar muestra a qué
@@ -813,12 +897,23 @@
   $("#deslizador").addEventListener("change", async e => {
     const L = lectura; if (!L) return;
     const { i, frac } = puntoDelLibro(+e.target.value / 1000);
-    if (i !== L.i) await mostrarCapitulo(i, 0);
+    if (i !== L.i && !await mostrarCapitulo(i, 0)) return;
+    if (lectura !== L) return;
     irPagina(Math.floor(frac * L.paginas), false);
     $("#capActual").textContent = tituloCapitulo();
     guardarPosicion();
   });
-  function mostrarControles(si){ $("#vistaLectura").toggleAttribute("data-controles", !!si); }
+  function mostrarControles(si, teclado = false){
+    const barra = $("#barraLectura"), pie = $("#controlesPie"), boton = $("#btnComandos");
+    const focoDentro = barra.contains(document.activeElement) || pie.contains(document.activeElement);
+    $("#vistaLectura").toggleAttribute("data-controles", !!si);
+    if (!si && focoDentro) boton.focus({ preventScroll: true });
+    barra.inert = pie.inert = !si;
+    boton.tabIndex = si ? -1 : 0;
+    boton.setAttribute("aria-expanded", !!si);
+    if (si && teclado) $("#btnVolver").focus({ preventScroll: true });
+  }
+  $("#btnComandos").onclick = () => mostrarControles(true, true);
 
   // ---------- toques y deslizar ----------
   // Tercio izquierdo: página anterior; tercio derecho: siguiente; centro: muestra u oculta los controles.
@@ -871,10 +966,12 @@
     if (d > 0) siguiente(); else anterior();
   }, { passive: false });
   document.addEventListener("keydown", e => {
-    if (!lectura || e.target.closest("input, textarea, dialog") || e.altKey || e.ctrlKey || e.metaKey) return;
+    if (!lectura || e.target.closest("input, textarea, select, button, a, [contenteditable], dialog") || e.altKey || e.ctrlKey || e.metaKey) return;
     if (["ArrowRight", "ArrowDown", "PageDown", " "].includes(e.key)) { e.preventDefault(); siguiente(); }
     else if (["ArrowLeft", "ArrowUp", "PageUp"].includes(e.key)) { e.preventDefault(); anterior(); }
-    else if (e.key === "Escape") mostrarControles(false);
+  });
+  document.addEventListener("keydown", e => {
+    if (lectura && e.key === "Escape" && !$("dialog[open]")) mostrarControles(false, true);
   });
   // App de Android: volumen abajo, página siguiente; volumen arriba, anterior (MainActivity.dispatchKeyEvent).
   if (APP) addEventListener("lectorVolumen", e => {
@@ -975,7 +1072,8 @@
     const L = lectura;
     let i = L.ep.spine.findIndex(s => s.href === pos.href);
     if (i < 0) i = Math.min(pos.i || 0, L.ep.spine.length - 1);
-    if (pintar || i !== L.i) await mostrarCapitulo(i);
+    if ((pintar || i !== L.i) && !await mostrarCapitulo(i)) return;
+    if (lectura !== L) return;
     const ancla = pos.cita ? { href: L.ep.spine[i].href, i, cita: pos.cita, prefijo: pos.prefijo, frac: pos.frac, t: Date.now() } : null;
     if (lectura === L) irPagina(paginaDePos(pos), false, ancla);
   }
@@ -1051,7 +1149,8 @@
     const L = lectura;
     const i = L.ep.spine.findIndex(s => s.href === ruta);
     if (i < 0) return;
-    if (i !== L.i) await mostrarCapitulo(i, 0);
+    if (i !== L.i && !await mostrarCapitulo(i, 0)) return;
+    if (lectura !== L) return;
     const el = frag ? document.getElementById("e_" + frag) : null;
     if (el) { irPagina(paginaDeElemento(el), false); el.classList.add("lx-destello"); setTimeout(() => el.classList.remove("lx-destello"), 1700); }
     else irPagina(0, false);
@@ -1396,8 +1495,37 @@
     for (let k = 0; k < s.length; k++) { const c = sinTilde(s[k]); t += c; for (let n = 0; n < c.length; n++) mapa.push(k); }
     return { t, mapa };
   }
-  function textoCapitulo(i){
-    const L = lectura;
+  // Conservar los límites de párrafo y los saltos sin separar texto inline (cursivas, enlaces, etc.).
+  const EN_BLOQUE = /^(P|H[1-6]|LI|DIV|SECTION|ARTICLE|ASIDE|BLOCKQUOTE|DT|DD|PRE|TD|TH|FIGCAPTION|BR|HR)$/;
+  function fuenteDeBusqueda(raiz){
+    let texto = "";
+    const nodos = [];
+    function rec(n){
+      if (n.nodeType === Node.TEXT_NODE) {
+        if (n.data) { nodos.push({ nodo: n, desde: texto.length }); texto += n.data; }
+        return;
+      }
+      if (n.nodeType !== Node.ELEMENT_NODE || n.matches(".lx-pie, .lx-fin, script, style, link, head, noscript")) return;
+      const bloque = EN_BLOQUE.test((n.localName || "").toUpperCase());
+      if (bloque) texto += "\n";
+      n.childNodes.forEach(rec);
+      if (bloque) texto += "\n";
+    }
+    rec(raiz);
+    return { texto, nodos };
+  }
+  function consultaPlana(s){
+    const p = plano(s), mapa = [];
+    let t = "", espacio = false;
+    for (let i = 0; i < p.t.length; i++) {
+      if (/\s/u.test(p.t[i])) {
+        if (t && !espacio) { t += " "; mapa.push(p.mapa[i]); }
+        espacio = true;
+      } else { t += p.t[i]; mapa.push(p.mapa[i]); espacio = false; }
+    }
+    return { t, mapa };
+  }
+  function textoCapitulo(L, i){
     L.textos = L.textos || [];
     if (L.textos[i] == null) {
       try {
@@ -1405,74 +1533,90 @@
         let doc = new DOMParser().parseFromString(fuente, /html\+xml|xml/.test(it.tipo) ? "application/xhtml+xml" : "text/html");
         if (!doc.body || doc.querySelector("parsererror")) doc = new DOMParser().parseFromString(fuente, "text/html");
         $$(PROHIBIDOS, doc.body).forEach(e => e.remove());
-        L.textos[i] = doc.body.textContent || "";
+        L.textos[i] = fuenteDeBusqueda(doc.body).texto;
       } catch { L.textos[i] = ""; }
     }
     return L.textos[i];
   }
-  let busquedaN = 0;
+  let busquedaN = 0, buscarT = 0, consultaResultados = "", libroResultados = null;
+  function limpiarResultados(){
+    busquedaN++; clearTimeout(buscarT);
+    consultaResultados = ""; libroResultados = null;
+    $("#buscarLista").replaceChildren();
+  }
+  function cerrarBusqueda(){
+    limpiarResultados();
+    if ($("#dlgBuscar").open) $("#dlgBuscar").close();
+    $("#buscarTexto").value = "";
+    $("#buscarEstado").textContent = "";
+  }
   async function buscarEnLibro(q){
     const L = lectura; if (!L) return;
-    const n = ++busquedaN, lista = $("#buscarLista"), estado = $("#buscarEstado");
-    lista.innerHTML = "";
+    limpiarResultados();
+    const n = busquedaN, lista = $("#buscarLista"), estado = $("#buscarEstado");
     const aguja = sinTilde(norm(q));
     if (aguja.length < 2) { estado.textContent = "Escribe al menos dos letras."; return; }
     estado.textContent = "Buscando…";
-    const MAX = 300; let total = 0, html = "";
+    const MAX = 300; let total = 0, resultados = "";
     for (let i = 0; i < L.ep.spine.length && total < MAX; i++) {
-      if (i % 8 === 7) { await espera(0); if (n !== busquedaN) return; }
-      const txt = textoCapitulo(i); if (!txt) continue;
-      const p = plano(txt);
+      if (i % 8 === 7) { await espera(0); if (n !== busquedaN || lectura !== L) return; }
+      const txt = textoCapitulo(L, i); if (!txt) continue;
+      const p = consultaPlana(txt);
       let desde = 0, k = 0, pos;
       while ((pos = p.t.indexOf(aguja, desde)) >= 0 && total < MAX) {
         const a = p.mapa[pos], b = p.mapa[pos + aguja.length - 1] + 1;
         const antes = norm(txt.slice(Math.max(0, a - 60), a)), despues = norm(txt.slice(b, b + 80));
-        html += `<li><button type="button" data-i="${i}" data-k="${k}"><span class="etq">${esc(tituloDe(i))}</span>…${esc(antes)} <b>${esc(norm(txt.slice(a, b)))}</b> ${esc(despues)}…</button></li>`;
+        resultados += `<li><button type="button" data-i="${i}" data-k="${k}"><span class="etq">${esc(tituloDe(i))}</span>…${esc(antes)} <b>${esc(norm(txt.slice(a, b)))}</b> ${esc(despues)}…</button></li>`;
         total++; k++; desde = pos + aguja.length;
       }
     }
-    if (n !== busquedaN) return;
-    lista.innerHTML = html;
-    estado.textContent = total ? (total >= MAX ? `Más de ${MAX} resultados: escribe algo más preciso.` : `${total} resultado${total === 1 ? "" : "s"}.`) : "No aparece en este libro.";
+    if (n !== busquedaN || lectura !== L || !$("#dlgBuscar").open) return;
+    consultaResultados = aguja;
+    libroResultados = L;
+    lista.innerHTML = resultados;
+    estado.textContent = total ? (total >= MAX ? `Primeros ${MAX} resultados. Escribe algo más preciso.` : `${total} resultado${total === 1 ? "" : "s"}.`) : "No aparece en este libro.";
   }
-  // Marca la aparición k (en orden) de la búsqueda dentro del capítulo abierto y va a su página.
-  function marcarBusqueda(q, k){
-    const cap = $("#texto .lx-cap"); if (!cap) return;
-    const aguja = sinTilde(norm(q));
-    const nodos = []; let txt = "";
-    const tw = document.createTreeWalker(cap, NodeFilter.SHOW_TEXT);
-    while (tw.nextNode()) { nodos.push([tw.currentNode, txt.length]); txt += tw.currentNode.data; }
-    const p = plano(txt);
+  // Marca todas las partes de una coincidencia aunque una cursiva o un enlace separe los nodos.
+  function marcarBusqueda(aguja, k){
+    const cap = $("#texto .lx-cap"); if (!cap) return false;
+    const { texto, nodos } = fuenteDeBusqueda(cap), p = consultaPlana(texto);
     let pos = -1, desde = 0;
     for (let n = 0; n <= k; n++) { pos = p.t.indexOf(aguja, desde); if (pos < 0) break; desde = pos + aguja.length; }
-    if (pos < 0) return;
+    if (pos < 0) return false;
     const a = p.mapa[pos], b = p.mapa[pos + aguja.length - 1] + 1;
-    const donde = off => { let j = nodos.length - 1; while (j > 0 && nodos[j][1] > off) j--; return [nodos[j][0], off - nodos[j][1]]; };
-    const r = document.createRange();
-    r.setStart(...donde(a)); r.setEnd(...donde(b - 1)); r.setEnd(r.endContainer, r.endOffset + 1);
-    const rc = [...r.getClientRects()].find(x => x.width || x.height) || r.getBoundingClientRect();
+    const rangos = nodos.filter(x => x.desde < b && x.desde + x.nodo.length > a).map(({nodo, desde}) => {
+      const r = document.createRange(); r.setStart(nodo, Math.max(0, a - desde)); r.setEnd(nodo, Math.min(nodo.length, b - desde));
+      return r;
+    });
+    const rc = rangos.flatMap(r => [...r.getClientRects()]).find(x => x.width && x.height);
+    if (!rc) return false;
     irPagina(paginaDeRect(rc), false);
-    if (r.startContainer === r.endContainer) {
+    for (const r of rangos.reverse()) {
       const m = document.createElement("mark"); m.className = "lx-busca";
-      try {
-        r.surroundContents(m);
-        setTimeout(() => { if (m.parentNode) { m.replaceWith(...m.childNodes); } }, 4000);
-      } catch {}
+      r.surroundContents(m);
+      setTimeout(() => { if (m.parentNode) m.replaceWith(...m.childNodes); }, 4000);
     }
+    return true;
   }
   $("#btnBuscar").onclick = () => {
     $("#dlgBuscar").showModal();
     const inp = $("#buscarTexto"); inp.focus(); inp.select();
+    if (inp.value) buscarEnLibro(inp.value);
   };
-  let buscarT = 0;
-  $("#buscarTexto").addEventListener("input", e => { clearTimeout(buscarT); buscarT = setTimeout(() => buscarEnLibro(e.target.value), 350); });
-  $("#formBuscar").addEventListener("submit", e => { e.preventDefault(); clearTimeout(buscarT); buscarEnLibro($("#buscarTexto").value); $("#buscarTexto").blur(); });
+  $("#dlgBuscar").addEventListener("close", limpiarResultados);
+  $("#buscarTexto").addEventListener("input", e => {
+    limpiarResultados(); $("#buscarEstado").textContent = "";
+    const q = e.target.value; buscarT = setTimeout(() => buscarEnLibro(q), 250);
+  });
+  $("#formBuscar").addEventListener("submit", e => { e.preventDefault(); buscarEnLibro($("#buscarTexto").value); });
   $("#buscarLista").addEventListener("click", async e => {
-    const b = e.target.closest("button[data-i]"); if (!b || !lectura) return;
+    const b = e.target.closest("button[data-i]"), L = lectura, q = consultaResultados;
+    if (!b || !L || L !== libroResultados || !q) return;
     $("#dlgBuscar").close();
     const i = +b.dataset.i;
-    if (i !== lectura.i) await mostrarCapitulo(i, 0);
-    marcarBusqueda($("#buscarTexto").value, +b.dataset.k);
+    if (i !== L.i && !await mostrarCapitulo(i, 0)) return;
+    if (lectura !== L) return;
+    if (!marcarBusqueda(q, +b.dataset.k)) aviso("Se abrió el capítulo, pero la coincidencia no está visible en el modo de lectura actual.");
     mostrarControles(false);
     guardarPosicion();
   });
@@ -1853,7 +1997,7 @@
     if (h.get("fenix")) {
       const id = h.get("fenix"), idioma = h.get("l") || "es";
       history.replaceState(null, "", location.pathname);
-      const ya = await DB.get("libros", `fenix-${id}-${idioma}`).catch(() => null);
+      const ya = (await DB.todos("libros").catch(() => [])).find(l => esLibroFenix(l, { id, idioma }));
       if (ya) abrirLibro(ya.id);
       else {
         const cat = await traerCatalogo();
