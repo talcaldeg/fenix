@@ -17,6 +17,8 @@
 // - porque: «Por qué leerlo», { es, en }: 2 o 3 frases propias sobre a quién le sirve y qué gana el lector
 //   (no repite el resumen). Lo de fe se audita con auditar-teologia.
 // - citas: textuales, cotejadas con el texto del libro.
+// - lecturaCompleta: true solo si esta edición permite difundir íntegramente el texto.
+//   Texto plano y atribución en lecturas/<id>.<idioma>.json; no se hereda a otras versiones.
 // - encuadernador: nombre de quien preparó la ficha (vía A de un encuadernador, sin editorial);
 //   con editorial, el crédito va dentro de ese texto.
 // - editorial: solo si la edición la hizo Proyecto Fénix (traducción, revisión o edición digital);
@@ -28,7 +30,7 @@
 //   libre (p. ej. una fotografía CC BY-SA de Commons): aviso dice la licencia.
 
 window.FENIX = {
-  actualizado: "24-nov-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "25-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -43,6 +45,104 @@ window.FENIX = {
   recomendadosFenix: ["one-with-jesus", "apologia-de-socrates", "saint-exupery-el-principito", "imitacion-de-cristo", "historia-de-un-alma", "confesiones"],
 
   libros: [
+    {
+      "id": "becquer-rimas",
+      "titulo": "Rimas",
+      "autor": "Gustavo Adolfo Bécquer",
+      "anio": "1871",
+      "idioma": "es",
+      "categoria": "poesia",
+      "recomendado": false,
+      "resumen": {
+        "es": "Setenta y seis poemas sobre la poesía, el amor, el desengaño y la pérdida. La edición de 1885 reúne versos como los de las golondrinas, la pupila azul y el mundo que cabe en una mirada."
+      },
+      "porque": {
+        "es": "Para leer un poema de una sentada y volver a él otro día. El índice permite saltar directamente a cada rima, tanto si ya conoces el número como si quieres recorrer el libro en orden."
+      },
+      "imagen": {
+        "src": "img/portadas/becquer-rimas.jpg",
+        "credito": {
+          "es": "Valeriano Domínguez Bécquer, «Retrato de Gustavo Adolfo Bécquer (1862)»"
+        },
+        "url": "https://commons.wikimedia.org/wiki/File:Gustavo_Adolfo_B%C3%A9cquer_(Valeriano_Dom%C3%ADnguez_B%C3%A9cquer).jpg"
+      },
+      "citas": [
+        "Por una mirada, un mundo;",
+        "Poesía... eres tú.",
+        "Volverán las oscuras golondrinas"
+      ],
+      "externos": [
+        {
+          "formato": "web",
+          "texto": "Wikisource",
+          "url": "https://es.wikisource.org/wiki/Rimas_(B%C3%A9cquer,_1885)"
+        },
+        {
+          "formato": "epub",
+          "texto": "Asociación Mestre Mateo",
+          "url": "https://www.mestremateo.org/media/biblioteca/obras/rimas.epub"
+        },
+        {
+          "formato": "pdf",
+          "texto": "Asociación Mestre Mateo",
+          "url": "https://www.mestremateo.org/media/biblioteca/obras/rimas.pdf"
+        }
+      ],
+      "fuente": {
+        "texto": "Obras, Fernando Fe, 1885, tomo III · Wikisource",
+        "url": "https://es.wikisource.org/wiki/Rimas_(B%C3%A9cquer,_1885)"
+      },
+      "lecturaCompleta": true,
+      "delibris": { "valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/rimas-5" },
+      "parecidos": [
+        "dario-cantos-de-vida-y-esperanza",
+        "dario-azul"
+      ]
+    },
+    {
+      "id": "platon-criton",
+      "titulo": "Critón o el deber",
+      "autor": "Platón (trad. Patricio de Azcárate)",
+      "anio": "1871",
+      "idioma": "es",
+      "categoria": "ensayo",
+      "recomendado": false,
+      "resumen": {
+        "es": "Critón visita a Sócrates en la cárcel y le propone escapar de la condena. Antes de aceptar, Sócrates le pide que examinen si huir sería justo."
+      },
+      "porque": {
+        "es": "Se lee bien después de la Apología de Sócrates: allí Sócrates se defiende ante sus jueces; aquí, ante un amigo, debe decidir qué hacer con la sentencia. Es una forma breve de entrar a los diálogos de Platón."
+      },
+      "imagen": {
+        "src": "img/portadas/platon-criton.jpg",
+        "credito": {
+          "es": "Jean-François-Pierre Peyron, «La muerte de Sócrates»"
+        },
+        "url": "https://commons.wikimedia.org/wiki/File:Jean-Fran%C3%A7ois-Pierre_Peyron_-_The_Death_of_Socrates_-_WGA17397.jpg"
+      },
+      "citas": [
+        "¿Es cierto que jamás se pueden cometer injusticias?",
+        "¿No admites igualmente, que vivir bien no es otra cosa que vivir como lo reclaman la probidad y la justicia?",
+        "¿un hombre que ha prometido una cosa justa, debe cumplirla o faltar a ella?"
+      ],
+      "externos": [
+        {
+          "formato": "web",
+          "texto": "Filosofía en español",
+          "url": "https://www.filosofia.org/cla/pla/azc01091.htm"
+        }
+      ],
+      "fuente": {
+        "texto": "Obras completas, tomo I, Madrid, 1871 · Filosofía en español",
+        "url": "https://www.filosofia.org/cla/pla/azc01091.htm"
+      },
+      "lecturaCompleta": true,
+      "delibris": null,
+      "parecidos": [
+        "apologia-de-socrates",
+        "jenofonte-apologia-de-socrates"
+      ]
+    },
     {
       id: "belloc-cuentos-moraleja",
       titulo: "Cuentos con moraleja para niños",

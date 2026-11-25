@@ -216,6 +216,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 
 ## Poesía
 
+- [Rimas - Gustavo Adolfo Bécquer (1871)](https://talcaldeg.github.io/fenix/libro/becquer-rimas/) - Setenta y seis poemas sobre la poesía, el amor, el desengaño y la pérdida. Se lee gratis en el sitio del titular.
 - [Cuentos con moraleja para niños - Hilaire Belloc (1907)](https://talcaldeg.github.io/fenix/libro/belloc-cuentos-moraleja/) - Once cuentos en verso, con sus moralejas, sobre niños que pagan caro un mal hábito: Jim, que se suelta de la mano de la niñera en el zoológico y se lo come un león; Henry King, que masca cordel; Matilda, que miente tanto que nadie le cree cuando de verdad hay incendio; Rebecca, que da portazos, y otros más. Descarga gratuita en EPUB y PDF.
 - [La Divina Comedia - Dante Alighieri (trad. Manuel Aranda y Sanjuán) (c. 1320)](https://talcaldeg.github.io/fenix/libro/dante-la-divina-comedia/) - Poema de Dante en tres partes (Infierno, Purgatorio y Paraíso) que relata un viaje por el más allá. Se lee gratis en el sitio del titular.
 - [Laberinto de Fortuna - Juan de Mena (1444)](https://talcaldeg.github.io/fenix/libro/juan-de-mena-laberinto-de-fortuna/) - Poema alegórico de Juan de Mena, escrito en el siglo XV y dedicado al rey Juan II de Castilla. Se lee gratis en el sitio del titular.
@@ -231,6 +232,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 
 ## Ensayo e historia
 
+- [Critón o el deber - Platón (trad. Patricio de Azcárate) (1871)](https://talcaldeg.github.io/fenix/libro/platon-criton/) - Critón visita a Sócrates en la cárcel y le propone escapar de la condena. Se lee gratis en el sitio del titular.
 - [La Abadesa de las Huelgas - San Josemaría Escrivá (1944)](https://talcaldeg.github.io/fenix/libro/escriva-abadesa-de-las-huelgas/) - Estudio teológico-jurídico, hecho sobre fuentes originales, de la jurisdicción cuasi episcopal que tuvo la abadesa del monasterio de Las Huelgas, en Burgos. Se lee gratis en el sitio del titular.
 - [Apología de Sócrates - Platón (trad. Patricio de Azcárate) (c. 390 a. C.)](https://talcaldeg.github.io/fenix/libro/apologia-de-socrates/) - La defensa de Sócrates ante el tribunal de Atenas, el año 399 a. Descarga gratuita en EPUB y PDF.
 - [Apology - Plato (trans. Benjamin Jowett) (c. 390 BC)](https://talcaldeg.github.io/fenix/libro/apologia-de-socrates/en/) - Socrates' defence before the court of Athens in 399 BC, accused of corrupting the young and of not believing in the city's gods. Descarga gratuita en EPUB y PDF.

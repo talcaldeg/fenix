@@ -86,7 +86,7 @@ const vista = (l, lang) => {
   const v = (l.versiones || {})[lang];
   if (!v || l.idioma === lang) return l;
   const externos = [...(v.externos || []).map(e => ({ idioma: lang, ...e })), ...(l.externos || []).map(e => ({ idioma: l.idioma, ...e }))];
-  return { ...l, archivos: {}, comprar: [], ...v, idioma: lang, externos, _ruta: `libro/${l.id}/${lang}/`, _base: "../../../" };
+  return { ...l, archivos: {}, comprar: [], lecturaCompleta: false, ...v, idioma: lang, externos, _ruta: `libro/${l.id}/${lang}/`, _base: "../../../" };
 };
 // Todas las páginas de libro: la de cada ficha y la de cada versión.
 const PAGINAS = D.libros.flatMap(l => [l, ...Object.keys(l.versiones || {}).map(k => vista(l, k))]);
@@ -383,11 +383,41 @@ const masDeCategoria = (l, lang, excluir) => {
   return orden.filter(p => !excluir.has(urlLibro(p))).slice(0, 6);
 };
 
+// Solo ediciones autorizadas, declaradas individualmente en datos.js. Se guardan como
+// texto plano estructurado: nada de HTML externo ni transcripciones sin atribución.
+function lecturaCompleta(l){
+  if (l.lecturaCompleta !== true) return null;
+  if (!/^[a-z0-9-]+$/.test(l.id) || !/^[a-z]{2}$/.test(l.idioma))
+    throw new Error("Identificador de lectura inválido");
+  const f = `lecturas/${l.id}.${l.idioma}.json`;
+  const d = JSON.parse(leer(f));
+  if (!l.fuente || !d.credito || !Array.isArray(d.secciones) || !d.secciones.length ||
+      d.secciones.some(p => !p.titulo || !Array.isArray(p.parrafos) || !p.parrafos.length ||
+        p.parrafos.some(t => typeof t !== "string" || !t.trim())))
+    throw new Error("Lectura incompleta o sin atribución: " + f);
+  return d;
+}
+
+function bloqueLectura(d, lang){
+  const es = lang === "es";
+  return `<section id="texto-completo" aria-labelledby="titulo-texto">
+    <h2 id="titulo-texto">${es ? "Texto completo" : "Full text"}</h2>
+    <p class="meta">${esc(d.credito)}</p>
+    ${d.secciones.length > 1 ? `<details><summary>${es ? "Índice de la lectura" : "Contents"}</summary><ul class="parecidos">${d.secciones.map((p, i) => `<li><a href="#texto-${i + 1}">${esc(p.titulo)}</a></li>`).join("")}</ul></details>` : ""}
+    ${d.secciones.map((p, i) => `<section id="texto-${i + 1}">
+      <h3>${esc(p.titulo)}</h3>
+      ${p.parrafos.map(t => `<p>${esc(t).replace(/\n/g, "<br>")}</p>`).join("\n      ")}
+    </section>`).join("\n    ")}
+  </section>`;
+}
+
 function paginaLibro(l){
   const lang = l.idioma, x = TX[lang];
   const resumen = l.resumen[lang] || l.resumen.es;
+  const lectura = lecturaCompleta(l);
   const of = oferta(l, lang);
-  const descripcion = recortar(of.frase + " " + resumen, 158);
+  const frase = lectura ? (lang === "en" ? `Read ${l.titulo} by ${autorCorto(l.autor)} online for free. Full text.` : `Lee gratis el texto completo de ${l.titulo}, de ${autorCorto(l.autor)}, en Proyecto Fénix.`) : of.frase;
+  const descripcion = recortar(frase + " " + resumen, 158);
   const titulo = of.titulo;
   const img = l.imagen ? abs(l.imagen.src) : SITIO + "img/compartir.jpg";
   // Al compartir, la versión 1200x630 de miniaturas.py: con la portada vertical la tarjeta de WhatsApp sale angosta.
@@ -403,6 +433,7 @@ function paginaLibro(l){
     ...Object.entries(l.idioma === lang ? (l.archivos || {}) : {}).map(([f, u]) => `<a class="btn prim" href="${B}${esc(u)}" data-archivo ${attrArchivo(f, u)}>${esc(x.descargar)} ${f.toUpperCase()}</a>`),
     // Leer en el lector del sitio (lector/): guarda el libro en el teléfono y se lee sin conexión.
     ...(l.idioma === lang && (l.archivos || {}).epub ? [`<a class="btn" href="${B}lector/#fenix=${encodeURIComponent(l.id)}&amp;l=${l.idioma}">${lang === "en" ? "Read here" : "Leer aquí"}</a>`] : []),
+    ...(lectura ? [`<a class="btn" href="#texto-completo">${lang === "en" ? "Read full text" : "Leer el texto completo"}</a>`] : []),
     ...(muestraDe(l) ? [`<a class="btn" href="muestra/">${esc(x.hojear)}</a>`] : []),
     ...externosEn(l, lang).sort((a, b) => (b.formato === "epub") - (a.formato === "epub")).map(e => `<a class="btn prim" href="${esc(e.url)}" rel="noopener">${e.formato === "web" ? esc(e.escuchar ? x.escuchar : x.enLinea) : esc(x.descargar) + " " + esc(e.formato.toUpperCase())} · ${esc(e.texto)}</a>`),
     ...(l.idioma === lang ? (l.comprar || []) : []).map(c => `<a class="btn" href="${esc(c.url)}" rel="noopener">${esc(x.comprar)} · ${esc(c.texto)}</a>`)
@@ -444,7 +475,7 @@ function paginaLibro(l){
       }
     ]
   };
-  return `<!doctype html>
+  const pagina = `<!doctype html>
 <html lang="${lang}">
 <head>
 <meta charset="utf-8">
@@ -510,7 +541,7 @@ ${cabecera(lang, B, otraUrl)}
       <p class="meta"><a href="${urlCat}">${esc(x.verSeccion(enCategoria(l.categoria, lang).length))}</a></p>` : ""}
       <div class="botones"><a class="btn" href="${B}?${lang === "en" ? "l=en&amp;" : ""}abrir=${encodeURIComponent(l.id)}">${esc(x.abrir)}</a><a class="btn" href="${inicio}#biblioteca">${esc(x.verTodo)}</a></div>
       ${l.fuente ? `<p class="meta">${esc(x.fuente)}: <a href="${esc(l.fuente.url)}" rel="noopener">${esc(l.fuente.texto)}</a></p>` : ""}
-      ${l.imagen ? `<p class="meta">${esc(x.portada)}: <a href="${esc(l.imagen.url)}" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : x.dominio)})</p>` : ""}
+      ${l.imagen ? `<p class="meta">${esc(x.portada)}: <a href="${esc(l.imagen.url)}" rel="noopener">${esc(l.imagen.credito[lang] || l.imagen.credito.es)}</a> (${esc(l.imagen.aviso ? (l.imagen.aviso[lang] || l.imagen.aviso.es) : x.dominio)})</p>` : ""}${lectura ? "\n      " + bloqueLectura(lectura, lang) : ""}
     </div>
   </div>
 </main>
@@ -522,6 +553,7 @@ ${MEDICION}
 </body>
 </html>
 `;
+  return lectura ? pagina.replace(/^[ \t]+$/gm, "") : pagina;
 }
 
 // «Hojear»: las primeras páginas del libro (muestras/<archivo>.json), para leer en el navegador sin
