@@ -67,9 +67,34 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 .pie-version{margin:40px 0 0; padding-top:14px; border-top:1px solid var(--line); color:var(--muted); font-size:15px; display:flex; flex-wrap:wrap; align-items:center; gap:10px}
 .aviso{border:1px solid var(--line); background:var(--card); border-radius:12px; padding:10px 14px; margin:0 0 14px; font-size:16px; color:var(--muted)}
 .aviso b{color:var(--ink)}
+.presentacion{display:grid; grid-template-columns:minmax(0,1fr) auto; align-items:end; gap:16px;
+  margin:0 0 23px; padding:clamp(18px, 4vw, 30px); border:1px solid var(--line); border-radius:18px;
+  background:linear-gradient(138deg,var(--card) 42%,var(--chip));}
+.presentacion h1{font-weight:650; font-size:clamp(29px,5vw,46px); line-height:1.05; margin:3px 0 7px; letter-spacing:-.025em}
+.presentacion p{margin:0; font-size:17px; color:var(--muted); max-width:40em}
+.presentacion .btn{justify-self:start}
 .pestanas{display:flex; gap:8px; flex-wrap:wrap; align-items:center; margin:0 0 16px}
+.grupo-tabs{display:flex; gap:6px; flex-wrap:wrap}
+.acciones-biblio{margin-left:auto}
+.filtro-cat{display:flex; flex-wrap:wrap; align-items:center; gap:8px 16px; margin:0 0 14px}
+.filtro-cat > label{position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%)}
+.cuenta-cat{color:var(--muted); font-size:15px}
+.vacio-estante{background:var(--card); border:1px dashed var(--line); border-radius:16px; padding:26px 14px; text-align:center}
+.vacio-estante p{max-width:37em; margin:5px auto 14px; color:var(--muted)}
+.vacio-estante h2{font-size:24px; line-height:1.15; margin:0}
+.tarjeta .abrir-tarjeta{display:flex; flex-direction:column; align-items:stretch; gap:6px;
+  padding:0; text-align:left; border:0; background:none; width:100%; border-radius:8px; cursor:pointer;}
+.tarjeta .abrir-tarjeta .a:empty{display:none}
+.tarjeta:focus-within .tapa,.tarjeta:hover .tapa{border-color:var(--oro);}
+.tarjeta .mas{width:40px; height:40px; display:grid; place-items:center; background:var(--card); color:var(--ink); border:1px solid var(--line);}
+.ir-controles{position:absolute; top:max(5px,var(--sa-t)); left:max(8px,var(--sa-l)); z-index:21; opacity:0; pointer-events:none}
+.ir-controles:focus-visible{opacity:1; pointer-events:auto}
+#vistaLectura[data-controles] .ir-controles{pointer-events:none; opacity:0}
+@media (prefers-reduced-motion: reduce){
+  #vistaLectura header.barra,.controles-pie,#texto{transition:none}
+  #texto .lx-destello{animation:none}
+}
 .pestanas .btn[aria-selected="true"]{background:var(--acento); color:var(--acento-ink); border-color:transparent}
-.pestanas .derecha{margin-left:auto; display:flex; gap:8px; flex-wrap:wrap}
 .estante{display:grid; grid-template-columns:repeat(auto-fill, minmax(150px, 1fr)); gap:18px}
 .tarjeta{position:relative; display:flex; flex-direction:column; gap:6px; background:none; border:0; padding:0; text-align:left; cursor:pointer; min-width:0}
 .tapa{aspect-ratio:2/3; width:100%; border-radius:8px; overflow:hidden; background:var(--chip); border:1px solid var(--line); display:grid; place-items:center;
@@ -227,6 +252,18 @@ label.campo > span{display:block; font-size:15px; color:var(--muted); margin-bot
   .estante{grid-template-columns:repeat(auto-fill, minmax(110px, 1fr)); gap:14px}
   .catalogo{grid-template-columns:1fr}
   .marca span{display:none}
+  .presentacion{grid-template-columns:1fr; gap:10px; margin-bottom:17px}
+  .acciones-biblio{margin-left:0}
+  .pestanas{gap:8px 12px}
+  .filtro-cat .buscar{max-width:none}
+}
+@media (max-width:400px){
+  #vistaLectura header.barra{gap:3px; padding-right:max(6px,var(--sa-r)); padding-left:max(6px,var(--sa-l))}
+  #vistaLectura .barra .icono{min-width:44px; height:44px; padding:0 4px}
+  .fila-ctrl .btn{padding-inline:10px;}
+}
+@supports (height: 100dvh) {
+  dialog.panel{height:100dvh; max-height:100dvh}
 }
 @media (max-width:760px){
   /* Lado a lado no cabe en el celular: pasa a intercalado sin cambiar el ajuste guardado. */
@@ -247,24 +284,38 @@ h2{break-after:avoid; page-break-after:avoid}
     <a class="marca" href="../"><img alt="" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%236b1d24'/%3E%3Cg fill='%23e8b04a'%3E%3Cpath d='M31 56C24 52 15 51 7 53L6.5 46.5 4.5 45.5 6 38.5 3.5 37 5 29 2.5 27.5 2.5 7.5C8 17 19 26 31 36.5Z'/%3E%3Cpath d='M33 56C40 52 49 51 57 53L57.5 46.5 59.5 45.5 58 38.5 60.5 37 59 29 61.5 27.5 61.5 7.5C56 17 45 26 33 36.5Z'/%3E%3Cpath d='M32 38C29.3 33 28.9 27.6 29.8 22.8C30.7 18.4 33.4 15.6 37.2 16.1L42.6 18 37.6 20.1C36 23 35.7 28 34.8 32.8Z'/%3E%3C/g%3E%3C/svg%3E"><span>Lector Fénix</span></a>
     <div class="titulo-barra"></div>
     <button class="icono" id="btnNube" type="button" hidden title="Nube" aria-label="Nube"><svg viewBox="0 0 24 24"><path d="M7 18h10a4 4 0 0 0 .6-7.96A6 6 0 0 0 6.2 9.1 4.5 4.5 0 0 0 7 18z"/></svg><span id="nubeTxt"></span></button>
-    <label class="btn prim" for="archivoEpub">Agregar EPUB</label>
-    <input class="oculto" id="archivoEpub" type="file" accept=".epub,application/epub+zip" multiple>
+    <button class="btn prim" id="btnAgregarEpub" type="button">Agregar EPUB</button>
+    <input hidden id="archivoEpub" type="file" accept=".epub,application/epub+zip" multiple>
   </header>
   <main class="biblio">
     <p class="aviso" id="avisoRed" hidden></p>
     <p class="aviso" id="avisoGuardar" hidden><b>Instala el lector para que el teléfono no borre tus libros.</b> Toca «Instalar» o, en el menú del navegador, «Agregar a la pantalla de inicio». <button class="btn" type="button" id="btnInstalar" hidden>Instalar</button> <button class="btn" type="button" id="btnEntendido">Entendido</button></p>
     <p class="aviso" id="avisoApp" hidden><b>Hay versión nueva del Lector Fénix<span id="avisoAppVer"></span>.</b> Al instalarla se mantienen tus libros, páginas y notas. <button class="btn prim" type="button" data-actualizar>Actualizar</button></p>
-    <div class="pestanas" role="tablist">
-      <button class="btn" type="button" role="tab" id="tabMios" aria-selected="true">Mis libros</button>
-      <button class="btn" type="button" role="tab" id="tabFenix" aria-selected="false">Catálogo Fénix</button>
-      <div class="derecha"><button class="btn" type="button" id="btnApp" hidden>Descargar app para Android</button></div>
-    </div>
-    <section id="secMios">
-      <div class="estante" id="estante"></div>
-      <p class="vacio" id="estanteVacio" hidden>Todavía no tienes libros aquí. Agrega uno del <a href="#" id="irCatalogo">catálogo Fénix</a> o un EPUB de tu teléfono o computador.<br>Quedan guardados en este dispositivo y se leen sin conexión.</p>
+    <section class="presentacion" aria-labelledby="tituloBiblioteca">
+      <div><span class="etq">Tu biblioteca personal</span><h1 id="tituloBiblioteca">Lector Fénix</h1>
+        <p>Lee tus EPUB y los libros de Fénix. Guárdalos aquí para seguir leyendo sin conexión.</p></div>
+      <button class="btn" type="button" id="btnExplorar">Explorar catálogo</button>
     </section>
-    <section id="secFenix" hidden>
-      <p><input class="buscar" id="buscarCat" type="search" placeholder="Buscar por título o autor" aria-label="Buscar en el catálogo Fénix"></p>
+    <div class="pestanas">
+      <div class="grupo-tabs" role="tablist" aria-label="Biblioteca">
+        <button class="btn" type="button" role="tab" id="tabMios" aria-selected="true" aria-controls="secMios">Mis libros</button>
+        <button class="btn" type="button" role="tab" id="tabFenix" aria-selected="false" aria-controls="secFenix" tabindex="-1">Catálogo Fénix</button>
+      </div>
+      <div class="acciones-biblio"><button class="btn" type="button" id="btnApp" hidden>Descargar app para Android</button></div>
+    </div>
+    <section id="secMios" role="tabpanel" aria-labelledby="tabMios">
+      <div class="estante" id="estante"></div>
+      <div class="vacio-estante" id="estanteVacio" hidden>
+        <h2>Tu primer libro te espera</h2>
+        <p>Elige un libro de Fénix o agrega un EPUB desde este dispositivo.</p>
+        <button class="btn" type="button" id="irCatalogo">Ver catálogo Fénix</button>
+      </div>
+    </section>
+    <section id="secFenix" role="tabpanel" aria-labelledby="tabFenix" hidden>
+      <div class="filtro-cat"><label for="buscarCat">Buscar en el catálogo Fénix</label>
+        <input class="buscar" id="buscarCat" type="search" placeholder="Buscar por título o autor">
+        <span class="cuenta-cat" id="catalogoCuenta" role="status"></span>
+      </div>
       <div class="catalogo" id="catalogo"></div>
       <p class="vacio" id="catalogoVacio" hidden></p>
     </section>
@@ -274,7 +325,8 @@ h2{break-after:avoid; page-break-after:avoid}
 
 <!-- Lectura -->
 <div id="vistaLectura" hidden>
-  <header class="barra">
+  <button class="btn ir-controles" type="button" id="btnComandos" aria-controls="barraLectura controlesPie" aria-expanded="false">Mostrar controles de lectura</button>
+  <header class="barra" id="barraLectura" inert>
     <button class="icono" id="btnVolver" type="button" title="Biblioteca" aria-label="Volver a la biblioteca"><svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg></button>
     <div class="titulo-barra" id="tituloLectura"></div>
     <button class="icono" id="btnBuscar" type="button" title="Buscar en el libro" aria-label="Buscar en el libro"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5.5 5.5"/></svg></button>
@@ -286,7 +338,7 @@ h2{break-after:avoid; page-break-after:avoid}
   <!-- Páginas como en un libro: #texto en columnas del ancho de #marco, y se corre de a una página. -->
   <div id="hoja"><div id="marco"><div id="texto" lang="es"></div></div></div>
   <div class="pie-lectura" id="pieLectura" aria-live="polite"></div>
-  <div class="controles-pie" id="controlesPie">
+  <div class="controles-pie" id="controlesPie" inert>
     <div class="cap-actual" id="capActual"></div>
     <input type="range" id="deslizador" min="1" max="1" value="1" aria-label="Posición en el libro" step="1">
     <div class="fila-ctrl">
@@ -306,11 +358,11 @@ h2{break-after:avoid; page-break-after:avoid}
 <div id="nota-flotante" hidden></div>
 <div id="toast" hidden role="status"></div>
 
-<dialog id="dlgIndice" class="panel"><div class="dlg-cab"><h2>Índice</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo indice" id="indice"></div></dialog>
-<dialog id="dlgBuscar" class="panel"><div class="dlg-cab"><h2>Buscar en el libro</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo"><form id="formBuscar"><input class="buscar" id="buscarTexto" type="search" placeholder="Palabra o frase" aria-label="Palabra o frase" enterkeyhint="search" autocomplete="off"></form><p class="etq" id="buscarEstado" aria-live="polite"></p><ol class="resultados" id="buscarLista"></ol></div></dialog>
-<dialog id="dlgNotas" class="panel"><div class="dlg-cab"><h2>Marcadores y notas</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="listaNotas"></div></dialog>
-<dialog id="dlgAjustes" class="panel"><div class="dlg-cab"><h2>Letra y colores</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="ajustes"></div></dialog>
-<dialog id="dlgEscribir">
+<dialog id="dlgIndice" class="panel" aria-labelledby="dlgIndiceTitulo"><div class="dlg-cab"><h2 id="dlgIndiceTitulo">Índice</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo indice" id="indice"></div></dialog>
+<dialog id="dlgBuscar" class="panel" aria-labelledby="dlgBuscarTitulo"><div class="dlg-cab"><h2 id="dlgBuscarTitulo">Buscar en el libro</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo"><form id="formBuscar"><input class="buscar" id="buscarTexto" type="search" placeholder="Palabra o frase" aria-label="Palabra o frase" enterkeyhint="search" autocomplete="off"></form><p class="etq" id="buscarEstado" aria-live="polite"></p><ol class="resultados" id="buscarLista"></ol></div></dialog>
+<dialog id="dlgNotas" class="panel" aria-labelledby="dlgNotasTitulo"><div class="dlg-cab"><h2 id="dlgNotasTitulo">Marcadores y notas</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="listaNotas"></div></dialog>
+<dialog id="dlgAjustes" class="panel" aria-labelledby="dlgAjustesTitulo"><div class="dlg-cab"><h2 id="dlgAjustesTitulo">Letra y colores</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="ajustes"></div></dialog>
+<dialog id="dlgEscribir" aria-labelledby="escribirTitulo">
   <form method="dialog" id="formEscribir">
     <div class="dlg-cab"><h2 id="escribirTitulo">Nota</h2></div>
     <div class="dlg-cuerpo">
@@ -321,15 +373,15 @@ h2{break-after:avoid; page-break-after:avoid}
     <div class="dlg-pie"><button class="btn" value="no" type="submit" formnovalidate>Cancelar</button><button class="btn prim" value="si" type="submit">Guardar</button></div>
   </form>
 </dialog>
-<dialog id="dlgConfirmar">
+<dialog id="dlgConfirmar" aria-labelledby="confTitulo">
   <form method="dialog">
     <div class="dlg-cab"><h2 id="confTitulo"></h2></div>
     <div class="dlg-cuerpo"><p id="confTexto" style="margin:0"></p></div>
     <div class="dlg-pie"><button class="btn" value="no" type="submit">Cancelar</button><button class="btn peligro" value="si" type="submit" id="confSi">Eliminar</button></div>
   </form>
 </dialog>
-<dialog id="dlgApp">
-  <div class="dlg-cab"><h2>App para Android</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div>
+<dialog id="dlgApp" aria-labelledby="dlgAppTitulo">
+  <div class="dlg-cab"><h2 id="dlgAppTitulo">App para Android</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div>
   <div class="dlg-cuerpo">
     <p style="margin-top:0">Es este mismo lector, instalado como app: abre los EPUB que te mandan por WhatsApp, pasa de página con los botones de volumen y guarda los libros donde el teléfono no los borra. Es gratis y no está en Play Store, por eso se instala así:</p>
     <ol class="pasos">
@@ -342,7 +394,7 @@ h2{break-after:avoid; page-break-after:avoid}
   </div>
   <div class="dlg-pie"><button class="btn" type="button" data-cerrar>Cerrar</button><a class="btn prim apk" href="#" download>Descargar</a></div>
 </dialog>
-<dialog id="dlgLibro">
+<dialog id="dlgLibro" aria-labelledby="libroTitulo">
   <div class="dlg-cab"><h2 id="libroTitulo"></h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div>
   <div class="dlg-cuerpo" id="libroInfo"></div>
   <div class="dlg-pie" id="libroAcciones"></div>

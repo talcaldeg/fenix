@@ -650,7 +650,7 @@ def revisar_lector(nav, base, raiz):
         ctx.set_offline(True)
         pg.goto(base + "lector/")
         pg.wait_for_selector("#estante .tarjeta", timeout=15000)
-        pg.click("#estante .tarjeta")
+        pg.click("#estante .tarjeta .abrir-tarjeta")
         pg.wait_for_selector("#vistaLectura:not([hidden]) #texto .lx-cap", timeout=15000)
         if len(pg.inner_text("#texto")) < 50:
             fallas.append("lector sin conexión: el libro abre vacío")
@@ -660,6 +660,12 @@ def revisar_lector(nav, base, raiz):
     ctx.close()
     for w, h in [(390, 844), (360, 740)]:
         fallas += revisar_paginas(nav, base, libro, w, h)
+    from revisar_lector_regresiones import verificar
+    for w, h in [(360, 740), (768, 1024), (1366, 768)]:
+        try:
+            verificar(nav, base, w, h)
+        except Exception as e:
+            fallas.append(f"{w}x{h} lector: regresión ({str(e).splitlines()[0] if str(e) else type(e).__name__})")
     return fallas
 
 
