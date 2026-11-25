@@ -38,6 +38,11 @@ VISTAS = ["inicio", "biblioteca", "todos", "editorial", "oraciones", "citas", "s
 LIBRO = "libro/one-with-jesus/"
 DONA = "dona/"  # página aparte (gen_estaticos.js), para que al compartirla salga su propia imagen
 CATEGORIA = "categoria/lectura/"  # sección (gen_estaticos.js): enlaces internos a cada ficha
+LECTURAS = {
+    "libro/becquer-rimas/": (76, "Volverán las oscuras golondrinas"),
+    "libro/platon-criton/": (2, "Sócrates, nada tengo que decir."),
+}
+ESTATICAS = (LIBRO, DONA, CATEGORIA, *LECTURAS)
 ALTO_BARRA = 80  # px: más que esto es que el menú se partió en dos líneas
 
 
@@ -121,8 +126,8 @@ def revisar(raiz, capturas=None):
             pg = nav.new_page(viewport={"width": w, "height": h})
             errores = []
             pg.on("pageerror", lambda e: errores.append(str(e)))
-            for vista in VISTAS + [LIBRO, DONA, CATEGORIA]:
-                url = base + vista if vista in (LIBRO, DONA, CATEGORIA) else f"{base}#{vista}"
+            for vista in VISTAS + list(ESTATICAS):
+                url = base + vista if vista in ESTATICAS else f"{base}#{vista}"
                 errores.clear()
                 pg.goto(url)
                 pg.wait_for_load_state("networkidle")
@@ -189,6 +194,16 @@ def revisar(raiz, capturas=None):
                         mas: document.querySelectorAll('ul.mas-cat a[href*="libro/"]').length})""")
                     if not r["cat"] or r["mas"] < 3:
                         fallas.append(f"{donde}: la ficha no enlaza su sección o trae menos de 3 libros en «Más en» ({r})")
+                if vista in LECTURAS:
+                    secciones, cita = LECTURAS[vista]
+                    texto = pg.locator("#texto-completo")
+                    enlace = pg.locator('a[href="#texto-completo"]')
+                    if texto.count() != 1 or not texto.is_visible() or enlace.count() != 1 or not enlace.is_visible():
+                        fallas.append(f"{donde}: falta el texto completo o su enlace visible")
+                    elif texto.locator("h3").count() != secciones or cita not in texto.inner_text():
+                        fallas.append(f"{donde}: texto completo truncado")
+                    if pg.locator('meta[name="robots"][content*="noindex"]').count():
+                        fallas.append(f"{donde}: texto completo excluido del índice")
                 if vista == CATEGORIA:
                     n = pg.evaluate("document.querySelectorAll('main ul.lista a.tt[href*=\"libro/\"]').length")
                     if n < 3:
@@ -795,7 +810,7 @@ def main():
     if fallas:
         print("Diseño roto:\n  " + "\n  ".join(fallas))
         sys.exit(1)
-    print(f"Diseño OK ({len(VENTANAS)} ventanas, {len(VISTAS) + 2} páginas).")
+    print(f"Diseño OK ({len(VENTANAS)} ventanas, {len(VISTAS) + len(ESTATICAS)} páginas).")
 
 
 if __name__ == "__main__":
