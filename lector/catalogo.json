@@ -212,6 +212,16 @@
    "portada": "img/portadas/austen-emma-es.jpg"
   },
   {
+   "id": "austen-mansfield-park",
+   "idioma": "es",
+   "titulo": "Mansfield Park",
+   "autor": "Jane Austen",
+   "epub": "libros/austen-mansfield-park-es.epub",
+   "bytes": 817413,
+   "sha": "cf1cef8eb83d2f1b4f4143caa186fde5923578457a889e29c1021e4729e5e6a8",
+   "portada": "img/portadas/austen-mansfield-park-es.jpg"
+  },
+  {
    "id": "austen-persuasion",
    "idioma": "es",
    "titulo": "Persuasión",
@@ -400,6 +410,16 @@
    "bytes": 438253,
    "sha": "fea698ed5b1ccd0fd8cc9649512b3a9c8a317e59d18d7d271ec2087bc03d8ace",
    "portada": "img/portadas/ligorio-visitas-al-santisimo-sacramento-y-a-maria-santisima.jpg"
+  },
+  {
+   "id": "doyle-las-aventuras-de-sherlock-holmes",
+   "idioma": "es",
+   "titulo": "Las aventuras de Sherlock Holmes",
+   "autor": "Arthur Conan Doyle (trad. anónima, 1909, y Proyecto Fénix)",
+   "epub": "libros/doyle-las-aventuras-de-sherlock-holmes.epub",
+   "bytes": 753859,
+   "sha": "936fd4a61dc67bba5c1a27bfe3b6156c202b3cdf7c6797c355353577f4296c4c",
+   "portada": "img/portadas/doyle-las-aventuras-de-sherlock-holmes.jpg"
   },
   {
    "id": "imitacion-de-cristo",

@@ -4324,7 +4324,10 @@ window.FENIX = {
       archivos: {"epub": "libros/austen-mansfield-park.epub", "pdf": "libros/austen-mansfield-park.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 141 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/141"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"},
-      parecidos: ["austen-emma", "austen-persuasion", "austen-northanger-abbey"]
+      parecidos: ["austen-emma", "austen-persuasion", "austen-northanger-abbey"],
+      versiones: {
+        es: {"titulo": "Mansfield Park", "autor": "Jane Austen", "anio": "1814", "resumen": {"es": "A los diez años, Fanny Price, hija de una familia pobre y numerosa de Portsmouth, es llevada a vivir con sus tíos ricos, Sir Thomas y Lady Bertram, en Mansfield Park. Crece tímida y relegada, a la sombra de sus primas y bajo el mando de la mezquina tía Norris, con el solo apoyo de su primo Edmund. Cuando Sir Thomas parte a Antigua y llegan al pueblo los hermanos Crawford, brillantes y encantadores, la casa entera se deja llevar por coqueteos y por un atrevido proyecto de teatro de aficionados. Fanny, callada y firme, ve más claro que todos, y su fidelidad a lo que cree justo, puesta a prueba por una propuesta que todos le piden aceptar, acaba por prevalecer.", "en": "At ten years old, Fanny Price, daughter of a poor, large family in Portsmouth, is taken to live with her rich uncle and aunt, Sir Thomas and Lady Bertram, at Mansfield Park. She grows up shy and overlooked, in the shadow of her cousins and under the orders of her mean aunt Norris, with only her cousin Edmund to support her. When Sir Thomas sails for Antigua and the brilliant, charming Crawford siblings arrive in the village, the whole house is carried away by flirtations and a daring scheme of private theatricals. Fanny, quiet and steady, sees more clearly than anyone, and her faithfulness to what she believes right, tested by a proposal everyone urges her to accept, wins out in the end."}, "porque": {"es": "Para quien se ha sentido solo por no seguir la corriente. Fanny enseña que la conciencia recta y la paciencia valen más que el ingenio y el encanto, y Austen muestra sin sermones cuánto pesan la educación de los hijos y las costumbres de una casa. Es la más seria y moral de sus novelas, y conviene leerla sin prisa.", "en": "For anyone who has felt alone for not going with the crowd. Fanny shows that an upright conscience and patience are worth more than wit and charm, and Austen shows, without preaching, how much the upbringing of children and the habits of a household weigh. It is the most serious and moral of her novels, best read without hurry."}, "citas": ["Que otras plumas se detengan en la culpa y la desdicha.", "Si alguna facultad de nuestra naturaleza puede llamarse más maravillosa que las demás, creo de verdad que es la memoria.", "Todos tenemos en nosotros mismos una guía mejor, si quisiéramos atenderla, que la que puede ser cualquier otra persona.", "No puedo tener buena opinión de un hombre que juega con los sentimientos de una mujer, sea quien sea; y a menudo puede sufrirse mucho más de lo que un espectador es capaz de juzgar", "El egoísmo siempre ha de perdonarse, ya sabe, porque no hay esperanza de curarlo"], "fuente": {"texto": "Traducción de Proyecto Fénix desde el inglés de Mansfield Park (1814), según el texto de Project Gutenberg, libro n.º 141; licencia CC BY-NC-SA 4.0", "url": "https://www.gutenberg.org/ebooks/141"}, "imagen": {"src": "img/portadas/austen-mansfield-park-es.jpg", "credito": {"es": "Henry Raeburn, «La señorita Eleanor Urquhart», h. 1793", "en": "Henry Raeburn, «Miss Eleanor Urquhart», c. 1793"}, "url": "https://commons.wikimedia.org/wiki/File:Sir_Henry_Raeburn,_Miss_Eleanor_Urquhart,_c._1793,_NGA_108.jpg"}, "archivos": {"epub": "libros/austen-mansfield-park-es.epub", "pdf": "libros/austen-mansfield-park-es.pdf"}, "editorial": {"es": "Traducción nueva de Proyecto Fénix, completa, hecha directamente del inglés de la edición de Project Gutenberg, con los diálogos entre comillas. Edición al cuidado de Benjamín Ormazábal.", "en": "New Proyecto Fénix translation, complete, made directly from the English text of the Project Gutenberg edition, with dialogue set in quotation marks. Edited by Benjamín Ormazábal."}}
+      }
     },
     {
       id: "austen-northanger-abbey",
@@ -5489,6 +5492,30 @@ window.FENIX = {
       fuente: {"texto": "Project Gutenberg, libro n.º 21282: selección de 27 tradiciones; el texto no declara la edición impresa que sigue (dominio público)", "url": "https://www.gutenberg.org/ebooks/21282"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/tradiciones-peruanas"},
       parecidos: ["irving-cuentos-de-la-alhambra", "cervantes-novelas-ejemplares", "acosta-historia-natural-y-moral-de-las-indias"]
+    },
+    {
+      id: "doyle-las-aventuras-de-sherlock-holmes",
+      titulo: "Las aventuras de Sherlock Holmes",
+      autor: "Arthur Conan Doyle (trad. anónima, 1909, y Proyecto Fénix)",
+      anio: "1892",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Doce casos de Sherlock Holmes contados por su amigo, el doctor Watson, desde el departamento de la calle Baker. Un rey de Bohemia que teme un escándalo, un prestamista pelirrojo contratado para copiar una enciclopedia, una joven aterrada por un silbido nocturno, un ganso de Navidad que esconde una piedra preciosa: cada visita trae un enigma que Holmes resuelve observando lo que los demás solo ven. Son los cuentos que hicieron famoso al detective, publicados en The Strand Magazine entre 1891 y 1892.", "en": "Twelve Sherlock Holmes cases told by his friend Dr. Watson from their rooms in Baker Street. A king of Bohemia who fears a scandal, a red-headed pawnbroker hired to copy out an encyclopedia, a young woman terrified by a whistle in the night, a Christmas goose that hides a precious stone: each visitor brings a puzzle that Holmes solves by observing what others merely see. These are the stories that made the detective famous, first published in The Strand Magazine in 1891 and 1892."},
+      porque: {"es": "Cuentos breves que se leen de una sentada y enseñan a mirar con atención, a no conformarse con lo obvio y a razonar paso a paso. Holmes defiende al débil y a veces prefiere la clemencia al castigo. Buena puerta de entrada al relato policial para jóvenes y adultos.", "en": "Short stories that can each be read in one sitting and that teach you to look carefully, distrust the obvious and reason step by step. Holmes stands up for the weak and sometimes prefers mercy to punishment. A good way into detective fiction for young readers and adults alike."},
+      imagen: {"src": "img/portadas/doyle-las-aventuras-de-sherlock-holmes.jpg", "credito": {"es": "Sidney Paget, «Adiós, y tenga valor», ilustración de «La banda de lunares», 1892", "en": "Sidney Paget, «Good-bye, and be brave», illustration for «The Speckled Band», 1892"}, "url": "https://commons.wikimedia.org/wiki/File:Sidney_Paget_-_The_Adventure_of_the_Speckled_Band_01.jpg"},
+      citas: [
+        "Usted ve y no observa: la diferencia está clara.",
+        "La vida es infinitamente más extraña de cuanto podía hacerla la inventiva humana.",
+        "Nada hay más engañoso que un hecho obvio",
+        "Supongo que con esto encubro un delito, pero es muy posible también que salve un alma.",
+        "No puedo hacer ladrillos sin arcilla"
+      ],
+      archivos: {"epub": "libros/doyle-las-aventuras-de-sherlock-holmes.epub", "pdf": "libros/doyle-las-aventuras-de-sherlock-holmes.pdf"},
+      fuente: {"texto": "Traducción anónima, Aventuras de Sherlock Holmes, tomo I, Buenos Aires, Biblioteca de La Nación, 1909, en es.wikisource.org (dominio público), y texto inglés de The Adventures of Sherlock Holmes, Londres, 1892 (dominio público)", "url": "https://es.wikisource.org/wiki/Aventuras_de_Sherlock_Holmes_(Tomo_I)"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/aventuras-de-sherlock-holmes"},
+      editorial: {"es": "Edición digital de Proyecto Fénix: seis cuentos en la traducción anónima de 1909, cotejada con el original y corregida, y seis traducidos del inglés por Proyecto Fénix. Edición al cuidado de Benjamín Ormazábal.", "en": "Proyecto Fénix digital edition: six stories in the anonymous 1909 translation, checked against the original and corrected, and six translated from English by Proyecto Fénix. Edited by Benjamín Ormazábal."},
+      parecidos: ["doyle-el-sabueso-de-los-baskerville", "poe-la-carta-robada", "chesterton-the-innocence-of-father-brown"]
     }
   ],
 
@@ -5512,7 +5539,6 @@ window.FENIX = {
     { titulo: {"es": "Los diamantes Eustace", "en": "The Eustace Diamonds"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/les-diamants-eustace"} },
     { titulo: {"es": "¿Puedes perdonarla?", "en": "Can You Forgive Her?"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/peut-lui-pardonner"} },
     { titulo: {"es": "Sabía que tenía razón", "en": "He Knew He Was Right"}, autor: "Anthony Trollope", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/he-knew-he-was-right"} },
-    { titulo: {"es": "Mansfield Park"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/mansfield-park"} },
     { titulo: {"es": "La abadía de Northanger"}, autor: "Jane Austen", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-abadia-de-northanger"} },
     { titulo: {"es": "Ortodoxia", "en": "Orthodoxy"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/ortodoxia"} },
     { titulo: {"es": "Herejes"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/herejes"} },
@@ -5550,7 +5576,6 @@ window.FENIX = {
     { titulo: {"es": "Boy"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/boy"} },
     { titulo: {"es": "Estudio en escarlata"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/estudio-en-escarlata"} },
     { titulo: {"es": "El signo de los cuatro"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-signo-de-los-cuatro"} },
-    { titulo: {"es": "Las aventuras de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/aventuras-de-sherlock-holmes"} },
     { titulo: {"es": "Las memorias de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/las-memorias-de-sherlock-holmes"} },
     { titulo: {"es": "El regreso de Sherlock Holmes"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-regreso-de-sherlock-holmes"} },
     { titulo: {"es": "El valle del terror"}, autor: "Arthur Conan Doyle", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-valle-del-terror"} },
