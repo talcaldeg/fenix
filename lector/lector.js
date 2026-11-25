@@ -234,6 +234,7 @@
             const j = await r.json();
             if (!Array.isArray(j.libros)) continue;
             catalogo = j;
+            if (APP && url === CATALOGO) hito(`catálogo de la red: ${j.libros.length}`);
             await conf.poner("catalogo", j);
             return j;
           } catch {}
