@@ -579,12 +579,22 @@ PORTADA_Y_NOTAS = """async () => {
     if (document.querySelector('#capSiguiente').disabled) return fallas;
     document.querySelector('#capSiguiente').click(); await espera(700);
   }
+  // Las notas de más allá de las primeras páginas se ponen por detrás: se espera a que estén todas.
+  for (let k = 0; k < 100 && lectorEstado().piesPendientes; k++) await espera(100);
+  if (lectorEstado().piesPendientes) fallas.push('las notas al pie no terminan de ponerse en 10 s');
+  // La página va solo en los controles del centro, no al pie de la lectura (él, 25-nov-2026).
+  if (document.querySelector('#pieLectura')) fallas.push('volvió el pie «N de M · quedan» a la lectura');
   const tx = document.querySelector('#texto'), cajas = [...tx.querySelectorAll('.lx-pie')];
   if (!cajas.length) return fallas;
   const paso = parseFloat(getComputedStyle(tx).columnGap) + parseFloat(getComputedStyle(tx).width) / (parseInt(getComputedStyle(tx).columnCount) || 1);
   const col = el => Math.floor((el.getBoundingClientRect().left - tx.getBoundingClientRect().left + 2) / paso);
   for (const c of cajas) {
     if (Math.abs(c.getBoundingClientRect().bottom - tx.getBoundingClientRect().bottom) > 3) { fallas.push('una caja de notas no llega al pie de la página'); break; }
+    // Nada de texto bajo la caja en su página, ni palabra partida sin guion al cortar (él, 25-nov-2026).
+    const s = c.nextElementSibling, rs = s && [...s.getClientRects()].find(x => x.height > 1);
+    if (rs && Math.floor((rs.left - tx.getBoundingClientRect().left + 2) / paso) === col(c) && rs.top > c.getBoundingClientRect().top) fallas.push(`hay texto bajo la caja de notas (columna ${col(c)})`);
+    if (c.previousElementSibling && c.previousElementSibling.classList.contains('lx-corta') && s && s.classList.contains('lx-sigue') && /\\p{L}$/u.test(c.previousElementSibling.textContent) && /^\\p{L}/u.test(s.textContent))
+      fallas.push(`palabra partida sin guion al pie (columna ${col(c)})`);
     for (const n of c.querySelectorAll('.lx-pie-nota')) {
       const num = n.querySelector('.lx-pie-num').textContent;
       // Puede haber otro enlace con el mismo número (índice, otra numeración): basta una llamada en esa página.
@@ -792,6 +802,13 @@ def revisar_paginas(nav, base, libro, w, h):
         if not n:
             fallas.append(f"{rot}: el buscador no encuentra «dios» en el libro")
         else:
+            # Lo hallado dentro de una palabra no se separa del resto («debilidad es», él, 25-nov-2026).
+            pg.fill("#buscarTexto", "dio")
+            pg.wait_for_timeout(1500)
+            if pg.evaluate("[...document.querySelectorAll('#buscarLista button')].some(b => /dio s\\b/i.test(b.textContent))"):
+                fallas.append(f"{rot}: el buscador parte la palabra hallada («dio s»)")
+            pg.fill("#buscarTexto", "dios")
+            pg.wait_for_timeout(1500)
             pg.evaluate("document.querySelector('#buscarLista button').click()")
             pg.wait_for_timeout(900)
             if not pg.evaluate("!!document.querySelector('#texto mark.lx-busca')"):

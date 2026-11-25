@@ -736,8 +736,10 @@
     const cambio = L.cambioCapitulo = (L.cambioCapitulo || 0) + 1;
     i = Math.max(0, Math.min(L.ep.spine.length - 1, i));
     cerrarSeleccion(); cerrarFlotante();
-    let prep;
-    try { prep = prepararCapitulo(i); }
+    // El capítulo siguiente queda preparado de antemano (abajo): el cambio de capítulo no espera desarmarlo.
+    let prep = L.previo && L.previo.i === i ? L.previo.prep : null;
+    L.previo = null;
+    try { prep = prep || prepararCapitulo(i); }
     catch (e) { console.warn(e); prep = { div: Object.assign(document.createElement("p"), { textContent: "Este capítulo no se pudo mostrar." }), css: "" }; }
     L.i = i;
     const texto = $("#texto");
@@ -769,10 +771,15 @@
     $("#capAnterior").disabled = i === 0;
     $("#capSiguiente").disabled = i === L.ep.spine.length - 1;
     $("#capActual").textContent = tituloCapitulo();
-    await maquetar();
+    await maquetar(typeof pagina === "number" ? pagina + 2 : pagina === "fin" ? Infinity : 2);
     if (lectura !== L || L.cambioCapitulo !== cambio) return false;
     irPagina(pagina === "fin" ? L.paginas - 1 : (pagina || 0), false);
     marcarIndice();
+    // Con el capítulo ya a la vista, se prepara el siguiente (él, 25-nov-2026: «se queda pegado al cambiar de capítulo»).
+    setTimeout(() => {
+      if (lectura !== L || L.cambioCapitulo !== cambio || L.previo || i + 1 >= L.ep.spine.length) return;
+      try { L.previo = { i: i + 1, prep: prepararCapitulo(i + 1) }; } catch {}
+    }, 400);
     return true;
   }
   $("#capAnterior").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i - 1, 0); guardarPosicion(); };
@@ -815,9 +822,13 @@
   // ---------- páginas ----------
   // Mide la hoja y arma las columnas: una página por pantalla, o dos (libro abierto) en pantalla ancha y
   // apaisada. Corre al abrir un capítulo, al girar el teléfono, al cambiar la letra y al cargar una imagen.
-  async function maquetar(){
+  async function maquetar(hasta = Infinity){
     const L = lectura; if (!L) return;
     const cambio = L.cambioCapitulo;
+    L.pies = null;
+    // Se fuerza el armado antes de esperar las letras: sin eso la cursiva de un capítulo nuevo aún no se pedía,
+    // fonts.ready salía al tiro, se medía con otra letra y las notas quedaban corridas (él, 25-nov-2026).
+    void $("#texto").offsetHeight;
     try { await Promise.race([document.fonts.ready, espera(800)]); } catch {}
     if (lectura !== L || L.cambioCapitulo !== cambio) return;
     const v = $("#vistaLectura"), hoja = $("#hoja"), marco = $("#marco"), texto = $("#texto");
@@ -834,14 +845,43 @@
     texto.style.columnGap = gap + "px";
     v.style.setProperty("--alto-pag", Math.floor(hoja.clientHeight * 0.96) + "px");
     L.paso = ancho + gap;
-    L.paginas = 1e6; // paginaDeRect no recorta mientras se ponen las notas
-    try { ponerPies(texto.clientHeight, col + gap); } catch (e) { console.warn("Notas al pie:", e); quitarPies(); }
-    const f = $("#texto .lx-fin");
-    L.paginas = f ? Math.max(1, Math.floor((f.getBoundingClientRect().left - texto.getBoundingClientRect().left + 2) / L.paso) + 1) : 1;
+    try { const p = ponerPies(texto.clientHeight, col + gap); L.pies = p ? { seguir: p, cols: dos ? 2 : 1 } : null; }
+    catch (e) { console.warn("Notas al pie:", e); quitarPies(); }
+    // Las notas de las primeras páginas van ya; las demás, de a poco por detrás (él, 25-nov-2026: «se queda pegado
+    // al cambiar de capítulo»; en Marmion ponerlas todas de una tomaba hasta 4 s).
+    asegurarPies(hasta);
+    piesDeFondo();
+  }
+  function contarPaginas(){
+    const L = lectura, f = $("#texto .lx-fin");
+    L.paginas = f ? Math.max(1, Math.floor((f.getBoundingClientRect().left - $("#texto").getBoundingClientRect().left + 2) / L.paso) + 1) : 1;
     L.cachePag = new Map();
+  }
+  // Pone las notas al pie que faltan hasta la página p (sin p, todas). Devuelve si ya están todas.
+  function asegurarPies(p = Infinity, plazo = Infinity){
+    const L = lectura; if (!L) return true;
+    if (L.pies) {
+      L.paginas = 1e6; // paginaDeRect no recorta mientras se ponen las notas
+      let listo;
+      try { listo = L.pies.seguir(p === Infinity ? Infinity : (p + 1) * L.pies.cols - 1, plazo); }
+      catch (e) { console.warn("Notas al pie:", e); listo = true; }
+      if (listo) L.pies = null;
+    }
+    contarPaginas();
+    return !L.pies;
+  }
+  function piesDeFondo(){
+    const L = lectura, p = L && L.pies; if (!p) return;
+    setTimeout(() => {
+      if (lectura !== L || L.pies !== p) return;
+      asegurarPies(Infinity, 25);
+      actualizarProgreso();
+      piesDeFondo();
+    }, 40);
   }
   function irPagina(p, animar = true, ancla = null){
     const L = lectura; if (!L) return;
+    if (L.pies) asegurarPies((Math.round(p) || 0) + 2);
     L.pag = Math.max(0, Math.min(L.paginas - 1, Math.round(p) || 0));
     const t = $("#texto");
     t.classList.toggle("sin-animar", !animar);
@@ -899,6 +939,7 @@
     const { i, frac } = puntoDelLibro(+e.target.value / 1000);
     if (i !== L.i && !await mostrarCapitulo(i, 0)) return;
     if (lectura !== L) return;
+    asegurarPies();
     irPagina(Math.floor(frac * L.paginas), false);
     $("#capActual").textContent = tituloCapitulo();
     guardarPosicion();
@@ -1052,6 +1093,7 @@
   // Página de una posición guardada: primero su texto (también el de las posiciones de antes de las
   // páginas, que guardaban el comienzo de un párrafo), después el número de párrafo y al final la fracción.
   function paginaDePos(pos){
+    asegurarPies(); // una posición lejana se mide con todas las notas ya puestas
     const L = lectura, cap = $("#texto .lx-cap");
     if (cap && pos.cita) {
       // Se mide el primer carácter que se ve desde el comienzo de la cita, no el rectángulo del rango: ese
@@ -1111,8 +1153,8 @@
   function actualizarProgreso(){
     const L = lectura; if (!L) return;
     const a = avanceTotal(), quedan = L.paginas - L.pag - 1;
-    $("#pieLectura").textContent = `${L.pag + 1} de ${L.paginas}` + (quedan ? ` · quedan ${quedan}` : " · fin del capítulo");
-    $("#paginaTxt").textContent = `Pág. ${L.pag + 1} de ${L.paginas} · ${Math.round(a * 100)} % del libro`;
+    // La página va solo en los controles del centro, no al pie de la lectura (él, 25-nov-2026).
+    $("#paginaTxt").textContent = `Pág. ${L.pag + 1} de ${L.paginas}` + (quedan ? ` · quedan ${quedan}` : " · fin del capítulo") + ` · ${Math.round(a * 100)} % del libro`;
     const tams = L.ep.spine.map(s => s.tam || 1), total = tams.reduce((x, y) => x + y, 0) || 1;
     const inicio = (tams.slice(0, L.i).reduce((x, y) => x + y, 0) + tams[L.i] * (L.pag || 0) / (L.paginas || 1)) / total;
     const d = $("#deslizador"); d.min = 0; d.max = 1000; d.value = Math.round(inicio * 1000); d.disabled = false;
@@ -1124,6 +1166,8 @@
   });
   addEventListener("pagehide", () => guardarPosicion(true));
   addEventListener("resize", () => { if (lectura) { aplicarAjustes(); reajustar(); } });
+  // Una letra que llega después de paginar cambia el largo de las líneas: se vuelve a paginar.
+  try { document.fonts.addEventListener("loadingdone", () => { if (lectura) reajustar(); }); } catch {}
 
   // ---------- índice ----------
   function pintarIndice(){
@@ -1219,6 +1263,7 @@
   // vecino que solo parezca serlo).
   function deshacerPie(caja){
     const corta = caja.lxCorta, sigue = caja.lxSigue;
+    if (caja.lxGuion) caja.lxGuion.remove();
     if (corta && sigue) { corta.append(...sigue.childNodes); corta.classList.remove("lx-corta", "lx-justo"); sigue.remove(); }
     caja.remove();
   }
@@ -1235,7 +1280,7 @@
       if (aca ? !(a.compareDocumentPosition(d) & Node.DOCUMENT_POSITION_FOLLOWING) : L.ep.spine.findIndex(s => s.href === a.dataset.ir.split("#")[0]) < L.i) continue;
       vistos.add(d); pend.push({ a, d, aca });
     }
-    if (!pend.length) return;
+    if (!pend.length) return null;
     // Las notas de este capítulo se ocultan antes de medir: van después de sus llamadas y no mueven nada.
     pend.forEach(x => { if (x.aca) x.d.classList.add("lx-oculta"); });
     $$("aside, section, div", cap).filter(s => s.querySelector(".lx-oculta") && ![...s.children].some(h => !h.classList.contains("lx-oculta") && norm(h.textContent) && !/^h\d$/.test(h.localName))).forEach(s => s.classList.add("lx-oculta"));
@@ -1260,12 +1305,19 @@
       return caja;
     };
     const medir = caja => { fin.before(caja); const h = caja.getBoundingClientRect().height; caja.remove(); return h; };
-    for (let vuelta = 0; pend.length && vuelta < 500; vuelta++) {
+    // Se devuelve seguir(hastaCol, plazo): pone las notas de columna en columna hasta hastaCol o hasta gastar el
+    // plazo en ms; true cuando ya no queda ninguna. Cada caja solo mueve lo que viene después de ella.
+    let vuelta = 0;
+    return (hastaCol = Infinity, plazo = Infinity) => {
+    const t0 = performance.now();
+    for (; pend.length && vuelta < 500; vuelta++) {
+      if (performance.now() - t0 > plazo) return false;
       let plano = textoPlano(cap);
       const off = x => offsetEn(plano, x.a, 0);
       const cols = pend.map(x => { const rc = [...x.a.getClientRects()].find(r => r.width || r.height); return rc ? col(rc) : Infinity; });
       const c = Math.min(...cols);
       if (c === Infinity) break;
+      if (c > hastaCol) return false;
       let grupo = pend.filter((x, j) => cols[j] === c);
       let caja = armar(grupo), h = medir(caja);
       // Una nota más larga que media página no cabe al pie: queda solo flotando y al final del capítulo.
@@ -1291,6 +1343,10 @@
           let blk = nodo.parentElement;
           while (blk && blk !== cap && !/^(block|list-item|flow-root)$/.test(getComputedStyle(blk).display)) blk = blk.parentElement;
           if (!blk || blk === cap) { nodo.splitText(o).before(caja); }
+          // Corte en el blanco entre dos párrafos: la caja va ahí, sin partir el contenedor (partir un section
+          // le pasaba sus clases a todo el capítulo y corría las páginas ya armadas: nota lejos de su llamada,
+          // línea en blanco a media página; él, 25-nov-2026).
+          else if (!norm(nodo.data.slice(o))) nodo.after(caja);
           else {
             const rg = document.createRange(); rg.setStart(blk, 0); rg.setEnd(nodo, o);
             if (!norm(rg.toString())) blk.before(caja);
@@ -1299,6 +1355,12 @@
               const sigue = blk.cloneNode(false); sigue.removeAttribute("id"); sigue.classList.add("lx-sigue");
               sigue.append(resto.extractContents());
               if (getComputedStyle(blk).textAlign === "justify") blk.classList.add("lx-justo");
+              // Corte dentro de una palabra (la línea terminaba en guion de partición): el guion lo ponía el
+              // navegador al cortar la línea y se pierde al partir el párrafo; se agrega a mano («mod-», él, 25-nov-2026).
+              if (/\p{L}/u.test(plano.texto[k - 1] || "") && /\p{L}/u.test(plano.texto[k] || "")) {
+                const g = document.createElement("span"); g.className = "lx-guion"; g.setAttribute("aria-hidden", "true"); g.textContent = "-";
+                blk.append(g); caja.lxGuion = g;
+              }
               blk.classList.add("lx-corta"); blk.after(caja, sigue);
               caja.lxCorta = blk; caja.lxSigue = sigue;
             }
@@ -1313,15 +1375,16 @@
       }
       // La caja llena hasta el final de la columna: las notas quedan abajo, como en el papel.
       const arriba = caja.getBoundingClientRect().top - tl().top;
-      caja.style.height = Math.max(h, alto - arriba - 1) + "px";
-      grupo.forEach(x => pend.splice(pend.indexOf(x), 1));
+      caja.style.height = Math.max(h, alto - arriba - 1) + "px";      grupo.forEach(x => pend.splice(pend.indexOf(x), 1));
     }
-    pend.forEach(x => mostrar(x.d));
+    pend.forEach(x => mostrar(x.d)); pend.length = 0;
+    return true;
+    };
   }
 
   // ---------- anclas de texto (subrayados, notas, correcciones) ----------
   function textoPlano(raiz){
-    const w = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, { acceptNode: n => n.parentElement && n.parentElement.closest("style, .lx-idiomas, .lx-pie") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
+    const w = document.createTreeWalker(raiz, NodeFilter.SHOW_TEXT, { acceptNode: n => n.parentElement && n.parentElement.closest("style, .lx-idiomas, .lx-pie, .lx-guion") ? NodeFilter.FILTER_REJECT : NodeFilter.FILTER_ACCEPT });
     const nodos = []; let total = 0;
     while (w.nextNode()) { nodos.push({ n: w.currentNode, ini: total }); total += w.currentNode.data.length; }
     return { nodos, texto: nodos.map(x => x.n.data).join("") };
@@ -1565,8 +1628,10 @@
       let desde = 0, k = 0, pos;
       while ((pos = p.t.indexOf(aguja, desde)) >= 0 && total < MAX) {
         const a = p.mapa[pos], b = p.mapa[pos + aguja.length - 1] + 1;
-        const antes = norm(txt.slice(Math.max(0, a - 60), a)), despues = norm(txt.slice(b, b + 80));
-        resultados += `<li><button type="button" data-i="${i}" data-k="${k}"><span class="etq">${esc(tituloDe(i))}</span>…${esc(antes)} <b>${esc(norm(txt.slice(a, b)))}</b> ${esc(despues)}…</button></li>`;
+        // Sin espacios agregados junto a lo hallado: «debilidades» se mostraba «debilidad es» (él, 25-nov-2026).
+        const ws = s => s.replace(/\s+/g, " ");
+        const antes = ws(txt.slice(Math.max(0, a - 60), a)).trimStart(), despues = ws(txt.slice(b, b + 80)).trimEnd();
+        resultados += `<li><button type="button" data-i="${i}" data-k="${k}"><span class="etq">${esc(tituloDe(i))}</span>…${esc(antes)}<b>${esc(ws(txt.slice(a, b)))}</b>${esc(despues)}…</button></li>`;
         total++; k++; desde = pos + aguja.length;
       }
     }
@@ -1579,6 +1644,7 @@
   // Marca todas las partes de una coincidencia aunque una cursiva o un enlace separe los nodos.
   function marcarBusqueda(aguja, k){
     const cap = $("#texto .lx-cap"); if (!cap) return false;
+    asegurarPies(); // la página de lo hallado se mide con todas las notas ya puestas
     const { texto, nodos } = fuenteDeBusqueda(cap), p = consultaPlana(texto);
     let pos = -1, desde = 0;
     for (let n = 0; n <= k; n++) { pos = p.t.indexOf(aguja, desde); if (pos < 0) break; desde = pos + aguja.length; }
@@ -1883,7 +1949,7 @@
   $("#btnNube").onclick = () => Nube.boton();
 
   // Para las pruebas de herramientas/revisar_diseno.py: dónde va la lectura, sin tocar nada.
-  window.lectorEstado = () => lectura && { i: lectura.i, pag: lectura.pag, paginas: lectura.paginas, ancla: lectura.ancla };
+  window.lectorEstado = () => lectura && { i: lectura.i, pag: lectura.pag, paginas: lectura.paginas, ancla: lectura.ancla, piesPendientes: !!lectura.pies };
 
   // ---------- instalar ----------
   let pedirInstalar = null;
