@@ -212,11 +212,20 @@ dialog.panel{margin:0 0 0 auto; height:100vh; max-height:100vh; border-radius:0;
 .pasos{padding-left:1.4em; margin:0 0 12px} .pasos li{margin:0 0 8px}
 .nota-app{margin:0; font-size:15px; color:var(--muted)}
 #dlgApp .dlg-pie{position:sticky; bottom:0; background:var(--card); padding-top:12px; border-top:1px solid var(--line)}
+#dlgIndice{height:100dvh; max-height:100dvh; overscroll-behavior:contain}
+#dlgIndice .dlg-cab{padding-top:calc(10px + var(--sa-t))}
+#dlgIndice .dlg-cab h2{flex:none; font-size:24px; line-height:1}
+.indice-cab{flex:1; min-width:0}
+.indice-cab p{margin:4px 0 0; font-size:15px; color:var(--muted); line-height:1.2}
+.indice{padding-bottom:calc(20px + var(--sa-b))}
 .indice ol{list-style:none; margin:0; padding:0}
-.indice ol ol{padding-left:16px}
-.indice a{display:block; padding:7px 8px; border-radius:8px; text-decoration:none; color:var(--ink); line-height:1.3}
-.indice a:hover{background:var(--chip)}
-.indice a[aria-current]{background:var(--chip); font-weight:600}
+.indice ol ol{margin:2px 0 6px 12px; padding-inline-start:8px; border-inline-start:1px solid var(--line)}
+.indice li + li{margin-top:2px}
+.indice a{display:flex; align-items:center; justify-content:space-between; gap:8px; min-height:44px; padding:8px 10px; box-sizing:border-box; border-inline-start:3px solid transparent; border-radius:8px; text-decoration:none; color:var(--ink); font-size:18px; line-height:1.25; scroll-margin-block:72px 20px}
+.indice a span:first-child{min-width:0; overflow-wrap:anywhere}
+.indice a:hover,.indice a:focus-visible{background:var(--chip)}
+.indice a[aria-current="location"]{background:var(--chip); border-inline-start-color:var(--acento); font-weight:600}
+.indice-actual{flex:none; border:1px solid var(--line); border-radius:999px; padding:2px 7px; color:var(--ink); font-size:13px; white-space:nowrap}
 .ajuste{margin:0 0 16px}
 .ajuste > span{display:block; font-size:15px; color:var(--muted); margin-bottom:6px}
 .segmentos{display:flex; flex-wrap:wrap; gap:6px}
@@ -355,7 +364,7 @@ h2{break-after:avoid; page-break-after:avoid}
 <div id="nota-flotante" hidden></div>
 <div id="toast" hidden role="status"></div>
 
-<dialog id="dlgIndice" class="panel" aria-labelledby="dlgIndiceTitulo"><div class="dlg-cab"><h2 id="dlgIndiceTitulo">Índice</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo indice" id="indice"></div></dialog>
+<dialog id="dlgIndice" class="panel" aria-labelledby="dlgIndiceTitulo"><div class="dlg-cab"><div class="indice-cab"><h2 id="dlgIndiceTitulo">Índice</h2><p id="indiceCuenta"></p></div><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo indice" id="indice"></div></dialog>
 <dialog id="dlgBuscar" class="panel" aria-labelledby="dlgBuscarTitulo"><div class="dlg-cab"><h2 id="dlgBuscarTitulo">Buscar en el libro</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo"><form id="formBuscar"><input class="buscar" id="buscarTexto" type="search" placeholder="Palabra o frase" aria-label="Palabra o frase" enterkeyhint="search" autocomplete="off"></form><p class="etq" id="buscarEstado" aria-live="polite"></p><ol class="resultados" id="buscarLista"></ol></div></dialog>
 <dialog id="dlgNotas" class="panel" aria-labelledby="dlgNotasTitulo"><div class="dlg-cab"><h2 id="dlgNotasTitulo">Marcadores y notas</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="listaNotas"></div></dialog>
 <dialog id="dlgAjustes" class="panel" aria-labelledby="dlgAjustesTitulo"><div class="dlg-cab"><h2 id="dlgAjustesTitulo">Letra y colores</h2><button class="icono" type="button" data-cerrar aria-label="Cerrar">✕</button></div><div class="dlg-cuerpo" id="ajustes"></div></dialog>

@@ -89,7 +89,12 @@ def verificar(nav, base, w, h):
         pg.locator("#btnComandos").focus()
         pg.keyboard.press("Enter")
         pg.locator("#btnIndice").click()
-        pg.locator("#indice a").first.click()
+        actual = pg.locator('#indice a[aria-current="location"]')
+        assert actual.count() == 1, "No se identificó la sección actual de un índice con ancla."
+        assert actual.locator(".indice-actual").inner_text() == "Aquí"
+        assert actual.bounding_box()["height"] >= 44
+        assert "1 entrada" in pg.locator("#indiceCuenta").inner_text()
+        actual.click()
         pg.wait_for_function("!document.querySelector('#dlgIndice').open")
         pg.goto(base + "lector/#leer=ausente")
         pg.locator("#vistaBiblio:not([hidden])").wait_for()
