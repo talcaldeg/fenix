@@ -607,8 +607,7 @@
   }
   function cerrarLectura(pintar = true){
     if (!lectura) return;
-    const pendiente = terminarVuelta();
-    if (pendiente !== undefined) aplicarPagina(pendiente);
+    terminarVuelta();
     guardarPosicion(true);
     for (const u of lectura.recursos.values()) URL.revokeObjectURL(u);
     lectura = null;
@@ -734,9 +733,9 @@
   }
   const NOMBRE_IDIOMA = { fr: "Original francés", en: "Original inglés", la: "Original latino", it: "Original italiano", de: "Original alemán", pt: "Original portugués", es: "Original" };
 
-  async function mostrarCapitulo(i, pagina){
+  async function mostrarCapitulo(i, pagina, provisional = false){
+    if (!provisional) terminarVuelta();
     const L = lectura; if (!L) return false;
-    terminarVuelta();
     const cambio = L.cambioCapitulo = (L.cambioCapitulo || 0) + 1;
     i = Math.max(0, Math.min(L.ep.spine.length - 1, i));
     cerrarSeleccion(); cerrarFlotante();
@@ -772,19 +771,33 @@
     const BLOQUE = "p, h1, h2, h3, h4, h5, h6, li, blockquote, pre, dt, dd, td, figcaption";
     L.bloques = $$(BLOQUE, prep.div).filter(e => !e.querySelector(BLOQUE) && norm(e.textContent));
     pintarMarcas();
-    $("#capAnterior").disabled = i === 0;
-    $("#capSiguiente").disabled = i === L.ep.spine.length - 1;
-    $("#capActual").textContent = tituloCapitulo();
-    await maquetar(typeof pagina === "number" ? pagina + 2 : pagina === "fin" ? Infinity : 2);
+    if (!provisional) actualizarCapitulo();
+    await maquetar(typeof pagina === "number" ? pagina + 2 : pagina === "fin" ? Infinity : 2, provisional);
     if (lectura !== L || L.cambioCapitulo !== cambio) return false;
-    irPagina(pagina === "fin" ? L.paginas - 1 : (pagina || 0));
+    const p = pagina === "fin" ? L.paginas - 1 : (pagina || 0);
+    if (provisional) {
+      L.pag = p;
+      mostrarPagina(p);
+    } else {
+      irPagina(p);
+      prepararCapituloSiguiente();
+    }
+    return true;
+  }
+  function actualizarCapitulo(){
+    const L = lectura;
+    $("#capAnterior").disabled = L.i === 0;
+    $("#capSiguiente").disabled = L.i === L.ep.spine.length - 1;
+    $("#capActual").textContent = tituloCapitulo();
     marcarIndice();
+  }
+  function prepararCapituloSiguiente(){
+    const L = lectura, i = L.i, cambio = L.cambioCapitulo;
     // Con el capítulo ya a la vista, se prepara el siguiente (él, 25-nov-2026: «se queda pegado al cambiar de capítulo»).
     setTimeout(() => {
       if (lectura !== L || L.cambioCapitulo !== cambio || L.previo || i + 1 >= L.ep.spine.length) return;
       try { L.previo = { i: i + 1, prep: prepararCapitulo(i + 1) }; } catch {}
     }, 400);
-    return true;
   }
   $("#capAnterior").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i - 1, 0); guardarPosicion(); };
   $("#capSiguiente").onclick = async () => { if (!lectura) return; await mostrarCapitulo(lectura.i + 1, 0); guardarPosicion(); };
@@ -826,7 +839,7 @@
   // ---------- páginas ----------
   // Mide la hoja y arma las columnas: una página por pantalla, o dos (libro abierto) en pantalla ancha y
   // apaisada. Corre al abrir un capítulo, al girar el teléfono, al cambiar la letra y al cargar una imagen.
-  async function maquetar(hasta = Infinity){
+  async function maquetar(hasta = Infinity, provisional = false){
     const L = lectura; if (!L) return;
     const cambio = L.cambioCapitulo;
     L.pies = null;
@@ -854,7 +867,7 @@
     // Las notas de las primeras páginas van ya; las demás, de a poco por detrás (él, 25-nov-2026: «se queda pegado
     // al cambiar de capítulo»; en Marmion ponerlas todas de una tomaba hasta 4 s).
     asegurarPies(hasta);
-    piesDeFondo();
+    if (!provisional) piesDeFondo();
   }
   function contarPaginas(){
     const L = lectura, f = $("#texto .lx-fin");
@@ -876,7 +889,8 @@
   }
   function piesDeFondo(){
     const L = lectura, p = L && L.pies; if (!p) return;
-    setTimeout(() => {
+    clearTimeout(L.piesT);
+    L.piesT = setTimeout(() => {
       if (lectura !== L || L.pies !== p) return;
       asegurarPies(Infinity, 25);
       actualizarProgreso();
@@ -885,13 +899,26 @@
   }
   let vuelta;
   const reducirMovimiento = matchMedia("(prefers-reduced-motion: reduce)");
-  function terminarVuelta(){
+  function terminarVuelta(reintentarCapitulo = false){
     if (!vuelta) return;
-    const { transicion, pendiente } = vuelta;
+    const actual = vuelta;
     vuelta = undefined;
     delete document.documentElement.dataset.vuelta;
-    transicion.skipTransition();
-    return pendiente;
+    delete document.documentElement.dataset.arrastre;
+    actual.transicion.skipTransition();
+    if (actual.capitulo !== undefined) {
+      if (actual.confirmada && actual.vistaPrevia) {
+        actualizarCapitulo();
+        aplicarPagina(lectura.pag);
+        piesDeFondo();
+        prepararCapituloSiguiente();
+      } else {
+        actual.restaurar?.();
+        if (actual.confirmada && reintentarCapitulo) cambiarCapitulo(actual.paso);
+      }
+    } else if (actual.confirmada && !actual.aplicada) aplicarPagina(actual.p);
+    else if (actual.vistaPrevia) mostrarPagina(lectura.pag);
+    if (actual.reajustar) reajustar();
   }
   function irPagina(p, ancla = null){
     terminarVuelta();
@@ -901,7 +928,7 @@
     const L = lectura; if (!L) return;
     if (L.pies) asegurarPies((Math.round(p) || 0) + 2);
     L.pag = Math.max(0, Math.min(L.paginas - 1, Math.round(p) || 0));
-    $("#texto").style.transform = `translateX(${-L.pag * L.paso}px)`;
+    mostrarPagina(L.pag);
     cerrarFlotante();
     // El ancla se toma acá y no al girar o cambiar la letra: para entonces el texto ya se movió. Al
     // repaginar se conserva la de antes (va en algún lugar de la página nueva); si se tomara de nuevo, cada
@@ -911,33 +938,104 @@
     guardarPosicion();
     pantallaEncendida(true);
   }
-  function voltearPagina(p, paso){
+  function mostrarPagina(p){
+    $("#texto").style.transform = `translateX(${-p * lectura.paso}px)`;
+  }
+  function previsualizarCapitulo(actual){
+    const origen = actual.origen = lectura;
+    const texto = $("#texto"), marco = $("#marco"), vista = $("#vistaLectura");
+    const contenido = [...texto.childNodes], estiloTexto = texto.style.cssText, estiloMarco = marco.style.cssText;
+    const portada = vista.dataset.portada, fondo = vista.style.getPropertyValue("--bg-portada");
+    const alto = vista.style.getPropertyValue("--alto-pag");
+    // Se conserva el DOM paginado para deshacer el gesto sin volver a medir ni perder las notas al pie.
+    actual.restaurar = () => {
+      lectura = origen;
+      texto.replaceChildren(...contenido);
+      texto.style.cssText = estiloTexto;
+      marco.style.cssText = estiloMarco;
+      if (portada === undefined) delete vista.dataset.portada;
+      else vista.dataset.portada = portada;
+      vista.style.setProperty("--bg-portada", fondo);
+      vista.style.setProperty("--alto-pag", alto);
+      aplicarAjustes();
+      piesDeFondo();
+    };
+    lectura = { ...origen, piesT: null };
+    // El capítulo preparado se consume una vez: su DOM se modifica al paginarlo.
+    if (origen.previo?.i === actual.capitulo) origen.previo = null;
+    return mostrarCapitulo(actual.capitulo, actual.p, true);
+  }
+  const puedeGirar = () => !reducirMovimiento.matches && typeof document.startViewTransition === "function";
+  const preparandoVuelta = () => vuelta?.capitulo !== undefined && vuelta.confirmada && !vuelta.vistaPrevia;
+  function voltearPagina(p, paso, arrastre = false, capitulo){
     document.documentElement.dataset.vuelta = paso > 0 ? "adelante" : "atras";
-    const actual = { pendiente: p };
-    actual.transicion = document.startViewTransition(() => {
+    document.documentElement.toggleAttribute("data-arrastre", arrastre);
+    const actual = { p, paso, capitulo, arrastre, avance: 0,
+      ancho: arrastre ? $("#marco").clientWidth : 0, confirmada: arrastre ? null : true };
+    actual.transicion = document.startViewTransition(async () => {
       if (vuelta !== actual) return;
-      delete actual.pendiente;
-      aplicarPagina(p);
+      if (capitulo !== undefined) {
+        actual.vistaPrevia = await previsualizarCapitulo(actual);
+      } else if (arrastre) {
+        if (lectura.pies) asegurarPies(p + 2);
+        mostrarPagina(p);
+        actual.vistaPrevia = true;
+      } else {
+        aplicarPagina(p);
+        actual.aplicada = true;
+      }
     });
     vuelta = actual;
-    // Una captura puede omitirse (por ejemplo, si se gira el teléfono), pero el cambio se aplica igual.
-    actual.transicion.ready.catch(() => {});
-    const limpiar = () => { if (vuelta === actual) terminarVuelta(); };
+    const limpiar = () => { if (vuelta === actual) terminarVuelta(true); };
+    actual.transicion.ready.then(() => {
+      if (!arrastre || vuelta !== actual) return;
+      actual.animacion = document.getAnimations().find(a => a.animationName === "voltear-hoja");
+      if (!actual.animacion) { limpiar(); return; }
+      actual.duracion = actual.animacion.effect.getComputedTiming().duration;
+      moverVuelta(actual, actual.avance);
+      if (actual.confirmada !== null) soltarVuelta(actual, actual.confirmada);
+    }, () => {});
     actual.transicion.finished.then(limpiar, limpiar);
+    return actual;
+  }
+  function moverVuelta(actual, avance){
+    actual.avance = avance;
+    if (!actual.animacion) return;
+    // La anchura visible es proporcional al coseno del giro. Su inversa hace que el canto siga al dedo.
+    const giro = actual.paso > 0 ? Math.acos(1 - avance) : Math.asin(avance);
+    actual.animacion.currentTime = Math.min(.9999, giro / (Math.PI / 2)) * actual.duracion;
+  }
+  function soltarVuelta(actual, confirmar){
+    actual.confirmada = confirmar;
+    if (!actual.animacion) {
+      if (!confirmar) terminarVuelta();
+      return;
+    }
+    if (!confirmar && !actual.avance) { terminarVuelta(); return; }
+    const a = actual.animacion;
+    a.playbackRate = confirmar ? 1 : -1;
+    a.play();
+    a.finished.then(() => { if (vuelta === actual) terminarVuelta(); }, () => {});
   }
   let ocupado = false;
   const siguiente = () => pasarPagina(1);
   const anterior = () => pasarPagina(-1);
-  async function pasarPagina(paso){
-    const L = lectura; if (!L || ocupado) return;
-    const enCurso = !!vuelta, pendiente = terminarVuelta();
-    if (pendiente !== undefined) aplicarPagina(pendiente);
+  function pasarPagina(paso){
+    if (!lectura || ocupado || preparandoVuelta()) return;
+    gesto = null;
+    const enCurso = !!vuelta;
+    terminarVuelta();
+    const L = lectura;
     const p = L.pag + paso;
     if (p >= 0 && p < L.paginas) {
-      if (enCurso || reducirMovimiento.matches || !document.startViewTransition) aplicarPagina(p);
+      if (enCurso || !puedeGirar()) aplicarPagina(p);
       else voltearPagina(p, paso);
       return;
     }
+    return cambiarCapitulo(paso);
+  }
+  async function cambiarCapitulo(paso){
+    const L = lectura; if (!L || ocupado) return;
     const i = L.i + paso;
     if (i < 0) return;
     if (i >= L.ep.spine.length) { aviso("Fin del libro."); return; }
@@ -949,6 +1047,7 @@
     clearTimeout(reajT);
     reajT = setTimeout(async () => {
       const L = lectura; if (!L) return;
+      if (vuelta?.arrastre) { vuelta.reajustar = true; return; }
       const ancla = L.ancla, cambio = L.cambioCapitulo;
       await maquetar();
       if (lectura === L && L.cambioCapitulo === cambio) irPagina(ancla ? paginaDePos(ancla) : L.pag, ancla);
@@ -992,37 +1091,67 @@
 
   // ---------- toques y deslizar ----------
   // Tercio izquierdo: página anterior; tercio derecho: siguiente; centro: muestra u oculta los controles.
-  // El gesto horizontal pasa la hoja al soltar. Mantener el dedo apretado permite seleccionar texto.
+  // El gesto horizontal mueve el canto de la hoja; solo se guarda el cambio si se confirma al soltar.
   let gesto = null;
   const hoja = $("#hoja");
   hoja.addEventListener("pointerdown", e => {
-    if (!lectura || (e.pointerType === "mouse" && e.button !== 0)) return;
-    gesto = { x: e.clientX, y: e.clientY, t: Date.now(), tipo: e.pointerType, dx: 0, arrastre: false,
+    if (!lectura || preparandoVuelta() || !e.isPrimary || (e.pointerType === "mouse" && e.button !== 0)) return;
+    gesto = { id: e.pointerId, libro: lectura.libro, x: e.clientX, y: e.clientY, t: Date.now(), tipo: e.pointerType, arrastre: false,
       flotante: !$("#nota-flotante").hidden, sel: !getSelection().isCollapsed, sobre: !!e.target.closest("a[data-ir], a[href^='http'], mark[data-n]") };
   });
   hoja.addEventListener("pointermove", e => {
-    const g = gesto; if (!g || g.tipo === "mouse" || !lectura) return;
+    const g = gesto; if (!g || e.pointerId !== g.id || g.tipo === "mouse" || lectura?.libro !== g.libro || ocupado) return;
     const dx = e.clientX - g.x, dy = e.clientY - g.y;
     if (!g.arrastre) {
       if (Math.abs(dx) < 12 || Math.abs(dx) < 1.2 * Math.abs(dy) || !getSelection().isCollapsed) return;
       g.arrastre = true;
+      hoja.setPointerCapture(e.pointerId);
     }
-    g.dx = dx;
+    if (!puedeGirar()) return;
+    const paso = dx <= 0 ? 1 : -1;
+    if (!g.vuelta || g.vuelta.paso !== paso) {
+      if (Math.abs(dx) < 12) {
+        if (g.vuelta && vuelta === g.vuelta) moverVuelta(g.vuelta, 0);
+        return;
+      }
+      terminarVuelta();
+      const L = lectura, p = L.pag + paso, i = L.i + paso;
+      if (p >= 0 && p < L.paginas) g.vuelta = voltearPagina(p, paso, true);
+      else g.vuelta = i >= 0 && i < L.ep.spine.length ? voltearPagina(paso > 0 ? 0 : "fin", paso, true, i) : null;
+    }
+    if (g.vuelta && vuelta === g.vuelta) {
+      moverVuelta(g.vuelta, Math.min(1, Math.abs(dx) / Math.max(1, g.vuelta.ancho)));
+    }
   });
   hoja.addEventListener("pointerup", e => {
-    const g = gesto; gesto = null;
-    if (!g || !lectura) return;
+    const g = gesto;
+    if (!g || e.pointerId !== g.id) return;
+    gesto = null;
+    if (lectura?.libro !== g.libro) return;
     if (g.arrastre) {
-      const rapido = Math.abs(g.dx) / Math.max(1, Date.now() - g.t) > 0.35;
-      if (g.dx < -50 || (g.dx < -20 && rapido)) siguiente();
-      else if (g.dx > 50 || (g.dx > 20 && rapido)) anterior();
+      const dx = e.clientX - g.x, distancia = Math.abs(dx);
+      const rapido = distancia / Math.max(1, Date.now() - g.t) > 0.35;
+      const confirmar = distancia > 50 || (distancia > 20 && rapido);
+      const paso = dx <= 0 ? 1 : -1;
+      if (g.vuelta && vuelta === g.vuelta) {
+        soltarVuelta(g.vuelta, confirmar && g.vuelta.paso === paso);
+        if (!confirmar || g.vuelta.paso === paso) return;
+      }
+      if (confirmar) pasarPagina(paso);
       return;
     }
     if (Math.hypot(e.clientX - g.x, e.clientY - g.y) > 10 || Date.now() - g.t > 600 || g.sobre || g.flotante) return;
     if (g.sel || !getSelection().isCollapsed) { getSelection().removeAllRanges(); return; }
     tocar(e.clientX);
   });
-  hoja.addEventListener("pointercancel", () => { gesto = null; });
+  function cancelarGesto(e){
+    const g = gesto;
+    if (!g || e.pointerId !== g.id) return;
+    gesto = null;
+    if (g.vuelta && vuelta === g.vuelta) soltarVuelta(g.vuelta, false);
+  }
+  hoja.addEventListener("pointercancel", cancelarGesto);
+  hoja.addEventListener("lostpointercapture", e => { if (e.target === hoja) cancelarGesto(e); });
   function tocar(x){
     if ($("#vistaLectura").hasAttribute("data-controles")) { mostrarControles(false); return; }
     const r = $("#hoja").getBoundingClientRect(), f = (x - r.left) / r.width;
@@ -1159,7 +1288,7 @@
       if (!lectura) return;
       // Todo lo que mira la pantalla se calcula antes del primer await: al cerrar el libro, lectura
       // queda en null y el texto se borra mientras esto sigue guardando.
-      const L = lectura, avance = avanceTotal();
+      const L = vuelta?.origen || lectura, avance = avanceTotal(L);
       L.estado.pos = L.ancla || posicionActual();
       await guardarEstado(L.estado).catch(e => console.warn(e));
       const l = await DB.get("libros", L.libro.id).catch(() => null);
@@ -1167,8 +1296,8 @@
     };
     if (ahora) hacer(); else guardarT = setTimeout(hacer, 700);
   }
-  function avanceTotal(){
-    const L = lectura; if (!L) return 0;
+  function avanceTotal(L = lectura){
+    if (!L) return 0;
     const tams = L.ep.spine.map(s => s.tam), total = tams.reduce((a, b) => a + b, 0) || 1;
     const antes = tams.slice(0, L.i).reduce((a, b) => a + b, 0);
     return Math.min(1, (antes + tams[L.i] * ((L.pag || 0) + 1) / (L.paginas || 1)) / total);
@@ -1981,7 +2110,10 @@
   $("#btnNube").onclick = () => Nube.boton();
 
   // Para las pruebas de herramientas/revisar_diseno.py: dónde va la lectura, sin tocar nada.
-  window.lectorEstado = () => lectura && { i: lectura.i, pag: lectura.pag, paginas: lectura.paginas, ancla: lectura.ancla, piesPendientes: !!lectura.pies };
+  window.lectorEstado = () => {
+    const L = vuelta?.origen || lectura;
+    return L && { i: L.i, pag: L.pag, paginas: L.paginas, ancla: L.ancla, piesPendientes: !!L.pies };
+  };
 
   // ---------- instalar ----------
   let pedirInstalar = null;

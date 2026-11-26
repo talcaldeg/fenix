@@ -131,18 +131,21 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 #texto{height:100%; margin:0; padding:0; font-size:var(--tam); line-height:var(--interlineado); font-family:var(--letra-lectura);
   overflow-wrap:break-word; column-fill:auto}
 #vistaLectura #texto{margin:0 !important; padding:0 !important; border:0 !important; box-sizing:border-box}
-:root[data-vuelta]{view-transition-name:none; --giro:-90deg; --bisagra:left}
-:root[data-vuelta="atras"]{--giro:90deg; --bisagra:right}
+:root[data-vuelta]{view-transition-name:none}
 :root[data-vuelta] #marco{view-transition-name:hoja-lectura; background:var(--bg-portada,var(--bg))}
 ::view-transition{pointer-events:none}
-::view-transition-group(hoja-lectura),::view-transition-new(hoja-lectura){animation:none}
+::view-transition-group(hoja-lectura),::view-transition-old(hoja-lectura),::view-transition-new(hoja-lectura){animation:none}
 ::view-transition-image-pair(hoja-lectura){overflow:hidden}
 ::view-transition-old(hoja-lectura),::view-transition-new(hoja-lectura){mix-blend-mode:normal}
-::view-transition-old(hoja-lectura){z-index:1; transform-origin:var(--bisagra) center;
-  animation:voltear-hoja .13s ease-out both}
+:root[data-vuelta="adelante"]::view-transition-old(hoja-lectura),
+:root[data-vuelta="atras"]::view-transition-new(hoja-lectura){z-index:1; transform-origin:left center;
+  animation:voltear-hoja .13s linear both}
+:root[data-vuelta="atras"]::view-transition-new(hoja-lectura){animation-direction:reverse}
+:root[data-arrastre]::view-transition-old(hoja-lectura),
+:root[data-arrastre]::view-transition-new(hoja-lectura){animation-play-state:paused}
 @keyframes voltear-hoja{
-  from{transform:perspective(max(900px, 240vw)) rotateY(0)}
-  to{transform:perspective(max(900px, 240vw)) rotateY(var(--giro)); filter:brightness(.8)}
+  from{transform:rotateY(0)}
+  to{transform:rotateY(-90deg); filter:brightness(.8)}
 }
 #texto .lx-fin{display:block; height:0}
 #texto :is(img,svg,figure,table,pre,h1,h2,h3,h4){break-inside:avoid}
