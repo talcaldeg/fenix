@@ -46,6 +46,24 @@ ESTATICAS = (LIBRO, DONA, CATEGORIA, *LECTURAS)
 ALTO_BARRA = 80  # px: más que esto es que el menú se partió en dos líneas
 
 
+def esperar_red(pg):
+    """networkidle con un reintento. A veces Chromium no da por quieta la red aunque no quede nada pendiente
+    (25-nov-2026: la primera carga de #inicio colgó 30 s en 6 de 8 publicaciones, sin peticiones de la página;
+    la misma guardia pasaba entera al repetirla). Se recarga una vez y se espera de nuevo; si tampoco llega,
+    falla igual, con mensaje claro en vez de un traceback. No afloja ninguna revisión de diseño."""
+    from playwright.sync_api import TimeoutError as TiempoAgotado
+    try:
+        pg.wait_for_load_state("networkidle", timeout=30000)
+        return
+    except TiempoAgotado:
+        pass
+    try:
+        pg.reload()
+        pg.wait_for_load_state("networkidle", timeout=60000)
+    except TiempoAgotado:
+        sys.exit(f"La red no se aquietó en {pg.url} ni recargando (30 s + 60 s): revisar la conexión o lo que la página deja abierto.")
+
+
 def servir(raiz):
     class H(http.server.SimpleHTTPRequestHandler):
         def log_message(self, *a):
@@ -71,7 +89,7 @@ def capturar(nav, base, carpeta):
             pg = nav.new_page(viewport={"width": w, "height": h}, color_scheme=esquema)
             for nombre, ruta in RECORRIDO:
                 pg.goto(base + ruta)
-                pg.wait_for_load_state("networkidle")
+                esperar_red(pg)
                 # Las portadas cargan diferidas: se baja y se vuelve para que estén todas.
                 # behavior 'instant': con scroll-behavior: smooth la captura salía a medio subir, con la cabecera
                 # fija pintada en el medio de la página.
@@ -88,7 +106,7 @@ def capturar(nav, base, carpeta):
                               full_page=completa, clip={"x": 0, "y": 0, "width": w, "height": alto if completa else h})
             # El pie (zócalo de madera) queda fuera del primer tramo: una captura aparte del final del inicio.
             pg.goto(base + "#inicio")
-            pg.wait_for_load_state("networkidle")
+            esperar_red(pg)
             pg.evaluate("window.scrollTo(0, document.documentElement.scrollHeight)")
             pg.wait_for_timeout(500)
             pg.screenshot(path=os.path.join(carpeta, f"pie_{'pc' if w > 760 else 'cel'}_{esquema}.png"))
@@ -130,7 +148,7 @@ def revisar(raiz, capturas=None):
                 url = base + vista if vista in ESTATICAS else f"{base}#{vista}"
                 errores.clear()
                 pg.goto(url)
-                pg.wait_for_load_state("networkidle")
+                esperar_red(pg)
                 pg.wait_for_timeout(300)
                 donde = f"{w}x{h} {vista}"
                 ancho = pg.evaluate("document.documentElement.scrollWidth")
@@ -259,7 +277,7 @@ def revisar(raiz, capturas=None):
             pg = nav.new_page(viewport={"width": 390, "height": 844}, color_scheme=esquema)
             for vista in ("inicio", LIBRO):
                 pg.goto(base + LIBRO if vista == LIBRO else f"{base}#{vista}")
-                pg.wait_for_load_state("networkidle")
+                esperar_red(pg)
                 pasos = [esquema] + (["◐"] if vista == "inicio" else [])
                 for paso in pasos:
                     if paso == "◐":
@@ -300,7 +318,7 @@ def revisar(raiz, capturas=None):
                 pass  # si nunca se aquieta, se mide igual: la falla, si la hay, la dice el salto
         pg = nav.new_page(viewport={"width": 1280, "height": 720})
         pg.goto(f"{base}#inicio")
-        pg.wait_for_load_state("networkidle")
+        esperar_red(pg)
         for desde, destino in [(v, v) for v in VISTAS] + [("editores", "editorial"), ("encuadernadores", "editorial")]:
             pg.goto(f"{base}#{desde}")
             pg.wait_for_timeout(300)
@@ -326,7 +344,7 @@ def revisar(raiz, capturas=None):
         pg = nav.new_page(viewport={"width": 390, "height": 844})
         pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
         pg.goto(f"{base}#biblioteca")
-        pg.wait_for_load_state("networkidle")
+        esperar_red(pg)
         for paso in ("ficha", "parecido"):
             sel = "#dlgLibro a.parecido" if paso == "parecido" else ".libro, .fila[data-id], .ed[data-id]"
             if not pg.evaluate(f"() => {{ const a = document.querySelector('{sel}'); if (a) a.click(); return !!a; }}"):
@@ -348,7 +366,7 @@ def revisar(raiz, capturas=None):
         for sufijo in ("", "?l=en"):
             pg = nav.new_page(viewport={"width": 1280, "height": 900})
             pg.goto(f"{base}{sufijo}#biblioteca")
-            pg.wait_for_load_state("networkidle")
+            esperar_red(pg)
             # La marca sale de la etiqueta «Editorial Fénix» de cada fila: `editorial` puede venir de la versión del idioma.
             r = pg.evaluate("""() => { const marca = [...document.querySelectorAll('#catalogo .fila[data-id]')].map(e => !!e.querySelector('.ed-fenix'));
                 const n = marca.filter(Boolean).length;
@@ -372,7 +390,7 @@ def revisar(raiz, capturas=None):
         # en la portada; la ficha abierta desde otra no repite en Parecidos el libro del que se vino.
         pg = nav.new_page(viewport={"width": 390, "height": 844})
         pg.goto(f"{base}#biblioteca")
-        pg.wait_for_load_state("networkidle")
+        esperar_red(pg)
         pg.evaluate("document.querySelector('.fila[data-id]').click()")
         pg.wait_for_timeout(500)
         origen = pg.evaluate("document.querySelector('#dlgLibro').dataset.id")
@@ -398,7 +416,7 @@ def revisar(raiz, capturas=None):
         # la anterior donde se dejó; ← y × siguen a la vista al bajar (antes se iban con el scroll).
         pg = nav.new_page(viewport={"width": 390, "height": 844})
         pg.goto(f"{base}#biblioteca")
-        pg.wait_for_load_state("networkidle")
+        esperar_red(pg)
         pg.evaluate("document.querySelector('.fila[data-id]').click()")
         pg.wait_for_timeout(500)
         titulo_a = pg.evaluate("document.querySelector('#fichaTitulo').textContent")
@@ -425,7 +443,7 @@ def revisar(raiz, capturas=None):
         pg = nav.new_page(viewport={"width": 390, "height": 844})
         pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
         pg.goto(f"{base}libro/ligorio-the-glories-of-mary/")
-        pg.wait_for_load_state("networkidle")
+        esperar_red(pg)
         if not pg.evaluate("() => { const b = document.querySelector('#btnCompartir'); if (b) b.click(); return !!b; }"):
             fallas.append("compartir (página del libro): falta el botón Compartir")
         else:
@@ -442,7 +460,7 @@ def revisar(raiz, capturas=None):
                 && d.querySelectorAll('ol.audios li a[href$=".mp3"]').length === 11; }"""
         for url, donde in (("libro/sada-trabajar-para-la-eternidad/", "página del libro"), ("?abrir=sada-trabajar-para-la-eternidad", "ficha de index.html")):
             pg.goto(base + url)
-            pg.wait_for_load_state("networkidle")
+            esperar_red(pg)
             pg.wait_for_timeout(300)
             if not pg.evaluate(revisa_audio):
                 fallas.append(f"audios ({donde}): falta «Escuchar en línea» o la lista de las 11 meditaciones")
@@ -450,7 +468,7 @@ def revisar(raiz, capturas=None):
         for esquema in ("light", "dark"):
             pg2 = nav.new_page(viewport={"width": 360, "height": 740}, color_scheme=esquema)
             pg2.goto(base)
-            pg2.wait_for_load_state("networkidle")
+            esperar_red(pg2)
             pg2.wait_for_timeout(300)
             if not pg2.evaluate("() => { const c = document.querySelector('#exclusivo'); return !!c && !c.hidden && c.offsetHeight > 0 && !!c.querySelector('a.btn.prim.destacado-abrir') && c.scrollWidth <= c.clientWidth + 1; }"):
                 fallas.append(f"exclusiva ({esquema}): falta o se ve mal el bloque «Exclusiva de Fénix» en el inicio")
@@ -471,7 +489,7 @@ def revisar(raiz, capturas=None):
             if not pg2.evaluate("() => { const m = getComputedStyle(document.querySelector('.hero')).backgroundColor.match(/\\d+/g).map(Number); return m[0] > m[2]; }"):
                 fallas.append(f"hero ({esquema}): el fondo del hero es frío; va en negro cálido como el resto de la paleta")
             pg2.goto(base + "#biblioteca")  # las filas de la biblioteca traen las tres etiquetas
-            pg2.wait_for_load_state("networkidle")
+            esperar_red(pg2)
             pg2.wait_for_timeout(300)
             colores = pg2.evaluate("""() => { const c = s => { const e = document.querySelector(s); return e ? getComputedStyle(e) : null; };
                 const ep = c('.etq.epub'), se = c('.etq.sello'), ed = c('.etq.ed-fenix');
@@ -481,7 +499,7 @@ def revisar(raiz, capturas=None):
             elif len(set(colores)) < 3:
                 fallas.append(f"etiquetas ({esquema}): EPUB, «Recomendado» y «Edición Fénix» comparten color: {colores}")
             pg2.goto(base + "?l=en")
-            pg2.wait_for_load_state("networkidle")
+            esperar_red(pg2)
             pg2.wait_for_timeout(300)
             if not pg2.evaluate("document.querySelector('#exclusivo').hidden"):
                 fallas.append("exclusiva: el bloque aparece en inglés y el libro es solo en español")
@@ -505,21 +523,21 @@ def revisar(raiz, capturas=None):
                         if sub and not os.path.exists(os.path.join(raiz, "libro", lid, "en", "index.html")):
                             continue
                         pg.goto(f"{base}libro/{lid}/{sub}")
-                        pg.wait_for_load_state("networkidle")
+                        esperar_red(pg)
                         if (r := pg.evaluate(revisa)) != "ok":
                             fallas.append(f"preventa ({esquema}): libro/{lid}/{sub} {'no avisa' if r == 'falta' else 'avisa mal o sin enlace a Catapultame'}")
                         if capturas and lid == "confesiones":
                             pg.screenshot(path=os.path.join(capturas, f"preventa_{lid}_{sub.strip('/') or 'es'}_{esquema}.png"))
                     for idioma in ("", "l=en&"):
                         pg.goto(f"{base}?{idioma}abrir={lid}")
-                        pg.wait_for_load_state("networkidle")
+                        esperar_red(pg)
                         pg.wait_for_timeout(300)
                         if (r := pg.evaluate(revisa)) != "ok":
                             fallas.append(f"preventa ({esquema}): la ficha de {lid} en index.html{' (en)' if idioma else ''} {'no avisa' if r == 'falta' else 'avisa mal'}")
                         if capturas and lid == "historia-de-un-alma":
                             pg.screenshot(path=os.path.join(capturas, f"preventa_ficha_{lid}_{'en' if idioma else 'es'}_{esquema}.png"))
                 pg.goto(base + LIBRO)
-                pg.wait_for_load_state("networkidle")
+                esperar_red(pg)
                 if pg.evaluate("!!document.querySelector('#preventa')"):
                     fallas.append(f"preventa: {LIBRO} avisa la preventa y no va en la Colección Fénix")
                 pg.close()
@@ -529,7 +547,7 @@ def revisar(raiz, capturas=None):
         pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
         for desde, destino, img in (("#dona", "dona/", "compartir-dona.jpg"), ("?l=en#dona", "dona/en/", "compartir-dona-en.jpg")):
             pg.goto(base + desde)
-            pg.wait_for_load_state("networkidle")
+            esperar_red(pg)
             if not pg.url.endswith("/" + destino):
                 fallas.append(f"donar: {desde} lleva a {pg.url} y no a {destino}")
                 continue
@@ -546,7 +564,7 @@ def revisar(raiz, capturas=None):
         pg.add_init_script("navigator.share = async d => { window.__compartido = d.url; };")
         for idioma, puerta, img in (("", "encuadernar/", "compartir-encuadernar.jpg"), ("?l=en", "encuadernar/en/", "compartir-encuadernar-en.jpg")):
             pg.goto(f"{base}{idioma}#encuadernadores")
-            pg.wait_for_load_state("networkidle")
+            esperar_red(pg)
             if not pg.evaluate("() => { const b = document.querySelector('#compartirEnc'); if (b) b.click(); return !!b; }"):
                 fallas.append("encuadernar: falta el botón Compartir")
                 break
@@ -554,7 +572,7 @@ def revisar(raiz, capturas=None):
             if not pg.evaluate("window.__compartido || ''").endswith("/" + puerta):
                 fallas.append(f"encuadernar{idioma}: Compartir no entregó {puerta}")
             pg.goto(base + puerta)
-            pg.wait_for_load_state("networkidle")
+            esperar_red(pg)
             if "#encuadernadores" not in pg.url:
                 fallas.append(f"encuadernar: {puerta} no lleva a la sección (queda en {pg.url})")
             with open(os.path.join(raiz, puerta.replace("/", os.sep), "index.html"), encoding="utf-8") as f:
@@ -617,7 +635,7 @@ def revisar_lector(nav, base, raiz):
         errores = []
         pg.on("pageerror", lambda e: errores.append(str(e)))
         pg.goto(base + "lector/")
-        pg.wait_for_load_state("networkidle")
+        esperar_red(pg)
         ancho = pg.evaluate("document.documentElement.scrollWidth")
         if ancho > w + 1:
             fallas.append(f"{w}x{h} lector: scroll horizontal ({ancho}px en {w}px)")
