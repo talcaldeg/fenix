@@ -1,0 +1,35 @@
+## Epílogo, parte I, capítulo I
+
+Habían pasado siete años desde el año doce. El agitado mar de la historia europea se había recogido entre sus orillas. Parecía haberse aquietado, pero las fuerzas misteriosas que mueven a la humanidad (misteriosas porque desconocemos las leyes que rigen su movimiento) seguían actuando.
+
+Aunque la superficie del mar de la historia parecía inmóvil, la humanidad se movía con la misma continuidad con que transcurre el tiempo. Se formaban y se deshacían distintos vínculos entre grupos humanos. Se gestaban las causas de la formación y la disolución de los Estados y de los desplazamientos de los pueblos.
+
+El mar de la historia ya no se movía a sacudidas de una orilla a la otra, como antes. Bullía en lo profundo. Los personajes históricos ya no iban, como antes, llevados por las olas de una orilla a la otra. Ahora parecían girar en el mismo sitio. Los personajes históricos, que antes, al frente de los ejércitos, reflejaban el movimiento de las masas al dar órdenes de emprender guerras, marchar en campaña y librar batallas, reflejaban ahora ese movimiento en ebullición mediante consideraciones políticas y diplomáticas, leyes, tratados…
+
+A esta actividad de los personajes históricos los historiadores la llaman reacción.
+
+Al describir la actividad de esos personajes históricos, a quienes consideran causantes de lo que llaman *reacción*, los historiadores los condenan con severidad. Todas las figuras conocidas de aquel tiempo, desde Alejandro y Napoleón hasta *Mme Staël*, Focio, Schelling, Fichte, Chateaubriand y demás, comparecen ante su severo tribunal y son absueltas o condenadas según hayan contribuido al *progreso* o a la *reacción*.
+
+En Rusia, según cuentan, también hubo una reacción en ese período, y el principal culpable de esa reacción fue Alejandro I, el mismo Alejandro I que, según cuentan ellos mismos, había sido el principal culpable de las iniciativas liberales de su reinado y de la salvación de Rusia.
+
+En las letras rusas de hoy, desde el estudiante de secundaria hasta el historiador erudito, no hay quien no le haya tirado su piedrita a Alejandro por lo mal que obró en ese período de su reinado.
+
+«Debió obrar de tal y cual manera. En tal caso obró bien, en tal otro, mal. Se condujo admirablemente al comienzo de su reinado y durante el año doce, pero obró mal al darle una constitución a Polonia, al constituir la Santa Alianza, al darle poder a Arakchéiev, al alentar a Golitsin y al misticismo y, después, al alentar a Shishkov y a Focio. Hizo mal en ocuparse de la instrucción de orden cerrado del ejército. Obró mal al disolver el regimiento Semiónovski, etc.»
+
+Habría que llenar diez hojas para enumerar todos los reproches que le hacen los historiadores basándose en el conocimiento que poseen del bien de la humanidad.
+
+¿Qué significan esos reproches?
+
+Esos mismos actos que los historiadores aprueban en Alejandro I —las iniciativas liberales de su reinado, la lucha contra Napoleón, la firmeza que mostró en el año doce y la campaña del trece—, ¿no brotan de las mismas fuentes —las circunstancias de linaje, educación y vida que hicieron de Alejandro el hombre que fue— de las que brotan también los actos que los historiadores le censuran, como la Santa Alianza, el restablecimiento de Polonia y la reacción de los años veinte? ¿En qué consisten, en el fondo, esos reproches?
+
+En que un personaje histórico como Alejandro I —un personaje situado en el grado más alto de poder que puede alcanzar un ser humano, como en el foco de la luz cegadora de todos los rayos de la historia que convergían en él, un personaje sometido a las influencias más poderosas del mundo, las de las intrigas, los engaños, la lisonja y el autoengaño, inseparables del poder, un personaje que sentía pesar sobre sí, a cada minuto de su vida, la responsabilidad de todo cuanto ocurría en Europa, y un personaje vivo y no inventado, con sus propias costumbres, pasiones y aspiraciones al bien, a la belleza y a la verdad, como cualquier ser humano—, en que ese personaje, hace cincuenta años, no es que careciera de virtud (eso no se lo reprochan los historiadores), sino que no tenía las ideas sobre el bien de la humanidad que tiene hoy un profesor que desde joven se dedica a la ciencia, es decir, a leer libritos, a dar lecciones y a copiar esos libritos y esas lecciones en un solo cuadernillo.
+
+Pero aun suponiendo que hace cincuenta años Alejandro I se equivocara en su idea de lo que constituye el bien de los pueblos, no podemos menos que suponer que también el historiador que juzga a Alejandro, pasado algún tiempo, resultará igualmente injusto en su manera de entender lo que constituye el bien de la humanidad. La suposición es tanto más natural y necesaria cuanto que, al seguir el desarrollo de la historia, vemos que con cada año, con cada nuevo escritor, cambia la idea de lo que constituye el bien de la humanidad, de modo que lo que parecía un bien se presenta diez años después como un mal, y a la inversa. Más aún, encontramos al mismo tiempo en la historia opiniones enteramente opuestas sobre qué fue un mal y qué fue un bien. La constitución que se le dio a Polonia y la Santa Alianza, unos se las cuentan a Alejandro como méritos y otros se las echan en cara.
+
+De la actividad de Alejandro y Napoleón no se puede decir que fuera útil o perjudicial, pues no podemos decir para qué es útil y para qué es perjudicial. Si a alguien no le gusta esa actividad, no le gusta solo porque no concuerda con su idea limitada de lo que es el bien. Ya sea que yo tenga por un bien que en el año doce se salvara la casa de mi padre en Moscú, o la gloria de las tropas rusas, o la prosperidad de la Universidad de Petersburgo o de otras universidades, o la libertad de Polonia, o el poderío de Rusia, o el equilibrio de Europa, o cierta clase de ilustración europea —el progreso—, debo reconocer que la actividad de todo personaje histórico tuvo, además de esos fines, otros más generales y fuera de mi alcance.
+
+Pero supongamos que la llamada ciencia puede conciliar todas las contradicciones y que tiene una medida invariable de lo bueno y lo malo para juzgar a los personajes y los acontecimientos históricos.
+
+Supongamos que Alejandro hubiera podido hacerlo todo de otro modo. Supongamos que, siguiendo los dictados de quienes lo acusan, de quienes profesan conocer el fin último de la marcha de la humanidad, hubiera podido gobernar conforme al programa de nacionalidad, libertad, igualdad y progreso (parece que no hay otro más nuevo) que le habrían dado sus acusadores de hoy. Supongamos que ese programa hubiera sido viable, que se hubiera formulado y que Alejandro hubiera actuado conforme a él. ¿Qué habría sido entonces de la actividad de todos los que se oponían al rumbo que seguía el gobierno en aquel tiempo, de esa actividad que, a juicio de los historiadores, es buena y útil? No habría habido tal actividad. No habría habido vida. No habría habido nada.
+
+Si se admite que la vida humana puede regirse por la razón, desaparecerá la posibilidad de la vida.

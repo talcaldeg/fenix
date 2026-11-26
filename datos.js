@@ -46,6 +46,49 @@ window.FENIX = {
 
   libros: [
     {
+      "id": "tolstoi-guerra-y-paz",
+      "titulo": "Guerra y paz",
+      "autor": "Lev Tolstói",
+      "anio": "1869",
+      "idioma": "es",
+      "categoria": "novela",
+      "recomendado": false,
+      "resumen": {
+        "es": "Pierre Bezújov recibe de improviso una herencia inmensa. El príncipe Andréi Bolkonski deja a su mujer encinta para ir a la guerra. Natasha Rostova, aún una niña cuando empieza la novela, crece entre bailes, canciones y las deudas de su familia. Sus vidas se cruzan desde los salones de Petersburgo hasta la retirada de Moscú en 1812."
+      },
+      "porque": {
+        "es": "Tolstói cuenta lo que un soldado alcanza a ver entre el humo y lo que, años después, un historiador cree que ocurrió en ese mismo campo. También sabe cuánto puede cambiar una vida en el trayecto de un carruaje, durante un baile o al pie de una cama. La novela invita a mirar ambas escalas a la vez."
+      },
+      "editorial": {
+        "es": "Traducción propia de Proyecto Fénix a partir del original ruso y sus pasajes en francés. Edición íntegra en cuatro tomos y un epílogo en dos partes, con notas y un segundo cotejo contra el original."
+      },
+      "fuente": {
+        "texto": "Obras completas, tomos 9 a 12. Edición digital de Tolstoy.ru",
+        "url": "https://tolstoy.ru/creativity/fiction/1071/"
+      },
+      "imagen": {
+        "src": "img/portadas/tolstoi-guerra-y-paz.jpg",
+        "credito": {
+          "es": "Vasili Vereshchaguin, «Ante Moscú, a la espera de la delegación de los boyardos»"
+        },
+        "url": "https://commons.wikimedia.org/wiki/File:In_front_of_Moscow_-_Waiting_for_the_boyards_deputation.jpg"
+      },
+      "archivos": {
+        "epub": "libros/tolstoi-guerra-y-paz.epub",
+        "pdf": "libros/tolstoi-guerra-y-paz.pdf"
+      },
+      "delibris": {
+        "valor": 6,
+        "genero": "Literatura",
+        "url": "https://www.delibris.org/es/guerra-y-paz-0"
+      },
+      "citas": [
+        "«Si todos hicieran la guerra solo por sus propias convicciones, no habría guerra», dijo.",
+        "La historia, es decir, la vida inconsciente, común, de enjambre de la humanidad, se sirve de cada minuto de la vida de los zares como instrumento para sus propios fines.",
+        "Ahora, hace ya mucho que los protagonistas de 1812 dejaron sus puestos, sus intereses personales se desvanecieron sin dejar rastro y solo tenemos ante nosotros los resultados históricos de aquel tiempo."
+      ]
+    },
+    {
       "id": "becquer-rimas",
       "titulo": "Rimas",
       "autor": "Gustavo Adolfo Bécquer",

@@ -2,6 +2,16 @@
  "formato": 1,
  "libros": [
   {
+   "id": "tolstoi-guerra-y-paz",
+   "idioma": "es",
+   "titulo": "Guerra y paz",
+   "autor": "Lev Tolstói",
+   "epub": "libros/tolstoi-guerra-y-paz.epub",
+   "bytes": 2751552,
+   "sha": "ce810263b1d26a91c66b0c841cdeba80a808435daab798bbee1f418724e795f2",
+   "portada": "img/portadas/tolstoi-guerra-y-paz.jpg"
+  },
+  {
    "id": "belloc-cuentos-moraleja",
    "idioma": "es",
    "titulo": "Cuentos con moraleja para niños",

@@ -1,0 +1,77 @@
+## Tomo I, parte III, capítulo XII
+
+Entre las nueve y las diez de la noche, Weyrother se trasladó con sus planos al alojamiento de Kutúzov, donde se había convocado el consejo de guerra. Se había mandado llamar a todos los jefes de columna ante el comandante en jefe y, con excepción del príncipe Bagratión, que se negó a acudir, todos se presentaron a la hora señalada.
+
+Weyrother, que tenía plenos poderes para disponer la batalla proyectada, contrastaba vivamente, por su agitación y su prisa, con el descontento y soñoliento Kutúzov, que desempeñaba de mala gana el papel de presidente y director del consejo de guerra. Era evidente que Weyrother se sentía al frente de un movimiento que ya se había vuelto incontenible. Era como un caballo enganchado a un carro, lanzado cuesta abajo con él. No sabía si él tiraba del carro o si el carro lo arrastraba, pero iba a toda la velocidad de que era capaz, sin tiempo ya para considerar adónde llevaría aquel movimiento. Aquella noche Weyrother había estado dos veces en la línea enemiga para inspeccionarla en persona, dos veces ante los soberanos, el ruso y el austríaco, para rendirles informe y darles explicaciones, y también en su oficina, donde había dictado en alemán el plan de operaciones. Ahora llegaba, rendido, al alojamiento de Kutúzov.
+
+Se veía que estaba tan ocupado que se olvidaba hasta de tratar con respeto al comandante en jefe. Lo interrumpía, hablaba deprisa y sin claridad, sin mirar a la cara a su interlocutor, sin responder a las preguntas que le hacían. Estaba manchado de barro y tenía un aire lastimoso, extenuado, desconcertado y, al mismo tiempo, presuntuoso y orgulloso.
+
+Kutúzov ocupaba un pequeño castillo señorial cerca de Ostralitz. En el amplio salón, convertido en despacho del comandante en jefe, se habían reunido el propio Kutúzov, Weyrother y los miembros del consejo de guerra. Tomaban té. Solo esperaban al príncipe Bagratión para dar comienzo al consejo de guerra. Entre las siete y las ocho llegó el ordenanza de Bagratión con la noticia de que el príncipe no podía asistir. El príncipe Andréi vino a comunicárselo al comandante en jefe y, aprovechando el permiso que Kutúzov le había dado antes para asistir al consejo, se quedó en el salón.
+
+«Como el príncipe Bagratión no vendrá, podemos empezar», dijo Weyrother, levantándose apresuradamente de su asiento y acercándose a la mesa, sobre la que estaba desplegado un mapa enorme de los alrededores de Brünn.
+
+Kutúzov, con el uniforme desabrochado y el grueso cuello que, como si se hubiera liberado, rebosaba por encima del cuello de la casaca, estaba sentado en un sillón Voltaire, con las manos regordetas de viejo apoyadas simétricamente en los brazos del sillón, y casi dormía. Al oír la voz de Weyrother, abrió con esfuerzo su único ojo.
+
+«Sí, sí, por favor, que ya es tarde», dijo y, tras asentir con la cabeza, la dejó caer y volvió a cerrar los ojos.
+
+Si al principio los miembros del consejo creyeron que Kutúzov fingía dormir, los ruidos que hacía con la nariz durante la lectura que siguió demostraron que, en aquel momento, para el comandante en jefe se trataba de algo mucho más importante que el deseo de mostrar su desprecio por el plan de operaciones o por cualquier otra cosa. Se trataba de ceder al apremio irresistible de una necesidad humana, la de dormir. Dormía de veras. Weyrother, con el ademán de quien está demasiado ocupado para perder un solo minuto, miró a Kutúzov y, una vez convencido de que dormía, tomó el papel y empezó a leer en voz alta y monótona el plan de operaciones de la próxima batalla, bajo un título que también leyó:
+
+«Plan de operaciones para el ataque a la posición enemiga detrás de Kobelnitz y Sokolnitz, 20 de noviembre de 1805».
+
+El plan de operaciones era muy complicado y difícil. En el plan original se leía:
+
+«Da der Feind mit seinem linken Fluegel an die mit Wald bedeckten Berge lehnt und sich mit seinem rechten Fluegel laеngs Kobelnitz und Sokolnitz hinter die dort befindlichen Teiche zieht, wir im Gegentheil mit unserem linken Fluegel seinen rechten sehr debordiren, so ist es vortheilhaft letzteren Fluegel dse Feindes zu attakiren, besonders wenn wir die Doerfer Sokolnitz und Kobelnitz im Besitze haben, wodurch wir dem Feind zugleich in die Flanke fallen und ihn auf der Flaeche zwischen Schlapanitz und dem Thuerassa-Walde verfolgen koennen, indem wir dem Defileen von Schlapanitz und Bellowitz ausweichen, welche die feindliche Front decken. Zu diesem Endzwecke ist es noethig... Die erste Kolonne marschirt... die zweite Kolonne marschirt... die dritte Kolonne marschirt...»[^378], etcétera, leía Weyrother. Los generales parecían escuchar de mala gana aquel difícil plan de operaciones. El general Buxhöwden, alto y rubio, estaba de pie, con la espalda apoyada en la pared y los ojos fijos en una vela encendida. Parecía no escuchar y ni siquiera querer que se pensara que escuchaba. Justo enfrente de Weyrother estaba sentado el rubicundo Milorádovich, con los ojos brillantes y muy abiertos clavados en él, en actitud marcial, con las manos apoyadas en las rodillas y los codos hacia afuera, el bigote levantado y los hombros alzados. Guardaba un silencio obstinado, mirando a Weyrother a la cara, y solo apartaba los ojos de él cuando el jefe del Estado Mayor austríaco callaba. Entonces Milorádovich dirigía a los otros generales una mirada significativa. Pero por el significado de aquella mirada significativa no se podía saber si estaba de acuerdo o en desacuerdo, satisfecho o insatisfecho con el plan de operaciones. El conde de Langeron era quien estaba sentado más cerca de Weyrother. Con una sonrisa fina que no abandonó en toda la lectura su rostro de francés del sur, miraba sus dedos finos, que hacían girar rápidamente una tabaquera de oro con un retrato, sujetándola por las esquinas. En medio de uno de los períodos más largos, dejó de hacer girar la tabaquera, levantó la cabeza y, con una cortesía desagradable en la punta misma de sus finos labios, interrumpió a Weyrother y quiso decir algo. Pero el general austríaco, sin interrumpir la lectura, frunció el ceño con enojo y agitó los codos como diciendo: «Después, después me dirá usted lo que piensa, ahora haga el favor de mirar el mapa y escuchar». Langeron alzó los ojos con expresión de desconcierto y se volvió hacia Milorádovich como si buscara una explicación, pero, al encontrarse con la mirada significativa de Milorádovich, que nada significaba, bajó tristemente los ojos y volvió a hacer girar la tabaquera.
+
+«*Une leçon de géographie*[^379]», dijo como para sí, pero en voz lo bastante alta para que lo oyeran.
+
+Przebyshevski, con una cortesía respetuosa y digna, se puso la mano detrás de la oreja e inclinó la cabeza hacia Weyrother, con aire de escuchar absorto. Dojtúrov, de baja estatura, estaba sentado justo enfrente de Weyrother con aire aplicado y modesto y, encorvado sobre el mapa desplegado, estudiaba concienzudamente el plan de operaciones y el terreno, que le era desconocido. Varias veces le pidió a Weyrother que repitiera las palabras que no había oído bien y los nombres difíciles de las aldeas. Weyrother accedía a su petición y Dojtúrov tomaba nota.
+
+Cuando terminó la lectura, que había durado más de una hora, Langeron volvió a detener la tabaquera y, sin mirar a Weyrother ni a nadie en particular, empezó a hablar de lo difícil que era ejecutar un plan de operaciones que daba por conocida la posición del enemigo, cuando bien podía suceder que la desconociéramos, pues el enemigo estaba en movimiento. Las objeciones de Langeron eran fundadas, pero era evidente que su propósito principal era hacerle sentir al general Weyrother, que con tanta suficiencia les había leído su plan como a unos colegiales, que no trataba solo con tontos, sino también con hombres capaces de darle a él alguna lección en el arte militar. Cuando cesó el sonido monótono de la voz de Weyrother, Kutúzov abrió los ojos, como un molinero que se despierta al interrumpirse el ruido adormecedor de las ruedas del molino, prestó oído a lo que decía Langeron y, como si dijera «¡Y ustedes todavía con esas tonterías!», se apresuró a cerrar los ojos y bajó aún más la cabeza.
+
+Procurando herir con toda la mordacidad posible el amor propio de Weyrother como militar y autor del plan, Langeron sostenía que Bonaparte bien podía atacar en vez de ser atacado y que con ello dejaría todo aquel plan de operaciones enteramente inútil. Weyrother respondía a todas las objeciones con una sonrisa firme y desdeñosa, evidentemente preparada de antemano para cualquier objeción, le dijeran lo que le dijeran.
+
+«Si pudiera atacarnos, lo habría hecho hoy mismo», dijo.
+
+«¿Cree usted, entonces, que no tiene fuerzas para hacerlo?», dijo Langeron.
+
+«Mucho será si tiene cuarenta mil hombres», respondió Weyrother con la sonrisa de un médico a quien una curandera quiere recetarle un remedio.
+
+«En ese caso, se encamina a su propia perdición al esperar nuestro ataque», dijo Langeron con una fina sonrisa irónica, volviéndose otra vez en busca de confirmación hacia Milorádovich, que era quien estaba más cerca.
+
+Pero era evidente que en aquel momento, si en algo pensaba menos que en cualquier otra cosa, era en lo que discutían los generales.
+
+«*Ma foi*[^380]», dijo. «Mañana lo veremos todo en el campo de batalla».
+
+Weyrother volvió a sonreír con aquella sonrisa que decía que a *él* le resultaba risible y extraño que los generales rusos le hicieran objeciones y tener que demostrar aquello de lo que él mismo estaba más que convencido y de lo que ya había convencido a los soberanos, los emperadores.
+
+«El enemigo ha apagado los fuegos y se oye un ruido incesante en su campamento», dijo. «¿Qué significa eso? O se retira, que es lo único que debemos temer, o cambia de posición». (Sonrió con sorna.) «Pero aun si tomara posición en Turas, solo nos ahorraría muchos quebraderos de cabeza y todas las disposiciones seguirían siendo las mismas, hasta en el menor detalle».
+
+«¿Y de qué manera…?», dijo el príncipe Andréi, que llevaba ya tiempo esperando la ocasión de expresar sus dudas.
+
+Kutúzov se despertó, carraspeó pesadamente y recorrió con la mirada a los generales.
+
+«Señores, el plan de operaciones para mañana, o mejor dicho, para hoy (porque ya estamos en la primera hora del día), no puede modificarse», dijo. «Ya lo han oído y todos cumpliremos con nuestro deber. Y antes de la batalla no hay nada más importante…» (Hizo una pausa.) «… que dormir bien».
+
+Hizo ademán de incorporarse. Los generales se despidieron con una reverencia y se retiraron. Ya había pasado la medianoche. El príncipe Andréi salió.
+
+————
+
+El consejo de guerra, en el que el príncipe Andréi no había logrado expresar su opinión como esperaba, le dejó una impresión confusa e inquietante. No sabía quién tenía razón, si Dolgorúkov y Weyrother o Kutúzov, Langeron y los demás que desaprobaban el plan de ataque. «Pero ¿de veras no podía Kutúzov decirle directamente al soberano lo que pensaba? ¿De veras no se pueden hacer las cosas de otro modo? ¿De veras hay que arriesgar por consideraciones cortesanas y personales decenas de miles de vidas y la mía, *la mía*?», pensaba.
+
+«Sí, bien puede ser que mañana me maten», pensó. Y de pronto, ante aquella idea de la muerte, se alzó en su imaginación toda una serie de recuerdos, los más remotos y los más íntimos. Recordó su última despedida de su padre y de su esposa, recordó los primeros tiempos de su amor por ella, recordó que estaba embarazada, y sintió lástima de ella y de sí mismo. Enternecido por la tensión de los nervios y agitado, salió de la cabaña donde se alojaba con Nesvitski y se puso a caminar delante de la casa.
+
+La noche estaba brumosa y, a través de la niebla, se abría paso misteriosamente la luz de la luna. «¡Sí, mañana, mañana! —pensaba—. Mañana quizá todo se habrá acabado para mí, ya no existirán todos estos recuerdos, todos estos recuerdos ya no tendrán para mí sentido alguno. Y quizá mañana mismo, hasta diría que seguro mañana, lo presiento, me tocará por primera vez mostrar por fin todo lo que puedo hacer». Y se imaginó la batalla, la derrota, el combate concentrado en un solo punto y el desconcierto de todos los que estaban al mando. Y he aquí que por fin se le presenta ese instante feliz, ese Tolón que tanto tiempo llevaba esperando. Expone su parecer con firmeza y claridad tanto a Kutúzov como a Weyrother y a los emperadores. A todos les asombra lo acertado de su juicio, pero nadie se encarga de llevar a cabo lo que propone, y entonces toma el mando de un regimiento, de una división, pone por condición que nadie se inmiscuya ya en sus disposiciones, conduce a su división al punto decisivo y él solo obtiene la victoria. ¿Y la muerte y los sufrimientos?, dice otra voz. Pero el príncipe Andréi no responde a esa voz y sigue cosechando triunfos. Él solo traza el plan de la siguiente batalla. Tiene el cargo de oficial de servicio del ejército junto a Kutúzov, pero él solo lo hace todo. Él solo gana la siguiente batalla. Relevan a Kutúzov y lo nombran a él… Bueno, ¿y después?, dice de nuevo la otra voz, ¿y después, si para entonces no te han herido, matado o engañado diez veces? Bueno, ¿y después qué? «Bueno, y después… —se responde el príncipe Andréi—, no sé qué vendrá después, ni quiero ni puedo saberlo. Pero si quiero esto, si quiero la gloria, si quiero que la gente me conozca, si quiero que me quiera, yo no tengo la culpa de querer esto, de querer solo esto, de vivir solo para esto. ¡Sí, solo para esto! Nunca se lo diré a nadie, pero ¡Dios mío!, ¿qué voy a hacer si no amo más que la gloria, el amor de la gente? La muerte, las heridas, la pérdida de mi familia, nada me asusta. Y por mucho cariño y amor que les tenga a tantas personas —mi padre, mi hermana, mi esposa—, a los seres que más quiero, por terrible y [por] antinatural que parezca, ahora mismo los entregaría a todos por un minuto de gloria, de triunfo sobre los demás, por el amor de gente a la que no conozco ni conoceré, por el amor de esta gente de aquí», pensó mientras prestaba oído a las voces del patio de Kutúzov. En el patio de Kutúzov se oían las voces de los asistentes que se preparaban para dormir. Una voz, probablemente la de un cochero que se burlaba del viejo cocinero de Kutúzov, a quien el príncipe Andréi conocía y que se llamaba Tito, decía: «¿Tito, oye, Tito?»
+
+«Bueno», respondía el viejo.
+
+«Tito, vete a trillar», decía el bromista.
+
+«¡Bah, anda, vete al diablo!», se oyó decir, y las carcajadas de los asistentes y los criados ahogaron la voz.
+
+«¡Y aun así solo amo y aprecio el triunfo sobre todos ellos, aprecio esa fuerza misteriosa y esa gloria que flotan aquí mismo, sobre mí, en esta niebla!»
+
+[^378]: Puesto que el enemigo apoya su ala izquierda en los montes cubiertos de bosque y extiende su ala derecha a lo largo de Kobelnitz y Sokolnitz, por detrás de los estanques que allí se encuentran, y puesto que nuestra ala izquierda, por el contrario, supera a su derecha, nos conviene atacar esta última ala enemiga, sobre todo si ocupamos las aldeas de Sokolnitz y Kobelnitz, pues así podremos atacar al enemigo por el flanco y perseguirlo por la llanura entre Schlapanitz y el bosque de Turas, evitando el desfiladero entre Schlapanitz y Bellowitz, que protege el frente enemigo. Para este fin es necesario… La primera columna marcha… la segunda columna marcha… la tercera columna marcha…
+
+[^379]: Lección de geografía,
+
+[^380]: [Por Dios,]

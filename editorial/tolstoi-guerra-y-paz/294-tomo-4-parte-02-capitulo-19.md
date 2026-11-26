@@ -1,0 +1,25 @@
+## Tomo IV, parte II, capítulo XIX
+
+Cuando el hombre está en movimiento, siempre se inventa una meta para ese movimiento. Para recorrer mil verstas, necesita pensar que hay algo bueno al cabo de esas 1000 verstas. Hace falta imaginar una tierra prometida para tener fuerzas para seguir adelante.
+
+Moscú fue la tierra prometida de los franceses durante el avance, y la patria lo fue durante la retirada. Pero la patria quedaba demasiado lejos, y quien ha de recorrer 1000 verstas tiene que decirse, olvidando la meta final: «Hoy, al cabo de 40 verstas, llegaré a un lugar donde descansar y pasar la noche». Y ya en la primera etapa ese lugar de descanso eclipsa la meta final y concentra en sí todos los deseos y esperanzas. Los afanes que se manifiestan en un solo hombre siempre se intensifican en la multitud.
+
+Para los franceses que habían emprendido el regreso por el viejo camino de Smolensk, la meta final, la patria, quedaba demasiado lejos, y la meta más próxima, aquella hacia la que tendían todos los deseos y esperanzas, agigantados en la multitud, era Smolensk. No porque supieran que en Smolensk había muchas provisiones y tropas de refresco, ni porque se lo hubieran dicho (al contrario, los altos mandos del ejército y el propio Napoleón sabían que allí había pocas provisiones), sino porque solo eso podía darles fuerzas para seguir adelante y soportar las privaciones del momento. Tanto los que lo sabían como los que lo ignoraban se engañaban por igual y tendían hacia Smolensk como hacia la tierra prometida.
+
+Una vez en el camino principal, los franceses echaron a correr hacia la meta que se habían inventado, con una energía asombrosa, con una rapidez inaudita. Además de ese afán común, que fundía en un solo conjunto a las multitudes de franceses y les daba cierta energía, había otra causa que los mantenía unidos. Esa causa era su número. Su misma enormidad, como por efecto de la ley física de la atracción, hacía que la masa atrajera hacia sí a los hombres, uno por uno, como átomos. Se movían, los cien mil en masa, como un Estado entero.
+
+Cada uno de ellos deseaba una sola cosa: entregarse como prisionero, librarse de todos los horrores y desdichas. Pero, por un lado, la fuerza del afán común de llegar a Smolensk arrastraba a cada uno en la misma dirección. Por otro, un cuerpo de ejército no podía rendirse a una compañía, y aunque los franceses aprovechaban cualquier ocasión propicia para librarse unos de otros y se entregaban como prisioneros al menor pretexto decoroso, esos pretextos no siempre se presentaban. Su propio número y la rapidez con que avanzaban apiñados los privaban de esa posibilidad y hacían que para los rusos resultara no solo difícil, sino imposible detener aquel movimiento al que se dirigía toda la energía de la masa francesa. El desgarramiento mecánico del cuerpo no podía acelerar, más allá de cierto límite, el proceso de descomposición que estaba en marcha.
+
+Una bola de nieve no puede derretirse en un instante. Hay un lapso mínimo antes del cual, por mucho calor que se aplique, la nieve no puede derretirse. Al contrario, cuanto mayor es el calor, más se endurece la nieve que queda.
+
+Entre los jefes militares rusos, solo Kutúzov comprendía esto. Cuando quedó claro que el ejército francés huía por el camino de Smolensk, empezó a cumplirse lo que Konovnítsyn había previsto la noche del 11 de octubre. Todos los altos mandos del ejército querían distinguirse, cortarles el paso a los franceses, interceptarlos, hacerlos prisioneros, desbaratarlos, y todos exigían que se pasara a la ofensiva.
+
+Solo Kutúzov empleaba todas sus fuerzas (y son muy escasas las fuerzas de cualquier comandante en jefe) en oponerse a la ofensiva.
+
+Él no podía decirles lo que ahora decimos nosotros: ¿para qué dar batalla y cerrar el camino y perder a los nuestros y rematar inhumanamente a los desdichados? ¿Para qué todo eso, cuando de Moscú a Viazma se había derretido sin batalla un tercio de aquel ejército? Pero de su sabiduría de anciano sacaba lo que ellos podían entender y se lo decía. Les hablaba del puente de oro, y ellos se reían de él, lo calumniaban, echaban rayos y centellas y se hacían los valientes ante la fiera muerta.
+
+En las inmediaciones de Viazma, Yermólov, Milorádovich, Plátov y otros, que se hallaban cerca de los franceses, no pudieron resistir el impulso de cortarles el paso a dos cuerpos franceses y desbaratarlos. Para avisarle a Kutúzov de su intención, le enviaron en un sobre, en lugar del parte, una hoja de papel en blanco.
+
+Y por más que Kutúzov procuró contener a las tropas, nuestras tropas atacaron, tratando de cerrar el camino. Los regimientos de infantería, según cuentan, marcharon al ataque con música y redobles de tambor, y mataron y perdieron a miles de hombres.
+
+Pero, lo que es cortarles el paso, no se lo cortaron a nadie, ni pusieron a nadie en fuga. Y el ejército francés, que ante el peligro había cerrado aún más sus filas, siguió, derritiéndose a un ritmo constante, por el mismo camino funesto hacia Smolensk.

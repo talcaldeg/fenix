@@ -73,6 +73,7 @@ Solo se alojan obras de dominio público o con permiso de difusión; las protegi
 
 ## Novelas
 
+- [Guerra y paz - Lev Tolstói (1869)](https://talcaldeg.github.io/fenix/libro/tolstoi-guerra-y-paz/) - Pierre Bezújov recibe de improviso una herencia inmensa. Descarga gratuita en EPUB y PDF.
 - [Quo Vadis: A Narrative of the Time of Nero - Henryk Sienkiewicz (1896)](https://talcaldeg.github.io/fenix/libro/quo-vadis/) - Rome under Nero: the patrician Vinicius falls in love with Lygia, a young Christian, and through her comes to know the persecuted community, Saint Peter and Saint Paul. Descarga gratuita en EPUB y PDF.
 - [Orencio y Eloísa - Benjamín Franzani (2021)](https://talcaldeg.github.io/fenix/libro/orencio-y-eloisa/) - Siar, ciudad portuaria de un imperio en ruinas, resiste hace cinco años el asedio de un ejército enemigo. Se lee gratis en el sitio del titular.
 - [Edward o el Caballero Verde - Benjamín Franzani (2021)](https://talcaldeg.github.io/fenix/libro/edward-caballero-verde/) - Sir Edward de Uterra, armado caballero a los quince años tras velar sus armas en oración, se niega a llevar blasón hasta ganarse un nombre con sus hechos. Se lee gratis en el sitio del titular.

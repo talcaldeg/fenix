@@ -1,0 +1,33 @@
+## Tomo II, parte IV, capítulo XIII
+
+Poco después de las fiestas de Navidad, Nikolái le anunció a su madre que amaba a Sonia y que estaba firmemente decidido a casarse con ella. La condesa, que desde hacía tiempo advertía lo que ocurría entre Sonia y Nikolái y esperaba aquella explicación, lo escuchó en silencio y le dijo a su hijo que podía casarse con quien quisiera, pero que ni ella ni su padre le darían su bendición para semejante matrimonio. Por primera vez, Nikolái sintió que su madre estaba descontenta con él y que, pese a todo el amor que le tenía, no iba a ceder. Con frialdad y sin mirar a su hijo, mandó llamar a su marido. Cuando este llegó, la condesa quiso contarle en pocas palabras y con frialdad, delante de Nikolái, de qué se trataba, pero no pudo contenerse. Rompió a llorar de contrariedad y salió del cuarto. El viejo conde, vacilante, empezó a reconvenir a Nikolái y a pedirle que desistiera de su propósito. Nikolái respondió que no podía faltar a su palabra, y su padre, con un suspiro y visiblemente turbado, interrumpió enseguida lo que estaba diciendo y se fue a ver a la condesa. En todos sus choques con su hijo, el conde no dejaba de sentirse culpable ante él por el descalabro de sus finanzas, y por eso no podía enojarse con su hijo por negarse a casarse con una novia rica y elegir a Sonia, que no tenía dote. En aquella ocasión solo recordó con mayor viveza que, si sus finanzas no se hubieran desbaratado, no habría podido desear para Nikolái mejor esposa que Sonia, y que el único culpable de aquel descalabro era él, con su Mítinka y sus hábitos incorregibles.
+
+El padre y la madre no volvieron a hablar del asunto con su hijo. Pero unos días después la condesa mandó llamar a Sonia y, con una crueldad que ninguna de las dos esperaba, le reprochó a su sobrina que hubiera engatusado a su hijo y que fuera una ingrata. Sonia escuchó en silencio, con los ojos bajos, las crueles palabras de la condesa y no entendía qué le exigían. Estaba dispuesta a sacrificarlo todo por sus benefactores. La idea de sacrificarse era su idea predilecta, pero en este caso no lograba entender por quién debía sacrificarse ni qué tenía que sacrificar. No podía dejar de amar a la condesa y a toda la familia Rostov, como tampoco podía dejar de amar a Nikolái ni ignorar que la felicidad de él dependía de ese amor. Estaba callada y triste, y no respondía. A Nikolái le pareció que ya no podía soportar aquella situación y fue a hablar con su madre. Tan pronto le suplicaba que los perdonara a él y a Sonia y consintiera en su matrimonio como la amenazaba con casarse en el acto y en secreto con Sonia si seguían hostigándola.
+
+La condesa, con una frialdad que su hijo jamás le había visto, le respondió que era mayor de edad, que el príncipe Andréi iba a casarse sin el consentimiento de su padre y que él podía hacer lo mismo, pero que ella jamás reconocería a esa *intrigante* como hija suya.
+
+La palabra *intrigante* hizo estallar a Nikolái. Alzando la voz, le dijo a su madre que nunca había imaginado que ella lo obligaría a vender sus sentimientos y que, si era así, era la última vez que hablaba… Pero no alcanzó a pronunciar la palabra decisiva que, a juzgar por la expresión de su rostro, su madre aguardaba con horror y que quizá habría quedado para siempre entre ellos como un recuerdo cruel. No alcanzó a terminar porque Natasha, pálida y seria, entró en el cuarto por la puerta junto a la cual había estado escuchando a escondidas.
+
+«¡Nikólinka, estás diciendo tonterías, cállate, cállate! ¡Te digo que te calles!…», dijo casi a gritos para ahogar la voz de su hermano.
+
+«Mamá, querida, no es por eso en absoluto… mi vida, pobrecita», le decía a su madre, que, sintiéndose al borde de la ruptura, miraba horrorizada a su hijo, pero, por terquedad y llevada por el ardor de la disputa, no quería ni podía ceder.
+
+«Nikólinka, yo te lo explicaré, vete. Escúcheme usted, mamita querida», le decía a su madre.
+
+Sus palabras no tenían sentido, pero consiguieron el efecto que buscaba.
+
+La condesa, entre hondos sollozos, escondió el rostro contra el pecho de su hija, y Nikolái se levantó, se llevó las manos a la cabeza y salió del cuarto.
+
+Natasha se encargó de reconciliarlos y consiguió que su madre le prometiera a Nikolái que dejarían en paz a Sonia, y que él, por su parte, prometiera que no haría nada a espaldas de sus padres.
+
+Con la firme intención de poner en orden sus asuntos en el regimiento y luego retirarse del servicio, volver y casarse con Sonia, Nikolái, triste y serio, distanciado de los suyos, pero, según le parecía, apasionadamente enamorado, se marchó a su regimiento a principios de enero.
+
+Después de la partida de Nikolái, la casa de los Rostov se volvió más triste que nunca. La condesa enfermó de congoja.
+
+Sonia estaba triste por estar separada de Nikolái y, más aún, por el tono hostil con que la condesa no podía dejar de tratarla. El conde estaba más preocupado que nunca por el mal estado de sus asuntos, que exigían alguna medida decisiva. Había que vender la casa de Moscú y la finca de las afueras, y para vender la casa había que ir a Moscú. Pero la salud de la condesa obligaba a aplazar la partida de un día para otro.
+
+Natasha, que al principio había llevado con facilidad y hasta con alegría la separación de su prometido, ahora se ponía cada día más inquieta e impaciente. La atormentaba sin tregua pensar que así, en vano, sin provecho para nadie, se le iba la mejor época de su vida, que habría dedicado a amarlo. La mayoría de las cartas de él la irritaban. Le resultaba ofensivo pensar que, mientras ella vivía solo pensando en él, él vivía una vida de verdad, veía lugares nuevos, gente nueva que le interesaba. Cuanto más amenas eran las cartas de él, más la contrariaban. Las que ella le escribía no solo no le daban consuelo, sino que le parecían una obligación tediosa y falsa. No sabía escribir porque no concebía que en una carta pudiera expresar con verdad siquiera una milésima parte de lo que solía expresar con la voz, la sonrisa y la mirada. Le escribía cartas secas, de una monotonía clásica, a las que ella misma no daba la menor importancia y cuyos errores de ortografía la condesa le corregía en los borradores.
+
+La salud de la condesa seguía sin mejorar, pero ya no era posible aplazar el viaje a Moscú. Había que preparar el ajuar, había que vender la casa y, además, se esperaba que el príncipe Andréi llegara primero a Moscú, donde aquel invierno vivía el príncipe Nikolái Andréich, y Natasha estaba segura de que Andréi ya había llegado.
+
+La condesa se quedó en el campo, y el conde se fue a Moscú a fines de enero, llevándose consigo a Sonia y a Natasha.
