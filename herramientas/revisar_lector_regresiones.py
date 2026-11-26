@@ -27,6 +27,7 @@ def epub():
         z.writestr("OPS/nav.xhtml", """<html xmlns="http://www.w3.org/1999/xhtml"><body>
           <nav role="doc-toc"><ol><li><a href="cap.xhtml#seccion%fin">Capítulo de prueba</a></li></ol></nav></body></html>""")
         z.writestr("OPS/cap.xhtml", """<html xmlns="http://www.w3.org/1999/xhtml"><body><h1 id="seccion%fin">Capítulo de prueba</h1>
+          <nav class="indice"><ol><li><a id="indice-epub" href="#seccion%25fin">Índice propio del libro</a></li></ol></nav>
           <p>Una   frase <em>singular</em> con acento: corazón.</p><p>Otra línea.</p>""" +
           "<p>Un párrafo largo para probar que una nota y el progreso sigan disponibles.</p>" * 14 +
           "</body></html>")
@@ -75,6 +76,11 @@ def verificar(nav, base, w, h):
         pg.locator("#dlgLibro").wait_for(state="hidden")
         pg.locator(".abrir-tarjeta").press("Space")
         pg.locator("#vistaLectura:not([hidden]) #texto .lx-cap").wait_for()
+        enlace_epub = pg.locator("#texto nav.indice a")
+        assert enlace_epub.count() == 1, "No se cargó el índice interno del EPUB de prueba."
+        assert enlace_epub.evaluate("(e) => getComputedStyle(e).minHeight") != "44px", (
+            "El índice interno del EPUB heredó la altura de los enlaces del panel."
+        )
         assert pg.locator("#barraLectura").evaluate("(e) => e.inert")
         pg.locator("#btnComandos").focus()
         pg.keyboard.press("Enter")
