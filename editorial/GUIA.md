@@ -732,3 +732,97 @@ con el encabezado `## Shelley`. Sin la introducción de Wyndham de la edición d
 - **Notas doctrinales**: ninguna. La auditoría descartó la de la indisolubilidad (t1) y la del
   juicio final (t3) porque el propio texto resuelve la tensión («extravío deplorable»; «nos
   negamos a juzgar», «Esperemos»).
+
+
+## Dejar a esta niña (Takashi Nagai, *この子を残して*, 1948, desde el japonés)
+
+Original: texto de Aozora Bunko (tarjeta 49192; base: San Paolo, 1995, que sigue la primera
+edición de Kōdansha, 1948, y cambia «天主» por «神»: los dos son «Dios»), partido en
+`fenix_fuentes/nagai-kono-ko/tramos/nagai_NN_secAA-BB.txt`; la salida va en
+`editorial/nagai-kono-ko-wo-nokoshite/nagai_NN_secAA-BB.md` (mismo nombre base). Takashi Nagai
+(1908-1951), radiólogo católico de Nagasaki, enfermo de leucemia por la radiación y viudo por la
+bomba atómica, escribe desde su cama en el Nyokodō para sus dos hijos, Makoto y Kayano, que
+quedarán huérfanos. Prosa de médico y de padre: concreta, tierna sin ser empalagosa, con humor
+suave y pasajes de oración. Español culto actual, sencillo, sin arcaísmos ni cultismos (error 15).
+El japonés literario de 1948 (finales en «ぬ», «ゆく», «おらぬ») no se calca con arcaísmos: va en
+castellano llano.
+
+- **Fidelidad**: cada oración del japonés tiene su traducción; no se resume ni se explica. Un
+  párrafo del original es un párrafo de la traducción. El japonés omite sujetos: se reponen solo
+  donde el castellano los necesita para entenderse.
+- **Encabezados**: cada `## 摂理` pasa a `## Providencia` (título traducido, breve). Títulos fijos:
+  この子を残して → Dejar a esta niña; 摂理 → Providencia; 遺産 → Herencia; 父母 → Padre y madre;
+  孤児 → Huérfanos; 微笑 → Sonrisa; 真実 → Verdad; 第一のおきて → El primer mandamiento; 空の鳥 →
+  Las aves del cielo; 神の力と人の力 → La fuerza de Dios y la fuerza del hombre; 神に甘える →
+  Dejarse mimar por Dios; 迷う羊 → La oveja perdida; 処方 → Receta; たこあげ → Volar cometas;
+  完全な幸福 → La felicidad completa; 泣く人 → Los que lloran; いと小さきもの → Los más pequeños;
+  孤児に仕える → Servir a los huérfanos; はと仲間 → Los compañeros de la paloma;
+  子に向かってもらした言葉 → Palabras dichas a mis hijos; 初旅 → El primer viaje; 入学式 → El
+  primer día de escuela; 家に父あれば → Si hay un padre en casa; 子守 → Cuidar a la pequeña;
+  ステンドグラス → El vitral; 死ぬほうがよい → Más vale morir; 長男 → El hijo mayor; へりくだり →
+  Humildad; 気合い → Coraje; 科学者と宗教 → El científico y la religión; 神のことば → La palabra
+  de Dios; 医者 → El médico; 専門 → La especialidad; 科学者 → El científico; 人生の目的 → El fin
+  de la vida; 職業 → El oficio; 永遠の生活 → La vida eterna; 骨肉 → La propia sangre;
+  切られた枝 → La rama cortada; 如己堂 → El Nyokodō.
+- **Separadores**: `＊　　　　　　　＊` → una línea `* * *` sola.
+- **Ilustraciones**: la línea `[ILUSTRACION fig49192_NN]` se conserva tal cual, sola en su línea,
+  en el mismo lugar (se reemplaza al armar). El pie «廃墟の子ども　永井　隆　画» va como
+  `*Niños entre las ruinas. Dibujo de Takashi Nagai.*`.
+- **Nombres**: 誠一 → Makoto (así lo llamaba su padre; nunca «Seiichi»); 茅野, カヤノ → Kayano;
+  カヤちゃん → Kaya; 緑 → Midori (la esposa); 如己堂 → el Nyokodō (la primera vez de cada tramo
+  que aparezca solo, «el Nyokodō»; el autor explica el nombre en la última sección); 浦上 →
+  Urakami; 浦上天主堂 → la catedral de Urakami; 長崎 → Nagasaki; 原子野 → el páramo atómico;
+  中田神父様 → el padre Nakata; 深堀宿老さん → el señor Fukahori, anciano de la comunidad; さん,
+  君, ちゃん → se omiten salvo que haga falta («tía», «señora»); 叔母さん → la tía; 先生 →
+  doctor (a Nagai) o maestro, maestra (en la escuela). Los nombres japoneses, nombre de pila
+  antes del apellido (Takashi Nagai), sin macrones salvo en Nyokodō.
+- **Glosario**: 原子病 → enfermedad atómica; 原子爆弾, 原爆 → bomba atómica; 放射線 →
+  radiación (rayos, si son rayos X o «レントゲン線»); レントゲン → rayos X (el aparato:
+  «el equipo de rayos X»; la unidad «レントゲン単位» → roentgen); 白血病 → leucemia; 公教要理
+  → catecismo; ロザリオ → rosario; 天主堂, 教会 → iglesia (la de Urakami, catedral); 神父 →
+  sacerdote, padre; 信者 → fieles, católicos; 神のみ栄えのために → para la gloria de Dios;
+  摂理 → providencia; 燔祭 → holocausto (sacrificio); モンペ → pantalones de trabajo (*monpe*,
+  la primera vez en cursiva con esa glosa en el propio texto: «los *monpe*, los pantalones de
+  trabajo»); 畳 → tatami (sin cursiva); 二畳 → «de dos tatamis»; もっこ → canasto de acarreo;
+  バラック → barracas; 瓦 → tejas, escombros de teja; 徴用工 → obreros movilizados.
+- **Habla de los niños y dialecto de Nagasaki**: el poema infantil de «Volar cometas» va en habla
+  simple de niño, sin formas fonéticas ni regionalismos de un país. El glosario de dialecto que
+  le sigue («注» y las líneas «上りたか……上りたい») no se traduce: en su lugar, una nota
+  `[^ed1]: N. del E.: el original trae aquí un breve glosario del dialecto de Nagasaki en que
+  está escrito el poema.`
+- **Poesía**: los tanka y versos (p. ej. «燔祭の炎のなかにうたいつつ／白百合少女燃えにけるかも»)
+  van en bloque `> `, verso por línea, fieles al sentido, sin forzar rima. Las coplas de las
+  enfermeras (数え歌, «三ツとせ...») se traducen fieles, entre comillas dentro del párrafo como
+  en el original, conservando la cuenta («Tres: ...», «Seis: ...»).
+- **Citas bíblicas**: Nagai cita la Biblia en japonés antiguo («今日在りて明日炉に投げ入れらるる
+  野の草をさえ...»). Toda cita bíblica se identifica (libro, capítulo, versículo) y va con la
+  redacción de la Biblia de Navarra, obtenida con `python
+  C:\Users\ASISTENTECOMERCIAL01\Desktop\Personal\Claude\fenix_fuentes\biblia-navarra\navarra.py
+  "Mt 6,30"` (nunca de memoria ni de la web), con «ustedes» y Él, Tú, Ti para Dios. Si Nagai
+  abrevia o parafrasea, se traduce lo que él dice y la nota da el lugar con «Cf.». Cada cita
+  lleva nota al pie `[^edN]: Mt 6, 30.` (o «Cf. Mt 6, 30.»). Numeración `ed1`, `ed2`... por
+  archivo.
+- **Otras citas** (oraciones, el Catecismo, santos): bloque `> ` o comillas como en el original,
+  con nota `[^edN]` que dé la fuente si se puede identificar; si no, la nota dice «N. del E.: no
+  hemos hallado la fuente de esta cita.». Las oraciones conocidas (avemaría, padrenuestro) van
+  con el texto litúrgico castellano habitual.
+- **Diálogo**: las 「...」 pasan a comillas «...»; dentro, “...”. Verbo de decir después, coma
+  tras el cierre, también tras ? o !; el punto final fuera de la comilla. El 「と言った」 que en
+  japonés va en línea aparte se une al diálogo en un solo párrafo: «Ah... el olor de papá»,
+  dijo.
+- **Tratamiento**: Nagai a sus hijos, de tú; los hijos al padre, de tú («papá»: お父さん →
+  papá; お母さん → mamá); Nagai a Dios, de Tú, con la regla de mayúsculas de la Guía. Plural de
+  segunda persona: «ustedes».
+- **Puntuación japonesa**: «――» y «……» del japonés no pasan a raya ni a guion: el inciso, con
+  comas, dos puntos o paréntesis; la pausa larga, con puntos suspensivos «...» (tres, nunca
+  seis).
+- **Decisiones de los primeros tramos** (rigen en todos; el revisor unifica): 孤児収容所 →
+  albergue de huérfanos; 孤児園 → orfanato; 浮浪児狩り → caza de niños vagabundos; 少年の町 →
+  Ciudad de los Muchachos (Flanagan); 純心 → Junshin; 大村 → Omura; 桜島 → Sakurajima; 山伏 →
+  «asceta de montaña, un *yamabushi*»; ララ → LALA; 原子爆弾症 → enfermedad de la bomba
+  atómica; 清貧・貞潔・従順 → pobreza, castidad y obediencia; 「聖母の騎士」 → *El Caballero de
+  la Inmaculada* (la revista de san Maximiliano Kolbe); 第一次欧州戦争 → la Primera Guerra
+  Mundial. Dios como «お父さん» → «tu Padre», «el Padre del cielo», nunca «papá». Nombres en
+  romanización Hepburn sin macrones (Ichiro, Ozasa, Tomonaga).
+- **Cifras**: años de la era Shōwa se dejan como en el original y, si aparecen, se agrega el año
+  occidental entre paréntesis la primera vez: «el 30 de abril de Shōwa 23 (1948)».

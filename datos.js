@@ -202,6 +202,34 @@ window.FENIX = {
       parecidos: ["one-with-jesus", "imitacion-de-cristo", "presencia-de-dios"]
     },
     {
+      id: "nagai-kono-ko-wo-nokoshite",
+      titulo: "Dejar a esta niña",
+      autor: "Takashi Nagai",
+      anio: "1948",
+      idioma: "es",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {
+        es: "Memorias y meditaciones de Takashi Nagai (1908-1951), médico radiólogo católico de Nagasaki. Viudo desde la bomba atómica de 1945 y enfermo de leucemia por la radiación, escribe en 1948, desde su cama en una casita de dos tatamis, para sus dos hijos, Makoto y Kayano, que quedarán huérfanos. En cuarenta secciones breves habla de la providencia, de la vida de los huérfanos, de la fe, de la ciencia y de la muerte, y de cómo criar a unos niños que no tendrán padre.",
+        en: "Memoirs and meditations by Takashi Nagai (1908-1951), a Catholic radiologist from Nagasaki. A widower since the atomic bomb of 1945 and ill with leukemia from the radiation, he writes in 1948, from his bed in a two-tatami hut, for his two children, Makoto and Kayano, who will be left orphans. In forty short sections he speaks of providence, of the life of orphans, of faith, of science and of death, and of how to raise children who will have no father."
+      },
+      porque: {"es": "Para cuando te toque acompañar a alguien, o sostenerte tú, en una pérdida que no tiene arreglo. Nagai escribe como médico y como padre, con humor suave y sin adornos, y da razones concretas para confiar en Dios cuando todo lo demás se ha perdido. Se lee en secciones breves, de a una.", "en": "For when it falls to you to stand beside someone, or to hold yourself up, in a loss that cannot be mended. Nagai writes as a physician and as a father, with gentle humour and no ornament, and gives concrete reasons to trust in God when everything else has been lost. It is read in short sections, one at a time."},
+      imagen: { src: "img/portadas/nagai-kono-ko-wo-nokoshite.jpg", credito: { es: "Takashi Nagai, Niño entre las ruinas de Urakami, dibujo de la portadilla de Kono ko wo nokoshite, 1948", en: "Takashi Nagai, Child among the ruins of Urakami, frontispiece drawing of Kono ko wo nokoshite, 1948" }, url: "https://www.aozora.gr.jp/cards/000924/card49192.html" },
+      citas: [
+        "¡Dejar a esta niña, y tener que irme muy pronto de este mundo!",
+        "Como ha olvidado el olor de su madre, añora al menos el de su padre, y espera a verme dormido para acercarse a escondidas: ¡qué conmovedora es el alma de una criatura!",
+        "Dicen que hasta el árbol seco, mientras no cae, da cobijo en el hueco de su tronco a los pajarillos y los resguarda de la lluvia y del viento."
+      ],
+      archivos: { epub: "libros/nagai-dejar-a-esta-nina.epub", pdf: "libros/nagai-dejar-a-esta-nina.pdf" },
+      editorial: {
+        es: "Primera traducción al castellano, de Proyecto Fénix, hecha directamente del japonés de 1948, con los dibujos del autor y dos fotografías de la primera edición, notas que identifican sus citas bíblicas y aclaran con el Catecismo una docena de pasajes; revisada en sus pasajes doctrinales; preparada con ayuda de inteligencia artificial, con nota de la edición.",
+        en: "First Spanish translation, by Proyecto Fénix, made directly from the Japanese of 1948, with the author's drawings and two photographs from the first edition, notes that identify his biblical quotations and clarify a dozen passages with the Catechism; reviewed in its doctrinal passages; prepared with the help of artificial intelligence, with an edition note."
+      },
+      fuente: { texto: "この子を残して (Kōdansha, 1948), texto de Aozora Bunko, tarjeta 49192 (dominio público)", url: "https://www.aozora.gr.jp/cards/000924/card49192.html" },
+      delibris: null,
+      parecidos: ["historia-de-un-alma", "preparacion-para-la-muerte", "imitacion-de-cristo"]
+    },
+    {
       id: "one-with-jesus",
       titulo: "La vida de identificación con Cristo Jesús",
       autor: "Paul de Jaegher, S.J.",

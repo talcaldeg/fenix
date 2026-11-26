@@ -177,7 +177,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   footer .pie-base{display:flex; flex-wrap:wrap; justify-content:space-between; gap:6px 28px; border-top:1px solid rgba(233,194,106,.22); padding-top:18px; font-size:13px}
   footer .pie-base p{margin:0; opacity:.85} footer .pie-base p:first-child{max-width:68ch}
   @media (max-width:720px){ footer .pie-cols{grid-template-columns:1fr 1fr; gap:26px 24px} footer .pie-marca{grid-column:1 / -1} }
-
+  
   /* Menú de la biblioteca (mismas reglas que index.html): en una fila sobre 960 px y bajo «Menú» en el celular. */
   nav.menu{display:flex; align-items:center; gap:2px; white-space:nowrap; margin-left:auto}
   nav.menu a, nav.menu summary{font:15px/1.33 var(--letra); font-size-adjust:.46; text-decoration:none; color:var(--muted); padding:6px 10px; border-radius:8px}
@@ -196,7 +196,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
   }
   /* Ambiente de biblioteca, igual que index.html (9-nov-2026): papel y tinta, cabecera y pie de nogal, EB Garamond.
      La paleta y las texturas se toman de index.html (PALETA), para no tener dos copias. */
-
+  
   :root{
     color-scheme: light dark;
     --bg:#f6f0e1; --bg2:#ede4cf; --card:#fbf7ec; --line:#dccfb3; --ink:#1e2230; --muted:#5a4c3e;
@@ -256,7 +256,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
     --grano:var(--papel-osc); --luz:radial-gradient(ellipse 900px 520px at 50% -80px,rgba(217,164,65,.09),transparent 70%);
     --fondo:var(--fondo-cuero); --resplandor:rgba(232,140,50,.3);
   }
-
+  
   body{font-family:var(--letra); font-size-adjust:.46; font-variant-numeric:oldstyle-nums proportional-nums; font-kerning:normal;
        background:var(--luz) no-repeat, var(--grano) 0 0/180px 180px repeat, var(--bg)}
   h1,h2{font-weight:600} h2{font-weight:500}
@@ -310,7 +310,7 @@ new MutationObserver(function(){var bg=r.dataset.theme&&getComputedStyle(r).getP
       <p class="ayuda">¿Cuál elegir? El PDF se abre directo en el navegador, en cualquier celular o computador. El EPUB queda en Descargas y se lee con una aplicación de lectura (Google Play Libros en Android, Libros en iPhone, Kindle o Kobo), que deja agrandar la letra.</p>
     </div>
     <div class="cabeza">
-
+      
       <h1>Mansfield Park<span class="sub">Gratis en EPUB y PDF</span></h1>
       <p class="meta">Jane Austen · 1814 · <a href="../../../categoria/novela/">Novelas</a></p>
       <p class="meta">También en inglés: <a href="../../../libro/austen-mansfield-park/" hreflang="en" lang="en">Mansfield Park</a></p>

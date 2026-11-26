@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://talcaldeg.github.io/fenix/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/dona/</loc>
@@ -63,6 +63,10 @@
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/marmion-vida-del-alma/</loc>
     <lastmod>2026-11-23</lastmod>
+  </url>
+  <url>
+    <loc>https://talcaldeg.github.io/fenix/libro/nagai-kono-ko-wo-nokoshite/</loc>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/one-with-jesus/</loc>
@@ -742,7 +746,7 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-mansfield-park/es/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/austen-northanger-abbey/</loc>
@@ -970,6 +974,6 @@
   </url>
   <url>
     <loc>https://talcaldeg.github.io/fenix/libro/doyle-las-aventuras-de-sherlock-holmes/</loc>
-    <lastmod>2026-11-25</lastmod>
+    <lastmod>2026-11-26</lastmod>
   </url>
 </urlset>

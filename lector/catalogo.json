@@ -22,6 +22,16 @@
    "portada": "img/portadas/marmion-vida-del-alma.jpg"
   },
   {
+   "id": "nagai-kono-ko-wo-nokoshite",
+   "idioma": "es",
+   "titulo": "Dejar a esta niña",
+   "autor": "Takashi Nagai",
+   "epub": "libros/nagai-dejar-a-esta-nina.epub",
+   "bytes": 1873110,
+   "sha": "a42ba3b68f50e35666fd818fcf57c1f77f2ea50bbed973c45d1e93f99b734ff9",
+   "portada": "img/portadas/nagai-kono-ko-wo-nokoshite.jpg"
+  },
+  {
    "id": "one-with-jesus",
    "idioma": "es",
    "titulo": "La vida de identificación con Cristo Jesús",
