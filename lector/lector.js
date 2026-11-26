@@ -775,7 +775,6 @@
     await maquetar(typeof pagina === "number" ? pagina + 2 : pagina === "fin" ? Infinity : 2);
     if (lectura !== L || L.cambioCapitulo !== cambio) return false;
     irPagina(pagina === "fin" ? L.paginas - 1 : (pagina || 0), false);
-    marcarIndice();
     // Con el capítulo ya a la vista, se prepara el siguiente (él, 25-nov-2026: «se queda pegado al cambiar de capítulo»).
     setTimeout(() => {
       if (lectura !== L || L.cambioCapitulo !== cambio || L.previo || i + 1 >= L.ep.spine.length) return;
@@ -1173,17 +1172,42 @@
   // ---------- índice ----------
   function pintarIndice(){
     const L = lectura;
-    const lista = items => `<ol>${items.map(x => `<li><a href="#" data-ruta="${esc(x.ruta)}" data-frag="${esc(x.frag)}">${esc(x.titulo)}</a>${x.hijos && x.hijos.length ? lista(x.hijos) : ""}</li>`).join("")}</ol>`;
+    let entradas = 0;
+    const lista = items => `<ol role="list">${items.map(x => {
+      entradas++;
+      return `<li><a href="#" data-ruta="${esc(x.ruta)}" data-frag="${esc(x.frag)}"><span>${esc(x.titulo)}</span></a>${x.hijos && x.hijos.length ? lista(x.hijos) : ""}</li>`;
+    }).join("")}</ol>`;
     const items = L.ep.toc.length ? L.ep.toc : L.ep.spine.map((s, k) => ({ titulo: `Sección ${k + 1}`, ruta: s.href, frag: "", hijos: [] }));
     $("#indice").innerHTML = lista(items);
-    marcarIndice();
+    $("#indiceCuenta").textContent = `${entradas} ${entradas === 1 ? "entrada" : "entradas"} · Toca para ir`;
+    const ruta = L.ep.spine[L.i].href;
+    let actual = null, mejor = -1;
+    // Un EPUB puede incluir todo el libro en un archivo: se distingue por fragmento, no solo por ruta.
+    for (const a of $$("#indice a")) {
+      if (a.dataset.ruta !== ruta) continue;
+      const el = a.dataset.frag ? document.getElementById("e_" + a.dataset.frag) : null;
+      if (a.dataset.frag && (!el || !el.getClientRects().length)) continue;
+      const pagina = el ? paginaDeElemento(el) : 0;
+      if (pagina <= L.pag && (pagina > mejor || (pagina === mejor && !actual?.dataset.frag && a.dataset.frag))) {
+        actual = a; mejor = pagina;
+      }
+    }
+    if (actual) {
+      actual.setAttribute("aria-current", "location");
+      const etiqueta = document.createElement("span");
+      etiqueta.className = "indice-actual";
+      etiqueta.setAttribute("aria-hidden", "true");
+      etiqueta.textContent = "Aquí";
+      actual.append(etiqueta);
+    }
+    return actual;
   }
-  function marcarIndice(){
-    if (!lectura) return;
-    const actual = lectura.ep.spine[lectura.i].href;
-    $$("#indice a").forEach(a => a.toggleAttribute("aria-current", a.dataset.ruta === actual && !a.dataset.frag));
-  }
-  $("#btnIndice").onclick = () => { pintarIndice(); $("#dlgIndice").showModal(); const a = $("#indice a[aria-current]"); if (a) a.scrollIntoView({ block: "center" }); };
+  $("#btnIndice").onclick = () => {
+    const a = pintarIndice(), dlg = $("#dlgIndice");
+    dlg.scrollTop = 0;
+    dlg.showModal();
+    if (a) a.scrollIntoView({ block: "center", inline: "nearest" });
+  };
   $("#indice").addEventListener("click", async e => {
     const a = e.target.closest("a"); if (!a) return;
     e.preventDefault();
