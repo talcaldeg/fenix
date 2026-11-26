@@ -607,6 +607,8 @@
   }
   function cerrarLectura(pintar = true){
     if (!lectura) return;
+    const pendiente = terminarVuelta();
+    if (pendiente !== undefined) aplicarPagina(pendiente);
     guardarPosicion(true);
     for (const u of lectura.recursos.values()) URL.revokeObjectURL(u);
     lectura = null;
@@ -734,6 +736,7 @@
 
   async function mostrarCapitulo(i, pagina){
     const L = lectura; if (!L) return false;
+    terminarVuelta();
     const cambio = L.cambioCapitulo = (L.cambioCapitulo || 0) + 1;
     i = Math.max(0, Math.min(L.ep.spine.length - 1, i));
     cerrarSeleccion(); cerrarFlotante();
@@ -774,7 +777,7 @@
     $("#capActual").textContent = tituloCapitulo();
     await maquetar(typeof pagina === "number" ? pagina + 2 : pagina === "fin" ? Infinity : 2);
     if (lectura !== L || L.cambioCapitulo !== cambio) return false;
-    irPagina(pagina === "fin" ? L.paginas - 1 : (pagina || 0), false);
+    irPagina(pagina === "fin" ? L.paginas - 1 : (pagina || 0));
     marcarIndice();
     // Con el capítulo ya a la vista, se prepara el siguiente (él, 25-nov-2026: «se queda pegado al cambiar de capítulo»).
     setTimeout(() => {
@@ -880,13 +883,25 @@
       piesDeFondo();
     }, 40);
   }
-  function irPagina(p, animar = true, ancla = null){
+  let vuelta;
+  const reducirMovimiento = matchMedia("(prefers-reduced-motion: reduce)");
+  function terminarVuelta(){
+    if (!vuelta) return;
+    const { transicion, pendiente } = vuelta;
+    vuelta = undefined;
+    delete document.documentElement.dataset.vuelta;
+    transicion.skipTransition();
+    return pendiente;
+  }
+  function irPagina(p, ancla = null){
+    terminarVuelta();
+    aplicarPagina(p, ancla);
+  }
+  function aplicarPagina(p, ancla = null){
     const L = lectura; if (!L) return;
     if (L.pies) asegurarPies((Math.round(p) || 0) + 2);
     L.pag = Math.max(0, Math.min(L.paginas - 1, Math.round(p) || 0));
-    const t = $("#texto");
-    t.classList.toggle("sin-animar", !animar);
-    t.style.transform = `translateX(${-L.pag * L.paso}px)`;
+    $("#texto").style.transform = `translateX(${-L.pag * L.paso}px)`;
     cerrarFlotante();
     // El ancla se toma acá y no al girar o cambiar la letra: para entonces el texto ya se movió. Al
     // repaginar se conserva la de antes (va en algún lugar de la página nueva); si se tomara de nuevo, cada
@@ -896,20 +911,38 @@
     guardarPosicion();
     pantallaEncendida(true);
   }
-  let ocupado = false;
-  async function siguiente(){
-    const L = lectura; if (!L || ocupado) return;
-    if (L.pag < L.paginas - 1) return irPagina(L.pag + 1);
-    if (L.i >= L.ep.spine.length - 1) { irPagina(L.pag); aviso("Fin del libro."); return; }
-    ocupado = true;
-    try { await mostrarCapitulo(L.i + 1, 0); } finally { ocupado = false; }
+  function voltearPagina(p, paso){
+    document.documentElement.dataset.vuelta = paso > 0 ? "adelante" : "atras";
+    const actual = { pendiente: p };
+    actual.transicion = document.startViewTransition(() => {
+      if (vuelta !== actual) return;
+      delete actual.pendiente;
+      aplicarPagina(p);
+    });
+    vuelta = actual;
+    // Una captura puede omitirse (por ejemplo, si se gira el teléfono), pero el cambio se aplica igual.
+    actual.transicion.ready.catch(() => {});
+    const limpiar = () => { if (vuelta === actual) terminarVuelta(); };
+    actual.transicion.finished.then(limpiar, limpiar);
   }
-  async function anterior(){
+  let ocupado = false;
+  const siguiente = () => pasarPagina(1);
+  const anterior = () => pasarPagina(-1);
+  async function pasarPagina(paso){
     const L = lectura; if (!L || ocupado) return;
-    if (L.pag > 0) return irPagina(L.pag - 1);
-    if (L.i === 0) { irPagina(0); return; }
+    const enCurso = !!vuelta, pendiente = terminarVuelta();
+    if (pendiente !== undefined) aplicarPagina(pendiente);
+    const p = L.pag + paso;
+    if (p >= 0 && p < L.paginas) {
+      if (enCurso || reducirMovimiento.matches || !document.startViewTransition) aplicarPagina(p);
+      else voltearPagina(p, paso);
+      return;
+    }
+    const i = L.i + paso;
+    if (i < 0) return;
+    if (i >= L.ep.spine.length) { aviso("Fin del libro."); return; }
     ocupado = true;
-    try { await mostrarCapitulo(L.i - 1, "fin"); } finally { ocupado = false; }
+    try { await mostrarCapitulo(i, paso > 0 ? 0 : "fin"); } finally { ocupado = false; }
   }
   let reajT;
   function reajustar(){
@@ -918,7 +951,7 @@
       const L = lectura; if (!L) return;
       const ancla = L.ancla, cambio = L.cambioCapitulo;
       await maquetar();
-      if (lectura === L && L.cambioCapitulo === cambio) irPagina(ancla ? paginaDePos(ancla) : L.pag, false, ancla);
+      if (lectura === L && L.cambioCapitulo === cambio) irPagina(ancla ? paginaDePos(ancla) : L.pag, ancla);
     }, 150);
   }
   // La línea recorre el libro entero (0 a 1000, por tamaño de cada capítulo): al arrastrar muestra a qué
@@ -941,7 +974,7 @@
     if (i !== L.i && !await mostrarCapitulo(i, 0)) return;
     if (lectura !== L) return;
     asegurarPies();
-    irPagina(Math.floor(frac * L.paginas), false);
+    irPagina(Math.floor(frac * L.paginas));
     $("#capActual").textContent = tituloCapitulo();
     guardarPosicion();
   });
@@ -959,7 +992,7 @@
 
   // ---------- toques y deslizar ----------
   // Tercio izquierdo: página anterior; tercio derecho: siguiente; centro: muestra u oculta los controles.
-  // Deslizar con el dedo arrastra la página. Dejar el dedo apretado selecciona texto y no pasa la página.
+  // El gesto horizontal pasa la hoja al soltar. Mantener el dedo apretado permite seleccionar texto.
   let gesto = null;
   const hoja = $("#hoja");
   hoja.addEventListener("pointerdown", e => {
@@ -972,10 +1005,9 @@
     const dx = e.clientX - g.x, dy = e.clientY - g.y;
     if (!g.arrastre) {
       if (Math.abs(dx) < 12 || Math.abs(dx) < 1.2 * Math.abs(dy) || !getSelection().isCollapsed) return;
-      g.arrastre = true; $("#texto").classList.add("sin-animar");
+      g.arrastre = true;
     }
     g.dx = dx;
-    $("#texto").style.transform = `translateX(${-lectura.pag * lectura.paso + dx}px)`;
   });
   hoja.addEventListener("pointerup", e => {
     const g = gesto; gesto = null;
@@ -984,14 +1016,13 @@
       const rapido = Math.abs(g.dx) / Math.max(1, Date.now() - g.t) > 0.35;
       if (g.dx < -50 || (g.dx < -20 && rapido)) siguiente();
       else if (g.dx > 50 || (g.dx > 20 && rapido)) anterior();
-      else irPagina(lectura.pag);
       return;
     }
     if (Math.hypot(e.clientX - g.x, e.clientY - g.y) > 10 || Date.now() - g.t > 600 || g.sobre || g.flotante) return;
     if (g.sel || !getSelection().isCollapsed) { getSelection().removeAllRanges(); return; }
     tocar(e.clientX);
   });
-  hoja.addEventListener("pointercancel", () => { if (gesto && gesto.arrastre && lectura) irPagina(lectura.pag); gesto = null; });
+  hoja.addEventListener("pointercancel", () => { gesto = null; });
   function tocar(x){
     if ($("#vistaLectura").hasAttribute("data-controles")) { mostrarControles(false); return; }
     const r = $("#hoja").getBoundingClientRect(), f = (x - r.left) / r.width;
@@ -1118,7 +1149,7 @@
     if ((pintar || i !== L.i) && !await mostrarCapitulo(i)) return;
     if (lectura !== L) return;
     const ancla = pos.cita ? { href: L.ep.spine[i].href, i, cita: pos.cita, prefijo: pos.prefijo, frac: pos.frac, t: Date.now() } : null;
-    if (lectura === L) irPagina(paginaDePos(pos), false, ancla);
+    if (lectura === L) irPagina(paginaDePos(pos), ancla);
   }
   let guardarT;
   function guardarPosicion(ahora){
@@ -1197,8 +1228,8 @@
     if (i !== L.i && !await mostrarCapitulo(i, 0)) return;
     if (lectura !== L) return;
     const el = frag ? document.getElementById("e_" + frag) : null;
-    if (el) { irPagina(paginaDeElemento(el), false); el.classList.add("lx-destello"); setTimeout(() => el.classList.remove("lx-destello"), 1700); }
-    else irPagina(0, false);
+    if (el) { irPagina(paginaDeElemento(el)); el.classList.add("lx-destello"); setTimeout(() => el.classList.remove("lx-destello"), 1700); }
+    else irPagina(0);
     mostrarControles(false);
   }
 
@@ -1657,7 +1688,7 @@
     });
     const rc = rangos.flatMap(r => [...r.getClientRects()]).find(x => x.width && x.height);
     if (!rc) return false;
-    irPagina(paginaDeRect(rc), false);
+    irPagina(paginaDeRect(rc));
     for (const r of rangos.reverse()) {
       const m = document.createElement("mark"); m.className = "lx-busca";
       r.surroundContents(m);
@@ -1766,7 +1797,7 @@
       const i = L.ep.spine.findIndex(s => s.href === n.href);
       if (i >= 0 && i !== L.i) await mostrarCapitulo(i, 0);
       const m = $(`#texto mark[data-n="${CSS.escape(n.id)}"]`);
-      if (m) { irPagina(paginaDeElemento(m), false); m.classList.add("lx-destello"); setTimeout(() => m.classList.remove("lx-destello"), 1700); }
+      if (m) { irPagina(paginaDeElemento(m)); m.classList.add("lx-destello"); setTimeout(() => m.classList.remove("lx-destello"), 1700); }
       mostrarControles(false);
     }
     if (b.dataset.delN) await borrarNota(L.estado.notas.find(x => x.id === b.dataset.delN));

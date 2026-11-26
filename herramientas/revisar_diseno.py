@@ -724,9 +724,12 @@ def revisar_paginas(nav, base, libro, w, h):
 
     def deslizar(x0, x1):
         pt = lambda x: [{"x": x, "y": h / 2}]
+        posicion = pg.locator("#texto").evaluate("(e) => e.style.transform")
         cdp.send("Input.dispatchTouchEvent", {"type": "touchStart", "touchPoints": pt(x0)})
         for k in range(1, 9):
             cdp.send("Input.dispatchTouchEvent", {"type": "touchMove", "touchPoints": pt(x0 + (x1 - x0) * k / 8)})
+        if pg.locator("#texto").evaluate("(e) => e.style.transform") != posicion:
+            fallas.append(f"{rot}: el texto se corre mientras se desliza el dedo")
         cdp.send("Input.dispatchTouchEvent", {"type": "touchEnd", "touchPoints": []})
         pg.wait_for_timeout(450)
 
@@ -751,6 +754,20 @@ def revisar_paginas(nav, base, libro, w, h):
         alto, ancho = pg.evaluate("[document.documentElement.scrollHeight - innerHeight, document.documentElement.scrollWidth - innerWidth]")
         if alto > 1 or ancho > 1:
             fallas.append(f"{rot}: la lectura tiene scroll ({alto}px vertical, {ancho}px horizontal)")
+        pg.evaluate("""() => {
+          const iniciar = document.startViewTransition.bind(document);
+          window.hojas = [];
+          document.startViewTransition = actualizar => {
+            const vuelta = iniciar(actualizar);
+            vuelta.ready.then(() => {
+              const anterior = getComputedStyle(document.documentElement, '::view-transition-old(hoja-lectura)');
+              const nueva = getComputedStyle(document.documentElement, '::view-transition-new(hoja-lectura)');
+              hojas.push([anterior.animationName, anterior.animationDuration, nueva.animationName,
+                parseFloat(anterior.transformOrigin), anterior.transform !== 'none', nueva.transform === 'none']);
+            }).catch(() => {});
+            return vuelta;
+          };
+        }""")
         p0 = est()["pag"]
         tocar(0.9)
         if est()["pag"] != p0 + 1:
@@ -758,12 +775,29 @@ def revisar_paginas(nav, base, libro, w, h):
         tocar(0.1)
         if est()["pag"] != p0:
             fallas.append(f"{rot}: tocar el borde izquierdo no vuelve la página")
+        giros = pg.evaluate("window.hojas")
+        if (len(giros) != 2 or any(g[:3] != ["voltear-hoja", "0.13s", "none"] or not all(g[4:]) for g in giros)
+                or giros[0][3] != 0 or giros[1][3] <= 0):
+            fallas.append(f"{rot}: la hoja nueva debe quedar fija bajo el giro de la anterior en ambos sentidos ({giros})")
+        pg.evaluate("""() => {
+          for (const key of ['ArrowRight', 'ArrowRight', 'ArrowLeft']) {
+            document.body.dispatchEvent(new KeyboardEvent('keydown', {key, bubbles: true}));
+          }
+        }""")
+        pg.wait_for_function(f"lectorEstado().pag === {p0 + 1} && !document.documentElement.hasAttribute('data-vuelta')")
+        tocar(0.1)
         deslizar(w * 0.8, w * 0.2)
         if est()["pag"] != p0 + 1:
             fallas.append(f"{rot}: deslizar hacia la izquierda no pasa la página")
         deslizar(w * 0.2, w * 0.8)
         if est()["pag"] != p0:
             fallas.append(f"{rot}: deslizar hacia la derecha no vuelve la página")
+        pg.emulate_media(reduced_motion="reduce")
+        pg.touchscreen.tap(w * 0.9, h / 2)
+        if est()["pag"] != p0 + 1 or pg.locator("html").get_attribute("data-vuelta") is not None:
+            fallas.append(f"{rot}: con movimiento reducido, el cambio debe ser inmediato")
+        tocar(0.1)
+        pg.emulate_media(reduced_motion="no-preference")
         tocar(0.5)
         if not pg.evaluate("document.querySelector('#vistaLectura').hasAttribute('data-controles')"):
             fallas.append(f"{rot}: tocar al centro no muestra los controles")

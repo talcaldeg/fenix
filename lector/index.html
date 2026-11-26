@@ -91,7 +91,7 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 .ir-controles:focus-visible{opacity:1; pointer-events:auto}
 #vistaLectura[data-controles] .ir-controles{pointer-events:none; opacity:0}
 @media (prefers-reduced-motion: reduce){
-  #vistaLectura header.barra,.controles-pie,#texto{transition:none}
+  #vistaLectura header.barra,.controles-pie{transition:none}
   #texto .lx-destello{animation:none}
 }
 .pestanas .btn[aria-selected="true"]{background:var(--acento); color:var(--acento-ink); border-color:transparent}
@@ -119,8 +119,7 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 .fila .a{font-size:14px; color:var(--muted)}
 
 /* ---------- lectura ---------- */
-/* Pantalla entera, sin scroll: #marco recorta una página y #texto, en columnas de su ancho, se corre
-   de a una (lector.js, maquetar). La barra y los controles salen con un toque al centro. */
+/* #marco muestra la página actual del texto en columnas. Solo la hoja saliente se anima al pasar. */
 #vistaLectura{--ancho:36em; --tam:20px; --interlineado:1.6; --letra-lectura:var(--letra); --alto-pag:70vh;
   position:fixed; inset:0; overflow:hidden; background:var(--bg); z-index:10}
 #vistaLectura header.barra{position:absolute; left:0; right:0; top:0; height:auto; min-height:var(--barra); padding-top:var(--sa-t);
@@ -130,9 +129,21 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
   touch-action:pan-y; overflow:hidden}
 #marco{height:100%; margin:0 auto; overflow:hidden}
 #texto{height:100%; margin:0; padding:0; font-size:var(--tam); line-height:var(--interlineado); font-family:var(--letra-lectura);
-  overflow-wrap:break-word; column-fill:auto; transition:transform .22s ease-out}
+  overflow-wrap:break-word; column-fill:auto}
 #vistaLectura #texto{margin:0 !important; padding:0 !important; border:0 !important; box-sizing:border-box}
-#texto.sin-animar{transition:none}
+:root[data-vuelta]{view-transition-name:none; --giro:-90deg; --bisagra:left}
+:root[data-vuelta="atras"]{--giro:90deg; --bisagra:right}
+:root[data-vuelta] #marco{view-transition-name:hoja-lectura; background:var(--bg-portada,var(--bg))}
+::view-transition{pointer-events:none}
+::view-transition-group(hoja-lectura),::view-transition-new(hoja-lectura){animation:none}
+::view-transition-image-pair(hoja-lectura){overflow:hidden}
+::view-transition-old(hoja-lectura),::view-transition-new(hoja-lectura){mix-blend-mode:normal}
+::view-transition-old(hoja-lectura){z-index:1; transform-origin:var(--bisagra) center;
+  animation:voltear-hoja .13s ease-out both}
+@keyframes voltear-hoja{
+  from{transform:perspective(max(900px, 240vw)) rotateY(0)}
+  to{transform:perspective(max(900px, 240vw)) rotateY(var(--giro)); filter:brightness(.8)}
+}
 #texto .lx-fin{display:block; height:0}
 #texto :is(img,svg,figure,table,pre,h1,h2,h3,h4){break-inside:avoid}
 #texto :is(h1,h2,h3,h4,h5,h6){break-after:avoid}
