@@ -91,6 +91,7 @@ def romano(n):
 
 def enlinea(t):
     t = html.escape(t, quote=False)
+    t = t.replace(r"\*", "&#42;")
     t = re.sub(r"\\([*_\[\]])", r"\1", t)
     t = re.sub(r"\*\*(.+?)\*\*", r"<strong>\1</strong>", t)
     t = re.sub(r"(?<![\w*])\*(?!\s)(.+?)(?<!\s)\*(?![\w*])", r"<em>\1</em>", t)

@@ -1,0 +1,5 @@
+Esta edición reproduce la versión española de J. A. R., publicada por la Casa Editorial Maucci (Barcelona, 1897), según la transcripción de Project Gutenberg (libros n.º 75739 y 78068, tomos I y II). El texto se tradujo en el siglo XIX; la versión no lleva el nombre completo del traductor, solo sus iniciales.
+
+Se ha actualizado la ortografía (supresión de la tilde en «a», «o», «e», «u», «fue», «dio», «solo», «este», etc.), se han pasado los diálogos con raya a comillas angulares «» y se han repuesto los signos de apertura ¿ ¡ donde faltaban, sin cambiar ninguna palabra. Se conservan los pronombres enclíticos del original («hallóse»), las notas del autor y la división en partes, libros y capítulos. Se han omitido las láminas y la lista de ilustraciones de la edición impresa.
+
+El libro se preparó con ayuda de inteligencia artificial y se revisó contra la fuente. El texto de Víctor Hugo y la versión española de J. A. R. son de dominio público. Esta edición digital de Proyecto Fénix, 2026, se puede copiar y difundir libremente.

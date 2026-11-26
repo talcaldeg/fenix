@@ -52,13 +52,13 @@ Por eso decía san Josemaría que quien vive de cara a Dios no tiene por qué ab
 
 ### Fe, esperanza y caridad
 
-¿Por qué, cuando soy contemplativo en la acción, ejercito las tres virtudes teologales? En primer lugar, porque creo que Él está conmigo. Ya no conjugo el verbo en primera persona del singular, sino en primera persona del plural: nosotros. ¿Quiénes? Tú y yo. Tú y yo siempre. Es un ejercicio de fe. Es un ejercicio de esperanza, porque sé, como dice san Pablo, que mi trabajo no es inútil ante Dios: confío en que no solo no es inútil, sino gratísimo a sus ojos; le encanta lo que hago y con eso, con una labor de ganchillo o con lo que sea, ayudo a salvar almas. Y es un ejercicio de caridad, porque te amo en cada cosa que hago. El trabajo que hice hoy en la mañana me llevó a amarte más, porque compartí mi día contigo. No me sentí aislado ni solo; estamos siempre en equipo.
+¿Por qué, cuando soy contemplativo en la acción, ejercito las tres virtudes teologales? En primer lugar, porque creo que Él está conmigo. Ya no conjugo el verbo en primera persona del singular, sino en primera persona del plural: nosotros. ¿Quiénes? Tú y yo. Tú y yo siempre. Es un ejercicio de fe. Es un ejercicio de esperanza, porque sé, como dice san Pablo, que mi trabajo no es inútil ante Dios[^ed-pablo]: confío en que no solo no es inútil, sino gratísimo a sus ojos; le encanta lo que hago y con eso, con una labor de ganchillo o con lo que sea, ayudo a salvar almas. Y es un ejercicio de caridad, porque te amo, Señor, en cada cosa que hago. El trabajo que hice hoy en la mañana me llevó a amarte más, porque compartí mi día contigo. No me sentí aislado ni solo; estamos siempre en equipo.
 
 San Josemaría contaba: «He llenado las carreteras de Europa de avemarías y de canciones».[^8] ¿De qué estarán llenos los pasillos, los patios, los jardines, las aulas y las habitaciones de tu casa? De avemarías y de canciones de almas enamoradas. Y las paredes, hechas de amor de Dios. ¿Cómo prepararon este plato? Con amor de Dios; por eso está tan rico. Se cuenta de un obispo, hombre piadoso, que al ver una huerta recién sembrada preguntó si aquellas lechugas estaban regadas con jaculatorias. Había entendido el espíritu de la obra: eso es lo que hace que las lechugas salgan muy bien.
 
 ### Quiero darte alegría
 
-Aparta, Señor, de mí lo que me aparte de Ti. Cambia las cosas que no me llevan a Ti, las que hago por razones distintas, buscándome a mí mismo. Tú ves mi corazón, sabes lo que hay en él y sabes que, a pesar de mis miserias, lo que quiero es darte alegría y gloria, llevarte almas, que estés contento, desagraviarte, unirme a Ti, tener hambre de comulgar. Todo eso va llenando mi día y me hace contemplativo en las tareas ordinarias. En medio del mundo ejerzo una vocación de contemplativo.
+Aparta, Señor, de mí lo que me aparte de Ti.[^ed-jaculatoria] Cambia las cosas que no me llevan a Ti, las que hago por razones distintas, buscándome a mí mismo. Tú ves mi corazón, sabes lo que hay en él y sabes que, a pesar de mis miserias, lo que quiero es darte alegría y gloria, llevarte almas, que estés contento, desagraviarte, unirme a Ti, tener hambre de comulgar. Todo eso va llenando mi día y me hace contemplativo en las tareas ordinarias. En medio del mundo ejerzo una vocación de contemplativo.
 
 Nuestros modelos son María y José, en quienes esa contemplación se daba sola, como una sola cosa. A esa familia pertenecemos. Piensa en la Virgen dando de comer una papilla al Niño. ¿Qué está haciendo? Trabajando. ¿Y por qué lo hace? Por Cristo, porque se lo da a Él: ¿cómo iba a hacerlo por otra razón? Por eso les salía sola esa contemplación: el cielo estaba bajo su techo.
 
@@ -72,3 +72,5 @@ Esa es nuestra vida: trabajar y rezar, rezar y trabajar. Y eso es lo que nos lle
 [^6]: San Josemaría, *Camino*, n. 335.
 [^7]: Palabras de san Josemaría recogidas en Javier Echevarría, *Memoria del Beato Josemaría Escrivá*, Rialp, Madrid 2000, p. 170.
 [^8]: Ana Sastre, *Tiempo de caminar*, Rialp, Madrid 1989, p. 438.
+[^ed-pablo]: Cf. 1 Co 15, 58.
+[^ed-jaculatoria]: Jaculatoria que rezaba san Josemaría Escrivá. Cf. notas de la tertulia del 18 de octubre de 1972, en *Crónica* (1974), p. 948, citadas por Ana Sastre, *Tiempo de caminar*, Rialp, Madrid 1989, p. 353, n. 26.

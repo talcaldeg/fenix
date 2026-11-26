@@ -55,9 +55,9 @@ NOTA = re.compile(r'<(\w+)\b[^>]*(?:epub:type="(?:footnote|endnote|rearnote)"|cl
 CURSIVA = re.compile(r"<(?:em|i|cite)\b|font-style:\s*italic")
 from sin_gutenberg import RESTO as MARCA_PG  # noqa: E402  (lo que deja Gutenberg; citarlo como fuente no cae)
 # posesivos y átonos con mayúscula tras minúscula o coma. No cuentan tras dos puntos (saludo de
-# carta), ante otra mayúscula («Su Majestad», «Le Petit Prince») ni el «Suyo» que firma una carta.
+# carta), ante otra mayúscula («Su Majestad», «Le Petit Prince»), en «Tu es Petrus» ni en el «Suyo» que firma una carta.
 MAYUSCULA_VIEJA = re.compile(
-    r"(?<=[a-záéíóúüñ,;)] )(?:Su|Sus|Suyo|Suya|Suyos|Suyas|Tu|Tus|Tuyo|Tuya|Tuyos|Tuyas|Le|Lo|Te|Os|"
+    r"(?<=[a-záéíóúüñ,;)] )(?!Tu es Petrus\b)(?:Su|Sus|Suyo|Suya|Suyos|Suyas|Tu|Tus|Tuyo|Tuya|Tuyos|Tuyas|Le|Lo|Te|Os|"
     r"Contigo|Vuestro|Vuestra|Vuestros|Vuestras)\b(?!\s+(?:[A-ZÁÉÍÓÚÑ]|respetuo|afectísim|atent|bagatele))"
     r"|(?<=[a-záéíóúñ])(?:Le|Lo|Te|Os)\b")
 
@@ -229,7 +229,9 @@ def revisar_epub(ruta: Path, creditos: dict) -> list:
         if nota and "Proyecto Fénix" in z.read(nota).decode("utf-8", "replace"):
             for nombre in nombres:
                 if nombre.endswith((".xhtml", ".html", ".htm")):
-                    t = html.unescape(re.sub(r"<[^>]+>", "", z.read(nombre).decode("utf-8", "replace")))
+                    marcado = z.read(nombre).decode("utf-8", "replace")
+                    marcado = re.sub(r"<br\s*/?>", "\n", marcado)
+                    t = html.unescape(re.sub(r"<[^>]+>", "", marcado))
                     for m in MAYUSCULA_VIEJA.finditer(t):
                         divinas += 1
                         ej_d = ej_d or re.sub(r"\s+", " ", t[max(0, m.start() - 30):m.end() + 15])

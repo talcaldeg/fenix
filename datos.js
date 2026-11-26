@@ -30,7 +30,7 @@
 //   libre (p. ej. una fotografía CC BY-SA de Commons): aviso dice la licencia.
 
 window.FENIX = {
-  actualizado: "25-nov-2026", // poner la fecha al cambiar el catálogo
+  actualizado: "26-nov-2026", // poner la fecha al cambiar el catálogo
   contacto: {
     // Destino de los formularios (FormSubmit). Cambiarlo aquí si se usa otra casilla.
     formularios: "https://formsubmit.co/ajax/talcaldeg@gmail.com",
@@ -3707,13 +3707,13 @@ window.FENIX = {
       recomendado: false,
       resumen: {"es": "Primer libro de los Episodios nacionales. Gabriel Araceli, un muchacho del barrio gaditano de la Viña, cuenta cómo en 1805 se vio metido en el combate naval de Trafalgar, entre la escuadra franco-española y la de Nelson. A su lado van marinos veteranos, entre ellos el viejo Marcial, cuyas discusiones y recuerdos muestran cómo se vivía la guerra desde abajo. Galdós mezcla la historia de España con la vida de la gente común y abre así la serie con que retrató el siglo XIX."},
       porque: {"es":"Es la puerta de entrada más cómoda a los Episodios nacionales: corto, vivo y contado por un muchacho que no entiende del todo lo que presencia. Ayuda a ver la guerra sin héroes de bronce, con la mirada de la gente común que la sufre.","en":"The easiest way into the Episodios nacionales: short, lively and told by a boy who does not fully grasp what he is witnessing. It helps you see war without bronze heroes, through the eyes of the ordinary people who live through it."},
-      imagen: {"src": "img/portadas/perez-galdos-trafalgar.jpg", "credito": {"es": "J. M. W. Turner, «La batalla de Trafalgar, 21 de octubre de 1805», 1822-1824", "en": "J. M. W. Turner, «The Battle of Trafalgar, 21 October 1805», 1822-1824"}, "url": "https://commons.wikimedia.org/wiki/File%3ATurner_-_The_Battle_of_Trafalgar,_21_October_1805,_1822%E2%80%931824,_BHC0565.jpg"},
+      imagen: {"src": "img/portadas/galdos-trafalgar.jpg", "credito": {"es": "J. M. W. Turner, «La batalla de Trafalgar», 1822", "en": "J. M. W. Turner, «The Battle of Trafalgar», 1822"}, "url": "https://commons.wikimedia.org/wiki/File:Turner,_The_Battle_of_Trafalgar_(1822).jpg"},
       citas: [
         "Por primera vez entonces percibí con completa claridad la idea de la patria, y mi corazón respondió a ella con espontáneos sentimientos, nuevos hasta aquel momento en mi alma.",
         "Pensé que también ellos tendrían su patria querida, que ésta les habría confiado la defensa de su honor; me pareció que en aquella tierra, para mí misteriosa, que se llamaba Inglaterra, habían de existir, como en España, muchas gentes honradas",
         "Cercano al sepulcro, y considerándome el más inútil de los hombres, ¡aún haces brotar lágrimas de mis ojos, amor santo de la patria!"
       ],
-      archivos: {},
+      archivos: {"epub": "libros/galdos-trafalgar.epub", "pdf": "libros/galdos-trafalgar.pdf"},
       externos: [{"formato": "epub", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16961.epub3.images"}, {"formato": "web", "texto": "Project Gutenberg", "url": "https://www.gutenberg.org/ebooks/16961"}],
       fuente: {"texto": "Project Gutenberg, libro n.º 16961 (dominio público)", "url": "https://www.gutenberg.org/ebooks/16961"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/trafalgar-0"},
@@ -3745,23 +3745,19 @@ window.FENIX = {
     {
       id: "hugo-los-miserables",
       titulo: "Los miserables",
-      autor: "Victor Hugo (trad. Jacinto Labaila)",
+      autor: "Víctor Hugo (trad. J. A. R.)",
       anio: "1862",
       idioma: "es",
       categoria: "novela",
       recomendado: false,
-      resumen: {"es": "Jean Valjean sale del presidio después de diecinueve años por robar un pan, endurecido y rechazado por todos. Un obispo lo acoge en su casa y, cuando Valjean le roba la plata, lo perdona y le regala además los candelabros. Ese perdón le cambia la vida: con otro nombre se vuelve un hombre honrado, cuida de Cosette, la hija de la pobre Fantina, y huye durante años del inspector Javert, que no cree que un hombre pueda cambiar. La novela recorre la Francia de la primera mitad del siglo XIX, de Waterloo a las barricadas de París de 1832. Se ofrece en la versión abreviada de Jacinto Labaila (Valencia, 1887)."},
-      porque: {"es":"Para quien quiere una gran novela que se lea sola y deje algo dentro. Es la historia de un hombre al que un acto de misericordia le cambia la vida, y de lo que hace con esa segunda oportunidad: Valjean pasa el resto de su vida devolviendo a otros el bien que recibió. Si alguna vez te preguntaste si alguien puede cambiar de verdad, este libro responde que sí. La versión abreviada deja la historia completa sin las largas digresiones del original.","en":"For anyone who wants a great novel that reads itself and leaves something behind. It is the story of a man whose life is changed by an act of mercy, and of what he does with that second chance: Valjean spends the rest of his life giving others the good he received. If you have ever wondered whether someone can truly change, this book answers yes. The abridged version keeps the whole story without the original's long digressions."},
+      resumen: {"es": "Francia, 1815. Juan Valjean, un presidiario que sale tras diecinueve años de galeras por haber robado un pan, es acogido por el bondadoso obispo Myriel, a quien roba la cubertería de plata; el obispo, en vez de denunciarlo, le regala los candelabros y le pide que sea un hombre honrado. Valjean se transforma en un empresario y alcalde respetado, pero lo persigue el inspector Javert. Su vida se enlaza con la de Fantina, una madre desdichada, y con la de su hija Cosette, a quien cría, y después con la del joven Mario, en el París de las barricadas de 1832. Es una de las grandes novelas del siglo XIX.", "en": "France, 1815. Jean Valjean, a convict released after nineteen years in the galleys for stealing a loaf of bread, is taken in by the kindly Bishop Myriel, whose silver he steals; instead of denouncing him, the bishop gives him the candlesticks and asks him to become an honest man. Valjean becomes a respected businessman and mayor, but Inspector Javert pursues him. His life is bound up with that of Fantine, an unhappy mother, and her daughter Cosette, whom he raises, and then with the young Marius, in the Paris of the 1832 barricades. It is one of the great novels of the nineteenth century."},
+      porque: {"es": "Para quien busca una novela larga y grande, con una historia de redención en el centro: un hombre que cambia por la misericordia que recibe y que la devuelve a otros. Mezcla aventura, persecución, amor y largas páginas sobre la historia y la sociedad de su tiempo, que se pueden leer despacio. Es larga: conviene leerla en libros, no de corrido.", "en": "For readers who want a long, great novel with a story of redemption at its center: a man who changes through the mercy he receives and gives it to others. It mixes adventure, pursuit, love and long pages on the history and society of its time, which can be read slowly. It is long: best read book by book, not at a stretch."},
       imagen: {"src": "img/portadas/hugo-los-miserables.jpg", "credito": {"es": "Frédéric Lix, «El obispo y el forzado», ilustración de «Los miserables», c. 1879", "en": "Frédéric Lix, “The Bishop and the Convict”, illustration for «Les Misérables», c. 1879"}, "url": "https://commons.wikimedia.org/wiki/File:L%E2%80%99%C3%A9v%C3%AAque_et_le_for%C3%A7at,_578.jpg"},
-      citas: [
-        "Jean Valjean, hermano mío, vos no pertenecéis al mal, sino al bien. Yo compro vuestra alma; yo la libro de las negras ideas y del espíritu de perdición, y la consagro a Dios.",
-        "No preguntéis su nombre a quien os pide asilo. Precisamente quien más necesidad tiene de asilo es el que tiene más dificultad en decir su nombre.",
-        "Visitaba a los pobres mientras tenía dinero, y cuando éste se le acababa, visitaba a los ricos.",
-        "Amaos mucho, siempre. En el mundo casi no hay nada más importante que amar."
-      ],
-      archivos: {},
-      externos: [{"formato": "web", "texto": "Wikisource", "url": "https://es.wikisource.org/wiki/Los_miserables_(Labaila_tr.)"}, {"formato": "epub", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Los%20miserables%20%28Labaila%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Los%20miserables%20%28Labaila%20tr.%29"}],
-      fuente: {"texto": "Edición de Valencia, 1887 (Terraza, Aliena y Compañía), versión abreviada de Jacinto Labaila (1833-1895), transcrita en es.wikisource.org (dominio público)", "url": "https://es.wikisource.org/wiki/Los_miserables_(Labaila_tr.)"},
+      citas: ["Existe un espectáculo más grande que el del mar, el del cielo; pero hay otro más grande que el del cielo, es el del interior del alma.", "Juan Valjean, hermano mío, ya no pertenecéis al mal, sino al bien. Es vuestra alma la que yo compro; yo la separo del espíritu del mal para entregársela a Dios", "Me habéis prometido ser un hombre digno. Yo compro vuestra alma. Yo se la retiro al espíritu del mal y la entrego al Dios bueno", "Escribir el poema de la conciencia humana, aunque no sea más que a propósito de un solo hombre"],
+      archivos: {"epub": "libros/hugo-los-miserables.epub", "pdf": "libros/hugo-los-miserables.pdf"},
+      externos: [{"formato": "web", "texto": "Wikisource (versión abreviada de Jacinto Labaila)", "url": "https://es.wikisource.org/wiki/Los_miserables_(Labaila_tr.)"}, {"formato": "epub", "texto": "Wikisource (versión abreviada de Jacinto Labaila)", "url": "https://ws-export.wmcloud.org/?format=epub&lang=es&page=Los%20miserables%20%28Labaila%20tr.%29"}, {"formato": "pdf", "texto": "Wikisource (versión abreviada de Jacinto Labaila)", "url": "https://ws-export.wmcloud.org/?format=pdf-a4&lang=es&page=Los%20miserables%20%28Labaila%20tr.%29"}],
+      fuente: {"texto": "Project Gutenberg, libros n.º 75739 y 78068 (dominio público), edición de Maucci, Barcelona, 1897, versión española de J. A. R.", "url": "https://www.gutenberg.org/ebooks/75739"},
+      editorial: {"es": "Edición digital de Proyecto Fénix sobre la versión española de J. A. R. (Maucci, Barcelona, 1897), con la ortografía actual y los diálogos entre comillas angulares.", "en": "Proyecto Fénix digital edition based on the Spanish version by J. A. R. (Maucci, Barcelona, 1897), with current spelling and dialogues in angle quotation marks."},
       delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-miserables"},
       parecidos: ["manzoni-los-novios", "dickens-el-cantico-de-navidad", "wallace-ben-hur"]
     },
@@ -4778,7 +4774,10 @@ window.FENIX = {
       archivos: {"epub": "libros/chesterton-the-wisdom-of-father-brown.epub", "pdf": "libros/chesterton-the-wisdom-of-father-brown.pdf"},
       fuente: {"texto": "Project Gutenberg, libro n.º 223 (dominio público); portada de Proyecto Fénix", "url": "https://www.gutenberg.org/ebooks/223"},
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-sabiduria-del-padre-brown"},
-      parecidos: ["chesterton-the-innocence-of-father-brown", "chesterton-the-napoleon-of-notting-hill", "ortodoxia"]
+      parecidos: ["chesterton-the-innocence-of-father-brown", "chesterton-the-napoleon-of-notting-hill", "ortodoxia"],
+      versiones: {
+        es: {"titulo": "La sabiduría del padre Brown", "autor": "G. K. Chesterton (trad. Alfonso Nadal)", "anio": "1914", "resumen": {"es": "Doce relatos reúnen los nuevos casos del padre Brown, que suele investigar en compañía de su amigo Flambeau. Sus pesquisas van de una desaparición en la costa inglesa a un encuentro con bandidos en Italia y un crimen entre los bastidores de un teatro. El sacerdote pone a prueba las explicaciones que todos dan por seguras y presta atención a los motivos que los demás pasan por alto.", "en": "Twelve stories follow Father Brown's new cases, often in the company of his friend Flambeau. His investigations range from a disappearance on the English coast to an encounter with brigands in Italy and a crime backstage at a theatre. The priest tests the explanations everyone takes for granted and pays attention to motives others overlook."}, "porque": {"es": "Para quien disfruta de un misterio que se puede leer de una sentada y que invita a volver sobre sus primeras páginas. El humor de Chesterton y la compasión de su detective dan a los desenlaces un interés que va más allá de descubrir al culpable.", "en": "For readers who enjoy a mystery they can finish in one sitting and that makes them want to turn back to its opening pages. Chesterton's humour and his detective's compassion give the endings an appeal that goes beyond finding the culprit."}, "citas": ["Es posible que una flor no muera en invierno; pero las flores mueren. Una guija quizá no se humedezca con la marea; pero la marea se produce.", "«Nunca piensa uno en la verdadera aflicción», dijo el extraño cura. «Solo puede ser uno amable cuando llega».", "Quisiera saber… quisiera saber si un hombre es menos traidor cuando lo es dos veces"], "fuente": {"texto": "Traducción de Alfonso Nadal, edición de José Janés, Barcelona, 1956. Facsímil de la Biblioteca Digital Hispánica (dominio público en Chile).", "url": "https://commons.wikimedia.org/wiki/File:La_sabidur%C3%ADa_del_Padre_Brown_-_bdh0000289443.pdf"}, "externos": [{"formato": "pdf", "texto": "Facsímil de la Biblioteca Nacional de España (trad. Alfonso Nadal)", "url": "https://upload.wikimedia.org/wikipedia/commons/b/ba/La_sabidur%C3%ADa_del_Padre_Brown_-_bdh0000289443.pdf"}], "imagen": {"src": "img/portadas/chesterton-the-wisdom-of-father-brown-es.jpg", "credito": {"es": "Léon Cogniet, «La mujer del bandido italiano», h. 1825", "en": "Léon Cogniet, «The Italian Brigand's Wife», c. 1825"}, "url": "https://commons.wikimedia.org/wiki/File:Leon_coignet_The_Italian_Brigand_s_Wife.jpg"}}
+      }
     },
     {
       id: "saint-exupery-el-principito",
@@ -5011,7 +5010,10 @@ window.FENIX = {
       fuente: {"texto": "Project Gutenberg, libro n.º 48927 (dominio público), sobre la edición de Longmans, Green, and Co., Nueva York, 1910, con introducción y notas de Maurice Francis Egan", "url": "https://www.gutenberg.org/ebooks/48927"},
       delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"},
       encuadernador: "Juan Ignacio Alcalde G.",
-      parecidos: ["newman-loss-and-gain", "imitacion-de-cristo", "fray-luis-de-leon-de-los-nombres-de-cristo"]
+      parecidos: ["newman-loss-and-gain", "imitacion-de-cristo", "fray-luis-de-leon-de-los-nombres-de-cristo"],
+      versiones: {
+        es: {"titulo": "El sueño de Geroncio", "autor": "San John Henry Newman", "anio": "1865", "resumen": {"es": "Rodeado de amigos que rezan por él, Geroncio siente que se acerca su muerte. Cuando despierta fuera del cuerpo, un ángel lo lleva al juicio. De camino, el alma oye a los demonios y los coros del Cielo. Lo que descubre ante Dios le hace pedir que lo lleven al purgatorio.", "en": "With his friends praying around him, Gerontius feels death approaching. When he wakes outside his body, an angel carries him to judgment. On the way, the soul hears the demons and the choirs of heaven. What he discovers before God makes him ask to be taken to purgatory."}, "porque": {"es": "El cambio de voces permite seguir el tránsito de Geroncio casi como si estuviera en escena. Vale la pena leerlo en voz alta para oír lo que hacen el miedo y la esperanza con el ritmo de cada intervención.", "en": "Its changing voices bring the journey of Gerontius to life almost as if it were taking place on a stage. Read it aloud to hear how fear and hope shape the rhythm of each voice."}, "citas": ["Jesús, María, estoy cerca de la muerte, / y Tú me llamas. Ahora lo sé,", "Creo con firmeza y de veras / que Dios es tres y Dios es uno, / y reconozco también, como es debido, / la humanidad que asumió el Hijo.", "¡Al Santísimo, alabanza en lo alto, / y en lo hondo, alabanza! / Admirable en todas sus palabras, / firmísimo en todos sus caminos.", "¡Adiós, pero no para siempre, hermano querido! / Sé valiente y paciente en tu lecho de dolor."], "fuente": {"texto": "John Henry Newman, The Dream of Gerontius (1865), en la edición Longmans, Green, and Co. de 1910, pp. 25-67, transcrita por Project Gutenberg (dominio público).", "url": "https://www.gutenberg.org/ebooks/48927"}, "imagen": {"src": "img/portadas/newman-the-dream-of-gerontius-es.jpg", "credito": {"es": "El Bosco, «Ascenso al Empíreo», c. 1490-1516", "en": "Hieronymus Bosch, “Ascent of the Blessed,” c. 1490-1516"}, "url": "https://commons.wikimedia.org/wiki/File:Visions_of_the_Hereafter_-_Ascent_of_the_Blessed.jpg"}, "archivos": {"epub": "libros/newman-the-dream-of-gerontius-es.epub", "pdf": "libros/newman-the-dream-of-gerontius-es.pdf"}, "editorial": {"es": "Traducción íntegra del poema al castellano, en verso libre, cotejada con la edición inglesa de 1910. Edición al cuidado de Benjamín Alcalde G.", "en": "A complete Spanish translation of the poem in free verse, checked against the 1910 English edition. Edited by Benjamín Alcalde G."}}
+      }
     },
     {
       id: "quiroga-cuentos-de-la-selva",
@@ -5587,6 +5589,350 @@ window.FENIX = {
       delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/aventuras-de-sherlock-holmes"},
       editorial: {"es": "Edición digital de Proyecto Fénix: seis cuentos en la traducción anónima de 1909, cotejada con el original y corregida, y seis traducidos del inglés por Proyecto Fénix. Edición al cuidado de Benjamín Ormazábal.", "en": "Proyecto Fénix digital edition: six stories in the anonymous 1909 translation, checked against the original and corrected, and six translated from English by Proyecto Fénix. Edited by Benjamín Ormazábal."},
       parecidos: ["doyle-el-sabueso-de-los-baskerville", "poe-la-carta-robada", "chesterton-the-innocence-of-father-brown"]
+    },
+    {
+      id: "homero-la-odisea",
+      titulo: "La Odisea",
+      autor: "Homero (trad. Luis Segalá y Estalella)",
+      anio: "-720",
+      idioma: "es",
+      categoria: "poesia",
+      recomendado: false,
+      resumen: {"es": "La Odisea narra el regreso de Ulises a Ítaca tras la guerra de Troya. Mientras su hijo Telémaco busca noticias de él y su esposa Penélope resiste a los pretendientes que se han instalado en el palacio, Ulises vaga durante diez años por el mar: el cíclope Polifemo, Circe, las sirenas, Escila y Caribdis, el descenso al país de los muertos y los años en la isla de Calipso. Llega por fin a su patria disfrazado de mendigo, se da a conocer a los suyos y recupera su casa.", "en": "The Odyssey tells of Odysseus' return to Ithaca after the Trojan War. While his son Telemachus looks for news of him and his wife Penelope holds out against the suitors who have settled in the palace, Odysseus wanders the sea for ten years: the Cyclops Polyphemus, Circe, the Sirens, Scylla and Charybdis, the descent to the land of the dead and the years on Calypso's island. He finally reaches his homeland disguised as a beggar, makes himself known to his family and recovers his house."},
+      porque: {"es": "Para quien disfruta de las aventuras, los viajes y los monstruos de la mar, desde Salgari hasta Tolkien: es el viaje más antiguo y más contado de la literatura. Detrás de cada peligro hay una virtud que se pone a prueba: la astucia, la paciencia, la fidelidad y el amor al hogar. Se lee por episodios, y los más famosos (el cíclope, las sirenas) se pueden leer solos.", "en": "For anyone who enjoys adventures, journeys and sea monsters, from Salgari to Tolkien: it is the oldest and most retold voyage in literature. Behind every danger a virtue is put to the test: cunning, patience, fidelity and love of home. It is read in episodes, and the most famous ones (the Cyclops, the Sirens) can be read on their own."},
+      imagen: {"src": "img/portadas/homero-la-odisea.jpg", "credito": {"es": "John William Waterhouse, «Ulises y las sirenas», 1891", "en": "John William Waterhouse, «Ulysses and the Sirens», 1891"}, "url": "https://commons.wikimedia.org/wiki/File:John_William_Waterhouse_-_Ulysses_and_the_Sirens_-_Google_Art_Project.jpg"},
+      citas: [
+        "Háblame, Musa, de aquel varón de multiforme ingenio que, después de destruir la sacra ciudad de Troya, anduvo peregrinando larguísimo tiempo",
+        "vió las poblaciones y conoció las costumbres de muchos hombres",
+        "Tan mal procede con el huésped quien le incita á que se vaya cuando no quiere irse, como el que lo detiene si le urge partir.",
+        "más vale usar de moderación en todas las cosas."
+      ],
+      archivos: {"epub": "libros/homero-la-odisea.epub", "pdf": "libros/homero-la-odisea.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 58221 (dominio público), traducción de Luis Segalá y Estalella, Barcelona, Montaner y Simón, 1910", "url": "https://www.gutenberg.org/ebooks/58221"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-odisea"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["homero-la-iliada", "dante-la-divina-comedia", "ercilla-la-araucana"]
+    },
+    {
+      id: "porter-the-scottish-chiefs",
+      titulo: "The Scottish Chiefs",
+      autor: "Jane Porter",
+      anio: "1810",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "En 1296 Escocia se ha rendido al rey Eduardo I de Inglaterra y sus nobles han jurado vasallaje. William Wallace vive retirado en Ellerslie con su esposa Marion, hasta que un oficial inglés la asesina. Wallace levanta a los escoceses contra el invasor, vence en Stirling y llega a gobernar el reino como regente, pero los celos y la ambición de los grandes señores lo traicionan. La novela, un clásico de la narrativa histórica de aventuras, sigue sus campañas, la lealtad de sus amigos, el amor de lady Helen Mar y su final en Londres.", "en": "In 1296 Scotland has surrendered to King Edward I of England and its nobles have sworn fealty. William Wallace lives in retirement at Ellerslie with his wife Marion, until an English officer murders her. Wallace rouses the Scots against the invader, wins at Stirling and comes to govern the kingdom as regent, but the jealousy and ambition of the great lords betray him. The novel, a classic of historical adventure fiction, follows his campaigns, the loyalty of his friends, the love of Lady Helen Mar and his end in London."},
+      porque: {"es": "Para lectores que disfrutan de la épica de un pueblo que se levanta por su libertad, con batallas, traiciones y amistades a prueba de todo. Es la novela que dio a conocer a Wallace al gran público, mucho antes del cine. Es larga y de estilo romántico, y se puede leer por episodios.", "en": "For readers who enjoy the epic of a people rising for their freedom, with battles, betrayals and friendships tested to the limit. It is the novel that made Wallace known to the wider public, long before the cinema. It is long and romantic in style, and can be read in episodes."},
+      imagen: {"src": "img/portadas/porter-the-scottish-chiefs.jpg", "credito": {"es": "Daniel Maclise, «El juicio de sir William Wallace», h. 1840", "en": "Daniel Maclise, «The Trial of Sir William Wallace», c. 1840"}, "url": "https://commons.wikimedia.org/wiki/File:Daniel_Maclise,_R.A._-_The_Trial_of_Sir_William_Wallace.jpg"},
+      citas: [
+        "the spirit of one brave man remained unsubdued.",
+        "Scotland seemed proud of her chains.",
+        "Too noble to bend his spirit to the usurper, too honest to affect submission",
+        "Dearer than life! part of my being! blessed is this union, that mingles thy soul with mine, now, and forever!"
+      ],
+      archivos: {"epub": "libros/porter-the-scottish-chiefs.epub", "pdf": "libros/porter-the-scottish-chiefs.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 6086 (dominio público), edición de Jane Porter, The Scottish Chiefs (1810)", "url": "https://www.gutenberg.org/ebooks/6086"},
+      delibris: null,
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["wallace-ben-hur", "ercilla-la-araucana", "cervantes-don-quijote"]
+    },
+    {
+      id: "cooper-the-pilot",
+      titulo: "The Pilot",
+      autor: "James Fenimore Cooper",
+      anio: "1823",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "The Pilot es una novela de mar ambientada en la guerra de independencia de los Estados Unidos. Un misterioso piloto guía hasta la costa inglesa a una fragata y a una goleta rebeldes, la Ariel, para una misión audaz: rescatar a unos oficiales prisioneros y a las jóvenes que retiene en una abadía un coronel leal a la Corona. Entre combates, persecuciones y tempestades destaca el arponero Tom Coffin, un marino viejo, valiente y fiel hasta el final. Cooper escribió con ella la primera gran novela de mar en inglés.", "en": "The Pilot is a sea novel set in the American War of Independence. A mysterious pilot guides a rebel frigate and a schooner, the Ariel, to the English coast on a daring mission: to rescue captive officers and the young women held in an abbey by a colonel loyal to the Crown. Among fights, chases and storms, the harpooner Tom Coffin stands out, an old sailor, brave and faithful to the end. With it Cooper wrote the first great sea novel in English."},
+      porque: {"es": "Para quien disfruta de las aventuras de mar y de las historias de patriotas que arriesgan todo por la libertad de su país, como El patriota o Corazón valiente en el cine. Los combates y los temporales están muy bien contados, y la amistad de los marinos es lo mejor del libro. Es una novela larga de estilo clásico, y no es necesario conocer la historia de la época.", "en": "For anyone who enjoys sea adventures and stories of patriots who risk everything for their country's freedom, like the films The Patriot or Braveheart. The fights and the storms are told superbly, and the sailors' friendship is the best of the book. It is a long novel in a classic style, and no knowledge of the period is needed."},
+      imagen: {"src": "img/portadas/cooper-the-pilot.jpg", "credito": {"es": "Richard Paton, «El combate entre el Serapis, el Countess of Scarborough y la escuadra de Paul Jones», h. 1780", "en": "Richard Paton, «The action between the Serapis, the Countess of Scarborough and Paul Jones's Squadron», c. 1780"}, "url": "https://commons.wikimedia.org/wiki/File:The_action_between_the_Serapis,_capt._Pearson,_the_Countess_of_Scarborough,_and_Paul_Jones’s_Squadron._R.Paton_-_K325.jpg"},
+      citas: [
+        "the English shall never get them while old Tom Coffin can blow.",
+        "I have lived to bear the banners of the new republic proudly in sight of the three kingdoms",
+        "In such a business as this, I would sooner trust Tom Coffin and his harpoon to back me, than the best broadside that ever rattled out of the three decks of a ninety-gun ship.",
+        "Give us elbow-room, and the right canvas, Mr. Pilot, and I'll handle the ship like a gentleman's yacht, in this breeze."
+      ],
+      archivos: {"epub": "libros/cooper-the-pilot.epub", "pdf": "libros/cooper-the-pilot.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 7974 (dominio público), The Pilot: A Tale of the Sea, de J. Fenimore Cooper (1823)", "url": "https://www.gutenberg.org/ebooks/7974"},
+      delibris: null,
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["wallace-ben-hur", "ercilla-la-araucana", "cervantes-don-quijote"]
+    },
+    {
+      id: "melville-moby-dick",
+      titulo: "Moby Dick",
+      autor: "Herman Melville",
+      anio: "1851",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Ismael, un joven marino que busca remedio a su melancolía en el mar, se embarca en Nantucket en el ballenero Pequod, cuyo capitán, Ahab, perdió una pierna en un encuentro con una enorme ballena blanca, Moby Dick. Sin que la tripulación lo sepa al principio, el viaje es una cacería: Ahab ha jurado dar con ella y destruirla. Entre capítulos de aventura y capítulos sobre la vida y la ciencia de la caza de ballenas, la novela avanza hacia un enfrentamiento final de tres días, del que Ismael sale como único testigo.", "en": "Ishmael, a young sailor who seeks a cure for his melancholy at sea, ships out of Nantucket on the whaler Pequod, whose captain, Ahab, lost a leg to a huge white whale, Moby Dick. Unknown at first to the crew, the voyage is a hunt: Ahab has sworn to find the whale and destroy it. Between chapters of adventure and chapters on the life and science of whaling, the novel moves toward a final three-day confrontation, from which Ishmael emerges as the only witness."},
+      porque: {"es": "Para quien disfruta de las grandes aventuras de mar y de los libros con un personaje inolvidable, como el capitán Ahab y su obsesión. Es un libro largo y a ratos lento, pero lo que cuenta de la vida de los balleneros y del mar es muy vivo, y el final es de los más impresionantes de la literatura. Se puede leer por capítulos cortos.", "en": "For anyone who enjoys great sea adventures and books with an unforgettable character, like Captain Ahab and his obsession. It is a long book and at times slow, but what it tells of the whalers' life and the sea is very alive, and the ending is one of the most impressive in literature. It can be read in short chapters."},
+      imagen: {"src": "img/portadas/melville-moby-dick.jpg", "credito": {"es": "J. M. W. Turner, «Balleneros», h. 1845", "en": "J. M. W. Turner, «Whalers», c. 1845"}, "url": "https://commons.wikimedia.org/wiki/File:Joseph_Mallord_William_Turner_(1775-1851)_-_Whalers_-_N00545_-_National_Gallery.jpg"},
+      citas: [
+        "Call me Ishmael.",
+        "It is a way I have of driving off the spleen and regulating the circulation.",
+        "I know not all that may be coming, but be it what it will, I’ll go to it laughing.",
+        "to the last I grapple with thee; from hell’s heart I stab at thee; for hate’s sake I spit my last breath at thee."
+      ],
+      archivos: {"epub": "libros/melville-moby-dick.epub", "pdf": "libros/melville-moby-dick.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 2701 (dominio público), Moby Dick; or, The Whale, de Herman Melville (1851)", "url": "https://www.gutenberg.org/ebooks/2701"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/moby-dick"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["stevenson-isla-del-tesoro", "verne-la-vuelta-al-mundo-en-80-dias", "hope-el-prisionero-de-zenda"]
+    },
+    {
+      id: "thompson-canciones-de-hermanas",
+      titulo: "Canciones de hermanas",
+      autor: "Francis Thompson",
+      anio: "1895",
+      idioma: "es",
+      categoria: "poesia",
+      recomendado: false,
+      resumen: {"es": "Francis Thompson dedica este poema en dos partes a las hermanas Madeline y Monica Meynell. La primera celebra a Madeline, llamada Sylvia, entre las fiestas de una primavera poblada de duendes y ninfas. La segunda recuerda el encuentro con Monica, medita sobre cómo nace un poema e imagina la futura voz de la niña. La inscripción final dirige la ofrenda a sus padres, Alice y Wilfrid Meynell.", "en": "Francis Thompson dedicates this two-part poem to the sisters Madeline and Monica Meynell. The first celebrates Madeline, called Sylvia, amid the festivities of a spring peopled with elves and nymphs. The second recalls meeting Monica, reflects on how a poem comes to be, and imagines the girl's future voice. The closing inscription addresses the offering to their parents, Alice and Wilfrid Meynell."},
+      porque: {"es": "Para quienes disfrutan de la poesía que merece leerse en voz alta. Los estribillos a Sylvia dejan oír los cambios de una misma música, y la segunda parte explora cuánto puede deberle un poema a la voz de otra persona.", "en": "For readers who enjoy poetry worth reading aloud. The refrains to Sylvia let us hear variations on a single tune, while the second part explores how much a poem can owe to another person's voice."},
+      imagen: {"src": "img/portadas/thompson-canciones-de-hermanas.jpg", "credito": {"es": "Pierre-Auguste Renoir, «Dos hermanas (En la terraza)», 1881", "en": "Pierre-Auguste Renoir, “Two Sisters (On the Terrace),” 1881"}, "url": "https://commons.wikimedia.org/wiki/File:Pierre-Auguste_Renoir_-_Two_Sisters_(On_the_Terrace)_-_1933.455_-_Art_Institute_of_Chicago.jpg"},
+      citas: [
+        "De las cumbres ceñidas de nubes del espíritu secreto se precipita el Canto en torrentes vertiginosos.",
+        "Este pobre canto que canta de ti, este canto frágil, es solo una concha en espiral recogida de tu mar que aún murmura el lugar donde nació.",
+        "Decimos una lección aprendida sin saber cómo, y lo que de nosotros mana mejor lo conoce quien lo oye que quien lo dice.",
+        "tú has hecho de la ausencia una presencia más insistente, y tu voz hace su más dulce súplica cuando está muda."
+      ],
+      archivos: {"epub": "libros/thompson-canciones-de-hermanas.epub", "pdf": "libros/thompson-canciones-de-hermanas.pdf"},
+      fuente: {"texto": "Francis Thompson, Sister Songs: An Offering to Two Sisters, Londres, Burns & Oates, 1908 (dominio público). Transcripción cotejada con la primera edición de 1895.", "url": "https://www.gutenberg.org/ebooks/1731"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sister-songs"},
+      editorial: {"es": "Traducción íntegra del inglés en verso libre, preparada con ayuda de inteligencia artificial y cotejada con el original. Edición al cuidado de Benjamín Alcalde G.", "en": "Complete free-verse translation from the English, prepared with AI assistance and checked against the original. Edited by Benjamín Alcalde G."},
+      parecidos: ["thompson-shelley", "newman-the-dream-of-gerontius", "belloc-cuentos-moraleja"]
+    },
+    {
+      id: "defoe-robinson-crusoe",
+      titulo: "The Life and Adventures of Robinson Crusoe",
+      autor: "Daniel Defoe",
+      anio: "1719",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Robinson Crusoe, hijo de un comerciante de York, desoye a su padre y se hace a la mar. Tras ser esclavo de unos piratas moros y colono en Brasil, sufre un naufragio y es el único superviviente: queda solo en una isla desierta. Con lo que rescata del barco construye una casa, cultiva trigo, doma cabras, lleva un diario y aprende a dar gracias a Dios. Después de años de soledad descubre la huella de un pie humano en la arena, salva a un salvaje al que llama Viernes y lo convierte en amigo y compañero.", "en": "Robinson Crusoe, the son of a York merchant, ignores his father and goes to sea. After being a slave of Moorish pirates and a planter in Brazil, he is shipwrecked and is the only survivor: he is left alone on a desert island. With what he salvages from the ship he builds a house, grows corn, tames goats, keeps a journal and learns to give thanks to God. After years of solitude he finds the print of a human foot in the sand, saves a savage whom he calls Friday and makes him his friend and companion."},
+      porque: {"es": "Para quien disfruta de las aventuras de supervivencia y de ver cómo un hombre solo se ingenia con muy poco. Tiene mucho de aventura y también de examen de conciencia: Crusoe pasa de la rebeldía a la gratitud y a la confianza en la Providencia. Se lee sin dificultad, y los capítulos son cortos.", "en": "For anyone who enjoys survival adventures and watching a man alone make do with very little. It is both an adventure and an examination of conscience: Crusoe moves from rebellion to gratitude and trust in Providence. It reads easily, and the chapters are short."},
+      imagen: {"src": "img/portadas/defoe-robinson-crusoe.jpg", "credito": {"es": "Walter Paget, «Robinson descubre la huella en la arena», edición Cassell, 1891", "en": "Walter Paget, «Crusoe finds the footprint in the sand», Cassell edition, 1891"}, "url": "https://commons.wikimedia.org/wiki/File:Crusoe_2_(by_Paget).jpg"},
+      citas: [
+        "I was born in the year 1632, in the city of York, of a good family, though not of that country",
+        "All our discontents about what we want appeared to me to spring from the want of thankfulness for what we have.",
+        "first, I let him know his name should be Friday, which was the day I saved his life"
+      ],
+      archivos: {"epub": "libros/defoe-robinson-crusoe.epub", "pdf": "libros/defoe-robinson-crusoe.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 521 (dominio público), The Life and Adventures of Robinson Crusoe, de Daniel Defoe (1719), edición de Seeley, Service & Co., Londres", "url": "https://www.gutenberg.org/ebooks/521"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/robinson-crusoe"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["stevenson-isla-del-tesoro", "verne-la-vuelta-al-mundo-en-80-dias", "hope-el-prisionero-de-zenda"]
+    },
+    {
+      id: "belloc-la-iglesia-catolica-y-la-historia",
+      titulo: "La Iglesia católica y la historia",
+      autor: "Hilaire Belloc",
+      anio: "1926",
+      idioma: "es",
+      categoria: "ensayo",
+      recomendado: false,
+      resumen: {"es": "Belloc examina las objeciones históricas contra la pretensión de autoridad divina de la Iglesia católica. Dedica la primera parte a tres argumentos de orden moral y analiza, entre otros ejemplos, la Donación de Constantino y el caso Galileo. En la segunda parte distingue entre la tesis protestante de una corrupción de la revelación original y la objeción escéptica que atribuye todo el fenómeno religioso a la acción humana.", "en": "Belloc examines historical objections to the Catholic Church’s claim to divine authority. The first part addresses three moral arguments, taking the Donation of Constantine and the Galileo affair among its examples. The second distinguishes the Protestant charge that an original revelation was corrupted from the sceptical objection that religion is entirely of human origin."},
+      porque: {"es": "Para quienes quieran conocer de primera mano la apologética católica de entreguerras. El ensayo distingue con insistencia entre refutar una objeción, aportar pruebas positivas y determinar qué puede establecer un argumento histórico.", "en": "For readers looking for a firsthand account of interwar Catholic apologetics. The essay repeatedly distinguishes answering an objection, making a positive case, and determining what a historical argument can establish."},
+      imagen: {"src": "img/portadas/belloc-la-iglesia-catolica-y-la-historia.jpg", "credito": {"es": "El Greco, «Los apóstoles Pedro y Pablo», 1587-1592", "en": "El Greco, “Saints Peter and Paul,” 1587-1592"}, "url": "https://commons.wikimedia.org/wiki/File:Greco,_El_-_Sts_Peter_and_Paul.jpg"},
+      citas: [
+        "La fe no es una teoría, sino una realidad.",
+        "La definición no crea doctrina nueva, como tampoco un nuevo tratado de geometría crea verdades matemáticas nuevas.",
+        "Su crecimiento es normal para su naturaleza y, en cuanto el crecimiento entraña cambio, ese cambio es la prueba misma de la identidad.",
+        "Ha visto desaparecer todo en Europa salvo ella misma, y su manantial sigue manando copiosamente."
+      ],
+      archivos: {"epub": "libros/belloc-la-iglesia-catolica-y-la-historia.epub", "pdf": "libros/belloc-la-iglesia-catolica-y-la-historia.pdf"},
+      fuente: {"texto": "The Macmillan Company, Nueva York. Publicación original de 1926, reimpresión de 1927 (dominio público). Transcripción de Project Gutenberg n.º 78085.", "url": "https://www.gutenberg.org/ebooks/78085"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/catholic-church-and-history"},
+      editorial: {"es": "Traducción íntegra del inglés preparada para Proyecto Fénix con ayuda de inteligencia artificial y cotejo por párrafos. Edición al cuidado de Benjamín Alcalde G.", "en": "Complete translation from the English prepared for Proyecto Fénix with AI assistance and checked paragraph by paragraph. Edited by Benjamín Alcalde G."},
+      parecidos: ["chesterton-heretics", "chesterton-the-everlasting-man", "newman-loss-and-gain"]
+    },
+    {
+      id: "benson-misterio-de-la-natividad",
+      titulo: "Misterio de la Natividad de Nuestro Señor",
+      autor: "Robert Hugh Benson",
+      anio: "1908",
+      idioma: "es",
+      categoria: "teatro",
+      recomendado: false,
+      resumen: {"es": "En el camino nevado hacia Belén, el anciano Zacarías tropieza con tres mercaderes, dos niños y la pareja que busca albergue. Mientras la posada se llena, algunos oyen voces que otros apenas alcanzan a percibir. Las cinco escenas llevan al público del camino y la cocina al encuentro de los pastores y los reyes con el Niño, entre villancicos y momentos de silencio. El autor explica en los apéndices cómo se puso en escena con las alumnas de un convento de Cambridge.", "en": "On a snowy road to Bethlehem, the old shepherd Zachary meets three merchants, two children, and the couple looking for shelter. As the inn fills up, some hear voices that others can barely perceive. Five scenes take the audience from the road and the inn kitchen to the shepherds' and kings' encounter with the Child, with carols and moments of silence. In the appendices, the author describes the production with schoolgirls at a Cambridge convent."},
+      porque: {"es": "Puede leerse en familia o en grupo durante el Adviento, repartiendo los papeles y alternando los parlamentos con los villancicos. Los apéndices permiten entender la puesta en escena que Benson imaginó y cómo usó el silencio, el canto y los gestos para darle ritmo.", "en": "Families and groups can read it together during Advent, sharing out the parts and alternating the dialogue with carols. The appendices show how Benson imagined the staging and used silence, song, and movement to give the play its rhythm."},
+      imagen: {"src": "img/portadas/benson-misterio-de-la-natividad.jpg", "credito": {"es": "Geertgen tot Sint Jans, «La Natividad de noche», hacia 1490. National Gallery, Londres.", "en": "Geertgen tot Sint Jans, “The Nativity at Night,” possibly about 1490. National Gallery, London."}, "url": "https://commons.wikimedia.org/wiki/File:Geertgen_tot_Sint_Jans,_The_Nativity_at_Night,_c_1490.jpg"},
+      citas: [
+        "La obra en su conjunto no aspira a que se la considere una producción literaria. Se publica únicamente como una pieza que se puede llevar a escena.",
+        "O será que tú tomas por nada los grandes misterios.",
+        "Y aun así digo que estaba lleno de gloria.",
+        "La obra está concebida como una serie de meditaciones más que como una sucesión de situaciones y desarrollos dramáticos."
+      ],
+      archivos: {"epub": "libros/benson-misterio-de-la-natividad.epub", "pdf": "libros/benson-misterio-de-la-natividad.pdf"},
+      fuente: {"texto": "Robert Hugh Benson, Longmans, Green, and Co., 1908. Texto inglés de dominio público, n.º 61606 de Project Gutenberg, confrontado con el facsímil de 1908.", "url": "https://www.gutenberg.org/ebooks/61606"},
+      delibris: null,
+      editorial: {"es": "Traducción al castellano del original inglés de 1908, con los villancicos, las acotaciones y los cuatro apéndices. Edición al cuidado de Benjamín Alcalde G.", "en": "Spanish translation of the 1908 English original, including the carols, stage directions, and all four appendices. Edited by Benjamín Alcalde G."},
+      parecidos: ["dickens-el-cantico-de-navidad", "calderon-la-vida-es-sueno", "benson-lord-of-the-world"]
+    },
+    {
+      id: "galdos-zaragoza",
+      titulo: "Zaragoza",
+      autor: "Benito Pérez Galdós",
+      anio: "1874",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Gabriel Araceli, ya adulto, cuenta cómo escapó con otros patriotas prisioneros de los franceses y llegó a Zaragoza, en vísperas del segundo sitio (1808-1809). Acogido por la familia Montoria, se alista con su amigo Agustín en el batallón de las Peñas de San Pedro y vive el hambre, las bombas, la peste y el combate casa por casa. Entre tanto conoce a Mariquilla, la hija del avaro tío Candiola. Es el sexto de los Episodios nacionales, y retrata a Palafox, a Agustina de Aragón y a un pueblo que se defiende hasta quedar en ruinas.", "en": "Gabriel Araceli, now grown, tells how he escaped from the French with a band of fellow patriots and reached Zaragoza on the eve of the second siege (1808-1809). Taken in by the Montoria family, he joins the battalion of the Peñas de San Pedro with his friend Agustín and lives through hunger, bombardment, plague and house-to-house fighting. Meanwhile he meets Mariquilla, the daughter of the miser tío Candiola. It is the sixth of the Episodios nacionales, and portrays Palafox, Agustina de Aragón and a people that defends itself until the city lies in ruins."},
+      porque: {"es": "Para quien quiere sentir de cerca uno de los grandes sitios de la historia de España, contado sin héroes de cartón: con miedo, humor, hambre y una fe sencilla que sostiene a la gente. Galdós ofrece aventura y emoción sin perder la hondura humana, y su final en ruinas se queda en la memoria.", "en": "For readers who want to live one of the great sieges of Spanish history up close, told without cardboard heroes: with fear, humour, hunger and a simple faith that holds people up. Galdós gives adventure and emotion without losing human depth, and its ending among the ruins stays with the reader."},
+      imagen: {"src": "img/portadas/galdos-zaragoza.jpg", "credito": {"es": "Francisco de Goya, «José de Palafox», 1814", "en": "Francisco de Goya, «José de Palafox», 1814"}, "url": "https://commons.wikimedia.org/wiki/File:Jos%C3%A9_de_Palafox_(Goya).jpg"},
+      citas: [
+        "Me parece que fué al anochecer del 18 cuando avistamos á Zaragoza",
+        "á los zaragozanos lo mismo les daba morir que nada",
+        "¡Aquí moriremos todos antes que dejarles pasar!",
+        "Era la ciudad de la desolación, de la epopeya digna de que la llorara Jeremías y de que la cantara Homero"
+      ],
+      archivos: {"epub": "libros/galdos-zaragoza.epub", "pdf": "libros/galdos-zaragoza.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 49433 (dominio público), Episodios Nacionales, primera serie, séptima edición, Obras de Pérez Galdós, Madrid, 1901", "url": "https://www.gutenberg.org/ebooks/49433"},
+      delibris: null,
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["galdos-batalla-arapiles", "galdos-equipaje-rey-jose", "galdos-luchana"]
+    },
+    {
+      id: "dumas-the-count-of-monte-cristo",
+      titulo: "The Count of Monte Cristo",
+      autor: "Alexandre Dumas",
+      anio: "1844",
+      idioma: "en",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Marsella, 1815. Edmond Dantès, joven marino a punto de casarse y de ser nombrado capitán, es denunciado por tres envidiosos y encerrado sin juicio en el castillo de If. Allí conoce al abate Faria, que lo educa y le revela el escondite de un tesoro en la isla de Montecristo. Tras catorce años de cárcel, Dantès huye, recupera el tesoro y vuelve a París como el misterioso conde de Montecristo para recompensar a sus amigos y castigar a quienes lo traicionaron. La novela es una de las grandes obras de aventuras de todos los tiempos.", "en": "Marseilles, 1815. Edmond Dantès, a young sailor about to marry and to be named captain, is denounced by three envious men and locked up without trial in the Château d'If. There he meets the Abbé Faria, who educates him and reveals the hiding place of a treasure on the island of Monte Cristo. After fourteen years in prison, Dantès escapes, recovers the treasure and returns to Paris as the mysterious Count of Monte Cristo to reward his friends and punish those who betrayed him. The novel is one of the great adventure stories of all time."},
+      porque: {"es": "Para quien busca una aventura larga y absorbente, con fugas, disfraces, tesoros y un plan que se va cumpliendo capítulo a capítulo. Detrás de la venganza hay una pregunta que el propio libro termina respondiendo: qué hace un hombre con el poder de juzgar a los demás. Es muy extensa, y se lee mejor sin prisa.", "en": "For anyone seeking a long, absorbing adventure, with escapes, disguises, treasure and a plan that unfolds chapter by chapter. Behind the revenge is a question the book itself ends up answering: what does a man do with the power to judge others? It is very long, and best read without hurry."},
+      imagen: {"src": "img/portadas/dumas-the-count-of-monte-cristo.jpg", "credito": {"es": "Émile Duchemin, «Marsella: el castillo de If» (fotografía), entre 1890 y 1914", "en": "Émile Duchemin, «Marseille: the Château d'If» (photograph), between 1890 and 1914"}, "url": "https://commons.wikimedia.org/wiki/File:Marseille_-_le_château_d'If_-_btv1b10664668w.jpg"},
+      citas: [
+        "On the 24th of February, 1815, the look-out at Notre-Dame de la Garde signalled the three-master",
+        "made him as much disliked by the crew as Edmond Dantès was beloved by them",
+        "until the day when God shall deign to reveal the future to man, all human wisdom is summed up in these two words",
+        "I waited a month, or rather I suffered for a month! I did hope (man is a poor wretched creature), I did hope."
+      ],
+      archivos: {"epub": "libros/dumas-the-count-of-monte-cristo.epub", "pdf": "libros/dumas-the-count-of-monte-cristo.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 1184 (dominio público), The Count of Monte Cristo, traducción inglesa anónima del siglo XIX", "url": "https://www.gutenberg.org/ebooks/1184"},
+      delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/el-conde-de-montecristo"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["verne-la-vuelta-al-mundo-en-80-dias", "hope-el-prisionero-de-zenda", "stevenson-isla-del-tesoro"]
+    },
+    {
+      id: "alarcon-el-nino-de-la-bola",
+      titulo: "El niño de la bola",
+      autor: "Pedro Antonio de Alarcón",
+      anio: "1880",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "En una ciudad de la sierra andaluza, Manuel Venegas, a quien llaman el Niño de la Bola por su devoción a la imagen del Niño Jesús con el mundo en la mano, queda huérfano y arruinado por el usurero don Elías, a quien el pueblo llama Caifás. Enamorado desde niño de Soledad, la hija del usurero, se marcha a las Indias para hacer fortuna; vuelve rico y al cabo de ocho años, y la encuentra casada con Antonio Arregui. El buen cura don Trinidad Muley intenta apartarlo de la venganza, pero la pasión de Manuel desemboca en tragedia el día de la fiesta del Niño.", "en": "In a town of the Andalusian sierra, Manuel Venegas, called the Child of the Globe for his devotion to the image of the Christ Child holding the world, is orphaned and ruined by the usurer Don Elías, whom the townsfolk call Caiaphas. In love since childhood with Soledad, the usurer's daughter, he leaves for the Indies to make his fortune; he returns rich eight years later and finds her married to Antonio Arregui. The good priest Don Trinidad Muley tries to turn him from revenge, but Manuel's passion ends in tragedy on the feast day of the Child."},
+      porque: {"es": "Para lectores adultos que disfrutan del drama romántico: es una novela de pasiones fuertes en la que la fe del pueblo, la usura y los celos chocan con violencia. Muestra adónde lleva un amor que no se somete a la ley de Dios, y el cura don Trinidad es una figura entrañable de caridad. El final es trágico y sangriento.", "en": "For adult readers who enjoy Romantic drama: it is a novel of strong passions in which popular faith, usury and jealousy collide violently. It shows where a love that will not submit to God's law leads, and the priest Don Trinidad is an endearing figure of charity. The ending is tragic and bloody."},
+      imagen: {"src": "img/portadas/alarcon-el-nino-de-la-bola.jpg", "credito": {"es": "Alberto Durero, «El Niño Jesús con el orbe», 1493", "en": "Albrecht Dürer, «The Christ Child with the Globe», 1493"}, "url": "https://commons.wikimedia.org/wiki/File:Albrecht_D%C3%BCrer_045.jpg"},
+      citas: [
+        "El Niño de la Bola (prosiguió diciendo el sacristan) es el hombre más valiente y más atroz que Dios ha criado.",
+        "Lo que digo que no consentiré es que hagas nada contra la Ley de Dios.",
+        "Cayeron, pues, juntos los dos amantes, y la sangre de ambos, revuelta y confundida, fué devorada por la sedienta tierra.",
+        "Antonio volvió á poner el puñal á los piés del Niño Jesus, y se entregó voluntariamente á la Justicia."
+      ],
+      archivos: {"epub": "libros/alarcon-el-nino-de-la-bola.epub", "pdf": "libros/alarcon-el-nino-de-la-bola.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 59154 (dominio público), sobre la 2.ª edición: Madrid, Imprenta Central, 1880", "url": "https://www.gutenberg.org/ebooks/59154"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-nino-de-la-bola"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["fernan-caballero-la-gaviota", "coloma-pequeneces", "pereda-sotileza"]
+    },
+    {
+      id: "belloc-europe-and-the-faith",
+      titulo: "Europe and the Faith",
+      autor: "Hilaire Belloc",
+      anio: "1920",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "Un ensayo de historia en el que Belloc recorre Europa desde el Imperio romano hasta la Reforma para sostener una tesis rotunda: la civilización europea nació de la unión de Roma con la Iglesia católica y solo vive gracias a ella. Revisa qué fue realmente la «caída» del Imperio, qué pasó en Britania, la Edad Oscura, la Edad Media y la ruptura protestante, y explica por qué Inglaterra se separó de la Cristiandad.", "en": "A historical essay in which Belloc traces Europe from the Roman Empire to the Reformation in support of a bold thesis: European civilisation was born of the union of Rome and the Catholic Church and lives only through it. He re-examines what the «fall» of the Empire really was, what happened in Britain, the Dark Ages, the Middle Ages and the Protestant break, and explains why England separated from Christendom."},
+      porque: {"es": "Para quien quiere entender las raíces cristianas de Europa contadas desde dentro, por un católico y con estilo vigoroso. Es polémico y no pretende ser imparcial: discute la historia escrita desde el punto de vista protestante, y a veces simplifica; leído con criterio, ordena la cabeza y despierta el amor por la herencia común.", "en": "For anyone who wants to understand the Christian roots of Europe told from within, by a Catholic and in a vigorous style. It is polemical and does not aim at impartiality: it argues against history written from a Protestant point of view, and at times it simplifies; read with judgement, it puts things in order and awakens love for our common inheritance."},
+      imagen: {"src": "img/portadas/belloc-europe-and-the-faith.jpg", "credito": {"es": "Rafael y su taller, «La coronación de Carlomagno», 1516-1517", "en": "Raphael and workshop, «The Coronation of Charlemagne», 1516-1517"}, "url": "https://commons.wikimedia.org/wiki/File:Raphael_-_Coronation_of_Charlemagne.jpg"},
+      citas: [
+        "The Faith is Europe and Europe is the Faith.",
+        "A Catholic as he reads that story does not grope at it from without, he understands it from within.",
+        "Europe is the Church, and the Church is Europe.",
+        "Europe will return to the Faith, or she will perish."
+      ],
+      archivos: {"epub": "libros/belloc-europe-and-the-faith.epub", "pdf": "libros/belloc-europe-and-the-faith.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 8442 (dominio público)", "url": "https://www.gutenberg.org/ebooks/8442"},
+      delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/europe-and-faith"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["ortodoxia", "newman-apologia-pro-vita-sua", "wiseman-fabiola"]
+    },
+    {
+      id: "lazarillo-de-tormes",
+      titulo: "La vida de Lazarillo de Tormes y de sus fortunas y adversidades",
+      autor: "Anónimo",
+      anio: "1554",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "Lázaro, hijo de un molinero de Tejares, junto al río Tormes, cuenta su vida a «vuestra merced». Siendo niño su madre lo entrega a un ciego astuto y cruel, y de amo en amo (un clérigo avaro, un escudero hidalgo que pasa más hambre que él, un fraile, un buldero tramposo) aprende a sobrevivir con ingenio en la España del siglo XVI. La primera novela picaresca, breve, divertida y amarga a la vez.", "en": "Lázaro, son of a miller from Tejares on the river Tormes, tells his life to «your worship». As a boy his mother hands him over to a cunning and cruel blind man, and from master to master (a miserly priest, a proud squire hungrier than he is, a friar, a swindling seller of indulgences) he learns to survive by his wits in sixteenth-century Spain. The first picaresque novel: short, funny and bitter at once."},
+      porque: {"es": "Es uno de los libros fundamentales de la lengua castellana y abrió el camino a la novela moderna. Se lee en una tarde y hace reír, pero también muestra con agudeza la hipocresía, el hambre y la falsa honra; conviene leerlo con criterio, porque se burla de algunos clérigos y el final es irónico y amoral.", "en": "It is one of the foundational books of the Spanish language and opened the way to the modern novel. It can be read in an afternoon and makes one laugh, but it also sharply exposes hypocrisy, hunger and false honour; it is best read with judgement, since it mocks some clergymen and its ending is ironic and amoral."},
+      imagen: {"src": "img/portadas/lazarillo-de-tormes.jpg", "credito": {"es": "Bartolomé Esteban Murillo, «Joven mendigo», h. 1645-1650", "en": "Bartolomé Esteban Murillo, «The Young Beggar», c. 1645-1650"}, "url": "https://commons.wikimedia.org/wiki/File:Bartolom%C3%A9_Esteban_Murillo_-_Joven_mendigo_(1645-50).jpg"},
+      citas: [
+        "no hay libro, por malo que sea, que no tenga alguna cosa buena",
+        "Necio, aprende que el mozo del ciego un punto ha de saber más que el diablo",
+        "¡A la casa triste y desdichada, a la casa lóbrega y obscura, a la casa donde nunca comen ni beben!",
+        "Pues en este tiempo estaba en mi prosperidad y en la cumbre de toda buena fortuna."
+      ],
+      archivos: {"epub": "libros/lazarillo-de-tormes.epub", "pdf": "libros/lazarillo-de-tormes.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 320 (dominio público), sobre la edición de Burgos de 1554, con las interpolaciones de la de Alcalá entre llaves", "url": "https://www.gutenberg.org/ebooks/320"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-vida-del-lazarillo-de-tormes"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["cervantes-novelas-ejemplares", "cervantes-don-quijote", "alarcon-el-nino-de-la-bola"]
+    },
+    {
+      id: "newman-apologia-pro-vita-sua",
+      titulo: "Apologia pro Vita Sua: Being a History of His Religious Opinions",
+      autor: "San John Henry Newman",
+      anio: "1864",
+      idioma: "en",
+      categoria: "lectura",
+      recomendado: false,
+      resumen: {"es": "La historia de las opiniones religiosas de Newman, escrita en 1864 para responder a quien lo acusaba de no amar la verdad. Desde su conversión evangélica de adolescente, pasando por los años de Oxford y el Movimiento de Oxford, hasta su entrada en la Iglesia católica en 1845, Newman narra con total franqueza cómo el estudio de los Padres y de la historia lo llevó, paso a paso, a reconocer en Roma a la Iglesia de los apóstoles. Esta es la edición definitiva de 1890, revisada por él mismo.", "en": "The history of Newman's religious opinions, written in 1864 to answer a man who accused him of not loving the truth. From his evangelical conversion as a youth, through the Oxford years and the Oxford Movement, to his reception into the Catholic Church in 1845, Newman tells with complete candour how the study of the Fathers and of history led him, step by step, to recognise in Rome the Church of the apostles. This is the definitive 1890 edition, revised by the author himself."},
+      porque: {"es": "Para quien busca la verdad con honestidad intelectual, y para quien quiere entender por qué tantos se hicieron católicos en la Inglaterra del siglo XIX. Es una de las grandes autobiografías de la lengua inglesa, escrita por un santo y doctor de la Iglesia. Pide atención en sus capítulos de controversia, pero su retrato de una conciencia fiel a la luz recibida es inolvidable.", "en": "For anyone who seeks the truth with intellectual honesty, and for anyone who wants to understand why so many became Catholics in nineteenth-century England. It is one of the great autobiographies in the English language, written by a saint and Doctor of the Church. Its controversial chapters ask for attention, but its portrait of a conscience faithful to the light it received is unforgettable."},
+      imagen: {"src": "img/portadas/newman-apologia-pro-vita-sua.jpg", "credito": {"es": "Alphonse Legros, «Retrato del cardenal Newman», aguafuerte, h. 1889-1904", "en": "Alphonse Legros, «Portrait of Cardinal Newman», etching, c. 1889-1904"}, "url": "https://commons.wikimedia.org/wiki/File:Portrait_du_Cardinal_Newman_-_(estampe)_(2e_%C3%A9tat)_-_A._Legros_-_btv1b10545675d.jpg"},
+      citas: [
+        "two and two only absolute and luminously self-evident beings, myself and my Creator",
+        "Ten thousand difficulties do not make one doubt, as I understand the subject; difficulty and doubt are incommensurate.",
+        "it was like coming into port after a rough sea; and my happiness on that score remains to this day without interruption.",
+        "From the time that I became a Catholic, of course I have no further history of my religious opinions to narrate."
+      ],
+      archivos: {"epub": "libros/newman-apologia-pro-vita-sua.epub", "pdf": "libros/newman-apologia-pro-vita-sua.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 22088 (dominio público), sobre la edición de Longmans, Green, and Co., Londres, 1890", "url": "https://www.gutenberg.org/ebooks/22088"},
+      delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["ortodoxia", "confesiones", "newman-loss-and-gain"]
+    },
+    {
+      id: "pereda-sotileza",
+      titulo: "Sotileza",
+      autor: "José María de Pereda",
+      anio: "1885",
+      idioma: "es",
+      categoria: "novela",
+      recomendado: false,
+      resumen: {"es": "En el Santander marinero de mediados del siglo XIX, la huérfana Silda es recogida por el pescador tío Mechelín y su mujer, tía Sidora, y crece hasta convertirse en Sotileza, la muchacha más admirada del barrio de pescadores. A su alrededor giran el señorito Andrés, el tosco y salvaje Muergo y el callado Cleto, y la vida de la Calle Alta y del Cabildo de Abajo: las riñas de los Mocejón, las travesuras de los chicos, la doctrina del bondadoso padre Apolinar, la pesca de la merluza y la amenaza de la galerna. Pereda la escribió para resucitar un mundo que había conocido de niño.", "en": "In seafaring Santander in the mid-nineteenth century, the orphan Silda is taken in by the fisherman Uncle Mechelín and his wife Aunt Sidora, and grows up to become Sotileza, the most admired girl in the fishermen's quarter. Around her revolve the young gentleman Andrés, the rough, wild Muergo and the quiet Cleto, together with the life of the Calle Alta and the Cabildo de Abajo: the Mocejóns' quarrels, the boys' pranks, the catechism of the kindly Father Apolinar, the hake fishing and the threat of the gale. Pereda wrote it to bring back to life a world he had known as a boy."},
+      porque: {"es": "Para lectores que disfrutan de la gran novela regional y del mar: es el retrato más vivo de una comunidad de pescadores en la literatura española, con su fe, su pobreza digna y su valor ante la tormenta. El padre Apolinar es uno de los curas más entrañables de nuestra novela. Su lenguaje, con muchas voces montañesas y marineras, pide paciencia; el libro trae al final un glosario.", "en": "For readers who enjoy the great regional novel and the sea: it is the liveliest portrait of a fishing community in Spanish literature, with its faith, its dignified poverty and its courage in the face of storms. Father Apolinar is one of the most endearing priests in Spanish fiction. Its language, full of local and seafaring words, asks for patience; the book ends with a glossary."},
+      imagen: {"src": "img/portadas/pereda-sotileza.jpg", "credito": {"es": "Joaquín Sorolla, «Pescadora con su hijo», 1908", "en": "Joaquín Sorolla, «Fisherwoman with her Son», 1908"}, "url": "https://commons.wikimedia.org/wiki/File:Joaqu%C3%ADn_Sorolla_y_Bastida_-_Fisherwomen_with_her_son_-_Google_Art_Project.jpg"},
+      citas: [
+        "Así Dios me salve como no he pensado en otros lectores que vosotros al escribir este libro.",
+        "lo que en él acontece no es más que un pretexto para resucitar gentes, cosas y lugares que apenas existen ya",
+        "descollando sobre todas las cabezas, otra cabeza, gris, medio oculta por unas espaldas encorvadas, y, unido á estas espaldas, un brazo negro que trazaba una cruz en el espacio.",
+        "las nobles virtudes, el mísero vivir, las grandes flaquezas, la fe incorruptible y los épicos trabajos del valeroso y pintoresco mareante santanderino."
+      ],
+      archivos: {"epub": "libros/pereda-sotileza.epub", "pdf": "libros/pereda-sotileza.pdf"},
+      fuente: {"texto": "Project Gutenberg, libro n.º 49388 (dominio público), sobre la 4.ª edición: Obras completas, tomo IX, Madrid, Viuda e Hijos de Manuel Tello, 1906", "url": "https://www.gutenberg.org/ebooks/49388"},
+      delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sotileza"},
+      encuadernador: "Juan Ignacio Alcalde G.",
+      parecidos: ["pereda-pedro-sanchez", "fernan-caballero-la-gaviota", "coloma-pequeneces"]
     }
   ],
 
@@ -5598,10 +5944,10 @@ window.FENIX = {
   buscados: [
     // Sin traducción al español hallada (23-nov-2026): se traducen del original (vía D de ENCUADERNAR.md).
     { titulo: {"es": "La mujer sabia", "en": "The Wise Woman"}, autor: "George MacDonald", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/wise-woman-lost-princess"} },
-    { titulo: {"es": "Canciones de hermanas", "en": "Sister Songs"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sister-songs"} },
+    { titulo: {"en": "Sister Songs"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/sister-songs"} },
     { titulo: {"es": "Poemas nuevos", "en": "New Poems"}, autor: "Francis Thompson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/new-poems"} },
     { titulo: {"es": "Belinda", "en": "Belinda"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/bellinda"} },
-    { titulo: {"es": "La Iglesia católica y la historia", "en": "The Catholic Church and History"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/catholic-church-and-history"} },
+    { titulo: {"en": "The Catholic Church and History"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/catholic-church-and-history"} },
     { titulo: {"es": "Las confesiones no católicas", "en": "Non-Catholic Denominations"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/non-catholics-denominations"} },
     { titulo: {"es": "Santo Tomás de Canterbury", "en": "St. Thomas of Canterbury"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/st-thomas-canterbury"} },
     { titulo: {"es": "Un hombre corriente", "en": "An Average Man"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/average-man"} },
@@ -5615,7 +5961,6 @@ window.FENIX = {
     { titulo: {"es": "Herejes"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/herejes"} },
     { titulo: {"es": "El hombre eterno"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-hombre-eterno-0"} },
     { titulo: {"es": "El candor del padre Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-candor-del-padre-brown"} },
-    { titulo: {"es": "La sabiduría del padre Brown"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-sabiduria-del-padre-brown"} },
     { titulo: {"es": "El hombre que fue jueves"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-hombre-que-fue-jueves"} },
     { titulo: {"es": "La esfera y la cruz"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/la-esfera-y-la-cruz"} },
     { titulo: {"es": "El Napoleón de Notting Hill"}, autor: "G. K. Chesterton", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/el-napoleon-de-notting-hill"} },
@@ -5633,14 +5978,13 @@ window.FENIX = {
     { titulo: {"es": "Progreso del alma en la vida espiritual", "en": "Growth in Holiness"}, autor: "Frederick William Faber", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/progreso-del-alma-en-la-vida-espiritual"} },
     { titulo: {"en": "The Soul of the Apostolate"}, autor: "Jean-Baptiste Chautard", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-alma-de-todo-apostolado"} },
     { titulo: {"es": "El arte de aprovechar nuestras faltas", "en": "The Art of Profiting by Our Faults"}, autor: "Joseph Tissot", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/el-arte-de-aprovechar-nuestras-faltas"} },
-    { titulo: {"es": "Apologia pro vita sua", "en": "Apologia pro Vita Sua"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"} },
+    { titulo: {"es": "Apologia pro vita sua"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/apologia-pro-vita-sua"} },
     { titulo: {"es": "Perder y ganar"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/perder-y-ganar"} },
-    { titulo: {"es": "El sueño de Geroncio"}, autor: "San John Henry Newman", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/el-sueno-de-un-anciano"} },
     { titulo: {"es": "Señor del mundo"}, autor: "Robert Hugh Benson", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/senor-del-mundo"} },
     { titulo: {"es": "La amistad de Cristo", "en": "The Friendship of Christ"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/la-amistad-de-cristo"} },
     { titulo: {"es": "¿Con qué autoridad?", "en": "By What Authority?"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/con-que-autoridad"} },
     { titulo: {"es": "Confesiones de un converso", "en": "Confessions of a Convert"}, autor: "Robert Hugh Benson", delibris: {"valor": 6, "genero": "Espiritualidad", "url": "https://www.delibris.org/es/confesiones-de-un-converso"} },
-    { titulo: {"es": "Europa y la fe", "en": "Europe and the Faith"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/europe-and-faith"} },
+    { titulo: {"es": "Europa y la fe"}, autor: "Hilaire Belloc", delibris: {"valor": 6, "genero": "Pensamiento", "url": "https://www.delibris.org/es/europe-and-faith"} },
     { titulo: {"es": "Fabiola o la Iglesia de las catacumbas"}, autor: "Cardenal Nicholas Wiseman", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/fabiola-o-la-iglesia-de-las-catacumbas"} },
     { titulo: {"es": "Ben-Hur"}, autor: "Lew Wallace", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/ben-hur"} },
     { titulo: {"es": "Jeromín"}, autor: "Luis Coloma", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jeromin"} },
@@ -5677,10 +6021,8 @@ window.FENIX = {
     { titulo: {"es": "Crimen y castigo"}, autor: "Fiódor Dostoievski", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/crimen-y-castigo"} },
     { titulo: {"es": "Los hermanos Karamázov"}, autor: "Fiódor Dostoievski", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-hermanos-karamazov"} },
     { titulo: {"es": "Los miserables"}, autor: "Victor Hugo", delibris: {"valor": 5, "genero": "Literatura", "url": "https://www.delibris.org/es/los-miserables"} },
-    { titulo: {"es": "La Odisea"}, autor: "Homero", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/la-odisea"} },
     { titulo: {"es": "Fábulas de Esopo"}, autor: "Esopo", delibris: null, estimada: {"valor": 6, "genero": "Literatura"} },
     { titulo: {"es": "El paraíso perdido"}, autor: "John Milton", delibris: null, estimada: {"valor": 6, "genero": "Literatura"} },
-    { titulo: {"es": "Lazarillo de Tormes"}, autor: "Anónimo", delibris: null, estimada: {"valor": 5, "genero": "Literatura"} },
     { titulo: {"es": "Jane Eyre"}, autor: "Charlotte Brontë", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/jane-eyre"} },
     { titulo: {"es": "Cumbres borrascosas"}, autor: "Emily Brontë", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/cumbres-borrascosas"} },
     { titulo: {"es": "Moby Dick"}, autor: "Herman Melville", delibris: {"valor": 6, "genero": "Literatura", "url": "https://www.delibris.org/es/moby-dick"} },

@@ -27,8 +27,8 @@
    "titulo": "Jesucristo, vida del alma",
    "autor": "Beato Columba Marmion, O.S.B.",
    "epub": "libros/marmion-jesucristo-vida-del-alma.epub",
-   "bytes": 803191,
-   "sha": "b5169f584b32525438a524664cf266491c823e94266cd184517b24b8919921bf",
+   "bytes": 803224,
+   "sha": "1e7315c2c5babd62173dc8263673201e10fe8ce17aa43f3c86b8d9be91202241",
    "portada": "img/portadas/marmion-vida-del-alma.jpg"
   },
   {
@@ -137,8 +137,8 @@
    "titulo": "Trabajar para la eternidad",
    "autor": "Ricardo Sada Fernández",
    "epub": "libros/sada-trabajar-para-la-eternidad.epub",
-   "bytes": 471956,
-   "sha": "de9c882bbf63a0969e34394a5ca188c6039e4c40257fc32e1bdb9a57134997f0",
+   "bytes": 472065,
+   "sha": "05873c78203aecfac778a62f35a355c20e5dcd3eea9500242f2dae1bd16ec07e",
    "portada": "img/portadas/sada-trabajar-para-la-eternidad.jpg"
   },
   {
@@ -220,6 +220,16 @@
    "bytes": 547614,
    "sha": "ba312eb10663789b2fdb9f69eff84df743a43cdad495b8522ff37a21351d7f1c",
    "portada": "img/portadas/pushkin-la-hija-del-capitan.jpg"
+  },
+  {
+   "id": "hugo-los-miserables",
+   "idioma": "es",
+   "titulo": "Los miserables",
+   "autor": "Víctor Hugo (trad. J. A. R.)",
+   "epub": "libros/hugo-los-miserables.epub",
+   "bytes": 1526393,
+   "sha": "d3bd7a73fab3b2d0d80287738961f81cbef9df97a2aeb7bcbb0cbdb06669bcb0",
+   "portada": "img/portadas/hugo-los-miserables.jpg"
   },
   {
    "id": "austen-emma",
@@ -342,6 +352,16 @@
    "portada": "img/portadas/salgari-los-piratas-de-la-malasia.jpg"
   },
   {
+   "id": "newman-the-dream-of-gerontius",
+   "idioma": "es",
+   "titulo": "El sueño de Geroncio",
+   "autor": "San John Henry Newman",
+   "epub": "libros/newman-the-dream-of-gerontius-es.epub",
+   "bytes": 427978,
+   "sha": "afe70846305f04bd9ac1b7b90650849f2f70b1726c132f2485b072d95b3ff81b",
+   "portada": "img/portadas/newman-the-dream-of-gerontius-es.jpg"
+  },
+  {
    "id": "quiroga-cuentos-de-la-selva",
    "idioma": "es",
    "titulo": "Cuentos de la selva",
@@ -442,6 +462,36 @@
    "portada": "img/portadas/doyle-las-aventuras-de-sherlock-holmes.jpg"
   },
   {
+   "id": "thompson-canciones-de-hermanas",
+   "idioma": "es",
+   "titulo": "Canciones de hermanas",
+   "autor": "Francis Thompson",
+   "epub": "libros/thompson-canciones-de-hermanas.epub",
+   "bytes": 509172,
+   "sha": "a305594eedabb4175a9962f1e15e80c0e61c2a80c7c628640c758614684464a4",
+   "portada": "img/portadas/thompson-canciones-de-hermanas.jpg"
+  },
+  {
+   "id": "belloc-la-iglesia-catolica-y-la-historia",
+   "idioma": "es",
+   "titulo": "La Iglesia católica y la historia",
+   "autor": "Hilaire Belloc",
+   "epub": "libros/belloc-la-iglesia-catolica-y-la-historia.epub",
+   "bytes": 322408,
+   "sha": "a7a9f95063365b4f585f5afddf56613812b39ff59e9c3a99162fee9efe5c2580",
+   "portada": "img/portadas/belloc-la-iglesia-catolica-y-la-historia.jpg"
+  },
+  {
+   "id": "benson-misterio-de-la-natividad",
+   "idioma": "es",
+   "titulo": "Misterio de la Natividad de Nuestro Señor",
+   "autor": "Robert Hugh Benson",
+   "epub": "libros/benson-misterio-de-la-natividad.epub",
+   "bytes": 422195,
+   "sha": "cf522eac213b4229bcb9fc03af2a826d608bf42b60ed85e70933cc820baf6c69",
+   "portada": "img/portadas/benson-misterio-de-la-natividad.jpg"
+  },
+  {
    "id": "imitacion-de-cristo",
    "idioma": "en",
    "titulo": "The Imitation of Christ",
@@ -500,6 +550,16 @@
    "bytes": 443656,
    "sha": "a49644baa3d9e0101f9e81d91a60fc50d73d0bb3b815df33886999b408368dee",
    "portada": "img/portadas/apologia-de-socrates-en.jpg"
+  },
+  {
+   "id": "perez-galdos-trafalgar",
+   "idioma": "es",
+   "titulo": "Trafalgar",
+   "autor": "Benito Pérez Galdós",
+   "epub": "libros/galdos-trafalgar.epub",
+   "bytes": 3629037,
+   "sha": "871a37698c7e60a97adbb517707041c2703da6f5567e50cb4b788f3fc5ae7f24",
+   "portada": "img/portadas/galdos-trafalgar.jpg"
   },
   {
    "id": "doyle-el-sabueso-de-los-baskerville",
@@ -800,6 +860,126 @@
    "bytes": 2294835,
    "sha": "db1ba30a73fb5ab77a53a8e5aad082c041c86ad228f7d699ba5e469abd33f71c",
    "portada": "img/portadas/dario-azul.jpg"
+  },
+  {
+   "id": "homero-la-odisea",
+   "idioma": "es",
+   "titulo": "La Odisea",
+   "autor": "Homero (trad. Luis Segalá y Estalella)",
+   "epub": "libros/homero-la-odisea.epub",
+   "bytes": 3460879,
+   "sha": "cea250665b6365fc3de45ebf03929b460f6eea3c43496c045eedeb8943e49e6b",
+   "portada": "img/portadas/homero-la-odisea.jpg"
+  },
+  {
+   "id": "porter-the-scottish-chiefs",
+   "idioma": "en",
+   "titulo": "The Scottish Chiefs",
+   "autor": "Jane Porter",
+   "epub": "libros/porter-the-scottish-chiefs.epub",
+   "bytes": 1150983,
+   "sha": "9190ac1eda78cc62e3cf969d3d5d51c3223062882e0ad29ba31afe2bd1498c1b",
+   "portada": "img/portadas/porter-the-scottish-chiefs.jpg"
+  },
+  {
+   "id": "cooper-the-pilot",
+   "idioma": "en",
+   "titulo": "The Pilot",
+   "autor": "James Fenimore Cooper",
+   "epub": "libros/cooper-the-pilot.epub",
+   "bytes": 849464,
+   "sha": "7fd024ccf4a3a2d4337d44972818a796734a75c648790835b6f88f7ba4cfdf92",
+   "portada": "img/portadas/cooper-the-pilot.jpg"
+  },
+  {
+   "id": "melville-moby-dick",
+   "idioma": "en",
+   "titulo": "Moby Dick",
+   "autor": "Herman Melville",
+   "epub": "libros/melville-moby-dick.epub",
+   "bytes": 1031801,
+   "sha": "e0b68a892847ca80de8b47c315e505b3ee64c0f8a792062c8af23f49c265c921",
+   "portada": "img/portadas/melville-moby-dick.jpg"
+  },
+  {
+   "id": "defoe-robinson-crusoe",
+   "idioma": "en",
+   "titulo": "The Life and Adventures of Robinson Crusoe",
+   "autor": "Daniel Defoe",
+   "epub": "libros/defoe-robinson-crusoe.epub",
+   "bytes": 829304,
+   "sha": "974f9c44e0874ea63b0349a8cf77ba56a659959b561678db1998d7fa33ae520a",
+   "portada": "img/portadas/defoe-robinson-crusoe.jpg"
+  },
+  {
+   "id": "galdos-zaragoza",
+   "idioma": "es",
+   "titulo": "Zaragoza",
+   "autor": "Benito Pérez Galdós",
+   "epub": "libros/galdos-zaragoza.epub",
+   "bytes": 593013,
+   "sha": "4c9f73604f08045f74efb1face48664fd14d64d672cfc37aa261d1cf21ee5501",
+   "portada": "img/portadas/galdos-zaragoza.jpg"
+  },
+  {
+   "id": "dumas-the-count-of-monte-cristo",
+   "idioma": "en",
+   "titulo": "The Count of Monte Cristo",
+   "autor": "Alexandre Dumas",
+   "epub": "libros/dumas-the-count-of-monte-cristo.epub",
+   "bytes": 1535789,
+   "sha": "56d5ef120f0d57b0e19170e017fb383ee3108825da4dc957510a56e4baa6abda",
+   "portada": "img/portadas/dumas-the-count-of-monte-cristo.jpg"
+  },
+  {
+   "id": "alarcon-el-nino-de-la-bola",
+   "idioma": "es",
+   "titulo": "El niño de la bola",
+   "autor": "Pedro Antonio de Alarcón",
+   "epub": "libros/alarcon-el-nino-de-la-bola.epub",
+   "bytes": 522913,
+   "sha": "71fa1695dad2ba32881cb24b5d1876e01cee0fdea08f56fb94c46037b96e2bcd",
+   "portada": "img/portadas/alarcon-el-nino-de-la-bola.jpg"
+  },
+  {
+   "id": "belloc-europe-and-the-faith",
+   "idioma": "en",
+   "titulo": "Europe and the Faith",
+   "autor": "Hilaire Belloc",
+   "epub": "libros/belloc-europe-and-the-faith.epub",
+   "bytes": 460259,
+   "sha": "feecea5b00dd46790012ece9c0dc8d1721a07b8a227b5f11daaa4f5cde4b70d4",
+   "portada": "img/portadas/belloc-europe-and-the-faith.jpg"
+  },
+  {
+   "id": "lazarillo-de-tormes",
+   "idioma": "es",
+   "titulo": "La vida de Lazarillo de Tormes y de sus fortunas y adversidades",
+   "autor": "Anónimo",
+   "epub": "libros/lazarillo-de-tormes.epub",
+   "bytes": 384827,
+   "sha": "dbf62db30a1cd641484b1f44ab3d46a07a703a6253df4ca77af92e81ee5f8ffd",
+   "portada": "img/portadas/lazarillo-de-tormes.jpg"
+  },
+  {
+   "id": "newman-apologia-pro-vita-sua",
+   "idioma": "en",
+   "titulo": "Apologia pro Vita Sua: Being a History of His Religious Opinions",
+   "autor": "San John Henry Newman",
+   "epub": "libros/newman-apologia-pro-vita-sua.epub",
+   "bytes": 762749,
+   "sha": "12ebde8b521230e23998d99139ccf7510279a3d60ea708a496e231497fb3abb2",
+   "portada": "img/portadas/newman-apologia-pro-vita-sua.jpg"
+  },
+  {
+   "id": "pereda-sotileza",
+   "idioma": "es",
+   "titulo": "Sotileza",
+   "autor": "José María de Pereda",
+   "epub": "libros/pereda-sotileza.epub",
+   "bytes": 932650,
+   "sha": "922c891f59e389de39a6c701cdfb8d4c4aa2ef9e4594e8a6a7d9e1556e397a36",
+   "portada": "img/portadas/pereda-sotileza.jpg"
   }
  ]
 }
