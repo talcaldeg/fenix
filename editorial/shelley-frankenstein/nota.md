@@ -1,0 +1,5 @@
+Esta traducción de Proyecto Fénix parte de la primera edición de *Frankenstein; or, The Modern Prometheus*, publicada en Londres en 1818 por Lackington, Hughes, Harding, Mavor & Jones. Se conserva la división en tres volúmenes, además del epígrafe, la dedicatoria, el prefacio y las cartas que abren el relato. Se trabajó con el texto inglés de Project Gutenberg, n.º 41445, y se recuperaron del facsímil de 1818 las tres notas al pie de la edición original.
+
+En la introducción de 1831, Mary Shelley atribuyó a Percy Bysshe Shelley el prefacio de 1818. El epígrafe procede de *El paraíso perdido* de John Milton, libro X, versos 743-745. Los versos que se citan en el volumen I, capítulo IV, proceden de *La balada del viejo marinero* de Samuel Taylor Coleridge, parte VI. Los del volumen II, capítulo II, pertenecen a *Mutabilidad*, de Percy Bysshe Shelley. En el volumen III, capítulo I, se cita el poema de William Wordsworth sobre la abadía de Tintern.
+
+La traducción se preparó con asistencia de inteligencia artificial y se cotejó con el original inglés. El texto de 1818 es de dominio público. La traducción de Proyecto Fénix se publica con licencia CC BY-NC-SA 4.0.

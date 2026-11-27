@@ -46,6 +46,49 @@ window.FENIX = {
 
   libros: [
     {
+      "id": "shelley-frankenstein",
+      "titulo": "Frankenstein o el moderno Prometeo",
+      "autor": "Mary Shelley",
+      "anio": "1818",
+      "idioma": "es",
+      "categoria": "novela",
+      "recomendado": false,
+      "resumen": {
+        "es": "En medio del hielo ártico, el capitán Robert Walton recoge a un viajero exhausto. Se llama Víctor Frankenstein y ha llegado hasta allí persiguiendo al ser al que un día dio vida y que después abandonó. A bordo, Víctor le cuenta qué lo llevó a darle vida y qué sucedió cuando su criatura le pidió que la escuchara."
+      },
+      "porque": {
+        "es": "Mary Shelley hace que el capitán, el inventor y la criatura cuenten por turnos lo que han vivido. Escuchar a los tres cambia el sentido de una misma historia. ¿Qué le debe Víctor al ser que trajo al mundo?"
+      },
+      "editorial": {
+        "es": "Traducción propia de Proyecto Fénix, cotejada con el texto inglés de la primera edición de 1818. Conserva los tres volúmenes, el prefacio y las cartas de Walton."
+      },
+      "fuente": {
+        "texto": "Primera edición inglesa, Londres, 1818. Transcripción de Project Gutenberg, n.º 41445.",
+        "url": "https://www.gutenberg.org/ebooks/41445"
+      },
+      "imagen": {
+        "src": "img/portadas/shelley-frankenstein.jpg",
+        "credito": {
+          "es": "Caspar David Friedrich, «El mar de hielo», 1823-1824"
+        },
+        "url": "https://commons.wikimedia.org/wiki/File:Caspar_David_Friedrich_-_Das_Eismeer.jpg"
+      },
+      "archivos": {
+        "epub": "libros/shelley-frankenstein.epub",
+        "pdf": "libros/shelley-frankenstein.pdf"
+      },
+      "delibris": {
+        "valor": 6,
+        "genero": "Literatura",
+        "url": "https://www.delibris.org/es/frankenstein-o-el-moderno-prometeo"
+      },
+      "parecidos": [
+        "melville-moby-dick",
+        "verne-la-isla-misteriosa",
+        "thompson-shelley"
+      ]
+    },
+    {
       "id": "tolstoi-guerra-y-paz",
       "titulo": "Guerra y paz",
       "autor": "Lev Tolstói",
