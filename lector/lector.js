@@ -1094,6 +1094,10 @@
   // El gesto horizontal mueve el canto de la hoja; solo se guarda el cambio si se confirma al soltar.
   let gesto = null;
   const hoja = $("#hoja");
+  // La página nunca se desplaza: al arrastrar una selección hacia arriba, Android corría #vistaLectura o #marco
+  // (overflow:hidden se deja desplazar por código) y la página quedaba a medias, con los tiradores fuera de
+  // lugar (él, 26-nov-2026). El CSS usa overflow:clip; esto cubre un WebView que no lo conozca.
+  for (const e of [$("#vistaLectura"), hoja, $("#marco")]) e.addEventListener("scroll", () => { if (e.scrollTop || e.scrollLeft) e.scrollTop = e.scrollLeft = 0; });
   hoja.addEventListener("pointerdown", e => {
     if (!lectura || preparandoVuelta() || !e.isPrimary || (e.pointerType === "mouse" && e.button !== 0)) return;
     gesto = { id: e.pointerId, libro: lectura.libro, x: e.clientX, y: e.clientY, t: Date.now(), tipo: e.pointerType, arrastre: false,
@@ -1428,6 +1432,21 @@
     if (corta && sigue) { corta.append(...sigue.childNodes); corta.classList.remove("lx-corta", "lx-justo"); sigue.remove(); }
     caja.remove();
   }
+  // El texto de una nota del pie (textoPlano salta lo que está dentro de .lx-pie) y su corte en dos copias en
+  // el carácter k: lo de antes y lo de después, sin el blanco del corte.
+  function textoNota(el){
+    const w = document.createTreeWalker(el, NodeFilter.SHOW_TEXT), nodos = []; let total = 0;
+    while (w.nextNode()) { nodos.push({ n: w.currentNode, ini: total }); total += w.currentNode.data.length; }
+    return { nodos, texto: nodos.map(x => x.n.data).join("") };
+  }
+  function partirNota(el, plano, k){
+    const [idx, o] = nodoEn(plano, k), n = plano.nodos[idx].n;
+    const a = document.createRange(), b = document.createRange();
+    a.setStart(el, 0); a.setEnd(n, o); b.setStart(n, o); b.setEnd(el, el.childNodes.length);
+    const despues = b.cloneContents(), w = document.createTreeWalker(despues, NodeFilter.SHOW_TEXT);
+    for (let t; (t = w.nextNode());) { t.data = t.data.replace(/^\s+/, ""); if (t.data) break; }
+    return [a.cloneContents(), despues];
+  }
   function ponerPies(alto, pasoCol){
     const L = lectura, cap = $("#texto .lx-cap"), texto = $("#texto"), fin = $("#texto .lx-fin");
     if (!cap || !fin) return;
@@ -1451,18 +1470,46 @@
     const ubicar = (plano, m) => { const v = primeroVisible(plano, m); if (!v.r) return { k: v.k, c: Infinity, y: 0, y2: 0 }; const t = tl().top; return { k: v.k, c: col(v.r), y: v.r.top - t, y2: v.r.bottom - t }; };
     // Primer carácter que cumple f (en orden de lectura f pasa de falso a verdadero una sola vez).
     const primero = (plano, f) => { let lo = 0, hi = plano.texto.length - 1, res = plano.texto.length; while (lo <= hi) { const m = (lo + hi) >> 1; if (f(ubicar(plano, m))) { res = m; hi = m - 1; } else lo = m + 1; } return res; };
-    const armar = grupo => {
+    // Una nota que no cabe entera empieza al pie de su página y sigue al pie de la siguiente, como en papel
+    // (él, Marmion, 26-nov-2026: con letra grande las notas 25 y 28 pasaban del 55 % y quedaban sin pie).
+    // El trozo que sigue es un elemento x.sigue, sin número; armar(grupo, lim) deja en caja.lxResto lo que
+    // no cupo bajo lim.
+    const nota = x => {
+      const p = document.createElement("div"); p.className = "lx-pie-nota";
+      if (x.sigue) { p.classList.add("lx-pie-sigue"); p.append(...x.sigue.cloneNode(true).childNodes); return p; }
+      const num = document.createElement("span"); num.className = "lx-pie-num"; num.textContent = x.a.textContent.trim();
+      p.append(num, " ", ...cuerpoNota(x.d).childNodes);
+      return p;
+    };
+    const armar = (grupo, lim = Infinity) => {
       const caja = document.createElement("div"); caja.className = "lx-pie";
-      if (grupo.length) {
-        const n = document.createElement("div"); n.className = "lx-pie-notas";
-        for (const x of grupo) {
-          const p = document.createElement("div"); p.className = "lx-pie-nota";
-          const num = document.createElement("span"); num.className = "lx-pie-num"; num.textContent = x.a.textContent.trim();
-          p.append(num, " ", ...cuerpoNota(x.d).childNodes);
-          n.append(p);
+      if (!grupo.length) return caja;
+      const n = document.createElement("div"); n.className = "lx-pie-notas";
+      n.append(...grupo.map(nota)); caja.append(n);
+      fin.before(caja);
+      const alto = () => caja.getBoundingClientRect().height;
+      if (alto() > lim) {
+        // Se parte la primera nota que pasa del límite, en un blanco entre palabras; las de después siguen enteras.
+        const ps = [...n.children];
+        let j = ps.length - 1;
+        for (; j > 0; j--) { ps[j].remove(); if (alto() <= lim) { n.append(ps[j]); break; } }
+        const p = ps[j], orig = p.cloneNode(true), plano = textoNota(orig), sacar = ps.slice(j + 1);
+        const blancos = [...plano.texto.matchAll(/\s+/g)].map(m => m.index).filter(i => i > (orig.querySelector(".lx-pie-num")?.textContent.length || 0) + 1);
+        let lo = 0, hi = blancos.length - 1, mejor = -1;
+        const probar = i => { p.replaceChildren(...partirNota(orig, plano, blancos[i])[0].childNodes); return alto() <= lim; };
+        while (lo <= hi) { const m = (lo + hi) >> 1; if (probar(m)) { mejor = m; lo = m + 1; } else hi = m - 1; }
+        const resto = [];
+        if (mejor < 0) { p.remove(); resto.push(orig); }
+        else {
+          const [a, b] = partirNota(orig, plano, blancos[mejor]);
+          p.replaceChildren(...a.childNodes);
+          const s = document.createElement("span"); s.append(b); resto.push(s);
         }
-        caja.append(n);
+        // Lo que no cupo va al pie de la página siguiente: un trozo sin número, o una nota entera con el suyo.
+        caja.lxResto = [...resto, ...sacar].map(e => e.matches?.(".lx-pie-nota") && e.querySelector(".lx-pie-num") ? { sigue: e, entera: true } : { sigue: e });
+        if (!n.children.length) n.remove();
       }
+      caja.remove();
       return caja;
     };
     const medir = caja => { fin.before(caja); const h = caja.getBoundingClientRect().height; caja.remove(); return h; };
@@ -1474,16 +1521,18 @@
     for (; pend.length && vuelta < 500; vuelta++) {
       if (performance.now() - t0 > plazo) return false;
       let plano = textoPlano(cap);
-      const off = x => offsetEn(plano, x.a, 0);
-      const cols = pend.map(x => { const rc = [...x.a.getClientRects()].find(r => r.width || r.height); return rc ? col(rc) : Infinity; });
+      // El trozo que sigue de una nota partida no tiene llamada: va en la columna que se le asignó.
+      const off = x => x.a ? offsetEn(plano, x.a, 0) : -1;
+      const cols = pend.map(x => { if (x.sigue) return x.col; const rc = [...x.a.getClientRects()].find(r => r.width || r.height); return rc ? col(rc) : Infinity; });
       const c = Math.min(...cols);
       if (c === Infinity) break;
       if (c > hastaCol) return false;
       let grupo = pend.filter((x, j) => cols[j] === c);
-      let caja = armar(grupo), h = medir(caja);
-      // Una nota más larga que media página no cabe al pie: queda solo flotando y al final del capítulo.
-      while (grupo.length && h > alto * 0.55) { const sobra = grupo.pop(); mostrar(sobra.d); pend.splice(pend.indexOf(sobra), 1); caja = armar(grupo); h = medir(caja); }
-      if (!grupo.length) continue;
+      // Las notas ocupan como máximo el 55 % de la página y no bajan de la línea de su última llamada; lo que no
+      // cabe sigue en la página siguiente (armar). Nunca queda una llamada sin su nota.
+      const limite = g => { const ys = g.filter(x => x.a).map(x => ubicar(plano, off(x)).y2); return Math.min(alto * 0.55, Math.max(alto * 0.2, alto - Math.max(0, ...ys) - 6)); };
+      let caja = armar(grupo, limite(grupo)), h = medir(caja);
+      if (!h) { grupo.forEach(x => pend.splice(pend.indexOf(x), 1)); continue; }
       // El corte se mide con el borde de las letras, pero la línea termina más abajo (el interlineado): con
       // letra grande esos px faltaban, la caja no cabía y saltaba a la página siguiente, lejos de su llamada
       // (24-nov-2026). Si no cupo, se deshace y el corte sube lo que faltó.
@@ -1494,7 +1543,7 @@
         if (fuera.length) {
           grupo = grupo.filter(x => off(x) < k);
           const y = ubicar(plano, off(fuera[0])).y;
-          caja = armar(grupo); h = medir(caja);
+          caja = armar(grupo, limite(grupo)); h = medir(caja);
           k = Math.min(primero(plano, u => u.c > c || (u.c === c && u.y2 > alto - h - 2 - extra)), primero(plano, u => u.c > c || (u.c === c && u.y >= y - 2)));
         }
         // Se parte el bloque donde cae el carácter k, o se pone la caja antes de él si empieza ahí.
@@ -1537,8 +1586,9 @@
       // La caja llena hasta el final de la columna: las notas quedan abajo, como en el papel.
       const arriba = caja.getBoundingClientRect().top - tl().top;
       caja.style.height = Math.max(h, alto - arriba - 1) + "px";      grupo.forEach(x => pend.splice(pend.indexOf(x), 1));
+      if (caja.lxResto) pend.unshift(...caja.lxResto.map(r => ({ ...r, col: col(caja.getBoundingClientRect()) + 1 })));
     }
-    pend.forEach(x => mostrar(x.d)); pend.length = 0;
+    pend.forEach(x => x.d && mostrar(x.d)); pend.length = 0;
     return true;
     };
   }
@@ -1655,8 +1705,22 @@
     $("#seleccion").hidden = false;
   }
   function cerrarSeleccion(){ seleccion = null; $("#seleccion").hidden = true; }
+  // La selección no sale de la página que se ve: arrastrada hacia arriba pasaba a la anterior, que no está a la
+  // vista (él, 26-nov-2026). Solo se mide si un extremo cae fuera de #marco.
+  function selEnPagina(){
+    const s = getSelection(), cap = $("#texto .lx-cap");
+    if (!lectura || !cap || s.isCollapsed || !s.rangeCount || !cap.contains(s.anchorNode) || !cap.contains(s.focusNode)) return;
+    const m = $("#marco").getBoundingClientRect();
+    const fuera = (n, o) => { const rg = document.createRange(); rg.setStart(n, o); const r = rg.getClientRects()[0] || (n.nodeType === 1 ? n : n.parentElement).getBoundingClientRect(); return r.right < m.left - 1 || r.left > m.right + 1; };
+    if (!fuera(s.anchorNode, s.anchorOffset) && !fuera(s.focusNode, s.focusOffset)) return;
+    const plano = textoPlano(cap), ini = primerCaracter(plano, lectura.pag || 0), fin = primerCaracter(plano, (lectura.pag || 0) + 1);
+    const pos = (n, o) => { const k = offsetEn(plano, n, o); return Math.min(Math.max(k, ini), fin); };
+    const a = pos(s.anchorNode, s.anchorOffset), f = pos(s.focusNode, s.focusOffset);
+    const en = k => { const [i, o] = nodoEn(plano, k); return [plano.nodos[i].n, o]; };
+    if (a === f) s.collapse(...en(a)); else s.setBaseAndExtent(...en(a), ...en(f));
+  }
   let selT;
-  document.addEventListener("selectionchange", () => { clearTimeout(selT); selT = setTimeout(revisarSeleccion, 250); });
+  document.addEventListener("selectionchange", () => { selEnPagina(); clearTimeout(selT); selT = setTimeout(revisarSeleccion, 250); });
   // En el celular el menú nativo tapa arriba; la barra va abajo y no le roba la selección.
   $("#seleccion").addEventListener("pointerdown", e => e.preventDefault());
   $("#seleccion").addEventListener("click", async e => {

@@ -15,7 +15,9 @@ Revisa, en ventanas de escritorio y de celular:
     en frío (sin la caché del navegador, solo con lo que guardó el lector);
   - el lector por páginas, en 390x844 y 360x740 con pantalla táctil: sin scroll; tocar el borde derecho o
     izquierdo y deslizar pasan la página; el centro muestra y oculta los controles; con letra más grande y
-    con el teléfono girado sigue a la vista la frase que se leía; la última página lleva al capítulo siguiente.
+    con el teléfono girado sigue a la vista la frase que se leía; la última página lleva al capítulo siguiente;
+  - toda llamada tiene su nota al pie de su página, y una nota larga sigue al pie de la siguiente (Marmion,
+    letra de 30 px); seleccionar no desplaza la página ni sale de ella al arrastrar hacia arriba.
 
 Uso: python herramientas/revisar_diseno.py [carpeta]   (por defecto, la carpeta del repo)
      --capturas <carpeta>  guarda una captura del inicio por ventana y el RECORRIDO (inicio, Biblioteca,
@@ -613,7 +615,8 @@ PORTADA_Y_NOTAS = """async () => {
     if (rs && Math.floor((rs.left - tx.getBoundingClientRect().left + 2) / paso) === col(c) && rs.top > c.getBoundingClientRect().top) fallas.push(`hay texto bajo la caja de notas (columna ${col(c)})`);
     if (c.previousElementSibling && c.previousElementSibling.classList.contains('lx-corta') && s && s.classList.contains('lx-sigue') && /\\p{L}$/u.test(c.previousElementSibling.textContent) && /^\\p{L}/u.test(s.textContent))
       fallas.push(`palabra partida sin guion al pie (columna ${col(c)})`);
-    for (const n of c.querySelectorAll('.lx-pie-nota')) {
+    // El trozo que sigue de una nota partida va en la página siguiente a su llamada, como en papel.
+    for (const n of c.querySelectorAll('.lx-pie-nota:not(.lx-pie-sigue)')) {
       const num = n.querySelector('.lx-pie-num').textContent;
       // Puede haber otro enlace con el mismo número (índice, otra numeración): basta una llamada en esa página.
       const ok = [...tx.querySelectorAll('.lx-cap a[data-ir]')].some(a => !a.closest('.lx-pie') && a.textContent.trim() === num && col(a) === col(c));
@@ -621,8 +624,133 @@ PORTADA_Y_NOTAS = """async () => {
       if (/^\\s*\\d+\\s*[.:]/.test(n.textContent)) fallas.push(`la nota ${num} parte con un punto`);
     }
   }
-  return fallas.slice(0, 5);
+  return fallas.concat(LLAMADAS_SIN_NOTA()).slice(0, 5);
 }"""
+
+# Nunca una llamada sin su nota al pie de su página (él, Marmion, 26-nov-2026: con letra grande las notas
+# 25 y 28 pasaban del 55 % de la página y quedaban sin pie). Cuenta las llamadas numéricas a una nota que
+# está más adelante en el mismo capítulo.
+LLAMADAS_SIN_NOTA_JS = """() => {
+  const tx = document.querySelector('#texto'), cap = tx.querySelector('.lx-cap'), fallas = [];
+  const paso = parseFloat(getComputedStyle(tx).columnGap) + parseFloat(getComputedStyle(tx).width) / (parseInt(getComputedStyle(tx).columnCount) || 1);
+  const col = r => Math.floor((r.left - tx.getBoundingClientRect().left + 2) / paso);
+  for (const a of cap.querySelectorAll('a[data-ir]')) {
+    if (a.closest('.lx-pie') || !/^\\s*\\d{1,3}\\s*$/.test(a.textContent)) continue;
+    const id = (a.dataset.ir || '').split('#')[1], d = id && document.getElementById(id);
+    if (!d || !cap.contains(d) || d.contains(a) || !(a.compareDocumentPosition(d) & Node.DOCUMENT_POSITION_FOLLOWING)) continue;
+    const r = [...a.getClientRects()].find(x => x.width || x.height); if (!r) continue;
+    const n = a.textContent.trim();
+    if (![...tx.querySelectorAll('.lx-pie-nota:not(.lx-pie-sigue)')].some(p => p.querySelector('.lx-pie-num').textContent === n && col(p.getBoundingClientRect()) === col(r)))
+      fallas.push(`la llamada ${n} no tiene su nota al pie de su página (columna ${col(r)})`);
+  }
+  return fallas;
+}"""
+PORTADA_Y_NOTAS = PORTADA_Y_NOTAS.replace("LLAMADAS_SIN_NOTA()", "(" + LLAMADAS_SIN_NOTA_JS + ")()")
+
+
+def revisar_notas_largas(nav, base, w, h):
+    """Una nota más alta que media página empieza al pie de su página y sigue al pie de la siguiente, como en
+    papel (él, Marmion, 26-nov-2026): con letra de 30 px, las notas 25 y 28 de la conferencia de los sacramentos."""
+    rot = f"lector {w}x{h} notas largas"
+    ctx = nav.new_context(viewport={"width": w, "height": h}, is_mobile=True, has_touch=True)
+    pg, errores = ctx.new_page(), []
+    pg.on("pageerror", lambda e: errores.append(str(e)))
+    pg.add_init_script("if (!localStorage.getItem('lector.ajustes')) localStorage.setItem('lector.ajustes', JSON.stringify({pantalla: 'no'}))")
+    fallas = []
+    try:
+        pg.goto(f"{base}lector/#fenix=marmion-vida-del-alma&l=es")
+        pg.wait_for_selector("#vistaLectura:not([hidden]) #texto .lx-cap", timeout=30000)
+        pg.wait_for_timeout(800)
+        for _ in range(5):
+            pg.evaluate("document.querySelector('#btnAjustes').click()")
+            pg.click("#ajustes [data-paso='1']")
+            pg.keyboard.press("Escape")
+            pg.wait_for_timeout(300)
+        r = pg.evaluate("""async () => {
+          const espera = ms => new Promise(r => setTimeout(r, ms));
+          for (let k = 0; k < 60; k++) {
+            const t = document.querySelector('#texto .lx-cap').textContent;
+            if (/producen realmente la gracia/.test(t) && /el Espíritu Santo y sus dones/.test(t)) break;
+            if (document.querySelector('#capSiguiente').disabled) return ['no se halló la conferencia de los sacramentos'];
+            document.querySelector('#capSiguiente').click(); await espera(500);
+          }
+          for (let k = 0; k < 150 && lectorEstado().piesPendientes; k++) await espera(100);
+          const sigue = document.querySelectorAll('#texto .lx-pie-sigue').length;
+          return sigue ? [] : ['ninguna nota larga sigue en la página siguiente'];
+        }""")
+        fallas += r + pg.evaluate(LLAMADAS_SIN_NOTA_JS)
+    except Exception as ex:
+        fallas.append(f"la prueba no terminó ({str(ex).splitlines()[0]})")
+    fallas = [f"{rot}: {x}" for x in fallas[:5]] + [f"{rot}: error de JavaScript: {x}" for x in errores]
+    ctx.close()
+    return fallas
+
+
+def revisar_seleccion(nav, base, w, h):
+    """Seleccionar no mueve la página (él, 26-nov-2026): al arrastrar una selección hacia arriba Android corría
+    el contenedor paginado (overflow:hidden se deja desplazar por código) y los tiradores quedaban fuera de lugar
+    sobre la primera palabra de un párrafo con sangría. Nada se desplaza aunque se fuerce, y la selección
+    arrastrada fuera del borde no sale de la página que se ve."""
+    rot = f"lector {w}x{h} selección"
+    ctx = nav.new_context(viewport={"width": w, "height": h})
+    pg, errores, fallas = ctx.new_page(), [], []
+    pg.on("pageerror", lambda e: errores.append(str(e)))
+    pg.add_init_script("if (!localStorage.getItem('lector.ajustes')) localStorage.setItem('lector.ajustes', JSON.stringify({pantalla: 'no'}))")
+    desplazados = """() => { const r = []; for (let e = document.querySelector('#texto'); e; e = e.parentElement) if (e.scrollTop || e.scrollLeft) r.push(e.id || e.localName);
+        if (scrollX || scrollY) r.push('ventana'); return r; }"""
+    try:
+        pg.goto(f"{base}lector/#fenix=marmion-vida-del-alma&l=es")
+        pg.wait_for_selector("#vistaLectura:not([hidden]) #texto .lx-cap", timeout=30000)
+        pg.wait_for_timeout(800)
+        forzado = pg.evaluate("""() => ['#vistaLectura', '#hoja', '#marco'].filter(s => { const e = document.querySelector(s);
+            e.scrollTop = 400; e.scrollLeft = 400; const movio = e.scrollTop || e.scrollLeft; e.scrollTop = e.scrollLeft = 0; return movio; })""")
+        if forzado:
+            fallas.append(f"el contenedor paginado se deja desplazar ({', '.join(forzado)})")
+        # Primera palabra de un párrafo con sangría, en una página que no sea la primera del capítulo.
+        palabra = """() => { const tx = document.querySelector('#texto'), m = document.querySelector('#marco').getBoundingClientRect();
+          for (const p of tx.querySelectorAll('.lx-cap p')) {
+            if (parseFloat(getComputedStyle(p).textIndent) < 5) continue;
+            const w = document.createTreeWalker(p, NodeFilter.SHOW_TEXT), t = w.nextNode(); if (!t) continue;
+            const k = t.data.search(/\\S/), f = t.data.slice(k).search(/\\s|$/); if (k < 0 || f < 2) continue;
+            const rg = document.createRange(); rg.setStart(t, k); rg.setEnd(t, k + f); const r = rg.getBoundingClientRect();
+            if (r.left >= m.left && r.right <= m.right && r.top >= m.top + 80 && r.bottom <= m.bottom - 200)
+              return {x: r.left + r.width / 2, y: r.top + r.height / 2, pal: rg.toString()};
+          } return null; }"""
+        pal = None
+        for _ in range(40):
+            pal = pg.evaluate(palabra)
+            if pal and pg.evaluate("lectorEstado().pag") > 0:
+                break
+            if pg.evaluate("lectorEstado().pag >= lectorEstado().paginas - 1"):
+                pg.evaluate("document.querySelector('#capSiguiente').click()")
+            else:
+                pg.keyboard.press("ArrowRight")
+            pg.wait_for_timeout(500)
+        if not pal:
+            raise RuntimeError("no hay un párrafo con sangría a la vista")
+        pag = pg.evaluate("lectorEstado().pag")
+        pg.mouse.move(pal["x"], pal["y"])
+        pg.mouse.down()
+        for y in range(int(pal["y"]), -40, -20):
+            pg.mouse.move(pal["x"] + 30, y)
+            pg.wait_for_timeout(30)
+        pg.wait_for_timeout(600)
+        if (d := pg.evaluate(desplazados)):
+            fallas.append(f"arrastrar una selección desplaza la página ({', '.join(d)})")
+        r = pg.evaluate("""() => { const s = getSelection(), m = document.querySelector('#marco').getBoundingClientRect();
+            if (s.isCollapsed) return '';
+            const rs = [...s.getRangeAt(0).getClientRects()].filter(r => r.width > 1);
+            return rs.some(r => r.right < m.left - 1 || r.left > m.right + 1) ? String(s).slice(0, 40) : ''; }""")
+        if r:
+            fallas.append(f"la selección arrastrada sale de la página que se ve («{r}»)")
+        pg.mouse.up()
+        if pg.evaluate("lectorEstado().pag") != pag:
+            fallas.append("arrastrar una selección cambió de página")
+    except Exception as ex:
+        fallas.append(f"la prueba no terminó ({str(ex).splitlines()[0]})")
+    fallas = [f"{rot}: {x}" for x in fallas] + [f"{rot}: error de JavaScript: {x}" for x in errores]
+    ctx.close()
+    return fallas
 
 
 def revisar_lector(nav, base, raiz):
@@ -688,6 +816,8 @@ def revisar_lector(nav, base, raiz):
     ctx.close()
     for w, h in [(390, 844), (360, 740)]:
         fallas += revisar_paginas(nav, base, libro, w, h)
+    fallas += revisar_notas_largas(nav, base, 390, 844)
+    fallas += revisar_seleccion(nav, base, 390, 844)
     from revisar_lector_regresiones import verificar
     for w, h in [(360, 740), (768, 1024), (1366, 768)]:
         try:

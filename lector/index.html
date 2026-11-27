@@ -121,13 +121,15 @@ main.biblio{max-width:1100px; margin:0 auto; padding:18px 16px 60px}
 /* ---------- lectura ---------- */
 /* #marco muestra la página actual del texto en columnas. Solo la hoja saliente se anima al pasar. */
 #vistaLectura{--ancho:36em; --tam:20px; --interlineado:1.6; --letra-lectura:var(--letra); --alto-pag:70vh;
-  position:fixed; inset:0; overflow:hidden; background:var(--bg); z-index:10}
+  position:fixed; inset:0; overflow:hidden; overflow:clip; background:var(--bg); z-index:10}
 #vistaLectura header.barra{position:absolute; left:0; right:0; top:0; height:auto; min-height:var(--barra); padding-top:var(--sa-t);
   transform:translateY(-105%); transition:transform .2s ease; box-shadow:0 2px 12px rgba(0,0,0,.18)}
 #vistaLectura[data-controles] header.barra{transform:none}
 #hoja{position:absolute; left:0; right:0; top:max(26px, calc(var(--sa-t) + 14px)); bottom:max(26px, calc(var(--sa-b) + 14px));
-  touch-action:pan-y; overflow:hidden}
-#marco{height:100%; margin:0 auto; overflow:hidden}
+  touch-action:pan-y; overflow:hidden; overflow:clip}
+#marco{height:100%; margin:0 auto; overflow:hidden; overflow:clip}
+/* Una selección arrastrada fuera del texto no toma la barra ni los controles (él, 26-nov-2026). */
+#vistaLectura > :not(#hoja){-webkit-user-select:none; user-select:none}
 #texto{height:100%; margin:0; padding:0; font-size:var(--tam); line-height:var(--interlineado); font-family:var(--letra-lectura);
   overflow-wrap:break-word; column-fill:auto}
 #vistaLectura #texto{margin:0 !important; padding:0 !important; border:0 !important; box-sizing:border-box}
