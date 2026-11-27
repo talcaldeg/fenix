@@ -58,7 +58,7 @@ from sin_gutenberg import RESTO as MARCA_PG  # noqa: E402  (lo que deja Gutenber
 # carta), ante otra mayúscula («Su Majestad», «Le Petit Prince»), en «Tu es Petrus» ni en el «Suyo» que firma una carta.
 MAYUSCULA_VIEJA = re.compile(
     r"(?<=[a-záéíóúüñ,;)] )(?!Tu es Petrus\b)(?:Su|Sus|Suyo|Suya|Suyos|Suyas|Tu|Tus|Tuyo|Tuya|Tuyos|Tuyas|Le|Lo|Te|Os|"
-    r"Contigo|Vuestro|Vuestra|Vuestros|Vuestras)\b(?!\s+(?:[A-ZÁÉÍÓÚÑ]|respetuo|afectísim|atent|bagatele))"
+    r"Contigo|Vuestro|Vuestra|Vuestros|Vuestras)\b(?!\s+(?:[A-ZÁÉÍÓÚÑ]|respetuo|afectísim|atent|bagatele|retour))"
     r"|(?<=[a-záéíóúñ])(?:Le|Lo|Te|Os)\b")
 
 

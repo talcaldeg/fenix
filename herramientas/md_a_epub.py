@@ -148,12 +148,18 @@ def leer(carpeta: Path, imagenes: dict = None):
                 caps.append(Capitulo(""))
             c = caps[-1]
             c.notas.update(defs)
+            def llamada(m):
+                n = m.group(1)
+                if n not in c.orden:
+                    c.orden.append(n)
+                k = c.orden.index(n) + 1
+                return f'<a class="ref" epub:type="noteref" href="#n{k}" id="r{k}"><sup>{k}</sup></a>'
             if b.startswith("### "):  # subtítulo dentro del capítulo (Preparación para la muerte: «Punto I»)
-                c.html.append(f"<h3>{enlinea(b[4:].strip())}</h3>")
+                c.html.append(f"<h3>{re.sub(r'\s*\[\^([\w-]+)\]', llamada, enlinea(b[4:].strip()))}</h3>")
                 recien_titulo = False
                 continue
             if b.startswith("#### "):  # tercer nivel (De la Eucaristía a la Trinidad: «1. Nuestro modelo»)
-                c.html.append(f"<h4>{enlinea(b[5:].strip())}</h4>")
+                c.html.append(f"<h4>{re.sub(r'\s*\[\^([\w-]+)\]', llamada, enlinea(b[5:].strip()))}</h4>")
                 recien_titulo = False
                 continue
             img = re.fullmatch(r"!\[([^\]]*)\]\(([^)]+)\)(?:\{width=(\d+)%\})?", b.strip())
@@ -181,12 +187,6 @@ def leer(carpeta: Path, imagenes: dict = None):
             if re.fullmatch(r"[\\*\s]+", b) or re.fullmatch(r"[-_*]{3,}", b.strip()):
                 c.html.append('<p class="separador">* * *</p>')
                 continue
-            def llamada(m):
-                n = m.group(1)
-                if n not in c.orden:
-                    c.orden.append(n)
-                k = c.orden.index(n) + 1
-                return f'<a class="ref" epub:type="noteref" href="#n{k}" id="r{k}"><sup>{k}</sup></a>'
             lineas = b.split("\n")
             if all(l.startswith(">") for l in lineas):
                 # Cita en bloque: una línea `>` sola separa párrafos; las demás seguidas son versos.
