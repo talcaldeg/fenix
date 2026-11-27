@@ -132,12 +132,12 @@ def leer(carpeta: Path, imagenes: dict = None):
         txt = md.read_text(encoding="utf-8")
         # Etiquetas por archivo: dos tramos de un mismo capítulo pueden repetir `[^edl1]` (Marmion,
         # 15-nov-2026) y la segunda pisaba a la primera. Solo se renombran las que se definen acá.
-        for et in set(re.findall(r"(?m)^\[\^(\w+)\]:", txt)):
+        for et in set(re.findall(r"(?m)^\[\^([\w-]+)\]:", txt)):
             txt = txt.replace(f"[^{et}]", f"[^{re.sub(r'\W', '_', md.stem)}_{et}]")
         defs = {}
-        for m in re.finditer(r"(?ms)^\[\^(\w+)\]:\s*(.*?)(?=^\[\^\w+\]:|\Z)", txt):
+        for m in re.finditer(r"(?ms)^\[\^([\w-]+)\]:\s*(.*?)(?=^\[\^[\w-]+\]:|\Z)", txt):
             defs[m.group(1)] = " ".join(m.group(2).split())
-        txt = re.sub(r"(?ms)^\[\^\w+\]:.*", "", txt, count=1) if defs else txt
+        txt = re.sub(r"(?ms)^\[\^[\w-]+\]:.*", "", txt, count=1) if defs else txt
         recien_titulo = False
         for b in bloques(txt):
             if b.startswith("## "):
@@ -196,17 +196,17 @@ def leer(carpeta: Path, imagenes: dict = None):
                         partes[-1].append(enlinea(l[1:].strip()))
                     elif partes[-1]:
                         partes.append([])
-                ps = [re.sub(r"\s*\[\^(\w+)\]", llamada, "<br/>".join(p)) for p in partes if p]
+                ps = [re.sub(r"\s*\[\^([\w-]+)\]", llamada, "<br/>".join(p)) for p in partes if p]
                 c.html.append('<blockquote class="cita">' + "".join(f"<p>{p}</p>" for p in ps) + "</blockquote>")
                 recien_titulo = False
                 continue
             cuerpo = "<br/>".join(enlinea(l.strip()) for l in lineas)
             # La llamada va pegada a la palabra: un espacio antes («criatura ¹») la deja suelta y
             # puede quedar sola al comienzo de la línea siguiente.
-            cuerpo = re.sub(r"\s*\[\^(\w+)\]", llamada, cuerpo)
+            cuerpo = re.sub(r"\s*\[\^([\w-]+)\]", llamada, cuerpo)
             if recien_titulo and re.fullmatch(r"\*[^*].*\*", b.strip()):
                 # El sumario también puede traer llamadas (la traducción de un latín).
-                sumario = re.sub(r"\s*\[\^(\w+)\]", llamada, enlinea(b.strip()[1:-1]))
+                sumario = re.sub(r"\s*\[\^([\w-]+)\]", llamada, enlinea(b.strip()[1:-1]))
                 c.html.append(f'<p class="subtitulo">{sumario}</p>')
             elif len(lineas) > 1:
                 c.html.append(f'<p class="verso">{cuerpo}</p>')
@@ -316,6 +316,14 @@ def armar(carpeta: Path, salida: Path, titulo: str, autor: str, subtitulo: str, 
            '    <meta property="dcterms:modified">2026-10-18T00:00:00Z</meta>\n  </metadata>\n'
            f'  <manifest>\n    {chr(10).join(items)}\n  </manifest>\n  <spine toc="ncx">{refs}</spine>\n</package>\n')
     archivos["OEBPS/content.opf"] = opf.encode("utf-8")
+
+    # Una llamada o definición de nota que no se convirtió queda literal en el libro («Ti.[^ed-jaculatoria]»,
+    # Sada, 26-nov-2026): se corta antes de escribir el EPUB.
+    for n, d in archivos.items():
+        if n.endswith((".xhtml", ".html")) and isinstance(d, (bytes, str)):
+            t = d.decode("utf-8", "replace") if isinstance(d, bytes) else d
+            if (i := t.find("[^")) >= 0:
+                sys.exit(f"ERROR: nota sin convertir en {n}: «{t[max(0, i - 30):i + 40]}»")
 
     salida.parent.mkdir(parents=True, exist_ok=True)
     with zipfile.ZipFile(salida, "w") as z:

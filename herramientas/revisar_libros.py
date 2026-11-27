@@ -200,8 +200,8 @@ def revisar_epub(ruta: Path, creditos: dict) -> list:
             # Llamadas y notas de pareja: un `[^edl1]` en el sumario salía literal y dos tramos con
             # la misma etiqueta repetían el id de la llamada (Marmion, 15-nov-2026).
             pag = nombre.rpartition("/")[2]
-            if (lit := re.search(r"\[\^\w+\]", t)):
-                E.append(f"{pag}: llamada sin convertir «{lit.group(0)}»")
+            if (lit := re.search(r"\[\^", t)):
+                E.append(f"{pag}: nota sin convertir «{re.sub(r'\s+', ' ', t[max(0, lit.start() - 20):lit.start() + 40])}»")
             ids = re.findall(r'\bid="([^"]+)"', t)
             if (rep := sorted({i for i in ids if ids.count(i) > 1})):
                 E.append(f"{pag}: ids repetidos {', '.join(rep[:5])}")
@@ -322,6 +322,10 @@ def revisar_pdf(ruta: Path, creditos: dict) -> list:
     paginas = [i + 1 for i in range(d.page_count) if MARCA_PG.search(d[i].get_text())]
     if paginas:
         E.append(f"encabezado o licencia de Gutenberg en las páginas {paginas[:5]} (rehacer con epub_a_pdf.py)")
+    sueltas = [(i + 1, re.sub(r"\s+", " ", p.get_text()[max(0, k - 20):k + 40]))
+               for i, p in enumerate(d) if (k := p.get_text().find("[^")) >= 0]
+    if sueltas:
+        E.append(f"nota sin convertir («[^» literal) en las páginas {[n for n, _ in sueltas[:5]]}, p. ej. «{sueltas[0][1]}» (corregir el fuente y rearmar con md_a_epub.py)")
     deformadas = []
     for i, p in enumerate(d):
         area = p.rect.width * p.rect.height
