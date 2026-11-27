@@ -2,6 +2,16 @@
  "formato": 1,
  "libros": [
   {
+   "id": "shelley-frankenstein",
+   "idioma": "es",
+   "titulo": "Frankenstein o el moderno Prometeo",
+   "autor": "Mary Shelley",
+   "epub": "libros/shelley-frankenstein.epub",
+   "bytes": 641577,
+   "sha": "d15a7038efea30542486de8628fd6f039dc60d9c046ddb9a391aa80fa65b7b1c",
+   "portada": "img/portadas/shelley-frankenstein.jpg"
+  },
+  {
    "id": "tolstoi-guerra-y-paz",
    "idioma": "es",
    "titulo": "Guerra y paz",
